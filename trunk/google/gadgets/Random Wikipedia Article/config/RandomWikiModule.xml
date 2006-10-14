@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="__UP_moduletitle__" directory_title="Random Wikipedia Article" title_url="http://www.TheRandomHomepage.com" description="Flip through random articles from Wikipedia." author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true" thumbnail="http://www.therandomhomepage.com/google/gadgets/randomwiki/thumbnail.png" screenshot="http://www.therandomhomepage.com/google/gadgets/randomwiki/screenshot.png"/>
+<UserPref name="moduletitle" display_name="Title" default_value="Random Wikipedia Article" required="true"/>
+<Content type="html"><![CDATA[ 
+<style type="text/css">
+a {
+    text-decoration: none;
+    color: #002bb8;
+    background: none;
+}
+a:visited { color: #5a3696; }
+a:active { color: Orange; }
+a:hover { text-decoration: underline; }
+a.stub { color: #772233; }
+img {
+    border: none;
+    vertical-align: middle;
+}
+p {
+    margin: 0.4em 0em 0.5em 0em;
+    line-height: 1.5em;
+}
+p img { margin: 0; }
+hr {
+    height: 1px;
+    color: #aaaaaa;
+    background-color: #aaaaaa;
+    border: 0;
+    margin: 0.2em 0 0.2em 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: Black;
+    background: none;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.17em;
+    border-bottom: 1px solid #aaaaaa;
+}
+div.contentClass {
+	vertical-align:middle;
+	/*height:100%;*/
+	background-color:#F4F4F4; 
+	border:solid 1px #aaaaaa;padding:8px; 
+}
+</style>
+ <table width="100%"><tr><td width="95%" align="left"><div id="header__MODULE_ID__"></div></td><td width="5%" align="right"><div id="arrow__MODULE_ID__"></div></td></table>
+ <div id="content__MODULE_ID__" class="contentClass"><center><I>Loading content...</I></center></div>
+ <script type="text/javascript"> 
+    function getRandomWiki__MODULE_ID__() { 
+    var url = "http://en.wikipedia.org/wiki/Special:Random?rnd="+Math.random(); 
+	//Fetching content starts here ...
+	_IG_FetchContent( url, function (responseText) {
+	 var actualURL = grep(responseText,'Retrieved from "<a href="','">http://');
+	 var title = grep(responseText,'<h1 class="firstHeading">','</h1>');
+	 setHTML("header__MODULE_ID__","<a title='"+title+"' target='_new' href='"+actualURL+"'><h3>"+title+"</h3></a>");
+	 setHTML("arrow__MODULE_ID__","<div title='Next Random Item' style='font-family: Arial, sans-serif;font-weight:bold;color:darkblue;cursor:pointer;' onClick='getRandomWiki__MODULE_ID__()'>&gt;&gt;</div>");
+
+	 var bodyContent = grep(responseText,'<div id="bodyContent">','<div class="printfooter">');
+	 var actualBodyContent = grep(bodyContent,'<p>','Saved in parser cache');
+	 actualBodyContent = actualBodyContent.replace(/href=\"/g, 'target="_blank" href="http://en.wikipedia.org');
+	 actualBodyContent = actualBodyContent.replace(/http:\/\/en.wikipedia.orghttp/g, 'http');
+	 //actualBodyContent = actualBodyContent.replace(/<img/g, '<img border="0" ');
+	 actualBodyContent += " There was some error reading content from Wikipedia! <br/>Please try again later...-->";
+	 setHTML("content__MODULE_ID__",actualBodyContent);
+	});
+	//Fetching content ends here 
+	}
+
+
+// Function grep() starts here
+function grep(wholeStr, startsWith, endsWith) 
+{ 
+	var grepStr = ""; 
+	var iFrom = wholeStr.indexOf(startsWith); 
+	var iTo = wholeStr.indexOf(endsWith); 
+	iFrom += startsWith.length; 
+	if (iTo > iFrom) { 
+		grepStr = wholeStr.substring(iFrom, iTo); 
+	} 
+	return grepStr;
+}
+// Function grep() ends here
+
+// Function setHTML() starts here
+function setHTML(id, str) 
+{ 
+	var element = _gel(id); 
+	if (element) { 
+		element.innerHTML = str; 
+	} 
+} 
+// Function setHTML() starts here
+
+ _IG_RegisterOnloadHandler(getRandomWiki__MODULE_ID__);
+ </script>
+ ]]> 
+ </Content>
+ </Module>
