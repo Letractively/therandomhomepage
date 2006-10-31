@@ -1,81 +1,98 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<?php if(empty($_COOKIE['title'])) { ?>
 <title>Random Feed</title>
 <meta name="author" content="Siddique Hameed" />
-<?php } else { ?>
-<title><?php echo htmlspecialchars($_COOKIE['title']) ?></title>
-<?php } ?>
-
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
   <link rel="stylesheet" type="text/css" href="http://www.netvibes.com/api/0.3/style.css" />
   <script type="text/javascript" src="http://www.netvibes.com/api/0.3/emulation.js"></script>
 
-<?php 
+<?php
     $height = "400";
-
 	if(!empty($_COOKIE['height'])) {
 		$height = $_COOKIE['height'];
-	}	
-
-	$iFrameURL = "http://www.therandomhomepage.com/google/gadget/index.html?";
-
-	if(!empty($_COOKIE['up_url1'])) {
-		$iFrameURL = $iFrameURL . "up_url1=". htmlspecialchars($_COOKIE['up_url1']). "&"; 
-	}	
-
-	if(!empty($_COOKIE['up_url2'])) {
-		$iFrameURL = $iFrameURL . "up_url2=". htmlspecialchars($_COOKIE['up_url2']). "&"; 
-	}	
-
-	if(!empty($_COOKIE['up_url3'])) {
-		$iFrameURL = $iFrameURL . "up_url3=". htmlspecialchars($_COOKIE['up_url3']). "&"; 
-	}	
-
-	if(!empty($_COOKIE['up_url4'])) {
-		$iFrameURL = $iFrameURL . "up_url4=". htmlspecialchars($_COOKIE['up_url4']). "&"; 
-	}	
-
-	if(!empty($_COOKIE['up_url5'])) {
-		$iFrameURL = $iFrameURL . "up_url5=". htmlspecialchars($_COOKIE['up_url5']). "&"; 
-	}	
-
-	if($_COOKIE['up_autoplay'] == "on") {
-		$iFrameURL = $iFrameURL . "up_autoplay=1&up_delay=". $_COOKIE['up_delay'];
-	}	
-
+	}
 ?>
-<script type="text/javascript">	
+<script type="text/javascript">
 	NV_ONLOAD = function()
     {
-		 var tr = NV_CONTENT.getElementsByTagName('tr')[0];
-		 if (tr)
+		 if (getValue("randomfeed_user") != "true")
 		 {
-			 tr.onmouseover = function()
-			 {
-				if (getValue("up_autoplay") != "on")
-				{
-					setToolTip(this, 'Click on the arrow (&gt;&gt;) to see next random item.');
-				}
-			 }
+			saveDefaultPreferenceValues();
 		 }
 
+		 setIFrameSource();
+		 setTitle();
+		 configureTooltip();
 		 saveValue("randomfeed_user","true");
     }
+
+	function setIFrameSource(){
+		var iFrameURL = "http://www.therandomhomepage.com/google/gadget/index.html?";
+		for(var i = 1; i <= 5; i++){
+			var url = getValue("up_url"+i);
+			if (!isEmpty(url))
+			{
+				iFrameURL += "up_url"+i +"="+escape(url)+"&";
+			}
+		}
+
+		if (getValue("up_autoplay") == "on")
+		{
+			iFrameURL +="up_autoplay=1&up_delay="+getValue("up_delay")+"?";
+		}
+
+		var d = new Date();
+		iFrameURL += "rnd="+d.getTime();
+		var iFrame = NV_CONTENT.getElementsByTagName('iframe');
+	    iFrame[0].src = iFrameURL;
+	}
+
+	function setTitle() {
+		if (!isEmpty(getValue("title")))
+		{
+			NV_TITLE.innerHTML = getValue("title");
+		}
+	}
+
+	function isEmpty(value){
+		return value == "" || value == "undefined" || value == "null" || value == null;
+	}
+
+	function saveDefaultPreferenceValues(){
+		saveValue("up_url1","http://news.google.com/?output=rss");
+		saveValue("up_url2","http://rss.news.yahoo.com/rss/topstories");
+		saveValue("up_url3","http://www.digg.com/rss/index.xml");
+		saveValue("up_url4","http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml");
+		saveValue("up_url5","http://www.npr.org/rss/rss.php?id=1001");
+	}
+
+	function configureTooltip(){
+	 var tr = NV_CONTENT.getElementsByTagName('tr')[0];
+	 if (tr)
+	 {
+		 tr.onmouseover = function()
+		 {
+			if (getValue("up_autoplay") != "on")
+			{
+				setToolTip(this, 'Click on the arrow (&gt;&gt;) to see next random item.');
+			}
+		 }
+	 }
+	}
 </script>
 </head>
 
 <body>
 <table cellspacing="0" style="width:100% !important;background:#FFFFFF !important;padding:0px !important;margin:0px !important;border:0px !important;border-collapse:collapse !important">
 <tr><td style="padding:1px !important;margin:0px !important;border:0px !important;">
-  <iframe id="contentFrame" src="<?php echo htmlspecialchars($iFrameURL) ?>" scrolling="auto" frameborder="0" style="display:block !important;width:100% !important;height:<?php echo htmlspecialchars($height) ?>px !important;background:#FFFFFF !important;padding:0px !important;margin:0px !important;border:0px !important;">Your browser does not support frames or is currently configured not to display frames.</iframe>
+  <iframe id="contentFrame" scrolling="auto" frameborder="0" style="display:block !important;width:100% !important;height:<?php echo htmlspecialchars($height) ?>px !important;background:#FFFFFF !important;padding:0px !important;margin:0px !important;border:0px !important;">Your browser does not support frames or is currently configured not to display frames.</iframe>
 </td></tr>
 </table>
 
 
-<form name="frmConfiguration" class="configuration" method="post" action="">
+<form class="configuration" method="post" action="">
 
   <table border="0">
     <tr>
@@ -84,46 +101,16 @@
     </tr>
     <tr>
       <td><label>Height:</label></td>
-      <td><input name="height" type="text" value="400" /></td>
+      <td><input name="height" type="text" value="400"/></td>
     </tr>
 	<tr>
-	<td colspan="2"> 	
+	<td colspan="2">
 	  <ul class="nv-feedList"><label>List of RSS/Atom Feeds...</label>
-	  <li><label>Feed 1:</label> <input name="up_url1" type="text" 
-				<?php if(empty($_COOKIE['randomfeed_user'])) { ?>
-					value="http://news.google.com/?output=rss"
-				<?php } else {?>
-					value="<?php echo htmlspecialchars($_COOKIE['up_url1']) ?>"
-				<?php } ?>	
-	  size="40"/></li>
-	  <li><label>Feed 2:</label> <input name="up_url2" type="text" 
-			<?php if(empty($_COOKIE['randomfeed_user'])) { ?>
-					value="http://rss.news.yahoo.com/rss/topstories"
-				<?php } else {?>
-					value="<?php echo htmlspecialchars($_COOKIE['up_url2']) ?>"
-				<?php } ?>	
-	  size="40"/></li>
-	  <li><label>Feed 3:</label> <input name="up_url3" type="text" 
-			<?php if(empty($_COOKIE['randomfeed_user'])) { ?>
-					value="http://www.digg.com/rss/index.xml"
-				<?php } else {?>
-					value="<?php echo htmlspecialchars($_COOKIE['up_url3']) ?>"
-				<?php } ?>	
-	  size="40"/></li>
-	  <li><label>Feed 4:</label> <input name="up_url4" type="text" 
-			<?php if(empty($_COOKIE['randomfeed_user'])) { ?>
-					value="http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml"
-				<?php } else {?>
-					value="<?php echo htmlspecialchars($_COOKIE['up_url4']) ?>"
-				<?php } ?>	
-	  size="40"/></li>
-	  <li><label>Feed 5:</label> <input name="up_url5" type="text" 
-			<?php if(empty($_COOKIE['randomfeed_user'])) { ?>
-					value="http://www.npr.org/rss/rss.php?id=1001"
-				<?php } else {?>
-					value="<?php echo htmlspecialchars($_COOKIE['up_url5']) ?>"
-				<?php } ?>	
-	  size="40"/></li>
+	  <li><label>Feed 1:</label> <input name="up_url1" type="text" size="40"/></li>
+	  <li><label>Feed 2:</label> <input name="up_url2" type="text" size="40"/></li>
+	  <li><label>Feed 3:</label> <input name="up_url3" type="text" size="40"/></li>
+	  <li><label>Feed 4:</label> <input name="up_url4" type="text" size="40"/></li>
+	  <li><label>Feed 5:</label> <input name="up_url5" type="text" size="40"/></li>
 	  </ul>
 	</td>
 	</tr>
@@ -145,8 +132,6 @@
 	</tr>
   </table>
   <input type="submit" value="OK" />
-
 </form>
-
 </body>
 </html>
