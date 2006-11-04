@@ -16,7 +16,6 @@
         <Locale lang="pt"/>
         <Locale lang="ru"/>
         <Locale lang="sv"/>
-		<Require feature="setprefs"/>
     </ModulePrefs>
     <UserPref name="moduletitle" display_name="Title" default_value="Random Wikipedia Article" required="true"/>
     <UserPref name="language" display_name="Language" default_value="en" datatype="enum">
