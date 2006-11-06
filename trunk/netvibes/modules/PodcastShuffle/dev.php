@@ -5,20 +5,32 @@
 <meta name="author" content="Siddique Hameed"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="stylesheet" type="text/css" href="http://www.netvibes.com/api/0.3/style.css"/>
+<style type="text/css">
+
+    .divTitle{
+        font-weight:bold;
+        text-transform:capitalize;
+    }
+
+    .divDescription {
+        text-align:left;
+    }
+
+</style>
 <script type="text/javascript" src="http://www.netvibes.com/api/0.3/emulation.js"></script>
 <script type="text/javascript" src="http://www.therandomhomepage.com/netvibes/modules/PodcastShuffle/json.js"></script>
 <script type="text/javascript">
 var urlArr = new Array();
 
 var playIdx = 0;
-var podcastArray = null;
+var podcastArray = new Array();
 
 NV_ONLOAD = function()
 {
-    if (getValue("podcast_shuffle_user") != "true")
-    {
+    //if (getValue("podcast_shuffle_user") != "true")
+    //{
         saveDefaultPreferenceValues();
-    }
+    //}
 
 
     var rss2JSONURL = "http://www.therandomhomepage.com/scripts/MultipleRSS2JSON.php?";
@@ -46,16 +58,18 @@ NV_ONLOAD = function()
 function AjaxShow(jsonResponse) {
     try
     {
+        var podcastArrIdx = 0;
         var jsonText = jsonResponse.responseText;
         if (!isEmpty(jsonText))
         {
-            podcastArray = jsonResponse.responseText.parseJSON();
-            for(var i=0; i < podcastArray.length; i++){
-                var podcastObject = podcastArray[i];
-                alert(" podcastObject title = "+podcastObject[0].title);
-                alert(" podcastObject description = "+podcastObject[0].description);
-                alert(" podcastObject guid = "+podcastObject[0].guid);
+            var podcastOuterArray = jsonResponse.responseText.parseJSON();
+            for(var i=0; i < podcastOuterArray .length; i++){
+                var podcastInnerArray = podcastOuterArray [i];
+                for(var j=0; j < podcastInnerArray.length; j++){
+                    podcastArray[podcastArrIdx++] = podcastInnerArray[j];
+                }
             }
+
             playPodcastObject(playIdx);
         }
     }
@@ -74,16 +88,15 @@ function playPodcastObject(playIdx) {
             var titleElement = document.getElementsByClassName('divTitle', NV_CONTENT)[0];
             if (titleElement)
             {
-                titleElement.innerHTML = podcastObject[0].title;
+                titleElement.innerHTML = podcastObject.title;
             }
 
             var descElement = document.getElementsByClassName('divDescription', NV_CONTENT)[0];
             if (descElement)
             {
-                descElement.innerHTML = podcastObject[0].description;
+				descElement.innerHTML = podcastObject.description;
             }
-            playPodcast(podcastObject[0].guid, podcastObject[0].title);
-
+            playPodcast(podcastObject.guid, podcastObject.title);
         }
     }
     catch (e)
