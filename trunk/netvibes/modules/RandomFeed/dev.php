@@ -8,13 +8,13 @@
   <link rel="stylesheet" type="text/css" href="http://www.netvibes.com/api/0.3/style.css" />
   <script type="text/javascript" src="http://www.netvibes.com/api/0.3/emulation.js"></script>
 
-<?php
+<?php 
     $height = "400";
 	if(!empty($_COOKIE['height'])) {
 		$height = $_COOKIE['height'];
-	}
+	}	
 ?>
-<script type="text/javascript">
+<script type="text/javascript">	
 	NV_ONLOAD = function()
     {
 		 if (getValue("randomfeed_user") != "true")
@@ -23,8 +23,8 @@
 		 }
 
 		 setIFrameSource();
-		 setTitle();
-		 configureTooltip();
+		 setTitle(); 	
+		 configureTooltip();	
 		 saveValue("randomfeed_user","true");
     }
 
@@ -34,8 +34,8 @@
 			var url = getValue("up_url"+i);
 			if (!isEmpty(url))
 			{
-				iFrameURL += "up_url"+i +"="+escape(url)+"&";
-			}
+				iFrameURL += "up_url"+i +"="+escape(url)+"&"; 
+			}		
 		}
 
 		if (getValue("up_autoplay") == "on")
@@ -53,7 +53,7 @@
 		if (!isEmpty(getValue("title")))
 		{
 			NV_TITLE.innerHTML = getValue("title");
-		}
+		}		
 	}
 
 	function isEmpty(value){
@@ -104,7 +104,7 @@
       <td><input name="height" type="text" value="400"/></td>
     </tr>
 	<tr>
-	<td colspan="2">
+	<td colspan="2"> 	
 	  <ul class="nv-feedList"><label>List of RSS/Atom Feeds...</label>
 	  <li><label>Feed 1:</label> <input name="up_url1" type="text" size="40"/></li>
 	  <li><label>Feed 2:</label> <input name="up_url2" type="text" size="40"/></li>
