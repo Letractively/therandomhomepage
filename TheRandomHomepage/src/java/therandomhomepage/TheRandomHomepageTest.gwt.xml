@@ -1,0 +1,12 @@
+<module>
+
+   <inherits name='com.google.gwt.user.User'/>
+   <!-- Inherit the JUnit support -->
+    <inherits name="therandomhomepage.TheRandomHomepage"/>
+    <inherits name="com.google.gwt.junit.JUnit"/>
+    <!-- Include client-side source we might like to test -->
+   <source path="client"/>
+   <source path="core"/>
+   <!-- Include client-side source for the test cases -->
+   <source path="test"/>
+ </module>

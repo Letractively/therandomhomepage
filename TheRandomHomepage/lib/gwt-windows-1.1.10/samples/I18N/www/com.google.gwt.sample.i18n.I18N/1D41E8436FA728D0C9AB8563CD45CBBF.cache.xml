@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cache-entry>
+	<generated-type-hash class="com.google.gwt.sample.i18n.client.MyConstants_" hash="86D8AC6160E93B2BA9BE2A607D49F79F"/>
+	<generated-type-hash class="com.google.gwt.sample.i18n.client.MyMessages_" hash="A18CA1A0778C826C388C3A1FCA68410C"/>
+	<generated-type-hash class="com.google.gwt.sample.i18n.client.Colors_" hash="F9CD8D798D386DACD5B27303C30EB4C3"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.TextBoxImpl" out="com.google.gwt.user.client.ui.impl.TextBoxImpl"/>
+	<rebind-decision in="com.google.gwt.sample.i18n.client.MyMessages" out="com.google.gwt.sample.i18n.client.MyMessages_"/>
+	<rebind-decision in="com.google.gwt.sample.i18n.client.MyConstants" out="com.google.gwt.sample.i18n.client.MyConstants_"/>
+	<rebind-decision in="com.google.gwt.sample.i18n.client.Colors" out="com.google.gwt.sample.i18n.client.Colors_"/>
+	<rebind-decision in="com.google.gwt.sample.i18n.client.I18N" out="com.google.gwt.sample.i18n.client.I18N"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.FormPanelImpl" out="com.google.gwt.user.client.ui.impl.FormPanelImplOpera"/>
+	<rebind-decision in="com.google.gwt.user.client.impl.HistoryImpl" out="com.google.gwt.user.client.impl.HistoryImplStandard"/>
+	<rebind-decision in="com.google.gwt.user.client.impl.DOMImpl" out="com.google.gwt.user.client.impl.DOMImplOpera"/>
+</cache-entry>

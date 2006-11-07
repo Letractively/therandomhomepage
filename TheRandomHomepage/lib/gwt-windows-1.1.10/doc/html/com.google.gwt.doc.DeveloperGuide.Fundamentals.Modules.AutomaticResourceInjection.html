@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>
+					Google Web Toolkit 
+					
+						- Automatic Resource Injection</title>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+        <link type="text/css" rel="stylesheet" href="../css/base.css"/>
+        <link type="text/css" rel="stylesheet" href="./doc.css"/>
+        <link type="text/css" media="print" rel="stylesheet" href="../css/print.css"/>
+    </head>
+    <body>
+        <div xmlns="" id="gaia">&nbsp;</div>
+        <div xmlns="" id="header">
+            <div id="logo">
+                <a href="http://code.google.com/"><img alt="Google" src="http://code.google.com/images/code_sm.png"></a>
+            </div>
+            <div id="title">Google Web Toolkit (Beta)</div>
+            <div id="breadcrumbs">
+                <div id="nextprev">
+                    <nobr><a href="com.google.gwt.doc.DeveloperGuide.Fundamentals.Modules.ModuleXml.html">&laquo; prev</a></nobr> <nobr><a href="com.google.gwt.doc.DeveloperGuide.Fundamentals.Modules.PublicPackageFiltering.html">next &raquo;</a></nobr>
+                </div>
+                <span class="item"><a href="http://code.google.com/">Google Code Home</a></span> &gt;
+				<span class="item"><a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a></span> &gt;
+				
+				<span class="item"><a href="com.google.gwt.doc.DeveloperGuide.html">Developer Guide</a></span> &gt;
+						<span class="item"><a href="com.google.gwt.doc.DeveloperGuide.Fundamentals.html">Fundamentals</a></span> &gt;
+						<span class="item"><a href="com.google.gwt.doc.DeveloperGuide.Fundamentals.Modules.html">Modules</a></span> &gt;
+						<span class="selected item">Automatic Resource Injection</span>
+            </div>
+        </div>
+        <div xmlns="" id="side">
+            <div id="menu">
+                <div class="header item">
+                    <a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/overview.html">Product Overview</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/gettingstarted.html">Getting Started Guide</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/download.html">Download SDK</a>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item  selected">
+                        <a href="./com.google.gwt.doc.DeveloperGuide.html">Developer Guide</a>
+                    </div>
+                    <div class="group">
+                        <div class="item">
+                            <a href="http://code.google.com/webtoolkit/documentation/examples/">Example Projects</a>
+                        </div>
+                        <div class="item">
+                            <a href="./gwt.html">GWT Class Reference</a>
+                        </div>
+                        <div class="item">
+                            <a href="./jre.html">JRE Emulation Library</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/faq.html">Web Toolkit FAQ</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://googlewebtoolkit.blogspot.com/">Web Toolkit Blog</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/issues/">Issue Tracking</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://groups.google.com/group/Google-Web-Toolkit">Developer Forum</a>
+                    </div>
+                </div>
+            </div>
+            <div id="search">
+                <form method="get" action="http://www.google.com/search">
+                    <div>
+                        <input value="code.google.com" name="domains" type="hidden"><input value="code.google.com" name="sitesearch" type="hidden">
+                        <div class="header">Search Google Code</div>
+                        <div class="input">
+                            <input size="10" name="q">
+                        </div>
+                        <div class="button">
+                            <input value="Search" type="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="body">
+            <h1>Automatic Resource Injection</h1>Modules can contain references to external JavaScript and CSS files,
+ causing them to be automatically loaded when the module itself is
+ loaded.
+ 
+ <h2>Injecting External JavaScript</h2>
+ Script injection is a convenient way to automatically associate
+ external JavaScript files with your module. The script injection uses
+ the following syntax:
+ 
+ <pre class="code">
+ &lt;script src="<i>js-url</i>"&gt;&lt;![CDATA[
+   <i>script ready-function body</i> 
+ ]]&gt;&lt;/script&gt;
+ </pre>
+ 
+ where <i>ready-function body</i> is the body of a JavaScript function
+ that returns <code>true</code> when the script is loaded and is ready
+ for use. The script is loaded into the namespace of the
+ <a xmlns="" href="com.google.gwt.doc.DeveloperGuide.Fundamentals.HostPage.html">host page</a> as if you had
+ included it explicitly using the HTML <code>&lt;script&gt;</code>
+ element.
+ 
+ 
+ <p>
+ For example, suppose your module relies on a script called
+ <code>InjectedScript.js</code> that looks like this:
+ 
+ <pre class="code">function foo() {
+  // do something neat
+}
+
+doSomethingTimeConsuming();
+
+function bar() {
+  // do something else neat
+}
+</pre>
+
+ 
+ Your module might look like this:
+ 
+ <pre class="code">&lt;module&gt;
+  &lt;inherits name="com.google.gwt.user.User"/&gt;
+  &lt;script src="InjectedScript.js"&gt;&lt;![CDATA[
+    // More complex tests are possible, but usually checking for the existence
+    // of a function is enough.
+    if ($wnd.bar)
+      return true;
+    else
+      return false;
+  ]]&gt;&lt;/script&gt;
+&lt;/module&gt;
+</pre>
+            </p>
+            <p>
+ The purpose of the ready-function is to determine unambiguously that
+ the script is fully loaded, so that your GWT code can use
+ <a xmlns="" href="com.google.gwt.doc.DeveloperGuide.JavaScriptNativeInterface.html">JSNI</a> and be sure the
+ referenced identifiers are available. In the example above, the
+ existence of the function <code>bar</code> indicates that the script
+ is ready.
+ </p>
+            <h2>Injecting External Stylesheets</h2>
+ Stylesheet injection is a convenient way to automatically associate
+ external CSS files with your module. Use the following syntax to cause
+ a CSS file to be automatically attached to the
+ host page.
+ 
+ <pre class="code">&lt;stylesheet src="<i>css-url</i>"/&gt;</pre>
+ 
+ You can add any number of stylesheets this way, and the order of
+ inclusion into the page reflects the order in which the elements appear
+ in your module XML.
+ 
+ <h2>Injection and Module Inheritance</h2>
+ Module inheritance makes resource injection particularly convenient. If
+ you wish to create a reusable library that relies upon particular
+ stylesheets or JavaScript files, you can be sure that clients of your
+ library have everything they need automatically by inheriting from your
+ module.<div class="topicSeeAlso">
+                <h2>Related topics</h2>
+                <a xmlns="" href="com.google.gwt.doc.DeveloperGuide.Fundamentals.Modules.ModuleXml.html">Module XML Format</a>
+            </div>
+        </div>
+        <div id="footer">
+      &copy;2006 Google
+      <span class="noprint"> -
+        <a href="http://www.google.com/">Google Home</a> -
+        <a href="http://www.google.com/jobs/">We're Hiring</a> -
+        <a href="http://www.google.com/privacy.html">Privacy Policy</a> -
+        <a href="http://www.google.com/terms_of_service.html">Terms of Service</a> -
+        <a href="mailto:code@google.com">Contact Us</a>
+            </span>
+        </div>
+        <script type="text/javascript" src="https://ssl.google-analytics.com/urchin.js"/>
+        <script type="text/javascript">_uacct="UA-18071-1"; _uanchor=1; urchinTracker();</script>
+    </body>
+</html>
