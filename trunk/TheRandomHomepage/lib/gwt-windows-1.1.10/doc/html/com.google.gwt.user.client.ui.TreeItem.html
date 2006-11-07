@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>
+					Google Web Toolkit 
+					
+						- TreeItem</title>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+        <link type="text/css" rel="stylesheet" href="../css/base.css"/>
+        <link type="text/css" rel="stylesheet" href="./doc.css"/>
+        <link type="text/css" media="print" rel="stylesheet" href="../css/print.css"/>
+    </head>
+    <body>
+        <div xmlns="" id="gaia">&nbsp;</div>
+        <div xmlns="" id="header">
+            <div id="logo">
+                <a href="http://code.google.com/"><img alt="Google" src="http://code.google.com/images/code_sm.png"></a>
+            </div>
+            <div id="title">Google Web Toolkit (Beta)</div>
+            <div id="breadcrumbs">
+                <div id="nextprev">
+                    <nobr><a href="com.google.gwt.user.client.ui.Tree.html">&laquo; prev</a></nobr> <nobr><a href="com.google.gwt.user.client.ui.TreeListenerCollection.html">next &raquo;</a></nobr>
+                </div>
+                <span class="item"><a href="http://code.google.com/">Google Code Home</a></span> &gt;
+				<span class="item"><a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a></span> &gt;
+				
+				<span class="item"><a href="gwt.html">GWT Class Reference</a></span> &gt;
+            <span class="item"><a href="com.google.gwt.user.client.ui.html">com.google.gwt.user.client.ui</a></span> &gt;
+            <span class="selected item">TreeItem</span>
+            </div>
+        </div>
+        <div xmlns="" id="side">
+            <div id="menu">
+                <div class="header item">
+                    <a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/overview.html">Product Overview</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/gettingstarted.html">Getting Started Guide</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/download.html">Download SDK</a>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="./com.google.gwt.doc.DeveloperGuide.html">Developer Guide</a>
+                    </div>
+                    <div class="group">
+                        <div class="item">
+                            <a href="http://code.google.com/webtoolkit/documentation/examples/">Example Projects</a>
+                        </div>
+                        <div class="item  selected">
+                            <a href="./gwt.html">GWT Class Reference</a>
+                        </div>
+                        <div class="item">
+                            <a href="./jre.html">JRE Emulation Library</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/faq.html">Web Toolkit FAQ</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://googlewebtoolkit.blogspot.com/">Web Toolkit Blog</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/issues/">Issue Tracking</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://groups.google.com/group/Google-Web-Toolkit">Developer Forum</a>
+                    </div>
+                </div>
+            </div>
+            <div id="search">
+                <form method="get" action="http://www.google.com/search">
+                    <div>
+                        <input value="code.google.com" name="domains" type="hidden"><input value="code.google.com" name="sitesearch" type="hidden">
+                        <div class="header">Search Google Code</div>
+                        <div class="input">
+                            <input size="10" name="q">
+                        </div>
+                        <div class="button">
+                            <input value="Search" type="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="body">
+            <h1>Class TreeItem</h1>
+            <div class="classSig">public 
+            class 
+            TreeItem<br>extends
+                <a xmlns="" href="com.google.gwt.user.client.ui.UIObject.html">UIObject</a>
+                <br>implements 
+                <a xmlns="" href="com.google.gwt.user.client.ui.HasHTML.html">HasHTML</a>
+            </div>An item that can be contained within a
+ <a xmlns="" href="com.google.gwt.user.client.ui.Tree.html">Tree</a>.
+ 
+ <p>
+                <h3>Example</h3>
+                <pre class="code">public class TreeExample implements EntryPoint {
+
+  public void onModuleLoad() {
+    // Create a tree with a few items in it.
+    TreeItem root = new TreeItem("root");
+    root.addItem("item0");
+    root.addItem("item1");
+    root.addItem("item2");
+
+    Tree t = new Tree();
+    t.addItem(root);
+
+    // Add it to the root panel.
+    RootPanel.get().add(t);
+  }
+}
+</pre>
+            </p>
+            <h2 class="api">Constructors</h2>
+            <table class="members" cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#TreeItem()">TreeItem()</a></td><td>Creates an empty tree item. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#TreeItem(java.lang.String)">TreeItem(String)</a></td><td>Constructs a tree item with the given HTML. </td>
+                </tr>
+            </table>
+            <h2 class="api">Methods</h2>
+            <table class="members" cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#addItem(java.lang.String)">addItem(String)</a></td><td>Adds a child tree item containing the specified text. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#addItem(com.google.gwt.user.client.ui.TreeItem)">addItem(TreeItem)</a></td><td>Adds another item as a child to this one. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#getChild(int)">getChild(int)</a></td><td>Gets the child at the specified index. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#getChildCount()">getChildCount()</a></td><td>Gets the number of children contained in this item. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#getChildIndex(com.google.gwt.user.client.ui.TreeItem)">getChildIndex(TreeItem)</a></td><td>Gets the index of the specified child item. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#getHTML()">getHTML()</a></td><td>Gets this object's contents as HTML. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#getParentItem()">getParentItem()</a></td><td>Gets this item's parent. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#getState()">getState()</a></td><td>Gets whether this item's children are displayed. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#getText()">getText()</a></td><td>Gets this object's text. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#getTree()">getTree()</a></td><td>Gets the tree that contains this item. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#getUserObject()">getUserObject()</a></td><td>Gets the user-defined object associated with this item. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#isSelected()">isSelected()</a></td><td>Determines whether this item is currently selected. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#remove()">remove()</a></td><td>Removes this item from its tree. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#removeItem(com.google.gwt.user.client.ui.TreeItem)">removeItem(TreeItem)</a></td><td>Removes one of this item's children. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#removeItems()">removeItems()</a></td><td>Removes all of this item's children. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#setHTML(java.lang.String)">setHTML(String)</a></td><td>Sets this object's contents via HTML.  </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#setSelected(boolean)">setSelected(boolean)</a></td><td>Selects or deselects this item. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#setState(boolean)">setState(boolean)</a></td><td>Sets whether this item's children are displayed. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#setState(boolean, boolean)">setState(boolean, boolean)</a></td><td>Sets whether this item's children are displayed. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#setText(java.lang.String)">setText(String)</a></td><td>Sets this object's text. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html#setUserObject(java.lang.Object)">setUserObject(Object)</a></td><td>Sets the user-defined object associated with this item. </td>
+                </tr>
+            </table>
+            <h2 class="api">Constructor Detail</h2>
+            <a name="TreeItem()"></a>
+            <h3 class="api">TreeItem</h3>
+            <div class="memberSig">public <b> TreeItem</b>()</div>Creates an empty tree item.<hr>
+            <a name="TreeItem(java.lang.String)"></a>
+            <h3 class="api">TreeItem</h3>
+            <div class="memberSig">public <b> TreeItem</b>(<nobr><a xmlns="" href="java.lang.String.html">String</a> html</nobr>)</div>Constructs a tree item with the given HTML.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>html</dt>
+                <dd>the item's HTML</dd>
+            </dl>
+            <h2 class="api">Method Detail</h2>
+            <a name="addItem(java.lang.String)"></a>
+            <h3 class="api">addItem</h3>
+            <div class="memberSig">public <a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html">TreeItem</a><b> addItem</b>(<nobr><a xmlns="" href="java.lang.String.html">String</a> itemText</nobr>)</div>Adds a child tree item containing the specified text.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>itemText</dt>
+                <dd>the text to be added</dd>
+            </dl>
+            <h4 class="api">Return Value</h4>the item that was added<hr>
+            <a name="addItem(com.google.gwt.user.client.ui.TreeItem)"></a>
+            <h3 class="api">addItem</h3>
+            <div class="memberSig">public void<b> addItem</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html">TreeItem</a> item</nobr>)</div>Adds another item as a child to this one.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>item</dt>
+                <dd>the item to be added</dd>
+            </dl>
+            <hr>
+            <a name="getChild(int)"></a>
+            <h3 class="api">getChild</h3>
+            <div class="memberSig">public <a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html">TreeItem</a><b> getChild</b>(<nobr>int index</nobr>)</div>Gets the child at the specified index.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>index</dt>
+                <dd>the index to be retrieved</dd>
+            </dl>
+            <h4 class="api">Return Value</h4>the item at that index<hr>
+            <a name="getChildCount()"></a>
+            <h3 class="api">getChildCount</h3>
+            <div class="memberSig">public int<b> getChildCount</b>()</div>Gets the number of children contained in this item.<h4 class="api">Return Value</h4>this item's child count.<hr>
+            <a name="getChildIndex(com.google.gwt.user.client.ui.TreeItem)"></a>
+            <h3 class="api">getChildIndex</h3>
+            <div class="memberSig">public int<b> getChildIndex</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html">TreeItem</a> child</nobr>)</div>Gets the index of the specified child item.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>child</dt>
+                <dd>the child item to be found</dd>
+            </dl>
+            <h4 class="api">Return Value</h4>the child's index, or <code>-1</code> if none is found<hr>
+            <a name="getHTML()"></a>
+            <h3 class="api">getHTML</h3>
+            <div class="memberSig">public <a xmlns="" href="java.lang.String.html">String</a><b> getHTML</b>()</div>Gets this object's contents as HTML.<h4 class="api">Return Value</h4>the object's HTML<hr>
+            <a name="getParentItem()"></a>
+            <h3 class="api">getParentItem</h3>
+            <div class="memberSig">public <a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html">TreeItem</a><b> getParentItem</b>()</div>Gets this item's parent.<h4 class="api">Return Value</h4>the parent item<hr>
+            <a name="getState()"></a>
+            <h3 class="api">getState</h3>
+            <div class="memberSig">public boolean<b> getState</b>()</div>Gets whether this item's children are displayed.<h4 class="api">Return Value</h4>
+            <code>true</code> if the item is open<hr>
+            <a name="getText()"></a>
+            <h3 class="api">getText</h3>
+            <div class="memberSig">public <a xmlns="" href="java.lang.String.html">String</a><b> getText</b>()</div>Gets this object's text.<h4 class="api">Return Value</h4>the object's text<hr>
+            <a name="getTree()"></a>
+            <h3 class="api">getTree</h3>
+            <div class="memberSig">public <a xmlns="" href="com.google.gwt.user.client.ui.Tree.html">Tree</a><b> getTree</b>()</div>Gets the tree that contains this item.<h4 class="api">Return Value</h4>the containing tree<hr>
+            <a name="getUserObject()"></a>
+            <h3 class="api">getUserObject</h3>
+            <div class="memberSig">public <a xmlns="" href="java.lang.Object.html">Object</a><b> getUserObject</b>()</div>Gets the user-defined object associated with this item.<h4 class="api">Return Value</h4>the item's user-defined object<hr>
+            <a name="isSelected()"></a>
+            <h3 class="api">isSelected</h3>
+            <div class="memberSig">public boolean<b> isSelected</b>()</div>Determines whether this item is currently selected.<h4 class="api">Return Value</h4>
+            <code>true</code> if it is selected<hr>
+            <a name="remove()"></a>
+            <h3 class="api">remove</h3>
+            <div class="memberSig">public void<b> remove</b>()</div>Removes this item from its tree.<hr>
+            <a name="removeItem(com.google.gwt.user.client.ui.TreeItem)"></a>
+            <h3 class="api">removeItem</h3>
+            <div class="memberSig">public void<b> removeItem</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.TreeItem.html">TreeItem</a> item</nobr>)</div>Removes one of this item's children.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>item</dt>
+                <dd>the item to be removed</dd>
+            </dl>
+            <hr>
+            <a name="removeItems()"></a>
+            <h3 class="api">removeItems</h3>
+            <div class="memberSig">public void<b> removeItems</b>()</div>Removes all of this item's children.<hr>
+            <a name="setHTML(java.lang.String)"></a>
+            <h3 class="api">setHTML</h3>
+            <div class="memberSig">public void<b> setHTML</b>(<nobr><a xmlns="" href="java.lang.String.html">String</a> html</nobr>)</div>Sets this object's contents via HTML. Use care when setting an object's
+ HTML; it is an easy way to expose script-based security problems. Consider
+ using <a xmlns="" href="com.google.gwt.user.client.ui.HasText.html#setText(java.lang.String)">setText</a> whenever possible.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>html</dt>
+                <dd>the object's new HTML</dd>
+            </dl>
+            <hr>
+            <a name="setSelected(boolean)"></a>
+            <h3 class="api">setSelected</h3>
+            <div class="memberSig">public void<b> setSelected</b>(<nobr>boolean selected</nobr>)</div>Selects or deselects this item.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>selected</dt>
+                <dd>
+                    <code>true</code> to select the item, <code>false</code>
+          to deselect it</dd>
+            </dl>
+            <hr>
+            <a name="setState(boolean)"></a>
+            <h3 class="api">setState</h3>
+            <div class="memberSig">public void<b> setState</b>(<nobr>boolean open</nobr>)</div>Sets whether this item's children are displayed.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>open</dt>
+                <dd>whether the item is open</dd>
+            </dl>
+            <hr>
+            <a name="setState(boolean, boolean)"></a>
+            <h3 class="api">setState</h3>
+            <div class="memberSig">public void<b> setState</b>(<nobr>boolean open, </nobr><nobr>boolean fireEvents</nobr>)</div>Sets whether this item's children are displayed.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>open</dt>
+                <dd>whether the item is open</dd>
+                <dt>fireEvents</dt>
+                <dd>
+                    <code>true</code> to allow open/close events to be
+          fired</dd>
+            </dl>
+            <hr>
+            <a name="setText(java.lang.String)"></a>
+            <h3 class="api">setText</h3>
+            <div class="memberSig">public void<b> setText</b>(<nobr><a xmlns="" href="java.lang.String.html">String</a> text</nobr>)</div>Sets this object's text.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>text</dt>
+                <dd>the object's new text</dd>
+            </dl>
+            <hr>
+            <a name="setUserObject(java.lang.Object)"></a>
+            <h3 class="api">setUserObject</h3>
+            <div class="memberSig">public void<b> setUserObject</b>(<nobr><a xmlns="" href="java.lang.Object.html">Object</a> userObj</nobr>)</div>Sets the user-defined object associated with this item.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>userObj</dt>
+                <dd>the item's user-defined object</dd>
+            </dl>
+        </div>
+        <div id="footer">
+      &copy;2006 Google
+      <span class="noprint"> -
+        <a href="http://www.google.com/">Google Home</a> -
+        <a href="http://www.google.com/jobs/">We're Hiring</a> -
+        <a href="http://www.google.com/privacy.html">Privacy Policy</a> -
+        <a href="http://www.google.com/terms_of_service.html">Terms of Service</a> -
+        <a href="mailto:code@google.com">Contact Us</a>
+            </span>
+        </div>
+        <script type="text/javascript" src="https://ssl.google-analytics.com/urchin.js"/>
+        <script type="text/javascript">_uacct="UA-18071-1"; _uanchor=1; urchinTracker();</script>
+    </body>
+</html>

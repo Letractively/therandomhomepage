@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>
+					Google Web Toolkit 
+					
+						- KeyboardListenerCollection</title>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+        <link type="text/css" rel="stylesheet" href="../css/base.css"/>
+        <link type="text/css" rel="stylesheet" href="./doc.css"/>
+        <link type="text/css" media="print" rel="stylesheet" href="../css/print.css"/>
+    </head>
+    <body>
+        <div xmlns="" id="gaia">&nbsp;</div>
+        <div xmlns="" id="header">
+            <div id="logo">
+                <a href="http://code.google.com/"><img alt="Google" src="http://code.google.com/images/code_sm.png"></a>
+            </div>
+            <div id="title">Google Web Toolkit (Beta)</div>
+            <div id="breadcrumbs">
+                <div id="nextprev">
+                    <nobr><a href="com.google.gwt.user.client.ui.KeyboardListenerAdapter.html">&laquo; prev</a></nobr> <nobr><a href="com.google.gwt.user.client.ui.Label.html">next &raquo;</a></nobr>
+                </div>
+                <span class="item"><a href="http://code.google.com/">Google Code Home</a></span> &gt;
+				<span class="item"><a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a></span> &gt;
+				
+				<span class="item"><a href="gwt.html">GWT Class Reference</a></span> &gt;
+            <span class="item"><a href="com.google.gwt.user.client.ui.html">com.google.gwt.user.client.ui</a></span> &gt;
+            <span class="selected item">KeyboardListenerCollection</span>
+            </div>
+        </div>
+        <div xmlns="" id="side">
+            <div id="menu">
+                <div class="header item">
+                    <a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/overview.html">Product Overview</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/gettingstarted.html">Getting Started Guide</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/download.html">Download SDK</a>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="./com.google.gwt.doc.DeveloperGuide.html">Developer Guide</a>
+                    </div>
+                    <div class="group">
+                        <div class="item">
+                            <a href="http://code.google.com/webtoolkit/documentation/examples/">Example Projects</a>
+                        </div>
+                        <div class="item  selected">
+                            <a href="./gwt.html">GWT Class Reference</a>
+                        </div>
+                        <div class="item">
+                            <a href="./jre.html">JRE Emulation Library</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/faq.html">Web Toolkit FAQ</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://googlewebtoolkit.blogspot.com/">Web Toolkit Blog</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/issues/">Issue Tracking</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://groups.google.com/group/Google-Web-Toolkit">Developer Forum</a>
+                    </div>
+                </div>
+            </div>
+            <div id="search">
+                <form method="get" action="http://www.google.com/search">
+                    <div>
+                        <input value="code.google.com" name="domains" type="hidden"><input value="code.google.com" name="sitesearch" type="hidden">
+                        <div class="header">Search Google Code</div>
+                        <div class="input">
+                            <input size="10" name="q">
+                        </div>
+                        <div class="button">
+                            <input value="Search" type="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="body">
+            <h1>Class KeyboardListenerCollection</h1>
+            <div class="classSig">public 
+            class 
+            KeyboardListenerCollection<br>extends
+                <a xmlns="" href="java.util.Vector.html">Vector</a>
+            </div>A helper class for implementers of the SourcesKeyboardEvents interface. This
+ subclass of Vector assumes that all objects added to it will be of type
+ <a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListener.html">KeyboardListener</a>.<h2 class="api">Methods</h2>
+            <table class="members" cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListenerCollection.html#fireKeyboardEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Event)">fireKeyboardEvent(Widget, Event)</a></td><td>Automatically fires the appropriate keyboard event to all listeners.  </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListenerCollection.html#fireKeyDown(com.google.gwt.user.client.ui.Widget, char, int)">fireKeyDown(Widget, char, int)</a></td><td>Fires a keyDown event to all listeners. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListenerCollection.html#fireKeyPress(com.google.gwt.user.client.ui.Widget, char, int)">fireKeyPress(Widget, char, int)</a></td><td>Fires a keyDown event to all listeners. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListenerCollection.html#fireKeyUp(com.google.gwt.user.client.ui.Widget, char, int)">fireKeyUp(Widget, char, int)</a></td><td>Fires a keyDown event to all listeners. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListenerCollection.html#getKeyboardModifiers(com.google.gwt.user.client.Event)">getKeyboardModifiers(Event)</a></td><td>Gets the keyboard modifiers associated with a DOMEvent. </td>
+                </tr>
+            </table>
+            <h2 class="api">Method Detail</h2>
+            <a name="fireKeyboardEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Event)"></a>
+            <h3 class="api">fireKeyboardEvent</h3>
+            <div class="memberSig">public void<b> fireKeyboardEvent</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a> sender, </nobr><nobr><a xmlns="" href="com.google.gwt.user.client.Event.html">Event</a> event</nobr>)</div>Automatically fires the appropriate keyboard event to all listeners. If the
+ given event is not a keyboard event, no action will be performed.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>sender</dt>
+                <dd>the widget sending the event.</dd>
+                <dt>event</dt>
+                <dd>the Event received by the widget.</dd>
+            </dl>
+            <hr>
+            <a name="fireKeyDown(com.google.gwt.user.client.ui.Widget, char, int)"></a>
+            <h3 class="api">fireKeyDown</h3>
+            <div class="memberSig">public void<b> fireKeyDown</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a> sender, </nobr><nobr>char keyCode, </nobr><nobr>int modifiers</nobr>)</div>Fires a keyDown event to all listeners.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>sender</dt>
+                <dd>the widget sending the event.</dd>
+                <dt>keyCode</dt>
+                <dd>the keyCode to send with the event.</dd>
+                <dt>modifiers</dt>
+                <dd>the modifier keys pressed at when the event occurred. This
+          value is a combination of the bits defined by
+          <a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListener.html#MODIFIER_SHIFT">KeyboardListener.MODIFIER_SHIFT</a>,
+          <a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListener.html#MODIFIER_CTRL">KeyboardListener.MODIFIER_CTRL</a>, and
+          <a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListener.html#MODIFIER_ALT">KeyboardListener.MODIFIER_ALT</a>.</dd>
+            </dl>
+            <hr>
+            <a name="fireKeyPress(com.google.gwt.user.client.ui.Widget, char, int)"></a>
+            <h3 class="api">fireKeyPress</h3>
+            <div class="memberSig">public void<b> fireKeyPress</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a> sender, </nobr><nobr>char key, </nobr><nobr>int modifiers</nobr>)</div>Fires a keyDown event to all listeners.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>sender</dt>
+                <dd>the widget sending the event.</dd>
+                <dt>key</dt>
+                <dd>the key to send with the event.</dd>
+                <dt>modifiers</dt>
+                <dd>the modifier keys pressed at when the event occurred. This
+          value is a combination of the bits defined by
+          <a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListener.html#MODIFIER_SHIFT">KeyboardListener.MODIFIER_SHIFT</a>,
+          <a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListener.html#MODIFIER_CTRL">KeyboardListener.MODIFIER_CTRL</a>, and
+          <a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListener.html#MODIFIER_ALT">KeyboardListener.MODIFIER_ALT</a>.</dd>
+            </dl>
+            <hr>
+            <a name="fireKeyUp(com.google.gwt.user.client.ui.Widget, char, int)"></a>
+            <h3 class="api">fireKeyUp</h3>
+            <div class="memberSig">public void<b> fireKeyUp</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a> sender, </nobr><nobr>char keyCode, </nobr><nobr>int modifiers</nobr>)</div>Fires a keyDown event to all listeners.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>sender</dt>
+                <dd>the widget sending the event.</dd>
+                <dt>keyCode</dt>
+                <dd>the keyCode to send with the event.</dd>
+                <dt>modifiers</dt>
+                <dd>the modifier keys pressed at when the event occurred. This
+          value is a combination of the bits defined by
+          <a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListener.html#MODIFIER_SHIFT">KeyboardListener.MODIFIER_SHIFT</a>,
+          <a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListener.html#MODIFIER_CTRL">KeyboardListener.MODIFIER_CTRL</a>, and
+          <a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListener.html#MODIFIER_ALT">KeyboardListener.MODIFIER_ALT</a>.</dd>
+            </dl>
+            <hr>
+            <a name="getKeyboardModifiers(com.google.gwt.user.client.Event)"></a>
+            <h3 class="api">getKeyboardModifiers</h3>
+            <div class="memberSig">public static int<b> getKeyboardModifiers</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.Event.html">Event</a> event</nobr>)</div>Gets the keyboard modifiers associated with a DOMEvent.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>event</dt>
+                <dd>the event.</dd>
+            </dl>
+            <h4 class="api">Return Value</h4>the modifiers as defined in <a xmlns="" href="com.google.gwt.user.client.ui.KeyboardListener.html">KeyboardListener</a>.</div>
+        <div id="footer">
+      &copy;2006 Google
+      <span class="noprint"> -
+        <a href="http://www.google.com/">Google Home</a> -
+        <a href="http://www.google.com/jobs/">We're Hiring</a> -
+        <a href="http://www.google.com/privacy.html">Privacy Policy</a> -
+        <a href="http://www.google.com/terms_of_service.html">Terms of Service</a> -
+        <a href="mailto:code@google.com">Contact Us</a>
+            </span>
+        </div>
+        <script type="text/javascript" src="https://ssl.google-analytics.com/urchin.js"/>
+        <script type="text/javascript">_uacct="UA-18071-1"; _uanchor=1; urchinTracker();</script>
+    </body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>
+					Google Web Toolkit 
+					
+						- MenuBar</title>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+        <link type="text/css" rel="stylesheet" href="../css/base.css"/>
+        <link type="text/css" rel="stylesheet" href="./doc.css"/>
+        <link type="text/css" media="print" rel="stylesheet" href="../css/print.css"/>
+    </head>
+    <body>
+        <div xmlns="" id="gaia">&nbsp;</div>
+        <div xmlns="" id="header">
+            <div id="logo">
+                <a href="http://code.google.com/"><img alt="Google" src="http://code.google.com/images/code_sm.png"></a>
+            </div>
+            <div id="title">Google Web Toolkit (Beta)</div>
+            <div id="breadcrumbs">
+                <div id="nextprev">
+                    <nobr><a href="com.google.gwt.user.client.ui.LoadListenerCollection.html">&laquo; prev</a></nobr> <nobr><a href="com.google.gwt.user.client.ui.MenuItem.html">next &raquo;</a></nobr>
+                </div>
+                <span class="item"><a href="http://code.google.com/">Google Code Home</a></span> &gt;
+				<span class="item"><a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a></span> &gt;
+				
+				<span class="item"><a href="gwt.html">GWT Class Reference</a></span> &gt;
+            <span class="item"><a href="com.google.gwt.user.client.ui.html">com.google.gwt.user.client.ui</a></span> &gt;
+            <span class="selected item">MenuBar</span>
+            </div>
+        </div>
+        <div xmlns="" id="side">
+            <div id="menu">
+                <div class="header item">
+                    <a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/overview.html">Product Overview</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/gettingstarted.html">Getting Started Guide</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/download.html">Download SDK</a>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="./com.google.gwt.doc.DeveloperGuide.html">Developer Guide</a>
+                    </div>
+                    <div class="group">
+                        <div class="item">
+                            <a href="http://code.google.com/webtoolkit/documentation/examples/">Example Projects</a>
+                        </div>
+                        <div class="item  selected">
+                            <a href="./gwt.html">GWT Class Reference</a>
+                        </div>
+                        <div class="item">
+                            <a href="./jre.html">JRE Emulation Library</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/faq.html">Web Toolkit FAQ</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://googlewebtoolkit.blogspot.com/">Web Toolkit Blog</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/issues/">Issue Tracking</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://groups.google.com/group/Google-Web-Toolkit">Developer Forum</a>
+                    </div>
+                </div>
+            </div>
+            <div id="search">
+                <form method="get" action="http://www.google.com/search">
+                    <div>
+                        <input value="code.google.com" name="domains" type="hidden"><input value="code.google.com" name="sitesearch" type="hidden">
+                        <div class="header">Search Google Code</div>
+                        <div class="input">
+                            <input size="10" name="q">
+                        </div>
+                        <div class="button">
+                            <input value="Search" type="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="body">
+            <h1>Class MenuBar</h1>
+            <div class="classSig">public 
+            class 
+            MenuBar<br>extends
+                <a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a>
+                <br>implements 
+                <a xmlns="" href="com.google.gwt.user.client.ui.PopupListener.html">PopupListener</a>
+            </div>A standard menu bar widget. A menu bar can contain any number of menu items,
+ each of which can either fire a <a xmlns="" href="com.google.gwt.user.client.Command.html">Command</a> or
+ open a cascaded menu bar.
+ 
+ <p>
+                <img class="gallery" src="MenuBar.png"></p>
+            <h3>CSS Style Rules</h3>
+ * <ul class="css">
+ * <li>.gwt-MenuBar { the menu bar itself }</li>
+                <li>.gwt-MenuBar .gwt-MenuItem { menu items }</li>
+                <li>.gwt-MenuBar .gwt-MenuItem-selected { selected menu items }</li>
+            </ul>
+            <p>
+                <h3>Example</h3>
+                <pre class="code">public class MenuBarExample implements EntryPoint {
+
+  public void onModuleLoad() {
+    // Make a command that we will execute from all leaves.
+    Command cmd = new Command() {
+      public void execute() {
+        Window.alert("You selected a menu item!");
+      }
+    };
+
+    // Make some sub-menus that we will cascade from the top menu.
+    MenuBar fooMenu = new MenuBar(true);
+    fooMenu.addItem("the", cmd);
+    fooMenu.addItem("foo", cmd);
+    fooMenu.addItem("menu", cmd);
+
+    MenuBar barMenu = new MenuBar(true);
+    barMenu.addItem("the", cmd);
+    barMenu.addItem("bar", cmd);
+    barMenu.addItem("menu", cmd);
+
+    MenuBar bazMenu = new MenuBar(true);
+    bazMenu.addItem("the", cmd);
+    bazMenu.addItem("baz", cmd);
+    bazMenu.addItem("menu", cmd);
+
+    // Make a new menu bar, adding a few cascading menus to it.
+    MenuBar menu = new MenuBar();
+    menu.addItem("foo", fooMenu);
+    menu.addItem("bar", barMenu);
+    menu.addItem("baz", bazMenu);
+
+    // Add it to the root panel.
+    RootPanel.get().add(menu);
+  }
+}
+</pre>
+            </p>
+            <h2 class="api">Constructors</h2>
+            <table class="members" cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#MenuBar()">MenuBar()</a></td><td>Creates an empty horizontal menu bar. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#MenuBar(boolean)">MenuBar(boolean)</a></td><td>Creates an empty menu bar. </td>
+                </tr>
+            </table>
+            <h2 class="api">Methods</h2>
+            <table class="members" cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#addItem(com.google.gwt.user.client.ui.MenuItem)">addItem(MenuItem)</a></td><td>Adds a menu item to the bar. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#addItem(java.lang.String, boolean, com.google.gwt.user.client.Command)">addItem(String, boolean, Command)</a></td><td>Adds a menu item to the bar, that will fire the given command when it is
+ selected. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#addItem(java.lang.String, boolean, com.google.gwt.user.client.ui.MenuBar)">addItem(String, boolean, MenuBar)</a></td><td>Adds a menu item to the bar, that will open the specified menu when it is
+ selected. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#addItem(java.lang.String, com.google.gwt.user.client.Command)">addItem(String, Command)</a></td><td>Adds a menu item to the bar, that will fire the given command when it is
+ selected. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#addItem(java.lang.String, com.google.gwt.user.client.ui.MenuBar)">addItem(String, MenuBar)</a></td><td>Adds a menu item to the bar, that will open the specified menu when it is
+ selected. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#clearItems()">clearItems()</a></td><td>Removes all menu items from this menu bar. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#getAutoOpen()">getAutoOpen()</a></td><td>Gets whether this menu bar's child menus will open when the mouse is moved
+ over it. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#onBrowserEvent(com.google.gwt.user.client.Event)">onBrowserEvent(Event)</a></td><td></td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#onDetach()">onDetach()</a></td><td>This method is called when a widget is detached from the browser's
+ document.  </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#onPopupClosed(com.google.gwt.user.client.ui.PopupPanel, boolean)">onPopupClosed(PopupPanel, boolean)</a></td><td>Fired when the popup is closed. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#removeItem(com.google.gwt.user.client.ui.MenuItem)">removeItem(MenuItem)</a></td><td>Removes the specified menu item from the bar. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html#setAutoOpen(boolean)">setAutoOpen(boolean)</a></td><td>Sets whether this menu bar's child menus will open when the mouse is moved
+ over it. </td>
+                </tr>
+            </table>
+            <h2 class="api">Constructor Detail</h2>
+            <a name="MenuBar()"></a>
+            <h3 class="api">MenuBar</h3>
+            <div class="memberSig">public <b> MenuBar</b>()</div>Creates an empty horizontal menu bar.<hr>
+            <a name="MenuBar(boolean)"></a>
+            <h3 class="api">MenuBar</h3>
+            <div class="memberSig">public <b> MenuBar</b>(<nobr>boolean vertical</nobr>)</div>Creates an empty menu bar.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>vertical</dt>
+                <dd>
+                    <code>true</code> to orient the menu bar vertically</dd>
+            </dl>
+            <h2 class="api">Method Detail</h2>
+            <a name="addItem(com.google.gwt.user.client.ui.MenuItem)"></a>
+            <h3 class="api">addItem</h3>
+            <div class="memberSig">public void<b> addItem</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.MenuItem.html">MenuItem</a> item</nobr>)</div>Adds a menu item to the bar.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>item</dt>
+                <dd>the item to be added</dd>
+            </dl>
+            <hr>
+            <a name="addItem(java.lang.String, boolean, com.google.gwt.user.client.Command)"></a>
+            <h3 class="api">addItem</h3>
+            <div class="memberSig">public <a xmlns="" href="com.google.gwt.user.client.ui.MenuItem.html">MenuItem</a><b> addItem</b>(<nobr><a xmlns="" href="java.lang.String.html">String</a> text, </nobr><nobr>boolean asHTML, </nobr><nobr><a xmlns="" href="com.google.gwt.user.client.Command.html">Command</a> cmd</nobr>)</div>Adds a menu item to the bar, that will fire the given command when it is
+ selected.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>text</dt>
+                <dd>the item's text</dd>
+                <dt>asHTML</dt>
+                <dd>
+                    <code>true</code> to treat the specified text as html</dd>
+                <dt>cmd</dt>
+                <dd>the command to be fired</dd>
+            </dl>
+            <h4 class="api">Return Value</h4>the <a xmlns="" href="com.google.gwt.user.client.ui.MenuItem.html">MenuItem</a> object created<hr>
+            <a name="addItem(java.lang.String, boolean, com.google.gwt.user.client.ui.MenuBar)"></a>
+            <h3 class="api">addItem</h3>
+            <div class="memberSig">public <a xmlns="" href="com.google.gwt.user.client.ui.MenuItem.html">MenuItem</a><b> addItem</b>(<nobr><a xmlns="" href="java.lang.String.html">String</a> text, </nobr><nobr>boolean asHTML, </nobr><nobr><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html">MenuBar</a> popup</nobr>)</div>Adds a menu item to the bar, that will open the specified menu when it is
+ selected.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>text</dt>
+                <dd>the item's text</dd>
+                <dt>asHTML</dt>
+                <dd>
+                    <code>true</code> to treat the specified text as html</dd>
+                <dt>popup</dt>
+                <dd>the menu to be cascaded from it</dd>
+            </dl>
+            <h4 class="api">Return Value</h4>the <a xmlns="" href="com.google.gwt.user.client.ui.MenuItem.html">MenuItem</a> object created<hr>
+            <a name="addItem(java.lang.String, com.google.gwt.user.client.Command)"></a>
+            <h3 class="api">addItem</h3>
+            <div class="memberSig">public <a xmlns="" href="com.google.gwt.user.client.ui.MenuItem.html">MenuItem</a><b> addItem</b>(<nobr><a xmlns="" href="java.lang.String.html">String</a> text, </nobr><nobr><a xmlns="" href="com.google.gwt.user.client.Command.html">Command</a> cmd</nobr>)</div>Adds a menu item to the bar, that will fire the given command when it is
+ selected.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>text</dt>
+                <dd>the item's text</dd>
+                <dt>cmd</dt>
+                <dd>the command to be fired</dd>
+            </dl>
+            <h4 class="api">Return Value</h4>the <a xmlns="" href="com.google.gwt.user.client.ui.MenuItem.html">MenuItem</a> object created<hr>
+            <a name="addItem(java.lang.String, com.google.gwt.user.client.ui.MenuBar)"></a>
+            <h3 class="api">addItem</h3>
+            <div class="memberSig">public <a xmlns="" href="com.google.gwt.user.client.ui.MenuItem.html">MenuItem</a><b> addItem</b>(<nobr><a xmlns="" href="java.lang.String.html">String</a> text, </nobr><nobr><a xmlns="" href="com.google.gwt.user.client.ui.MenuBar.html">MenuBar</a> popup</nobr>)</div>Adds a menu item to the bar, that will open the specified menu when it is
+ selected.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>text</dt>
+                <dd>the item's text</dd>
+                <dt>popup</dt>
+                <dd>the menu to be cascaded from it</dd>
+            </dl>
+            <h4 class="api">Return Value</h4>the <a xmlns="" href="com.google.gwt.user.client.ui.MenuItem.html">MenuItem</a> object created<hr>
+            <a name="clearItems()"></a>
+            <h3 class="api">clearItems</h3>
+            <div class="memberSig">public void<b> clearItems</b>()</div>Removes all menu items from this menu bar.<hr>
+            <a name="getAutoOpen()"></a>
+            <h3 class="api">getAutoOpen</h3>
+            <div class="memberSig">public boolean<b> getAutoOpen</b>()</div>Gets whether this menu bar's child menus will open when the mouse is moved
+ over it.<h4 class="api">Return Value</h4>
+            <code>true</code> if child menus will auto-open<hr>
+            <a name="onBrowserEvent(com.google.gwt.user.client.Event)"></a>
+            <h3 class="api">onBrowserEvent</h3>
+            <div class="memberSig">public void<b> onBrowserEvent</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.Event.html">Event</a> event</nobr>)</div>
+            <h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>event</dt>
+                <dd>
+                    <!--[Missing documentation]-->
+                </dd>
+            </dl>
+            <hr>
+            <a name="onDetach()"></a>
+            <h3 class="api">onDetach</h3>
+            <div class="memberSig">protected void<b> onDetach</b>()</div>This method is called when a widget is detached from the browser's
+ document. It must not be overridden, except by <a xmlns="" href="com.google.gwt.user.client.ui.Panel.html">Panel</a>.<hr>
+            <a name="onPopupClosed(com.google.gwt.user.client.ui.PopupPanel, boolean)"></a>
+            <h3 class="api">onPopupClosed</h3>
+            <div class="memberSig">public void<b> onPopupClosed</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.PopupPanel.html">PopupPanel</a> sender, </nobr><nobr>boolean autoClosed</nobr>)</div>Fired when the popup is closed.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>sender</dt>
+                <dd>popup being closed.</dd>
+                <dt>autoClosed</dt>
+                <dd>
+                    <code>true</code> if the popup was automatically
+          closed; <code>false</code> if it was closed programmatically.</dd>
+            </dl>
+            <hr>
+            <a name="removeItem(com.google.gwt.user.client.ui.MenuItem)"></a>
+            <h3 class="api">removeItem</h3>
+            <div class="memberSig">public void<b> removeItem</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.MenuItem.html">MenuItem</a> item</nobr>)</div>Removes the specified menu item from the bar.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>item</dt>
+                <dd>the item to be removed</dd>
+            </dl>
+            <hr>
+            <a name="setAutoOpen(boolean)"></a>
+            <h3 class="api">setAutoOpen</h3>
+            <div class="memberSig">public void<b> setAutoOpen</b>(<nobr>boolean autoOpen</nobr>)</div>Sets whether this menu bar's child menus will open when the mouse is moved
+ over it.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>autoOpen</dt>
+                <dd>
+                    <code>true</code> to cause child menus to auto-open</dd>
+            </dl>
+        </div>
+        <div id="footer">
+      &copy;2006 Google
+      <span class="noprint"> -
+        <a href="http://www.google.com/">Google Home</a> -
+        <a href="http://www.google.com/jobs/">We're Hiring</a> -
+        <a href="http://www.google.com/privacy.html">Privacy Policy</a> -
+        <a href="http://www.google.com/terms_of_service.html">Terms of Service</a> -
+        <a href="mailto:code@google.com">Contact Us</a>
+            </span>
+        </div>
+        <script type="text/javascript" src="https://ssl.google-analytics.com/urchin.js"/>
+        <script type="text/javascript">_uacct="UA-18071-1"; _uanchor=1; urchinTracker();</script>
+    </body>
+</html>

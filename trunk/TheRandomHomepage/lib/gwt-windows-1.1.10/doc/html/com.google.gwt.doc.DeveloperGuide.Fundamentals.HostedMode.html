@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>
+					Google Web Toolkit 
+					
+						- Debugging in Hosted Mode</title>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+        <link type="text/css" rel="stylesheet" href="../css/base.css"/>
+        <link type="text/css" rel="stylesheet" href="./doc.css"/>
+        <link type="text/css" media="print" rel="stylesheet" href="../css/print.css"/>
+    </head>
+    <body>
+        <div xmlns="" id="gaia">&nbsp;</div>
+        <div xmlns="" id="header">
+            <div id="logo">
+                <a href="http://code.google.com/"><img alt="Google" src="http://code.google.com/images/code_sm.png"></a>
+            </div>
+            <div id="title">Google Web Toolkit (Beta)</div>
+            <div id="breadcrumbs">
+                <div id="nextprev">
+                    <nobr><a href="com.google.gwt.doc.DeveloperGuide.Fundamentals.CrossBrowserSupport.html">&laquo; prev</a></nobr> <nobr><a href="com.google.gwt.doc.DeveloperGuide.Fundamentals.WebMode.html">next &raquo;</a></nobr>
+                </div>
+                <span class="item"><a href="http://code.google.com/">Google Code Home</a></span> &gt;
+				<span class="item"><a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a></span> &gt;
+				
+				<span class="item"><a href="com.google.gwt.doc.DeveloperGuide.html">Developer Guide</a></span> &gt;
+						<span class="item"><a href="com.google.gwt.doc.DeveloperGuide.Fundamentals.html">Fundamentals</a></span> &gt;
+						<span class="selected item">Debugging in Hosted Mode</span>
+            </div>
+        </div>
+        <div xmlns="" id="side">
+            <div id="menu">
+                <div class="header item">
+                    <a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/overview.html">Product Overview</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/gettingstarted.html">Getting Started Guide</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/download.html">Download SDK</a>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item  selected">
+                        <a href="./com.google.gwt.doc.DeveloperGuide.html">Developer Guide</a>
+                    </div>
+                    <div class="group">
+                        <div class="item">
+                            <a href="http://code.google.com/webtoolkit/documentation/examples/">Example Projects</a>
+                        </div>
+                        <div class="item">
+                            <a href="./gwt.html">GWT Class Reference</a>
+                        </div>
+                        <div class="item">
+                            <a href="./jre.html">JRE Emulation Library</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/faq.html">Web Toolkit FAQ</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://googlewebtoolkit.blogspot.com/">Web Toolkit Blog</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/issues/">Issue Tracking</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://groups.google.com/group/Google-Web-Toolkit">Developer Forum</a>
+                    </div>
+                </div>
+            </div>
+            <div id="search">
+                <form method="get" action="http://www.google.com/search">
+                    <div>
+                        <input value="code.google.com" name="domains" type="hidden"><input value="code.google.com" name="sitesearch" type="hidden">
+                        <div class="header">Search Google Code</div>
+                        <div class="input">
+                            <input size="10" name="q">
+                        </div>
+                        <div class="button">
+                            <input value="Search" type="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="body">
+            <h1>Debugging in Hosted Mode</h1>You will spend most of your development time working in <i>hosted mode</i>,
+ which means that you are interacting with your GWT application without it
+ having been translated into JavaScript. Anytime you edit, run, and debug
+ applications from a Java integrated development environment (IDE), you
+ are working in hosted mode. When running in hosted mode, the Java Virtual
+ Machine (JVM) is actually executing your application code as compiled
+ Java bytecode, using GWT plumbing to automate an embedded browser window.
+ By remaining in this traditional "code-test-debug" cycle, hosted mode is
+ by far the most productive way to develop your application quickly.
+ 
+ <p>
+ To launch a hosted mode session, your startup class should be
+ <code>com.google.gwt.dev.GWTShell</code>, found in
+ <code>gwt-dev-windows.jar</code> (or <code>gwt-dev-linux.jar</code>).
+ </p>
+            <div class="tipContainer">
+                <div class="tipCallout">
+							   Tip
+							</div>
+                <div class="tipBody">In hosted mode, the GWT development shell looks for
+      <a xmlns="" href="com.google.gwt.doc.DeveloperGuide.Fundamentals.Modules.html">modules</a> (and therefore
+      <a xmlns="" href="com.google.gwt.doc.DeveloperGuide.Fundamentals.ClientSide.html">client-side</a> source)
+      using the JVM's classpath. Make sure to add your source directories
+      first in your classpath when running the development shell.</div>
+            </div>
+        </div>
+        <div id="footer">
+      &copy;2006 Google
+      <span class="noprint"> -
+        <a href="http://www.google.com/">Google Home</a> -
+        <a href="http://www.google.com/jobs/">We're Hiring</a> -
+        <a href="http://www.google.com/privacy.html">Privacy Policy</a> -
+        <a href="http://www.google.com/terms_of_service.html">Terms of Service</a> -
+        <a href="mailto:code@google.com">Contact Us</a>
+            </span>
+        </div>
+        <script type="text/javascript" src="https://ssl.google-analytics.com/urchin.js"/>
+        <script type="text/javascript">_uacct="UA-18071-1"; _uanchor=1; urchinTracker();</script>
+    </body>
+</html>

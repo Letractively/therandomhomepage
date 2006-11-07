@@ -1,0 +1,14 @@
+<module>
+
+  <inherits name='com.google.gwt.user.User'/>
+    <inherits name="com.google.gwt.json.JSON"/>
+    <!--<inherits name="com.gwt.components.User"/>-->
+
+  <source path="client"/>
+  <source path="core"/>
+  <entry-point class='therandomhomepage.client.TheRandomHomepage'/>
+  <servlet path="/scripts/GetRandomFeed.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+  <servlet path="/scripts/GetRandomNewsfeed.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+  <servlet path="/scripts/GetRandomRecipe.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+  <servlet path="/scripts/Redirect.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>     
+</module>

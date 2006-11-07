@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>
+					Google Web Toolkit 
+					
+						- DialogBox</title>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+        <link type="text/css" rel="stylesheet" href="../css/base.css"/>
+        <link type="text/css" rel="stylesheet" href="./doc.css"/>
+        <link type="text/css" media="print" rel="stylesheet" href="../css/print.css"/>
+    </head>
+    <body>
+        <div xmlns="" id="gaia">&nbsp;</div>
+        <div xmlns="" id="header">
+            <div id="logo">
+                <a href="http://code.google.com/"><img alt="Google" src="http://code.google.com/images/code_sm.png"></a>
+            </div>
+            <div id="title">Google Web Toolkit (Beta)</div>
+            <div id="breadcrumbs">
+                <div id="nextprev">
+                    <nobr><a href="com.google.gwt.user.client.ui.DeckPanel.html">&laquo; prev</a></nobr> <nobr><a href="com.google.gwt.user.client.ui.DockPanel.html">next &raquo;</a></nobr>
+                </div>
+                <span class="item"><a href="http://code.google.com/">Google Code Home</a></span> &gt;
+				<span class="item"><a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a></span> &gt;
+				
+				<span class="item"><a href="gwt.html">GWT Class Reference</a></span> &gt;
+            <span class="item"><a href="com.google.gwt.user.client.ui.html">com.google.gwt.user.client.ui</a></span> &gt;
+            <span class="selected item">DialogBox</span>
+            </div>
+        </div>
+        <div xmlns="" id="side">
+            <div id="menu">
+                <div class="header item">
+                    <a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/overview.html">Product Overview</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/gettingstarted.html">Getting Started Guide</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/download.html">Download SDK</a>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="./com.google.gwt.doc.DeveloperGuide.html">Developer Guide</a>
+                    </div>
+                    <div class="group">
+                        <div class="item">
+                            <a href="http://code.google.com/webtoolkit/documentation/examples/">Example Projects</a>
+                        </div>
+                        <div class="item  selected">
+                            <a href="./gwt.html">GWT Class Reference</a>
+                        </div>
+                        <div class="item">
+                            <a href="./jre.html">JRE Emulation Library</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/faq.html">Web Toolkit FAQ</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://googlewebtoolkit.blogspot.com/">Web Toolkit Blog</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://code.google.com/webtoolkit/issues/">Issue Tracking</a>
+                    </div>
+                    <div class="item">
+                        <a href="http://groups.google.com/group/Google-Web-Toolkit">Developer Forum</a>
+                    </div>
+                </div>
+            </div>
+            <div id="search">
+                <form method="get" action="http://www.google.com/search">
+                    <div>
+                        <input value="code.google.com" name="domains" type="hidden"><input value="code.google.com" name="sitesearch" type="hidden">
+                        <div class="header">Search Google Code</div>
+                        <div class="input">
+                            <input size="10" name="q">
+                        </div>
+                        <div class="button">
+                            <input value="Search" type="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="body">
+            <h1>Class DialogBox</h1>
+            <div class="classSig">public 
+            class 
+            DialogBox<br>extends
+                <a xmlns="" href="com.google.gwt.user.client.ui.PopupPanel.html">PopupPanel</a>
+                <br>implements 
+                <a xmlns="" href="com.google.gwt.user.client.ui.HasHTML.html">HasHTML</a>, <a xmlns="" href="com.google.gwt.user.client.ui.MouseListener.html">MouseListener</a>
+            </div>A form of popup that has a caption area at the top and can be dragged by the
+ user.
+ 
+ <p>
+                <img class="gallery" src="DialogBox.png"></p>
+            <h3>CSS Style Rules</h3>
+ * <ul class="css">
+                <li>.gwt-DialogBox { the outside of the dialog }</li>
+ * <li>.gwt-DialogBox .Caption { the caption }</li>
+            </ul>
+            <p>
+                <h3>Example</h3>
+                <pre class="code">public class DialogBoxExample implements EntryPoint, ClickListener {
+
+  private static class MyDialog extends DialogBox {
+
+    public MyDialog() {
+      // Set the dialog box's caption.
+      setText("My First Dialog");
+
+      // DialogBox is a SimplePanel, so you have to set it's widget property to
+      // whatever you want its contents to be.
+      setWidget(new Label("Click outside of this popup to close it"));
+    }
+  }
+
+  public void onModuleLoad() {
+    Button b = new Button("Click me");
+    b.addClickListener(this);
+
+    RootPanel.get().add(b);
+  }
+
+  public void onClick(Widget sender) {
+    // Instantiate the dialog box and show it.
+    new MyDialog().show();
+  }
+}
+</pre>
+            </p>
+            <h2 class="api">Constructors</h2>
+            <table class="members" cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#DialogBox()">DialogBox()</a></td><td>Creates an empty dialog box.  </td>
+                </tr>
+            </table>
+            <h2 class="api">Methods</h2>
+            <table class="members" cellpadding="1" cellspacing="1">
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#getHTML()">getHTML()</a></td><td>Gets this object's contents as HTML. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#getText()">getText()</a></td><td>Gets this object's text. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#onMouseDown(com.google.gwt.user.client.ui.Widget, int, int)">onMouseDown(Widget, int, int)</a></td><td>Fired when the user depresses the mouse button over a widget. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#onMouseEnter(com.google.gwt.user.client.ui.Widget)">onMouseEnter(Widget)</a></td><td>Fired when the mouse enters a widget's area. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#onMouseLeave(com.google.gwt.user.client.ui.Widget)">onMouseLeave(Widget)</a></td><td>Fired when the mouse leaves a widget's area. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#onMouseMove(com.google.gwt.user.client.ui.Widget, int, int)">onMouseMove(Widget, int, int)</a></td><td>Fired when the user moves the mouse over a widget. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#onMouseUp(com.google.gwt.user.client.ui.Widget, int, int)">onMouseUp(Widget, int, int)</a></td><td>Fired when the user releases the mouse button over a widget. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#remove(com.google.gwt.user.client.ui.Widget)">remove(Widget)</a></td><td></td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#setHTML(java.lang.String)">setHTML(String)</a></td><td>Sets this object's contents via HTML.  </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#setText(java.lang.String)">setText(String)</a></td><td>Sets this object's text. </td>
+                </tr>
+                <tr>
+                    <td><a xmlns="" href="com.google.gwt.user.client.ui.DialogBox.html#setWidget(com.google.gwt.user.client.ui.Widget)">setWidget(Widget)</a></td><td>Sets this panel's widget.  </td>
+                </tr>
+            </table>
+            <h2 class="api">Constructor Detail</h2>
+            <a name="DialogBox()"></a>
+            <h3 class="api">DialogBox</h3>
+            <div class="memberSig">public <b> DialogBox</b>()</div>Creates an empty dialog box. It should not be shown until its child widget
+ has been added using <a xmlns="" href="com.google.gwt.user.client.ui.SimplePanel.html#add(com.google.gwt.user.client.ui.Widget)">add</a>.<h2 class="api">Method Detail</h2>
+            <a name="getHTML()"></a>
+            <h3 class="api">getHTML</h3>
+            <div class="memberSig">public <a xmlns="" href="java.lang.String.html">String</a><b> getHTML</b>()</div>Gets this object's contents as HTML.<h4 class="api">Return Value</h4>the object's HTML<hr>
+            <a name="getText()"></a>
+            <h3 class="api">getText</h3>
+            <div class="memberSig">public <a xmlns="" href="java.lang.String.html">String</a><b> getText</b>()</div>Gets this object's text.<h4 class="api">Return Value</h4>the object's text<hr>
+            <a name="onMouseDown(com.google.gwt.user.client.ui.Widget, int, int)"></a>
+            <h3 class="api">onMouseDown</h3>
+            <div class="memberSig">public void<b> onMouseDown</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a> sender, </nobr><nobr>int x, </nobr><nobr>int y</nobr>)</div>Fired when the user depresses the mouse button over a widget.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>sender</dt>
+                <dd>the widget sending the event</dd>
+                <dt>x</dt>
+                <dd>the x coordinate of the mouse</dd>
+                <dt>y</dt>
+                <dd>the y coordinate of the mouse</dd>
+            </dl>
+            <hr>
+            <a name="onMouseEnter(com.google.gwt.user.client.ui.Widget)"></a>
+            <h3 class="api">onMouseEnter</h3>
+            <div class="memberSig">public void<b> onMouseEnter</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a> sender</nobr>)</div>Fired when the mouse enters a widget's area.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>sender</dt>
+                <dd>the widget sending the event</dd>
+            </dl>
+            <hr>
+            <a name="onMouseLeave(com.google.gwt.user.client.ui.Widget)"></a>
+            <h3 class="api">onMouseLeave</h3>
+            <div class="memberSig">public void<b> onMouseLeave</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a> sender</nobr>)</div>Fired when the mouse leaves a widget's area.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>sender</dt>
+                <dd>the widget sending the event</dd>
+            </dl>
+            <hr>
+            <a name="onMouseMove(com.google.gwt.user.client.ui.Widget, int, int)"></a>
+            <h3 class="api">onMouseMove</h3>
+            <div class="memberSig">public void<b> onMouseMove</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a> sender, </nobr><nobr>int x, </nobr><nobr>int y</nobr>)</div>Fired when the user moves the mouse over a widget.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>sender</dt>
+                <dd>the widget sending the event</dd>
+                <dt>x</dt>
+                <dd>the x coordinate of the mouse</dd>
+                <dt>y</dt>
+                <dd>the y coordinate of the mouse</dd>
+            </dl>
+            <hr>
+            <a name="onMouseUp(com.google.gwt.user.client.ui.Widget, int, int)"></a>
+            <h3 class="api">onMouseUp</h3>
+            <div class="memberSig">public void<b> onMouseUp</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a> sender, </nobr><nobr>int x, </nobr><nobr>int y</nobr>)</div>Fired when the user releases the mouse button over a widget.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>sender</dt>
+                <dd>the widget sending the event</dd>
+                <dt>x</dt>
+                <dd>the x coordinate of the mouse</dd>
+                <dt>y</dt>
+                <dd>the y coordinate of the mouse</dd>
+            </dl>
+            <hr>
+            <a name="remove(com.google.gwt.user.client.ui.Widget)"></a>
+            <h3 class="api">remove</h3>
+            <div class="memberSig">public boolean<b> remove</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a> w</nobr>)</div>
+            <h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>w</dt>
+                <dd>
+                    <!--[Missing documentation]-->
+                </dd>
+            </dl>
+            <hr>
+            <a name="setHTML(java.lang.String)"></a>
+            <h3 class="api">setHTML</h3>
+            <div class="memberSig">public void<b> setHTML</b>(<nobr><a xmlns="" href="java.lang.String.html">String</a> html</nobr>)</div>Sets this object's contents via HTML. Use care when setting an object's
+ HTML; it is an easy way to expose script-based security problems. Consider
+ using <a xmlns="" href="com.google.gwt.user.client.ui.HasText.html#setText(java.lang.String)">setText</a> whenever possible.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>html</dt>
+                <dd>the object's new HTML</dd>
+            </dl>
+            <hr>
+            <a name="setText(java.lang.String)"></a>
+            <h3 class="api">setText</h3>
+            <div class="memberSig">public void<b> setText</b>(<nobr><a xmlns="" href="java.lang.String.html">String</a> text</nobr>)</div>Sets this object's text.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>text</dt>
+                <dd>the object's new text</dd>
+            </dl>
+            <hr>
+            <a name="setWidget(com.google.gwt.user.client.ui.Widget)"></a>
+            <h3 class="api">setWidget</h3>
+            <div class="memberSig">public void<b> setWidget</b>(<nobr><a xmlns="" href="com.google.gwt.user.client.ui.Widget.html">Widget</a> w</nobr>)</div>Sets this panel's widget. Any existing child widget will be removed.<h4 class="api">Parameters</h4>
+            <dl class="memberDetail">
+                <dt>w</dt>
+                <dd>the panel's new widget (<code>null</code> will clear the panel)</dd>
+            </dl>
+        </div>
+        <div id="footer">
+      &copy;2006 Google
+      <span class="noprint"> -
+        <a href="http://www.google.com/">Google Home</a> -
+        <a href="http://www.google.com/jobs/">We're Hiring</a> -
+        <a href="http://www.google.com/privacy.html">Privacy Policy</a> -
+        <a href="http://www.google.com/terms_of_service.html">Terms of Service</a> -
+        <a href="mailto:code@google.com">Contact Us</a>
+            </span>
+        </div>
+        <script type="text/javascript" src="https://ssl.google-analytics.com/urchin.js"/>
+        <script type="text/javascript">_uacct="UA-18071-1"; _uanchor=1; urchinTracker();</script>
+    </body>
+</html>
