@@ -67,13 +67,13 @@ public class RandomNewsWidget extends RandomWidget {
     public void onCompletion(String responseText) {
       System.out.println("responseText = " + responseText);  
       if (!HttpRequestUtil.isErrorResponse(responseText)) {
-        List rssItems = JSON2RSSParser.parseAndReturnRSSItems(responseText);
+        List rssItems = JSON2RSSParser.parse(responseText);
         if (feedURL == null) {
           widget.addToCache(randomFeedScriptURL, rssItems);
         } else {
           widget.addToCache(feedURL, rssItems);
         }
-        RSSItem randomItem = Randomizer.getRandomItem(rssItems);
+        RSSItem randomItem = (RSSItem) Randomizer.getRandomItem(rssItems);
         displayRandomItem(randomItem);
       }
     }

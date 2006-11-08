@@ -4,6 +4,8 @@ import therandomhomepage.client.rss.JSON2RSSParser;
 import therandomhomepage.client.rss.RSSItem;
 import com.google.gwt.junit.client.GWTTestCase;
 
+import java.util.List;
+
 /**
  * Created by IntelliJ IDEA.
  * User: SHAMEED
@@ -20,9 +22,9 @@ public class JSON2RSSParser_UT extends TheRandomHomepageAbstract_UT {
 
   public void testParseYahooRSS() {
 
-    RSSItem[] rssItems = JSON2RSSParser.parse(yahooRSSJSON);
+    List rssItems = JSON2RSSParser.parse(yahooRSSJSON);
     assertNotNull(rssItems);
-    assertEquals(4, rssItems.length);
+    assertEquals(4, rssItems.size());
 
     RSSItem expectedRSSItem1 = new RSSItem("Mexican tells crowd he'll seek recount \n" +
             "    (AP)", "http://us.rd.yahoo.com/dailynews/rss/topstories/*http://news.yahoo.com/s/ap/20060709/ap_on_re_la_am_ca/mexico_elections", "<p><a href=\"http://us.rd.yahoo.com/dailynews/rss/topstories/*http://news.yahoo.com/s/ap/20060709/ap_on_re_la_am_ca/mexico_elections\"><img src=\"http://us.news3.yimg.com/us.i2.yimg.com/p/ap/20060709/capt.5a2fa662f8bc413597f669a36b502eab.mexico_elections__momu107.jpg?x=130&amp;y=83&amp;sig=67xo1gNkImk80pvOmOFUGQ--\" align=\"left\" height=\"83\" width=\"130\" alt=\"A lone flag of the Democratic Revolution Party (PRD) flies over thousands of supporters of Mexican presidential candidate Andres Manuel Lopez Obrador during a rally at the main Zocalo plaza in Mexico City, Mexico on Saturday, July 8, 2006. Obrador called his supporters onto the streets Saturday to protest his rival's narrow victory in a vote he said was more fraudulent than those held during 71 years of one-party rule. (AP Photo/Marco Ugarte) border=\"0\" /></a>AP - Leftist presidential candidate Andres Manuel Lopez Obrador called on a huge crowd of supporters Saturday to keep peacefully protesting as he goes to court to challenge what he called his fraudulent electoral defeat.</p><br clear=all>");
@@ -61,9 +63,9 @@ public class JSON2RSSParser_UT extends TheRandomHomepageAbstract_UT {
 
   public void testParseGoogleRSS() {
 
-    RSSItem[] rssItems = JSON2RSSParser.parse(googleRSSJSON);
+    List rssItems = JSON2RSSParser.parse(googleRSSJSON);
     assertNotNull(rssItems);
-    assertEquals(6, rssItems.length);
+    assertEquals(6, rssItems.size());
 
     RSSItem expectedRSSItem1 = new RSSItem("Plane crashes in Russia, death toll reaches 120 - Reuters.uk", "http://news.google.com/news/url?sa=T&ct=us/0-0-0&fd=R&url=http://today.reuters.co.uk/news/newsArticle.aspx%3Ftype%3DtopNews%26storyID%3D2006-07-09T072653Z_01_L09335850_RTRUKOC_0_UK-RUSSIA-PLANE.xml&cid=1107810086&ei=X7awRISXGoz8oQLrsvnMBg", "<br><table border=0 align= cellpadding=5 cellspacing=0><tr><td width=80 align=center valign=top><a href=\"http://news.google.com/news/url?sa=T&ct=us/0-0i-0&fd=R&url=http://news.bbc.co.uk/1/hi/world/europe/5162082.stm&cid=1107810086&ei=X7awRISXGoz8oQLrsvnMBg\"><img src=http://news.google.com/news?imgefp=RVLpY5ko6Q8J&imgurl=newsimg.bbc.co.uk/media/images/41864000/jpg/_41864964_crash.jpg width=79 height=59 alt=\"\" border=1><br><font size=-2>BBC News</font></a></td></tr></table><a href=\"http://news.google.com/news/url?sa=T&ct=us/0-0-0&fd=R&url=http://today.reuters.co.uk/news/newsArticle.aspx%3Ftype%3DtopNews%26storyID%3D2006-07-09T072653Z_01_L09335850_RTRUKOC_0_UK-RUSSIA-PLANE.xml&cid=1107810086&ei=X7awRISXGoz8oQLrsvnMBg\"><b>Plane crashes in Russia, death toll reaches 120</b></a><br><font size=-1><font color=#6f6f6f><b>Reuters.uk&nbsp;-</font> <nobr>25 minutes ago</nobr></b></font><br><font size=-1>By Dmitry Solovyov. MOSCOW (Reuters) - A Russian airliner crashed on landing and burst into flames in Siberia on Sunday, killing at least 120 people and injuring more than 50, emergencies officials said. A <b>...</b>  </font><br><font size=-1><a href=\"http://news.google.com/news/url?sa=T&ct=us/0-0-1&fd=R&url=http://news.independent.co.uk/world/asia/article1168576.ece&cid=1107810086&ei=X7awRISXGoz8oQLrsvnMBg\">118 killed in Siberia plane crash</a> <font size=-1 color=#6f6f6f><nobr>Independent</nobr></font></font><br><font size=-1><a href=\"http://news.google.com/news/url?sa=T&ct=us/0-0-2&fd=R&url=http://www.tass.ru/eng/level2.html%3FNewsID%3D10606632%26PageNum%3D0&cid=1107810086&ei=X7awRISXGoz8oQLrsvnMBg\">A-310 crash in Irkutsk leaves 127 dead</a> <font size=-1 color=#6f6f6f><nobr>ITAR-TASS</nobr></font></font><br><font size=-1 class=p><a href=\"http://news.google.com/news/url?sa=T&ct=us/0-0-3&fd=R&url=http://english.eastday.com/eastday/englishedition/node20676/userobject1ai2166050.html&cid=1107810086&ei=X7awRISXGoz8oQLrsvnMBg\"><nobr>EastDay.com</nobr></a>&nbsp;- <a href=\"http://news.google.com/news/url?sa=T&ct=us/0-0-4&fd=R&url=http://www.nytimes.com/2006/07/09/world/europe/09crash.html%3Fhp%26ex%3D1152504000%26en%3D4e6cdc6d6ae4bc76%26ei%3D5094%26partner%3Dhomepage&cid=1107810086&ei=X7awRISXGoz8oQLrsvnMBg\"><nobr>New York Times</nobr></a>&nbsp;- <a href=\"http://news.google.com/news/url?sa=T&ct=us/0-0-5&fd=R&url=http://msnbc.msn.com/id/13773633/&cid=1107810086&ei=X7awRISXGoz8oQLrsvnMBg\"><nobr>MSNBC</nobr></a>&nbsp;- <a href=\"http://news.google.com/news/url?sa=T&ct=us/0-0-6&fd=R&url=http://news.bbc.co.uk/2/hi/5162082.stm%3Fls&cid=1107810086&ei=X7awRISXGoz8oQLrsvnMBg\"><nobr>BBC News</nobr></a>&nbsp;- </font><font class=p size=-1><a class=p href=http://news.google.com/?ncl=http://today.reuters.co.uk/news/newsArticle.aspx%3Ftype%3DtopNews%26storyID%3D2006-07-09T072653Z_01_L09335850_RTRUKOC_0_UK-RUSSIA-PLANE.xml&hl=en><nobr><b>all 441 related</b></nobr></a></font><br clear=all>");
     expectedRSSItem1.setGuid("tag:news.google.com,2005:cluster=4207d726");
@@ -81,10 +83,10 @@ public class JSON2RSSParser_UT extends TheRandomHomepageAbstract_UT {
     }
   }
 
-  private void assertRSSItem(RSSItem expectedRSSItem, RSSItem actualRSSItems[]) {
+  private void assertRSSItem(RSSItem expectedRSSItem, List actualRSSItems) {
 
-    for (int i = 0; i < actualRSSItems.length; i++) {
-      RSSItem actualRSSItem = actualRSSItems[i];
+    for (int i = 0; i < actualRSSItems.size(); i++) {
+      RSSItem actualRSSItem = (RSSItem) actualRSSItems.get(i);
       if (expectedRSSItem.getTitle().equals(actualRSSItem.getTitle())) {
         assertEquals(expectedRSSItem.getTitle(), actualRSSItem.getTitle());
         assertEquals(expectedRSSItem.getLink(), actualRSSItem.getLink());
