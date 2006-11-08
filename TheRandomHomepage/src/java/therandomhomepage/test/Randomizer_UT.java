@@ -4,6 +4,9 @@ import therandomhomepage.client.rss.RSSItem;
 import therandomhomepage.core.Randomizer;
 import com.google.gwt.user.client.Random;
 
+import java.util.List;
+import java.util.ArrayList;
+
 /**
  * Created by IntelliJ IDEA.
  * User: SHAMEED
@@ -33,13 +36,15 @@ public class Randomizer_UT extends TheRandomHomepageAbstract_UT {
     expectedRSSItem4.setGuid("ap/20060709/space_shuttle");
     expectedRSSItem4.setPublishedDate("Sun, 09 Jul 2006 03:13:06 GMT");
 
-    RSSItem rssItems[] = {expectedRSSItem1, expectedRSSItem2, expectedRSSItem3, expectedRSSItem4};
-
+    List rssItems = new ArrayList();
+    rssItems.add(expectedRSSItem1);
+    rssItems.add(expectedRSSItem2);
+    rssItems.add(expectedRSSItem3);
+    rssItems.add(expectedRSSItem4);
 
     boolean item1Randomized = false, item2Randomized = false, item3Randomized = false, item4Randomized = false;
-    for (int i = 0; i < (rssItems.length * 5); i++) {
+    for (int i = 0; i < (rssItems.size()* 5); i++) {
       RSSItem randomItem = (RSSItem) Randomizer.getRandomItem(rssItems);
-
       if (randomItem.getTitle().equals(expectedRSSItem1.getTitle())) {
         item1Randomized = true;
       } else if (randomItem.getTitle().equals(expectedRSSItem2.getTitle())) {

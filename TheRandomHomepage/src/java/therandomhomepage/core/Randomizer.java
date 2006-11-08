@@ -14,20 +14,11 @@ import therandomhomepage.client.rss.RSSItem;
  */
 public class Randomizer {
 
-  public static Randomizable getRandomItem(Randomizable[] items) {
-    if (items != null) {
-      int randomIdx = Random.nextInt(items.length);
-      return items[randomIdx];
+    public static Randomizable getRandomItem(List items) {
+      if (items != null) {
+        int randomIdx = Random.nextInt(items.size());
+        return (Randomizable) items.get(randomIdx);
+      }
+      return null;
     }
-    return null;
-  }
-
-  public static RSSItem getRandomItem(List items) {
-    if (items != null) {
-      int randomIdx = Random.nextInt(items.size());
-      return (RSSItem) items.get(randomIdx);
-    }
-    return null;
-  }
-
 }

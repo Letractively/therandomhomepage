@@ -19,7 +19,6 @@ public class URLHelper {
   private static final String AUTO_PLAY_PREF_KEY = "up_autoplay";
   private static final String AUTO_PLAY_DELAY_KEY = "up_delay";
   private static final String LOCAL_BASE_URL = "/";
-  private static final String SERVER_BASE_URL = "http://www.therandomhomepage.com/";
 
   private static final String GET_RANDOM_FEED_URL = "scripts/GetRandomFeed.php";
   private static final String GET_RANDOM_NEWS_FEED_URL = "scripts/GetRandomNewsfeed.php";
@@ -39,7 +38,8 @@ public class URLHelper {
 //    if (windowLocation.startsWith("http://local")) {
 //      return URLHelper.LOCAL_BASE_URL;
 //    }
-    return URLHelper.SERVER_BASE_URL;
+    //return URLHelper.SERVER_BASE_URL;
+    return URLHelper.LOCAL_BASE_URL;      
   }
 
   public String getRandomFeedURL() {

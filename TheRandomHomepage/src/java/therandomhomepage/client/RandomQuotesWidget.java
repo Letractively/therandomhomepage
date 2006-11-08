@@ -11,7 +11,6 @@ import com.google.gwt.user.client.ui.*;
  */
 public class RandomQuotesWidget extends RandomWidget{
 
-  private String url = "http://quotes4all.net/quotations.html";
   protected static final String ERROR_MESSAGE = "Error retrieving random content !";
 
   public RandomQuotesWidget(String header) {
@@ -19,8 +18,10 @@ public class RandomQuotesWidget extends RandomWidget{
   }
 
   protected void retrieveRandomItem() {
+    String url = "http://quotes4all.net/quotations.html";
     URLHelper helper = new URLHelper();
     String redirectURL = helper.getRedirectScriptURL() + "?url=" + url;
+    System.out.println("redirectURL = " + redirectURL);  
     setData(new Frame(redirectURL));
   }
 }

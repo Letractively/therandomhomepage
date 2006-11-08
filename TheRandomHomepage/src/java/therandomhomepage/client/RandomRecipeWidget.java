@@ -8,6 +8,8 @@ import therandomhomepage.client.rss.RSSItem;
 import therandomhomepage.core.Randomizable;
 import therandomhomepage.core.Randomizer;
 
+import java.util.List;
+
 /**
  * Created by IntelliJ IDEA.
  * User: SHAMEED
@@ -42,7 +44,7 @@ public class RandomRecipeWidget extends RandomWidget{
       }
     }
 
-    private Randomizable[] getData(String responseText) {
+    private List getData(String responseText) {
       return JSON2RSSParser.parse(responseText);
     }
   }
