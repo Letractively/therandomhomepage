@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Random Wikipedia Article</title>
+<link rel="icon" type="image/png" href="http://en.wikipedia.org/favicon.ico" />
 <meta name="author" content="Siddique Hameed" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" type="text/css" href="http://www.netvibes.com/api/0.3/style.css" />
@@ -42,8 +43,8 @@
 	}
 	div.contentClass {
 		vertical-align:middle;
-		background-color:#F4F4F4; 
-		border:solid 1px #aaaaaa;padding:8px; 
+		background-color:#F4F4F4;
+		border:solid 1px #aaaaaa;padding:8px;
 	}
 	</style>
 
@@ -75,63 +76,165 @@
 	arrRandomWikipediaURL["de"] = "http://de.wikipedia.org/wiki/Spezial:Random";
 	arrRandomWikipediaURL["ru"] = "http://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Random";
 
+	var randomWikipediaURL = "http://en.wikipedia.org/wiki/Special:Random";
+
 	NV_ONLOAD = function()
     {
-		var randomWikipediaURL = arrRandomWikipediaURL["en"]; 
-		//var url = "http://www.phonifier.com/phonify.php?i=1&m=0&l=0&u="+escape(randomWikipediaURL);
+		getRandomArticleFromWikipedia();
+	}
+
+	function getRandomArticleFromWikipedia(){
+
+		randomWikipediaURL = arrRandomWikipediaURL[getValue("language")];
 		var url = "http://www.therandomhomepage.com/netvibes/modules/RandomWikipediaArticle/GetRandomWikipediaArticle.php?url="+randomWikipediaURL;
-		alert("url = "+url);
 		var d = new Date();
-		iFrameURL += "rnd="+d.getTime();
-		var iFrame = NV_CONTENT.getElementsByTagName('iframe');
-	    iFrame[0].src = url;
-		//alert(" Links  = "+frames["wikiContentFrame"].document.links.length);
+		url += "&rnd="+d.getTime();
 
 		if(!NV_XML_REQUEST_URL) {
 			var NV_XML_REQUEST_URL = '/ajaxProxy.php';
 		}
 
-      var requestParams = { method: 'get', onSuccess: AjaxShow, onFailure: AjaxFailure };
-	  alert("Submitting ajax request ");
+      var requestParams = { method: 'get', onSuccess: ShowWikipediaArticle, onFailure: ShowFailure };
       var request = new Ajax.Request(NV_XML_REQUEST_URL + '?url=' + escape(url), requestParams);
+	  setHTML("divContent","Loading article from Wikipedia...");
 	}
 
-	 function AjaxFailure(xhr)
+	 function ShowFailure(xhr)
      {
-        alert('Error : ' + xhr.status + ' - ' + xhr.responseText);
+		setHTML("divContent",xhr.responseText);
      }
 
-	function AjaxShow(xhr)
+	function ShowWikipediaArticle(xhr)
     {
-		alert("Got response = "+xhr.responseText);
-	}
-
-	function setTitle() {
-		if (!isEmpty(getValue("title")))
+		try
 		{
-			NV_TITLE.innerHTML = getValue("title");
+			 var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
+			 if (arrow)
+			 {
+				 arrow.onclick = function() {
+					getRandomArticleFromWikipedia();
+				 }
+			 }
+
+			var responseDocument = document.createElement("response");
+
+
+			//strip header and footer
+			var retrievedFrmIdx = xhr.responseText.indexOf("Retrieved from ");
+			if (retrievedFrmIdx > -1)
+			{
+
+				var wikipediaBaseURL = randomWikipediaURL.substring(0,randomWikipediaURL.lastIndexOf("/"));
+				var articleURLStartIdx = xhr.responseText.indexOf(wikipediaBaseURL,retrievedFrmIdx);
+				var articleURLEndIdx = xhr.responseText.indexOf('</a>"',articleURLStartIdx);
+
+
+				var articleURL = xhr.responseText.substring(articleURLStartIdx,articleURLEndIdx);
+
+				// get title
+				var articleTitle = grep(xhr.responseText,'<h1 class="firstHeading">','</h1>');
+				setHTML("divTitle","<a target='_new' href='"+articleURL+"'>"+articleTitle+"</a>");
+
+
+				var respText = xhr.responseText.substring(0,retrievedFrmIdx);
+				var paraIdx = respText.indexOf("<p>");
+
+				if (paraIdx > -1)
+				{
+					respText = respText.substring(paraIdx);
+				}
+				responseDocument.innerHTML = respText;
+			}
+
+
+			removeElements(responseDocument,'title');
+			removeElements(responseDocument,'meta');
+			removeElements(responseDocument,'link');
+			removeElements(responseDocument,'base');
+			removeElements(responseDocument,'form');
+
+			var links = $A(responseDocument.getElementsByTagName('a'));
+			var localLinks = links.findAll( function(link){
+				var linkURL =  link.href;
+				if (linkURL.indexOf('phonify.php') != -1)
+				{
+					var idx = linkURL.indexOf("http%3A%2F%2F");
+					linkURL = linkURL.substr(idx+13);
+					linkURL = "http://"+unescape(linkURL);
+					link.href = linkURL;
+					link.target = "_new";
+				}
+			});
+
+			removeElementsWithIds(responseDocument, "h3","siteSub");
+			removeElementsWithIds(responseDocument, "ul","f-list");
+			removeElementsWithIds(responseDocument, "ul","t-whatlinkshere");
+
+			setHTML("divContent",responseDocument.innerHTML);
+		}
+		catch (e)
+		{
+			alert("Error = "+e);
 		}
 	}
+
+	function removeElementsWithIds(parentDocument, tagName,idName){
+		var nodes = $A(parentDocument.getElementsByTagName(tagName));
+		var foundNodes = nodes.findAll( function(node){
+			if (node.id = idName)
+			{
+				Element.remove(node);
+			}
+		});
+	}
+
+	function removeElements(baseElement,elementName) {
+		var forms = $A(baseElement.getElementsByTagName(elementName));
+		var localForms = forms.findAll( function(form){
+			Element.remove(form);
+		});
+	}
+
 
 	function isEmpty(value){
 		return value == "" || value == "undefined" || value == "null" || value == null;
 	}
 
+	function grep(wholeStr, startsWith, endsWith)
+	{
+		var grepStr = "";
+		var iFrom = wholeStr.indexOf(startsWith);
+		var iTo = wholeStr.indexOf(endsWith);
+		iFrom += startsWith.length;
+		if (iTo > iFrom) {
+			grepStr = wholeStr.substring(iFrom, iTo);
+		}
+		return grepStr;
+	}
+
+	function setHTML(className, str)
+	{
+		var element = document.getElementsByClassName(className, NV_CONTENT)[0];
+		if (element)
+		{
+			element.innerHTML = str;
+		}
+	}
+
+
+
 </script>
 </head>
 
 <body>
-<table cellspacing="0" style="width:100% !important;background:#FFFFFF !important;padding:0px !important;margin:0px !important;border:0px !important;border-collapse:collapse !important">
+<table cellspacing="0" style="display:block !important;width:100% !important;height:<?php echo htmlspecialchars($height) ?>px !important;background:#FFFFFF !important;padding:0px !important;margin:0px !important;border:0px !important;overflow: auto;">
+<tr><td><h1><div class="divTitle"/></h1></td><td><div class="divArrow" title='Next Random Article' style='font-family: Arial, sans-serif;font-weight:bold;color:darkblue;cursor:pointer;'>&gt;&gt;</div></td></tr>
 <tr><td style="padding:1px !important;margin:0px !important;border:0px !important;">
-  <iframe id="wikipediaContentFrame" name="wikiContentFrame" scrolling="auto" frameborder="0" style="display:block !important;width:100% !important;height:400px !important;background:#FFFFFF !important;padding:0px !important;margin:0px !important;border:0px !important;">Your browser does not support frames or is currently configured not to display frames.</iframe>
+  <div class="divContent" scrolling="auto" frameborder="0"/>
 </td></tr>
 </table>
 <form class="configuration" method="post" action="">
   <table border="0">
-    <tr>
-      <td><label>Title:</label></td>
-      <td><input name="title" type="text" value="Random Wikipedia Article" size="40"/></td>
-    </tr>
     <tr>
       <td><label>Height:</label></td>
       <td><input name="height" type="text" value="400"/></td>
@@ -142,14 +245,14 @@
 		<select name="language" style="vertical-align: top; padding: 0; margin: 0 0.4em;">
 			<option value="de" lang="de" xml:lang="de">Deutsch</option>
 			<option value="en" lang="en" xml:lang="en" selected="selected">English</option>
-			<option value="es" lang="es" xml:lang="es">Español</option>
-			<option value="fr" lang="fr" xml:lang="fr">Français</option>
+			<option value="es" lang="es" xml:lang="es">Espa�ol</option>
+			<option value="fr" lang="fr" xml:lang="fr">Fran�ais</option>
 			<option value="it" lang="it" xml:lang="it">Italiano</option>
 			<option value="nl" lang="nl" xml:lang="nl">Nederlands</option>
-			<option value="ja" lang="ja" xml:lang="ja">日本語</option>
+			<option value="ja" lang="ja" xml:lang="ja">???</option>
 			<option value="pl" lang="pl" xml:lang="pl">Polski</option>
-			<option value="pt" lang="pt" xml:lang="pt">Português</option>
-			<option value="ru" lang="ru" xml:lang="ru">Русский</option>
+			<option value="pt" lang="pt" xml:lang="pt">Portugu�s</option>
+			<option value="ru" lang="ru" xml:lang="ru">???????</option>
 			<option value="sv" lang="sv" xml:lang="sv">Svenska</option>
 		</select>
 	</td>
