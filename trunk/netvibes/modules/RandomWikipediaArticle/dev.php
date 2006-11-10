@@ -46,6 +46,22 @@
 		background-color:#F4F4F4;
 		border:solid 1px #aaaaaa;padding:8px;
 	}
+
+
+	div.divContent {
+		vertical-align:middle;
+		background-color:#F4F4F4;
+		border:solid 1px #aaaaaa;padding:8px;
+	}
+
+	div.divTitle {
+		color: Black;
+	}
+
+	div.divArrow {
+		vertical-align: top;
+	}
+
 	</style>
 
   <script type="text/javascript" src="http://www.netvibes.com/api/0.3/emulation.js"></script>
@@ -59,7 +75,6 @@
 	if(!empty($_COOKIE['height'])) {
 		$height = $_COOKIE['height'];
 	}
-
 ?>
 <script type="text/javascript">
 
@@ -71,16 +86,38 @@
 	arrRandomWikipediaURL["sv"] = "http://sv.wikipedia.org/wiki/Special:Random";
 	arrRandomWikipediaURL["es"] = "http://es.wikipedia.org/wiki/Especial:Random";
 	arrRandomWikipediaURL["pt"] = "http://pt.wikipedia.org/wiki/Especial:Random";
-	arrRandomWikipediaURL["nl"] = "http://nl.wikipedia.org/wiki/Speciaal:Random";
+	//arrRandomWikipediaURL["nl"] = "http://nl.wikipedia.org/wiki/Speciaal:Random";
 	arrRandomWikipediaURL["pl"] = "http://pl.wikipedia.org/wiki/Specjalna:Random";
 	arrRandomWikipediaURL["de"] = "http://de.wikipedia.org/wiki/Spezial:Random";
-	arrRandomWikipediaURL["ru"] = "http://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Random";
+	//arrRandomWikipediaURL["ru"] = "http://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Random";
+
+	var arrFooterLimit = new Array();
+	arrFooterLimit["en"] = 'Retrieved from "<a href="';
+	arrFooterLimit["fr"] = 'Récupérée de « <a href="';
+	arrFooterLimit["ja"] = ' "<a href="';
+	arrFooterLimit["it"] = 'Estratto da "<a href="';
+	arrFooterLimit["sv"] = 'Den här artikeln är hämtad från <a href="';
+	arrFooterLimit["es"] = 'Obtenido de "<a href="';
+	arrFooterLimit["pt"] = 'Retirado de "<a href="';
+	//arrFooterLimit["nl"] = 'http://nl.wikipedia.org/wiki/Speciaal:Random'; //?
+	arrFooterLimit["pl"] = '?ród?o: "<a href="';
+	arrFooterLimit["de"] = 'Von „<a href="';
+	//arrFooterLimit["ru"] = 'http://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Random";
+
 
 	var randomWikipediaURL = "http://en.wikipedia.org/wiki/Special:Random";
 
 	NV_ONLOAD = function()
     {
 		getRandomArticleFromWikipedia();
+		setTitle();
+	}
+
+	function setTitle() {
+		if (!isEmpty(getValue("title")))
+		{
+			NV_TITLE.innerHTML = getValue("title");
+		}
 	}
 
 	function getRandomArticleFromWikipedia(){
@@ -96,7 +133,14 @@
 
       var requestParams = { method: 'get', onSuccess: ShowWikipediaArticle, onFailure: ShowFailure };
       var request = new Ajax.Request(NV_XML_REQUEST_URL + '?url=' + escape(url), requestParams);
+
+	  setHTML("divTitle","&nbsp;");
 	  setHTML("divContent","Loading article from Wikipedia...");
+	  var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
+	  if (arrow)
+	  {
+		Element.toggle(arrow);
+	  }
 	}
 
 	 function ShowFailure(xhr)
@@ -108,19 +152,12 @@
     {
 		try
 		{
-			 var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
-			 if (arrow)
-			 {
-				 arrow.onclick = function() {
-					getRandomArticleFromWikipedia();
-				 }
-			 }
 
 			var responseDocument = document.createElement("response");
 
 
 			//strip header and footer
-			var retrievedFrmIdx = xhr.responseText.indexOf("Retrieved from ");
+			var retrievedFrmIdx = xhr.responseText.indexOf(arrFooterLimit[getValue("language")]);
 			if (retrievedFrmIdx > -1)
 			{
 
@@ -133,7 +170,13 @@
 
 				// get title
 				var articleTitle = grep(xhr.responseText,'<h1 class="firstHeading">','</h1>');
-				setHTML("divTitle","<a target='_new' href='"+articleURL+"'>"+articleTitle+"</a>");
+				setHTML("divTitle","<a target='_new' href='"+articleURL+"'><h3>"+articleTitle+"</h3></a>");
+
+				 var title = document.getElementsByClassName("divTitle", NV_CONTENT)[0];
+				 if (title)
+				 {
+					 setToolTip(title,"Click on the arrows(&gt;&gt;) to see next random article.");
+				 }
 
 
 				var respText = xhr.responseText.substring(0,retrievedFrmIdx);
@@ -146,11 +189,6 @@
 				responseDocument.innerHTML = respText;
 			}
 
-
-			removeElements(responseDocument,'title');
-			removeElements(responseDocument,'meta');
-			removeElements(responseDocument,'link');
-			removeElements(responseDocument,'base');
 			removeElements(responseDocument,'form');
 
 			var links = $A(responseDocument.getElementsByTagName('a'));
@@ -171,17 +209,27 @@
 			removeElementsWithIds(responseDocument, "ul","t-whatlinkshere");
 
 			setHTML("divContent",responseDocument.innerHTML);
+
+			 var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
+			 if (arrow)
+			 {
+				 Element.toggle(arrow);
+				 arrow.onclick = function() {
+					getRandomArticleFromWikipedia();
+				 }
+			 }
+
 		}
 		catch (e)
 		{
-			alert("Error = "+e);
+			setHTML("divContent","Error reading content from Wikipedia.<br/>"+e);
 		}
 	}
 
 	function removeElementsWithIds(parentDocument, tagName,idName){
 		var nodes = $A(parentDocument.getElementsByTagName(tagName));
 		var foundNodes = nodes.findAll( function(node){
-			if (node.id = idName)
+			if (node.id == idName)
 			{
 				Element.remove(node);
 			}
@@ -228,13 +276,19 @@
 
 <body>
 <table cellspacing="0" style="display:block !important;width:100% !important;height:<?php echo htmlspecialchars($height) ?>px !important;background:#FFFFFF !important;padding:0px !important;margin:0px !important;border:0px !important;overflow: auto;">
-<tr><td><h1><div class="divTitle"/></h1></td><td><div class="divArrow" title='Next Random Article' style='font-family: Arial, sans-serif;font-weight:bold;color:darkblue;cursor:pointer;'>&gt;&gt;</div></td></tr>
+<tr><td><div class="divTitle"/></td><td valign="top"><div class="divArrow" title='Next Random Article' style='font-family: Arial, sans-serif;font-weight:bold;color:darkblue;cursor:pointer;'>&gt;&gt;</div></td></tr>
 <tr><td style="padding:1px !important;margin:0px !important;border:0px !important;">
-  <div class="divContent" scrolling="auto" frameborder="0"/>
+  <div class="divContent" scrolling="auto" frameborder="0">
+	Loading article from Wikipedia...
+  </div>
 </td></tr>
 </table>
 <form class="configuration" method="post" action="">
   <table border="0">
+    <tr>
+      <td><label>Title:</label></td>
+      <td><input name="title" type="text" value="Random Wikipedia Article" size="40"/></td>
+    </tr>
     <tr>
       <td><label>Height:</label></td>
       <td><input name="height" type="text" value="400"/></td>
@@ -248,11 +302,11 @@
 			<option value="es" lang="es" xml:lang="es">Español</option>
 			<option value="fr" lang="fr" xml:lang="fr">Français</option>
 			<option value="it" lang="it" xml:lang="it">Italiano</option>
-			<option value="nl" lang="nl" xml:lang="nl">Nederlands</option>
+			<!--<option value="nl" lang="nl" xml:lang="nl">Nederlands</option>-->
 			<option value="ja" lang="ja" xml:lang="ja">???</option>
 			<option value="pl" lang="pl" xml:lang="pl">Polski</option>
 			<option value="pt" lang="pt" xml:lang="pt">Português</option>
-			<option value="ru" lang="ru" xml:lang="ru">???????</option>
+			<!--<option value="ru" lang="ru" xml:lang="ru">???????</option>-->
 			<option value="sv" lang="sv" xml:lang="sv">Svenska</option>
 		</select>
 	</td>
