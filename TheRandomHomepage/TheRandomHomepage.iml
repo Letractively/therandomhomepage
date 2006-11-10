@@ -13,7 +13,7 @@
     </content>
     <content url="file://$MODULE_DIR$/../google" />
     <content url="file://$MODULE_DIR$/../netvibes" />
-    <orderEntry type="library" name="GWT" level="project" />
+    <orderEntry type="library" exported="" name="GWT" level="project" />
     <orderEntry type="jdk" jdkName="IDEA 5784" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntryProperties />

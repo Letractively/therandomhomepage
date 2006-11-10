@@ -1,0 +1,1 @@
+<script src="http://gmodules.com/ig/ifr?url=http://www.therandomhomepage.com/google/gadget/RandomFeedModule.xml&up_url1=http%3A%2F%2Fnews.google.com%2F%3Foutput%3Drss&up_url2=&up_url3=&up_autoplay=0&up_delay=10&synd=open&w=320&h=250&title=&border=%23ffffff%7C3px%2C1px+solid+%23999999&output=js"></script>
