@@ -23,9 +23,11 @@ public class TheRandomHomepage implements EntryPoint {
     Grid grid = new Grid(1, 3);
     grid.setCellSpacing(5);
 
-    RandomNewsWidget newsWidget = new RandomNewsWidget("Random News");
-    newsWidget.setSize("100%", "100%");
-    grid.setWidget(0, 0, newsWidget);
+//    RandomNewsWidget newsWidget = new RandomNewsWidget("Random News");
+//    newsWidget.setSize("100%", "100%");
+
+    GoogleGadget randomWikipediaArticle = new GoogleGadget("http://www.therandomhomepage.com/google/gadgets/randomwiki/RandomWikiModule.xml");
+    grid.setWidget(0, 0, randomWikipediaArticle);
 //    grid.setBorderWidth(2);
     grid.getCellFormatter().setWidth(0, 0, "33%");
 
