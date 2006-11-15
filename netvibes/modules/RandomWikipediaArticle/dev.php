@@ -33,7 +33,8 @@
     }
 
     div.divContent {
-        vertical-align: top;
+        vertical-align: text-top;
+        text-align:center;
         background-color: #F4F4F4;
         border: solid 1px #aaaaaa;
         padding: 8px;
