@@ -5,7 +5,7 @@
 <link rel="icon" type="image/png" href="http://en.wikipedia.org/favicon.ico"/>
 <meta name="author" content="Siddique Hameed"/>
 <!--
-	Last Updated: 11/13/2006
+	Last Updated: 11/16/2006
 -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="stylesheet" type="text/css" href="http://www.netvibes.com/api/0.3/style.css"/>
@@ -32,15 +32,14 @@
         padding-bottom: 0.17em;
     }
 
-    div.divContent {
+    div.divWikipediaContent {
         vertical-align: text-top;
-        text-align:center;
         background-color: #F4F4F4;
         border: solid 1px #aaaaaa;
         padding: 8px;
     }
 
-    div.divTitle {
+    div.divRandomWikipediaTitle {
         color: Black;
     }
 
@@ -49,17 +48,15 @@
         color: darkblue;
         cursor: pointer;
     }
-
 </style>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
 
 <script type="text/javascript" src="http://www.netvibes.com/api/0.3/emulation.js"></script>
 
 <?php
     $height = "400";
-	if(!empty($_COOKIE['height'])) {
-		$height = $_COOKIE['height'];
-	}
-
 	if(!empty($_COOKIE['height'])) {
 		$height = $_COOKIE['height'];
 	}
@@ -97,8 +94,32 @@ NV_ONLOAD = function()
 		//default language
 		saveValue("language","en");
 	}
-    getRandomArticleFromWikipedia();
+
+	resize();
+	getRandomArticleFromWikipedia();
     setTitle();
+	_uacct = "UA-941159-1";
+	urchinTracker();
+}
+
+function resize(){
+	var width = getValue("width");
+	if (!isEmpty(width))
+	{
+		var moduleElements = document.getElementsByClassName("module",document);
+		if (moduleElements)
+		{
+			for(var i=0; i < moduleElements.length; i++){
+				var divWikipediaContent = document.getElementsByClassName("divWikipediaContent",moduleElements[i])[0];
+				if (divWikipediaContent)
+				{
+					var widthStyle = width+"px";
+					Element.setStyle(moduleElements[i],{width:widthStyle});
+					break;
+				}
+			}
+		}
+	}
 }
 
 function setTitle() {
@@ -112,9 +133,7 @@ function getRandomArticleFromWikipedia() {
 
 	randomWikipediaURL = arrRandomWikipediaURL[getValue("language")];
 
-    var url = "http://www.therandomhomepage.com/netvibes/modules/RandomWikipediaArticle/GetRandomWikipediaArticle.php?url=" + randomWikipediaURL;
-    var d = new Date();
-    url += "&rnd=" + d.getTime();
+    var url = "http://www.phonifier.com/phonify.php?i=1&m=0&l=0&u=" + randomWikipediaURL;
 
     if (!NV_XML_REQUEST_URL) {
         var NV_XML_REQUEST_URL = 'http://www.netvibes.com/ajaxProxy.php';
@@ -123,8 +142,8 @@ function getRandomArticleFromWikipedia() {
     var requestParams = { method: 'get', onSuccess: ShowWikipediaArticle, onFailure: ShowFailure };
     var request = new Ajax.Request(NV_XML_REQUEST_URL + '?url=' + escape(url), requestParams);
 
-    setHTML("divTitle", "&nbsp;");
-	setHTML("divContent", "<p style='align:center;display:block;width:100%'>Loading article from Wikipedia...</p>");
+    //setHTML("divRandomWikipediaTitle", "&nbsp;");
+	//setHTML("divWikipediaContent", "<p style='align:center;display:block;width:100%'>Loading article from Wikipedia...</p>");
     var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
     if (arrow)
     {
@@ -134,7 +153,7 @@ function getRandomArticleFromWikipedia() {
 
 function ShowFailure(xhr)
 {
-    setHTML("divContent", xhr.responseText);
+    setHTML("divWikipediaContent", xhr.responseText);
 }
 
 function ShowWikipediaArticle(xhr)
@@ -145,6 +164,7 @@ function ShowWikipediaArticle(xhr)
         var responseDocument = document.createElement("response");
 
         var retrievedFrmIdx = xhr.responseText.indexOf(arrFooterLimit[getValue("language")]);
+		alert(" retrievedFrmIdx = "+retrievedFrmIdx);
         if (retrievedFrmIdx > -1)
         {
 
@@ -159,14 +179,15 @@ function ShowWikipediaArticle(xhr)
 
             var articleTitle = grep(xhr.responseText, '<h1 class="firstHeading">', '</h1>');
 
-            setHTML("divTitle", "<h3><a target='_new' href='" + articleURL + "'>" + articleTitle + "</a></h3>");
+			alert("Setting Title "+articleTitle);
 
-            var title = document.getElementsByClassName("divTitle", NV_CONTENT)[0];
+            setHTML("divRandomWikipediaTitle", "<h3><a target='_new' href='" + articleURL + "'>" + articleTitle + "</a></h3>");
+
+            var title = document.getElementsByClassName("divRandomWikipediaTitle", NV_CONTENT)[0];
             if (title)
             {
                 setToolTip(title, "Click on the arrows(&gt;&gt;) to see next random article.");
             }
-
 
             var respText = xhr.responseText.substring(0, retrievedFrmIdx);
             var paraIdx = respText.indexOf("<p>");
@@ -175,11 +196,17 @@ function ShowWikipediaArticle(xhr)
             {
                 respText = respText.substring(paraIdx);
             }
-            responseDocument.innerHTML = respText;
+
+			alert("generated respText "+respText);
+            //responseDocument.innerHTML = respText;
+			Element.update(responseDocument,respText);
         }
 		else {
-			responseDocument.innerHTML = "There was some error reading content from Wikipedia !.<br/> Please try again later...";
+			//responseDocument.innerHTML = "There was some error reading content from Wikipedia !.<br/> Please try again later...";
+			Element.update(responseDocument,"There was some error reading content from Wikipedia !.<br/> Please try again later...");
 		}
+
+		alert("removing form element ");
 
         removeElements(responseDocument, 'form');
 
@@ -200,7 +227,10 @@ function ShowWikipediaArticle(xhr)
         removeElementsWithIds(responseDocument, "ul", "f-list");
         removeElementsWithIds(responseDocument, "ul", "t-whatlinkshere");
 
-        setHTML("divContent", responseDocument.innerHTML);
+		alert("setting divWikipediaContent "+responseDocument.innerHTML);
+
+		var wikipediaContent = responseDocument.innerHTML;
+        setHTML("divWikipediaContent", wikipediaContent);
 
         var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
         if (arrow)
@@ -214,7 +244,7 @@ function ShowWikipediaArticle(xhr)
     }
     catch (e)
     {
-        setHTML("divContent", "Error reading content from Wikipedia.<br/>" + e);
+        setHTML("divWikipediaContent", "Error reading content from Wikipedia.<br/>" + e);
     }
 }
 
@@ -254,10 +284,11 @@ function grep(wholeStr, startsWith, endsWith)
 
 function setHTML(className, str)
 {
-    var element = document.getElementsByClassName(className, NV_CONTENT)[0];
-    if (element)
+    var foundElement = document.getElementsByClassName(className, NV_CONTENT)[0];
+    if (foundElement)
     {
-        element.innerHTML = str;
+        //element.innerHTML = str;
+		Element.update(foundElement,str);
     }
 }
 
@@ -269,16 +300,16 @@ function setHTML(className, str)
        style="display:block !important;width:100% !important;height:<?php echo htmlspecialchars($height) ?>px !important;background:#FFFFFF !important;padding:0px !important;margin:0px !important;border:0px !important;overflow: auto;">
     <tr>
         <td align="left">
-            <div class="divTitle"/>
+            <div class="divRandomWikipediaTitle"/>
         </td>
         <td align="right" valign="top">
             <div class="divArrow" title='Next Random Article'>&gt;&gt;&nbsp;</div>
         </td>
     </tr>
     <tr>
-        <td colspan="2" style="padding:1px !important;margin:0px !important;border:0px !important;">
-            <div class="divContent" scrolling="auto" frameborder="0">
-                <p style="align:center;">Loading article from Wikipedia...</p>
+        <td colspan="2" valign="top" style="padding:1px !important;margin:0px !important;border:0px !important;">
+            <div class="divWikipediaContent" scrolling="auto" frameborder="0">
+                <p style="align:center;vertical">Loading article from Wikipedia...</p>
             </div>
         </td>
     </tr>
@@ -291,7 +322,11 @@ function setHTML(className, str)
         </tr>
         <tr>
             <td><label>Height:</label></td>
-            <td><input name="height" type="text" value="400"/></td>
+            <td><input name="height" type="text" value="400" size="4"/></td>
+        </tr>
+        <tr>
+            <td><label>Width:</label></td>
+            <td><input name="width" type="text" size="4"/></td>
         </tr>
         <tr>
             <td><label>Language:</label></td>
