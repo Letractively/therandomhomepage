@@ -5,7 +5,8 @@
 <link rel="icon" type="image/png" href="http://en.wikipedia.org/favicon.ico"/>
 <meta name="author" content="Siddique Hameed"/>
 <!--
-	Last Updated: 11/16/2006
+	Last Updated: 11/17/2006
+	Version 0.2
 -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="stylesheet" type="text/css" href="http://www.netvibes.com/api/0.3/style.css"/>
@@ -33,7 +34,7 @@
     }
 
     div.divWikipediaContent {
-        vertical-align: text-top;
+        vertical-align: top;
         background-color: #F4F4F4;
         border: solid 1px #aaaaaa;
         padding: 8px;
@@ -48,12 +49,11 @@
         color: darkblue;
         cursor: pointer;
     }
+
 </style>
 
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-
 <script type="text/javascript" src="http://www.netvibes.com/api/0.3/emulation.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
 
 <?php
     $height = "400";
@@ -89,36 +89,19 @@ var randomWikipediaURL = "http://en.wikipedia.org/wiki/Special:Random";
 
 NV_ONLOAD = function()
 {
-	if (isEmpty(getValue("language")))
-	{
-		//default language
-		saveValue("language","en");
-	}
-
+	initLanguage();
 	resize();
-	getRandomArticleFromWikipedia();
+    getRandomArticleFromWikipedia();
     setTitle();
 	_uacct = "UA-941159-1";
 	urchinTracker();
 }
 
-function resize(){
-	var width = getValue("width");
-	if (!isEmpty(width))
+function initLanguage() {
+	if (isEmpty(getValue("language")))
 	{
-		var moduleElements = document.getElementsByClassName("module",document);
-		if (moduleElements)
-		{
-			for(var i=0; i < moduleElements.length; i++){
-				var divWikipediaContent = document.getElementsByClassName("divWikipediaContent",moduleElements[i])[0];
-				if (divWikipediaContent)
-				{
-					var widthStyle = width+"px";
-					Element.setStyle(moduleElements[i],{width:widthStyle});
-					break;
-				}
-			}
-		}
+		//default language
+		saveValue("language","en");
 	}
 }
 
@@ -134,6 +117,8 @@ function getRandomArticleFromWikipedia() {
 	randomWikipediaURL = arrRandomWikipediaURL[getValue("language")];
 
     var url = "http://www.phonifier.com/phonify.php?i=1&m=0&l=0&u=" + randomWikipediaURL;
+    var d = new Date();
+    url += "&rnd=" + d.getTime();
 
     if (!NV_XML_REQUEST_URL) {
         var NV_XML_REQUEST_URL = 'http://www.netvibes.com/ajaxProxy.php';
@@ -142,13 +127,32 @@ function getRandomArticleFromWikipedia() {
     var requestParams = { method: 'get', onSuccess: ShowWikipediaArticle, onFailure: ShowFailure };
     var request = new Ajax.Request(NV_XML_REQUEST_URL + '?url=' + escape(url), requestParams);
 
-    //setHTML("divRandomWikipediaTitle", "&nbsp;");
-	//setHTML("divWikipediaContent", "<p style='align:center;display:block;width:100%'>Loading article from Wikipedia...</p>");
-    var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
+    setHTML("divRandomWikipediaTitle", "&nbsp;");
+	setHTML("divWikipediaContent", "<p style='text-align:center;display:block;width:400px'>Loading article from Wikipedia...</p>");
+	var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
     if (arrow)
     {
         Element.toggle(arrow);
     }
+}
+
+function resize(){
+	var moduleWidth = getValue("width");
+	if (!isEmpty(moduleWidth))
+	{
+		var moduleElements = document.getElementsByClassName("module",document);
+		if (moduleElements)
+		{
+			for(var i=0; i < moduleElements.length; i++){
+				var divWikipediaContent = document.getElementsByClassName("divWikipediaContent",moduleElements[i])[0];
+				if (divWikipediaContent)
+				{
+					Element.setStyle(moduleElements[i],{width: moduleWidth+"px"});
+					break;
+				}
+			}
+		}
+	}
 }
 
 function ShowFailure(xhr)
@@ -164,7 +168,6 @@ function ShowWikipediaArticle(xhr)
         var responseDocument = document.createElement("response");
 
         var retrievedFrmIdx = xhr.responseText.indexOf(arrFooterLimit[getValue("language")]);
-		alert(" retrievedFrmIdx = "+retrievedFrmIdx);
         if (retrievedFrmIdx > -1)
         {
 
@@ -179,8 +182,6 @@ function ShowWikipediaArticle(xhr)
 
             var articleTitle = grep(xhr.responseText, '<h1 class="firstHeading">', '</h1>');
 
-			alert("Setting Title "+articleTitle);
-
             setHTML("divRandomWikipediaTitle", "<h3><a target='_new' href='" + articleURL + "'>" + articleTitle + "</a></h3>");
 
             var title = document.getElementsByClassName("divRandomWikipediaTitle", NV_CONTENT)[0];
@@ -189,6 +190,7 @@ function ShowWikipediaArticle(xhr)
                 setToolTip(title, "Click on the arrows(&gt;&gt;) to see next random article.");
             }
 
+
             var respText = xhr.responseText.substring(0, retrievedFrmIdx);
             var paraIdx = respText.indexOf("<p>");
 
@@ -196,17 +198,11 @@ function ShowWikipediaArticle(xhr)
             {
                 respText = respText.substring(paraIdx);
             }
-
-			alert("generated respText "+respText);
-            //responseDocument.innerHTML = respText;
-			Element.update(responseDocument,respText);
+            responseDocument.innerHTML = respText;
         }
 		else {
-			//responseDocument.innerHTML = "There was some error reading content from Wikipedia !.<br/> Please try again later...";
-			Element.update(responseDocument,"There was some error reading content from Wikipedia !.<br/> Please try again later...");
+			responseDocument.innerHTML = "There was some error reading content from Wikipedia !.<br/> Please try again later...";
 		}
-
-		alert("removing form element ");
 
         removeElements(responseDocument, 'form');
 
@@ -227,10 +223,7 @@ function ShowWikipediaArticle(xhr)
         removeElementsWithIds(responseDocument, "ul", "f-list");
         removeElementsWithIds(responseDocument, "ul", "t-whatlinkshere");
 
-		alert("setting divWikipediaContent "+responseDocument.innerHTML);
-
-		var wikipediaContent = responseDocument.innerHTML;
-        setHTML("divWikipediaContent", wikipediaContent);
+        setHTML("divWikipediaContent", responseDocument.innerHTML);
 
         var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
         if (arrow)
@@ -284,11 +277,10 @@ function grep(wholeStr, startsWith, endsWith)
 
 function setHTML(className, str)
 {
-    var foundElement = document.getElementsByClassName(className, NV_CONTENT)[0];
-    if (foundElement)
+    var element = document.getElementsByClassName(className, NV_CONTENT)[0];
+    if (element)
     {
-        //element.innerHTML = str;
-		Element.update(foundElement,str);
+        element.innerHTML = str;
     }
 }
 
@@ -307,9 +299,9 @@ function setHTML(className, str)
         </td>
     </tr>
     <tr>
-        <td colspan="2" valign="top" style="padding:1px !important;margin:0px !important;border:0px !important;">
+        <td colspan="2" valign="top" align="center" style="padding:1px !important;margin:0px !important;border:0px !important;">
             <div class="divWikipediaContent" scrolling="auto" frameborder="0">
-                <p style="align:center;vertical">Loading article from Wikipedia...</p>
+                <p style="text-align:center;display:block;width:400px">Loading article from Wikipedia...</p>
             </div>
         </td>
     </tr>
@@ -322,7 +314,7 @@ function setHTML(className, str)
         </tr>
         <tr>
             <td><label>Height:</label></td>
-            <td><input name="height" type="text" value="400" size="4"/></td>
+            <td><input name="height" type="text" size="4" value="400"/></td>
         </tr>
         <tr>
             <td><label>Width:</label></td>

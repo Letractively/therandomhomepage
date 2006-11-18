@@ -5,15 +5,12 @@
     <output url="file://$MODULE_DIR$/classes" />
     <exclude-output />
     <output-test url="file://$MODULE_DIR$/classes" />
-    <content url="file://$MODULE_DIR$/../Firefox">
-      <excludeFolder url="file://$MODULE_DIR$/../Firefox" />
-    </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../google" />
     <content url="file://$MODULE_DIR$/../netvibes" />
-    <orderEntry type="library" exported="" name="GWT" level="project" />
+    <orderEntry type="library" name="GWT" level="project" />
     <orderEntry type="jdk" jdkName="IDEA 5784" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
