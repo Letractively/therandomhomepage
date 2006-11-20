@@ -128,7 +128,7 @@ function getRandomArticleFromWikipedia() {
     var request = new Ajax.Request(NV_XML_REQUEST_URL + '?url=' + escape(url), requestParams);
 
     setHTML("divRandomWikipediaTitle", "&nbsp;");
-	setHTML("divWikipediaContent", "<p style='text-align:center;display:block;width:400px'>Loading article from Wikipedia...</p>");
+	setHTML("divWikipediaContent", "<p style='text-align:center;display:block;width:350px'>Loading article from Wikipedia...</p>");
 	var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
     if (arrow)
     {
@@ -299,9 +299,9 @@ function setHTML(className, str)
         </td>
     </tr>
     <tr>
-        <td colspan="2" valign="top" align="center" style="padding:1px !important;margin:0px !important;border:0px !important;">
+        <td colspan="2" valign="top" style="padding:1px !important;margin:0px !important;border:0px !important;">
             <div class="divWikipediaContent" scrolling="auto" frameborder="0">
-                <p style="text-align:center;display:block;width:400px">Loading article from Wikipedia...</p>
+                <p style="text-align:center;display:block;width:350px">Loading article from Wikipedia...</p>
             </div>
         </td>
     </tr>
