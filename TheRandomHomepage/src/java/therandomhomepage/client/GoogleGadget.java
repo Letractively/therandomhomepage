@@ -20,6 +20,8 @@ public class GoogleGadget extends Composite implements ClickListener {
         this.width = width;
         buildHeader();
         initWidget(table);
+        this.setHeight((height+30)+"px");
+        this.setWidth((width+30)+"px");        
         retrieveRandomItem();
     }
 
@@ -61,8 +63,8 @@ public class GoogleGadget extends Composite implements ClickListener {
             DOM.setAttribute(iframe,"border","0");
             DOM.setAttribute(iframe,"scrolling","no");
             setElement(iframe);
-            this.setHeight((height+10) +"px");
-            this.setWidth((width+10) +"px");
+            this.setHeight((height+20) +"px");
+            this.setWidth((width+20) +"px");
         }
     }
 
