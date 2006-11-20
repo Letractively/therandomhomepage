@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
     <ModulePrefs title="__UP_moduletitle__" directory_title="Random Wikipedia Article"
-                 title_url="http://www.TheRandomHomepage.com" description="Flip through random articles from Wikipedia with multilingual support. Currently supported in English, Deutsch, Español, Français, Italiano, Nederlands, 日本語, Polski, Português, Русский and Svenska"
+                 title_url="http://www.TheRandomHomepage.com" description="Flip through random articles from Wikipedia in your favorite language. Currently supported in English, Deutsch, Español, Français, Italiano, Nederlands, 日本語, Polski, Português, Русский and Svenska"
                  author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
                  thumbnail="http://www.therandomhomepage.com/google/gadgets/randomwiki/thumbnail.png"
                  screenshot="http://www.therandomhomepage.com/google/gadgets/randomwiki/screenshot.png">
@@ -31,7 +31,7 @@
         <EnumValue value="ru" display_value="Русский"/>
         <EnumValue value="sv" display_value="Svenska"/>
     </UserPref>
-	<!-- Last Updated : 11/4/2006 -->
+	<!-- Last Updated : 11/5/2006 -->
     <Content type="html"><![CDATA[
 <style type="text/css">
 a {
@@ -68,13 +68,12 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 0.17em;
 }
 div.contentClass {
-	vertical-align:middle;
 	background-color:#F4F4F4;
 	border:solid 1px #aaaaaa;padding:8px;
 }
 </style>
  <table width="100%"><tr><td width="95%" align="left"><div id="header__MODULE_ID__"></div></td><td width="5%" align="right" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td></table>
- <div id="content__MODULE_ID__" class="contentClass"><center><I>Loading content...</I></center></div>
+ <div id="content__MODULE_ID__" class="contentClass"><center><I>Loading article from Wikipedia...</I></center></div>
  <script type="text/javascript">
 
 	var arrRandomWikipediaURL = new Array();
@@ -98,13 +97,15 @@ div.contentClass {
         var randomWikipediaURL = arrRandomWikipediaURL[lang];
         var url = randomWikipediaURL+"?rnd="+Math.random();
         _IG_FetchContent( url, fetchContentFromWikipedia);
+		setHTML("content__MODULE_ID__","<center><I>Loading article from Wikipedia...</I></center>");
+		setHTML("header__MODULE_ID__","&nbsp;");
 	}
 
 	function fetchContentFromWikipedia(responseText) {
          var actualURL = grep(responseText,'Retrieved from "<a href="','">http://');
          var title = grep(responseText,'<h1 class="firstHeading">','</h1>');
          setHTML("header__MODULE_ID__","<a title='"+title+"' target='_new' href='"+actualURL+"'><h3>"+title+"</h3></a>");
-         setHTML("arrow__MODULE_ID__","<div title='Next Random Item' style='font-family: Arial, sans-serif;font-weight:bold;color:darkblue;cursor:pointer;' onClick='getRandomWiki__MODULE_ID__()'>&gt;&gt;</div>");
+         setHTML("arrow__MODULE_ID__","<div title='Next Random Article' style='font-family: Arial, sans-serif;font-weight:bold;color:darkblue;cursor:pointer;' onClick='getRandomWiki__MODULE_ID__()'>&gt;&gt;&nbsp;&nbsp;</div>");
 
          var bodyContent = grep(responseText,'<div id="bodyContent">','<div class="printfooter">');
          var actualBodyContent = grep(bodyContent,'<p>','Saved in parser cache');
