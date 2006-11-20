@@ -6,16 +6,14 @@ body {
 	margin: 0px;
 	/*margin-top: 3px;*/
 }
-.googleGadgetIFrame {
-    display: block; width: 320px; height: 250px;
-}
+
 .footerMessage {
   font-style: italic;
   font-weight: bold;
 }
 
 .randomWidgetHeader {
-	background-image: url(./images/blue_gradient.gif);
+	background-image: url(./images/gray_gradient.gif);
 	background-repeat: repeat-x;
 	font-weight: bold;
 }

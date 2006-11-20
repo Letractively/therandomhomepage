@@ -2,32 +2,39 @@ package therandomhomepage.client;
 
 import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.DOM;
 
+public class GoogleGadget extends Composite implements ClickListener {
 
-/**
- * Created by IntelliJ IDEA.
- * User: sihameed
- * Date: Nov 10, 2006
- * Time: 2:18:49 PM
- * To change this template use File | Settings | File Templates.
- */
-public class GoogleGadget extends RandomWidget {
-
+    private String header;
     private String moduleURL = null;
+    private int height;
+    private int width;
+    private FlexTable table;
 
-    public GoogleGadget(String header,String moduleURL) {
-        super(header);
+    public GoogleGadget(String header, String moduleURL,int height,int width) {
+        this.header = header;
         this.moduleURL = moduleURL;
-        this.setHeight("250px");
-        this.setWidth("320px");
+        this.height = height;
+        this.width = width;
+        buildHeader();
+        initWidget(table);
+        retrieveRandomItem();
     }
 
-    protected void retrieveRandomItem() {
-        String url = "/php/GoogleGadget.php?url="+escapeURL(moduleURL);
-        Window.alert("Retrieving google gadget with url = "+url);
-        Frame gadgetIFrame = new Frame(url);
-        gadgetIFrame.setStyleName("googleGadgetIFrame");
-        setData(gadgetIFrame);
+    protected void buildHeader() {
+        table = new FlexTable();
+        table.setCellPadding(0);
+        table.setCellSpacing(0);
+        table.setText(0, 0, header);
+        table.getRowFormatter().setStyleName(0, "randomWidgetHeader");
+    }
+
+
+    private void retrieveRandomItem() {
+        String url = "/php/GoogleGadget.php?url=" + escapeURL(moduleURL);
+        table.setWidget(1, 0, new GadgetIFrame(url,height,width));
     }
 
     public static native String escapeURL(String url) /*-{
@@ -36,4 +43,27 @@ public class GoogleGadget extends RandomWidget {
         }
         return "";
     }-*/;
+
+    public void onClick(Widget sender) {
+        retrieveRandomItem();
+    }
+
+    private class GadgetIFrame extends Widget{
+        private int height;
+        private int width;
+
+        public GadgetIFrame(String url, int height, int width) {
+            this.height = height;
+            this.width = width;
+            Element iframe = DOM.createIFrame();
+            DOM.setAttribute(iframe,"frameborder","0");
+            DOM.setAttribute(iframe,"src",url);
+            DOM.setAttribute(iframe,"border","0");
+            DOM.setAttribute(iframe,"scrolling","no");
+            setElement(iframe);
+            this.setHeight((height+10) +"px");
+            this.setWidth((width+10) +"px");
+        }
+    }
+
 }

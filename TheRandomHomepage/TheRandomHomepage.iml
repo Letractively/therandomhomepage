@@ -9,7 +9,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../google" />
+    <content url="file://$MODULE_DIR$/../modules" />
     <content url="file://$MODULE_DIR$/../netvibes" />
+    <content url="file://$MODULE_DIR$/../scratch" />
     <orderEntry type="library" name="GWT" level="project" />
     <orderEntry type="jdk" jdkName="IDEA 5784" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
