@@ -20,10 +20,10 @@ public class URLHelper {
   private static final String AUTO_PLAY_DELAY_KEY = "up_delay";
   private static final String LOCAL_BASE_URL = "/";
 
-  private static final String GET_RANDOM_FEED_URL = "scripts/GetRandomFeed.php";
-  private static final String GET_RANDOM_NEWS_FEED_URL = "scripts/GetRandomNewsfeed.php";
-  private static final String GET_RECIPE_FEED_URL = "scripts/GetRandomRecipe.php";
-  private static final String REDIRECT_SCRIPT_URL = "scripts/Redirect.php";
+  private static final String GET_RANDOM_FEED_URL = "php/GetRandomFeed.php";
+  private static final String GET_RANDOM_NEWS_FEED_URL = "php/GetRandomNewsfeed.php";
+  private static final String GET_RECIPE_FEED_URL = "php/GetRandomRecipe.php";
+  private static final String REDIRECT_SCRIPT_URL = "php/Redirect.php";
 
   public static native String getQueryString() /*-{
         return $wnd.location.search.substring(1);

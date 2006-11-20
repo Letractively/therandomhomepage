@@ -1,6 +1,8 @@
 package therandomhomepage.client;
 
 import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.DOM;
 
 /**
  * Created by IntelliJ IDEA.
@@ -45,6 +47,7 @@ public abstract class RandomWidget extends Composite implements ClickListener {
   }
 
   protected void setData(Widget widget) {
+    Window.alert("IFrame innerHTML = "+ DOM.getInnerHTML(widget.getElement()));  
     table.setWidget(1, 0, widget);
     table.getFlexCellFormatter().setColSpan(1, 0, 2);
   }
