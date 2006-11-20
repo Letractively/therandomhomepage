@@ -6,7 +6,9 @@ body {
 	margin: 0px;
 	/*margin-top: 3px;*/
 }
-
+.googleGadgetIFrame {
+    display: block; width: 320px; height: 250px;
+}
 .footerMessage {
   font-style: italic;
   font-weight: bold;
