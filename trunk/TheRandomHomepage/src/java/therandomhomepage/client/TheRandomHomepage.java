@@ -1,7 +1,6 @@
 package therandomhomepage.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.*;
 
 public class TheRandomHomepage implements EntryPoint {
@@ -11,23 +10,32 @@ public class TheRandomHomepage implements EntryPoint {
   }
 
     private void buildBody() {
-        RootPanel mainPanel = RootPanel.get("divBody");
-        DockPanel dockPanel = new DockPanel();
-        dockPanel.setHeight("100%");
+        RootPanel body = RootPanel.get("divBody");
 
-        Grid grid = new Grid(1, 3);
+        FlexTable flexTable = new FlexTable();
+        flexTable.setCellPadding(2);
+        flexTable.setCellSpacing(5);
+        flexTable.setHeight("100%");
+        flexTable.setWidth("100%");
+
+        flexTable.getRowFormatter().setVerticalAlign(0, HasVerticalAlignment.ALIGN_TOP);
 
         String randomFeedURL = "http://www.therandomhomepage.com/google/gadget/RandomFeedModule.xml";
-        GoogleGadget randomFeedGadget = new GoogleGadget("Random News",randomFeedURL,300,300);
-        grid.setWidget(0, 0, randomFeedGadget);
-
-        grid.setWidget(0,1,new HTML("<div style='width:10px'>&nbsp;</div>"));
+        AbstractRandomGadget randomFeedGadget = new AbstractRandomGadget("Random News",randomFeedURL,300,300);
+        flexTable.setWidget(0, 0, randomFeedGadget);
+        flexTable.getCellFormatter().setHorizontalAlignment(0,0, HasHorizontalAlignment.ALIGN_CENTER);
+        flexTable.getCellFormatter().setWidth(0, 0, "33%");
 
         String randomWikipediaModuleURL = "http://www.therandomhomepage.com/google/gadgets/randomwiki/RandomWikiModule.xml";
-        GoogleGadget randomWikipediaGadget = new GoogleGadget("Random Wikipedia Article",randomWikipediaModuleURL,350,320);
-        grid.setWidget(0, 2, randomWikipediaGadget);
-        
-        dockPanel.add(grid, DockPanel.CENTER);
-        mainPanel.add(dockPanel);
+        AbstractRandomGadget randomWikipediaGadget = new AbstractRandomGadget("Random Wikipedia Article",randomWikipediaModuleURL,350,320);
+        flexTable.setWidget(0, 1, randomWikipediaGadget);
+        flexTable.getCellFormatter().setHorizontalAlignment(0,1, HasHorizontalAlignment.ALIGN_CENTER);
+        flexTable.getCellFormatter().setWidth(0, 1, "33%");
+
+        AbstractRandomGadget randFeedGadget1 = new AbstractRandomGadget("Random News",randomFeedURL,300,300);
+        flexTable.setWidget(0, 2, randFeedGadget1);
+        flexTable.getCellFormatter().setHorizontalAlignment(0,2, HasHorizontalAlignment.ALIGN_CENTER);
+        flexTable.getCellFormatter().setWidth(0, 2, "33%");
+        body.add(flexTable);
     }
 }
