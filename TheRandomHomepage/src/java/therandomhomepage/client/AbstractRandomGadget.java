@@ -2,14 +2,14 @@ package therandomhomepage.client;
 
 import com.google.gwt.user.client.ui.*;
 
-public class GoogleGadget extends HTML {
+public class AbstractRandomGadget extends HTML {
 
     private String header;
     private String moduleURL = null;
     private int height;
     private int width;
 
-    public GoogleGadget(String header, String moduleURL,int height,int width) {
+    public AbstractRandomGadget(String header, String moduleURL,int height,int width) {
         this.header = header;
         this.moduleURL = moduleURL;
         this.height = height;
@@ -17,20 +17,17 @@ public class GoogleGadget extends HTML {
         initWidget();
     }
 
-    private void initWidget() {
-        StringBuffer html = new StringBuffer("    <TABLE class=\"ig_reset ig_tbl_line\">\n" +
+    protected void initWidget() {
+        StringBuffer html = new StringBuffer("<TABLE cellspacing=\"0\" cellpadding=\"2\" class=\"ig_reset ig_tbl_line\" style=\"border: 1px solid rgb(153, 153, 153); border-spacing:0;\">\n" +
                 "        <TR>\n" +
-                "          <TD style=\"vertical-align: top; text-align: center; width: 100%;\" colspan=\"2\">\n" +
-                "            </TD>\n" +
-                "        </TR>\n" +
-                "        <TR>\n" +
-                "          <TD style=\"height: 2px;\">\n" +
-                header+
+                "          <TD valign=\"middle\" colspan=\"2\">\n" +
+                "            <DIV style=\"height:32px; vertical-align: text-bottom; border-bottom: 1px solid rgb(153, 153, 153);border-spacing:0px; background-image: url(./images/gray_gradient.gif);background-repeat: repeat-x;font-weight: bold; heigth: 30px -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;\">\n" +
+                header+"</div>"+
                 "           </TD>\n" +
                 "        </TR>\n" +
                 "        <TR>\n" +
                 "          <TD colspan=\"2\">\n" +
-                "            <DIV style=\"border: 1px solid rgb(153, 153, 153); padding: 3px; background: white none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;\">\n" +
+                "            <DIV style=\"background: white none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;\">\n" +
                 "              <IFRAME frameborder=\"0\"\n" +
                 "                      style=\"display: block; width: "+width+"px; height: "+height+"px;\" src=\"http://gmodules.com/ig/ifr?url="+moduleURL+"&amp;up_moduletitle="+header+"&amp;up_language=en&amp;synd=open&amp;w="+width+"&amp;h="+height+"&amp;title=&amp;lang=en&amp;country=ALL&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;\"></IFRAME>\n" +
                 "            </DIV>\n" +
@@ -53,21 +50,4 @@ public class GoogleGadget extends HTML {
         setHTML(html.toString());
     }
 
-
-
-    private void retrieveRandomItem() {
-        String url = "/php/GoogleGadget.php?url=" + escapeURL(moduleURL);
-//        table.setWidget(1, 0, new GoogleGadget.GadgetIFrame(url,height,width));
-    }
-
-    public static native String escapeURL(String url) /*-{
-        if (url != null) {
-            return escape(url);
-        }
-        return "";
-    }-*/;
-
-    public void onClick(Widget sender) {
-        retrieveRandomItem();
-    }
 }
