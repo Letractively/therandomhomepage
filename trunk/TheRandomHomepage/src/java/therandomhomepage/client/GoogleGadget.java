@@ -1,17 +1,15 @@
 package therandomhomepage.client;
 
 import com.google.gwt.user.client.ui.*;
-import com.google.gwt.user.client.Element;
-import com.google.gwt.user.client.DOM;
 
-public class GoogleGadgetUsingHTML extends HTML {
+public class GoogleGadget extends HTML {
 
     private String header;
     private String moduleURL = null;
     private int height;
     private int width;
 
-    public GoogleGadgetUsingHTML(String header, String moduleURL,int height,int width) {
+    public GoogleGadget(String header, String moduleURL,int height,int width) {
         this.header = header;
         this.moduleURL = moduleURL;
         this.height = height;
@@ -59,7 +57,7 @@ public class GoogleGadgetUsingHTML extends HTML {
 
     private void retrieveRandomItem() {
         String url = "/php/GoogleGadget.php?url=" + escapeURL(moduleURL);
-//        table.setWidget(1, 0, new GoogleGadgetUsingHTML.GadgetIFrame(url,height,width));
+//        table.setWidget(1, 0, new GoogleGadget.GadgetIFrame(url,height,width));
     }
 
     public static native String escapeURL(String url) /*-{
