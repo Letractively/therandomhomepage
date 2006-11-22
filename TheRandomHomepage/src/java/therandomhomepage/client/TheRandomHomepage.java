@@ -3,6 +3,8 @@ package therandomhomepage.client;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
 
 public class TheRandomHomepage implements EntryPoint {
 
@@ -18,10 +20,9 @@ public class TheRandomHomepage implements EntryPoint {
         flexTable.setCellSpacing(5);
         flexTable.setHeight("100%");
         flexTable.setWidth("100%");
-
+        body.add(flexTable);
+        
         flexTable.getRowFormatter().setVerticalAlign(0, HasVerticalAlignment.ALIGN_TOP);
-
-        Window.alert("FlexTable height = "+flexTable.getOffsetHeight()+", width = "+flexTable.getOffsetWidth());
 
         String randomFeedURL = "http://www.therandomhomepage.com/google/gadget/RandomFeedModule.xml";
         String randomFeedNetvibesModuleURL = "http://www.therandomhomepage.com/netvibes/modules/RandomFeed/index.php";
@@ -38,10 +39,24 @@ public class TheRandomHomepage implements EntryPoint {
         flexTable.getCellFormatter().setWidth(0, 1, "33%");
 
         String randomQuotesURL = "http://quotes4all.net/quotations.html";
-        AbstractRandomGadget randFeedGadget1 = new AbstractRandomGadget("Random Quotes",randomQuotesURL, 300, 300);
-        flexTable.setWidget(0, 2, randFeedGadget1);
+        AbstractRandomGadget randomQuotesWidget = new AbstractRandomGadget("Random Quotes",randomQuotesURL, 300, 300);
+        flexTable.setWidget(0, 2, randomQuotesWidget);
         flexTable.getCellFormatter().setHorizontalAlignment(0,2, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 2, "33%");
-        body.add(flexTable);
+
     }
+
+    private void getInnerHTML(String id){
+        Element element = DOM.getElementById(id);
+        if (element != null) {
+            Window.alert(DOM.getInnerHTML(element));
+        }
+        else {
+            Window.alert("iframe not found");            
+        }
+    }
+
+     public static native void showIFrameHTML(String id) /*-{
+        this.@therandomhomepage.client.TheRandomHomepage::getInnerHTML(Ljava/lang/String;)(id);
+    }-*/;
 }
