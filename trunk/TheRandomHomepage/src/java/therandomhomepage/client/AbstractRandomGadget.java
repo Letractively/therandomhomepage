@@ -21,7 +21,7 @@ public class AbstractRandomGadget extends HTML {
     }
 
     public AbstractRandomGadget(String header, String iframeURL, int width, int height) {
-        this.iframeURL = "/php/ajaxProxy.php?url="+iframeURL;
+        this.iframeURL = "/php/ajaxProxy.php?url="+iframeURL+"&loadedIFrameId=myIframe";
         this.header = header;
         this.height = height;
         this.width = width;
@@ -47,7 +47,7 @@ public class AbstractRandomGadget extends HTML {
             html.append("<IFRAME frameborder=\"0\"\n" +
                     "                     style=\"display: block; width: " + width + "px; height: " + height + "px;\" src=\"" + googleGadgetURL + "\"></IFRAME>\n");
         } else {
-            html.append("<IFRAME frameborder=\"0\"\n" +
+            html.append("<IFRAME id=\"myIframe\" frameborder=\"0\"\n" +
                     "                     style=\"display: block; width: " + width + "px; height: " + height + "px;\" src=\"" + iframeURL + "\"></IFRAME>\n");
 
         }
