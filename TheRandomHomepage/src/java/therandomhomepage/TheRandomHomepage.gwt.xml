@@ -13,4 +13,5 @@
   <servlet path="/php/GetRandomNewsfeed.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
   <servlet path="/php/GetRandomRecipe.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
   <servlet path="/php/Redirect.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+  <servlet path="/php/ajaxProxy.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
 </module>
