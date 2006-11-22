@@ -1,65 +1,3 @@
-table.ig_tbl_img .ig_smbluetext {
-    font-family: arial, sans-serif;
-    font-variant: normal;
-    font-style: normal;
-    word-spacing: normal;
-    letter-spacing: normal;
-    vertical-align: middle;
-    text-transform: none;
-    text-indent: 0;
-    line-height: normal;
-    white-space: normal;
-    color: #0000cc;
-    font-size: 9px;
-}
-
-table.ig_tbl_img .ig_lgbluetext {
-    font-family: arial, sans-serif;
-    font-variant: normal;
-    font-style: normal;
-    word-spacing: normal;
-    letter-spacing: normal;
-    vertical-align: middle;
-    text-transform: none;
-    text-indent: 0;
-    line-height: normal;
-    white-space: normal;
-    color: #0000cc;
-    font-size: 12px;
-}
-
-table.ig_tbl_img .ig_smbluelink, table.ig_tbl_img .ig_smbluelink:link {
-    font-family: arial, sans-serif;
-    font-variant: normal;
-    font-style: normal;
-    word-spacing: normal;
-    letter-spacing: normal;
-    vertical-align: middle;
-    text-transform: none;
-    text-indent: 0;
-    line-height: normal;
-    white-space: normal;
-    color: #0000cc;
-    font-size: 9px;
-    text-decoration: underline;
-}
-
-table.ig_tbl_img .ig_lgbluelink, table.ig_tbl_img .ig_lgbluelink:link {
-    font-family: arial, sans-serif;
-    font-variant: normal;
-    font-style: normal;
-    word-spacing: normal;
-    letter-spacing: normal;
-    vertical-align: middle;
-    text-transform: none;
-    text-indent: 0;
-    line-height: normal;
-    white-space: normal;
-    color: #0000cc;
-    font-size: 12px;
-    text-decoration: underline;
-}
-
 table.ig_tbl_line .ig_smbluetext {
     font-family: arial, sans-serif;
     font-variant: normal;
@@ -202,22 +140,6 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
     text-decoration: underline;
 }
 
-.ig_lgbluelink:active {
-    font-family: arial, sans-serif;
-    font-variant: normal;
-    font-style: normal;
-    word-spacing: normal;
-    letter-spacing: normal;
-    vertical-align: middle;
-    text-transform: none;
-    text-indent: 0;
-    line-height: normal;
-    white-space: normal;
-    color: #ff0000;
-    font-size: 12px;
-    text-decoration: underline;
-}
-
 .ig_tbl_img table, .ig_tbl_img tr, .ig_tbl_img td, .ig_tbl_img a, .ig_tbl_img span, .ig_tbl_line table, .ig_tbl_line tr, .ig_tbl_line td, .ig_tbl_line a, .ig_tbl_line span, ig_reset {
     margin: 0;
     padding: 0;
@@ -243,4 +165,36 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
     white-space: normal;
     top: auto;
     bottom: auto;
+}
+
+.gadgetHeader {
+    height: 32px;
+    vertical-align: text-bottom;
+    border: 1px solid rgb( 153, 153, 153 );
+    border-spacing: 0;
+    background-image: url( ./images/gray_gradient.gif );
+    background-repeat: repeat-x;
+    font-weight: bold;
+    heigth: 30px -moz-background-clip: -moz-initial;
+    -moz-background-origin: -moz-initial;
+    -moz-background-inline-policy: -moz-initial;
+}
+
+.gadgetFrameTR {
+    border: 1px solid rgb(153, 153, 153); border-spacing:0;
+}
+
+.gadgetFrame {
+    background: white none repeat scroll 0%;
+    border-left: 1px solid rgb( 153, 153, 153 );
+    border-bottom: 1px solid rgb( 153, 153, 153 );
+    border-right: 1px solid rgb( 153, 153, 153 );
+    border-spacing: 0;
+    -moz-background-clip: -moz-initial;
+    -moz-background-origin: -moz-initial;
+    -moz-background-inline-policy: -moz-initial;
+}
+
+.addToTD{
+    text-align: left;vertical-align: middle;
 }
