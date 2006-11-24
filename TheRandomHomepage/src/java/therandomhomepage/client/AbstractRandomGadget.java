@@ -1,6 +1,7 @@
 package therandomhomepage.client;
 
 import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.Window;
 
 public class AbstractRandomGadget extends HTML {
 
@@ -21,7 +22,7 @@ public class AbstractRandomGadget extends HTML {
     }
 
     public AbstractRandomGadget(String header, String iframeURL, int width, int height) {
-        this.iframeURL = "/php/ajaxProxy.php?url="+iframeURL+"&loadedIFrameId=myIframe";
+        this.iframeURL = "/php/ajaxProxy.php?url="+iframeURL+"&loadedIFrameId=myIframe&rightArrows=true";
         this.header = header;
         this.height = height;
         this.width = width;
@@ -66,7 +67,7 @@ public class AbstractRandomGadget extends HTML {
                     "            </A>" +
                     "            </div>" +
                     "            <div>" +
-                    "            <a href=\"http://www.netvibes.com/subscribe.php?url=\"" + netvibesModuleURL + "&type=api\"><img border=\"0\" src=\"http://www.netvibes.com/img/add2netvibes.gif\" width=\"91\" height=\"17\" alt=\"Add to Netvibes\"/></a>" +
+                    "            <a href=\"http://www.netvibes.com/subscribe.php?url=" + netvibesModuleURL + "&type=api\"><img border=\"0\" src=\"http://www.netvibes.com/img/add2netvibes.gif\" width=\"91\" height=\"17\" alt=\"Add to Netvibes\"/></a>" +
                     "            </div>" +
                     "           </TD>" +
                     "        </TR>\n");
