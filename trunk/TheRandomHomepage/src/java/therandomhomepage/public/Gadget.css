@@ -169,12 +169,14 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
 
 .gadgetHeader {
     height: 32px;
-    vertical-align: text-bottom;
     border: 1px solid rgb( 153, 153, 153 );
     border-spacing: 0;
     background-image: url( ./images/gray_gradient.gif );
     background-repeat: repeat-x;
-    font-weight: bold;
+    vertical-align:middle;
+    display:block;
+    font-size:13px;
+    font-weight:bold;
     -moz-background-clip: -moz-initial;
     -moz-background-origin: -moz-initial;
     -moz-background-inline-policy: -moz-initial;

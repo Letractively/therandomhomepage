@@ -55,20 +55,21 @@ public class AbstractRandomGadget extends HTML {
 
         html.append("            </DIV>\n" +
                 "          </TD>\n" +
-                "        </TR>\n");
-
+                "        </TR>\n"+
+                "<TR><TD style=\"height:2px;\"></TD></TR>");
 
         if (googleGadgetURL != null && netvibesModuleURL != null) {
             html.append("        <TR>\n" +
                     "          <TD class=\"addToTD\">\n" +
-                    "            <div>" +
+                    "           <TABLE><TR><TD style=\"border: 0pt none ; height: 17px; \">"+
                     "            <A href=\"http://fusion.google.com/ig/add?moduleurl=" + googleGadgetURL + "\">\n" +
                     "              <IMG src=\"http://gmodules.com/ig/images/plus_google.gif\" style=\"border: 0pt none ; height: 17px; \"/>\n" +
                     "            </A>" +
-                    "            </div>" +
-                    "            <div>" +
+                    "            </TD>"+
+                    "            <TD style=\"width:4px;\">&nbsp;</TD>"+
+                    "            <TD style=\"border: 0pt none ; width:91px; height: 17px; \">"+
                     "            <a href=\"http://www.netvibes.com/subscribe.php?url=" + netvibesModuleURL + "&type=api\"><img border=\"0\" src=\"http://www.netvibes.com/img/add2netvibes.gif\" width=\"91\" height=\"17\" alt=\"Add to Netvibes\"/></a>" +
-                    "            </div>" +
+                    "            </TD></TR></TABLE>"+
                     "           </TD>" +
                     "        </TR>\n");
         }
