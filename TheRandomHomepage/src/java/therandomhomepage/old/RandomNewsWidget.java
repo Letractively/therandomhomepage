@@ -1,4 +1,4 @@
-package therandomhomepage.client;
+package therandomhomepage.old;
 
 import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.ui.HTML;
@@ -6,6 +6,7 @@ import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.Label;
 import therandomhomepage.client.rss.JSON2RSSParser;
 import therandomhomepage.client.rss.RSSItem;
+import therandomhomepage.old.URLHelper;
 import therandomhomepage.core.Randomizer;
 
 import java.util.List;

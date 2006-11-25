@@ -33,13 +33,13 @@ public class TheRandomHomepage implements EntryPoint {
 
         String randomWikipediaModuleURL = "http://www.therandomhomepage.com/google/gadgets/randomwiki/RandomWikiModule.xml";
         String randomWikipediaNetvibesModuleURL = "http://www.therandomhomepage.com/netvibes/modules/RandomWikipediaArticle/index.php";
-        AbstractRandomGadget randomWikipediaGadget = new AbstractRandomGadget("Random Wikipedia Article",randomWikipediaModuleURL, randomWikipediaNetvibesModuleURL, 350, 350);
+        AbstractRandomGadget randomWikipediaGadget = new AbstractRandomGadget("Random Wikipedia Article",randomWikipediaModuleURL, randomWikipediaNetvibesModuleURL, 320, 350);
         flexTable.setWidget(0, 1, randomWikipediaGadget);
         flexTable.getCellFormatter().setHorizontalAlignment(0,1, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 1, "33%");
 
         String randomQuotesURL = "http://quotes4all.net/quotations.html";
-        AbstractRandomGadget randomQuotesWidget = new AbstractRandomGadget("Random Quotes",randomQuotesURL, 300, 250);
+        AbstractRandomGadget randomQuotesWidget = new AbstractRandomGadget("Random Quotes",randomQuotesURL, 300, 300);
         flexTable.setWidget(0, 2, randomQuotesWidget);
         flexTable.getCellFormatter().setHorizontalAlignment(0,2, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 2, "33%");

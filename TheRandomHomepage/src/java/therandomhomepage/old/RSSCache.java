@@ -1,4 +1,4 @@
-package therandomhomepage.client;
+package therandomhomepage.old;
 
 import java.util.HashMap;
 import java.util.List;
