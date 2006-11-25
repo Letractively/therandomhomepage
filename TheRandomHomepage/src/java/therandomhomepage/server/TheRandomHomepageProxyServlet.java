@@ -59,7 +59,6 @@ public class TheRandomHomepageProxyServlet extends RemoteServiceServlet {
         if (httpServletRequest.getQueryString() != null && httpServletRequest.getQueryString().trim().length() > 0) {
             url += "?" + httpServletRequest.getQueryString();
         }
-        System.out.println("url = " + url);
         return new URL(url);
     }
 }
