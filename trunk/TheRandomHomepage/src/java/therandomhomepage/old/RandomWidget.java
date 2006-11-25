@@ -1,4 +1,4 @@
-package therandomhomepage.client;
+package therandomhomepage.old;
 
 import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.client.Window;

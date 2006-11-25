@@ -15,7 +15,7 @@ public class AbstractRandomGadget extends HTML {
     public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL, int width, int height) {
         this.netvibesModuleURL = netvibesModuleURL;
         this.header = header;
-        this.googleGadgetURL = getCompleteGoogleGadgetURL(googleGadgetURL);
+        this.googleGadgetURL = googleGadgetURL;
         this.height = height;
         this.width = width;
         initWidget();
@@ -37,7 +37,7 @@ public class AbstractRandomGadget extends HTML {
         StringBuffer html = new StringBuffer("<TABLE cellspacing=\"0\" cellpadding=\"2\" class=\"ig_reset ig_tbl_line\" align=\"center\">\n" +
                 "        <TR>\n" +
                 "          <TD valign=\"middle\">\n" +
-                "            <DIV class=\"gadgetHeader\">\n" +
+                "            <DIV title=\"Click on the right arrows(&gt;&gt;) to see next random item.\" class=\"gadgetHeader\">\n" +
                 header + "</div>" +
                 "           </TD>\n" +
                 "        </TR>\n" +
@@ -46,7 +46,7 @@ public class AbstractRandomGadget extends HTML {
                 "            <DIV class=\"gadgetFrame\">");
         if (googleGadgetURL != null) {
             html.append("<IFRAME frameborder=\"0\"\n" +
-                    "                     style=\"display: block; width: " + width + "px; height: " + height + "px;\" src=\"" + googleGadgetURL + "\"></IFRAME>\n");
+                    "                     style=\"display: block; width: " + width + "px; height: " + height + "px;\" src=\"" + getCompleteGoogleGadgetURL(googleGadgetURL) + "\"></IFRAME>\n");
         } else {
             html.append("<IFRAME id=\"myIframe\" frameborder=\"0\"\n" +
                     "                     style=\"display: block; width: " + width + "px; height: " + height + "px;\" src=\"" + iframeURL + "\"></IFRAME>\n");
@@ -62,7 +62,7 @@ public class AbstractRandomGadget extends HTML {
             html.append("        <TR>\n" +
                     "          <TD class=\"addToTD\">\n" +
                     "            <div>" +
-                    "            <A href=\"http://fusion.google.com/ig/add?synd=open&amp;source=ggyp&amp;moduleurl=" + googleGadgetURL + "\">\n" +
+                    "            <A href=\"http://fusion.google.com/ig/add?moduleurl=" + googleGadgetURL + "\">\n" +
                     "              <IMG src=\"http://gmodules.com/ig/images/plus_google.gif\" style=\"border: 0pt none ; height: 17px; \"/>\n" +
                     "            </A>" +
                     "            </div>" +

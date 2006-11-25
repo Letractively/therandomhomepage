@@ -1,9 +1,11 @@
-package therandomhomepage.client;
+package therandomhomepage.old;
 
 import com.google.gwt.user.client.Random;
 
 import java.util.HashMap;
 import java.util.ArrayList;
+
+import therandomhomepage.old.StringUtil;
 
 /**
  * Created by IntelliJ IDEA.

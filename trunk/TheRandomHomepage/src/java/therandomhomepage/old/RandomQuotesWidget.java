@@ -1,7 +1,7 @@
-package therandomhomepage.client;
+package therandomhomepage.old;
 
-import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.ui.*;
+import therandomhomepage.old.URLHelper;
 
 /**
  * Created by IntelliJ IDEA.
