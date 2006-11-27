@@ -1,7 +1,7 @@
 package therandomhomepage.test;
 
 import therandomhomepage.client.rss.RSSItem;
-import therandomhomepage.core.Randomizer;
+import therandomhomepage.old.Randomizer;
 import com.google.gwt.user.client.Random;
 
 import java.util.List;

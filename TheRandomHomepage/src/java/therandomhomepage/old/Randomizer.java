@@ -1,10 +1,9 @@
-package therandomhomepage.core;
+package therandomhomepage.old;
 
 import com.google.gwt.user.client.Random;
-
 import java.util.List;
 
-import therandomhomepage.client.rss.RSSItem;
+import therandomhomepage.old.Randomizable;
 
 /**
  * Created by IntelliJ IDEA.

@@ -1,6 +1,6 @@
 package therandomhomepage.client.rss;
 
-import therandomhomepage.core.Randomizable;
+import therandomhomepage.old.Randomizable;
 
 /**
  * Created by IntelliJ IDEA.
