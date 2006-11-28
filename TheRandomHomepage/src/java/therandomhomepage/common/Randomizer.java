@@ -1,9 +1,9 @@
-package therandomhomepage.old;
+package therandomhomepage.common;
 
 import com.google.gwt.user.client.Random;
 import java.util.List;
 
-import therandomhomepage.old.Randomizable;
+import therandomhomepage.common.Randomizable;
 
 /**
  * Created by IntelliJ IDEA.

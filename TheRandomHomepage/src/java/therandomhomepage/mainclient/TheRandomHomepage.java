@@ -1,4 +1,4 @@
-package therandomhomepage.client;
+package therandomhomepage.mainclient;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.*;
@@ -31,6 +31,7 @@ public class TheRandomHomepage implements EntryPoint {
         flexTable.getCellFormatter().setHorizontalAlignment(0,0, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 0, "33%");
 
+
         String randomWikipediaModuleURL = "http://www.therandomhomepage.com/google/gadgets/randomwiki/RandomWikiModule.xml";
         String randomWikipediaNetvibesModuleURL = "http://www.therandomhomepage.com/netvibes/modules/RandomWikipediaArticle/index.php";
         AbstractRandomGadget randomWikipediaGadget = new AbstractRandomGadget("Random Wikipedia Article",randomWikipediaModuleURL, randomWikipediaNetvibesModuleURL, 320, 350);
@@ -43,6 +44,16 @@ public class TheRandomHomepage implements EntryPoint {
         flexTable.setWidget(0, 2, randomQuotesWidget);
         flexTable.getCellFormatter().setHorizontalAlignment(0,2, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 2, "33%");
+
+
+        Element tableElement = DOM.getElementById("tbl0");
+        Element divElement = DOM.getElementById("tbl0");
+
+        if (tableElement != null && divElement != null) {
+            String width = DOM.getStyleAttribute(tableElement, "width");
+            String height = DOM.getStyleAttribute(tableElement, "height");
+            Window.alert("width = "+width+", height = "+height);            
+        }
 
     }
 }

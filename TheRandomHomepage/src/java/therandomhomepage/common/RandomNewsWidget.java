@@ -1,13 +1,13 @@
-package therandomhomepage.old;
+package therandomhomepage.common;
 
 import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.Label;
-import therandomhomepage.client.rss.JSON2RSSParser;
-import therandomhomepage.client.rss.RSSItem;
-import therandomhomepage.old.URLHelper;
-import therandomhomepage.old.Randomizer;
+import therandomhomepage.mainclient.rss.JSON2RSSParser;
+import therandomhomepage.mainclient.rss.RSSItem;
+import therandomhomepage.common.URLHelper;
+import therandomhomepage.common.Randomizer;
 
 import java.util.List;
 

@@ -4,9 +4,10 @@
     <inherits name="com.google.gwt.json.JSON"/>
     <!--<inherits name="com.gwt.components.User"/>-->
 
-  <source path="client"/>
-  <source path="core"/>
-  <entry-point class='therandomhomepage.client.TheRandomHomepage'/>
+  <source path="common"/>
+  <source path="mainclient"/>
+  <public path="mainpublic"/>
+  <entry-point class='therandomhomepage.mainclient.TheRandomHomepage'/>
 
     <servlet path="/php/GoogleGadget.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
     <servlet path="/php/GetRandomFeed.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
