@@ -1,4 +1,4 @@
-package therandomhomepage.mainclient.rss;
+package therandomhomepage.common.rss;
 
 import therandomhomepage.common.Randomizable;
 

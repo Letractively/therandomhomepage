@@ -1,7 +1,7 @@
 package therandomhomepage.test;
 
-import therandomhomepage.mainclient.rss.JSON2RSSParser;
-import therandomhomepage.mainclient.rss.RSSItem;
+import therandomhomepage.common.rss.JSON2RSSParser;
+import therandomhomepage.common.rss.RSSItem;
 
 import java.util.List;
 

@@ -2,7 +2,7 @@ package therandomhomepage.common;
 
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.HTML;
-import therandomhomepage.mainclient.rss.RSSItem;
+import therandomhomepage.common.rss.RSSItem;
 
 /**
  * Created by IntelliJ IDEA.
