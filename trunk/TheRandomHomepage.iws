@@ -175,7 +175,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpRequestUtil.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HttpRequestUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/HttpRequestUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="13" column="47" selection-start="423" selection-end="423" vertical-scroll-proportion="0.25154132">
@@ -184,8 +184,17 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Build.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/firefox/extension/Build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="587" selection-end="587" vertical-scroll-proportion="0.27250308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="install.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Firefox/extension/install.js">
+        <entry file="file://$PROJECT_DIR$/firefox/extension/install.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="7" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="0.1440678">
               <folding />
@@ -194,7 +203,7 @@
         </entry>
       </file>
       <file leaf-file-name="titletweak-defaults.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Firefox/extension/defaults/preferences/titletweak-defaults.js">
+        <entry file="file://$PROJECT_DIR$/firefox/extension/defaults/preferences/titletweak-defaults.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -203,7 +212,7 @@
         </entry>
       </file>
       <file leaf-file-name="install.rdf" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Firefox/extension/install.rdf">
+        <entry file="file://$PROJECT_DIR$/firefox/extension/install.rdf">
           <provider selected="true" editor-type-id="text-editor">
             <state line="12" column="28" selection-start="382" selection-end="382" vertical-scroll-proportion="0.25154132">
               <folding />
@@ -214,7 +223,7 @@
       <file leaf-file-name="JSON2RSSParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/JSON2RSSParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="0.020961776">
+            <state line="14" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="0.020581113">
               <folding>
                 <marker date="1164739344207" expanded="true" signature="130:225" placeholder="/**...*/" />
                 <marker date="1164739344207" expanded="true" signature="303:952" placeholder="{...}" />
@@ -334,24 +343,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -569,14 +560,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="996" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" order="18" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40081632" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28244898" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36457142" order="14" />
@@ -681,7 +672,7 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-    <buildFile url="file://$PROJECT_DIR$/Firefox/extension/Build.xml">
+    <buildFile url="file://$PROJECT_DIR$/firefox/extension/Build.xml">
       <antCommandLine value="" />
       <runInBackground value="false" />
       <targetFilters>
@@ -731,28 +722,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Firefox/extension/Build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Firefox/extension/install.js">
+    <entry file="file://$PROJECT_DIR$/firefox/extension/install.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="0.1440678">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Firefox/extension/defaults/preferences/titletweak-defaults.js">
+    <entry file="file://$PROJECT_DIR$/firefox/extension/defaults/preferences/titletweak-defaults.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Firefox/extension/install.rdf">
+    <entry file="file://$PROJECT_DIR$/firefox/extension/install.rdf">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="28" selection-start="382" selection-end="382" vertical-scroll-proportion="0.25154132">
           <folding />
@@ -761,7 +745,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/JSON2RSSParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="0.020961776">
+        <state line="14" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="0.020581113">
           <folding>
             <marker date="1164739344207" expanded="true" signature="130:225" placeholder="/**...*/" />
             <marker date="1164739344207" expanded="true" signature="303:952" placeholder="{...}" />
@@ -810,6 +794,13 @@
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/HttpRequestUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="47" selection-start="423" selection-end="423" vertical-scroll-proportion="0.25154132">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firefox/extension/Build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="587" selection-end="587" vertical-scroll-proportion="0.27250308">
           <folding />
         </state>
       </provider>
