@@ -20,6 +20,8 @@ public class TheRandomHomepageProxyServlet extends RemoteServiceServlet {
 
     private static String ACTUAL_BASE_URL = "http://dev.therandomhomepage.com";
 
+    //TODO: Refactor this to use stream based I/0
+
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
         HttpURLConnection connection = null;
         PrintWriter pw = null;
