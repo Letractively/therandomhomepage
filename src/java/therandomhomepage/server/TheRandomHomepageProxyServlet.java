@@ -12,10 +12,9 @@ import java.net.MalformedURLException;
 
 /**
  * Created by IntelliJ IDEA.
- * User: sihameed
+ * User: Siddique Hameed
  * Date: Nov 7, 2006
  * Time: 3:57:26 PM
- * To change this template use File | Settings | File Templates.
  */
 public class TheRandomHomepageProxyServlet extends RemoteServiceServlet {
 
