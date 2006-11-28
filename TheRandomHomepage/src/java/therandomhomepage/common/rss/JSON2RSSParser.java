@@ -1,4 +1,4 @@
-package therandomhomepage.mainclient.rss;
+package therandomhomepage.common.rss;
 
 
 import com.google.gwt.json.client.*;

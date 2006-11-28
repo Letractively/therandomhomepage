@@ -4,8 +4,8 @@ import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.Label;
-import therandomhomepage.mainclient.rss.JSON2RSSParser;
-import therandomhomepage.mainclient.rss.RSSItem;
+import therandomhomepage.common.rss.JSON2RSSParser;
+import therandomhomepage.common.rss.RSSItem;
 import therandomhomepage.common.URLHelper;
 import therandomhomepage.common.Randomizer;
 
