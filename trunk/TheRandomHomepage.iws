@@ -18,6 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/server/TheRandomHomepageProxyServlet.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/server/TheRandomHomepageProxyServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
@@ -218,7 +219,7 @@
       <file leaf-file-name="TheRandomHomepageProxyServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/server/TheRandomHomepageProxyServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="37" selection-start="482" selection-end="482" vertical-scroll-proportion="0.20961775">
+            <state line="22" column="49" selection-start="650" selection-end="650" vertical-scroll-proportion="0.29346487">
               <folding />
             </state>
           </provider>
@@ -582,14 +583,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="996" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" order="18" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23183674" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23183674" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36457142" order="14" />
@@ -818,7 +819,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/server/TheRandomHomepageProxyServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="37" selection-start="482" selection-end="482" vertical-scroll-proportion="0.20961775">
+        <state line="22" column="49" selection-start="650" selection-end="650" vertical-scroll-proportion="0.29346487">
           <folding />
         </state>
       </provider>
