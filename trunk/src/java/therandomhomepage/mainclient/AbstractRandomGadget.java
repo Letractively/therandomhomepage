@@ -1,6 +1,7 @@
 package therandomhomepage.mainclient;
 
 import com.google.gwt.user.client.ui.*;
+import therandomhomepage.common.URLHelper;
 
 public class AbstractRandomGadget extends HTML {
 
@@ -10,7 +11,6 @@ public class AbstractRandomGadget extends HTML {
     private int height;
     private int width;
     private String iframeURL;
-    private static int tbl = 0;
 
     public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL, int width, int height) {
         this.netvibesModuleURL = netvibesModuleURL;
@@ -34,7 +34,7 @@ public class AbstractRandomGadget extends HTML {
     }
 
     protected void initWidget() {
-        StringBuffer html = new StringBuffer("<DIV id=\"div"+tbl+"\" class=\"shiftcontainer\"><TABLE id=\"tbl"+tbl+"\" cellspacing=\"0\" cellpadding=\"2\" class=\"ig_reset ig_tbl_line\" align=\"center\">\n" +
+        StringBuffer html = new StringBuffer("<DIV class=\"shiftcontainer\"><TABLE cellspacing=\"0\" cellpadding=\"2\" class=\"ig_reset ig_tbl_line\" align=\"center\">\n" +
                 "        <TR>\n" +
                 "          <TD valign=\"middle\">\n" +
                 "            <DIV title=\"Click on the right arrows(&gt;&gt;) to see next random item.\" class=\"gadgetHeader\">\n" +
@@ -75,7 +75,6 @@ public class AbstractRandomGadget extends HTML {
         }
 
         html.append("    </TABLE></DIV>");
-        tbl++;
         setHTML(html.toString());
     }
 

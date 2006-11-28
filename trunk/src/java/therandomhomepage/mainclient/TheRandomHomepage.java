@@ -44,16 +44,5 @@ public class TheRandomHomepage implements EntryPoint {
         flexTable.setWidget(0, 2, randomQuotesWidget);
         flexTable.getCellFormatter().setHorizontalAlignment(0,2, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 2, "33%");
-
-
-        Element tableElement = DOM.getElementById("tbl0");
-        Element divElement = DOM.getElementById("tbl0");
-
-        if (tableElement != null && divElement != null) {
-            String width = DOM.getStyleAttribute(tableElement, "width");
-            String height = DOM.getStyleAttribute(tableElement, "height");
-            Window.alert("width = "+width+", height = "+height);            
-        }
-
     }
 }
