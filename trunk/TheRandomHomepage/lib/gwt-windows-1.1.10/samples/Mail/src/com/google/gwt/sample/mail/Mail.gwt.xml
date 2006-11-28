@@ -1,5 +1,0 @@
-<module>
-	<inherits name='com.google.gwt.user.User'/>
-	<entry-point class='com.google.gwt.sample.mail.client.Mail'/>
-	<stylesheet src='Mail.css'/>
-</module>
