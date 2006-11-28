@@ -167,6 +167,14 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
     bottom: auto;
 }
 
+.shiftcontainer{
+position: relative;
+left: 7px; /*Number should match -left shadow depth below*/
+top: 7px; /*Number should match -top shadow depth below*/
+width: 300px;    
+background: transparent url(images/bigshadow.gif) no-repeat bottom right;
+}
+
 .gadgetHeader {
     height: 32px;
     border: 1px solid rgb( 153, 153, 153 );

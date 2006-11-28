@@ -1,4 +1,4 @@
-package therandomhomepage.client.rss;
+package therandomhomepage.mainclient.rss;
 
 
 import com.google.gwt.json.client.*;
@@ -13,31 +13,6 @@ import java.util.List;
  * Time: 11:27:21 PM
  */
 public class JSON2RSSParser {
-
-    /*
-    public static RSSItem[] parse(String jsonText) {
-
-        JSONValue jsonValue;
-        RSSItem rssItems[] = null;
-        try {
-            jsonValue = JSONParser.parse(jsonText);
-            if (jsonValue != null) {
-
-                JSONArray jsonArray = jsonValue.isArray();
-
-                if (jsonArray != null) {
-                    rssItems = new RSSItem[jsonArray.size()];
-                    for (int i = 0; i < jsonArray.size(); i++) {
-                        JSONObject jsonObject = (JSONObject) jsonArray.get(i);
-                        rssItems[i] = parseChild(jsonObject);
-                    }
-                }
-            }
-        } catch (JSONException e) {
-        }
-        return rssItems;
-    }
-    */
 
     public static List parse(String jsonText) {
         JSONValue jsonValue;

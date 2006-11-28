@@ -1,4 +1,4 @@
-package therandomhomepage.client.rss;
+package therandomhomepage.mainclient.rss;
 
 /**
  * Created by IntelliJ IDEA.

@@ -1,8 +1,7 @@
 package therandomhomepage.test;
 
-import therandomhomepage.client.rss.JSON2RSSParser;
-import therandomhomepage.client.rss.RSSItem;
-import com.google.gwt.junit.client.GWTTestCase;
+import therandomhomepage.mainclient.rss.JSON2RSSParser;
+import therandomhomepage.mainclient.rss.RSSItem;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package therandomhomepage.old;
+package therandomhomepage.common;
 
 /**
  * Created by IntelliJ IDEA.

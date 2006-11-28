@@ -1,8 +1,7 @@
-package therandomhomepage.old;
+package therandomhomepage.common;
 
 import com.google.gwt.user.client.HTTPRequest;
 import com.google.gwt.user.client.ResponseTextHandler;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONException;
 import com.google.gwt.json.client.JSONValue;

@@ -1,8 +1,8 @@
-package therandomhomepage.old;
+package therandomhomepage.common;
 
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.HTML;
-import therandomhomepage.client.rss.RSSItem;
+import therandomhomepage.mainclient.rss.RSSItem;
 
 /**
  * Created by IntelliJ IDEA.

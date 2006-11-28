@@ -6,7 +6,6 @@
     <inherits name="com.google.gwt.junit.JUnit"/>
     <!-- Include client-side source we might like to test -->
    <source path="client"/>
-   <source path="core"/>
    <!-- Include client-side source for the test cases -->
    <source path="test"/>
  </module>
