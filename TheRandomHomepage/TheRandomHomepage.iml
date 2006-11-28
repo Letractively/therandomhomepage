@@ -10,20 +10,9 @@
       <sourceFolder url="file://$MODULE_DIR$/../widgets/Random Feed/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../widgets/Random Flickr/src/java" isTestSource="false" />
     </content>
-    <orderEntry type="library" name="GWT" level="project" />
+    <orderEntry type="library" exported="" name="GWT" level="project" />
     <orderEntry type="jdk" jdkName="IDEA 5784" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/gwt-windows-1.1.10/gwt-user.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$MODULE_DIR$/lib/gwt-windows-1.1.10/gwt-user.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
     <orderEntryProperties />
   </component>
 </module>
