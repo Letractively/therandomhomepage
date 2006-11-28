@@ -6,7 +6,7 @@
     <exclude-output />
     <output-test url="file://$MODULE_DIR$/TheRandomHomepage/classes" />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/TheRandomHomepage/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
     </content>
     <orderEntry type="library" exported="" name="GWT" level="project" />
     <orderEntry type="jdk" jdkName="IDEA 5784" jdkType="IDEA JDK" />
