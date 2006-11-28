@@ -18,6 +18,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/common/URLHelper.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/common/URLHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iml" afterPath="$PROJECT_DIR$/TheRandomHomepage.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
@@ -180,7 +184,7 @@
       <file leaf-file-name="HttpRequestUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/HttpRequestUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="47" selection-start="423" selection-end="423" vertical-scroll-proportion="0.25154132">
+            <state line="13" column="47" selection-start="423" selection-end="423" vertical-scroll-proportion="0.24697337">
               <folding />
             </state>
           </provider>
@@ -189,34 +193,54 @@
       <file leaf-file-name="Build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firefox/extension/Build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="587" selection-end="587" vertical-scroll-proportion="0.27250308">
+            <state line="13" column="0" selection-start="587" selection-end="587" vertical-scroll-proportion="0.2675545">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firefox/extension/install.js">
+      <file leaf-file-name="TheRandomHomepage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="0.1440678">
+            <state line="42" column="67" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.7706535">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="titletweak-defaults.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firefox/extension/defaults/preferences/titletweak-defaults.js">
+      <file leaf-file-name="AbstractRandomGadget.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="24" column="105" selection-start="900" selection-end="900" vertical-scroll-proportion="0.19852035">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TheRandomHomepageProxyServlet.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/server/TheRandomHomepageProxyServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="41" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.77360773">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install.rdf" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/firefox/extension/install.rdf">
+      <file leaf-file-name="RandomNewsWidget.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RandomNewsWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="28" selection-start="382" selection-end="382" vertical-scroll-proportion="0.25154132">
+            <state line="34" column="26" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.19852035">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="URLHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/URLHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="77" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.5653753">
               <folding />
             </state>
           </provider>
@@ -362,7 +386,85 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\firefox" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\server" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -580,14 +682,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="996" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" order="18" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28244898" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23183674" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36457142" order="14" />
@@ -629,7 +731,7 @@
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
     <option name="PUT_FOCUS_INTO_COMMENT" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding IntelliJ config files" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
     <option name="SAVE_LAST_COMMIT_MESSAGE" value="true" />
     <option name="CHECKIN_DIALOG_SPLITTER_PROPORTION" value="0.8" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -714,54 +816,6 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/TheRandomHomepageTest.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.1646489">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/TheRandomHomepage.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="215" selection-end="215" vertical-scroll-proportion="0.254818">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/Randomizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.041162226">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/test/TheRandomHomepageAbstract_UT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="199" selection-end="199" vertical-scroll-proportion="0.20581114">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefox/extension/defaults/preferences/titletweak-defaults.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/JSON2RSSParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="0.020581113">
-          <folding>
-            <marker date="1164739344207" expanded="true" signature="130:225" placeholder="/**...*/" />
-            <marker date="1164739344207" expanded="true" signature="303:952" placeholder="{...}" />
-            <marker date="1164739344207" expanded="true" signature="1015:1727" placeholder="{...}" />
-            <marker date="1164739344207" expanded="true" signature="1784:1852" placeholder="{...}" />
-            <marker date="1164739344207" expanded="true" signature="1947:2144" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/test/Randomizer_UT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="65" selection-start="287" selection-end="287" vertical-scroll-proportion="0.020961776">
@@ -799,21 +853,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/HttpRequestUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="47" selection-start="423" selection-end="423" vertical-scroll-proportion="0.25154132">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefox/extension/Build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="587" selection-end="587" vertical-scroll-proportion="0.27250308">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefox/extension/install.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="0.1440678">
+        <state line="13" column="47" selection-start="423" selection-end="423" vertical-scroll-proportion="0.24697337">
           <folding />
         </state>
       </provider>
@@ -821,6 +861,64 @@
     <entry file="file://$PROJECT_DIR$/firefox/extension/install.rdf">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="28" selection-start="382" selection-end="382" vertical-scroll-proportion="0.25154132">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firefox/extension/defaults/preferences/titletweak-defaults.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firefox/extension/install.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="0.14099526">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firefox/extension/Build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="587" selection-end="587" vertical-scroll-proportion="0.2675545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="67" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.7706535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RandomNewsWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="26" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.19852035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/URLHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="77" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.5653753">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="105" selection-start="900" selection-end="900" vertical-scroll-proportion="0.19852035">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/server/TheRandomHomepageProxyServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="41" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.77360773">
           <folding />
         </state>
       </provider>

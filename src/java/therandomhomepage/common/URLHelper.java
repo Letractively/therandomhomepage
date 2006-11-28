@@ -1,6 +1,7 @@
 package therandomhomepage.common;
 
 import com.google.gwt.user.client.Random;
+import com.google.gwt.core.client.GWT;
 
 import java.util.HashMap;
 import java.util.ArrayList;
