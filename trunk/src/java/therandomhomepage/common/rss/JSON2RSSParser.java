@@ -25,7 +25,7 @@ public class JSON2RSSParser {
                 if (jsonArray != null) {
                     rssItems = new ArrayList();
                     for (int i = 0; i < jsonArray.size(); i++) {
-                        JSONObject jsonObject = (JSONObject) jsonArray.get(i);
+                        JSONValue jsonObject = (JSONValue) jsonArray.get(i);
                         rssItems.add(parseChild(jsonObject));
                     }
                 }
@@ -35,20 +35,20 @@ public class JSON2RSSParser {
         return rssItems;
     }
 
-    private static RSSItem parseChild(JSONObject jsonObject) {
-        if (jsonObject.isObject() != null) {
-            JSONValue title = parseChildAttribute(jsonObject, "title");
-            JSONValue link = parseChildAttribute(jsonObject, "link");
-            JSONValue guid = parseChildAttribute(jsonObject, "guid");
+    private static RSSItem parseChild(JSONValue jsonValue) {
+        if (jsonValue.isObject() != null) {
+            JSONValue title = parseChildAttribute(jsonValue, "title");
+            JSONValue link = parseChildAttribute(jsonValue, "link");
+            JSONValue guid = parseChildAttribute(jsonValue, "guid");
 
             if (guid == null) {
-                guid = parseChildAttribute(jsonObject, "id");
+                guid = parseChildAttribute(jsonValue, "id");
             }
 
-            JSONValue publishedDate = parseChildAttribute(jsonObject, "pubdate");
-            JSONValue description = parseChildAttribute(jsonObject, "description");
+            JSONValue publishedDate = parseChildAttribute(jsonValue, "pubdate");
+            JSONValue description = parseChildAttribute(jsonValue, "description");
             if (description == null) {
-                description = parseChildAttribute(jsonObject, "atom_content");
+                description = parseChildAttribute(jsonValue, "atom_content");
             }
 
             RSSItem rssItem = new RSSItem(parseString(title), parseString(link), parseString(description));
@@ -59,12 +59,11 @@ public class JSON2RSSParser {
         return null;
     }
 
-    private static String parseString(JSONValue title) {
-        return title != null ? removeExtraQuotes(title.toString().trim()) : "";
-    }
-
-    private static String removeExtraQuotes(String s) {
-        return s.substring(1,s.length()-1);
+    private static String parseString(JSONValue str) {
+        if (str != null && str.isString() != null){
+            return str.isString().stringValue().trim();
+        }
+        return "";
     }
 
     private static JSONValue parseChildAttribute(JSONValue childObject, String attributeKey) {

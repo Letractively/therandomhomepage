@@ -1,0 +1,18 @@
+<module>
+
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name="com.google.gwt.json.JSON"/>
+    <inherits name="org.gwtwidgets.WidgetLibrary"/>
+    <inherits name="com.google.gwt.http.HTTP"/>
+
+    <source path="common"/>
+    <source path="randomflickrclient"/>
+    <public path="randomflickrpublic"/>
+    <entry-point class='therandomhomepage.randomflickrclient.RandomFlickr'/>
+
+    <servlet path="/js/prototype.js" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+    <servlet path="/js/effects.js" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+
+    <servlet path="/php/RSS2JSON.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+    <servlet path="/php/ajaxProxy.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+</module>

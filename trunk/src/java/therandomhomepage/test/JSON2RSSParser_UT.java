@@ -4,6 +4,7 @@ import therandomhomepage.common.rss.JSON2RSSParser;
 import therandomhomepage.common.rss.RSSItem;
 
 import java.util.List;
+import java.util.Iterator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -29,6 +30,7 @@ public class JSON2RSSParser_UT extends TheRandomHomepageAbstract_UT {
             "    (AP)", "http://us.rd.yahoo.com/dailynews/rss/topstories/*http://news.yahoo.com/s/ap/20060709/ap_on_re_la_am_ca/mexico_elections", "<p><a href=\"http://us.rd.yahoo.com/dailynews/rss/topstories/*http://news.yahoo.com/s/ap/20060709/ap_on_re_la_am_ca/mexico_elections\"><img src=\"http://us.news3.yimg.com/us.i2.yimg.com/p/ap/20060709/capt.5a2fa662f8bc413597f669a36b502eab.mexico_elections__momu107.jpg?x=130&amp;y=83&amp;sig=67xo1gNkImk80pvOmOFUGQ--\" align=\"left\" height=\"83\" width=\"130\" alt=\"A lone flag of the Democratic Revolution Party (PRD) flies over thousands of supporters of Mexican presidential candidate Andres Manuel Lopez Obrador during a rally at the main Zocalo plaza in Mexico City, Mexico on Saturday, July 8, 2006. Obrador called his supporters onto the streets Saturday to protest his rival's narrow victory in a vote he said was more fraudulent than those held during 71 years of one-party rule. (AP Photo/Marco Ugarte) border=\"0\" /></a>AP - Leftist presidential candidate Andres Manuel Lopez Obrador called on a huge crowd of supporters Saturday to keep peacefully protesting as he goes to court to challenge what he called his fraudulent electoral defeat.</p><br clear=all>");
     expectedRSSItem1.setGuid("ap/20060709/mexico_elections");
     expectedRSSItem1.setPublishedDate("Sun, 09 Jul 2006 03:22:54 GMT");
+      System.out.println("JSON2RSSParser_UT.testParseYahooRSS");
     assertRSSItem(expectedRSSItem1, rssItems);
 
     RSSItem expectedRSSItem2 = new RSSItem("Scores feared dead in Siberia runway crash \n" +
@@ -84,16 +86,20 @@ public class JSON2RSSParser_UT extends TheRandomHomepageAbstract_UT {
 
   private void assertRSSItem(RSSItem expectedRSSItem, List actualRSSItems) {
 
+    boolean asserted = false;
     for (int i = 0; i < actualRSSItems.size(); i++) {
       RSSItem actualRSSItem = (RSSItem) actualRSSItems.get(i);
       if (expectedRSSItem.getTitle().equals(actualRSSItem.getTitle())) {
+        asserted = true;
         assertEquals(expectedRSSItem.getTitle(), actualRSSItem.getTitle());
         assertEquals(expectedRSSItem.getLink(), actualRSSItem.getLink());
         assertEquals(expectedRSSItem.getDesc(), actualRSSItem.getDesc());
         assertEquals(expectedRSSItem.getGuid(), actualRSSItem.getGuid());
         assertEquals(expectedRSSItem.getPublishedDate(), actualRSSItem.getPublishedDate());
+        break;
       }
     }
+    assertTrue("Should have asserted with some values !",asserted);
   }
 
 }

@@ -1,8 +1,6 @@
 package therandomhomepage.common;
 
 import com.google.gwt.user.client.ui.*;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.DOM;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,55 +9,57 @@ import com.google.gwt.user.client.DOM;
  * Time: 12:15:23 PM
  */
 public abstract class RandomWidget extends Composite implements ClickListener {
-  protected String header;
-  protected FlexTable table;
+    protected String header;
+    protected FlexTable table;
+    protected static RSSCache cache = new RSSCache();
 
-  public RandomWidget(String header) {
-    this.header = header;
-    buildUI();
-    retrieveRandomItem();
-  }
+    protected static final String ERROR_MESSAGE = "Error retrieving content from the list of RSS/Atom feed!. Please make sure that the URL is accessible and it is a valid feed.";
 
-  private void buildUI() {
-    buildHeader();
-    buildBody();
-    buildFooter();
-  }
+    public RandomWidget(String header) {
+        this.header = header;
+        buildUI();
+        retrieveRandomItem();
+    }
 
-  protected void buildHeader() {
-    table = new FlexTable();
-    table.setCellPadding(2);
-    table.setCellSpacing(0);
-    table.setWidth("50%");
-    table.setText(0, 0, header);
-    Label arrow = new Label(">>");
-      //noinspection GWTStyleCheck
-      arrow.setStyleName("randomWidgetHeader-arrow");
-    arrow.addClickListener(this);
-    table.setWidget(0, 1, arrow);
-    table.getFlexCellFormatter().setColSpan(0, 0, 2);
-    table.getRowFormatter().setStyleName(0, "randomWidgetHeader");
-  }
+    private void buildUI() {
+        buildHeader();
+        buildBody();
+        buildFooter();
+    }
 
-  protected void buildBody() {
-    setData(new Label("Loading content ..."));
-    initWidget(table);
-  }
+    protected void buildHeader() {
+        table = new FlexTable();
+        table.setCellPadding(2);
+        table.setCellSpacing(0);
+        table.setWidth("50%");
+        table.setText(0, 0, header);
+        Label arrow = new Label(">>");
+        //noinspection GWTStyleCheck
+        arrow.setStyleName("randomWidgetHeader-arrow");
+        arrow.addClickListener(this);
+        table.setWidget(0, 1, arrow);
+        table.getFlexCellFormatter().setColSpan(0, 0, 2);
+        table.getRowFormatter().setStyleName(0, "randomWidgetHeader");
+    }
 
-  protected void setData(Widget widget) {
-    Window.alert("IFrame innerHTML = "+ DOM.getInnerHTML(widget.getElement()));  
-    table.setWidget(1, 0, widget);
-    table.getFlexCellFormatter().setColSpan(1, 0, 2);
-  }
+    protected void buildBody() {
+        setData(new Label("Loading content ..."));
+        initWidget(table);
+    }
 
-  protected void buildFooter() {
+    protected void setData(Widget widget) {
+        table.setWidget(1, 0, widget);
+        table.getFlexCellFormatter().setColSpan(1, 0, 2);
+    }
 
-  }
+    protected void buildFooter() {
 
-  protected void retrieveRandomItem() {
-  }
+    }
 
-  public void onClick(Widget sender){
-    retrieveRandomItem();
-  }
+    protected abstract void retrieveRandomItem();
+
+
+    public void onClick(Widget sender) {
+        retrieveRandomItem();
+    }
 }
