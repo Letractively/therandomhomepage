@@ -40,8 +40,16 @@ public class JSON2RSSParser {
             JSONValue title = parseChildAttribute(jsonObject, "title");
             JSONValue link = parseChildAttribute(jsonObject, "link");
             JSONValue guid = parseChildAttribute(jsonObject, "guid");
+
+            if (guid == null) {
+                guid = parseChildAttribute(jsonObject, "id");
+            }
+
             JSONValue publishedDate = parseChildAttribute(jsonObject, "pubdate");
             JSONValue description = parseChildAttribute(jsonObject, "description");
+            if (description == null) {
+                description = parseChildAttribute(jsonObject, "atom_content");
+            }
 
             RSSItem rssItem = new RSSItem(parseString(title), parseString(link), parseString(description));
             rssItem.setGuid(parseString(guid));
@@ -52,7 +60,11 @@ public class JSON2RSSParser {
     }
 
     private static String parseString(JSONValue title) {
-        return title != null ? title.toString().trim() : "";
+        return title != null ? removeExtraQuotes(title.toString().trim()) : "";
+    }
+
+    private static String removeExtraQuotes(String s) {
+        return s.substring(1,s.length()-1);
     }
 
     private static JSONValue parseChildAttribute(JSONValue childObject, String attributeKey) {
