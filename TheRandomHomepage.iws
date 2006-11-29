@@ -18,25 +18,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.html" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\RandomFlickr.gwt.xml.WIP" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/test/RandomFlickrFeedParsing_UT.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/test/RandomFlickrFeedParsing_UT.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/common/rss/JSON2RSSParser.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/common/rss/JSON2RSSParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.ipr" afterPath="$PROJECT_DIR$/TheRandomHomepage.ipr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/RandomFlickr.gwt.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/common/RandomWidget.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/common/RandomWidget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/test/JSON2RSSParser_UT.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/test/JSON2RSSParser_UT.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickr" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickr.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/common/RandomNewsWidget.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/common/RandomNewsWidget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickr\RandomFlickr.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iml" afterPath="$PROJECT_DIR$/TheRandomHomepage.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/scripts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/AUTHORS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/extlib/Snoopy.class.inc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/scripts/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/scripts/smarty_plugin/modifier.rss_date_parse.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/htdocs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/extlib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/htdocs/cookbook.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/rss_utils.inc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/scripts/magpie_slashbox.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/rss_cache.inc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/CHANGES" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/scripts/templates/simple.smarty" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/scripts/magpie_simple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/rss_fetch.inc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/scripts/smarty_plugin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/json/JSON.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/TROUBLESHOOTING" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/scripts/magpie_debug.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/htdocs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/scripts/simple_smarty.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/scripts/templates" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/ChangeLog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/NEWS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/INSTALL" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/cookbook" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/magpie/rss_parse.inc" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -180,16 +192,28 @@
       <file leaf-file-name="RandomFlickrWidget.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="30" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.43403205">
+            <state line="56" column="30" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.443884">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomFlickrFeedParsing_UT.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RandomFlickrFeedParsing_UT.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/test/RandomFlickrFeedParsing_UT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="18857" selection-start="783" selection-end="19598" vertical-scroll-proportion="0.37731197">
+            <state line="31" column="0" selection-start="19783" selection-end="19783" vertical-scroll-proportion="0.55737704">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSSTest.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/php/RSSTest.php">
+          <provider editor-type-id="HtmlPreview">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -198,7 +222,7 @@
       <file leaf-file-name="RSSItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSSItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="21" selection-start="971" selection-end="971" vertical-scroll-proportion="0.7118644">
+            <state line="52" column="21" selection-start="971" selection-end="971" vertical-scroll-proportion="0.72772276">
               <folding />
             </state>
           </provider>
@@ -207,7 +231,7 @@
       <file leaf-file-name="JSON2RSSParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/JSON2RSSParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="0" selection-start="2158" selection-end="2158" vertical-scroll-proportion="0.7274969">
+            <state line="68" column="0" selection-start="2158" selection-end="2158" vertical-scroll-proportion="0.7440101">
               <folding />
             </state>
           </provider>
@@ -219,7 +243,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="0.2971286">
+            <state line="14" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="0.30395913">
               <folding />
             </state>
           </provider>
@@ -228,7 +252,7 @@
       <file leaf-file-name="RandomFlickr.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="457" selection-end="457" vertical-scroll-proportion="0.24697337">
+            <state line="16" column="0" selection-start="457" selection-end="457" vertical-scroll-proportion="0.25247526">
               <folding />
             </state>
           </provider>
@@ -246,7 +270,7 @@
       <file leaf-file-name="RandomFlickr.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="44" selection-start="355" selection-end="355" vertical-scroll-proportion="0.4116223">
+            <state line="20" column="44" selection-start="355" selection-end="355" vertical-scroll-proportion="0.42079207">
               <folding />
             </state>
           </provider>
@@ -424,30 +448,8 @@
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
-      </PATH>
-      <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\php" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -474,134 +476,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\test" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrclient" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\common" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\common" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\common\rss" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -884,14 +758,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="996" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" order="18" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32408163" order="0" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41632652" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36457142" order="14" />
@@ -1067,49 +941,59 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="0.2971286">
+        <state line="14" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="0.30395913">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="457" selection-end="457" vertical-scroll-proportion="0.24697337">
+        <state line="16" column="0" selection-start="457" selection-end="457" vertical-scroll-proportion="0.25247526">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="44" selection-start="355" selection-end="355" vertical-scroll-proportion="0.4116223">
+        <state line="20" column="44" selection-start="355" selection-end="355" vertical-scroll-proportion="0.42079207">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="30" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.43403205">
+        <state line="56" column="30" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.443884">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/JSON2RSSParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="2158" selection-end="2158" vertical-scroll-proportion="0.7274969">
+        <state line="68" column="0" selection-start="2158" selection-end="2158" vertical-scroll-proportion="0.7440101">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSSItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="21" selection-start="971" selection-end="971" vertical-scroll-proportion="0.7118644">
+        <state line="52" column="21" selection-start="971" selection-end="971" vertical-scroll-proportion="0.72772276">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/test/RandomFlickrFeedParsing_UT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="18857" selection-start="783" selection-end="19598" vertical-scroll-proportion="0.37731197">
+        <state line="31" column="0" selection-start="19783" selection-end="19783" vertical-scroll-proportion="0.55737704">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/RSSTest.php">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
