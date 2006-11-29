@@ -288,7 +288,11 @@
         <root url="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-servlet.jar!/" />
       </CLASSES>
       <JAVADOC />
-      <SOURCES />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-servlet.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-dev-windows.jar!/" />
+      </SOURCES>
     </library>
   </component>
   <component name="uidesigner-configuration">
