@@ -1,14 +1,12 @@
-package therandomhomepage.common;
+package therandomhomepage.common.rss;
 
 import com.google.gwt.xml.client.Document;
-import com.google.gwt.xml.client.XMLParser;
-import com.google.gwt.xml.client.NodeList;
 import com.google.gwt.xml.client.Node;
+import com.google.gwt.xml.client.NodeList;
+import com.google.gwt.xml.client.XMLParser;
 
-import java.util.List;
 import java.util.ArrayList;
-
-import therandomhomepage.common.rss.RSSItem;
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -41,12 +39,15 @@ public class RSS2XMLDocumentParser {
                 } else if (childElement.getNodeName().equals("guid")) {
                     rssItem.setGuid(childElement.getNodeValue());
                 } else if (childElement.getNodeName().equals("media:content")) {
-                    //TODO: parse media content
+                    rssItem.setMediaContentNode(childElement);
+                } else if (childElement.getNodeName().equals("media:text")) {
+                    rssItem.setMediaTextNode(childElement);
+                } else if (childElement.getNodeName().equals("media:thumbnail ")) {
+                    rssItem.setMediaThumbnailNode(childElement);
                 }
-
-
             }
 
+            rssItems.add(rssItem);
         }
         return rssItems;
     }

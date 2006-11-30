@@ -1,10 +1,15 @@
 package therandomhomepage.test;
 
-import therandomhomepage.common.RSS2XMLDocumentParser;
+import com.google.gwt.user.client.HTTPRequest;
+import com.google.gwt.user.client.ResponseTextHandler;
+import com.google.gwt.user.client.rpc.ServiceDefTarget;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.core.client.GWT;
+import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 import therandomhomepage.common.rss.RSSItem;
 
-import java.util.List;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,7 +17,7 @@ import java.util.Iterator;
  * Date: Nov 29, 2006
  * Time: 3:55:10 PM
  */
-public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT{
+public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT {
 
     private String testXML = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
             "<rss version=\"2.0\"\n" +
@@ -642,13 +647,48 @@ public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT{
             "\t</channel>\n" +
             "</rss>";
 
-    public void testSimpleParsing() throws Exception{
+    public void testSimpleParsing() throws Exception {
         RSS2XMLDocumentParser parser = new RSS2XMLDocumentParser();
         List rssItems = parser.parse(testXML);
         System.out.println("rssItems.size() = " + rssItems.size());
         for (Iterator iterator = rssItems.iterator(); iterator.hasNext();) {
             RSSItem rssItem = (RSSItem) iterator.next();
-            assertEquals("bali - balinese girl",rssItem.getTitle());
+            System.out.println("rssItem = " + rssItem);
+            assertEquals("bali - balinese girl", rssItem.getTitle());
+        }
+    }
+
+    public void testReadXML() throws Exception {
+      FileReaderServiceAsync fileReaderService = (FileReaderServiceAsync) GWT.create(FileReaderService.class);
+
+      ServiceDefTarget target = (ServiceDefTarget) fileReaderService;
+
+      // Use a module-relative URLs to ensure that this client code can find
+      // its way home, even when the URL changes (as might happen when you
+      // deploy this as a webapp under an external servlet container).
+      String moduleRelativeURL = GWT.getModuleBaseURL() + "readfile";
+      target.setServiceEntryPoint(moduleRelativeURL);
+
+
+      fileReaderService.readFile("someFile",new AsyncCallback(){
+
+          public void onFailure(Throwable caught) {
+              System.out.println("RSS2XMLDocumentParser_UT.onFailure");
+          }
+
+          public void onSuccess(Object result) {
+              System.out.println("RSS2XMLDocumentParser_UT.onSuccess");
+              System.out.println("result = " + result);
+          }
+      });
+
+    }
+
+    private class MyResponseTextHandler implements ResponseTextHandler {
+
+        public void onCompletion(String responseText) {
+            System.out.println("responseText = " + responseText);
         }
     }
 }
+
