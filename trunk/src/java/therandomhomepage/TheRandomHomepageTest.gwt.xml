@@ -12,5 +12,7 @@
     <!-- Include client-side source for the test cases -->
     <source path="test"/>
 
-    <servlet path='/readfile' class='therandomhomepage.server.FileReaderServiceImpl'/>
+    <public path="testpublic"/>
+
+    <servlet path='/readfile' class='therandomhomepage.server.FileReaderServlet'/>
 </module>
