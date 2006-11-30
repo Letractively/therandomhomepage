@@ -1,8 +1,10 @@
 package therandomhomepage.test;
 
 import therandomhomepage.common.RSS2XMLDocumentParser;
+import therandomhomepage.common.rss.RSSItem;
 
 import java.util.List;
+import java.util.Iterator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -494,7 +496,7 @@ public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT{
             "\n" +
             "&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/47757737@N00/309381018/&quot; title=&quot;Coq&quot;&gt;&lt;img src=&quot;http://static.flickr.com/110/309381018_1be111513a_m.jpg&quot; width=&quot;180&quot; height=&quot;240&quot; alt=&quot;Coq&quot; style=&quot;border: 1px solid #ddd;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\n" +
             "\n" +
-            "&lt;p&gt;Chaussée Brunehaut, Anzin-Saint-Aubin, vers Maroeuil&lt;/p&gt;</description>\n" +
+            "&lt;p&gt;Chaussï¿½e Brunehaut, Anzin-Saint-Aubin, vers Maroeuil&lt;/p&gt;</description>\n" +
             "\t\t\t<pubDate>Wed, 29 Nov 2006 02:10:08 -0800</pubDate>\n" +
             "                        <dc:date.Taken>2006-11-29T11:31:51-08:00</dc:date.Taken>\n" +
             "\t\t\t<author>nobody@flickr.com (OliBac)</author>\n" +
@@ -510,7 +512,7 @@ public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT{
             "\n" +
             "&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/47757737@N00/309381018/&quot; title=&quot;Coq&quot;&gt;&lt;img src=&quot;http://static.flickr.com/110/309381018_1be111513a_m.jpg&quot; width=&quot;180&quot; height=&quot;240&quot; alt=&quot;Coq&quot; style=&quot;border: 1px solid #ddd;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\n" +
             "\n" +
-            "&lt;p&gt;Chaussée Brunehaut, Anzin-Saint-Aubin, vers Maroeuil&lt;/p&gt;</media:text>\n" +
+            "&lt;p&gt;Chaussï¿½e Brunehaut, Anzin-Saint-Aubin, vers Maroeuil&lt;/p&gt;</media:text>\n" +
             "\t\t\t<media:thumbnail url=\"http://static.flickr.com/110/309381018_1be111513a_s.jpg\" height=\"75\" width=\"75\" />\n" +
             "\t\t\t<media:credit role=\"photographer\">OliBac</media:credit>\n" +
             "\t\t\t<media:category scheme=\"urn:flickr:tags\">vent colorful wind vane girouette anzin olibac</media:category>\n" +
@@ -643,6 +645,10 @@ public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT{
     public void testSimpleParsing() throws Exception{
         RSS2XMLDocumentParser parser = new RSS2XMLDocumentParser();
         List rssItems = parser.parse(testXML);
-        assertTrue("Complete this test",false);
+        System.out.println("rssItems.size() = " + rssItems.size());
+        for (Iterator iterator = rssItems.iterator(); iterator.hasNext();) {
+            RSSItem rssItem = (RSSItem) iterator.next();
+            assertEquals("bali - balinese girl",rssItem.getTitle());
+        }
     }
 }

@@ -1,11 +1,7 @@
 <module>
 
-    <inherits name='com.google.gwt.user.User'/>
-    <inherits name="com.google.gwt.json.JSON"/>
-    <inherits name="org.gwtwidgets.WidgetLibrary"/>
-    <inherits name="com.google.gwt.http.HTTP"/>
+    <inherits name ="therandomhomepage.Common"/>
 
-    <source path="common"/>
     <source path="randomflickrclient"/>
     <public path="randomflickrpublic"/>
     <entry-point class='therandomhomepage.randomflickrclient.RandomFlickr'/>
