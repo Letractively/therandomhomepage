@@ -17,37 +17,38 @@ import java.util.List;
 public class RSS2XMLDocumentParser {
 
     public static List parse(String xmlString) {
-        Document document = XMLParser.parse(xmlString);
+        List rssItems = null;
+        try {
+            Document document = XMLParser.parse(xmlString);
 
-        NodeList items = document.getElementsByTagName("item");
+            NodeList items = document.getElementsByTagName("item");
+            rssItems = new ArrayList();
 
-        List rssItems = new ArrayList();
-
-        RSSItem rssItem = null;
-        for (int i = 0; i < items.getLength(); i++) {
-            Node item = items.item(i);
-            NodeList childNodes = item.getChildNodes();
-
-            rssItem = new RSSItem();
-
-            for (int j = 0; j < childNodes.getLength(); j++) {
-                Node childElement = childNodes.item(j);
-                if (childElement.getNodeName().equals("title")) {
-                    rssItem.setTitle(childElement.getNodeValue());
-                } else if (childElement.getNodeName().equals("description")) {
-                    rssItem.setDesc(childElement.getNodeValue());
-                } else if (childElement.getNodeName().equals("guid")) {
-                    rssItem.setGuid(childElement.getNodeValue());
-                } else if (childElement.getNodeName().equals("media:content")) {
-                    rssItem.setMediaContentNode(childElement);
-                } else if (childElement.getNodeName().equals("media:text")) {
-                    rssItem.setMediaTextNode(childElement);
-                } else if (childElement.getNodeName().equals("media:thumbnail ")) {
-                    rssItem.setMediaThumbnailNode(childElement);
+            RSSItem rssItem = null;
+            for (int i = 0; i < items.getLength(); i++) {
+                Node item = items.item(i);
+                NodeList childNodes = item.getChildNodes();
+                rssItem = new RSSItem();
+                for (int j = 0; j < childNodes.getLength(); j++) {
+                    Node childElement = childNodes.item(j);
+                    if (childElement.getNodeName().equals("title")) {
+                        rssItem.setTitle(childElement.getNodeValue());
+                    } else if (childElement.getNodeName().equals("description")) {
+                        rssItem.setDesc(childElement.getNodeValue());
+                    } else if (childElement.getNodeName().equals("guid")) {
+                        rssItem.setGuid(childElement.getNodeValue());
+                    } else if (childElement.getNodeName().equals("media:content")) {
+                        rssItem.setMediaContentNode(childElement);
+                    } else if (childElement.getNodeName().equals("media:text")) {
+                        rssItem.setMediaTextNode(childElement);
+                    } else if (childElement.getNodeName().equals("media:thumbnail ")) {
+                        rssItem.setMediaThumbnailNode(childElement);
+                    }
                 }
+                rssItems.add(rssItem);
             }
-
-            rssItems.add(rssItem);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return rssItems;
     }

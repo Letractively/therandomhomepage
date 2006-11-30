@@ -18,6 +18,7 @@ public class Media {
 
     public void setMediaContentNode(Node mediaContentNode) {
         content = parseImage(mediaContentNode);
+        System.out.println("content = " + content);
     }
 
     public void setMediaTextNode(Node mediaTextNode) {
@@ -30,6 +31,7 @@ public class Media {
 
     public void setMediaThumbnailNode(Node mediaThumbnailNode) {
         thumbnail = parseImage(mediaThumbnailNode);
+        System.out.println("thumbnail = " + thumbnail); 
     }
 
 
