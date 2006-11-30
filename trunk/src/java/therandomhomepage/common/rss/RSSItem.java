@@ -28,12 +28,10 @@ public class RSSItem implements Randomizable {
 
 
     public void setTitle(String title) {
-        System.out.println("title = " + title);
         this.title = title;
     }
 
     public void setLink(String link) {
-        System.out.println("link = " + link);
         this.link = link;
     }
 
@@ -58,7 +56,6 @@ public class RSSItem implements Randomizable {
     }
 
     public void setGuid(String guid) {
-        System.out.println("guid = " + guid);
         this.guid = guid;
     }
 
