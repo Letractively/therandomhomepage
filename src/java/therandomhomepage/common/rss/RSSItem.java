@@ -1,6 +1,8 @@
 package therandomhomepage.common.rss;
 
 import therandomhomepage.common.Randomizable;
+import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.HTML;
 
 /**
  * Created by IntelliJ IDEA.
@@ -9,53 +11,70 @@ import therandomhomepage.common.Randomizable;
  * Time: 11:09:40 AM
  */
 public class RSSItem implements Randomizable {
-  private String title;
-  private String link;
-  private String desc;
-  private String guid;
-  private String publishedDate;
+    private String title;
+    private String link;
+    private String desc;
+    private String guid;
+    private String publishedDate;
 
-  public RSSItem(String title, String link, String desc) {
-    this.title = title;
-    this.link = link;
-    this.desc = desc;
-  }
+    public RSSItem() {
+    }
 
-  public String getTitle() {
-    return title;
-  }
+    public RSSItem(String title, String link, String desc) {
+        this.title = title;
+        this.link = link;
+        this.desc = desc;
+    }
 
-  public String getLink() {
-    return link;
-  }
 
-  public String getDesc() {
-    return desc;
-  }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-  public String getGuid() {
-    return guid;
-  }
+    public void setLink(String link) {
+        this.link = link;
+    }
 
-  public void setGuid(String guid) {
-    this.guid = guid;
-  }
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
 
-  public String getPublishedDate() {
-    return publishedDate;
-  }
+    public String getTitle() {
+        return title;
+    }
 
-  public void setPublishedDate(String publishedDate) {
-    this.publishedDate = publishedDate;
-  }
+    public String getLink() {
+        return link;
+    }
 
-  public String toString() {
-    return "RSSItem{" +
-            "title='" + title + '\'' +
-            ", link='" + link + '\'' +
-            ", desc='" + desc + '\'' +
-            ", guid='" + guid + '\'' +
-            ", publishedDate=" + publishedDate +
-            '}';
-  }
+    public String getDesc() {
+        return desc;
+    }
+
+    public String getGuid() {
+        return guid;
+    }
+
+    public void setGuid(String guid) {
+        this.guid = guid;
+    }
+
+    public String getPublishedDate() {
+        return publishedDate;
+    }
+
+    public void setPublishedDate(String publishedDate) {
+        this.publishedDate = publishedDate;
+    }
+
+
+    public String toString() {
+        return "RSSItem{" +
+                "title='" + title + '\'' +
+                ", link='" + link + '\'' +
+                ", desc='" + desc + '\'' +
+                ", guid='" + guid + '\'' +
+                ", publishedDate=" + publishedDate +
+                '}';
+    }
 }
