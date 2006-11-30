@@ -11,4 +11,6 @@
     <source path="randomflickrclient"/>
     <!-- Include client-side source for the test cases -->
     <source path="test"/>
+
+    <servlet path='/readfile' class='therandomhomepage.server.FileReaderServiceImpl'/>
 </module>

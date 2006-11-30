@@ -1,8 +1,7 @@
 package therandomhomepage.common.rss;
 
+import com.google.gwt.xml.client.Node;
 import therandomhomepage.common.Randomizable;
-import com.google.gwt.user.client.ui.Image;
-import com.google.gwt.user.client.ui.HTML;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,6 +15,7 @@ public class RSSItem implements Randomizable {
     private String desc;
     private String guid;
     private String publishedDate;
+    private Media media = new Media();
 
     public RSSItem() {
     }
@@ -67,6 +67,26 @@ public class RSSItem implements Randomizable {
         this.publishedDate = publishedDate;
     }
 
+    public Media getMedia() {
+        return media;
+    }
+
+    public void setMediaContentNode(Node node) {
+        media.setMediaContentNode(node);
+    }
+
+    public void setMediaThumbnailNode(Node node) {
+        media.setMediaThumbnailNode(node);
+    }
+
+    public void setMediaTextNode(Node node) {
+        media.setMediaTextNode(node);
+    }
+
+    public void setMedia(Media media) {
+        this.media = media;
+    }
+
 
     public String toString() {
         return "RSSItem{" +
@@ -74,7 +94,8 @@ public class RSSItem implements Randomizable {
                 ", link='" + link + '\'' +
                 ", desc='" + desc + '\'' +
                 ", guid='" + guid + '\'' +
-                ", publishedDate=" + publishedDate +
+                ", publishedDate='" + publishedDate + '\'' +
+                ", media=" + media +
                 '}';
     }
 }

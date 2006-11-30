@@ -2,6 +2,8 @@ package therandomhomepage.common.rss;
 
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.xml.client.NamedNodeMap;
+import com.google.gwt.xml.client.Node;
 
 /**
  * Created by IntelliJ IDEA.
@@ -14,27 +16,54 @@ public class Media {
     private HTML text;
     private Image thumbnail;
 
-    public Image getContent() {
-        return content;
+    public void setMediaContentNode(Node mediaContentNode) {
+        content = parseImage(mediaContentNode);
     }
 
-    public void setContent(Image content) {
-        this.content = content;
+    public void setMediaTextNode(Node mediaTextNode) {
+        if (mediaTextNode != null) {
+            if (mediaTextNode.getNodeValue() != null) {
+                text = new HTML(mediaTextNode.getNodeValue());
+            }
+        }
+    }
+
+    public void setMediaThumbnailNode(Node mediaThumbnailNode) {
+        thumbnail = parseImage(mediaThumbnailNode);
+    }
+
+
+    private Image parseImage(Node imageNode) {
+        Image image = null;
+        if (imageNode != null) {
+            NamedNodeMap attributes = imageNode.getAttributes();
+            if (attributes != null) {
+                image = new Image(attributes.getNamedItem("url").getNodeValue());
+                //maybe this is redundant
+                image.setHeight(attributes.getNamedItem("height").getNodeValue());
+                image.setWidth(attributes.getNamedItem("width").getNodeValue());
+            }
+        }
+        return image;
+    }
+
+    public Image getContent() {
+        return content;
     }
 
     public HTML getText() {
         return text;
     }
 
-    public void setText(HTML text) {
-        this.text = text;
-    }
-
     public Image getThumbnail() {
         return thumbnail;
     }
 
-    public void setThumbnail(Image thumbnail) {
-        this.thumbnail = thumbnail;
+    public String toString() {
+        return "Media{" +
+                "content=" + content +
+                ", text=" + text +
+                ", thumbnail=" + thumbnail +
+                '}';
     }
 }
