@@ -5,9 +5,11 @@ import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.Image;
 import therandomhomepage.common.*;
 import therandomhomepage.common.rss.JSON2RSSParser;
 import therandomhomepage.common.rss.RSSItem;
+import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 
 import java.util.List;
 
@@ -25,7 +27,8 @@ public class RandomFlickrWidget extends RandomWidget {
     }
 
     protected void retrieveRandomItem() {
-        String url = "/php/RSS2JSON.php?url=" + URL.encode("http://www.flickr.com/services/feeds/photos_public.gne?tags=colorful&format=rss_200");
+
+        String url = "/php/ajaxProxy.php?url="+URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags=colorful&format=rss_200");
 
         if (cache.getFromCache(url) == null) {
             if (!HttpRequestUtil.sendAsyncGetRequest(url, new MyResponseHandler(url))) {
@@ -40,14 +43,15 @@ public class RandomFlickrWidget extends RandomWidget {
 
     private void displayRandomItem(RSSItem randomItem) {
         if (randomItem != null) {
-            RSSItemLink itemLink = new RSSItemLink(randomItem);
-            table.setWidget(1, 0, itemLink);
+//            RSSItemLink itemLink = new RSSItemLink(randomItem);
+            Image image = randomItem.getMedia().getContent();
+            table.setWidget(1, 0, image);
             table.getFlexCellFormatter().setColSpan(1, 0, 2);
             table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
-            HTML descWidget = new HTML(randomItem.getDesc());
-            table.setWidget(2, 0, descWidget);
+//            HTML descWidget = new HTML(randomItem.getDesc());
+            table.setWidget(2, 0, new Label(randomItem.getTitle()));
             table.getFlexCellFormatter().setColSpan(2, 0, 2);
-            EffectsHelper.applyEffects(descWidget,EffectsHelper.RANDOM);
+            EffectsHelper.applyEffects(image,EffectsHelper.RANDOM);
         }
     }
 
@@ -67,7 +71,7 @@ public class RandomFlickrWidget extends RandomWidget {
 
         public void onCompletion(String responseText) {
             if (!HttpRequestUtil.isErrorResponse(responseText)) {
-                List rssItems = JSON2RSSParser.parse(responseText);
+                List rssItems = RSS2XMLDocumentParser.parse(responseText);
                 cache.addToCache(url, rssItems);
                 RSSItem randomItem = (RSSItem) Randomizer.getRandomItem(rssItems);
                 displayRandomItem(randomItem);

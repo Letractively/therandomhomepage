@@ -17,7 +17,7 @@ public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT {
 
 
     public void testSimpleParsing() throws Exception {
-        delayTestFinish(60000);
+        delayTestFinish(5000);
         readFile("RandomFlickr_RSS_200.xml", new ResponseTextHandler() {
             public void onCompletion(String responseText) {
                 processResult(responseText);
@@ -29,12 +29,7 @@ public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT {
 
     private void processResult(String result) {
         List rssItems = RSS2XMLDocumentParser.parse(result);
-        assertTrue(rssItems.size() > 0);
-        for (Iterator iterator = rssItems.iterator(); iterator.hasNext();) {
-            RSSItem rssItem = (RSSItem) iterator.next();
-            System.out.println("rssItem = " + rssItem);
-            assertEquals("bali - balinese girl", rssItem.getTitle());
-        }
+        assertEquals(3,rssItems.size());
         finishTest();
     }
 }

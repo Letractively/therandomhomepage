@@ -19,6 +19,7 @@ public class RSS2XMLDocumentParser {
     public static List parse(String xmlString) {
         List rssItems = null;
         try {
+            System.out.println("xmlString = " + xmlString);
             Document document = XMLParser.parse(xmlString);
 
             NodeList items = document.getElementsByTagName("item");
@@ -32,11 +33,11 @@ public class RSS2XMLDocumentParser {
                 for (int j = 0; j < childNodes.getLength(); j++) {
                     Node childElement = childNodes.item(j);
                     if (childElement.getNodeName().equals("title")) {
-                        rssItem.setTitle(childElement.getNodeValue());
+                        rssItem.setTitle(childElement.getFirstChild().getNodeValue());
                     } else if (childElement.getNodeName().equals("description")) {
-                        rssItem.setDesc(childElement.getNodeValue());
+                        rssItem.setDesc(childElement.getFirstChild().getNodeValue());
                     } else if (childElement.getNodeName().equals("guid")) {
-                        rssItem.setGuid(childElement.getNodeValue());
+                        rssItem.setGuid(childElement.getFirstChild().getNodeValue());
                     } else if (childElement.getNodeName().equals("media:content")) {
                         rssItem.setMediaContentNode(childElement);
                     } else if (childElement.getNodeName().equals("media:text")) {
