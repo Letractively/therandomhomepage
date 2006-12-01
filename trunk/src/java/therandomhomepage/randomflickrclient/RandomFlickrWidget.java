@@ -42,11 +42,24 @@ public class RandomFlickrWidget extends RandomWidget {
         }
     }
 
+//    private void displayRandomItem(RSSItem randomItem) {
+//        if (randomItem != null) {
+//            table.setWidget(0, 0, new Label(randomItem.getTitle()));
+//            HTML snippet = new HTML(randomItem.getDesc());
+//            snippet.addClickListener(new LightBoxListener(randomItem.getMedia().getContent()));
+//            table.setWidget(1, 0, snippet);
+//            table.getFlexCellFormatter().setColSpan(1, 0, 2);
+//            table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
+//            EffectsHelper.applyEffects(snippet,EffectsHelper.RANDOM);
+//        }
+//    }
+
     private void displayRandomItem(RSSItem randomItem) {
         if (randomItem != null) {
             table.setWidget(0, 0, new Label(randomItem.getTitle()));
-            HTML snippet = new HTML(randomItem.getDesc());
-            snippet.addClickListener(new LightBoxListener(randomItem.getMedia().getContent()));
+            DOM.getInnerHTML(randomItem.getMedia().getThumbnail().getElement());
+            ImageLightBox snippet = new ImageLightBox(randomItem.getMedia().getThumbnail());
+//            snippet.addClickListener(new LightBoxListener(randomItem.getMedia().getContent()));
             table.setWidget(1, 0, snippet);
             table.getFlexCellFormatter().setColSpan(1, 0, 2);
             table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);

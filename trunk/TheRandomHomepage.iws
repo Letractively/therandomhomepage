@@ -18,754 +18,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GvideoSearchImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/ProgressBar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wrap/Callback.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/CalcKeyboardListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGDefs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/WImage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGPath.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper/WPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/class-use/Results.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/public/images/asc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GSearchWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GsearcherOptions.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/public/style" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGText.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GwebResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util/SimpleDateFormat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/Cookie.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/CalcDisplayListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGLinearGradient.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/cal" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext/impl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/CalcKeyboardListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GwebSearchImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGPanelBase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/ImageButtonFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/pagination/DataProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/util" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/LightBox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GsearcherOptions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GwebResultImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper/WTextBox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/Callback.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/Location.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_folder_lrg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/class-use/WImage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/CallbackDelegate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/overview-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/impl/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGDefs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext/ExtDOM.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GwebSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_info_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/test/org" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext/impl/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/style" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/Coords.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/Effect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GSearchControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GdrawOptions.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/style/Color.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wwrapper" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/test/org/gwtwidgets/test/client/TestBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/file.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_arrowwaste2_sml.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wwrapper/WTextBox.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl/class-use/PNGImageImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_arrowmembers1_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/CalcKeyboardListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_sortleft.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_error_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/help-doc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGRectangle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGGradient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/class-use/Callback.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext/impl/ExtDOMImplIE6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/PopupCalcPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-propaganda-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/temp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GsearcherOptionsImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/impl/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/class-use/Color.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GwebResultImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/util/SimpleDateFormat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/overview-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/JSCalendar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/test/org/gwtwidgets/test/client/WidgetTestSuite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/Callback.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/package-frame.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.html" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_help_lrg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GwebResult.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/pagination/Column.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/ToggleButton.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/style/print.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GlocalSearchImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_help_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/nw_min_036.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/JsGraphicsPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/WTextBox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GSearchControl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGContainerBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wrap/JSCalendar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_success_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/class-use/TMouseListenerCollection.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/allclasses-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/style/maven-base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/KeepListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/cal/CalendarPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/class-use/CalendarPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl/class-use/ExtDOMImplIE6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGEllipse.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_arrowfolderopen2_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/external-classic.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/pagination/PaginationParameters.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/test/org/gwtwidgets/test/WidgetTestSuite.gwt.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/style/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/CalcDisplayListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination/RowRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/EffectOption.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/ImageButtonFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/TGrid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/test/org/gwtwidgets/test" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/Results.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GlocalSearch.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GwebResultImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/WindowUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/PNGImage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/style/Coords.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/cal/CalendarFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GvideoSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/impl/PNGImageImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/OptionList.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/WrappedWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_waste_lrg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/DataProvider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/sw_med_rond.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/WHyperlink.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/style" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/cal/CalendarDate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/se_maj_rond.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/nw_med_rond.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_alert.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/EditableLabel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/PNGImage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/CalendarDate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/WButton.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/style/BorderStyle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGCircle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/temp/TMouseListenerCollection.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/class-use/Column.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGEllipse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper/WBuilder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/cal/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/FormPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GlocalSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/resources/inherit.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/util/Cookie.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GdrawOptionsImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/class-use/ArrayUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/OptionList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/CalendarFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/remove.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GSearchWidget.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GSearchControlImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/impl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GwebSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wwrapper/WImage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/class-use/Cookie.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/public/style/gwl-progressBar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGContainerBase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGLinearGradient.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server/rpc/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/cal/CalendarMonth.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGBasicShape.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GsearcherOptionsImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/resources" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext/impl/ExtDOMImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GwebResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGEllipse.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/CalendarListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext/impl/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util/ArrayUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GwebSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/public" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/KeepListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGText.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_members_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGGradient.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/class-use/ExtDOM.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/RandomFlickr.gwt.xml" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/RandomFlickr.gwt.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/style/Coords.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/PNGImage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination/DefaultPaginationBehavior.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/project-info.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/TinyMCEEditor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination/Results.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/allclasses-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GResultImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GblogSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wwrapper/WPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wrap/TinyMCEEditor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGGradient.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGRectangle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/class-use/CalendarFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/class-use/CalendarMonth.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/class-use/TFocusPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/newwindow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GlocalSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GvideoSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GwebResultImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GwebSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGEllipse.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_arrowfolderclosed1_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/class-use/SortablePaginationBehavior.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-feather.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/folder-open.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/FileUploadField.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GSearchControlImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GSearchWidget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/package-list" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GwebResultImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/test/org/gwtwidgets/test/client/util/SimpleDateFormatTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-brewed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/PopupCalcPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/class-use/JSCalendar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/style/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/EditableLabel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/class-use/RowRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/downloads.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/cal/CalendarPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GSearchControlImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_sortdown.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/impl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/LightBox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GResultImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GwebSearchImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-petesucks.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server/rpc/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GblogSearchImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GsearcherOptions.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/issue-tracking.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/TinyMCEEditor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/Namespace.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/RowRenderer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-copper.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_arrowmembers2_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/temp/TFlexTable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/FileUploadField.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/cal/CalendarListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/test/org/gwtwidgets" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGText.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/style/Color.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-bolt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.ipr" afterPath="$PROJECT_DIR$/TheRandomHomepage.ipr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GblogSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GvideoSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GdrawOptions.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ext/ExtDOM.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GSearchControlImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/FileUploadField.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination/DataProvider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util/Location.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/impl/PNGImageImplIE6.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/FileUploadField.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/class-use/DefaultPaginationBehavior.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/EffectOption.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGLinearGradient.SVGLinearGradientWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGStop.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/temp/TFocusPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GdrawOptions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/cal/CalendarMonth.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl/ExtDOMImplIE6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GwebSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/LightBox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/cal" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/temp/TGrid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/class-use/TGrid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GlocalSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGGradient.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/KeepListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/update.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GblogSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/class-use/BorderStyle.BorderStyleConstant.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl/class-use/PNGImageImplIE6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/class-use/Location.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_waste_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/ImageButton.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/class-use/WindowUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/nw_med_hi.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGDefs.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GlocalSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/FormPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/maven-reports.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GdrawOptions.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GsearcherOptions.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGLinearGradient.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/util/ArrayUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GlocalSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/server/rpc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/SimpleCalcPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/test/org/gwtwidgets/test/client/util" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/nw_maj_hi.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/server" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/temp/TMouseListenerCollection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-built.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/jdepend-report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGPath.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/pagination/PaginationBehavior.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/public/style/gwl-editableLabel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server/rpc/GWTSpringController.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl/ExtDOMImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ext/impl/ExtDOMImplIE6.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/LightBox.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/ExtDOM.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/pagination" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_usergroups_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/class-use/CalendarDate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_arrowfolder2_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/class-use/SimpleDateFormat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/class-use/WButton.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/ImageButtonFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/ProgressBar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/style" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGContainerBase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGLinearGradient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/help_logo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/public/images/lightbox.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wwrapper/WButton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/class-use/WPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper/WImage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination/Column.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl/PNGImageImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/pagination/SortablePaginationBehavior.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/none.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/temp/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/class-use/CalcEngine.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GlocalSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wrap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/mail-lists.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/util/CalcEngine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/public/images" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GsearcherOptionsImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wwrapper/ElementNotFoundException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-frankenstein.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/style/maven-classic.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/fix.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/index-all.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/Column.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_folder_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/team-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GblogSearch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wrap/CallbackDelegate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/BorderStyle.BorderStyleConstant.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGStop.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGStop.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/CalcKeyboardListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/collapsed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/PaginationParameters.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GvideoSearch.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_success_lrg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GlocalSearch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_alertsml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GsearcherOptions.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl/PNGImageImplIE6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GSearchImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/ImageButton.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server/rpc/class-use/GWTSpringController.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GvideoSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/CalendarMonth.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/ElementNotFoundException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/ToggleButton.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/util/NumberFormat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GSearchControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/Effect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/JsGraphicsPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/cal/CalendarListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-bulldozer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/poweredby_036.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/server/rpc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GdrawOptionsImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_arrowusergroups2_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-build-successfull.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/server/rpc/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGCircle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext/Namespace.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/temp/TFocusPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GvideoSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/dependencies.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/javadoc-warnings-report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/OptionList.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GSearchWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGCircle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GvideoSearchImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/external.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/sw_maj_rond.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/expanded.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GvideoSearch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_arrowwaste1_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGContainerBase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/cal/CalendarDate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/ArrayUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/class-use/WTextBox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/class-use/PaginationParameters.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGPath.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/server/rpc/GWTSpringController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/package.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/NumberFormat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGDefs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GdrawOptionsImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/temp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/ToggleButton.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/serialized-form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/JSCalendar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/public/images/desc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/class-use/CalendarListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGPanelBase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/class-use/PaginationBehavior.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/CalendarPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/cvs-usage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/deprecated-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/WPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GblogSearch.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGWidget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wwrapper/WBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/cal/CalendarEvent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/class-use/Coords.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/DefaultPaginationBehavior.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/PNGImage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGBasicShape.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GSearchControlImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server/rpc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server/rpc/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-purple.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GdrawOptions.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-teal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GwebSearch.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/nw_med.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GvideoSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/server" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/WidgetLibrary.gwt.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GsearcherOptionsImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util/CookieUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wrap/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/style/maven-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wwrapper/WrappedWidget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/impl/PNGImageImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ext/Namespace.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/FormPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wrap/Effect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/pagination/RowRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/util/WindowUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-pinky.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server/rpc/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wrap/EffectOption.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wrap/JsGraphicsPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/impl/PNGImageImplIE6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/class-use/TinyMCEEditor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/server/rpc/GWTSpringController.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/PopupCalcPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_doc_lrg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util/CalcEngine.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/pagination/Results.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/folder-closed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/TFocusPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/add.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GSearch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/class-use/CookieUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/util/Location.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/CalcDisplayListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GSearchWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/product_logo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_arrowfolder1_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/KeepListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination/PaginationParameters.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/FormPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/strich.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/pdf.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGCircle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/ImageButton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ext" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/constant-values.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GsearcherOptionsImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/SimpleCalcPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GSearchControl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/class-use/DataProvider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GblogSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/public/style/gwl-calcPanel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/pagination/DefaultPaginationBehavior.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/test" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GResult.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_sortup.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/ProgressBar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/nw_maj.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GblogSearch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_members_lrg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGPanelBase.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/BorderStyle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util/SearchUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/class-use/WBuilder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GResultImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/allclasses-noframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/ImageButtonFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGText.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/Color.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination/SortablePaginationBehavior.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_arrowusergroups1_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/EditableLabel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/util/CookieUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GblogSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/CalcEngine.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util/NumberFormat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GwebResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/WBuilder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination/PaginationBehavior.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/class-use/ElementNotFoundException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GblogSearchImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/class-use/SearchUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-mavenfactured.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGLinearGradient.SVGLinearGradientWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/test/org/gwtwidgets/test/client" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/EditableLabel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/SimpleCalcPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/KeepListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper/WrappedWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/class-use/EffectOption.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/class-use/Effect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGBasicShape.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper/WButton.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/overview-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wrap/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GwebSearchImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ext/impl/ExtDOMImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/server/rpc/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/class-use/WHyperlink.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGPanelBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GSearchControl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/SortablePaginationBehavior.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/ImageButton.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/util/SearchUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util/WindowUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ext/impl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GSearchImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/overview-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_warning_lrg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch/GdrawOptionsImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/newwindow-classic.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/temp/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/class-use/Namespace.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_error_lrg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/class-use/NumberFormat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/SearchUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use/GResultImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_info_lrg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg/SVGRectangle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wwrapper/WHyperlink.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_sortright.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_usergroups_lrg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/ToggleButton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_doc_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/nw_min.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GwebSearch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server/rpc/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/TMouseListenerCollection.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/class-use/CalendarEvent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/OptionList.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/nw_min_hi.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/javadoc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/COPYING" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GdrawOptionsImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/cal/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util/Cookie.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/sw_min.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-redgreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/CalendarEvent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_confirmsml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/PaginationBehavior.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/temp/TFlexTable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-button-blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl/class-use/ExtDOMImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/temp/TGrid.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/PopupCalcPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_warning_sml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GSearchControl$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use/CalcDisplayListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/class-use/BorderStyle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/class-use/WrappedWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/nw_maj_rond.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GlocalSearchImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGBasicShape.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/ProgressBar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/CookieUtils.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/class-use" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/cal/CalendarFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/class-use/JsGraphicsPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/icon_infosml.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/overview-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper/ElementNotFoundException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper/WHyperlink.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/SVGPath.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/cal/CalendarEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use/SVGWidget.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/style/BorderStyle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGStop.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/SimpleCalcPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/svg/SVGRectangle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/SimpleDateFormat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/gsearch/GSearch.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GwebResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/GResultImpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos/maven-propaganda.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/ImageLightBox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.html" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -906,66 +164,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RSSItem.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSSItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="66" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.041162226">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomFlickrWidget.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RandomFlickrWidget.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="47" selection-start="2621" selection-end="2621" vertical-scroll-proportion="0.21208385">
+            <state line="61" column="60" selection-start="2511" selection-end="2511" vertical-scroll-proportion="0.67903227">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chrome.manifest" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firefox/extension/chrome.manifest">
+      <file leaf-file-name="Media.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/Media.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.14673243">
+            <state line="44" column="13" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.8951613">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firefox/extension/install.js">
+      <file leaf-file-name="Image.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/Image.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="0.1440678">
+            <state line="35" column="13" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-0.04032258">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install.rdf" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/firefox/extension/install.rdf">
+      <file leaf-file-name="HTML.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/HTML.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="40" selection-start="488" selection-end="488" vertical-scroll-proportion="0.31442663">
+            <state line="39" column="13" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.32258064">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LightBox.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/LightBox.java">
+      <file leaf-file-name="Label.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/Label.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="24" selection-start="1173" selection-end="1176" vertical-scroll-proportion="0.27250308">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="32" column="31" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.43548387">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomWidget.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RandomWidget.java">
+      <file leaf-file-name="Widget.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/Widget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="22" selection-start="194" selection-end="194" vertical-scroll-proportion="0.020961776">
+            <state line="26" column="30" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.27419356">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIObject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="22" selection-start="959" selection-end="959" vertical-scroll-proportion="0.27419356">
               <folding />
             </state>
           </provider>
@@ -977,26 +233,28 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="57" selection-start="564" selection-end="564" vertical-scroll-proportion="0.27590513">
+            <state line="15" column="51" selection-start="692" selection-end="700" vertical-scroll-proportion="0.42857143">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomFlickr.gwt.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/RandomFlickr.gwt.xml">
+      <file leaf-file-name="RandomFlickr.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="49" selection-start="189" selection-end="189" vertical-scroll-proportion="0.12577066">
+            <state line="14" column="13" selection-start="387" selection-end="387" vertical-scroll-proportion="0.27419356">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomFlickr.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.css">
+      <file leaf-file-name="ImageLightBox.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/ImageLightBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="28" column="0" selection-start="874" selection-end="874" vertical-scroll-proportion="0.7677419">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1101,48 +359,44 @@
           <option name="myItemId" value="Libraries" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
         </PATH_ELEMENT>
+      </PATH>
+      <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="GWT-Widgets" />
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\gwt-widgets-0.1.3.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -1160,15 +414,15 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemId" value="GWT" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrclient" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar!\com\google\gwt" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -1186,7 +440,283 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemId" value="GWT" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar!\com\google\gwt" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar!\com\google\gwt\user" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar!\com\google\gwt" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar!\com\google\gwt\user" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar!\com\google\gwt\user\client" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar!\com\google\gwt" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar!\com\google\gwt\user" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar!\com\google\gwt\user\client" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-servlet.jar!\com\google\gwt\user\client\ui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org\apache" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org\apache" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org\apache\commons" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org\apache" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org\apache\commons" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org\apache\commons\digester" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org\apache" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org\apache\commons" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org\apache\commons\digester" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar!\org\apache\commons\digester\rss" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-windows-1.2.22\gwt-dev-windows.jar" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -1236,7 +766,15 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -1254,37 +792,19 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -1302,11 +822,181 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\firefox" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\firefox\extension" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\css" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrclient" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\common" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\common" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\common\rss" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -1323,7 +1013,7 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <showStructure Scope="false" ProjectPane="false" PackagesPane="false" Favorites="false" />
+      <showStructure Favorites="false" ProjectPane="false" Scope="false" PackagesPane="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -1370,11 +1060,11 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="therandomhomepage.randomflickrpublic.lightbox" />
       <recent name="therandomhomepage.common.rss" />
       <recent name="therandomhomepage.randomflickrclient" />
       <recent name="therandomhomepage.common" />
       <recent name="web" />
-      <recent name="therandomhomepage.old" />
     </key>
   </component>
   <component name="RestoreUpdateTree" />
@@ -1568,24 +1258,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="996" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" order="18" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35020408" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44734693" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32342857" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36571428" order="14" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31428573" order="14" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="15" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19542857" order="16" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41828573" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.248" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.664" order="4" />
@@ -1702,37 +1392,42 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/server/RandomFlickr_RSS_200_SingleNode.xml">
+    <entry file="file://$PROJECT_DIR$/src/java/out/therandomhomepage.RandomFlickr/images/thumb-1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/css/lightbox.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="28" selection-start="2599" selection-end="2599" vertical-scroll-proportion="1.6164384">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2698613">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/test/RSS2XMLDocumentParser_UT.java">
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/RandomFlickr.gwt.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.1701603">
+        <state line="34" column="4" selection-start="654" selection-end="654" vertical-scroll-proportion="0.72887766">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/Media.java">
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="36" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.4527845">
+        <state line="12" column="13" selection-start="296" selection-end="296" vertical-scroll-proportion="0.21039604">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/PopupPanel.java">
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-dev-windows.jar!/org/apache/commons/digester/rss/Image.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="13" selection-start="1207" selection-end="1207" vertical-scroll-proportion="0.020581113">
+        <state line="5" column="13" selection-start="169" selection-end="169" vertical-scroll-proportion="0.08056872">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RandomWidget.java">
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/Label.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="194" selection-end="194" vertical-scroll-proportion="0.020961776">
+        <state line="32" column="31" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.43548387">
           <folding />
         </state>
       </provider>
@@ -1742,72 +1437,65 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="57" selection-start="564" selection-end="564" vertical-scroll-proportion="0.27590513">
+        <state line="15" column="51" selection-start="692" selection-end="700" vertical-scroll-proportion="0.42857143">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/RandomFlickr.gwt.xml">
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="49" selection-start="189" selection-end="189" vertical-scroll-proportion="0.12577066">
+        <state line="25" column="22" selection-start="959" selection-end="959" vertical-scroll-proportion="0.27419356">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.css">
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/Widget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="26" column="30" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.27419356">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/gwt-widgets-0.1.3.jar!/org/gwtwidgets/client/ui/LightBox.class">
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/HTML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="162" selection-end="162" vertical-scroll-proportion="0.083847106">
+        <state line="39" column="13" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.32258064">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/ui/LightBox.java">
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/Image.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="24" selection-start="1173" selection-end="1176" vertical-scroll-proportion="0.27250308">
+        <state line="35" column="13" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-0.04032258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/Media.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="13" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.8951613">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/ImageLightBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="874" selection-end="874" vertical-scroll-proportion="0.7677419">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSSItem.java">
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="66" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.041162226">
+        <state line="14" column="13" selection-start="387" selection-end="387" vertical-scroll-proportion="0.27419356">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="47" selection-start="2621" selection-end="2621" vertical-scroll-proportion="0.21208385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefox/extension/chrome.manifest">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.14673243">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefox/extension/install.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="0.1440678">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firefox/extension/install.rdf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="40" selection-start="488" selection-end="488" vertical-scroll-proportion="0.31442663">
+        <state line="61" column="60" selection-start="2511" selection-end="2511" vertical-scroll-proportion="0.67903227">
           <folding />
         </state>
       </provider>
