@@ -13,13 +13,11 @@ scrollbar-darkshadow-Color:#78AAFF;
 }
 
 body {
-	/*background-color: white;*/
     background: repeat url(./images/background.gif);
     color: black;
 	font-family: Arial, sans-serif;
 	font-size: small;
 	margin: 0px;
-	/*margin-top: 3px;*/
 }
 
 .footerMessage {

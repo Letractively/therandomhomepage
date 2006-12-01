@@ -7,10 +7,12 @@ package therandomhomepage.common;
  * Time: 2:58:33 PM
  */
 public class StringUtil {
-  public static boolean isNull(String str) {
-    if ((str == null) || (str.trim().length() == 0) || str.equalsIgnoreCase("null")) {
-      return true;
+    public static boolean isNull(String str) {
+        if ((str == null) || (str.trim().length() == 0) || str.equalsIgnoreCase("null")) {
+            return true;
+        }
+        return false;
     }
-    return false;
-  }
+
+  
 }
