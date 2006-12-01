@@ -13,6 +13,7 @@ import com.google.gwt.xml.client.Node;
  */
 public class Media {
     private Image content;
+    private HTML snippet;
     private HTML text;
     private Image thumbnail;
 
@@ -57,6 +58,19 @@ public class Media {
 
     public Image getThumbnail() {
         return thumbnail;
+    }
+
+    public HTML getSnippet() {
+//        String textHTML = text.getHTML();
+//        if (textHTML != null) {
+//            int startIdx = textHTML.indexOf("<img");
+//            int endIdx = textHTML.indexOf(">", startIdx);
+//            if (startIdx > -1 && endIdx > -1) {
+//                return new HTML(textHTML.substring(startIdx, endIdx));
+//            }
+//        }
+//        return new HTML("");
+        return text;
     }
 
     public String toString() {

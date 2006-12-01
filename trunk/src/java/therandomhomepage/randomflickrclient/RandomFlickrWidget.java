@@ -43,12 +43,13 @@ public class RandomFlickrWidget extends RandomWidget {
 
     private void displayRandomItem(RSSItem randomItem) {
         if (randomItem != null) {
+            System.out.println("randomItem = " + randomItem);
             table.setWidget(0, 0, new Label(randomItem.getTitle()));
-            Image image = randomItem.getMedia().getContent();
-            table.setWidget(1, 0, image);
+            HTML snippet = randomItem.getMedia().getText();
+            table.setWidget(1, 0, snippet);
             table.getFlexCellFormatter().setColSpan(1, 0, 2);
             table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
-            EffectsHelper.applyEffects(image,EffectsHelper.RANDOM);
+            EffectsHelper.applyEffects(snippet,EffectsHelper.RANDOM);
         }
     }
 
