@@ -8,6 +8,7 @@
 
     <servlet path="/js/prototype.js" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
     <servlet path="/js/effects.js" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+    <servlet path="/js/lightbox.js" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
 
     <servlet path="/php/RSS2JSON.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
     <servlet path="/php/ajaxProxy.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
