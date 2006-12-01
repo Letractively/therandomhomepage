@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<!--
+
+ Copyright 2006 Robert Hanson <iamroberthanson AT gmail.com>
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+    http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+-->
+</head>
+<body bgcolor="white">
+
+Provides a Widget that wraps the Google AJAX Search API.
+
+<p>This version does not implement the complete API, and is restricted to the following (for time rather than technical issues)</p>
+
+<ol>
+<li>Creating a GSearchControl
+<ul>
+<li>Set search size
+<li>Set Target Link
+<li>Indicate an alternative input component
+<li>Timeout when typing for search to start (in non default input box)
+<li>Indicate an alternative output div
+<li>Set drawing mode to be Linnear or Tabbed
+</ul>
+<li>Creating
+<ul>
+<li>GwebSearch (can restrict sites searched)
+<li>GlocalSearch (can set location)
+<li>GvideoSearch (no options)
+<li>GblogSearch (can restrict sites searched)
+</ul>
+<li>Searching at search control level (not individual search components)
+</ol>
+
+<p>To use, do the following:</p>
+
+<p>1.  Add the following to the HTML file<,p>
+
+<pre>
+&lt;link href="http://www.google.com/uds/css/gsearch.css" rel="stylesheet" type="text/css"/>
+&lt;script src="http://www.google.com/uds/api?file=uds.js&amp;v=0.1&amp;key=XXXXXXXX" type="text/javascript">
+&lt;/script>
+</pre>
+
+<p>Where key=XXXXXXXX needs to be replaced with a valid Google Ajax Search API Key available 
+from the Google AJAX Search API site.</p>
+
+<p>2.  In your *application*.gwt.xml file add:</p>
+
+<pre>
+   &lt;!-- Inherit the Widgit library -->
+   &lt;inherits name='org.gwtwidgets.WidgetLibrary'/>
+</pre>
+
+<p>3.  Widget can be used similar to the following:</p>
+
+<pre>
+// Create an instance of the SearchWidget
+GSearchWidget searchWidget = new GSearchWidget();
+searchWidget.getGSearch();  
+
+// Set the result set size to one of 2 enumerations
+searchWidget.setResultSetSize(GSearch.SMALL_RESULTSET);
+
+// Set the target for links in the search to one of 4 enumerations
+searchWidget.setLinkTarget(GSearch.LINK_TARGET_SELF);
+
+// If own text input field used, can set the timeout on the 
+// control for firing off the search to one of 3 enumerations
+searchWidget.setTimeoutInterval(GSearchControl.TIMEOUT_SHORT);
+
+
+// Create a GsearcherOptions 
+GsearcherOptions searchOptions = new GsearcherOptions();
+
+// Set the results to be closed on first call
+searchOptions.setExpandMode(GSearchControl.EXPAND_MODE_CLOSED);
+    
+
+// Create a GwebSearcher
+GwebSearch theWebSearcher = searchWidget.getGwebSearch();
+
+// OPTIONS:	
+// Optionally restrict its results to those from amamzon.co.uk
+theWebSearcher.setSiteRestriction("www.amazon.co.uk");
+
+// Add the searcher to the Widget
+searchWidget.addSearcher(theWebSearcher,searchOptions);
+
+
+// Create a GlocalSearch
+GlocalSearch theLocalSearcher = searchWidget.getGlocalSearch();
+
+// OPTIONS:
+// Put its location to Stockholm
+// Parameters of GPoint or GLatLng not implemented yet as that
+// creates a dependancy on Google Map implemenations...
+// ...of which there is a really good one by aglaforge
+theLocalSearcher.setCenterPoint("Stockholm, Sweden");
+
+// Add the searcher to the Widget
+searchWidget.addSearcher(theLocalSearcher,searchOptions);
+
+
+// Create a GvideoSearch
+GvideoSearch theVideoSearcher = GvideoSearch.create();
+
+// OPTIONS:
+// No additional methods
+// Add the searcher to the Widget
+searchWidget.addSearcher(theVideoSearcher,searchOptions);
+
+
+// Create a GblogSearch
+GblogSearch theBlogSearcher = GblogSearch.create();
+
+// OPTIONS:
+// Could restrict the searched sites if we wanted
+// theWebSearcher.setSiteRestriction("www.blogspot.com");
+// Add the searcher to the Widget
+searchWidget.addSearcher(theBlogSearcher,searchOptions);
+	    
+
+// Create a GdrawOptions
+GdrawOptions theOptions = new GdrawOptions();
+
+// Set the search to return in a Tabbed view as opposed to Linnear
+theOptions.setDrawMode(GSearchControl.DRAW_MODE_TABBED);
+
+
+// If using a different input area, can define as follows:
+// TextBox theSearchEntry = new TextBox();
+// theOptions.setInput(theSearchEntry.getElement());
+
+
+// Draw the search control
+searchWidget.draw(theOptions);
+
+	    
+// Automatically execute a search across the searchers
+searchWidget.execute("'Isbar Stockholm'");
+</pre>	    
+
+
+</body>
+</html>
