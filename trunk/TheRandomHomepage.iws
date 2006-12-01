@@ -18,12 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/test/RSS2XMLDocumentParser_UT.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/test/RSS2XMLDocumentParser_UT.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSS2XMLDocumentParser.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSS2XMLDocumentParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSSItem.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSSItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/common/rss/Media.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/common/rss/Media.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/server/RandomFlickr_RSS_200_SingleNode.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\test\RandomFlickrFeedParsing_UT.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
@@ -168,16 +163,7 @@
       <file leaf-file-name="RSS2XMLDocumentParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSS2XMLDocumentParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="90" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.9977925">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TheRandomHomepageTest.gwt.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/TheRandomHomepageTest.gwt.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="40" column="90" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.5573366">
               <folding />
             </state>
           </provider>
@@ -186,7 +172,7 @@
       <file leaf-file-name="Media.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/Media.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="511" selection-end="511" vertical-scroll-proportion="0.6754967">
+            <state line="21" column="0" selection-start="511" selection-end="511" vertical-scroll-proportion="0.37046006">
               <folding />
             </state>
           </provider>
@@ -195,7 +181,7 @@
       <file leaf-file-name="RandomFlickr_RSS_200.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/server/RandomFlickr_RSS_200.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="0" selection-start="3109" selection-end="6815" vertical-scroll-proportion="1.5410959">
+            <state line="114" column="0" selection-start="3109" selection-end="6815" vertical-scroll-proportion="0.8323058">
               <folding />
             </state>
           </provider>
@@ -204,7 +190,7 @@
       <file leaf-file-name="RandomFlickr_RSS_200_SingleNode.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/server/RandomFlickr_RSS_200_SingleNode.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="28" selection-start="2599" selection-end="2599" vertical-scroll-proportion="1.6164384">
+            <state line="49" column="28" selection-start="2599" selection-end="2599" vertical-scroll-proportion="0.87299633">
               <folding />
             </state>
           </provider>
@@ -213,7 +199,7 @@
       <file leaf-file-name="RSS2XMLDocumentParser_UT.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/test/RSS2XMLDocumentParser_UT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.38812786">
+            <state line="26" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.39827374">
               <folding />
             </state>
           </provider>
@@ -222,7 +208,7 @@
       <file leaf-file-name="RSSItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSSItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="66" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.58498895">
+            <state line="54" column="66" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.32082325">
               <folding />
             </state>
           </provider>
@@ -231,7 +217,7 @@
       <file leaf-file-name="EffectsHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="66" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.30022076">
+            <state line="46" column="66" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.16769421">
               <folding />
             </state>
           </provider>
@@ -240,7 +226,7 @@
       <file leaf-file-name="RandomFlickrWidget.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="57" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.3598234">
+            <state line="44" column="57" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.20098643">
               <folding />
             </state>
           </provider>
@@ -249,7 +235,7 @@
       <file leaf-file-name="EffectsCallback.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsCallback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="296" selection-end="296" vertical-scroll-proportion="0.37527594">
+            <state line="12" column="13" selection-start="296" selection-end="296" vertical-scroll-proportion="0.20581114">
               <folding />
             </state>
           </provider>
@@ -851,7 +837,7 @@
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35020408" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35020408" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32342857" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36571428" order="14" />
@@ -861,7 +847,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19542857" order="16" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41828573" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41828573" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.664" order="4" />
@@ -978,13 +964,6 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/xml/client/Element.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="18" selection-start="2784" selection-end="2784" vertical-scroll-proportion="2.2344582">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/xml/client/NodeList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="0" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.7592233">
@@ -1022,63 +1001,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="66" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.30022076">
+        <state line="46" column="66" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.16769421">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="296" selection-end="296" vertical-scroll-proportion="0.37527594">
+        <state line="12" column="13" selection-start="296" selection-end="296" vertical-scroll-proportion="0.20581114">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/server/RandomFlickr_RSS_200.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="0" selection-start="3109" selection-end="6815" vertical-scroll-proportion="1.5410959">
+        <state line="114" column="0" selection-start="3109" selection-end="6815" vertical-scroll-proportion="0.8323058">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/Media.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="511" selection-end="511" vertical-scroll-proportion="0.6754967">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/server/RandomFlickr_RSS_200_SingleNode.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="28" selection-start="2599" selection-end="2599" vertical-scroll-proportion="1.6164384">
+        <state line="21" column="0" selection-start="511" selection-end="511" vertical-scroll-proportion="0.37046006">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSS2XMLDocumentParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="90" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.9977925">
+        <state line="40" column="90" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.5573366">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="57" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.3598234">
+        <state line="44" column="57" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.20098643">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSSItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="66" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.58498895">
+        <state line="54" column="66" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.32082325">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/server/RandomFlickr_RSS_200_SingleNode.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="28" selection-start="2599" selection-end="2599" vertical-scroll-proportion="0.87299633">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/test/RSS2XMLDocumentParser_UT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.38812786">
+        <state line="26" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.39827374">
           <folding />
         </state>
       </provider>
