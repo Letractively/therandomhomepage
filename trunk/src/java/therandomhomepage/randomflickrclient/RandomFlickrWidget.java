@@ -5,9 +5,7 @@ import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.Image;
 import therandomhomepage.common.*;
-import therandomhomepage.common.rss.JSON2RSSParser;
 import therandomhomepage.common.rss.RSSItem;
 import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 
@@ -43,9 +41,9 @@ public class RandomFlickrWidget extends RandomWidget {
 
     private void displayRandomItem(RSSItem randomItem) {
         if (randomItem != null) {
-            System.out.println("randomItem = " + randomItem);
             table.setWidget(0, 0, new Label(randomItem.getTitle()));
-            HTML snippet = randomItem.getMedia().getText();
+            HTML snippet = new HTML(randomItem.getDesc());
+            System.out.println("snippet = " + snippet);
             table.setWidget(1, 0, snippet);
             table.getFlexCellFormatter().setColSpan(1, 0, 2);
             table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
