@@ -2,14 +2,15 @@ package therandomhomepage.randomflickrclient;
 
 import com.google.gwt.http.client.URL;
 import com.google.gwt.user.client.ResponseTextHandler;
-import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.HasVerticalAlignment;
-import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.ui.*;
 import therandomhomepage.common.*;
 import therandomhomepage.common.rss.RSSItem;
 import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 
 import java.util.List;
+
+import org.gwtwidgets.client.ui.LightBox;
 
 /**
  * Created by IntelliJ IDEA.
@@ -22,6 +23,8 @@ public class RandomFlickrWidget extends RandomWidget {
 
     public RandomFlickrWidget(String header) {
         super(header);
+        table.getCellFormatter().setHorizontalAlignment(0,0, HasHorizontalAlignment.ALIGN_CENTER);
+        table.getCellFormatter().setHorizontalAlignment(1,0, HasHorizontalAlignment.ALIGN_CENTER);
     }
 
     protected void retrieveRandomItem() {
@@ -43,7 +46,7 @@ public class RandomFlickrWidget extends RandomWidget {
         if (randomItem != null) {
             table.setWidget(0, 0, new Label(randomItem.getTitle()));
             HTML snippet = new HTML(randomItem.getDesc());
-            System.out.println("snippet = " + snippet);
+            snippet.addClickListener(new LightBoxListener(randomItem.getMedia().getContent()));
             table.setWidget(1, 0, snippet);
             table.getFlexCellFormatter().setColSpan(1, 0, 2);
             table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
@@ -72,6 +75,30 @@ public class RandomFlickrWidget extends RandomWidget {
                 RSSItem randomItem = (RSSItem) Randomizer.getRandomItem(rssItems);
                 displayRandomItem(randomItem);
             }
+        }
+    }
+
+    private class LightBoxListener implements ClickListener {
+        private Image image;
+        private int reduceByPerc = 50;
+
+        public LightBoxListener(Image image) {
+            this.image = image;
+            String height = DOM.getStyleAttribute(this.image.getElement(), "height");
+            String width = DOM.getStyleAttribute(this.image.getElement(), "width");
+            System.out.println("height & width = " + height +", "+ width);
+        }
+
+        private String reduceSize(int offsetHeight) {
+            return Integer.toString((offsetHeight * 50) / 100);
+        }
+
+
+        public void onClick(Widget sender) {
+            PopupPanel panel = new PopupPanel(true);
+            panel.setWidget(image);
+            LightBox lightBox = new LightBox(panel);
+            lightBox.show();
         }
     }
 }
