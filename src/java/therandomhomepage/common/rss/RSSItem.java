@@ -79,10 +79,6 @@ public class RSSItem implements Randomizable {
         media.setMediaThumbnailNode(node);
     }
 
-    public void setMediaTextNode(Node node) {
-        media.setMediaTextNode(node);
-    }
-
     public void setMedia(Media media) {
         this.media = media;
     }
