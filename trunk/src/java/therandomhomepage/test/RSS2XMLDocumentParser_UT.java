@@ -2,7 +2,9 @@ package therandomhomepage.test;
 
 import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.HTML;
 import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 import therandomhomepage.common.rss.RSSItem;
 
@@ -54,8 +56,30 @@ public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT {
             String expectedContentImage = "<IMG class=gwt-Image style=\"WIDTH: 240px; HEIGHT: 176px\" height=176 src=\"http://static.flickr.com/123/310473631_0f69135463_m.jpg\" width=240 __eventBits=\"98429\" onchange=\"null\">";
 
             assertEquals(expectedContentImage,rssItem.getMedia().getContent().toString());
+
+
+
         }
         finishTest();
     }
+
+    public void testGetHTMLElementByTagName() throws Exception{
+        String desc = "<p><a href=\"http://www.flickr.com/people/gastaum/\">ftrc</a> posted a photo:</p>\n" +
+                    "\n" +
+                    "<p><a href=\"http://www.flickr.com/photos/gastaum/310473631/\" title=\"hotel glória\"><img src=\"http://static.flickr.com/123/310473631_0f69135463_m.jpg\" width=\"240\" height=\"176\" alt=\"hotel glória\" style=\"border: 1px solid #ddd;\" /></a></p>\n" +
+                    "\n" +
+                    "<p>hotel glória<br />\n" +
+                    "<br />\n" +
+                    "djs<br />\n" +
+                    "<br />\n" +
+                    "joakim + marcos morcerf + luca &amp; liana + no porn<br />\n" +
+                    "<br />\n" +
+                    "<a href=\"http://www.clubegloria.com.br\">www.clubegloria.com.br</a></p>";
+
+        HTML descHTML = new HTML(desc);
+        Element imgElement = RSS2XMLDocumentParser.getHTMLElementByTagName(descHTML.getElement(),"img");
+        System.out.println("imgElement = " + imgElement);
+    }
+
 }
 

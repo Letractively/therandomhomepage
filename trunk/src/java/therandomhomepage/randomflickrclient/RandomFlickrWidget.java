@@ -3,6 +3,7 @@ package therandomhomepage.randomflickrclient;
 import com.google.gwt.http.client.URL;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ResponseTextHandler;
+import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.ui.*;
 import org.gwtwidgets.client.ui.LightBox;
 import therandomhomepage.common.HttpRequestUtil;
@@ -60,6 +61,13 @@ public class RandomFlickrWidget extends RandomWidget {
     private HTML extractImage(HTML snippet) {
         String rawHTML = DOM.getInnerHTML(snippet.getElement());
         System.out.println("rawHTML = " + rawHTML);
+        String imageTag = grep(rawHTML,"<img",">");
+        if (imageTag != null) {
+            String url = grep(imageTag,"src=","\"");
+            System.out.println("url = " + url);
+            String html = "<A HREF="+url+" rel=\"lightbox\">"+imageTag+"</A>";
+            return new HTML(html);
+        }
         return null;
     }
 
@@ -126,8 +134,8 @@ public class RandomFlickrWidget extends RandomWidget {
 
     public static String grep(String actualString, String startsWith, String endsWith) {
         if (actualString != null) {
-            int startIdx = actualString.indexOf(startsWith);
-            int endIdx = actualString.indexOf(endsWith, startIdx);
+            int startIdx = actualString.indexOf(startsWith.toUpperCase()) < 0  ? actualString.indexOf(startsWith.toLowerCase()) : actualString.indexOf(startsWith.toUpperCase()) ;
+            int endIdx = actualString.indexOf(endsWith.toUpperCase(),startIdx) < 0  ? actualString.indexOf(endsWith.toLowerCase(),startIdx) : actualString.indexOf(endsWith.toUpperCase(),startIdx);
             if (startIdx > -1 && endIdx > -1) {
                 return actualString.substring(startIdx, endIdx + 1);
             }
