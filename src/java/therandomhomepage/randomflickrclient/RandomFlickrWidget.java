@@ -1,16 +1,18 @@
 package therandomhomepage.randomflickrclient;
 
 import com.google.gwt.http.client.URL;
-import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.ui.*;
-import therandomhomepage.common.*;
-import therandomhomepage.common.rss.RSSItem;
+import org.gwtwidgets.client.ui.LightBox;
+import therandomhomepage.common.HttpRequestUtil;
+import therandomhomepage.common.RSSCache;
+import therandomhomepage.common.RandomWidget;
+import therandomhomepage.common.Randomizer;
 import therandomhomepage.common.rss.RSS2XMLDocumentParser;
+import therandomhomepage.common.rss.RSSItem;
 
 import java.util.List;
-
-import org.gwtwidgets.client.ui.LightBox;
 
 /**
  * Created by IntelliJ IDEA.
@@ -23,13 +25,13 @@ public class RandomFlickrWidget extends RandomWidget {
 
     public RandomFlickrWidget(String header) {
         super(header);
-        table.getCellFormatter().setHorizontalAlignment(0,0, HasHorizontalAlignment.ALIGN_CENTER);
-        table.getCellFormatter().setHorizontalAlignment(1,0, HasHorizontalAlignment.ALIGN_CENTER);
+        table.getCellFormatter().setHorizontalAlignment(0, 0, HasHorizontalAlignment.ALIGN_CENTER);
+        table.getCellFormatter().setHorizontalAlignment(1, 0, HasHorizontalAlignment.ALIGN_CENTER);
     }
 
     protected void retrieveRandomItem() {
 
-        String url = "/php/xmlProxy.php?url="+URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags=colorful&format=rss_200");
+        String url = "/php/xmlProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags=colorful&format=rss_200");
 
         if (cache.getFromCache(url) == null) {
             if (!HttpRequestUtil.sendAsyncGetRequest(url, new MyResponseHandler(url))) {
@@ -42,30 +44,37 @@ public class RandomFlickrWidget extends RandomWidget {
         }
     }
 
+    private void displayRandomItem(RSSItem randomItem) {
+        if (randomItem != null) {
+            table.setWidget(0, 0, new Label(randomItem.getTitle()));
+            HTML snippet = new HTML(randomItem.getDesc());
+            HTML lightboxHTML = extractImage(snippet);
+            snippet.addClickListener(new LightBoxListener(randomItem.getMedia().getContent()));
+            table.setWidget(1, 0, snippet);
+            table.getFlexCellFormatter().setColSpan(1, 0, 2);
+            table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
+            EffectsHelper.applyEffects(snippet, EffectsHelper.RANDOM);
+        }
+    }
+
+    private HTML extractImage(HTML snippet) {
+        String rawHTML = DOM.getInnerHTML(snippet.getElement());
+        System.out.println("rawHTML = " + rawHTML);
+        return null;
+    }
+
 //    private void displayRandomItem(RSSItem randomItem) {
 //        if (randomItem != null) {
 //            table.setWidget(0, 0, new Label(randomItem.getTitle()));
-//            HTML snippet = new HTML(randomItem.getDesc());
-//            snippet.addClickListener(new LightBoxListener(randomItem.getMedia().getContent()));
+//            DOM.getInnerHTML(randomItem.getMedia().getThumbnail().getElement());
+//            ImageLightBox snippet = new ImageLightBox(randomItem.getMedia().getThumbnail());
+////            snippet.addClickListener(new LightBoxListener(randomItem.getMedia().getContent()));
 //            table.setWidget(1, 0, snippet);
 //            table.getFlexCellFormatter().setColSpan(1, 0, 2);
 //            table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
 //            EffectsHelper.applyEffects(snippet,EffectsHelper.RANDOM);
 //        }
 //    }
-
-    private void displayRandomItem(RSSItem randomItem) {
-        if (randomItem != null) {
-            table.setWidget(0, 0, new Label(randomItem.getTitle()));
-            DOM.getInnerHTML(randomItem.getMedia().getThumbnail().getElement());
-            ImageLightBox snippet = new ImageLightBox(randomItem.getMedia().getThumbnail());
-//            snippet.addClickListener(new LightBoxListener(randomItem.getMedia().getContent()));
-            table.setWidget(1, 0, snippet);
-            table.getFlexCellFormatter().setColSpan(1, 0, 2);
-            table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
-            EffectsHelper.applyEffects(snippet,EffectsHelper.RANDOM);
-        }
-    }
 
     private void showError() {
         Label errorLabel = new Label(ERROR_MESSAGE);
@@ -99,7 +108,7 @@ public class RandomFlickrWidget extends RandomWidget {
             this.image = image;
             String height = DOM.getStyleAttribute(this.image.getElement(), "height");
             String width = DOM.getStyleAttribute(this.image.getElement(), "width");
-            System.out.println("height & width = " + height +", "+ width);
+            System.out.println("height & width = " + height + ", " + width);
         }
 
         private String reduceSize(int offsetHeight) {
@@ -113,5 +122,16 @@ public class RandomFlickrWidget extends RandomWidget {
             LightBox lightBox = new LightBox(panel);
             lightBox.show();
         }
+    }
+
+    public static String grep(String actualString, String startsWith, String endsWith) {
+        if (actualString != null) {
+            int startIdx = actualString.indexOf(startsWith);
+            int endIdx = actualString.indexOf(endsWith, startIdx);
+            if (startIdx > -1 && endIdx > -1) {
+                return actualString.substring(startIdx, endIdx + 1);
+            }
+        }
+        return null;
     }
 }
