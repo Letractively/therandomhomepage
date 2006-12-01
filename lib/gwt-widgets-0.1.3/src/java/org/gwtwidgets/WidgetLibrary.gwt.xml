@@ -1,0 +1,15 @@
+<module>
+
+	<inherits name='com.google.gwt.user.User'/>
+
+	<replace-with class="org.gwtwidgets.client.ui.impl.PNGImageImplIE6">
+		<when-type-is class="org.gwtwidgets.client.ui.impl.PNGImageImpl"/>
+		<when-property-is name="user.agent" value="ie6"/>
+	</replace-with>
+
+	<replace-with class="org.gwtwidgets.client.ext.impl.ExtDOMImplIE6">
+		<when-type-is class="org.gwtwidgets.client.ext.impl.ExtDOMImpl"/>
+		<when-property-is name="user.agent" value="ie6"/>
+	</replace-with>
+
+</module>
