@@ -1,6 +1,8 @@
 package therandomhomepage.common.rss;
 
 import com.google.gwt.xml.client.*;
+import com.google.gwt.xml.client.Element;
+import com.google.gwt.user.client.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +48,9 @@ public class RSS2XMLDocumentParser {
         NodeList childNodes = node.getChildNodes();
         for (int i = 0; i < childNodes.getLength(); i++) {
             if (childNodes.item(i).getNodeName().equals(nodeName) && childNodes.item(i).getFirstChild() != null){
+                if (nodeName.equals("description")) {
+                }
+
                 return childNodes.item(i).getFirstChild().getNodeValue();
             }
         }
@@ -58,6 +63,23 @@ public class RSS2XMLDocumentParser {
             Node childNode = childNodes.item(i);
             if (childNode.getNodeName().equals(nodeName)){
                 return childNode;
+            }
+        }
+        return null;
+    }
+
+    public static com.google.gwt.user.client.Element getHTMLElementByTagName(com.google.gwt.user.client.Element element,String tagName) {
+        for (int i = 0; i < DOM.getChildCount(element); i++) {
+            com.google.gwt.user.client.Element childElement = DOM.getChild(element,i);
+            String innerHTML = DOM.getInnerHTML(childElement);
+            System.out.println("innerHTML = " + innerHTML);
+            String innerText = DOM.getInnerText(childElement);
+            System.out.println("innerText = " + innerText);
+            if (innerHTML.startsWith("<"+tagName.toUpperCase()) || innerHTML.startsWith("<"+tagName.toLowerCase() )){
+                return childElement;
+            }
+            else {
+                return getHTMLElementByTagName(childElement,tagName);
             }
         }
         return null;
