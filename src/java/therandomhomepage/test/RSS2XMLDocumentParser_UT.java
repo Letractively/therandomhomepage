@@ -30,6 +30,10 @@ public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT {
     private void processResult(String result) {
         List rssItems = RSS2XMLDocumentParser.parse(result);
         assertEquals(3,rssItems.size());
+        for (Iterator iterator = rssItems.iterator(); iterator.hasNext();) {
+            RSSItem rssItem = (RSSItem) iterator.next();
+            System.out.println("rssItem = " + rssItem);
+        }
         finishTest();
     }
 }

@@ -34,60 +34,49 @@ public class EffectsHelper {
 
 
     public static void applyEffects(Widget widget, int effectConst) {
-        switch (effectConst) {
-            case RANDOM:
-                int i = Random.nextInt(SLIDEUP);
-                applyEffects(widget, i);
-                break;
-            case FADE:
-                Effect.fade(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-            case BLINDOWN:
-                Effect.blindDown(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-            case BLINDUP:
-                Effect.blindUp(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-            case SWITCHOFF:
-                Effect.switchOff(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-            case HIGHLIGHT:
-                Effect.highlight(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-            case DROPOUT:
-                Effect.dropOut(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-            case SHAKE:
-                Effect.shake(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-            case PULSATE:
-                Effect.pulsate(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-            case SQUISH:
-                Effect.squish(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-            case PUFF:
-                Effect.puff(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-            case SLIDEDOWN:
-                Effect.slideDown(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-            case SLIDEUP:
-                Effect.slideUp(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                break;
-        }
-    }
-
-
-    private static class EffectsCallback implements Callback {
-        private Widget widget;
-
-        EffectsCallback(Widget widget) {
-            this.widget = widget;
-        }
-
-        public void execute() {
-            Effect.appear(widget);
+        if (widget != null) {
+            switch (effectConst) {
+                case RANDOM:
+                    int i = Random.nextInt(SLIDEUP);
+                    applyEffects(widget, i);
+                    break;
+                case FADE:
+                    Effect.fade(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case BLINDOWN:
+                    Effect.blindDown(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case BLINDUP:
+                    Effect.blindUp(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case SWITCHOFF:
+                    Effect.switchOff(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case HIGHLIGHT:
+                    Effect.highlight(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case DROPOUT:
+                    Effect.dropOut(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case SHAKE:
+                    Effect.shake(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case PULSATE:
+                    Effect.pulsate(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case SQUISH:
+                    Effect.squish(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case PUFF:
+                    Effect.puff(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case SLIDEDOWN:
+                    Effect.slideDown(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case SLIDEUP:
+                    Effect.slideUp(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+            }
         }
     }
 }

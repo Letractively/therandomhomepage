@@ -11,4 +11,5 @@
 
     <servlet path="/php/RSS2JSON.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
     <servlet path="/php/ajaxProxy.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+    <servlet path="/php/xmlProxy.php" class="therandomhomepage.server.TheRandomHomepageProxyXMLServlet"/>
 </module>
