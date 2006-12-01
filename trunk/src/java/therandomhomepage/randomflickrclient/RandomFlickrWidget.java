@@ -28,7 +28,7 @@ public class RandomFlickrWidget extends RandomWidget {
 
     protected void retrieveRandomItem() {
 
-        String url = "/php/ajaxProxy.php?url="+URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags=colorful&format=rss_200");
+        String url = "/php/xmlProxy.php?url="+URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags=colorful&format=rss_200");
 
         if (cache.getFromCache(url) == null) {
             if (!HttpRequestUtil.sendAsyncGetRequest(url, new MyResponseHandler(url))) {
@@ -43,14 +43,11 @@ public class RandomFlickrWidget extends RandomWidget {
 
     private void displayRandomItem(RSSItem randomItem) {
         if (randomItem != null) {
-//            RSSItemLink itemLink = new RSSItemLink(randomItem);
+            table.setWidget(0, 0, new Label(randomItem.getTitle()));
             Image image = randomItem.getMedia().getContent();
             table.setWidget(1, 0, image);
             table.getFlexCellFormatter().setColSpan(1, 0, 2);
             table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
-//            HTML descWidget = new HTML(randomItem.getDesc());
-            table.setWidget(2, 0, new Label(randomItem.getTitle()));
-            table.getFlexCellFormatter().setColSpan(2, 0, 2);
             EffectsHelper.applyEffects(image,EffectsHelper.RANDOM);
         }
     }
