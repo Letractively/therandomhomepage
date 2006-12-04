@@ -21,7 +21,7 @@ import therandomhomepage.common.rss.RSSItem;
  */
 public class LightboxWidget extends Widget {
 
-    private static int id = 0;
+    private static int anchorId = 0;
     private List rssItems;
 
 
@@ -29,17 +29,19 @@ public class LightboxWidget extends Widget {
         this.rssItems = rssItems;
         List imageList = getImageList(rssItems);
         Element divElement = DOM.createDiv();
+        DOM.setAttribute(divElement,"id","divLightBox");
+
         for (int i = 0; i < imageList.size(); i++) {
             Image image1 = (Image) imageList.get(i);
             Element anchorElement = DOM.createAnchor();
             DOM.setAttribute(anchorElement,"href",image1.getUrl());
-            DOM.setIntAttribute(anchorElement,"id",id);
+            DOM.setIntAttribute(anchorElement,"id",anchorId);
             DOM.setAttribute(anchorElement,"title",image1.getTitle());
             DOM.setAttribute(anchorElement,"rel","lightbox["+groupName+"]");
             UIObject.setVisible(anchorElement,false);
             DOM.appendChild(anchorElement,image1.getElement());
             DOM.appendChild(divElement,anchorElement);
-            id++;
+            anchorId ++;
         }
         setElement(divElement);
     }
@@ -63,4 +65,16 @@ public class LightboxWidget extends Widget {
     public static native void init() /*-{
         $wnd.initLightbox();
     }-*/;
+
+    public static void clearWidget(){
+        Element lightBoxElement = DOM.getElementById("divLightBox");
+        if (lightBoxElement != null) {
+            String innerHTML = DOM.getInnerHTML(lightBoxElement);
+            System.out.println("innerHTML = " + innerHTML);
+            DOM.setInnerHTML(lightBoxElement,"");
+        }
+        else {
+            System.out.println("divLightBox doesn't exist !!!");
+        }
+    }
 }

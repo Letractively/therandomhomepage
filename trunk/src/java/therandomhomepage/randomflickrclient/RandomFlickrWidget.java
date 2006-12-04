@@ -47,9 +47,10 @@ public class RandomFlickrWidget extends RandomWidget {
     private void displayRandomItem(List rssItems) {
         if (rssItems != null && rssItems.size() > 0) {
 
+            LightboxWidget.clearWidget();
             LightboxWidget widget = new LightboxWidget(rssItems,"colorful");
             table.setWidget(1, 0, widget);
-            widget.init();
+            LightboxWidget.init();
 
             RSSItem randomItem = widget.toggleRandomImage();
             table.setWidget(0, 0, new Label(randomItem.getTitle()));
