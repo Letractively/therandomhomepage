@@ -1,9 +1,8 @@
 package therandomhomepage.common;
 
 import com.google.gwt.user.client.Random;
-import java.util.List;
 
-import therandomhomepage.common.Randomizable;
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -14,10 +13,17 @@ import therandomhomepage.common.Randomizable;
 public class Randomizer {
 
     public static Randomizable getRandomItem(List items) {
-      if (items != null) {
-        int randomIdx = Random.nextInt(items.size());
-        return (Randomizable) items.get(randomIdx);
-      }
-      return null;
+        if (items != null) {
+            int randomIdx = getRandomIdx(items);
+            return (Randomizable) items.get(randomIdx);
+        }
+        return null;
+    }
+
+    public static int getRandomIdx(List items) {
+        if (items != null) {
+            return Random.nextInt(items.size());
+        }
+        return -1;
     }
 }
