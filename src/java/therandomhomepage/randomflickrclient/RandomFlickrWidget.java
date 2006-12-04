@@ -3,13 +3,9 @@ package therandomhomepage.randomflickrclient;
 import com.google.gwt.http.client.URL;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ResponseTextHandler;
-import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.ui.*;
 import org.gwtwidgets.client.ui.LightBox;
-import therandomhomepage.common.HttpRequestUtil;
-import therandomhomepage.common.RSSCache;
-import therandomhomepage.common.RandomWidget;
-import therandomhomepage.common.Randomizer;
+import therandomhomepage.common.*;
 import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 import therandomhomepage.common.rss.RSSItem;
 
@@ -23,6 +19,11 @@ import java.util.List;
  */
 public class RandomFlickrWidget extends RandomWidget {
     private static RSSCache cache = new RSSCache();
+
+
+    public static native void init() /*-{
+        $wnd.initLightbox();
+    }-*/;
 
     public RandomFlickrWidget(String header) {
         super(header);
@@ -48,24 +49,24 @@ public class RandomFlickrWidget extends RandomWidget {
     private void displayRandomItem(RSSItem randomItem) {
         if (randomItem != null) {
             table.setWidget(0, 0, new Label(randomItem.getTitle()));
-            HTML snippet = new HTML(randomItem.getDesc());
-            HTML lightboxHTML = extractImage(snippet);
-            snippet.addClickListener(new LightBoxListener(randomItem.getMedia().getContent()));
-            table.setWidget(1, 0, snippet);
+//            HTML snippet = new HTML(randomItem.getDesc());
+            HTML lightboxHTML = extractImage(randomItem.getDesc());
+//            lightboxHTML.addClickListener(new LightBoxListener(randomItem.getMedia().getContent()));
+            table.setWidget(1, 0, lightboxHTML);
             table.getFlexCellFormatter().setColSpan(1, 0, 2);
             table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
-            EffectsHelper.applyEffects(snippet, EffectsHelper.RANDOM);
+            EffectsHelper.applyEffects(lightboxHTML, EffectsHelper.RANDOM);
+            init();
         }
     }
 
-    private HTML extractImage(HTML snippet) {
-        String rawHTML = DOM.getInnerHTML(snippet.getElement());
-        System.out.println("rawHTML = " + rawHTML);
-        String imageTag = grep(rawHTML,"<img",">");
+    private HTML extractImage(String desc) {
+        String imageTag = StringUtil.grep(desc,"<img",">");
         if (imageTag != null) {
-            String url = grep(imageTag,"src=","\"");
+            String url = StringUtil.grep(imageTag,"\"","\" ");
             System.out.println("url = " + url);
             String html = "<A HREF="+url+" rel=\"lightbox\">"+imageTag+"</A>";
+            System.out.println("html = " + html);
             return new HTML(html);
         }
         return null;
@@ -116,7 +117,6 @@ public class RandomFlickrWidget extends RandomWidget {
             this.image = image;
             String height = DOM.getStyleAttribute(this.image.getElement(), "height");
             String width = DOM.getStyleAttribute(this.image.getElement(), "width");
-            System.out.println("height & width = " + height + ", " + width);
         }
 
         private String reduceSize(int offsetHeight) {
@@ -132,14 +132,4 @@ public class RandomFlickrWidget extends RandomWidget {
         }
     }
 
-    public static String grep(String actualString, String startsWith, String endsWith) {
-        if (actualString != null) {
-            int startIdx = actualString.indexOf(startsWith.toUpperCase()) < 0  ? actualString.indexOf(startsWith.toLowerCase()) : actualString.indexOf(startsWith.toUpperCase()) ;
-            int endIdx = actualString.indexOf(endsWith.toUpperCase(),startIdx) < 0  ? actualString.indexOf(endsWith.toLowerCase(),startIdx) : actualString.indexOf(endsWith.toUpperCase(),startIdx);
-            if (startIdx > -1 && endIdx > -1) {
-                return actualString.substring(startIdx, endIdx + 1);
-            }
-        }
-        return null;
-    }
 }
