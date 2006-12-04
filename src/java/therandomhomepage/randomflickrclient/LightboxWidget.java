@@ -21,8 +21,10 @@ import therandomhomepage.common.rss.RSSItem;
  */
 public class LightboxWidget extends Widget {
 
-    private static int anchorId = 0;
+    public static int anchorId = 0;
     private List rssItems;
+    int prevIdx = -1;
+
 
 
     public LightboxWidget(List rssItems,String groupName){
@@ -47,10 +49,18 @@ public class LightboxWidget extends Widget {
     }
 
     public RSSItem toggleRandomImage(){
+        if (prevIdx > -1){
+            toggleAnchor(prevIdx,false);            
+        }
         int randomIdx = Randomizer.getRandomIdx(rssItems);
-        Element anchorElement = DOM.getElementById(Integer.toString(randomIdx));
-        UIObject.setVisible(anchorElement,true);
+        prevIdx = randomIdx;
+        toggleAnchor(randomIdx,true);
         return (RSSItem) rssItems.get(randomIdx);
+    }
+
+    private void toggleAnchor(int randomIdx,boolean visible) {
+        Element anchorElement = DOM.getElementById(Integer.toString(randomIdx));
+        UIObject.setVisible(anchorElement,visible);
     }
 
     private List getImageList(List rssItems) {
@@ -66,15 +76,4 @@ public class LightboxWidget extends Widget {
         $wnd.initLightbox();
     }-*/;
 
-    public static void clearWidget(){
-        Element lightBoxElement = DOM.getElementById("divLightBox");
-        if (lightBoxElement != null) {
-            String innerHTML = DOM.getInnerHTML(lightBoxElement);
-            System.out.println("innerHTML = " + innerHTML);
-            DOM.setInnerHTML(lightBoxElement,"");
-        }
-        else {
-            System.out.println("divLightBox doesn't exist !!!");
-        }
-    }
 }

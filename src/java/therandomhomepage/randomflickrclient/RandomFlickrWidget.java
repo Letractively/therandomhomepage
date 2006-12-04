@@ -1,19 +1,18 @@
 package therandomhomepage.randomflickrclient;
 
 import com.google.gwt.http.client.URL;
-import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ResponseTextHandler;
-import com.google.gwt.user.client.Element;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.*;
-import org.gwtwidgets.client.ui.LightBox;
-import therandomhomepage.common.*;
+import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.user.client.ui.HasVerticalAlignment;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.Widget;
+import therandomhomepage.common.HttpRequestUtil;
+import therandomhomepage.common.RSSCache;
+import therandomhomepage.common.RandomWidget;
 import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 import therandomhomepage.common.rss.RSSItem;
 
 import java.util.List;
-import java.util.Iterator;
-import java.util.ArrayList;
 
 /**
  * Created by IntelliJ IDEA.
@@ -23,6 +22,7 @@ import java.util.ArrayList;
  */
 public class RandomFlickrWidget extends RandomWidget {
     private static RSSCache cache = new RSSCache();
+    LightboxWidget widget;
 
     public RandomFlickrWidget(String header) {
         super(header);
@@ -46,12 +46,11 @@ public class RandomFlickrWidget extends RandomWidget {
 
     private void displayRandomItem(List rssItems) {
         if (rssItems != null && rssItems.size() > 0) {
-
-            LightboxWidget.clearWidget();
-            LightboxWidget widget = new LightboxWidget(rssItems,"colorful");
-            table.setWidget(1, 0, widget);
-            LightboxWidget.init();
-
+            if (widget == null) {
+                widget = new LightboxWidget(rssItems, "colorful");
+                table.setWidget(1, 0, widget);
+                LightboxWidget.init();
+            }
             RSSItem randomItem = widget.toggleRandomImage();
             table.setWidget(0, 0, new Label(randomItem.getTitle()));
             table.getFlexCellFormatter().setColSpan(1, 0, 2);
@@ -61,8 +60,6 @@ public class RandomFlickrWidget extends RandomWidget {
             EffectsHelper.applyEffects(image, EffectsHelper.RANDOM);
         }
     }
-
-
 
 
     private void showError() {
