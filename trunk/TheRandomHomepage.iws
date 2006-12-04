@@ -161,19 +161,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RandomFlickrWidget.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RandomFlickrWidget.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="33" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.43867925">
+            <state line="51" column="70" selection-start="1924" selection-end="1924" vertical-scroll-proportion="0.72426033">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LightboxWidget.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LightboxWidget.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/LightboxWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="59" selection-start="2548" selection-end="2548" vertical-scroll-proportion="1.4316038">
+            <state line="50" column="19" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.295858">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,7 +184,7 @@
       <file leaf-file-name="DOM.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/DOM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="592" column="24" selection-start="15747" selection-end="15747" vertical-scroll-proportion="0.33254716">
+            <state line="592" column="24" selection-start="15747" selection-end="15747" vertical-scroll-proportion="0.1668639">
               <folding />
             </state>
           </provider>
@@ -193,7 +193,7 @@
       <file leaf-file-name="DOMImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/impl/DOMImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="304" column="21" selection-start="8727" selection-end="8727" vertical-scroll-proportion="0.6627358">
+            <state line="304" column="21" selection-start="8727" selection-end="8727" vertical-scroll-proportion="0.3325444">
               <folding />
             </state>
           </provider>
@@ -202,7 +202,7 @@
       <file leaf-file-name="UIObject.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="28" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.31839624">
+            <state line="35" column="28" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.1597633">
               <folding />
             </state>
           </provider>
@@ -211,7 +211,7 @@
       <file leaf-file-name="Media.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/Media.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.9103774">
+            <state line="35" column="0" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.45680472">
               <folding />
             </state>
           </provider>
@@ -220,7 +220,7 @@
       <file leaf-file-name="UIUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/UIUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.5613208">
+            <state line="14" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.2816568">
               <folding />
             </state>
           </provider>
@@ -229,7 +229,7 @@
       <file leaf-file-name="lightbox.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/lightbox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="688" column="51" selection-start="20013" selection-end="20013" vertical-scroll-proportion="1.7523584">
+            <state line="688" column="51" selection-start="20013" selection-end="20013" vertical-scroll-proportion="0.8792899">
               <folding />
             </state>
           </provider>
@@ -238,7 +238,7 @@
       <file leaf-file-name="prototype.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/prototype.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1523" column="45" selection-start="39356" selection-end="39356" vertical-scroll-proportion="0.4528302">
+            <state line="1523" column="45" selection-start="39356" selection-end="39356" vertical-scroll-proportion="0.22721894">
               <folding />
             </state>
           </provider>
@@ -250,7 +250,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="40" selection-start="158" selection-end="158" vertical-scroll-proportion="0.17042607">
+            <state line="4" column="40" selection-start="158" selection-end="158" vertical-scroll-proportion="0.08292683">
               <folding />
             </state>
           </provider>
@@ -1094,7 +1094,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="997" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" order="18" />
@@ -1111,7 +1111,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19542857" order="16" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47260273" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47260273" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44406393" order="4" />
@@ -1263,7 +1263,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/Media.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.9103774">
+        <state line="35" column="0" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.45680472">
           <folding />
         </state>
       </provider>
@@ -1277,7 +1277,7 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="28" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.31839624">
+        <state line="35" column="28" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.1597633">
           <folding />
         </state>
       </provider>
@@ -1287,59 +1287,59 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="40" selection-start="158" selection-end="158" vertical-scroll-proportion="0.17042607">
+        <state line="4" column="40" selection-start="158" selection-end="158" vertical-scroll-proportion="0.08292683">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/impl/DOMImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="21" selection-start="8727" selection-end="8727" vertical-scroll-proportion="0.6627358">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="33" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.43867925">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/DOM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="592" column="24" selection-start="15747" selection-end="15747" vertical-scroll-proportion="0.33254716">
+        <state line="304" column="21" selection-start="8727" selection-end="8727" vertical-scroll-proportion="0.3325444">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/UIUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.5613208">
+        <state line="14" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.2816568">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/prototype.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1523" column="45" selection-start="39356" selection-end="39356" vertical-scroll-proportion="0.4528302">
+        <state line="1523" column="45" selection-start="39356" selection-end="39356" vertical-scroll-proportion="0.22721894">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/lightbox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="688" column="51" selection-start="20013" selection-end="20013" vertical-scroll-proportion="1.7523584">
+        <state line="688" column="51" selection-start="20013" selection-end="20013" vertical-scroll-proportion="0.8792899">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/DOM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="592" column="24" selection-start="15747" selection-end="15747" vertical-scroll-proportion="0.1668639">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/LightboxWidget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="59" selection-start="2548" selection-end="2548" vertical-scroll-proportion="1.4316038">
+        <state line="50" column="19" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.295858">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="70" selection-start="1924" selection-end="1924" vertical-scroll-proportion="0.72426033">
+          <folding />
         </state>
       </provider>
     </entry>
