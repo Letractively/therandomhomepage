@@ -79,4 +79,10 @@ public class EffectsHelper {
             }
         }
     }
+
+
+    public static native void initLightbox() /*-{
+        $wnd.initLightbox();
+    }-*/;
+
 }

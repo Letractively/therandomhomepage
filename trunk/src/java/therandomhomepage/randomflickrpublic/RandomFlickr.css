@@ -28,3 +28,7 @@ a {
 a:visited {
 	color: darkblue;
 }
+
+img {
+    border-style:none;
+}
