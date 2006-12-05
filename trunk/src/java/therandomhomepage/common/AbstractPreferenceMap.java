@@ -1,56 +1,38 @@
 package therandomhomepage.common;
 
+import org.gwtwidgets.client.util.WindowUtils;
+
 import java.util.HashMap;
 
 /**
  * Created by IntelliJ IDEA.
  * User: Siddique Hameed
  * Date: Dec 5, 2006
- * Time: 1:23:51 PM
+ * Time: 3:34:55 PM
  */
 public abstract class AbstractPreferenceMap extends HashMap {
 
-
     protected AbstractPreferenceMap() {
-        super();
-        initPreferenceValues();
-    }
-
-    private void initPreferenceValues() {
-        String[] preferenceKeys = getPreferenceKeys();
-        for (int i = 0; i < preferenceKeys.length; i++) {
-            String preferenceKey = preferenceKeys[i];
-            put(preferenceKey, "");
-        }
-    }
-
-
-    public Object put(Object key, Object value) {
-        if (!this.containsKey(key.toString())) {
-            logInvalidPreference(key, value);
-            return null;
-        } else {
-            return super.put(key, value);
-        }
-    }
-
-
-    public Object get(Object key) {
-        if (!this.containsKey(key.toString())) {
-            logInvalidPreference(key);
-            return null;
-        } else {
-            return super.get(key);
-        }
-    }
-
-    private void logInvalidPreference(Object key) {
-        System.out.println("Invalid preference. Key = " + key);
-    }
-
-    private void logInvalidPreference(Object key, Object value) {
-        System.out.println("Invalid preference. Key = " + key + ", value = " + value);
+        super(WindowUtils.getLocation().getParameterMap());
     }
 
     public abstract String[] getPreferenceKeys();
+
+    protected boolean getBoolPrefValue(String prefName) {
+        if ((get(prefName) != null) && (get(prefName).toString().equals("1"))) {
+            return true;
+        }
+        return false;
+    }
+
+    protected int getIntPrefValue(String prefName) {
+        if ((get(prefName) != null)) {
+            try {
+                return Integer.parseInt(get(prefName).toString());
+            } catch (NumberFormatException e) {
+                //ignore
+            }
+        }
+        return 0;
+    }
 }

@@ -14,7 +14,7 @@ import org.gwtwidgets.client.wrap.Effect;
  */
 public class RandomFlickr implements EntryPoint {
     public void onModuleLoad() {
-        RandomFlickrWidget widget = new RandomFlickrWidget("Random Flickr");
+        RandomFlickrWidget widget = new RandomFlickrWidget(new RandomFlickrPreferenceMap());
         RootPanel.get("divMain").add(widget);
     }
 }
