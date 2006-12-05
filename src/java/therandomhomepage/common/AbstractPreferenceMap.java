@@ -33,6 +33,6 @@ public abstract class AbstractPreferenceMap extends HashMap {
                 //ignore
             }
         }
-        return 0;
+        return -1;
     }
 }
