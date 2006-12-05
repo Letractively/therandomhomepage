@@ -1,7 +1,6 @@
 package therandomhomepage.mainclient;
 
 import com.google.gwt.user.client.ui.*;
-import therandomhomepage.common.URLHelper;
 
 public class AbstractRandomGadget extends HTML {
 

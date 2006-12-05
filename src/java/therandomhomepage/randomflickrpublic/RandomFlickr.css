@@ -10,6 +10,7 @@ body {
   cursor: pointer;
   color: darkblue;
   font-weight:bold;
+  text-align:right;  
 }
 
 .randomWidgetHeader-StartStopControl{
