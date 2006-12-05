@@ -72,7 +72,33 @@ public class StringUtil_UT extends TheRandomHomepageAbstract_UT{
 
         String expectedSrc = "\"http://static.flickr.com/123/310473631_0f69135463_m.jpg\"";
 
-        String srcStr = StringUtil.grep(actualStr,"\"","\" ");
+        String srcStr = StringUtil.grep(actualStr,"\"","\"");
         assertEquals(expectedSrc,srcStr);
     }
+
+    public void testGrepBetween() throws Exception{
+        String desc = "<p><a href=\"http://www.flickr.com/people/gastaum/\">ftrc</a> posted a photo:</p>\n" +
+                    "\n" +
+                    "<p><a href=\"http://www.flickr.com/photos/gastaum/310473631/\" title=\"hotel glória\"><img src=\"http://static.flickr.com/123/310473631_0f69135463_m.jpg\" width=\"240\" height=\"176\" alt=\"hotel glória\" style=\"border: 1px solid #ddd;\" /></a></p>\n" +
+                    "\n" +
+                    "<p>hotel glória<br />\n" +
+                    "<br />\n" +
+                    "djs<br />\n" +
+                    "<br />\n" +
+                    "joakim + marcos morcerf + luca &amp; liana + no porn<br />\n" +
+                    "<br />\n" +
+                    "<a href=\"http://www.clubegloria.com.br\">www.clubegloria.com.br</a></p>";
+
+        String expectedStr = "<img src=\"http://static.flickr.com/123/310473631_0f69135463_m.jpg\" width=\"240\" height=\"176\" alt=\"hotel glória\" style=\"border: 1px solid #ddd;\" />";
+
+        String imgTag = StringUtil.grep(desc,"<IMG",">");
+        assertEquals(expectedStr,imgTag);
+
+        String actualSrc = StringUtil.grepBetween(imgTag,"src=\"","\"");
+        System.out.println("actualSrc = " + actualSrc);
+
+        
+    }
+
+
 }
