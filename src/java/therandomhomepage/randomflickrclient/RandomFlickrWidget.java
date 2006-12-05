@@ -46,17 +46,20 @@ public class RandomFlickrWidget extends RandomWidget {
 
     private void displayRandomItem(List rssItems) {
         if (rssItems != null && rssItems.size() > 0) {
-            if (lightboxWidget == null) {
-                lightboxWidget = new LightboxWidget(rssItems, "colorful");
-                table.setWidget(1, 0, lightboxWidget);
-            }
-            RSSItem randomItem = lightboxWidget.showRandomImage();
-            table.setWidget(0, 0, new Label(randomItem.getTitle()));
-            table.getFlexCellFormatter().setColSpan(1, 0, 2);
-            table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
+//            TODO: Work on Lightbox effect
+//            if (lightboxWidget == null) {
+//                lightboxWidget = new LightboxWidget(rssItems, "colorful");
+//                table.setWidget(1, 0, lightboxWidget);
+//            }
+//            RSSItem randomItem = lightboxWidget.showRandomImage();
+//            table.setWidget(0, 0, new Label(randomItem.getTitle()));
+//            table.getFlexCellFormatter().setColSpan(1, 0, 2);
+//            table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
+//
+//            Widget image = table.getWidget(1, 0);
+//            EffectsHelper.applyEffects(image, EffectsHelper.RANDOM);
 
-            Widget image = table.getWidget(1, 0);
-            EffectsHelper.applyEffects(image, EffectsHelper.RANDOM);
+
         }
     }
 

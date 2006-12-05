@@ -1,6 +1,7 @@
 package therandomhomepage.common.rss;
 
 import com.google.gwt.xml.client.Node;
+import com.google.gwt.user.client.ui.Image;
 import therandomhomepage.common.Randomizable;
 
 /**
@@ -15,6 +16,7 @@ public class RSSItem implements Randomizable {
     private String desc;
     private String guid;
     private String publishedDate;
+    private Image snippetImage = new Image();
     private Media media = new Media();
 
     public RSSItem() {

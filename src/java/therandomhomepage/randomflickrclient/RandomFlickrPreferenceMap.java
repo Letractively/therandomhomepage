@@ -11,6 +11,6 @@ import therandomhomepage.common.AbstractPreferenceMap;
 public class RandomFlickrPreferenceMap extends AbstractPreferenceMap {
 
     public String[] getPreferenceKeys() {
-        return new String[0];  //To change body of implemented methods use File | Settings | File Templates.
+        return new String[]{"up_tags","up_transition_effect"};
     }
 }
