@@ -3,6 +3,8 @@ package therandomhomepage.randomflickrclient;
 import com.google.gwt.http.client.URL;
 import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.DOM;
 import therandomhomepage.common.AbstractPreferenceMap;
 import therandomhomepage.common.RandomWidget;
 import therandomhomepage.common.Randomizer;
@@ -44,9 +46,8 @@ public class RandomFlickrWidget extends RandomWidget {
                 addStopper();
             }
 
-            HTML snippet = new HTML(StringUtil.grep(desc, "<img", ">"));
+            HTML snippet = new HTML("<a href='"+randomRSSItem.getMedia().getContent().getUrl()+"' target='_new'>"+StringUtil.grep(desc, "<img", ">")+"</a>");
             setContent(snippet);
-            snippet.addClickListener(new ImageClickListener(randomRSSItem,prefMap));
             EffectsHelper.applyEffects(snippet, prefMap.getTransitionEffectConstant());
         }
     }
