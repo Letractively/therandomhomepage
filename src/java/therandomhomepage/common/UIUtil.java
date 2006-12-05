@@ -17,4 +17,33 @@ public class UIUtil {
             return pixel+"px";
         }
     }
+
+    public static Image getImageFromInnerHTML(String imgInnerHTML) {
+        String imgTag = StringUtil.grep(imgInnerHTML, "<IMG", ">");
+        String srcStr = null;
+        if (imgTag != null) {
+            srcStr = StringUtil.grepBetween(imgTag,"src=\"","\"");
+            if (srcStr != null)  {
+                return new Image(escapeLeadingAndTrailingQuotes(srcStr));
+            }
+            else {
+                srcStr = StringUtil.grep(imgTag,"src='","'");
+                if (srcStr == null) {
+                    srcStr = StringUtil.grep(imgTag,"src="," ");                    
+                }
+                return new Image(escapeLeadingAndTrailingQuotes(srcStr));
+            }
+        }
+        return null;
+    }
+
+    public static String escapeLeadingAndTrailingQuotes(String str){
+        if (str.startsWith("\"") && str.endsWith("\"")){
+            return str.replaceAll("\"","");
+        }
+        else if (str.startsWith("'") && str.endsWith("'")){
+            return str.replaceAll("'","");
+        }
+        return str;
+    }
 }

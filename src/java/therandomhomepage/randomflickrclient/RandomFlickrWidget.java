@@ -22,7 +22,7 @@ import java.util.List;
  */
 public class RandomFlickrWidget extends RandomWidget {
     private static RSSCache cache = new RSSCache();
-    LightboxWidget widget;
+    LightboxWidget lightboxWidget;
 
     public RandomFlickrWidget(String header) {
         super(header);
@@ -46,12 +46,11 @@ public class RandomFlickrWidget extends RandomWidget {
 
     private void displayRandomItem(List rssItems) {
         if (rssItems != null && rssItems.size() > 0) {
-            if (widget == null) {
-                widget = new LightboxWidget(rssItems, "colorful");
-                table.setWidget(1, 0, widget);
-                LightboxWidget.init();
+            if (lightboxWidget == null) {
+                lightboxWidget = new LightboxWidget(rssItems, "colorful");
+                table.setWidget(1, 0, lightboxWidget);
             }
-            RSSItem randomItem = widget.toggleRandomImage();
+            RSSItem randomItem = lightboxWidget.showRandomImage();
             table.setWidget(0, 0, new Label(randomItem.getTitle()));
             table.getFlexCellFormatter().setColSpan(1, 0, 2);
             table.getFlexCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
