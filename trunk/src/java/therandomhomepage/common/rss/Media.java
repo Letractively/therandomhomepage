@@ -1,10 +1,8 @@
 package therandomhomepage.common.rss;
 
-import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.xml.client.NamedNodeMap;
 import com.google.gwt.xml.client.Node;
-import therandomhomepage.common.UIUtil;
 
 /**
  * Created by IntelliJ IDEA.
@@ -31,9 +29,6 @@ public class Media {
             NamedNodeMap attributes = imageNode.getAttributes();
             if (attributes != null) {
                 image = new Image(attributes.getNamedItem("url").getNodeValue());
-                //maybe this is redundant
-                image.setHeight(UIUtil.reduceSize(attributes.getNamedItem("height").getNodeValue(),50));
-                image.setWidth(UIUtil.reduceSize(attributes.getNamedItem("width").getNodeValue(),50));
             }
         }
         return image;

@@ -50,15 +50,11 @@ public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT {
                     "joakim + marcos morcerf + luca &amp; liana + no porn<br />\n" +
                     "<br />\n" +
                     "<a href=\"http://www.clubegloria.com.br\">www.clubegloria.com.br</a></p>";
-            System.out.println("rssItem.getDesc() = " + rssItem.getDesc());
             assertEquals(expectedDesc,rssItem.getDesc());
 
-            String expectedContentImage = "<IMG class=gwt-Image style=\"WIDTH: 240px; HEIGHT: 176px\" height=176 src=\"http://static.flickr.com/123/310473631_0f69135463_m.jpg\" width=240 __eventBits=\"98429\" onchange=\"null\">";
-
-            assertEquals(expectedContentImage,rssItem.getMedia().getContent().toString());
-
-
-
+            String expectedContentImage = "<IMG class=gwt-Image height=176 src=\"http://static.flickr.com/123/310473631_0f69135463_m.jpg\" width=240 __eventBits=\"98429\" onchange=\"null\">";
+            String actualContent = rssItem.getMedia().getContent().toString();
+            assertEquals(expectedContentImage, actualContent);
         }
         finishTest();
     }

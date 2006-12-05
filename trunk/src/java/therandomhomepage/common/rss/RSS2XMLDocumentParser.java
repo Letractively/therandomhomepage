@@ -3,6 +3,7 @@ package therandomhomepage.common.rss;
 import com.google.gwt.xml.client.*;
 import com.google.gwt.xml.client.Element;
 import com.google.gwt.user.client.*;
+import com.google.gwt.user.client.ui.Image;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,9 @@ public class RSS2XMLDocumentParser {
                 Node item = items.item(i);
                 rssItem.setTitle(getNodeTextValue(item,"title"));
                 rssItem.setLink(getNodeTextValue(item,"link"));
-                rssItem.setDesc(getNodeTextValue(item,"description"));
+                String desc = getNodeTextValue(item, "description");
+                rssItem.setDesc(desc);
+                Image snippetImage = extractImage(desc);
                 rssItem.setGuid(getNodeTextValue(item,"guid"));
                 rssItem.setMediaContentNode(getNodeByNodeName(item,"media:content"));
                 rssItem.setMediaThumbnailNode(getNodeByNodeName(item,"media:thumbnail"));
@@ -42,6 +45,10 @@ public class RSS2XMLDocumentParser {
             e.printStackTrace();
         }
         return rssItems;
+    }
+
+    private static Image extractImage(String desc) {
+        return null; 
     }
 
     private static String getNodeTextValue(Node node,String nodeName){
@@ -63,23 +70,6 @@ public class RSS2XMLDocumentParser {
             Node childNode = childNodes.item(i);
             if (childNode.getNodeName().equals(nodeName)){
                 return childNode;
-            }
-        }
-        return null;
-    }
-
-    public static com.google.gwt.user.client.Element getHTMLElementByTagName(com.google.gwt.user.client.Element element,String tagName) {
-        for (int i = 0; i < DOM.getChildCount(element); i++) {
-            com.google.gwt.user.client.Element childElement = DOM.getChild(element,i);
-            String innerHTML = DOM.getInnerHTML(childElement);
-            System.out.println("innerHTML = " + innerHTML);
-            String innerText = DOM.getInnerText(childElement);
-            System.out.println("innerText = " + innerText);
-            if (innerHTML.startsWith("<"+tagName.toUpperCase()) || innerHTML.startsWith("<"+tagName.toLowerCase() )){
-                return childElement;
-            }
-            else {
-                return getHTMLElementByTagName(childElement,tagName);
             }
         }
         return null;
