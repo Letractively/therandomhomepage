@@ -55,10 +55,9 @@ public class RSS2XMLDocumentParser {
         NodeList childNodes = node.getChildNodes();
         for (int i = 0; i < childNodes.getLength(); i++) {
             if (childNodes.item(i).getNodeName().equals(nodeName) && childNodes.item(i).getFirstChild() != null){
-                if (nodeName.equals("description")) {
-                }
-
-                return childNodes.item(i).getFirstChild().getNodeValue();
+//                if (nodeName.equals("description")) {
+//                }
+                return childNodes.item(i).getFirstChild().getNodeValue().trim();
             }
         }
         return "";

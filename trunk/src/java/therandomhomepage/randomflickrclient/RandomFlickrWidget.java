@@ -1,7 +1,8 @@
 package therandomhomepage.randomflickrclient;
 
 import com.google.gwt.http.client.URL;
-import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.Window;
 import therandomhomepage.common.AbstractPreferenceMap;
 import therandomhomepage.common.RandomWidget;
 import therandomhomepage.common.Randomizer;
@@ -10,6 +11,8 @@ import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 import therandomhomepage.common.rss.RSSItem;
 
 import java.util.List;
+
+import org.gwtwidgets.client.ui.LightBox;
 
 /**
  * Created by IntelliJ IDEA.
@@ -43,7 +46,8 @@ public class RandomFlickrWidget extends RandomWidget {
 
             HTML snippet = new HTML(StringUtil.grep(desc, "<img", ">"));
             setContent(snippet);
-            EffectsHelper.applyEffects(snippet, EffectsHelper.RANDOM);
+            snippet.addClickListener(new ImageClickListener(randomRSSItem,prefMap));
+            EffectsHelper.applyEffects(snippet, prefMap.getTransitionEffectConstant());
         }
     }
 
@@ -51,5 +55,28 @@ public class RandomFlickrWidget extends RandomWidget {
         List rssItems = RSS2XMLDocumentParser.parse(responseText);
         cache.addToCache(url, rssItems);
         displayRandomItem(rssItems);
+    }
+
+    private class ImageClickListener implements ClickListener {
+        private RSSItem randomRSSItem;
+        private RandomFlickrPreferenceMap prefMap;
+
+        public ImageClickListener(RSSItem randomRSSItem, RandomFlickrPreferenceMap prefMap) {
+            this.randomRSSItem = randomRSSItem;
+            this.prefMap = prefMap;
+        }
+
+        public void onClick(Widget sender) {
+            switch(prefMap.getOnClickConstant()){
+                case RandomFlickrPreferenceMap.OPEN_ORIGINAL_IMAGE:
+                    //Window.open(randomRSSItem.getMedia().getContent().getUrl(),randomRSSItem.getTitle(),"menubar=no,location=no,resizable=yes,scrollbars=yes,status=no");
+                    PopupPanel panel = new PopupPanel(true);
+                    panel.setWidget(randomRSSItem.getMedia().getContent());
+                    LightBox lightBox = new LightBox(panel);
+                    lightBox.show();
+                    break;
+            }
+
+        }
     }
 }

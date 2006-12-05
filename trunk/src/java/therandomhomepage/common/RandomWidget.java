@@ -58,13 +58,15 @@ public abstract class RandomWidget extends Composite implements ClickListener {
 
     protected void addArrow() {
         Label arrow = new Label(">>");
-        arrow.setStyleName("randomWidgetHeader-arrow");
+        arrow.setStyleName("arrow");
         setActionWidget(arrow);
         arrow.addClickListener(this);
     }
 
     protected void setHeader(String header) {
-        table.setWidget(0, 0, new Label(header));
+        Label label = new Label(header);
+        label.setStyleName("header");
+        table.setWidget(0, 0, label);
     }
 
     protected void setContent(Widget widget) {

@@ -12,6 +12,10 @@ public class RandomFlickrPreferenceMap extends AbstractPreferenceMap {
     private static final String TAGS_PREFERENCE_NAME = "up_tags";
     private static final String SLIDESHOW_PREFERENCE_NAME = "up_slideshow";
     private static final String TRANSITION_EFFECT_PREFERENCE_NAME = "up_transition_effect";
+    private static final String ON_CLICK_PREFERENCE_NAME = "up_on_click";
+
+    public static final int OPEN_ORIGINAL_IMAGE = -1;
+    public static final int OPEN_FLICKR_PAGE = 0;
 
 
     public String[] getPreferenceKeys() {
@@ -30,4 +34,7 @@ public class RandomFlickrPreferenceMap extends AbstractPreferenceMap {
         return getIntPrefValue(TRANSITION_EFFECT_PREFERENCE_NAME);
     }
 
+    public int getOnClickConstant(){
+        return getIntPrefValue(ON_CLICK_PREFERENCE_NAME);
+    }
 }

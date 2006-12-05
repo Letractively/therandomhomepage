@@ -1,35 +1,44 @@
 body {
-	background-color: white;
-	color: black;
-	font-family: Arial, sans-serif;
-	font-size: small;
-	margin: 0px;
-	/*margin-top: 3px;*/
-}
-.randomWidgetHeader-arrow{
-  cursor: pointer;
-  color: darkblue;
-  font-weight:bold;
-  text-align:right;  
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: small;
+    margin: 0px;
 }
 
-.randomWidgetHeader-StartStopControl{
-  cursor: pointer;
-  border:none;
-}
-
-.randomWidgetHeader-errorMessage{
-  font-style:italic;
+table {
+    width: 100%;
+    text-align:center;
 }
 
 a {
-	color: darkblue;
+    color: darkblue;
 }
 
 a:visited {
-	color: darkblue;
+    color: darkblue;
 }
 
 img {
-    border-style:none;
+    border-style: none;
+    cursor: pointer;
 }
+
+.arrow {
+    width:5%;
+    cursor: pointer;
+    color: darkblue;
+    font-weight: bold;
+    text-align: right;
+}
+
+.header {
+    width:95%;
+    color: black;
+    text-align: center;
+}
+
+.errorMessage {
+    font-style: italic;
+}
+
