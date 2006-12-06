@@ -20,7 +20,6 @@ public class EffectsCallback implements Callback {
     public void execute() {
         if (widget != null) {
             Effect.appear(widget);
-            RandomFlickrWidget.initLightbox();
         }
     }
 }
