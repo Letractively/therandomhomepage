@@ -51,17 +51,8 @@ public class RandomFlickrWidget extends RandomWidget {
             HTML snippet = new HTML("<a href='"+randomRSSItem.getMedia().getContent().getUrl()+"' rel='lightbox'>"+StringUtil.grep(desc, "<img", ">")+"</a>");
             setContent(snippet);
             EffectsHelper.applyEffects(snippet, prefMap.getTransitionEffectConstant());
-            initLightboxFromInside();
         }
     }
-
-    public static native void initLightboxFromInside() /*-{
-        alert("initLightboxFromInside");
-        if ($wnd.initLightbox) {
-            alert("Found initLightboxFromInside");
-            $wnd.initLightbox();
-        }
-    }-*/;
 
     protected void handleResponse(String url, String responseText) {
         List rssItems = RSS2XMLDocumentParser.parse(responseText);

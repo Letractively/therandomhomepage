@@ -20,6 +20,15 @@ public class EffectsCallback implements Callback {
     public void execute() {
         if (widget != null) {
             Effect.appear(widget);
+            callLightbox();
         }
     }
+
+    private static native void callLightbox() /*-{
+        if ($wnd.callLightbox) {
+            alert("Calling from widget");
+            $wnd.callLightbox();
+        }
+    }-*/;
+
 }
