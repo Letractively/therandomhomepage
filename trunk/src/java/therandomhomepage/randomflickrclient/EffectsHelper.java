@@ -14,8 +14,8 @@ import org.gwtwidgets.client.wrap.EffectOption;
  */
 public class EffectsHelper {
 
-    public static final int RANDOM = -1;
-    public static final int FADE = 0;
+    public static final int NONE = -1;
+    public static final int RANDOM = 0;
     public static final int BLINDOWN = 1;
     public static final int BLINDUP = 2;
     public static final int SWITCHOFF = 3;
@@ -30,6 +30,7 @@ public class EffectsHelper {
     public static final int PUFF = 12;
     public static final int SLIDEDOWN = 13;
     public static final int SLIDEUP = 14;
+    public static final int FADE = 15;
     private static final String AFTER_FINISH_EFFECT_OPTION = "afterFinish";
 
 

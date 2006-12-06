@@ -169,9 +169,10 @@ Lightbox.prototype = {
 	//
 	initialize: function() {	
 		if (!document.getElementsByTagName){ return; }
-		var anchors = document.getElementsByTagName('a');
+		//var anchors = document.getElementsByTagName('a');
+        var anchors = window.frames['DisplayFrame'].document.getElementsByTagName('a');
 
-		// loop through all anchor tags
+        // loop through all anchor tags
 		for (var i=0; i<anchors.length; i++){
 			var anchor = anchors[i];
 			
@@ -179,8 +180,9 @@ Lightbox.prototype = {
 			
 			// use the string.match() method to catch 'lightbox' references in the rel attribute
 			if (anchor.getAttribute('href') && (relAttribute.toLowerCase().match('lightbox'))){
-				anchor.onclick = function () {myLightbox.start(this); return false;}
-			}
+				//anchor.onclick = function () {myLightbox.start(this); return false;}
+                anchor.onclick = function() { window.parent.myLightbox.start(this); return false; }
+            }
 		}
 
 		// The rest of this code inserts html at the bottom of the page that looks similar to this:
@@ -323,9 +325,10 @@ Lightbox.prototype = {
 		imageNum = 0;		
 
 		if (!document.getElementsByTagName){ return; }
-		var anchors = document.getElementsByTagName('a');
+		//var anchors = document.getElementsByTagName('a');
+        var anchors = window.frames['DisplayFrame'].document.getElementsByTagName('a');
 
-		// if image is NOT part of a set..
+        // if image is NOT part of a set..
 		if((imageLink.getAttribute('rel') == 'lightbox')){
 			// add single image to imageArray
 			imageArray.push(new Array(imageLink.getAttribute('href'), imageLink.getAttribute('title')));			
@@ -686,4 +689,4 @@ function pause(numberMillis) {
 
 
 function initLightbox() { myLightbox = new Lightbox(); }
-Event.observe(window, 'load', initLightbox, false);
+//Event.observe(window, 'load', initLightbox, false);
