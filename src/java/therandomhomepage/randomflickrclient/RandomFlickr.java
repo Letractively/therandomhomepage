@@ -16,5 +16,6 @@ public class RandomFlickr implements EntryPoint {
     public void onModuleLoad() {
         RandomFlickrWidget widget = new RandomFlickrWidget(new RandomFlickrPreferenceMap());
         RootPanel.get("divMain").add(widget);
+
     }
 }
