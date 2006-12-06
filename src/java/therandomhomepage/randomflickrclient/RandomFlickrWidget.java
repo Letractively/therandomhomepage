@@ -5,6 +5,7 @@ import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Event;
 import therandomhomepage.common.AbstractPreferenceMap;
 import therandomhomepage.common.RandomWidget;
 import therandomhomepage.common.Randomizer;
@@ -50,12 +51,15 @@ public class RandomFlickrWidget extends RandomWidget {
             HTML snippet = new HTML("<a href='"+randomRSSItem.getMedia().getContent().getUrl()+"' rel='lightbox'>"+StringUtil.grep(desc, "<img", ">")+"</a>");
             setContent(snippet);
             EffectsHelper.applyEffects(snippet, prefMap.getTransitionEffectConstant());
+            initLightboxFromInside();
         }
     }
 
-    public static native void initLightbox() /*-{
-        if ($wnd.parent.initLightbox) {
-            $wnd.parent.initLightbox();
+    public static native void initLightboxFromInside() /*-{
+        alert("initLightboxFromInside");
+        if ($wnd.initLightbox) {
+            alert("Found initLightboxFromInside");
+            $wnd.initLightbox();
         }
     }-*/;
 

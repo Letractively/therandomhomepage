@@ -173,7 +173,8 @@ Lightbox.prototype = {
         var anchors = window.frames['DisplayFrame'].document.getElementsByTagName('a');
 
         // loop through all anchor tags
-		for (var i=0; i<anchors.length; i++){
+        alert("anchors.length = "+anchors.length);
+        for (var i=0; i<anchors.length; i++){
 			var anchor = anchors[i];
 			
 			var relAttribute = String(anchor.getAttribute('rel'));
@@ -688,5 +689,8 @@ function pause(numberMillis) {
 
 
 
-function initLightbox() { myLightbox = new Lightbox(); }
+function initLightbox() {
+    alert("inside initLightbox");
+    myLightbox = new Lightbox();
+}
 //Event.observe(window, 'load', initLightbox, false);
