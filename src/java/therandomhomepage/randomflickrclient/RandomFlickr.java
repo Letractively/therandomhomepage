@@ -17,7 +17,8 @@ public class RandomFlickr implements EntryPoint {
     public void onModuleLoad() {
         RandomFlickrWidget widget = new RandomFlickrWidget(new RandomFlickrPreferenceMap());
 //        HTML widget = new HTML("<a href='images/image-1.jpg' rel='lightbox'><img src='images/image-1.jpg'/></a>");
-        RootPanel.get("divMain").add(widget);
+        RootPanel divMainPanel = RootPanel.get("divMain");
+        divMainPanel.add(widget);
 //        EffectsCallback.callLightbox();
     }
 }

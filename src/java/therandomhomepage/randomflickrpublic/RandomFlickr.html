@@ -13,15 +13,15 @@
     function callLightbox(){
         try
         {
-            alert("Calling parent.initLightbox()");
-            window.parent.initLightbox();
+            if (window.parent.initLightbox) {
+                window.parent.initLightbox();
+            }
         }
         catch(e){
             alert("error = "+e);
         }
     }
 </script>
-<!--<script type="text/javascript" src="/js/lightbox.js"></script>-->
 <iframe id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
 <div id="divMain" style="text-align:center;"/>
 </body>

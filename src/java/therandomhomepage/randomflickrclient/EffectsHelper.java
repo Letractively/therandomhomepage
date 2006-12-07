@@ -18,23 +18,23 @@ public class EffectsHelper {
     public static final int RANDOM = 0;
     public static final int BLINDOWN = 1;
     public static final int BLINDUP = 2;
-    public static final int SWITCHOFF = 3;
-    public static final int HIGHLIGHT = 4;
-    public static final int DROPOUT = 5;
-    public static final int SHAKE = 6;
-    public static final int PULSATE = 7;
-    public static final int SQUISH = 8;
-    public static final int FOLD = 9;
-    public static final int GROW = 10;
-    public static final int SHRINK = 11;
-    public static final int PUFF = 12;
-    public static final int SLIDEDOWN = 13;
-    public static final int SLIDEUP = 14;
-    public static final int FADE = 15;
+    public static final int HIGHLIGHT = 3;
+    public static final int DROPOUT = 4;
+    public static final int SHAKE = 5;
+    public static final int PULSATE = 6;
+    public static final int SQUISH = 7;
+    public static final int FOLD = 8;
+    public static final int GROW = 9;
+    public static final int SHRINK = 10;
+    public static final int PUFF = 11;
+    public static final int SLIDEDOWN = 12;
+    public static final int SLIDEUP = 13;
+    public static final int FADE = 14;
     private static final String AFTER_FINISH_EFFECT_OPTION = "afterFinish";
 
 
     public static void applyEffects(Widget widget, int effectConst) {
+        System.out.println("EffectsHelper.applyEffects effectConst = "+effectConst);   
         if (widget != null) {
             switch (effectConst) {
                 case RANDOM:
@@ -49,9 +49,6 @@ public class EffectsHelper {
                     break;
                 case BLINDUP:
                     Effect.blindUp(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                    break;
-                case SWITCHOFF:
-                    Effect.switchOff(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
                     break;
                 case HIGHLIGHT:
                     Effect.highlight(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
