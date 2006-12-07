@@ -24,7 +24,7 @@ public class EffectsCallback implements Callback {
         }
     }
 
-    private static native void callLightbox() /*-{
+    public static native void callLightbox() /*-{
         if ($wnd.callLightbox) {
             alert("Calling from widget");
             $wnd.callLightbox();

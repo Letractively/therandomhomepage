@@ -263,7 +263,23 @@
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="IDEA 5784" />
-  <component name="ProjectRunConfigurationManager" />
+  <component name="ProjectRunConfigurationManager">
+    <configuration default="false" name="RandomFlickrIFrameTest" type="Application" factoryName="Application" enabled="false" merge="false">
+      <option name="MAIN_CLASS_NAME" value="com.google.gwt.dev.GWTShell" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="-style DETAILED -out ./out -gen ./gen therandomhomepage.RandomFlickr/RandomFlickrIFrameTest.html -whitelist http://gmodules.com,http://www.therandomhomepage.com,http://static.flickr.com" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/src/java" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <module name="TheRandomHomepage" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="RmicSettings">
     <option name="IS_EANABLED" value="false" />
     <option name="DEBUGGING_INFO" value="true" />
