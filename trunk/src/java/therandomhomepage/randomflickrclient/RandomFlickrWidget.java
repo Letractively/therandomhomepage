@@ -50,6 +50,7 @@ public class RandomFlickrWidget extends RandomWidget {
 //            HTML snippet = new HTML("<a href='"+randomRSSItem.getMedia().getContent().getUrl()+"' target='_new'>"+StringUtil.grep(desc, "<img", ">")+"</a>");
             HTML snippet = new HTML("<a href='"+randomRSSItem.getMedia().getContent().getUrl()+"' rel='lightbox'>"+StringUtil.grep(desc, "<img", ">")+"</a>");
             setContent(snippet);
+            callLightbox();
             EffectsHelper.applyEffects(snippet, prefMap.getTransitionEffectConstant());
         }
     }
@@ -59,6 +60,12 @@ public class RandomFlickrWidget extends RandomWidget {
         cache.addToCache(url, rssItems);
         displayRandomItem(rssItems);
     }
+
+    private static native void callLightbox() /*-{
+        if ($wnd.callLightbox) {
+            $wnd.callLightbox();
+        }
+    }-*/;
 
     private class ImageClickListener implements ClickListener {
         private RSSItem randomRSSItem;

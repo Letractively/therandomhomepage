@@ -18,17 +18,10 @@ public class EffectsCallback implements Callback {
     }
 
     public void execute() {
-        if (widget != null) {
+        if (widget != null && !widget.isVisible()) {
             Effect.appear(widget);
-            callLightbox();
         }
     }
 
-    public static native void callLightbox() /*-{
-        if ($wnd.callLightbox) {
-            alert("Calling from widget");
-            $wnd.callLightbox();
-        }
-    }-*/;
 
 }
