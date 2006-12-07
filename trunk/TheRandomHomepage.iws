@@ -17,15 +17,7 @@
     <option name="USER" value="" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/js/lightboxForIFrame.js" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/js/lightboxForIFrame.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsCallback.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsCallback.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.html" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsHelper.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickr.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickr.java" />
-    </list>
+    <list default="true" name="Default" comment="" />
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
     <list name="Failed commit: Default (2)" comment="Layout changes" />
@@ -164,98 +156,7 @@
     <option name="myCurrentFavoritesList" value="TheRandomHomepage" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="RandomFlickr.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="13" selection-start="430" selection-end="430" vertical-scroll-proportion="0.2093596">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomFlickrWidget.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="13" selection-start="761" selection-end="761" vertical-scroll-proportion="0.2093596">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EffectsCallback.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsCallback.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="552" selection-end="552" vertical-scroll-proportion="0.41112456">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EffectsHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="386" selection-end="386" vertical-scroll-proportion="0.2093596">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomWidget.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RandomWidget.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="22" selection-start="314" selection-end="314" vertical-scroll-proportion="-0.34945586">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomFlickrIFrameTest.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickrIFrameTest.html">
-          <provider editor-type-id="HtmlPreview">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="70" selection-start="455" selection-end="455" vertical-scroll-proportion="0.21601017">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomFlickr.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.html">
-          <provider editor-type-id="HtmlPreview">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="12" selection-start="592" selection-end="592" vertical-scroll-proportion="0.42394015">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lightboxForIFrame.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/js/lightboxForIFrame.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="0" selection-start="4537" selection-end="4537" vertical-scroll-proportion="0.6256158">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LightBoxWithIFrameTest.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/LightBoxWithIFrameTest.html">
-          <provider editor-type-id="HtmlPreview">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -1188,9 +1089,9 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/js/lightboxForIFrame.js">
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/js/lightboxForIFrame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="689" column="33" selection-start="20263" selection-end="20263" vertical-scroll-proportion="1.1068301">
+        <state line="174" column="0" selection-start="4537" selection-end="4537" vertical-scroll-proportion="0.6256158">
           <folding />
         </state>
       </provider>
@@ -1198,64 +1099,6 @@
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/out/therandomhomepage.RandomFlickr/RandomFlickr.html">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="40" selection-start="763" selection-end="763" vertical-scroll-proportion="0.72727275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/RandomFlickr.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="7" selection-start="1084" selection-end="1084" vertical-scroll-proportion="1.1366024">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/js/effects.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/LightBoxWithIFrameTest.html">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RandomWidget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="22" selection-start="314" selection-end="314" vertical-scroll-proportion="-0.34945586">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="430" selection-end="430" vertical-scroll-proportion="0.2093596">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickrIFrameTest.html">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="70" selection-start="455" selection-end="455" vertical-scroll-proportion="0.21601017">
           <folding />
         </state>
       </provider>
@@ -1270,39 +1113,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/Effect.java">
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickrIFrameTest.html">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="347" column="69" selection-start="10173" selection-end="10173" vertical-scroll-proportion="0.83887917">
+        <state line="10" column="70" selection-start="455" selection-end="455" vertical-scroll-proportion="0.21601017">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsCallback.java">
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/css/lightbox.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="552" selection-end="552" vertical-scroll-proportion="0.41112456">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5049505">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/RandomFlickrWidget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="761" selection-end="761" vertical-scroll-proportion="0.2093596">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/thumb-1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="386" selection-end="386" vertical-scroll-proportion="0.2093596">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/prevlabel.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/js/lightboxForIFrame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="0" selection-start="4537" selection-end="4537" vertical-scroll-proportion="0.6256158">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/prev.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/nextlabel.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/blank.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/close.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/closelabel.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/image-1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/loading.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/next.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
