@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Last updated 12/6/2006 -->
+<Module>
+    <ModulePrefs title="Random Flickring" title_url="http://www.therandomhomepage.com"
+                 height="350"
+                 author="Siddique Hameed"
+                 description="Flip through or view slideshow of random images from Flickr with amazing visual effects. Click on the image to view lightbox effect."
+                 author_email="siddii+randomhomepage@gmail.com"
+                 render_inline="optional"
+                 scrolling="false"
+                 thumbnail="http://www.therandomhomepage.com/google/gadget/images/thumbnail.png"
+                 screenshot="http://www.therandomhomepage.com/google/gadget/images/screenshot.png"
+            >
+    </ModulePrefs>
+    <UserPref name="tags" display_name="Tags (comma separated)" required="true" datatype="string"
+              default_value="colorful"/>
+    <UserPref name="transition_effect" display_name="Transition effect" datatype="enum" default_value="0">
+        <EnumValue display_value="None" value="-1"/>
+        <EnumValue display_value="Random" value="0"/>
+        <EnumValue display_value="Blindown " value="1"/>
+        <EnumValue display_value="Blindup " value="2"/>
+        <EnumValue display_value="Highlight" value="3"/>
+        <EnumValue display_value="Dropout" value="4"/>
+        <EnumValue display_value="Shake" value="5"/>
+        <EnumValue display_value="Pulsate" value="6"/>
+        <EnumValue display_value="Squish" value="7"/>
+        <EnumValue display_value="Fold" value="8"/>
+        <EnumValue display_value="Grow" value="9"/>
+        <EnumValue display_value="Shrink" value="10"/>
+        <EnumValue display_value="Puff" value="11"/>
+        <EnumValue display_value="Slidedown" value="12"/>
+        <EnumValue display_value="Slideup" value="13"/>
+        <EnumValue display_value="Fade" value="14"/>
+    </UserPref>
+    <UserPref name="slideshow_delay" display_name="Slideshow delay" datatype="enum" default_value="0">
+        <EnumValue display_value="No slideshow" value="0"/>
+        <EnumValue value="5"/>
+        <EnumValue value="10"/>
+        <EnumValue value="15"/>
+        <EnumValue value="20"/>
+        <EnumValue value="25"/>
+        <EnumValue value="30"/>
+        <EnumValue value="35"/>
+        <EnumValue value="40"/>
+        <EnumValue value="45"/>
+        <EnumValue value="50"/>
+        <EnumValue value="55"/>
+        <EnumValue value="60"/>
+    </UserPref>
+
+    <Content type="html">
+        <![CDATA[
+	<script type="text/javascript" src="http://dev.therandomhomepage.com/google/gadgets/RandomFlickr/js/prototype.js"></script>
+	<script type="text/javascript" src="http://dev.therandomhomepage.com/google/gadgets/RandomFlickr/js/effects.js"></script>
+	<script type="text/javascript" src="http://dev.therandomhomepage.com/google/gadgets/RandomFlickr/js/lightbox.js"></script>
+	<link rel="stylesheet" href="http://dev.therandomhomepage.com/google/gadgets/RandomFlickr/css/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript">
+
+	function xmlResponseHandler(response) {
+		var items = response.getElementsByTagName("item");
+		alert("Items = "+items.length);
+
+		if (items.length > 0)
+		{
+			var desc = getChildNodeValueByNodeName(items[0],"description");
+			if (desc)
+			{
+				var imgTag = extractBetween(desc,"<img",">");
+				_gel("content__MODULE_ID__").innerHTML = imgTag;
+			}
+
+			alert("media:content = "+getChildNodeByNodeName(items[0],"media:content").getAttribute("url"));
+		}
+	}
+
+	function getChildNodeValueByNodeName(node,nodeNameStr){
+		var nodeList = node.childNodes;
+		 for (var j = 0; j < nodeList.length ; j++) {
+			var node = nodeList.item(j);
+			if (node.nodeName == nodeNameStr && node.firstChild)
+			{
+				return node.firstChild.nodeValue;
+			}
+		 }
+	}
+
+	function getChildNodeByNodeName(node,nodeNameStr){
+		var nodeList = node.childNodes;
+		 for (var j = 0; j < nodeList.length ; j++) {
+			var node = nodeList.item(j);
+			if (node.nodeName == nodeNameStr)
+			{
+				return node;
+			}
+		 }
+	}
+
+	function extractBetween(str,startsWith,endsWith) {
+		var startIdx =  str.indexOf(startsWith);
+		if (startIdx != -1)
+		{
+			var endIdx = str.indexOf(endsWith,startIdx);
+			if (endIdx != -1)
+			{
+				return str.substring(startIdx,endIdx+1);
+			}
+		}
+		return "";
+	}
+
+    _IG_RegisterOnloadHandler(function () {
+	_IG_FetchXmlContent("http://www.flickr.com/services/feeds/photos_public.gne?tags=colorful&format=rss_200",xmlResponseHandler);
+	//initLightbox();
+	//Effect.BlindDown(divRandomFlickrContent);
+    });
+    </script>
+
+	<table width="100%"><tr><td width="95%" align="left"><div id="header__MODULE_ID__"></div></td><td width="5%" align="right" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td></tr>
+	<tr colspan="2"><td><div id="content__MODULE_ID__" class="contentClass"><center><I>Loading images...</I></center></div></td></tr>
+	</table>
+  ]]>
+    </Content>
+
+</Module>
