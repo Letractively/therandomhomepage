@@ -60,15 +60,15 @@
 		}
 
 		.arrow {
-			width:5%;
+			width:10%;
 			cursor: pointer;
 			color: darkblue;
 			font-weight: bold;
-			text-align: right;
+			/*text-align: right;*/
 		}
 
 		.header {
-			width:95%;
+			width:90%;
 			color: black;
 			font-weight: bold;
 			text-align: center;
@@ -82,6 +82,8 @@
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 
 	var rssFeedArr = new Array();
+
+	var prevIdx = -1;
 
 	var RssFeed = Class.create();
 
@@ -97,7 +99,14 @@
 	   },
 
 	   getImage:function() {
-		  return "<a id='lightboxAnc"+this.idx+"' startslideshow='true' forever='true' slideDuration='5' rel='lightbox[colorful]' href='"+this.contentURL+"'>"+extractBetween(this.desc,"<img",">")+"</a>";
+		  var imgHTML =  "<a id='lightboxAnc"+this.idx+"' style='display:none;' rel='lightbox["+prefs.getString("tags")+"]' href='"+this.contentURL+"' ";
+		  if (prefs.getInt("slideshow_delay") > 0)
+		  {
+				alert(" delay = "+prefs.getInt("slideshow_delay"));
+				imgHTML += " startslideshow='true' slideDuration='"+prefs.getInt("slideshow_delay")+"' forever='true' ";
+		  }
+		  imgHTML += " '>"+extractBetween(this.desc,"<img",">")+"</a>";
+		  return imgHTML;
 	   },
 
 	   getTitle:function() {
@@ -120,30 +129,56 @@
 				var desc = getChildNodeValueByNodeName(itemNode,"description");
 				var content = getChildNodeByNodeName(itemNode,"media:content").getAttribute("url");
 				var thumbnail = getChildNodeByNodeName(itemNode,"media:thumbnail").getAttribute("url");
-				rssFeedArr[i++] = new RssFeed(i,title,link,desc,content,thumbnail);
+				rssFeedArr[i] = new RssFeed(i,title,link,desc,content,thumbnail);
+				i++;
 	    });
 
 		if (nodes.length > 0)
 		{
 
-			var html = "";
+			var lightboxHTML = "";
 			rssFeedArr.each( function(rssFeed){
-				html += rssFeed.getImage();
+				lightboxHTML += rssFeed.getImage();
 			});
 
-			_gel("content__MODULE_ID__").innerHTML = html;
+			alert(" lightboxHTML = "+lightboxHTML);
+			var divContent = _gel("divRandomFlickrContent");
+			divContent.innerHTML = lightboxHTML;
+			//initLightbox();
+
+
+
+			// try window.onload
+			//window.onload = init;
 			initLightbox();
+			showRandomFlickrImage();
 
-
-			var randIdx = getRandomNo(nodes.length);
-			var anchorElement = _gel("lightboxAnc"+randIdx);
-			if (anchorElement)
-			{
-				alert("anchorElement.innerHTML = "+anchorElement.innerHTML);
-				Element.visible(anchorElement);
+			var arrowElement = _gel("arrow__MODULE_ID__");
+			arrowElement.innerHTML = "Next";
+			arrowElement.onclick = function() {
+				showRandomFlickrImage();
 			}
-			_gel("header__MODULE_ID__").innerHTML = rssFeedArr[randIdx].getTitle();
 		}
+	}
+
+	function showRandomFlickrImage(){
+		if (prevIdx > -1)
+		{
+			var prevAnchorElement = $('lightboxAnc'+prevIdx);
+			Element.hide(prevAnchorElement);
+		}
+
+		var randIdx = getRandomNo(rssFeedArr.length);
+		alert("randIdx = "+randIdx);
+		var ancElem = _gel('lightboxAnc'+randIdx);
+		if (ancElem)
+		{
+			alert("Showing anchorElement html = "+ancElem.innerHTML);
+			Element.show(ancElem);
+			_gel("header__MODULE_ID__").innerHTML = rssFeedArr[randIdx].getTitle();
+			prevIdx = randIdx;
+		}
+
 	}
 
 	function getChildNodeValueByNodeName(node,nodeNameStr){
@@ -187,12 +222,12 @@
 		_IG_FetchXmlContent(flickrFeedURL,xmlResponseHandler);
 	}
 
-    //_IG_RegisterOnloadHandler(initLightbox);
+    _IG_RegisterOnloadHandler(randomFlickrLoad);
 
     </script>
-    <div id="content83" class="contentClass"><a id="lightboxAnc1" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/143/317726966_f60131f33c_o.jpg"><img src="http://static.flickr.com/143/317726966_f60131f33c_m.jpg" alt="26 mars 2006" style="border: 1px solid rgb(221, 221, 221);" height="160" width="240"></a><a id="lightboxAnc2" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/123/317720642_c852505f0f_m.jpg"><img src="http://static.flickr.com/123/317720642_c852505f0f_m.jpg" alt="Sombrero Galaxy" style="border: 1px solid rgb(221, 221, 221);" height="180" width="240"></a><a id="lightboxAnc4" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/127/317692885_3ffe70b256_m.jpg"><img src="http://static.flickr.com/127/317692885_3ffe70b256_m.jpg" alt="World Trade Center Reflections" style="border: 1px solid rgb(221, 221, 221);" height="180" width="240"></a>
-        <a id="lightboxAnc6" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/120/317032772_000bcf69ab_o.jpg"><img src="http://static.flickr.com/120/317032772_000bcf69ab_m.jpg" alt="Butterfly" style="border: 1px solid rgb(221, 221, 221);" height="180" width="240"></a><a id="lightboxAnc7" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/124/317662547_467aae99b8_o.jpg"><img src="http://static.flickr.com/124/317662547_467aae99b8_m.jpg" alt="Magic colors" style="border: 1px solid rgb(221, 221, 221);" height="240" width="160"></a><a id="lightboxAnc8" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/127/317662286_bc0e894d0c_o.jpg"><img src="http://static.flickr.com/127/317662286_bc0e894d0c_m.jpg" alt="Yellow, orange, red, pink, ..." style="border: 1px solid rgb(221, 221, 221);" height="160" width="240"></a><a id="lightboxAnc9" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/132/317655079_65754598e3_o.jpg"><img src="http://static.flickr.com/132/317655079_65754598e3_m.jpg" alt="imminent" style="border: 1px solid rgb(221, 221, 221);" height="184" width="240"></a>
-        <a id="lightboxAnc11" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/141/317636239_a936c55a9d_o.jpg"><img src="http://static.flickr.com/141/317636239_a936c55a9d_m.jpg" alt="Florida Bracelet" style="border: 1px solid rgb(221, 221, 221);" height="180" width="240"></a><a id="lightboxAnc12" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/135/317619195_05861db7a5_m.jpg"><img src="http://static.flickr.com/135/317619195_05861db7a5_m.jpg" alt="" style="border: 1px solid rgb(221, 221, 221);" height="240" width="180"></a><a id="lightboxAnc13" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/124/317607471_32337d999c_o.jpg"><img src="http://static.flickr.com/124/317607471_32337d999c_m.jpg" alt="Fancy Gift Box" style="border: 1px solid rgb(221, 221, 221);" height="240" width="224"></a><a id="lightboxAnc14" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/126/317601894_2b56b28e19_m.jpg"><img src="http://static.flickr.com/126/317601894_2b56b28e19_m.jpg" alt="DJ's Diner" style="border: 1px solid rgb(221, 221, 221);" height="160" width="240"></a><a id="lightboxAnc15" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/132/317571305_1b01fa7441_o.png"><img src="http://static.flickr.com/132/317571305_1b01fa7441_m.jpg" alt="5ptz Interior Court2" style="border: 1px solid rgb(221, 221, 221);" height="65" width="240"></a><a id="lightboxAnc16" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/130/317569036_37a3fcd2eb_o.jpg"><img src="http://static.flickr.com/130/317569036_37a3fcd2eb_m.jpg" alt="Friday night traffic" style="border: 1px solid rgb(221, 221, 221);" height="160" width="240"></a><a id="lightboxAnc17" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/139/317568986_6c993f01c1_o.jpg"><img src="http://static.flickr.com/139/317568986_6c993f01c1_m.jpg" alt="Friday night traffic" style="border: 1px solid rgb(221, 221, 221);" height="160" width="240"></a><a id="lightboxAnc18" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/140/317568933_040d82db0f_o.jpg"><img src="http://static.flickr.com/140/317568933_040d82db0f_m.jpg" alt="Friday night traffic" style="border: 1px solid rgb(221, 221, 221);" height="160" width="240"></a><a id="lightboxAnc19" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/128/317568892_3cee1927ed_o.jpg"><img src="http://static.flickr.com/128/317568892_3cee1927ed_m.jpg" alt="Friday night traffic" style="border: 1px solid rgb(221, 221, 221);" height="160" width="240"></a><a id="lightboxAnc20" startslideshow="true" forever="true" slideduration="5" rel="lightbox[colorful]" href="http://static.flickr.com/123/317568864_b974e2c563_o.jpg"><img src="http://static.flickr.com/123/317568864_b974e2c563_m.jpg" alt="Friday night traffic" style="border: 1px solid rgb(221, 221, 221);" height="240" width="160"></a></div>
+	<table width="100%"><tr><td><div id="header__MODULE_ID__" class="header"></div></td><td align="right" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td></tr>
+	<tr colspan="2"><td><div id="divRandomFlickrContent" class="contentClass"><center><I>Loading...</I></center></div></td></tr>
+	</table>
   ]]>
   </Content>
 
