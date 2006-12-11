@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
     <ModulePrefs title="__UP_moduletitle__" directory_title="Random Wikipedia Article"
-                 title_url="http://www.TheRandomHomepage.com" description="Flip through random articles from Wikipedia in your favorite language.Currently supported in English, Deutsch, Español, Français, Italiano, Nederlands, 日本語, Polski, Português, Русский and Svenska."
+                 title_url="http://www.TheRandomHomepage.com"
+                 description="Flip through random articles from Wikipedia in your favorite language. Currently supported in English, Deutsch, Español, Français, Italiano, 日本語, Polski, Português, Русский and Svenska"
                  author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
                  thumbnail="http://www.therandomhomepage.com/google/gadgets/randomwiki/thumbnail.png"
                  screenshot="http://www.therandomhomepage.com/google/gadgets/randomwiki/screenshot.png">
@@ -10,7 +11,6 @@
         <Locale lang="es"/>
         <Locale lang="fr"/>
         <Locale lang="it"/>
-        <Locale lang="nl"/>
         <Locale lang="ja"/>
         <Locale lang="pl"/>
         <Locale lang="pt"/>
@@ -24,14 +24,14 @@
         <EnumValue value="es" display_value="Español"/>
         <EnumValue value="fr" display_value="Français"/>
         <EnumValue value="it" display_value="Italiano"/>
-        <EnumValue value="nl" display_value="Nederlands"/>
+        <!--<EnumValue value="nl" display_value="Nederlands"/>-->
         <EnumValue value="ja" display_value="日本語"/>
         <EnumValue value="pl" display_value="Polski"/>
         <EnumValue value="pt" display_value="Português"/>
         <EnumValue value="ru" display_value="Русский"/>
         <EnumValue value="sv" display_value="Svenska"/>
     </UserPref>
-	<!-- Last Updated : 11/20/2006 -->
+    <!-- Last Updated : 12/11/2006 -->
     <Content type="html"><![CDATA[
 <style type="text/css">
 a {
@@ -41,7 +41,10 @@ a {
 }
 a:visited { color: #5a3696; }
 a:active { color: Orange; }
-a:hover { text-decoration: underline; }
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
 a.stub { color: #772233; }
 img {
     border: none;
@@ -84,10 +87,22 @@ div.contentClass {
 	arrRandomWikipediaURL["sv"] = "http://sv.wikipedia.org/wiki/Special:Random";
 	arrRandomWikipediaURL["es"] = "http://es.wikipedia.org/wiki/Especial:Random";
 	arrRandomWikipediaURL["pt"] = "http://pt.wikipedia.org/wiki/Especial:Random";
-	arrRandomWikipediaURL["nl"] = "http://nl.wikipedia.org/wiki/Speciaal:Random";
 	arrRandomWikipediaURL["pl"] = "http://pl.wikipedia.org/wiki/Specjalna:Random";
 	arrRandomWikipediaURL["de"] = "http://de.wikipedia.org/wiki/Spezial:Random";
 	arrRandomWikipediaURL["ru"] = "http://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Random";
+
+	var arrFooterLimit = new Array();
+	arrFooterLimit["en"] = 'Retrieved from "<a href="';
+	arrFooterLimit["fr"] = 'Récupérée de « <a href="';
+	arrFooterLimit["ja"] = ' "<a href="';
+	arrFooterLimit["it"] = 'Estratto da "<a href="';
+	arrFooterLimit["sv"] = 'Den här artikeln är hämtad från <a href="';
+	arrFooterLimit["es"] = 'Obtenido de "<a href="';
+	arrFooterLimit["pt"] = 'Retirado de "<a href="';
+	arrFooterLimit["pl"] = 'Źródło: "<a href="';
+	arrFooterLimit["de"] = 'Von „<a href="';
+	arrFooterLimit["ru"] = 'Получено с "<a href="';
+
 
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var lang = null;
@@ -102,29 +117,75 @@ div.contentClass {
 	}
 
 	function fetchContentFromWikipedia(responseText) {
-         var actualURL = grep(responseText,'Retrieved from "<a href="','">http://');
+		 var actualURL = grep(responseText,arrFooterLimit[lang],'">http://');
          var title = grep(responseText,'<h1 class="firstHeading">','</h1>');
          setHTML("header__MODULE_ID__","<a title='"+title+"' target='_new' href='"+actualURL+"'><h3>"+title+"</h3></a>");
          setHTML("arrow__MODULE_ID__","<div title='Next Random Article' style='font-family: Arial, sans-serif;font-weight:bold;color:darkblue;cursor:pointer;' onClick='getRandomWiki__MODULE_ID__()'>&gt;&gt;&nbsp;&nbsp;</div>");
 
          var bodyContent = grep(responseText,'<div id="bodyContent">','<div class="printfooter">');
          var actualBodyContent = grep(bodyContent,'<p>','Saved in parser cache');
-         var replaceTargetRegex = 'target="_blank" href="http://'+lang+'.wikipedia.org';
-         actualBodyContent = actualBodyContent.replace(/href=\"/g, replaceTargetRegex);
+		 //internal links to open up in new browser
+         var replaceTargetStr = 'target="_blank" href="http://'+lang+'.wikipedia.org';
+		 actualBodyContent = actualBodyContent.replace(/href=\"/g, replaceTargetStr);
 
-         var replaceLinkRegexSearch = '/http:\/\/'+lang+'.wikipedia.orghttp/g';
-         actualBodyContent = actualBodyContent.replace(replaceLinkRegexSearch, 'http');
+		actualBodyContent = massageExternalLinks(actualBodyContent);
+
          actualBodyContent += " There was some error reading content from Wikipedia! <br/>Please try again later...-->";
 		 setHTML("content__MODULE_ID__",actualBodyContent);
 	}
 
+
+function massageExternalLinks(bodyContent){
+
+	     if (lang == "en")
+	     {
+			bodyContent = bodyContent.replace(/http:\/\/en.wikipedia.orghttp/g, 'http');
+	     }
+		 else if (lang == "fr")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/fr.wikipedia.orghttp/g, 'http');
+		 }
+		 else if (lang == "ja")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/ja.wikipedia.orghttp/g, 'http');
+		 }
+		 else if (lang == "it")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/it.wikipedia.orghttp/g, 'http');
+		 }
+		 else if (lang == "sv")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/sv.wikipedia.orghttp/g, 'http');
+		 }
+		 else if (lang == "es")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/es.wikipedia.orghttp/g, 'http');
+		 }
+		 else if (lang == "pt")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/pt.wikipedia.orghttp/g, 'http');
+		 }
+		 else if (lang == "pl")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/pl.wikipedia.orghttp/g, 'http');
+		 }
+		 else if (lang == "de")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/de.wikipedia.orghttp/g, 'http');
+		 }
+		 else if (lang == "ru")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/ru.wikipedia.orghttp/g, 'http');
+		 }
+		 return bodyContent;
+}
 
 // Function grep() starts here
 function grep(wholeStr, startsWith, endsWith)
 {
 	var grepStr = "";
 	var iFrom = wholeStr.indexOf(startsWith);
-	var iTo = wholeStr.indexOf(endsWith); 
+	var iTo = wholeStr.indexOf(endsWith);
 	iFrom += startsWith.length;
 	if (iTo > iFrom) {
 		grepStr = wholeStr.substring(iFrom, iTo);
