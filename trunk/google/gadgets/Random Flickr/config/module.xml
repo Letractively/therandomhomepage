@@ -12,26 +12,18 @@
                screenshot="http://www.therandomhomepage.com/google/gadget/images/screenshot.png"
           >
   </ModulePrefs>
-  <UserPref name="tags" display_name="Tags (comma separated values)" required="true" datatype="string" default_value="colorful"/>
+  <UserPref name="tags" display_name="Tags (comma separated)" required="true" datatype="string" default_value="colorful,travel"/>
   <UserPref name="transition_effect" display_name="Transition effect" datatype="enum" default_value="0">
    <EnumValue display_value="None"  value="-1" />
    <EnumValue display_value="Random"  value="0" />
    <EnumValue display_value="Blindown "  value="1" />
-   <EnumValue display_value="Blindup "  value="2" />
-   <EnumValue display_value="Highlight"  value="3" />
-   <EnumValue display_value="Dropout"  value="4" />
-   <EnumValue display_value="Shake"  value="5" />
-   <EnumValue display_value="Pulsate"  value="6" />
-   <EnumValue display_value="Squish"  value="7" />
-   <EnumValue display_value="Fold"  value="8" />
-   <EnumValue display_value="Grow"  value="9" />
-   <EnumValue display_value="Shrink"  value="10" />
-   <EnumValue display_value="Puff"  value="11" />
-   <EnumValue display_value="Slidedown"  value="12" />
-   <EnumValue display_value="Slideup"  value="13" />
-   <EnumValue display_value="Fade"  value="14" />
+   <EnumValue display_value="Highlight"  value="2" />
+   <EnumValue display_value="Shake"  value="3" />
+   <EnumValue display_value="Pulsate"  value="4" />
+   <EnumValue display_value="Grow"  value="5" />
+   <EnumValue display_value="Slidedown"  value="6" />
    </UserPref>
-  <UserPref name="slideshow_delay" display_name="Slideshow delay" datatype="enum" default_value="0">
+  <UserPref name="slideshow_delay" display_name="Slideshow delay (in seconds)" datatype="enum" default_value="0">
    <EnumValue display_value="No slideshow"  value="0" />
    <EnumValue value="5" />
    <EnumValue value="10" />
@@ -46,6 +38,11 @@
    <EnumValue value="55" />
    <EnumValue value="60" />
 </UserPref>
+<UserPref name="image_click_behaviour" display_name="On Image Click" datatype="enum" default_value="0">
+	<EnumValue display_value="Lightbox Effect"  value="0" />
+	<EnumValue display_value="Open Original Image"  value="1" />
+	<EnumValue display_value="Open Flickr link"  value="2" />
+</UserPref>
 
 <Content type="html-inline">
   <![CDATA[
@@ -59,14 +56,13 @@
 			cursor: pointer;
 		}
 
-		.arrow {
+		#divRandomFlickrControl {
 			cursor: pointer;
 			color: darkblue;
 			font-weight: bold;
-			/*text-align: right;*/
 		}
 
-		.header {
+		#divRandomFlickrHeader {
 			color: black;
 			font-weight: bold;
 			text-align: center;
@@ -84,6 +80,19 @@
 
 	var prevIdx = -1;
 
+	var controlElement = null;
+
+	var shouldBeRunning = true;
+
+	var TRANSITION_EFFECT_NONE   = -1;
+	var TRANSITION_EFFECT_RANDOM =  0;
+	var TRANSITION_EFFECT_BLINDOWN = 1;
+	var TRANSITION_EFFECT_HIGHLIGHT = 2;
+	var TRANSITION_EFFECT_SHAKE = 3;
+	var TRANSITION_EFFECT_PULSATE = 4;
+	var TRANSITION_EFFECT_GROW = 5;
+	var TRANSITION_EFFECT_SLIDEDOWN = 6;
+
 	var RssFeed = Class.create();
 
 	RssFeed.prototype = {
@@ -98,7 +107,7 @@
 	   },
 
 	   getImage:function() {
-		  var imgHTML =  "<A title='"+this.title+"' id='lightboxAnc"+this.idx+"' style='display: none;' rel='lightbox["+prefs.getString("tags")+"]' href='"+this.contentURL+"' ";
+		  var imgHTML =  "<a title='"+this.title+"' id='lightboxAnc"+this.idx+"' style='display: none;' rel='lightbox["+prefs.getString("tags")+"]' href='"+this.contentURL+"' ";
 		  if (prefs.getInt("slideshow_delay") > 0)
 		  {
 				imgHTML += " startslideshow='true' slideDuration='"+prefs.getInt("slideshow_delay")+"' forever='true' ";
@@ -106,7 +115,7 @@
 		  else {
 			imgHTML += " startslideshow='false' ";
 		  }
-		  imgHTML += " >"+extractBetween(this.desc,"<img",">")+"</A>";
+		  imgHTML += " >"+extractBetween(this.desc,"<img",">")+"</a>";
 		  return imgHTML;
 	   },
 
@@ -143,7 +152,7 @@
 			});
 
 
-			var divContent = _gel("divRandomFlickrContent");
+			var divContent = $('divRandomFlickrContent');
 
 			if (divContent)
 			{
@@ -157,14 +166,18 @@
 
 			showRandomFlickrImage();
 
+			controlElement = $('divRandomFlickrControl');
 			if (prefs.getInt("slideshow_delay") > 0)
 			{
 				new PeriodicalExecuter(showRandomFlickrImage, prefs.getInt("slideshow_delay"));
+				Element.update(controlElement,"<img src='http://www.therandomhomepage.com/images/lightbox/stop.gif' onclick='stopSlideShow();' title='Stop Slideshow'/>");
+
+				$(divRandomFlickrContent).onclick = stopSlideShow;
 			}
 			else {
-				var arrowElement = _gel("arrow__MODULE_ID__");
-				arrowElement.innerHTML = "&gt;&gt;";
-				arrowElement.onclick = function() {
+				Element.update(controlElement,"&gt;&gt;");
+				controlElement.title = "Next Random Image";
+				controlElement.onclick = function() {
 					showRandomFlickrImage();
 				}
 			}
@@ -172,22 +185,65 @@
 	}
 
 	function showRandomFlickrImage(){
-
-		if (prevIdx > -1)
+		if (shouldBeRunning)
 		{
-			var prevAnchorElement = $('lightboxAnc'+prevIdx);
-			Element.hide(prevAnchorElement);
-		}
+			if (prevIdx > -1)
+			{
+				var prevAnchorElement = $('lightboxAnc'+prevIdx);
+				Element.hide(prevAnchorElement);
+			}
 
-		var randIdx = getRandomNo(rssFeedArr.length);
-		var ancElem = _gel('lightboxAnc'+randIdx);
-		if (ancElem)
+			var randIdx = getRandomNo(rssFeedArr.length);
+			var ancElem = $('lightboxAnc'+randIdx);
+			if (ancElem)
+			{
+				$("divRandomFlickrHeader").innerHTML = rssFeedArr[randIdx].getTitle();
+				Element.show(ancElem);
+				applyEffect($("divRandomFlickrContent"),prefs.getInt("transition_effect"));
+				prevIdx = randIdx;
+			}
+		}
+	}
+
+	function callBackOnFinish(obj){
+		try
 		{
-			Element.show(ancElem);
-			_gel("header__MODULE_ID__").innerHTML = rssFeedArr[randIdx].getTitle();
-			prevIdx = randIdx;
+		   for(var i in obj.effects){
+			 if (!Element.visible(obj.effects[i]['element']))
+			 {
+				Element.show(obj.effects[i]['element']);
+			 }
+		   }
 		}
+		catch (e)
+		{
+		}
+    }
 
+	function applyEffect(element, effectsConstant){
+		switch(effectsConstant){
+			case TRANSITION_EFFECT_RANDOM:
+				applyEffect(element,getRandomNo(TRANSITION_EFFECT_SLIDEDOWN));
+				break;
+			case TRANSITION_EFFECT_BLINDOWN:
+				new Effect.BlindDown(element,{afterFinish: callBackOnFinish});
+				break;
+			case TRANSITION_EFFECT_HIGHLIGHT:
+				new Effect.Highlight(element,{afterFinish: callBackOnFinish});
+				break;
+			case TRANSITION_EFFECT_SHAKE:
+				new Effect.Shake(element,{afterFinish: callBackOnFinish});
+				break;
+			case TRANSITION_EFFECT_PULSATE:
+				new Effect.Pulsate(element,{afterFinish: callBackOnFinish});
+				break;
+			case TRANSITION_EFFECT_GROW:
+				new Effect.Grow(element,{afterFinish: callBackOnFinish});
+				break;
+			case TRANSITION_EFFECT_SLIDEDOWN:
+				new Effect.SlideDown(element,{afterFinish: callBackOnFinish});
+				break;
+		}
 	}
 
 	function getChildNodeValueByNodeName(node,nodeNameStr){
@@ -226,6 +282,22 @@
 		return "";
 	}
 
+	function stopSlideShow(){
+		if (shouldBeRunning)
+		{
+			Element.update(controlElement,"<img src='http://www.therandomhomepage.com/images/lightbox/start.gif' onclick='startSlideShow();' title='Start Slideshow'/>");
+			shouldBeRunning = false;
+		}
+	}
+
+	function startSlideShow(){
+		if (!shouldBeRunning)
+		{
+			Element.update(controlElement,"<img src='http://www.therandomhomepage.com/images/lightbox/stop.gif' onclick='stopSlideShow();' title='Stop Slideshow'/>");
+			shouldBeRunning = true;
+		}
+	}
+
 	function randomFlickrLoad(){
 		var flickrFeedURL = "http://www.flickr.com/services/feeds/photos_public.gne?tags="+prefs.getString("tags")+"&format=rss_200";
 		_IG_FetchXmlContent(flickrFeedURL,xmlResponseHandler);
@@ -234,10 +306,9 @@
     _IG_RegisterOnloadHandler(randomFlickrLoad);
 
     </script>
-	<table width="100%"><tr><td><div id="header__MODULE_ID__" class="header"></div></td><td align="right" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td></tr>
+	<table width="100%"><tr><td><div id="divRandomFlickrHeader"></div></td><td align="right" valign="top"><div id="divRandomFlickrControl"></div></td></tr>
 	<tr colspan="2"><td><div id="divRandomFlickrContent"><center><I>Loading...</I></center></div></td></tr>
 	</table>
   ]]>
   </Content>
-
 </Module>

@@ -62,8 +62,12 @@ public class RandomFlickrWidget extends RandomWidget {
     }
 
     private static native void callLightbox() /*-{
-        if ($wnd.callLightbox) {
-            $wnd.callLightbox();
+        alert("calling initLightbox function directly ");
+        if ($wnd.initLightbox()) {
+            $wnd.initLightbox();
+        }
+        else {
+            alert("callLightbox function not found");
         }
     }-*/;
 
