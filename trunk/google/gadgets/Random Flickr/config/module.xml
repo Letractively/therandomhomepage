@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <!-- Last updated 12/6/2006 -->
-  <ModulePrefs title="Random Flickr" title_url="http://www.therandomhomepage.com"
+  <ModulePrefs title="Random Flickr Effect" title_url="http://www.therandomhomepage.com"
 			   height="350"
                author="Siddique Hameed"
                description="Flip through or view slideshow of random images from Flickr with amazing visual effects. Click on the image to view lightbox effect."
@@ -60,7 +60,6 @@
 		}
 
 		.arrow {
-			/*width:10%;*/
 			cursor: pointer;
 			color: darkblue;
 			font-weight: bold;
@@ -68,14 +67,14 @@
 		}
 
 		.header {
-			/*width:90%;*/
 			color: black;
 			font-weight: bold;
 			text-align: center;
 		}
-		.contentClass {
+		#divRandomFlickrContent {
 			text-align: center;
 		}
+
 	</style>
 	<script type="text/javascript">
 
@@ -99,7 +98,7 @@
 	   },
 
 	   getImage:function() {
-		  var imgHTML =  "<a title='"+this.title+"' id='lightboxAnc"+this.idx+"' style='display:none;' rel='lightbox["+prefs.getString("tags")+"]' href='"+this.contentURL+"' ";
+		  var imgHTML =  "<A title='"+this.title+"' id='lightboxAnc"+this.idx+"' style='display: none;' rel='lightbox["+prefs.getString("tags")+"]' href='"+this.contentURL+"' ";
 		  if (prefs.getInt("slideshow_delay") > 0)
 		  {
 				imgHTML += " startslideshow='true' slideDuration='"+prefs.getInt("slideshow_delay")+"' forever='true' ";
@@ -107,7 +106,7 @@
 		  else {
 			imgHTML += " startslideshow='false' ";
 		  }
-		  imgHTML += " '>"+extractBetween(this.desc,"<img",">")+"</a>";
+		  imgHTML += " >"+extractBetween(this.desc,"<img",">")+"</A>";
 		  return imgHTML;
 	   },
 
@@ -143,14 +142,14 @@
 				lightboxHTML += rssFeed.getImage();
 			});
 
+
 			var divContent = _gel("divRandomFlickrContent");
-			divContent.innerHTML = lightboxHTML;
-			//initLightbox();
 
+			if (divContent)
+			{
+				Element.update(divContent,lightboxHTML);
+			}
 
-
-			// try window.onload
-			//window.onload = init;
 			Element.remove("overlay");
 			Element.remove("lightbox");
 
@@ -158,15 +157,22 @@
 
 			showRandomFlickrImage();
 
-			var arrowElement = _gel("arrow__MODULE_ID__");
-			arrowElement.innerHTML = "&gt;&gt;";
-			arrowElement.onclick = function() {
-				showRandomFlickrImage();
+			if (prefs.getInt("slideshow_delay") > 0)
+			{
+				new PeriodicalExecuter(showRandomFlickrImage, prefs.getInt("slideshow_delay"));
+			}
+			else {
+				var arrowElement = _gel("arrow__MODULE_ID__");
+				arrowElement.innerHTML = "&gt;&gt;";
+				arrowElement.onclick = function() {
+					showRandomFlickrImage();
+				}
 			}
 		}
 	}
 
 	function showRandomFlickrImage(){
+
 		if (prevIdx > -1)
 		{
 			var prevAnchorElement = $('lightboxAnc'+prevIdx);
@@ -177,7 +183,6 @@
 		var ancElem = _gel('lightboxAnc'+randIdx);
 		if (ancElem)
 		{
-			//alert("Showing anchorElement html = "+ancElem.innerHTML);
 			Element.show(ancElem);
 			_gel("header__MODULE_ID__").innerHTML = rssFeedArr[randIdx].getTitle();
 			prevIdx = randIdx;
@@ -230,7 +235,7 @@
 
     </script>
 	<table width="100%"><tr><td><div id="header__MODULE_ID__" class="header"></div></td><td align="right" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td></tr>
-	<tr colspan="2"><td><div id="divRandomFlickrContent" class="contentClass"><center><I>Loading...</I></center></div></td></tr>
+	<tr colspan="2"><td><div id="divRandomFlickrContent"><center><I>Loading...</I></center></div></td></tr>
 	</table>
   ]]>
   </Content>
