@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="TheRandomHomepage-Java" default="">
+
+    <property file="user.properties"/>
+
+    <target name="deployRandomFlickrGadget" description="FTP">
+        <ftp server="${ftp_host}"
+             remotedir="dev/gadgets/RandomFlickr"
+             userid="${user_id}"
+             password="${password}"
+             depends="yes"
+             verbose="yes"   
+                >
+            <fileset dir="out/therandomhomepage.RandomFlickr"/>
+        </ftp>
+    </target>
+
+    <target name="deployLightbox" description="FTP">
+        <ftp server="${ftp_host}"
+             remotedir="dev/google/gadgets/RandomFlickr"
+             userid="${user_id}"
+             password="${password}"
+             depends="yes"
+             verbose="yes"
+                >
+            <fileset dir="C:\downloads\lightbox2.02"/>
+        </ftp>
+    </target>
+
+</project>

@@ -22,14 +22,13 @@ public class EffectsHelper {
     public static final int DROPOUT = 4;
     public static final int SHAKE = 5;
     public static final int PULSATE = 6;
-    public static final int SQUISH = 7;
-    public static final int FOLD = 8;
-    public static final int GROW = 9;
-    public static final int SHRINK = 10;
-    public static final int PUFF = 11;
-    public static final int SLIDEDOWN = 12;
-    public static final int SLIDEUP = 13;
-    public static final int FADE = 14;
+    public static final int FOLD = 7;
+    public static final int GROW = 8;
+    public static final int SHRINK = 9;
+    public static final int PUFF = 10;
+    public static final int SLIDEDOWN = 11;
+    public static final int SLIDEUP = 12;
+    public static final int FADE = 13;
     private static final String AFTER_FINISH_EFFECT_OPTION = "afterFinish";
 
 
@@ -61,9 +60,6 @@ public class EffectsHelper {
                     break;
                 case PULSATE:
                     Effect.pulsate(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
-                    break;
-                case SQUISH:
-                    Effect.squish(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
                     break;
                 case PUFF:
                     Effect.puff(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});

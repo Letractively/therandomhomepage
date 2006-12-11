@@ -6,8 +6,8 @@
     <public path="randomflickrpublic"/>
     <entry-point class='therandomhomepage.randomflickrclient.RandomFlickr'/>
 
-   <!--
-   <script src="/js/prototype.js">
+
+   <script src="js/prototype.js">
      <![CDATA[
      if ($wnd.$)
        return true;
@@ -15,7 +15,7 @@
        return false;
    ]]>
    </script>
-   <script src="/js/effects.js">
+   <script src="js/effects.js">
      <![CDATA[
      if ($wnd.Effect)
        return true;
@@ -23,7 +23,7 @@
        return false;
    ]]>
    </script>
-   <script src="/js/lightbox.js">
+   <script src="js/lightboxForIFrame.js">
      <![CDATA[
      if ($wnd.Effect)
        return true;
@@ -31,7 +31,6 @@
        return false;
    ]]>
    </script>
-   -->
 
     <!--
     <servlet path="/js/prototype.js" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
