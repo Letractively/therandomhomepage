@@ -12,7 +12,7 @@
                screenshot="http://www.therandomhomepage.com/google/gadget/images/screenshot.png"
           >
   </ModulePrefs>
-  <UserPref name="tags" display_name="Tags (comma separated)" required="true" datatype="string" default_value="colorful,travel"/>
+  <UserPref name="tags" display_name="Tags (comma separated)" required="true" datatype="string" default_value="colorful,travel,nature"/>
   <UserPref name="transition_effect" display_name="Transition effect" datatype="enum" default_value="0">
    <EnumValue display_value="None"  value="-1" />
    <EnumValue display_value="Random"  value="0" />
@@ -107,7 +107,20 @@
 	   },
 
 	   getImage:function() {
-		  var imgHTML =  "<a title='"+this.title+"' id='lightboxAnc"+this.idx+"' style='display: none;' rel='lightbox["+prefs.getString("tags")+"]' href='"+this.contentURL+"' ";
+		  var imgHTML =  "<a title='"+this.title+"' target='_new' id='lightboxAnc"+this.idx+"' style='display: none;' ";
+
+		  if (prefs.getInt("image_click_behaviour") == 2) {
+			imgHTML += " href='"+this.link+"' ";
+		  }
+		  else {
+			imgHTML += " href='"+this.contentURL+"' ";
+		  }
+
+		  if (prefs.getInt("image_click_behaviour") == 0)
+		  {
+			imgHTML += " rel='lightbox["+prefs.getString("tags")+"]' ";
+		  }
+
 		  if (prefs.getInt("slideshow_delay") > 0)
 		  {
 				imgHTML += " startslideshow='true' slideDuration='"+prefs.getInt("slideshow_delay")+"' forever='true' ";
@@ -159,10 +172,12 @@
 				Element.update(divContent,lightboxHTML);
 			}
 
-			Element.remove("overlay");
-			Element.remove("lightbox");
-
-			initLightbox();
+			if (prefs.getInt("image_click_behaviour") == 0)
+			{
+				Element.remove("overlay");
+				Element.remove("lightbox");
+				initLightbox();
+			}
 
 			showRandomFlickrImage();
 
