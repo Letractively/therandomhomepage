@@ -4,8 +4,8 @@
   <ModulePrefs title="__UP_moduletitle__" directory_title="Random Flickring" title_url="http://www.therandomhomepage.com"
 			   height="350"
                author="Siddique Hameed"
-               description="Randomly flip through tagged pictures from Flickr or view them as slideshows in various visual effects.
-			   Click on the picture to see 'Lightbox' effect. Mouse over Lightbox image's top right or top left for 'next' or 'previous' image."
+               description="Flip through tagged pictures from Flickr or view them as slideshows in various visual effects.
+			   Click on the image to see 'Lightbox' effect. Mouse over Lightbox image's top right or top left for 'next' or 'previous' image."
                author_email="siddii+randomhomepage@gmail.com"
                render_inline="optional"
                scrolling="false"
