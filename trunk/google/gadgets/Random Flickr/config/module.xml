@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <!-- Last updated 12/6/2006 -->
-  <ModulePrefs title="Random Flickr Effect" title_url="http://www.therandomhomepage.com"
+  <!-- Last updated 12/12/2006 -->
+  <ModulePrefs title="__UP_moduletitle__" directory_title="Random Flickring" title_url="http://www.therandomhomepage.com"
 			   height="350"
                author="Siddique Hameed"
-               description="Flip through or view slideshow of random images from Flickr with amazing visual effects. Click on the image to view lightbox effect."
+               description="Flip through tagged pictures from Flickr or view them as slideshows in amazing visual effects.
+			   Click on the image to see Lightbox effect. Hover on top right of Lightbox image to move next or top left for previous image."
                author_email="siddii+randomhomepage@gmail.com"
                render_inline="optional"
                scrolling="false"
+			   singleton="true"
                thumbnail="http://www.therandomhomepage.com/google/gadget/images/thumbnail.png"
                screenshot="http://www.therandomhomepage.com/google/gadget/images/screenshot.png"
           >
   </ModulePrefs>
+  <UserPref name="moduletitle" display_name="Title" default_value="Random Flickring" required="true"/>
   <UserPref name="tags" display_name="Tags (comma separated)" required="true" datatype="string" default_value="colorful,travel,nature"/>
   <UserPref name="transition_effect" display_name="Transition effect" datatype="enum" default_value="0">
    <EnumValue display_value="None"  value="-1" />
@@ -80,6 +83,11 @@
 
 	var prevIdx = -1;
 
+	var tags = "";
+	var transitionEffect = 0;
+	var imageClickBehaviour = 0;
+	var slideshowDelay = 0;
+
 	var controlElement = null;
 
 	var shouldBeRunning = true;
@@ -109,21 +117,21 @@
 	   getImage:function() {
 		  var imgHTML =  "<a title='"+this.title+"' target='_new' id='lightboxAnc"+this.idx+"' style='display: none;' ";
 
-		  if (prefs.getInt("image_click_behaviour") == 2) {
+		  if (imageClickBehaviour == 2) {
 			imgHTML += " href='"+this.link+"' ";
 		  }
 		  else {
 			imgHTML += " href='"+this.contentURL+"' ";
 		  }
 
-		  if (prefs.getInt("image_click_behaviour") == 0)
+		  if (imageClickBehaviour == 0)
 		  {
-			imgHTML += " rel='lightbox["+prefs.getString("tags")+"]' ";
+			imgHTML += " rel='lightbox["+tags+"]' ";
 		  }
 
-		  if (prefs.getInt("slideshow_delay") > 0)
+		  if (slideshowDelay > 0)
 		  {
-				imgHTML += " startslideshow='true' slideDuration='"+prefs.getInt("slideshow_delay")+"' forever='true' ";
+				imgHTML += " startslideshow='true' slideDuration='"+slideshowDelay+"' forever='true' ";
 		  }
 		  else {
 			imgHTML += " startslideshow='false' ";
@@ -135,7 +143,6 @@
 	   getTitle:function() {
 		  return this.title;
 	   }
-
 	};
 
 	function getRandomNo(upperBound){
@@ -146,6 +153,7 @@
 		var items = response.getElementsByTagName("item");
 		var nodes = $A(items);
 		var i = 0;
+
 		nodes.each(function(itemNode){
 				var title = getChildNodeValueByNodeName(itemNode,"title");
 				var link = getChildNodeValueByNodeName(itemNode,"link");
@@ -172,7 +180,7 @@
 				Element.update(divContent,lightboxHTML);
 			}
 
-			if (prefs.getInt("image_click_behaviour") == 0)
+			if (imageClickBehaviour == 0)
 			{
 				Element.remove("overlay");
 				Element.remove("lightbox");
@@ -182,9 +190,9 @@
 			showRandomFlickrImage();
 
 			controlElement = $('divRandomFlickrControl');
-			if (prefs.getInt("slideshow_delay") > 0)
+			if (slideshowDelay > 0)
 			{
-				new PeriodicalExecuter(showRandomFlickrImage, prefs.getInt("slideshow_delay"));
+				new PeriodicalExecuter(showRandomFlickrImage, slideshowDelay);
 				Element.update(controlElement,"<img src='http://www.therandomhomepage.com/images/lightbox/stop.gif' onclick='stopSlideShow();' title='Stop Slideshow'/>");
 
 				$(divRandomFlickrContent).onclick = stopSlideShow;
@@ -196,6 +204,9 @@
 					showRandomFlickrImage();
 				}
 			}
+		}
+		else {
+			$('divRandomFlickrContent').innerHTML = "<center><I>Error retrieving pictures from Flickr! <br/>Please verify the tag names and try again later.</I></center>";
 		}
 	}
 
@@ -209,12 +220,13 @@
 			}
 
 			var randIdx = getRandomNo(rssFeedArr.length);
+
 			var ancElem = $('lightboxAnc'+randIdx);
 			if (ancElem)
 			{
 				$("divRandomFlickrHeader").innerHTML = rssFeedArr[randIdx].getTitle();
 				Element.show(ancElem);
-				applyEffect($("divRandomFlickrContent"),prefs.getInt("transition_effect"));
+				applyEffect($("divRandomFlickrContent"),transitionEffect);
 				prevIdx = randIdx;
 			}
 		}
@@ -226,7 +238,8 @@
 		   for(var i in obj.effects){
 			 if (!Element.visible(obj.effects[i]['element']))
 			 {
-				Element.show(obj.effects[i]['element']);
+				//Element.show(obj.effects[i]['element']);
+				new Effect.Appear(obj.effects[i]['element']);
 			 }
 		   }
 		}
@@ -283,7 +296,6 @@
 		 }
 	}
 
-
 	function extractBetween(str,startsWith,endsWith) {
 		var startIdx =  str.indexOf(startsWith);
 		if (startIdx != -1)
@@ -314,13 +326,23 @@
 	}
 
 	function randomFlickrLoad(){
-		var flickrFeedURL = "http://www.flickr.com/services/feeds/photos_public.gne?tags="+prefs.getString("tags")+"&format=rss_200";
+		tags = prefs.getString("tags");
+		transitionEffect = prefs.getInt("transition_effect");
+		imageClickBehaviour = prefs.getInt("image_click_behaviour");
+		slideshowDelay = prefs.getInt("slideshow_delay");
+		var flickrFeedURL = "http://www.flickr.com/services/feeds/photos_public.gne?tags="+tags+"&format=rss_200";
 		_IG_FetchXmlContent(flickrFeedURL,xmlResponseHandler);
 	}
 
     _IG_RegisterOnloadHandler(randomFlickrLoad);
 
     </script>
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+	_uacct = "UA-941159-1";
+	urchinTracker();
+	</script>
 	<table width="100%"><tr><td><div id="divRandomFlickrHeader"></div></td><td align="right" valign="top"><div id="divRandomFlickrControl"></div></td></tr>
 	<tr colspan="2"><td><div id="divRandomFlickrContent"><center><I>Loading...</I></center></div></td></tr>
 	</table>
