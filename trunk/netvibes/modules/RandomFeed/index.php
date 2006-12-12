@@ -76,7 +76,7 @@
 		 {
 			if (getValue("up_autoplay") != "on")
 			{
-				setToolTip(this, 'Click on the arrow (&gt;&gt;) to see next random item.');
+				setToolTip(this, 'Click on the arrows (&gt;&gt;) to see next random item.');
 			}
 		 }
 	 }
