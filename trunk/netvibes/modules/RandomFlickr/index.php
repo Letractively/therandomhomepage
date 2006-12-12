@@ -21,6 +21,10 @@
 	line-height: 0;
 	}
 
+a:hover{
+	border-bottom: none;
+}
+
 #lightbox a img{ border: none; }
 
 #outerImageContainer{

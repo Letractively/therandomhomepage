@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="http://www.netvibes.com/api/0.3/style.css" />
   <script type="text/javascript" src="http://www.netvibes.com/api/0.3/emulation.js"></script>
 
-<?php 
+<?php
     $height = "400";
 	if(!empty($_COOKIE['height'])) {
 		$height = $_COOKIE['height'];
