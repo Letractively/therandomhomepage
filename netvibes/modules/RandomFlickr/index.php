@@ -10,721 +10,939 @@
 -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="stylesheet" type="text/css" href="http://www.netvibes.com/api/0.3/style.css"/>
-<style type="text/css">
-#lightbox{
-	position: absolute;
-	top: 40px;
-	left: 0;
-	width: 100%;
-	z-index: 100;
-	text-align: center;
-	line-height: 0;
-	}
-
-a:hover{
-	border-bottom: none;
-}
-
-#lightbox a img{ border: none; }
-
-#outerImageContainer{
-	position: relative;
-	background-color: #fff;
-	width: 250px;
-	height: 250px;
-	margin: 0 auto;
-	}
-
-#imageContainer{
-	padding: 10px;
-	}
-
-#loading{
-	position: absolute;
-	top: 40%;
-	left: 0%;
-	height: 25%;
-	width: 100%;
-	text-align: center;
-	line-height: 0;
-	}
-#hoverNav{
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 10;
-	}
-#imageContainer>#hoverNav{ left: 0;}
-#hoverNav a{ outline: none;}
-
-#prevLink, #nextLink{
-	width: 49%;
-	height: 100%;
-	background: transparent url(http://www.therandomhomepage.com/images/lightbox/blank.gif) no-repeat; /* Trick IE into showing hover */
-	display: block;
-	}
-#prevLink { left: 0; float: left;}
-#nextLink { right: 0; float: right;}
-#prevLink:hover, #prevLink:visited:hover { background: url(http://www.therandomhomepage.com/images/lightbox/prevlabel.gif) left 15% no-repeat; }
-#nextLink:hover, #nextLink:visited:hover { background: url(http://www.therandomhomepage.com/images/lightbox/nextlabel.gif) right 15% no-repeat; }
-
-
-#imageDataContainer{
-	font: 10px Verdana, Helvetica, sans-serif;
-	background-color: #fff;
-	margin: 0 auto;
-	line-height: 1.4em;
-	}
-
-#imageData{
-	padding:0 10px;
-	}
-#imageData #imageDetails{ width: 40%; float: left; text-align: left; }
-#imageData #caption{ font-weight: bold;	}
-#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}
-#imageData #flashPlayer{ float: right; }
-#imageData #slideshowLink{ width: 34px; float: right;  padding-bottom: 1.3em;position: relative; top: 5px}
-#imageData #bottomNavClose{ width: 34px; float: right;  padding-bottom: 1.3em; position: relative; top: 5px}
-
-#overlay{
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 90;
-	width: 100%;
-	height: 500px;
-	background-color: #000;
-	filter:alpha(opacity=60);
-	-moz-opacity: 0.6;
-	opacity: 0.6;
-	}
-
-
-.clearfix:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-	}
-
-* html>body .clearfix {
-	display: inline-block;
-	width: 100%;
-	}
-
-* html .clearfix {
-	/* Hides from IE-mac \*/
-	height: 1%;
-	/* End hide from IE-mac */
-	}
-
-        img {
-			border-style: none;
-			cursor: pointer;
-		}
-
-		#divRandomFlickrControl {
-			cursor: pointer;
-			color: darkblue;
-			font-weight: bold;
-		}
-
-		#divRandomFlickrHeader {
-			color: black;
-			font-weight: bold;
-			text-align: center;
-		}
-		#divRandomFlickrContent {
-			text-align: center;
-		}
-</style>
-
 <script type="text/javascript" src="http://www.netvibes.com/api/0.3/emulation.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.netvibes.com/api/0.3/style.css"/>
+<style type="text/css">
+	img {
+		border-style: none;
+		cursor: pointer;
+	}
 
-<!-- Netvibes doesn't support external scripts, so I copied this from http://www.google-analytics.com/urchin.js -->
+	#divRandomFlickrControl {
+		cursor: pointer;
+		color: darkblue;
+		font-weight: bold;
+	}
+
+	#divRandomFlickrHeader {
+		color: black;
+		font-weight: bold;
+		text-align: center;
+	}
+	#divRandomFlickrContent {
+		text-align: center;
+	}
+</style>
 <script type="text/javascript">
-//-- Google Analytics Urchin Module
-//-- Copyright 2005 Google, All Rights Reserved.
+<![CDATA[
+// Copyright (c) 2005 Thomas Fuchs (http://script.aculo.us, http://mir.aculo.us)
+// Contributors:
+//  Justin Palmer (http://encytemedia.com/)
+//  Mark Pilgrim (http://diveintomark.org/)
+//  Martin Bialasinki
+//
+// See scriptaculous.js for full license.
 
-//-- Urchin On Demand Settings ONLY
-var _uacct="";			// set up the Urchin Account
-var _userv=1;			// service mode (0=local,1=remote,2=both)
+/* ------------- element ext -------------- */
 
-//-- UTM User Settings
-var _ufsc=1;			// set client info flag (1=on|0=off)
-var _udn="auto";		// (auto|none|domain) set the domain name for cookies
-var _uhash="on";		// (on|off) unique domain hash for cookies
-var _utimeout="1800";   	// set the inactive session timeout in seconds
-var _ugifpath="/__utm.gif";	// set the web path to the __utm.gif file
-var _utsp="|";			// transaction field separator
-var _uflash=1;			// set flash version detect option (1=on|0=off)
-var _utitle=1;			// set the document title detect option (1=on|0=off)
-var _ulink=0;			// enable linker functionality (1=on|0=off)
-var _uanchor=0;			// enable use of anchors for campaign (1=on|0=off)
-var _utcp="/";			// the cookie path for tracking
-var _usample=100;		// The sampling % of visitors to track (1-100).
-
-//-- UTM Campaign Tracking Settings
-var _uctm=1;			// set campaign tracking module (1=on|0=off)
-var _ucto="15768000";		// set timeout in seconds (6 month default)
-var _uccn="utm_campaign";	// name
-var _ucmd="utm_medium";		// medium (cpc|cpm|link|email|organic)
-var _ucsr="utm_source";		// source
-var _uctr="utm_term";		// term/keyword
-var _ucct="utm_content";	// content
-var _ucid="utm_id";		// id number
-var _ucno="utm_nooverride";	// don't override
-
-//-- Auto/Organic Sources and Keywords
-var _uOsr=new Array();
-var _uOkw=new Array();
-_uOsr[0]="google";	_uOkw[0]="q";
-_uOsr[1]="yahoo";	_uOkw[1]="p";
-_uOsr[2]="msn";		_uOkw[2]="q";
-_uOsr[3]="aol";		_uOkw[3]="query";
-_uOsr[4]="aol";		_uOkw[4]="encquery";
-_uOsr[5]="lycos";	_uOkw[5]="query";
-_uOsr[6]="ask";		_uOkw[6]="q";
-_uOsr[7]="altavista";	_uOkw[7]="q";
-_uOsr[8]="search";	_uOkw[8]="q";
-_uOsr[9]="netscape";	_uOkw[9]="s";
-_uOsr[10]="cnn";	_uOkw[10]="query";
-_uOsr[11]="looksmart";	_uOkw[11]="qt";
-_uOsr[12]="about";	_uOkw[12]="terms";
-_uOsr[13]="mamma";	_uOkw[13]="query";
-_uOsr[14]="alltheweb";	_uOkw[14]="q";
-_uOsr[15]="gigablast";	_uOkw[15]="q";
-_uOsr[16]="voila";	_uOkw[16]="kw";
-_uOsr[17]="virgilio";	_uOkw[17]="qs";
-_uOsr[18]="live";	_uOkw[18]="q";
-_uOsr[19]="baidu";	_uOkw[19]="wd";
-_uOsr[20]="alice";	_uOkw[20]="qs";
-_uOsr[21]="seznam";	_uOkw[21]="w";
-_uOsr[22]="yandex";	_uOkw[22]="text";
-_uOsr[23]="najdi";	_uOkw[23]="q";
-
-//-- Auto/Organic Keywords to Ignore
-var _uOno=new Array();
-//_uOno[0]="urchin";
-//_uOno[1]="urchin.com";
-//_uOno[2]="www.urchin.com";
-
-//-- Referral domains to Ignore
-var _uRno=new Array();
-//_uRno[0]=".urchin.com";
-
-//-- **** Don't modify below this point ***
-var _uff,_udh,_udt,_ubl=0,_udo="",_uu,_ufns=0,_uns=0,_ur="-",_ufno=0,_ust=0,_ubd=document,_udl=_ubd.location,_udlh="",_uwv="1";
-var _ugifpath2="http://www.google-analytics.com/__utm.gif";
-if (_udl.hash) _udlh=_udl.href.substring(_udl.href.indexOf('#'));
-if (_udl.protocol=="https:") _ugifpath2="https://ssl.google-analytics.com/__utm.gif";
-if (!_utcp || _utcp=="") _utcp="/";
-function urchinTracker(page) {
- if (_udl.protocol=="file:") return;
- if (_uff && (!page || page=="")) return;
- var a,b,c,xx,v,z,k,x="",s="",f=0;
- var nx=" expires=Sun, 18 Jan 2038 00:00:00 GMT;";
- var dc=_ubd.cookie;
- _udh=_uDomain();
- if (!_uVG()) return;
- _uu=Math.round(Math.random()*2147483647);
- _udt=new Date();
- _ust=Math.round(_udt.getTime()/1000);
- a=dc.indexOf("__utma="+_udh);
- b=dc.indexOf("__utmb="+_udh);
- c=dc.indexOf("__utmc="+_udh);
- if (_udn && _udn!="") { _udo=" domain="+_udn+";"; }
- if (_utimeout && _utimeout!="") {
-  x=new Date(_udt.getTime()+(_utimeout*1000));
-  x=" expires="+x.toGMTString()+";";
- }
- if (_ulink) {
-  if (_uanchor && _udlh && _udlh!="") s=_udlh+"&";
-  s+=_udl.search;
-  if(s && s!="" && s.indexOf("__utma=")>=0) {
-   if (!(_uIN(a=_uGC(s,"__utma=","&")))) a="-";
-   if (!(_uIN(b=_uGC(s,"__utmb=","&")))) b="-";
-   if (!(_uIN(c=_uGC(s,"__utmc=","&")))) c="-";
-   v=_uGC(s,"__utmv=","&");
-   z=_uGC(s,"__utmz=","&");
-   k=_uGC(s,"__utmk=","&");
-   xx=_uGC(s,"__utmx=","&");
-   if ((k*1) != ((_uHash(a+b+c+xx+z+v)*1)+(_udh*1))) {_ubl=1;a="-";b="-";c="-";xx="-";z="-";v="-";}
-   if (a!="-" && b!="-" && c!="-") f=1;
-   else if(a!="-") f=2;
-  }
- }
- if(f==1) {
-  _ubd.cookie="__utma="+a+"; path="+_utcp+";"+nx+_udo;
-  _ubd.cookie="__utmb="+b+"; path="+_utcp+";"+x+_udo;
-  _ubd.cookie="__utmc="+c+"; path="+_utcp+";"+_udo;
- } else if (f==2) {
-  a=_uFixA(s,"&",_ust);
-  _ubd.cookie="__utma="+a+"; path="+_utcp+";"+nx+_udo;
-  _ubd.cookie="__utmb="+_udh+"; path="+_utcp+";"+x+_udo;
-  _ubd.cookie="__utmc="+_udh+"; path="+_utcp+";"+_udo;
-  _ufns=1;
- } else if (a>=0 && b>=0 && c>=0) {
-  _ubd.cookie="__utmb="+_udh+"; path="+_utcp+";"+x+_udo;
- } else {
-  if (a>=0) a=_uFixA(_ubd.cookie,";",_ust);
-  else a=_udh+"."+_uu+"."+_ust+"."+_ust+"."+_ust+".1";
-  _ubd.cookie="__utma="+a+"; path="+_utcp+";"+nx+_udo;
-  _ubd.cookie="__utmb="+_udh+"; path="+_utcp+";"+x+_udo;
-  _ubd.cookie="__utmc="+_udh+"; path="+_utcp+";"+_udo;
-  _ufns=1;
- }
- if (_ulink && xx && xx!="" && xx!="-") {
-   xx=_uUES(xx);
-   if (xx.indexOf(";")==-1) _ubd.cookie="__utmx="+xx+"; path="+_utcp+";"+nx+_udo;
- }
- if (_ulink && v && v!="" && v!="-") {
-  v=_uUES(v);
-  if (v.indexOf(";")==-1) _ubd.cookie="__utmv="+v+"; path="+_utcp+";"+nx+_udo;
- }
- _uInfo(page);
- _ufns=0;
- _ufno=0;
- _uff=1;
-}
-function _uInfo(page) {
- var p,s="",dm="",pg=_udl.pathname+_udl.search;
- if (page && page!="") pg=_uES(page,1);
- _ur=_ubd.referrer;
- if (!_ur || _ur=="") { _ur="-"; }
- else {
-  dm=_ubd.domain;
-  if(_utcp && _utcp!="/") dm+=_utcp;
-  p=_ur.indexOf(dm);
-  if ((p>=0) && (p<=8)) { _ur="0"; }
-  if (_ur.indexOf("[")==0 && _ur.lastIndexOf("]")==(_ur.length-1)) { _ur="-"; }
- }
- s+="&utmn="+_uu;
- if (_ufsc) s+=_uBInfo();
- if (_uctm) s+=_uCInfo();
- if (_utitle && _ubd.title && _ubd.title!="") s+="&utmdt="+_uES(_ubd.title);
- if (_udl.hostname && _udl.hostname!="") s+="&utmhn="+_uES(_udl.hostname);
- s+="&utmr="+_ur;
- s+="&utmp="+pg;
- if ((_userv==0 || _userv==2) && _uSP()) {
-  var i=new Image(1,1);
-  i.src=_ugifpath+"?"+"utmwv="+_uwv+s;
-  i.onload=function() {_uVoid();}
- }
- if ((_userv==1 || _userv==2) && _uSP()) {
-  var i2=new Image(1,1);
-  i2.src=_ugifpath2+"?"+"utmwv="+_uwv+s+"&utmac="+_uacct+"&utmcc="+_uGCS();
-  i2.onload=function() { _uVoid(); }
- }
- return;
-}
-function _uVoid() { return; }
-function _uCInfo() {
- if (!_ucto || _ucto=="") { _ucto="15768000"; }
- if (!_uVG()) return;
- var c="",t="-",t2="-",t3="-",o=0,cs=0,cn=0,i=0,z="-",s="";
- if (_uanchor && _udlh && _udlh!="") s=_udlh+"&";
- s+=_udl.search;
- var x=new Date(_udt.getTime()+(_ucto*1000));
- var dc=_ubd.cookie;
- x=" expires="+x.toGMTString()+";";
- if (_ulink && !_ubl) {
-  z=_uUES(_uGC(s,"__utmz=","&"));
-  if (z!="-" && z.indexOf(";")==-1) { _ubd.cookie="__utmz="+z+"; path="+_utcp+";"+x+_udo; return ""; }
- }
- z=dc.indexOf("__utmz="+_udh);
- if (z>-1) { z=_uGC(dc,"__utmz="+_udh,";"); }
- else { z="-"; }
- t=_uGC(s,_ucid+"=","&");
- t2=_uGC(s,_ucsr+"=","&");
- t3=_uGC(s,"gclid=","&");
- if ((t!="-" && t!="") || (t2!="-" && t2!="") || (t3!="-" && t3!="")) {
-  if (t!="-" && t!="") c+="utmcid="+_uEC(t);
-  if (t2!="-" && t2!="") { if (c != "") c+="|"; c+="utmcsr="+_uEC(t2); }
-  if (t3!="-" && t3!="") { if (c != "") c+="|"; c+="utmgclid="+_uEC(t3); }
-  t=_uGC(s,_uccn+"=","&");
-  if (t!="-" && t!="") c+="|utmccn="+_uEC(t);
-  else c+="|utmccn=(not+set)";
-  t=_uGC(s,_ucmd+"=","&");
-  if (t!="-" && t!="") c+="|utmcmd="+_uEC(t);
-  else  c+="|utmcmd=(not+set)";
-  t=_uGC(s,_uctr+"=","&");
-  if (t!="-" && t!="") c+="|utmctr="+_uEC(t);
-  else { t=_uOrg(1); if (t!="-" && t!="") c+="|utmctr="+_uEC(t); }
-  t=_uGC(s,_ucct+"=","&");
-  if (t!="-" && t!="") c+="|utmcct="+_uEC(t);
-  t=_uGC(s,_ucno+"=","&");
-  if (t=="1") o=1;
-  if (z!="-" && o==1) return "";
- }
- if (c=="-" || c=="") { c=_uOrg(); if (z!="-" && _ufno==1)  return ""; }
- if (c=="-" || c=="") { if (_ufns==1)  c=_uRef(); if (z!="-" && _ufno==1)  return ""; }
- if (c=="-" || c=="") {
-  if (z=="-" && _ufns==1) { c="utmccn=(direct)|utmcsr=(direct)|utmcmd=(none)"; }
-  if (c=="-" || c=="") return "";
- }
- if (z!="-") {
-  i=z.indexOf(".");
-  if (i>-1) i=z.indexOf(".",i+1);
-  if (i>-1) i=z.indexOf(".",i+1);
-  if (i>-1) i=z.indexOf(".",i+1);
-  t=z.substring(i+1,z.length);
-  if (t.toLowerCase()==c.toLowerCase()) cs=1;
-  t=z.substring(0,i);
-  if ((i=t.lastIndexOf(".")) > -1) {
-   t=t.substring(i+1,t.length);
-   cn=(t*1);
-  }
- }
- if (cs==0 || _ufns==1) {
-  t=_uGC(dc,"__utma="+_udh,";");
-  if ((i=t.lastIndexOf(".")) > 9) {
-   _uns=t.substring(i+1,t.length);
-   _uns=(_uns*1);
-  }
-  cn++;
-  if (_uns==0) _uns=1;
-  _ubd.cookie="__utmz="+_udh+"."+_ust+"."+_uns+"."+cn+"."+c+"; path="+_utcp+"; "+x+_udo;
- }
- if (cs==0 || _ufns==1) return "&utmcn=1";
- else return "&utmcr=1";
-}
-function _uRef() {
- if (_ur=="0" || _ur=="" || _ur=="-") return "";
- var i=0,h,k,n;
- if ((i=_ur.indexOf("://"))<0) return "";
- h=_ur.substring(i+3,_ur.length);
- if (h.indexOf("/") > -1) {
-  k=h.substring(h.indexOf("/"),h.length);
-  if (k.indexOf("?") > -1) k=k.substring(0,k.indexOf("?"));
-  h=h.substring(0,h.indexOf("/"));
- }
- h=h.toLowerCase();
- n=h;
- if ((i=n.indexOf(":")) > -1) n=n.substring(0,i);
- for (var ii=0;ii<_uRno.length;ii++) {
-  if ((i=n.indexOf(_uRno[ii].toLowerCase())) > -1 && n.length==(i+_uRno[ii].length)) { _ufno=1; break; }
- }
- if (h.indexOf("www.")==0) h=h.substring(4,h.length);
- return "utmccn=(referral)|utmcsr="+_uEC(h)+"|"+"utmcct="+_uEC(k)+"|utmcmd=referral";
-}
-function _uOrg(t) {
- if (_ur=="0" || _ur=="" || _ur=="-") return "";
- var i=0,h,k;
- if ((i=_ur.indexOf("://")) < 0) return "";
- h=_ur.substring(i+3,_ur.length);
- if (h.indexOf("/") > -1) {
-  h=h.substring(0,h.indexOf("/"));
- }
- for (var ii=0;ii<_uOsr.length;ii++) {
-  if (h.toLowerCase().indexOf(_uOsr[ii].toLowerCase()) > -1) {
-   if ((i=_ur.indexOf("?"+_uOkw[ii]+"=")) > -1 || (i=_ur.indexOf("&"+_uOkw[ii]+"=")) > -1) {
-    k=_ur.substring(i+_uOkw[ii].length+2,_ur.length);
-    if ((i=k.indexOf("&")) > -1) k=k.substring(0,i);
-    for (var yy=0;yy<_uOno.length;yy++) {
-     if (_uOno[yy].toLowerCase()==k.toLowerCase()) { _ufno=1; break; }
-    }
-    if (t) return _uEC(k);
-    else return "utmccn=(organic)|utmcsr="+_uEC(_uOsr[ii])+"|"+"utmctr="+_uEC(k)+"|utmcmd=organic";
-   }
-  }
- }
- return "";
-}
-function _uBInfo() {
- var sr="-",sc="-",ul="-",fl="-",cs="-",je=1;
- var n=navigator;
- if (self.screen) {
-  sr=screen.width+"x"+screen.height;
-  sc=screen.colorDepth+"-bit";
- } else if (self.java) {
-  var j=java.awt.Toolkit.getDefaultToolkit();
-  var s=j.getScreenSize();
-  sr=s.width+"x"+s.height;
- }
- if (n.language) { ul=n.language.toLowerCase(); }
- else if (n.browserLanguage) { ul=n.browserLanguage.toLowerCase(); }
- je=n.javaEnabled()?1:0;
- if (_uflash) fl=_uFlash();
- if (_ubd.characterSet) cs=_uES(_ubd.characterSet);
- else if (_ubd.charset) cs=_uES(_ubd.charset);
- return "&utmcs="+cs+"&utmsr="+sr+"&utmsc="+sc+"&utmul="+ul+"&utmje="+je+"&utmfl="+fl;
-}
-function __utmSetTrans() {
- var e;
- if (_ubd.getElementById) e=_ubd.getElementById("utmtrans");
- else if (_ubd.utmform && _ubd.utmform.utmtrans) e=_ubd.utmform.utmtrans;
- if (!e) return;
- var l=e.value.split("UTM:");
- var i,i2,c;
- if (_userv==0 || _userv==2) i=new Array();
- if (_userv==1 || _userv==2) { i2=new Array(); c=_uGCS(); }
-
- for (var ii=0;ii<l.length;ii++) {
-  l[ii]=_uTrim(l[ii]);
-  if (l[ii].charAt(0)!='T' && l[ii].charAt(0)!='I') continue;
-  var r=Math.round(Math.random()*2147483647);
-  if (!_utsp || _utsp=="") _utsp="|";
-  var f=l[ii].split(_utsp),s="";
-  if (f[0].charAt(0)=='T') {
-   s="&utmt=tran"+"&utmn="+r;
-   f[1]=_uTrim(f[1]); if(f[1]&&f[1]!="") s+="&utmtid="+_uES(f[1]);
-   f[2]=_uTrim(f[2]); if(f[2]&&f[2]!="") s+="&utmtst="+_uES(f[2]);
-   f[3]=_uTrim(f[3]); if(f[3]&&f[3]!="") s+="&utmtto="+_uES(f[3]);
-   f[4]=_uTrim(f[4]); if(f[4]&&f[4]!="") s+="&utmttx="+_uES(f[4]);
-   f[5]=_uTrim(f[5]); if(f[5]&&f[5]!="") s+="&utmtsp="+_uES(f[5]);
-   f[6]=_uTrim(f[6]); if(f[6]&&f[6]!="") s+="&utmtci="+_uES(f[6]);
-   f[7]=_uTrim(f[7]); if(f[7]&&f[7]!="") s+="&utmtrg="+_uES(f[7]);
-   f[8]=_uTrim(f[8]); if(f[8]&&f[8]!="") s+="&utmtco="+_uES(f[8]);
+// converts rgb() and #xxx to #xxxxxx format,
+// returns self (or first argument) if not convertable
+String.prototype.parseColor = function() {
+  var color = '#';
+  if(this.slice(0,4) == 'rgb(') {
+    var cols = this.slice(4,this.length-1).split(',');
+    var i=0; do { color += parseInt(cols[i]).toColorPart() } while (++i<3);
   } else {
-   s="&utmt=item"+"&utmn="+r;
-   f[1]=_uTrim(f[1]); if(f[1]&&f[1]!="") s+="&utmtid="+_uES(f[1]);
-   f[2]=_uTrim(f[2]); if(f[2]&&f[2]!="") s+="&utmipc="+_uES(f[2]);
-   f[3]=_uTrim(f[3]); if(f[3]&&f[3]!="") s+="&utmipn="+_uES(f[3]);
-   f[4]=_uTrim(f[4]); if(f[4]&&f[4]!="") s+="&utmiva="+_uES(f[4]);
-   f[5]=_uTrim(f[5]); if(f[5]&&f[5]!="") s+="&utmipr="+_uES(f[5]);
-   f[6]=_uTrim(f[6]); if(f[6]&&f[6]!="") s+="&utmiqt="+_uES(f[6]);
+    if(this.slice(0,1) == '#') {
+      if(this.length==4) for(var i=1;i<4;i++) color += (this.charAt(i) + this.charAt(i)).toLowerCase();
+      if(this.length==7) color = this.toLowerCase();
+    }
   }
-  if ((_userv==0 || _userv==2) && _uSP()) {
-   i[ii]=new Image(1,1);
-   i[ii].src=_ugifpath+"?"+"utmwv="+_uwv+s;
-   i[ii].onload=function() { _uVoid(); }
+  return(color.length==7 ? color : (arguments[0] || this));
+}
+
+Element.collectTextNodes = function(element) {
+  return $A($(element).childNodes).collect( function(node) {
+    return (node.nodeType==3 ? node.nodeValue :
+      (node.hasChildNodes() ? Element.collectTextNodes(node) : ''));
+  }).flatten().join('');
+}
+
+Element.collectTextNodesIgnoreClass = function(element, className) {
+  return $A($(element).childNodes).collect( function(node) {
+    return (node.nodeType==3 ? node.nodeValue :
+      ((node.hasChildNodes() && !Element.hasClassName(node,className)) ?
+        Element.collectTextNodes(node) : ''));
+  }).flatten().join('');
+}
+
+Element.setStyle = function(element, style) {
+  element = $(element);
+  for(k in style) element.style[k.camelize()] = style[k];
+}
+
+Element.setContentZoom = function(element, percent) {
+  Element.setStyle(element, {fontSize: (percent/100) + 'em'});
+  if(navigator.appVersion.indexOf('AppleWebKit')>0) window.scrollBy(0,0);
+}
+
+Element.getOpacity = function(element){
+  var opacity;
+  if (opacity = Element.getStyle(element, 'opacity'))
+    return parseFloat(opacity);
+  if (opacity = (Element.getStyle(element, 'filter') || '').match(/alpha\(opacity=(.*)\)/))
+    if(opacity[1]) return parseFloat(opacity[1]) / 100;
+  return 1.0;
+}
+
+Element.setOpacity = function(element, value){
+  element= $(element);
+  if (value == 1){
+    Element.setStyle(element, { opacity:
+      (/Gecko/.test(navigator.userAgent) && !/Konqueror|Safari|KHTML/.test(navigator.userAgent)) ?
+      0.999999 : null });
+    if(/MSIE/.test(navigator.userAgent))
+      Element.setStyle(element, {filter: Element.getStyle(element,'filter').replace(/alpha\([^\)]*\)/gi,'')});
+  } else {
+    if(value < 0.00001) value = 0;
+    Element.setStyle(element, {opacity: value});
+    if(/MSIE/.test(navigator.userAgent))
+     Element.setStyle(element,
+       { filter: Element.getStyle(element,'filter').replace(/alpha\([^\)]*\)/gi,'') +
+                 'alpha(opacity='+value*100+')' });
   }
-  if ((_userv==1 || _userv==2) && _uSP()) {
-   i2[ii]=new Image(1,1);
-   i2[ii].src=_ugifpath2+"?"+"utmwv="+_uwv+s+"&utmac="+_uacct+"&utmcc="+c;
-   i2[ii].onload=function() { _uVoid(); }
+}
+
+Element.getInlineOpacity = function(element){
+  return $(element).style.opacity || '';
+}
+
+Element.childrenWithClassName = function(element, className) {
+  return $A($(element).getElementsByTagName('*')).select(
+    function(c) { return Element.hasClassName(c, className) });
+}
+
+Array.prototype.call = function() {
+  var args = arguments;
+  this.each(function(f){ f.apply(this, args) });
+}
+
+/*--------------------------------------------------------------------------*/
+
+var Effect = {
+  tagifyText: function(element) {
+    var tagifyStyle = 'position:relative';
+    if(/MSIE/.test(navigator.userAgent)) tagifyStyle += ';zoom:1';
+    element = $(element);
+    $A(element.childNodes).each( function(child) {
+      if(child.nodeType==3) {
+        child.nodeValue.toArray().each( function(character) {
+          element.insertBefore(
+            Builder.node('span',{style: tagifyStyle},
+              character == ' ' ? String.fromCharCode(160) : character),
+              child);
+        });
+        Element.remove(child);
+      }
+    });
+  },
+  multiple: function(element, effect) {
+    var elements;
+    if(((typeof element == 'object') ||
+        (typeof element == 'function')) &&
+       (element.length))
+      elements = element;
+    else
+      elements = $(element).childNodes;
+
+    var options = Object.extend({
+      speed: 0.1,
+      delay: 0.0
+    }, arguments[2] || {});
+    var masterDelay = options.delay;
+
+    $A(elements).each( function(element, index) {
+      new effect(element, Object.extend(options, { delay: index * options.speed + masterDelay }));
+    });
+  },
+  PAIRS: {
+    'slide':  ['SlideDown','SlideUp'],
+    'blind':  ['BlindDown','BlindUp'],
+    'appear': ['Appear','Fade']
+  },
+  toggle: function(element, effect) {
+    element = $(element);
+    effect = (effect || 'appear').toLowerCase();
+    var options = Object.extend({
+      queue: { position:'end', scope:(element.id || 'global') }
+    }, arguments[2] || {});
+    Effect[Element.visible(element) ?
+      Effect.PAIRS[effect][1] : Effect.PAIRS[effect][0]](element, options);
   }
- }
- return;
+};
+
+var Effect2 = Effect; // deprecated
+
+/* ------------- transitions ------------- */
+
+Effect.Transitions = {}
+
+Effect.Transitions.linear = function(pos) {
+  return pos;
 }
-function _uFlash() {
- var f="-",n=navigator;
- if (n.plugins && n.plugins.length) {
-  for (var ii=0;ii<n.plugins.length;ii++) {
-   if (n.plugins[ii].name.indexOf('Shockwave Flash')!=-1) {
-    f=n.plugins[ii].description.split('Shockwave Flash ')[1];
-    break;
-   }
+Effect.Transitions.sinoidal = function(pos) {
+  return (-Math.cos(pos*Math.PI)/2) + 0.5;
+}
+Effect.Transitions.reverse  = function(pos) {
+  return 1-pos;
+}
+Effect.Transitions.flicker = function(pos) {
+  return ((-Math.cos(pos*Math.PI)/4) + 0.75) + Math.random()/4;
+}
+Effect.Transitions.wobble = function(pos) {
+  return (-Math.cos(pos*Math.PI*(9*pos))/2) + 0.5;
+}
+Effect.Transitions.pulse = function(pos) {
+  return (Math.floor(pos*10) % 2 == 0 ?
+    (pos*10-Math.floor(pos*10)) : 1-(pos*10-Math.floor(pos*10)));
+}
+Effect.Transitions.none = function(pos) {
+  return 0;
+}
+Effect.Transitions.full = function(pos) {
+  return 1;
+}
+
+/* ------------- core effects ------------- */
+
+Effect.ScopedQueue = Class.create();
+Object.extend(Object.extend(Effect.ScopedQueue.prototype, Enumerable), {
+  initialize: function() {
+    this.effects  = [];
+    this.interval = null;
+  },
+  _each: function(iterator) {
+    this.effects._each(iterator);
+  },
+  add: function(effect) {
+    var timestamp = new Date().getTime();
+
+    var position = (typeof effect.options.queue == 'string') ?
+      effect.options.queue : effect.options.queue.position;
+
+    switch(position) {
+      case 'front':
+        // move unstarted effects after this effect
+        this.effects.findAll(function(e){ return e.state=='idle' }).each( function(e) {
+            e.startOn  += effect.finishOn;
+            e.finishOn += effect.finishOn;
+          });
+        break;
+      case 'end':
+        // start effect after last queued effect has finished
+        timestamp = this.effects.pluck('finishOn').max() || timestamp;
+        break;
+    }
+
+    effect.startOn  += timestamp;
+    effect.finishOn += timestamp;
+    this.effects.push(effect);
+    if(!this.interval)
+      this.interval = setInterval(this.loop.bind(this), 40);
+  },
+  remove: function(effect) {
+    this.effects = this.effects.reject(function(e) { return e==effect });
+    if(this.effects.length == 0) {
+      clearInterval(this.interval);
+      this.interval = null;
+    }
+  },
+  loop: function() {
+    var timePos = new Date().getTime();
+    this.effects.invoke('loop', timePos);
   }
- } else if (window.ActiveXObject) {
-  for (var ii=10;ii>=2;ii--) {
-   try {
-    var fl=eval("new ActiveXObject('ShockwaveFlash.ShockwaveFlash."+ii+"');");
-    if (fl) { f=ii + '.0'; break; }
-   }
-   catch(e) {}
+});
+
+Effect.Queues = {
+  instances: $H(),
+  get: function(queueName) {
+    if(typeof queueName != 'string') return queueName;
+
+    if(!this.instances[queueName])
+      this.instances[queueName] = new Effect.ScopedQueue();
+
+    return this.instances[queueName];
   }
- }
- return f;
 }
-function __utmLinker(l,h) {
- if (!_ulink) return;
- var p,k,a="-",b="-",c="-",x="-",z="-",v="-";
- var dc=_ubd.cookie;
- if (!l || l=="") return;
- var iq = l.indexOf("?");
- var ih = l.indexOf("#");
- if (dc) {
-  a=_uES(_uGC(dc,"__utma="+_udh,";"));
-  b=_uES(_uGC(dc,"__utmb="+_udh,";"));
-  c=_uES(_uGC(dc,"__utmc="+_udh,";"));
-  x=_uES(_uGC(dc,"__utmx="+_udh,";"));
-  z=_uES(_uGC(dc,"__utmz="+_udh,";"));
-  v=_uES(_uGC(dc,"__utmv="+_udh,";"));
-  k=(_uHash(a+b+c+x+z+v)*1)+(_udh*1);
-  p="__utma="+a+"&__utmb="+b+"&__utmc="+c+"&__utmx="+x+"&__utmz="+z+"&__utmv="+v+"&__utmk="+k;
- }
- if (p) {
-  if (h && ih>-1) return;
-  if (h) { _udl.href=l+"#"+p; }
-  else {
-   if (iq==-1 && ih==-1) _udl.href=l+"?"+p;
-   else if (ih==-1) _udl.href=l+"&"+p;
-   else if (iq==-1) _udl.href=l.substring(0,ih-1)+"?"+p+l.substring(ih);
-   else _udl.href=l.substring(0,ih-1)+"&"+p+l.substring(ih);
+Effect.Queue = Effect.Queues.get('global');
+
+Effect.DefaultOptions = {
+  transition: Effect.Transitions.sinoidal,
+  duration:   1.0,   // seconds
+  fps:        25.0,  // max. 25fps due to Effect.Queue implementation
+  sync:       false, // true for combining
+  from:       0.0,
+  to:         1.0,
+  delay:      0.0,
+  queue:      'parallel'
+}
+
+Effect.Base = function() {};
+Effect.Base.prototype = {
+  position: null,
+  start: function(options) {
+    this.options      = Object.extend(Object.extend({},Effect.DefaultOptions), options || {});
+    this.currentFrame = 0;
+    this.state        = 'idle';
+    this.startOn      = this.options.delay*1000;
+    this.finishOn     = this.startOn + (this.options.duration*1000);
+    this.event('beforeStart');
+    if(!this.options.sync)
+      Effect.Queues.get(typeof this.options.queue == 'string' ?
+        'global' : this.options.queue.scope).add(this);
+  },
+  loop: function(timePos) {
+    if(timePos >= this.startOn) {
+      if(timePos >= this.finishOn) {
+        this.render(1.0);
+        this.cancel();
+        this.event('beforeFinish');
+        if(this.finish) this.finish();
+        this.event('afterFinish');
+        return;
+      }
+      var pos   = (timePos - this.startOn) / (this.finishOn - this.startOn);
+      var frame = Math.round(pos * this.options.fps * this.options.duration);
+      if(frame > this.currentFrame) {
+        this.render(pos);
+        this.currentFrame = frame;
+      }
+    }
+  },
+  render: function(pos) {
+    if(this.state == 'idle') {
+      this.state = 'running';
+      this.event('beforeSetup');
+      if(this.setup) this.setup();
+      this.event('afterSetup');
+    }
+    if(this.state == 'running') {
+      if(this.options.transition) pos = this.options.transition(pos);
+      pos *= (this.options.to-this.options.from);
+      pos += this.options.from;
+      this.position = pos;
+      this.event('beforeUpdate');
+      if(this.update) this.update(pos);
+      this.event('afterUpdate');
+    }
+  },
+  cancel: function() {
+    if(!this.options.sync)
+      Effect.Queues.get(typeof this.options.queue == 'string' ?
+        'global' : this.options.queue.scope).remove(this);
+    this.state = 'finished';
+  },
+  event: function(eventName) {
+    if(this.options[eventName + 'Internal']) this.options[eventName + 'Internal'](this);
+    if(this.options[eventName]) this.options[eventName](this);
+  },
+  inspect: function() {
+    return '#<Effect:' + $H(this).inspect() + ',options:' + $H(this.options).inspect() + '>';
   }
- } else { _udl.href=l; }
 }
-function __utmLinkPost(f,h) {
- if (!_ulink) return;
- var p,k,a="-",b="-",c="-",x="-",z="-",v="-";
- var dc=_ubd.cookie;
- if (!f || !f.action) return;
- var iq = f.action.indexOf("?");
- var ih = f.action.indexOf("#");
- if (dc) {
-  a=_uES(_uGC(dc,"__utma="+_udh,";"));
-  b=_uES(_uGC(dc,"__utmb="+_udh,";"));
-  c=_uES(_uGC(dc,"__utmc="+_udh,";"));
-  x=_uES(_uGC(dc,"__utmx="+_udh,";"));
-  z=_uES(_uGC(dc,"__utmz="+_udh,";"));
-  v=_uES(_uGC(dc,"__utmv="+_udh,";"));
-  k=(_uHash(a+b+c+x+z+v)*1)+(_udh*1);
-  p="__utma="+a+"&__utmb="+b+"&__utmc="+c+"&__utmx="+x+"&__utmz="+z+"&__utmv="+v+"&__utmk="+k;
- }
- if (p) {
-  if (h && ih>-1) return;
-  if (h) { f.action+="#"+p; }
-  else {
-   if (iq==-1 && ih==-1) f.action+="?"+p;
-   else if (ih==-1) f.action+="&"+p;
-   else if (iq==-1) f.action=f.action.substring(0,ih-1)+"?"+p+f.action.substring(ih);
-   else f.action=f.action.substring(0,ih-1)+"&"+p+f.action.substring(ih);
+
+Effect.Parallel = Class.create();
+Object.extend(Object.extend(Effect.Parallel.prototype, Effect.Base.prototype), {
+  initialize: function(effects) {
+    this.effects = effects || [];
+    this.start(arguments[1]);
+  },
+  update: function(position) {
+    this.effects.invoke('render', position);
+  },
+  finish: function(position) {
+    this.effects.each( function(effect) {
+      effect.render(1.0);
+      effect.cancel();
+      effect.event('beforeFinish');
+      if(effect.finish) effect.finish(position);
+      effect.event('afterFinish');
+    });
   }
- }
- return;
-}
-function __utmSetVar(v) {
- if (!v || v=="") return;
- if (!_udo || _udo == "") {
-  _udh=_uDomain();
-  if (_udn && _udn!="") { _udo=" domain="+_udn+";"; }
- }
- if (!_uVG()) return;
- var r=Math.round(Math.random() * 2147483647);
- _ubd.cookie="__utmv="+_udh+"."+_uES(v)+"; path="+_utcp+"; expires=Sun, 18 Jan 2038 00:00:00 GMT;"+_udo;
- var s="&utmt=var&utmn="+r;
- if ((_userv==0 || _userv==2) && _uSP()) {
-  var i=new Image(1,1);
-  i.src=_ugifpath+"?"+"utmwv="+_uwv+s;
-  i.onload=function() { _uVoid(); }
- }
- if ((_userv==1 || _userv==2) && _uSP()) {
-  var i2=new Image(1,1);
-  i2.src=_ugifpath2+"?"+"utmwv="+_uwv+s+"&utmac="+_uacct+"&utmcc="+_uGCS();
-  i2.onload=function() { _uVoid(); }
- }
-}
-function _uGCS() {
- var t,c="",dc=_ubd.cookie;
- if ((t=_uGC(dc,"__utma="+_udh,";"))!="-") c+=_uES("__utma="+t+";+");
- if ((t=_uGC(dc,"__utmb="+_udh,";"))!="-") c+=_uES("__utmb="+t+";+");
- if ((t=_uGC(dc,"__utmc="+_udh,";"))!="-") c+=_uES("__utmc="+t+";+");
- if ((t=_uGC(dc,"__utmx="+_udh,";"))!="-") c+=_uES("__utmx="+t+";+");
- if ((t=_uGC(dc,"__utmz="+_udh,";"))!="-") c+=_uES("__utmz="+t+";+");
- if ((t=_uGC(dc,"__utmv="+_udh,";"))!="-") c+=_uES("__utmv="+t+";");
- if (c.charAt(c.length-1)=="+") c=c.substring(0,c.length-1);
- return c;
-}
-function _uGC(l,n,s) {
- if (!l || l=="" || !n || n=="" || !s || s=="") return "-";
- var i,i2,i3,c="-";
- i=l.indexOf(n);
- i3=n.indexOf("=")+1;
- if (i > -1) {
-  i2=l.indexOf(s,i); if (i2 < 0) { i2=l.length; }
-  c=l.substring((i+i3),i2);
- }
- return c;
-}
-function _uDomain() {
- if (!_udn || _udn=="" || _udn=="none") { _udn=""; return 1; }
- if (_udn=="auto") {
-  var d=_ubd.domain;
-  if (d.substring(0,4)=="www.") {
-   d=d.substring(4,d.length);
+});
+
+Effect.Opacity = Class.create();
+Object.extend(Object.extend(Effect.Opacity.prototype, Effect.Base.prototype), {
+  initialize: function(element) {
+    this.element = $(element);
+    // make this work on IE on elements without 'layout'
+    if(/MSIE/.test(navigator.userAgent) && (!this.element.hasLayout))
+      Element.setStyle(this.element, {zoom: 1});
+    var options = Object.extend({
+      from: Element.getOpacity(this.element) || 0.0,
+      to:   1.0
+    }, arguments[1] || {});
+    this.start(options);
+  },
+  update: function(position) {
+    Element.setOpacity(this.element, position);
   }
-  _udn=d;
- }
- if (_uhash=="off") return 1;
- return _uHash(_udn);
-}
-function _uHash(d) {
- if (!d || d=="") return 1;
- var h=0,g=0;
- for (var i=d.length-1;i>=0;i--) {
-  var c=parseInt(d.charCodeAt(i));
-  h=((h << 6) & 0xfffffff) + c + (c << 14);
-  if ((g=h & 0xfe00000)!=0) h=(h ^ (g >> 21));
- }
- return h;
-}
-function _uFixA(c,s,t) {
- if (!c || c=="" || !s || s=="" || !t || t=="") return "-";
- var a=_uGC(c,"__utma="+_udh,s);
- var lt=0,i=0;
- if ((i=a.lastIndexOf(".")) > 9) {
-  _uns=a.substring(i+1,a.length);
-  _uns=(_uns*1)+1;
-  a=a.substring(0,i);
-  if ((i=a.lastIndexOf(".")) > 7) {
-   lt=a.substring(i+1,a.length);
-   a=a.substring(0,i);
+});
+
+Effect.Move = Class.create();
+Object.extend(Object.extend(Effect.Move.prototype, Effect.Base.prototype), {
+  initialize: function(element) {
+    this.element = $(element);
+    var options = Object.extend({
+      x:    0,
+      y:    0,
+      mode: 'relative'
+    }, arguments[1] || {});
+    this.start(options);
+  },
+  setup: function() {
+    // Bug in Opera: Opera returns the "real" position of a static element or
+    // relative element that does not have top/left explicitly set.
+    // ==> Always set top and left for position relative elements in your stylesheets
+    // (to 0 if you do not need them)
+    Element.makePositioned(this.element);
+    this.originalLeft = parseFloat(Element.getStyle(this.element,'left') || '0');
+    this.originalTop  = parseFloat(Element.getStyle(this.element,'top')  || '0');
+    if(this.options.mode == 'absolute') {
+      // absolute movement, so we need to calc deltaX and deltaY
+      this.options.x = this.options.x - this.originalLeft;
+      this.options.y = this.options.y - this.originalTop;
+    }
+  },
+  update: function(position) {
+    Element.setStyle(this.element, {
+      left: this.options.x  * position + this.originalLeft + 'px',
+      top:  this.options.y  * position + this.originalTop  + 'px'
+    });
   }
-  if ((i=a.lastIndexOf(".")) > 5) {
-   a=a.substring(0,i);
+});
+
+// for backwards compatibility
+Effect.MoveBy = function(element, toTop, toLeft) {
+  return new Effect.Move(element,
+    Object.extend({ x: toLeft, y: toTop }, arguments[3] || {}));
+};
+
+Effect.Scale = Class.create();
+Object.extend(Object.extend(Effect.Scale.prototype, Effect.Base.prototype), {
+  initialize: function(element, percent) {
+    this.element = $(element)
+    var options = Object.extend({
+      scaleX: true,
+      scaleY: true,
+      scaleContent: true,
+      scaleFromCenter: false,
+      scaleMode: 'box',        // 'box' or 'contents' or {} with provided values
+      scaleFrom: 100.0,
+      scaleTo:   percent
+    }, arguments[2] || {});
+    this.start(options);
+  },
+  setup: function() {
+    this.restoreAfterFinish = this.options.restoreAfterFinish || false;
+    this.elementPositioning = Element.getStyle(this.element,'position');
+
+    this.originalStyle = {};
+    ['top','left','width','height','fontSize'].each( function(k) {
+      this.originalStyle[k] = this.element.style[k];
+    }.bind(this));
+
+    this.originalTop  = this.element.offsetTop;
+    this.originalLeft = this.element.offsetLeft;
+
+    var fontSize = Element.getStyle(this.element,'font-size') || '100%';
+    ['em','px','%'].each( function(fontSizeType) {
+      if(fontSize.indexOf(fontSizeType)>0) {
+        this.fontSize     = parseFloat(fontSize);
+        this.fontSizeType = fontSizeType;
+      }
+    }.bind(this));
+
+    this.factor = (this.options.scaleTo - this.options.scaleFrom)/100;
+
+    this.dims = null;
+    if(this.options.scaleMode=='box')
+      this.dims = [this.element.offsetHeight, this.element.offsetWidth];
+    if(/^content/.test(this.options.scaleMode))
+      this.dims = [this.element.scrollHeight, this.element.scrollWidth];
+    if(!this.dims)
+      this.dims = [this.options.scaleMode.originalHeight,
+                   this.options.scaleMode.originalWidth];
+  },
+  update: function(position) {
+    var currentScale = (this.options.scaleFrom/100.0) + (this.factor * position);
+    if(this.options.scaleContent && this.fontSize)
+      Element.setStyle(this.element, {fontSize: this.fontSize * currentScale + this.fontSizeType });
+    this.setDimensions(this.dims[0] * currentScale, this.dims[1] * currentScale);
+  },
+  finish: function(position) {
+    if (this.restoreAfterFinish) Element.setStyle(this.element, this.originalStyle);
+  },
+  setDimensions: function(height, width) {
+    var d = {};
+    if(this.options.scaleX) d.width = width + 'px';
+    if(this.options.scaleY) d.height = height + 'px';
+    if(this.options.scaleFromCenter) {
+      var topd  = (height - this.dims[0])/2;
+      var leftd = (width  - this.dims[1])/2;
+      if(this.elementPositioning == 'absolute') {
+        if(this.options.scaleY) d.top = this.originalTop-topd + 'px';
+        if(this.options.scaleX) d.left = this.originalLeft-leftd + 'px';
+      } else {
+        if(this.options.scaleY) d.top = -topd + 'px';
+        if(this.options.scaleX) d.left = -leftd + 'px';
+      }
+    }
+    Element.setStyle(this.element, d);
   }
-  a+="."+lt+"."+t+"."+_uns;
- }
- return a;
+});
+
+Effect.Highlight = Class.create();
+Object.extend(Object.extend(Effect.Highlight.prototype, Effect.Base.prototype), {
+  initialize: function(element) {
+    this.element = $(element);
+    var options = Object.extend({ startcolor: '#ffff99' }, arguments[1] || {});
+    this.start(options);
+  },
+  setup: function() {
+    // Prevent executing on elements not in the layout flow
+    if(Element.getStyle(this.element, 'display')=='none') { this.cancel(); return; }
+    // Disable background image during the effect
+    this.oldStyle = {
+      backgroundImage: Element.getStyle(this.element, 'background-image') };
+    Element.setStyle(this.element, {backgroundImage: 'none'});
+    if(!this.options.endcolor)
+      this.options.endcolor = Element.getStyle(this.element, 'background-color').parseColor('#ffffff');
+    if(!this.options.restorecolor)
+      this.options.restorecolor = Element.getStyle(this.element, 'background-color');
+    // init color calculations
+    this._base  = $R(0,2).map(function(i){ return parseInt(this.options.startcolor.slice(i*2+1,i*2+3),16) }.bind(this));
+    this._delta = $R(0,2).map(function(i){ return parseInt(this.options.endcolor.slice(i*2+1,i*2+3),16)-this._base[i] }.bind(this));
+  },
+  update: function(position) {
+    Element.setStyle(this.element,{backgroundColor: $R(0,2).inject('#',function(m,v,i){
+      return m+(Math.round(this._base[i]+(this._delta[i]*position)).toColorPart()); }.bind(this)) });
+  },
+  finish: function() {
+    Element.setStyle(this.element, Object.extend(this.oldStyle, {
+      backgroundColor: this.options.restorecolor
+    }));
+  }
+});
+
+Effect.ScrollTo = Class.create();
+Object.extend(Object.extend(Effect.ScrollTo.prototype, Effect.Base.prototype), {
+  initialize: function(element) {
+    this.element = $(element);
+    this.start(arguments[1] || {});
+  },
+  setup: function() {
+    Position.prepare();
+    var offsets = Position.cumulativeOffset(this.element);
+    if(this.options.offset) offsets[1] += this.options.offset;
+    var max = window.innerHeight ?
+      window.height - window.innerHeight :
+      document.body.scrollHeight -
+        (document.documentElement.clientHeight ?
+          document.documentElement.clientHeight : document.body.clientHeight);
+    this.scrollStart = Position.deltaY;
+    this.delta = (offsets[1] > max ? max : offsets[1]) - this.scrollStart;
+  },
+  update: function(position) {
+    Position.prepare();
+    window.scrollTo(Position.deltaX,
+      this.scrollStart + (position*this.delta));
+  }
+});
+
+/* ------------- combination effects ------------- */
+
+Effect.Fade = function(element) {
+  var oldOpacity = Element.getInlineOpacity(element);
+  var options = Object.extend({
+  from: Element.getOpacity(element) || 1.0,
+  to:   0.0,
+  afterFinishInternal: function(effect) { with(Element) {
+    if(effect.options.to!=0) return;
+    hide(effect.element);
+    setStyle(effect.element, {opacity: oldOpacity}); }}
+  }, arguments[1] || {});
+  return new Effect.Opacity(element,options);
 }
-function _uTrim(s) {
-  if (!s || s=="") return "";
-  while ((s.charAt(0)==' ') || (s.charAt(0)=='\n') || (s.charAt(0,1)=='\r')) s=s.substring(1,s.length);
-  while ((s.charAt(s.length-1)==' ') || (s.charAt(s.length-1)=='\n') || (s.charAt(s.length-1)=='\r')) s=s.substring(0,s.length-1);
-  return s;
+
+Effect.Appear = function(element) {
+  var options = Object.extend({
+  from: (Element.getStyle(element, 'display') == 'none' ? 0.0 : Element.getOpacity(element) || 0.0),
+  to:   1.0,
+  beforeSetup: function(effect) { with(Element) {
+    setOpacity(effect.element, effect.options.from);
+    show(effect.element); }}
+  }, arguments[1] || {});
+  return new Effect.Opacity(element,options);
 }
-function _uEC(s) {
-  var n="";
-  if (!s || s=="") return "";
-  for (var i=0;i<s.length;i++) {if (s.charAt(i)==" ") n+="+"; else n+=s.charAt(i);}
-  return n;
+
+Effect.Puff = function(element) {
+  element = $(element);
+  var oldStyle = { opacity: Element.getInlineOpacity(element), position: Element.getStyle(element, 'position') };
+  return new Effect.Parallel(
+   [ new Effect.Scale(element, 200,
+      { sync: true, scaleFromCenter: true, scaleContent: true, restoreAfterFinish: true }),
+     new Effect.Opacity(element, { sync: true, to: 0.0 } ) ],
+     Object.extend({ duration: 1.0,
+      beforeSetupInternal: function(effect) { with(Element) {
+        setStyle(effect.effects[0].element, {position: 'absolute'}); }},
+      afterFinishInternal: function(effect) { with(Element) {
+         hide(effect.effects[0].element);
+         setStyle(effect.effects[0].element, oldStyle); }}
+     }, arguments[1] || {})
+   );
 }
-function __utmVisitorCode(f) {
- var r=0,t=0,i=0,i2=0,m=31;
- var a=_uGC(_ubd.cookie,"__utma="+_udh,";");
- if ((i=a.indexOf(".",0))<0) return;
- if ((i2=a.indexOf(".",i+1))>0) r=a.substring(i+1,i2); else return "";
- if ((i=a.indexOf(".",i2+1))>0) t=a.substring(i2+1,i); else return "";
- if (f) {
-  return r;
- } else {
-  var c=new Array('A','B','C','D','E','F','G','H','J','K','L','M','N','P','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9');
-  return c[r>>28&m]+c[r>>23&m]+c[r>>18&m]+c[r>>13&m]+"-"+c[r>>8&m]+c[r>>3&m]+c[((r&7)<<2)+(t>>30&3)]+c[t>>25&m]+c[t>>20&m]+"-"+c[t>>15&m]+c[t>>10&m]+c[t>>5&m]+c[t&m];
- }
+
+Effect.BlindUp = function(element) {
+  element = $(element);
+  Element.makeClipping(element);
+  return new Effect.Scale(element, 0,
+    Object.extend({ scaleContent: false,
+      scaleX: false,
+      restoreAfterFinish: true,
+      afterFinishInternal: function(effect) { with(Element) {
+        [hide, undoClipping].call(effect.element); }}
+    }, arguments[1] || {})
+  );
 }
-function _uIN(n) {
- if (!n) return false;
- for (var i=0;i<n.length;i++) {
-  var c=n.charAt(i);
-  if ((c<"0" || c>"9") && (c!=".")) return false;
- }
- return true;
+
+Effect.BlindDown = function(element) {
+  element = $(element);
+  var oldHeight = Element.getStyle(element, 'height');
+  var elementDimensions = Element.getDimensions(element);
+  return new Effect.Scale(element, 100,
+    Object.extend({ scaleContent: false,
+      scaleX: false,
+      scaleFrom: 0,
+      scaleMode: {originalHeight: elementDimensions.height, originalWidth: elementDimensions.width},
+      restoreAfterFinish: true,
+      afterSetup: function(effect) { with(Element) {
+        makeClipping(effect.element);
+        setStyle(effect.element, {height: '0px'});
+        show(effect.element);
+      }},
+      afterFinishInternal: function(effect) { with(Element) {
+        undoClipping(effect.element);
+        setStyle(effect.element, {height: oldHeight});
+      }}
+    }, arguments[1] || {})
+  );
 }
-function _uES(s,u) {
- if (typeof(encodeURIComponent) == 'function') {
-  if (u) return encodeURI(s);
-  else return encodeURIComponent(s);
- } else {
-  return escape(s);
- }
+
+Effect.SwitchOff = function(element) {
+  element = $(element);
+  var oldOpacity = Element.getInlineOpacity(element);
+  return new Effect.Appear(element, {
+    duration: 0.4,
+    from: 0,
+    transition: Effect.Transitions.flicker,
+    afterFinishInternal: function(effect) {
+      new Effect.Scale(effect.element, 1, {
+        duration: 0.3, scaleFromCenter: true,
+        scaleX: false, scaleContent: false, restoreAfterFinish: true,
+        beforeSetup: function(effect) { with(Element) {
+          [makePositioned,makeClipping].call(effect.element);
+        }},
+        afterFinishInternal: function(effect) { with(Element) {
+          [hide,undoClipping,undoPositioned].call(effect.element);
+          setStyle(effect.element, {opacity: oldOpacity});
+        }}
+      })
+    }
+  });
 }
-function _uUES(s) {
- if (typeof(decodeURIComponent) == 'function') {
-  return decodeURIComponent(s);
- } else {
-  return unescape(s);
- }
+
+Effect.DropOut = function(element) {
+  element = $(element);
+  var oldStyle = {
+    top: Element.getStyle(element, 'top'),
+    left: Element.getStyle(element, 'left'),
+    opacity: Element.getInlineOpacity(element) };
+  return new Effect.Parallel(
+    [ new Effect.Move(element, {x: 0, y: 100, sync: true }),
+      new Effect.Opacity(element, { sync: true, to: 0.0 }) ],
+    Object.extend(
+      { duration: 0.5,
+        beforeSetup: function(effect) { with(Element) {
+          makePositioned(effect.effects[0].element); }},
+        afterFinishInternal: function(effect) { with(Element) {
+          [hide, undoPositioned].call(effect.effects[0].element);
+          setStyle(effect.effects[0].element, oldStyle); }}
+      }, arguments[1] || {}));
 }
-function _uVG() {
- if((_udn.indexOf("www.google.") == 0 || _udn.indexOf(".google.") == 0 || _udn.indexOf("google.") == 0) && _utcp=='/') {
-  return false;
- }
- return true;
+
+Effect.Shake = function(element) {
+  element = $(element);
+  var oldStyle = {
+    top: Element.getStyle(element, 'top'),
+    left: Element.getStyle(element, 'left') };
+	  return new Effect.Move(element,
+	    { x:  20, y: 0, duration: 0.05, afterFinishInternal: function(effect) {
+	  new Effect.Move(effect.element,
+	    { x: -40, y: 0, duration: 0.1,  afterFinishInternal: function(effect) {
+	  new Effect.Move(effect.element,
+	    { x:  40, y: 0, duration: 0.1,  afterFinishInternal: function(effect) {
+	  new Effect.Move(effect.element,
+	    { x: -40, y: 0, duration: 0.1,  afterFinishInternal: function(effect) {
+	  new Effect.Move(effect.element,
+	    { x:  40, y: 0, duration: 0.1,  afterFinishInternal: function(effect) {
+	  new Effect.Move(effect.element,
+	    { x: -20, y: 0, duration: 0.05, afterFinishInternal: function(effect) { with(Element) {
+        undoPositioned(effect.element);
+        setStyle(effect.element, oldStyle);
+  }}}) }}) }}) }}) }}) }});
 }
-function _uSP() {
- var s=100;
- if (_usample) s=_usample;
- if(s>=100 || s<=0) return true;
- return ((__utmVisitorCode(1)%10000)<(s*100));
+
+Effect.SlideDown = function(element) {
+  element = $(element);
+  Element.cleanWhitespace(element);
+  // SlideDown need to have the content of the element wrapped in a container element with fixed height!
+  var oldInnerBottom = Element.getStyle(element.firstChild, 'bottom');
+  var elementDimensions = Element.getDimensions(element);
+  return new Effect.Scale(element, 100, Object.extend({
+    scaleContent: false,
+    scaleX: false,
+    scaleFrom: 0,
+    scaleMode: {originalHeight: elementDimensions.height, originalWidth: elementDimensions.width},
+    restoreAfterFinish: true,
+    afterSetup: function(effect) { with(Element) {
+      makePositioned(effect.element);
+      makePositioned(effect.element.firstChild);
+      if(window.opera) setStyle(effect.element, {top: ''});
+      makeClipping(effect.element);
+      setStyle(effect.element, {height: '0px'});
+      show(element); }},
+    afterUpdateInternal: function(effect) { with(Element) {
+      setStyle(effect.element.firstChild, {bottom:
+        (effect.dims[0] - effect.element.clientHeight) + 'px' }); }},
+    afterFinishInternal: function(effect) { with(Element) {
+      undoClipping(effect.element);
+      undoPositioned(effect.element.firstChild);
+      undoPositioned(effect.element);
+      setStyle(effect.element.firstChild, {bottom: oldInnerBottom}); }}
+    }, arguments[1] || {})
+  );
 }
+
+Effect.SlideUp = function(element) {
+  element = $(element);
+  Element.cleanWhitespace(element);
+  var oldInnerBottom = Element.getStyle(element.firstChild, 'bottom');
+  return new Effect.Scale(element, 0,
+   Object.extend({ scaleContent: false,
+    scaleX: false,
+    scaleMode: 'box',
+    scaleFrom: 100,
+    restoreAfterFinish: true,
+    beforeStartInternal: function(effect) { with(Element) {
+      makePositioned(effect.element);
+      makePositioned(effect.element.firstChild);
+      if(window.opera) setStyle(effect.element, {top: ''});
+      makeClipping(effect.element);
+      show(element); }},
+    afterUpdateInternal: function(effect) { with(Element) {
+      setStyle(effect.element.firstChild, {bottom:
+        (effect.dims[0] - effect.element.clientHeight) + 'px' }); }},
+    afterFinishInternal: function(effect) { with(Element) {
+        [hide, undoClipping].call(effect.element);
+        undoPositioned(effect.element.firstChild);
+        undoPositioned(effect.element);
+        setStyle(effect.element.firstChild, {bottom: oldInnerBottom}); }}
+   }, arguments[1] || {})
+  );
+}
+
+// Bug in opera makes the TD containing this element expand for a instance after finish
+Effect.Squish = function(element) {
+  return new Effect.Scale(element, window.opera ? 1 : 0,
+    { restoreAfterFinish: true,
+      beforeSetup: function(effect) { with(Element) {
+        makeClipping(effect.element); }},
+      afterFinishInternal: function(effect) { with(Element) {
+        hide(effect.element);
+        undoClipping(effect.element); }}
+  });
+}
+
+Effect.Grow = function(element) {
+  element = $(element);
+  var options = Object.extend({
+    direction: 'center',
+    moveTransistion: Effect.Transitions.sinoidal,
+    scaleTransition: Effect.Transitions.sinoidal,
+    opacityTransition: Effect.Transitions.full
+  }, arguments[1] || {});
+  var oldStyle = {
+    top: element.style.top,
+    left: element.style.left,
+    height: element.style.height,
+    width: element.style.width,
+    opacity: Element.getInlineOpacity(element) };
+
+  var dims = Element.getDimensions(element);
+  var initialMoveX, initialMoveY;
+  var moveX, moveY;
+
+  switch (options.direction) {
+    case 'top-left':
+      initialMoveX = initialMoveY = moveX = moveY = 0;
+      break;
+    case 'top-right':
+      initialMoveX = dims.width;
+      initialMoveY = moveY = 0;
+      moveX = -dims.width;
+      break;
+    case 'bottom-left':
+      initialMoveX = moveX = 0;
+      initialMoveY = dims.height;
+      moveY = -dims.height;
+      break;
+    case 'bottom-right':
+      initialMoveX = dims.width;
+      initialMoveY = dims.height;
+      moveX = -dims.width;
+      moveY = -dims.height;
+      break;
+    case 'center':
+      initialMoveX = dims.width / 2;
+      initialMoveY = dims.height / 2;
+      moveX = -dims.width / 2;
+      moveY = -dims.height / 2;
+      break;
+  }
+
+  return new Effect.Move(element, {
+    x: initialMoveX,
+    y: initialMoveY,
+    duration: 0.01,
+    beforeSetup: function(effect) { with(Element) {
+      hide(effect.element);
+      makeClipping(effect.element);
+      makePositioned(effect.element);
+    }},
+    afterFinishInternal: function(effect) {
+      new Effect.Parallel(
+        [ new Effect.Opacity(effect.element, { sync: true, to: 1.0, from: 0.0, transition: options.opacityTransition }),
+          new Effect.Move(effect.element, { x: moveX, y: moveY, sync: true, transition: options.moveTransition }),
+          new Effect.Scale(effect.element, 100, {
+            scaleMode: { originalHeight: dims.height, originalWidth: dims.width },
+            sync: true, scaleFrom: window.opera ? 1 : 0, transition: options.scaleTransition, restoreAfterFinish: true})
+        ], Object.extend({
+             beforeSetup: function(effect) { with(Element) {
+               setStyle(effect.effects[0].element, {height: '0px'});
+               show(effect.effects[0].element); }},
+             afterFinishInternal: function(effect) { with(Element) {
+               [undoClipping, undoPositioned].call(effect.effects[0].element);
+               setStyle(effect.effects[0].element, oldStyle); }}
+           }, options)
+      )
+    }
+  });
+}
+
+Effect.Shrink = function(element) {
+  element = $(element);
+  var options = Object.extend({
+    direction: 'center',
+    moveTransistion: Effect.Transitions.sinoidal,
+    scaleTransition: Effect.Transitions.sinoidal,
+    opacityTransition: Effect.Transitions.none
+  }, arguments[1] || {});
+  var oldStyle = {
+    top: element.style.top,
+    left: element.style.left,
+    height: element.style.height,
+    width: element.style.width,
+    opacity: Element.getInlineOpacity(element) };
+
+  var dims = Element.getDimensions(element);
+  var moveX, moveY;
+
+  switch (options.direction) {
+    case 'top-left':
+      moveX = moveY = 0;
+      break;
+    case 'top-right':
+      moveX = dims.width;
+      moveY = 0;
+      break;
+    case 'bottom-left':
+      moveX = 0;
+      moveY = dims.height;
+      break;
+    case 'bottom-right':
+      moveX = dims.width;
+      moveY = dims.height;
+      break;
+    case 'center':
+      moveX = dims.width / 2;
+      moveY = dims.height / 2;
+      break;
+  }
+
+  return new Effect.Parallel(
+    [ new Effect.Opacity(element, { sync: true, to: 0.0, from: 1.0, transition: options.opacityTransition }),
+      new Effect.Scale(element, window.opera ? 1 : 0, { sync: true, transition: options.scaleTransition, restoreAfterFinish: true}),
+      new Effect.Move(element, { x: moveX, y: moveY, sync: true, transition: options.moveTransition })
+    ], Object.extend({
+         beforeStartInternal: function(effect) { with(Element) {
+           [makePositioned, makeClipping].call(effect.effects[0].element) }},
+         afterFinishInternal: function(effect) { with(Element) {
+           [hide, undoClipping, undoPositioned].call(effect.effects[0].element);
+           setStyle(effect.effects[0].element, oldStyle); }}
+       }, options)
+  );
+}
+
+Effect.Pulsate = function(element) {
+  element = $(element);
+  var options    = arguments[1] || {};
+  var oldOpacity = Element.getInlineOpacity(element);
+  var transition = options.transition || Effect.Transitions.sinoidal;
+  var reverser   = function(pos){ return transition(1-Effect.Transitions.pulse(pos)) };
+  reverser.bind(transition);
+  return new Effect.Opacity(element,
+    Object.extend(Object.extend({  duration: 3.0, from: 0,
+      afterFinishInternal: function(effect) { Element.setStyle(effect.element, {opacity: oldOpacity}); }
+    }, options), {transition: reverser}));
+}
+
+Effect.Fold = function(element) {
+  element = $(element);
+  var oldStyle = {
+    top: element.style.top,
+    left: element.style.left,
+    width: element.style.width,
+    height: element.style.height };
+  Element.makeClipping(element);
+  return new Effect.Scale(element, 5, Object.extend({
+    scaleContent: false,
+    scaleX: false,
+    afterFinishInternal: function(effect) {
+    new Effect.Scale(element, 1, {
+      scaleContent: false,
+      scaleY: false,
+      afterFinishInternal: function(effect) { with(Element) {
+        [hide, undoClipping].call(effect.element);
+        setStyle(effect.element, oldStyle);
+      }} });
+  }}, arguments[1] || {}));
+}
+]]>
 </script>
 
 <script type="text/javascript">
+<![CDATA[
 // -----------------------------------------------------------------------------------
 //
 //	Lightbox v2.02
@@ -945,7 +1163,6 @@ Lightbox.prototype = {
 		if (!document.getElementsByTagName){ return; }
 		var anchors = document.getElementsByTagName('a');
 
-		alert("	anchors.length = "+anchors.length);
 		// loop through all anchor tags
 		for (var i=0; i<anchors.length; i++){
 			var anchor = anchors[i];
@@ -954,12 +1171,7 @@ Lightbox.prototype = {
 
 			// use the string.match() method to catch 'lightbox' references in the rel attribute
 			if (anchor.getAttribute('href') && (relAttribute.toLowerCase().match('lightbox'))){
-				alert("Adding onclick");
-				anchor.onclick = function () {
-					alert("Anchor Click");
-					myLightbox.start(this);
-					return false;
-				}
+				anchor.onclick = function () {myLightbox.start(this); return false;}
 			}
 		}
 
@@ -999,18 +1211,11 @@ Lightbox.prototype = {
 
 		var objBody = document.getElementsByTagName("body").item(0);
 
-		try
-		{
-			var objOverlay = document.createElement("div");
-			objOverlay.setAttribute('id','overlay');
-			objOverlay.style.display = 'none';
-			objOverlay.onclick = function() { myLightbox.end(); return false; }
-			objBody.appendChild(objOverlay);
-		}
-		catch (e)
-		{
-			alert("Error while appending child to body = "+e);
-		}
+		var objOverlay = document.createElement("div");
+		objOverlay.setAttribute('id','overlay');
+		objOverlay.style.display = 'none';
+		objOverlay.onclick = function() { myLightbox.end(); return false; }
+		objBody.appendChild(objOverlay);
 
 		var objLightbox = document.createElement("div");
 		objLightbox.setAttribute('id','lightbox');
@@ -1759,13 +1964,39 @@ if (document.addEventListener) {
 
 }
 
+
+
+/* for Internet Explorer */
+/*@cc_on @*/
+/*@if (@_win32)
+    document.write("<script id=__ie_onload defer src=javascript:void(0)></script>");
+    var script = document.getElementById("__ie_onload");
+    script.onreadystatechange = function() {
+        if (this.readyState == "complete") {
+            init(); // call the onload handler
+        }
+    };
+/*@end @*/
+
+
+
+/* for Safari */
+if (/WebKit/i.test(navigator.userAgent)) { // sniff
+    var _timer = setInterval(function() {
+        if (/loaded|complete/.test(document.readyState)) {
+            init(); // call the onload handler
+        }
+    }, 10);
+}
+
+
+
 /* for other browsers */
 //window.onload = init;
-
+]]>
 </script>
 
 <script type="text/javascript">
-
 /*					effectshelper.js
  *
  *  (c) 2005 Siddique Hameed <siddii@gmail.com>
@@ -1967,9 +2198,7 @@ var RssFeed = Class.create();
 				Element.update(divContent,lightboxHTML);
 				alert("After update ");
 			}
-			else {
-				alert("No DIV CONTENT ");
-			}
+
 			try
 			{
 				if (imageClickBehaviour == 0)
@@ -1980,9 +2209,6 @@ var RssFeed = Class.create();
 					{
 						Element.remove(overlayElement);
 					}
-					else {
-						alert("No overlay element found ");
-					}
 
 					var lightboxElement = $('lightbox');
 
@@ -1990,10 +2216,22 @@ var RssFeed = Class.create();
 					{
 						Element.remove(lightboxElement);
 					}
-					else {
-						alert("No lightbox element found ");
-					}
 					initLightbox();
+
+						var overlayElement = document.getElementById("overlay");
+						if (overlayElement)
+						{
+							var style = Element.getStyle(overlayElement,"border-bottom-color");
+							alert(" overlayElementClassNames style = "+style);
+						}
+
+						var lightboxElement = document.getElementById("lightbox");
+						if (lightboxElement)
+						{
+							var style = Element.getStyle(overlayElement,"border-bottom-color");
+							alert(" lightboxElementClassNames = "+style);
+
+						}
 				}
 				showRandomFlickrImage();
 			}
@@ -2001,8 +2239,6 @@ var RssFeed = Class.create();
 			{
 				alert("Error "+e);
 			}
-
-
 
 			controlElement = $('divRandomFlickrControl');
 			if (slideshowDelay > 0)
@@ -2074,20 +2310,29 @@ var RssFeed = Class.create();
 		imageClickBehaviour = getValue("image_click_behaviour") != "undefined" ? getValue("image_click_behaviour") : 0;
 		slideshowDelay = getValue("slideshow_delay") != "undefined" ? getValue("slideshow_delay") : 0;
 		var flickrFeedURL = "http://www.flickr.com/services/feeds/photos_public.gne?tags="+tags+"&format=rss_200";
-		//_IG_FetchXmlContent(flickrFeedURL,xmlResponseHandler);
 		if (!NV_XML_REQUEST_URL )
 		{
 			NV_XML_REQUEST_URL = "http://www.netvibes.com/xmlProxy.php";
 		}
-		alert("Submitting request ");
 		var request = new Ajax.Request(NV_XML_REQUEST_URL + '?url=' + escape(flickrFeedURL), { method: 'get', onSuccess: xmlResponseHandler});
+	}
+
+	function applyLightboxStyleSheet() {
+		var style = document.createElement('link');
+		style.setAttribute('rel', 'stylesheet');
+		style.setAttribute('type', 'text/css');
+		style.setAttribute('media', 'screen');
+		style.setAttribute('href', 'http://www.therandomhomepage.com/css/lightbox.css' );
+		var head = document.getElementsByTagName('head').item(0);
+		head.appendChild( style );
 	}
 
 NV_ONLOAD = function()
 {
+	applyLightboxStyleSheet();
     randomFlickrLoad();
-	_uacct = "UA-941159-1";
-	urchinTracker();
+	//_uacct = "UA-941159-1";
+	//urchinTracker();
 }
 </script>
 </head>
