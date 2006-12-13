@@ -18,8 +18,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php" afterPath="$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/lightbox_s.js" afterPath="$PROJECT_DIR$/src/js/lightbox_s.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/netvibes/modules/RandomFlickr/screenshot.png" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -187,22 +188,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php">
           <provider editor-type-id="HtmlPreview">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1360" column="25" selection-start="39336" selection-end="39336" vertical-scroll-proportion="0.82824427">
+            <state line="1385" column="7" selection-start="40228" selection-end="40228" vertical-scroll-proportion="2.899491">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lightbox_s.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="lightbox_s.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/lightbox_s.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1021" column="17" selection-start="30192" selection-end="30192" vertical-scroll-proportion="0.20098643">
+            <state line="1032" column="46" selection-start="30353" selection-end="30353" vertical-scroll-proportion="0.43156597">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/out/therandomhomepage.RandomFlickr/index.php">
+          <provider editor-type-id="HtmlPreview">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -211,7 +224,7 @@
       <file leaf-file-name="RandomWidget.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RandomWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="33" selection-start="1845" selection-end="1850" vertical-scroll-proportion="0.4116223">
+            <state line="60" column="33" selection-start="1845" selection-end="1850" vertical-scroll-proportion="0.4192355">
               <folding />
             </state>
           </provider>
@@ -717,6 +730,36 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\out" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\out\therandomhomepage.RandomFlickr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\css" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
@@ -921,17 +964,17 @@
   <component name="PropertiesComponent">
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="cvs_file_history_treeWidth0" value="292" />
-    <property name="cvs_file_history_flatWidth2" value="293" />
+    <property name="cvs_file_history_treeWidth0" value="296" />
+    <property name="cvs_file_history_flatWidth2" value="296" />
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="cvs_file_history_flatWidth1" value="292" />
-    <property name="cvs_file_history_treeWidth1" value="292" />
+    <property name="cvs_file_history_flatWidth1" value="296" />
+    <property name="cvs_file_history_treeWidth1" value="296" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="cvs_file_history_flatOrder2" value="2" />
-    <property name="cvs_file_history_treeWidth2" value="293" />
+    <property name="cvs_file_history_treeWidth2" value="296" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="cvs_file_history_flatOrder3" value="3" />
     <property name="RunManagerConfig.showSettingsBeforeRunnig" value="false" />
@@ -940,9 +983,9 @@
     <property name="cvs_file_history_flatOrder0" value="0" />
     <property name="cvs_file_history_treeOrder3" value="3" />
     <property name="cvs_file_history_treeOrder2" value="2" />
-    <property name="cvs_file_history_treeWidth3" value="292" />
-    <property name="cvs_file_history_flatWidth0" value="292" />
-    <property name="cvs_file_history_flatWidth3" value="292" />
+    <property name="cvs_file_history_treeWidth3" value="296" />
+    <property name="cvs_file_history_flatWidth0" value="296" />
+    <property name="cvs_file_history_flatWidth3" value="296" />
     <property name="cvs_file_history_treeOrder0" value="0" />
   </component>
   <component name="ReadonlyStatusHandler">
@@ -1209,7 +1252,7 @@
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3232653" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36571428" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30285713" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32" order="14" />
@@ -1225,7 +1268,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50114155" order="4" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="17" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50342464" order="12" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50285715" order="12" />
       <window_info id="FaTPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6202965" order="8" />
       <window_info id="SVN Properties" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295583" order="9" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
@@ -1251,7 +1294,7 @@
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
     <option name="PUT_FOCUS_INTO_COMMENT" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified for Netvibes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Netvibe RandomFlickr module" />
     <option name="SAVE_LAST_COMMIT_MESSAGE" value="true" />
     <option name="CHECKIN_DIALOG_SPLITTER_PROPORTION" value="0.8" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -1264,8 +1307,6 @@
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="WIP, need to fix tests" />
-    <MESSAGE value="Fixed the tests" />
     <MESSAGE value="Working" />
     <MESSAGE value="Original File" />
     <MESSAGE value="Working on IFrame - Lightbox effect" />
@@ -1274,6 +1315,8 @@
     <MESSAGE value="Updated with &quot;Random Flickr&quot; gadget" />
     <MESSAGE value="Initial revision" />
     <MESSAGE value="Modified for Netvibes" />
+    <MESSAGE value="Prior to working for IE" />
+    <MESSAGE value="Added Netvibe RandomFlickr module" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1341,23 +1384,6 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFeed/index.php">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="4110" selection-end="4614" vertical-scroll-proportion="0.78855723">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/lightbox.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="4" selection-start="567" selection-end="567" vertical-scroll-proportion="0.020961776">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFeed/dev.php">
       <provider editor-type-id="HtmlPreview">
         <state />
@@ -1417,7 +1443,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RandomWidget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="33" selection-start="1845" selection-end="1850" vertical-scroll-proportion="0.4116223">
+        <state line="60" column="33" selection-start="1845" selection-end="1850" vertical-scroll-proportion="0.4192355">
           <folding />
         </state>
       </provider>
@@ -1436,19 +1462,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/lightbox_s.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1032" column="46" selection-start="30353" selection-end="30353" vertical-scroll-proportion="0.43156597">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/out/therandomhomepage.RandomFlickr/index.php">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/screenshot.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php">
       <provider editor-type-id="HtmlPreview">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1360" column="25" selection-start="39336" selection-end="39336" vertical-scroll-proportion="0.82824427">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/lightbox_s.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1021" column="17" selection-start="30192" selection-end="30192" vertical-scroll-proportion="0.20098643">
+        <state line="1385" column="7" selection-start="40228" selection-end="40228" vertical-scroll-proportion="2.899491">
           <folding />
         </state>
       </provider>
