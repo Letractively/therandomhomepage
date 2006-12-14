@@ -18,9 +18,11 @@ public class LightboxImageTest implements EntryPoint {
 
     private LightboxImage buildMultiImageLightbox() {
         Image image1 = new Image("lightbox/image-1.jpg");
-        Image image2 = new Image("lightbox/image-1.jpg");
-        Image image3 = new Image("lightbox/image-1.jpg");
-        Image images[] = {image1,image2,image3};
+        Image image2 = new Image("lightbox/image-2.jpg");
+        Image image3 = new Image("lightbox/image-3.jpg");
+        Image image4 = new Image("lightbox/image-4.jpg");
+        Image image5 = new Image("lightbox/image-5.jpg");
+        Image images[] = {image1,image2,image3,image4,image5};
         return new LightboxImage(images);
     }
 
