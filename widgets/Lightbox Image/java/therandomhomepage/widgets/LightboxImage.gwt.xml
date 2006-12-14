@@ -1,0 +1,34 @@
+<module>
+
+    <inherits name='com.google.gwt.user.User'/>
+
+    <script src="lightbox/prototype.js">
+        <![CDATA[
+        if ($wnd.$)
+          return true;
+        else
+          return false;
+      ]]>
+    </script>
+    <script src="lightbox/effects.js">
+        <![CDATA[
+        if ($wnd.Effect)
+          return true;
+        else
+          return false;
+      ]]>
+    </script>
+    
+
+    <script src="lightbox/lightbox_s.js"><![CDATA[
+    if ($wnd.initLightbox)
+      return true;
+    else
+      alert("Lightbox not initialised properly");
+      return false;
+    ]]>
+    </script>
+
+    <stylesheet src="lightbox/lightbox.css"/> 
+
+</module>
