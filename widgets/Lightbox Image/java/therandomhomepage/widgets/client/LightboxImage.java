@@ -1,6 +1,5 @@
 package therandomhomepage.widgets.client;
 
-import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
@@ -13,27 +12,45 @@ import com.google.gwt.user.client.Element;
  */
 public class LightboxImage extends Widget{
     private Image image;
-    private Image images;
+    private Image[] images;
+    private boolean slideshow;
+    private int slideshowDelayInSeconds;
 
     public LightboxImage(Image image) {
         this.image = image;
+        setElement(createAnchor(image, "lightbox"));
+    }
+
+    private Element createAnchor(Image image, String relValue) {
         Element anchorElement = DOM.createAnchor();
-        DOM.setAttribute(anchorElement,"rel","lightbox");
+        DOM.setAttribute(anchorElement,"rel", relValue);
         DOM.setAttribute(anchorElement,"href",image.getUrl());
+        DOM.setAttribute(anchorElement,"title",image.getTitle());
         DOM.appendChild(anchorElement,image.getElement());
-        setElement(anchorElement);
+        return anchorElement;
     }
 
     public LightboxImage(Image images[]) {
-        this.images = image;
+        this.images = images;
         Element tempDiv = DOM.createDiv();
         for (int i = 0; i < images.length; i++) {
-            Element anchorElement = DOM.createAnchor();
-            DOM.setAttribute(anchorElement,"rel","lightbox["+images.hashCode()+"]");
-            DOM.setAttribute(anchorElement,"href",images[i].getUrl());
-            DOM.appendChild(anchorElement,images[i].getElement());
-            DOM.appendChild(tempDiv,anchorElement);
+            String imageSetName = String.valueOf(images[i].hashCode());
+            DOM.appendChild(tempDiv,createAnchor(images[i],"lightbox["+imageSetName+"]"));
         }
+        setElement(tempDiv);
+    }
+
+    public LightboxImage(Image images[],boolean slideshow,int slideshowDelayInSeconds) {
+        this.images = images;
+        this.slideshow = slideshow;
+        this.slideshowDelayInSeconds = slideshowDelayInSeconds;
+        Element tempDiv = DOM.createDiv();
+        for (int i = 0; i < images.length; i++) {
+            String imageSetName = String.valueOf(images[i].hashCode());
+            DOM.appendChild(tempDiv,createAnchor(images[i],"lightbox["+imageSetName+"]"));
+        }
+
+        //TODO: Implement this        
         setElement(tempDiv);
     }
 
