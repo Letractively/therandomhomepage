@@ -1206,7 +1206,7 @@ var RssFeed = Class.create();
 			}
 			catch (e)
 			{
-				$('divRandomFlickrContent').innerHTML = "Error "+e;
+				showErrorMessage();
 			}
 
 			controlElement = $('divRandomFlickrControl');
