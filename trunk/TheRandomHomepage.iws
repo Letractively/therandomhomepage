@@ -18,15 +18,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\scratch\lightboxTestWorkingWithFF_IE\lightbox_s.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\scratch\lightbox\LightboxImageSizeTest.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\scratch\PrototypeInIETest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scratch/lightbox" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\scratch\lightbox\LightboxIFrameTest.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\scratch\lightboxTestWorkingWithFF_IE\lightboxtest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scratch/lightboxTestWorkingWithFF_IE" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\scratch\lightbox\lightbox_s.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImageTest.gwt.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/effects.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/server" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prototype.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImage.gwt.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImageTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iml" afterPath="$PROJECT_DIR$/TheRandomHomepage.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/LightboxImageTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox_s.js" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -167,19 +177,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="module.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/google/gadgets/Random Flickr/config/module.xml">
+      <file leaf-file-name="LightboxImageTest.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/LightboxImageTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="41" selection-start="3157" selection-end="3157" vertical-scroll-proportion="0.020961776">
+            <state line="17" column="0" selection-start="472" selection-end="472" vertical-scroll-proportion="0.360799">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="HtmlPreview">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LightboxImage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="564" selection-end="564" vertical-scroll-proportion="0.34987894">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LightboxImage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/LightboxImage.java">
+      <file leaf-file-name="lightbox.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="209" selection-end="209" vertical-scroll-proportion="0.20581114">
+            <state line="10" column="17" selection-start="142" selection-end="142" vertical-scroll-proportion="0.20961775">
               <folding />
             </state>
           </provider>
@@ -188,72 +210,54 @@
       <file leaf-file-name="LightboxWidget.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/LightboxWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="26" selection-start="3126" selection-end="3126" vertical-scroll-proportion="0.8232446">
+            <state line="80" column="0" selection-start="2555" selection-end="2636" vertical-scroll-proportion="0.55569005">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php">
+      <file leaf-file-name="LightboxImage.gwt.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImage.gwt.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1298" column="24" selection-start="36810" selection-end="36810" vertical-scroll-proportion="0.21628499">
+            <state line="20" column="0" selection-start="388" selection-end="388" vertical-scroll-proportion="0.4116223">
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="HtmlPreview">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="RandomFlickr.gwt.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/RandomFlickr.gwt.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="34" selection-start="444" selection-end="444" vertical-scroll-proportion="0.4192355">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="lightbox_s.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/lightbox_s.js">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox_s.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1032" column="46" selection-start="30353" selection-end="30353" vertical-scroll-proportion="0.35881627">
+            <state line="93" column="0" selection-start="2839" selection-end="2839" vertical-scroll-proportion="0.37731197">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/out/therandomhomepage.RandomFlickr/index.php">
+      <file leaf-file-name="LightboxImageTest.gwt.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImageTest.gwt.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="HtmlPreview">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomWidget.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RandomWidget.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="33" selection-start="1845" selection-end="1850" vertical-scroll-proportion="0.020961776">
+            <state line="3" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.06174334">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lightbox.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/lightbox.css">
+      <file leaf-file-name="LightboxImageTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="4" selection-start="567" selection-end="567" vertical-scroll-proportion="0.020961776">
+            <state line="11" column="13" selection-start="248" selection-end="248" vertical-scroll-proportion="0.20581114">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dev.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFeed/dev.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="86" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.021628499">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="HtmlPreview">
-            <state />
           </provider>
         </entry>
       </file>
@@ -298,6 +302,20 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="TheRandomHomepage" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
         </PATH_ELEMENT>
       </PATH>
     </subPane>
@@ -382,7 +400,341 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\scratch" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\client" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrclient" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\mainpublic" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -397,7 +749,7 @@
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages />
+      <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
       <showStructure PackagesPane="false" ProjectPane="false" Scope="false" Favorites="false" />
       <autoscrollToSource ProjectPane="true" />
@@ -457,7 +809,7 @@
     </key>
   </component>
   <component name="RestoreUpdateTree" />
-  <component name="RunManager" selected="Application.RandomFlickr">
+  <component name="RunManager" selected="Application.LightboxImageTest">
     <tempConfiguration default="false" name="therandomhomepage.test" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="TheRandomHomepage" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -589,6 +941,21 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
+    <configuration default="false" name="LightboxImageTest" type="Application" factoryName="Application" enabled="false" merge="false">
+      <option name="MAIN_CLASS_NAME" value="com.google.gwt.dev.GWTShell" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="-style DETAILED -out ./out -gen ./gen therandomhomepage.widgets.LightboxImageTest/LightboxImageTest.html" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/widgets/Lightbox Image/java" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <module name="TheRandomHomepage" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
     <configuration default="false" name="UIUtil_UT.testGenerateImageFromInnerHTML" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <pattern value="therandomhomepage.test.*" />
       <module name="TheRandomHomepage" />
@@ -689,15 +1056,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="996" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" order="18" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36571428" order="0" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30285713" order="1" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36571428" order="0" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30171427" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32" order="14" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
@@ -706,7 +1073,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24979591" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19542857" order="16" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26712328" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26628572" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50114155" order="4" />
@@ -738,7 +1105,7 @@
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
     <option name="PUT_FOCUS_INTO_COMMENT" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Netvibe RandomFlickr module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleared scratch" />
     <option name="SAVE_LAST_COMMIT_MESSAGE" value="true" />
     <option name="CHECKIN_DIALOG_SPLITTER_PROPORTION" value="0.8" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -751,7 +1118,6 @@
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Working" />
     <MESSAGE value="Original File" />
     <MESSAGE value="Working on IFrame - Lightbox effect" />
     <MESSAGE value="Working on IFrame - Lightbox effect - WIP" />
@@ -761,6 +1127,7 @@
     <MESSAGE value="Modified for Netvibes" />
     <MESSAGE value="Prior to working for IE" />
     <MESSAGE value="Added Netvibe RandomFlickr module" />
+    <MESSAGE value="Cleared scratch" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -822,115 +1189,110 @@
   </component>
   <component name="com.intellij.openapi.roots.ui.configuration.projectRoot.ProjectRootMasterDetailsConfigurable" proportions="0.16666667" version="1">
     <option name="myPlainMode" value="false" />
-    <option name="myLastEditedConfigurable" value="GWT-Widgets" />
+    <option name="myLastEditedConfigurable" value="TheRandomHomepage" />
   </component>
   <component name="com.intellij.profile.ui.ErrorOptionsConfigurable" proportions="0.16666667,0.5314286" version="1">
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/gwt-widgets-0.1.3.jar!/org/gwtwidgets/WidgetLibrary.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/Effect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="13" selection-start="2522" selection-end="2522" vertical-scroll-proportion="0.64053077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/RandomFlickr.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="1" selection-start="302" selection-end="302" vertical-scroll-proportion="0.33212996">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/TheRandomHomepage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="25" selection-start="714" selection-end="719" vertical-scroll-proportion="1.0126354">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/screenshot.png">
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prevlabel.gif">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/google/gadgets/Random Flickr/config/module.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="41" selection-start="3157" selection-end="3157" vertical-scroll-proportion="0.020961776">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prev.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/LightboxImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="209" selection-end="209" vertical-scroll-proportion="0.20581114">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/nextlabel.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/next.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/LightboxWidget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="26" selection-start="3126" selection-end="3126" vertical-scroll-proportion="0.8232446">
+        <state line="80" column="0" selection-start="2555" selection-end="2636" vertical-scroll-proportion="0.55569005">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/lightbox_s.js">
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1032" column="46" selection-start="30353" selection-end="30353" vertical-scroll-proportion="0.35881627">
+        <state line="11" column="13" selection-start="248" selection-end="248" vertical-scroll-proportion="0.20581114">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/out/therandomhomepage.RandomFlickr/index.php">
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/effects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="903" column="0" selection-start="31734" selection-end="31734" vertical-scroll-proportion="1.3489519">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prototype.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/RandomFlickr.gwt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="34" selection-start="444" selection-end="444" vertical-scroll-proportion="0.4192355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox_s.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="0" selection-start="2839" selection-end="2839" vertical-scroll-proportion="0.37731197">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="17" selection-start="142" selection-end="142" vertical-scroll-proportion="0.20961775">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="564" selection-end="564" vertical-scroll-proportion="0.34987894">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/LightboxImageTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="472" selection-end="472" vertical-scroll-proportion="0.360799">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="HtmlPreview">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RandomWidget.java">
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImageTest.gwt.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="33" selection-start="1845" selection-end="1850" vertical-scroll-proportion="0.020961776">
+        <state line="3" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.06174334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/lightbox.css">
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImage.gwt.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="4" selection-start="567" selection-end="567" vertical-scroll-proportion="0.020961776">
+        <state line="20" column="0" selection-start="388" selection-end="388" vertical-scroll-proportion="0.4116223">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFeed/dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="86" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.021628499">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1298" column="24" selection-start="36810" selection-end="36810" vertical-scroll-proportion="0.21628499">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="HtmlPreview">
-        <state />
       </provider>
     </entry>
   </component>
