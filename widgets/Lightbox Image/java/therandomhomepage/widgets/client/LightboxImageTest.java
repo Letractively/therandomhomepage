@@ -10,9 +10,22 @@ import com.google.gwt.user.client.ui.*;
  * Time: 11:24:15 AM
  */
 public class LightboxImageTest implements EntryPoint {
-    public void onModuleLoad() {        
-        Image image = new Image("lightbox/image-1.jpg");
-        LightboxImage lightboxImage = new LightboxImage(image);
+    public void onModuleLoad() {
+//        LightboxImage lightboxImage = buildSingleImageLightbox();
+        LightboxImage lightboxImage = buildMultiImageLightbox();
         RootPanel.get().add(lightboxImage);
+    }
+
+    private LightboxImage buildMultiImageLightbox() {
+        Image image1 = new Image("lightbox/image-1.jpg");
+        Image image2 = new Image("lightbox/image-1.jpg");
+        Image image3 = new Image("lightbox/image-1.jpg");
+        Image images[] = {image1,image2,image3};
+        return new LightboxImage(images);
+    }
+
+    private LightboxImage buildSingleImageLightbox() {
+        Image image = new Image("lightbox/image-1.jpg");
+        return new LightboxImage(image);
     }
 }

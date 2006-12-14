@@ -24,7 +24,6 @@
     if ($wnd.initLightbox)
       return true;
     else
-      alert("Lightbox not initialised properly");
       return false;
     ]]>
     </script>
