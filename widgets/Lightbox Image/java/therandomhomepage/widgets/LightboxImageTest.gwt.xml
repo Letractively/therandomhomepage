@@ -1,6 +1,0 @@
-<module>
-
-    <inherits name='therandomhomepage.widgets.LightboxImage'/>
-    
-    <entry-point class="therandomhomepage.widgets.client.LightboxImageTest"/>
-</module>

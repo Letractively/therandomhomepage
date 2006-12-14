@@ -39,7 +39,7 @@
 	}
 </style>
 <script type="text/javascript">
-<?php include '../../../js/effects.js';?>
+<?php include '/home/content/r/a/n/randomadmin/html/js/effects.js';?>
 
 // -----------------------------------------------------------------------------------
 //
@@ -1084,11 +1084,11 @@ if (/WebKit/i.test(navigator.userAgent)) { // sniff
 //window.onload = init;
 
 
-<?php include '../../../js/effectshelper.js';?>
+<?php include '/home/content/r/a/n/randomadmin/html/js/effectshelper.js';?>
 
-<?php include '../../../js/utils.js';?>
+<?php include '/home/content/r/a/n/randomadmin/html/js/utils.js';?>
 
-<?php include '../../../js/urchin.js';?>
+<?php include '/home/content/r/a/n/randomadmin/html/js/urchin.js';?>
 </script>
 
 <script type="text/javascript">
@@ -1211,12 +1211,9 @@ var RssFeed = Class.create();
 
 			controlElement = $('divRandomFlickrControl');
 
-
-
 			if (slideshowDelay > 0)
 			{
-				pe = new PeriodicalExecuter(showRandomFlickrImage, slideshowDelay);
-
+				pe = new MyPeriodicalExecuter(showRandomFlickrImage, slideshowDelay);
 				Element.update(controlElement,"<img src='http://www.therandomhomepage.com/images/lightbox/stop.gif' title='Stop Slideshow'/>");
 				controlElement.onclick = stopSlideShow;
 				divContent.onclick = stopSlideShow;
@@ -1231,8 +1228,12 @@ var RssFeed = Class.create();
 			}
 		}
 		else {
-			$('divRandomFlickrContent').innerHTML = "<center><I>Error retrieving pictures from Flickr! <br/>Please verify the tag names and try again later.</I></center>";
+			showErrorMessage();
 		}
+	}
+
+	function showErrorMessage() {
+		$('divRandomFlickrContent').innerHTML = "Error retrieving pictures from Flickr! <br/>Please verify the tag names and try again later.";
 	}
 
 	function showRandomFlickrImage(){
@@ -1276,6 +1277,13 @@ var RssFeed = Class.create();
 		}
 	}
 
+	function getSlideShowDelay() {
+		if (!isEmpty(getValue("slideshow_delay")))
+		{
+			return parseInt(getValue("slideshow_delay"));
+		}
+	}
+
 	function randomFlickrLoad(){
 
 		if (!isEmpty(getValue("tags")))
@@ -1293,17 +1301,14 @@ var RssFeed = Class.create();
 			imageClickBehaviour = parseInt(getValue("image_click_behaviour"));
 		}
 
-		if (!isEmpty(getValue("slideshow_delay")))
-		{
-			slideshowDelay = parseInt(getValue("slideshow_delay"));
-		}
+		slideshowDelay = getSlideShowDelay();
 
 		var flickrFeedURL = "http://www.flickr.com/services/feeds/photos_public.gne?tags="+tags+"&format=rss_200";
 		if (!NV_XML_REQUEST_URL )
 		{
 			NV_XML_REQUEST_URL = "http://www.netvibes.com/xmlProxy.php";
 		}
-		var request = new Ajax.Request(NV_XML_REQUEST_URL + '?url=' + escape(flickrFeedURL), { method: 'get', onSuccess: xmlResponseHandler});
+		var request = new Ajax.Request(NV_XML_REQUEST_URL + '?url=' + escape(flickrFeedURL), { method: 'get', onSuccess: xmlResponseHandler, onFailure: showErrorMessage });
 	}
 
 	function applyLightboxStyleSheet() {
@@ -1323,6 +1328,32 @@ function setTitle() {
     }
 }
 
+var MyPeriodicalExecuter = Class.create();
+MyPeriodicalExecuter.prototype = {
+  initialize: function(callback, frequency) {
+    this.callback = callback;
+    this.frequency = frequency;
+    this.currentlyExecuting = false;
+
+    this.registerCallback();
+  },
+
+  registerCallback: function() {
+    setInterval(this.onTimerEvent.bind(this), this.frequency * 1000);
+  },
+
+  onTimerEvent: function() {
+
+    if (getSlideShowDelay() > 0 && !this.currentlyExecuting) {
+      try {
+        this.currentlyExecuting = true;
+        this.callback();
+      } finally {
+        this.currentlyExecuting = false;
+      }
+    }
+  }
+}
 
 NV_ONLOAD = function()
 {
