@@ -48,7 +48,9 @@ public class LightboxImageDemo implements EntryPoint {
         Image image = new Image("lightbox/image-1.jpg");
         image.setTitle("Image 1");
         LightboxImage lightboxImage = new LightboxImage(image);
-        return new LightboxImagePanel("Single Image",lightboxImage);
+
+        String desc = "Click on the image to see Lightbox in action";
+        return new LightboxImagePanel(lightboxImage, "Single Image", desc);
     }
 
 
@@ -71,8 +73,10 @@ public class LightboxImageDemo implements EntryPoint {
 
         Image images[] = {image1, image2, image3, image4};
 
+        String desc = "Click on the image to see Lightbox in action. Mouse over on top of Lightbox image's right for next or left for previous image.";
+
         LightboxImage lightboxImage = new LightboxImage(images);
-        return new LightboxImagePanel("Multiple Images",lightboxImage);
+        return new LightboxImagePanel(lightboxImage, "Multiple Images", desc);
     }
 
     private LightboxImagePanel buildMultiImageLightboxPanelWithSlideShow() {
@@ -88,7 +92,10 @@ public class LightboxImageDemo implements EntryPoint {
         Image images[] = {image1, image2, image3, image4};
         
         LightboxImage lightboxImage = new LightboxImage(images,true,2);
-        return new LightboxImagePanel("Slideshow",lightboxImage);
+
+        String desc = "Click on the image to see Lightbox in action. Mouse over on top of Lightbox image's right for next or left for previous image.";
+
+        return new LightboxImagePanel(lightboxImage, "Slideshow", desc);
     }
 
     private class TabSelectionListener implements TabListener{
