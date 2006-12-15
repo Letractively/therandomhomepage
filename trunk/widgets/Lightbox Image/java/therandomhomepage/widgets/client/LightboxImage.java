@@ -36,13 +36,13 @@ public class LightboxImage extends Widget {
     private Element childrens[] = null;
     private boolean slideshow;
     private int slideshowDelayInSeconds;
-    private static int instance = 0;
+    private static int createdInstance = 0;
     private static int loadedInstance = 0;
     private LightboxImageTimer timer = null;
 
     public LightboxImage(Image image) {
         setElement(createAnchor(image, "lightbox"));
-        instance++;
+        createdInstance++;
     }
 
     public LightboxImage(Image images[]) {
@@ -54,7 +54,7 @@ public class LightboxImage extends Widget {
             DOM.appendChild(tempDiv, childrens[i]);
         }
         setElement(tempDiv);
-        instance++;
+        createdInstance++;
     }
 
     public LightboxImage(Image images[], boolean slideshow, int slideshowDelayInSeconds) {
@@ -128,7 +128,7 @@ public class LightboxImage extends Widget {
 
     protected void onLoad() {
         loadedInstance++;
-        if (loadedInstance == instance) {
+        if (loadedInstance == createdInstance) {
             init();
             loadedInstance--;
         }
