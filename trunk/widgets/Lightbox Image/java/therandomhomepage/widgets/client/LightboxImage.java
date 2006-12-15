@@ -15,16 +15,12 @@ import com.google.gwt.user.client.ui.Widget;
  */
 public class LightboxImage extends Widget {
 
-    private Element anchor = null;
-    private Element anchors[] = null;
-
-    boolean multiImageMode = false;
-
+    private Element childrens[] = null;
     private boolean slideshow;
     private int slideshowDelayInSeconds;
     private static int instance = 0;
     private static int loadedInstance = 0;
-    LightboxImageTimer timer = null;
+    private LightboxImageTimer timer = null;
 
     public LightboxImage(Image image) {
         setElement(createAnchor(image, "lightbox"));
@@ -32,13 +28,12 @@ public class LightboxImage extends Widget {
     }
 
     public LightboxImage(Image images[]) {
-        multiImageMode = true;
-        anchors = new Element[images.length];
+        childrens = new Element[images.length];
         Element tempDiv = DOM.createDiv();
         for (int i = 0; i < images.length; i++) {
-            anchors[i] = createAnchor(images[i], "lightbox[imageset]");
-            DOM.setAttribute(anchors[i], "startslideshow", "false");
-            DOM.appendChild(tempDiv, anchors[i]);
+            childrens[i] = createAnchor(images[i], "lightbox[imageset]");
+            DOM.setAttribute(childrens[i], "startslideshow", "false");
+            DOM.appendChild(tempDiv, childrens[i]);
         }
         setElement(tempDiv);
         instance++;
@@ -48,12 +43,12 @@ public class LightboxImage extends Widget {
         this(images);
         this.slideshow = slideshow;
         this.slideshowDelayInSeconds = slideshowDelayInSeconds;
-        for (int i = 0; i < anchors.length; i++) {
-            Element element = anchors[i];
+        for (int i = 0; i < childrens.length; i++) {
+            Element element = childrens[i];
             DOM.setAttribute(element, "slideDuration", String.valueOf(slideshowDelayInSeconds));
         }
         setAllVisibility(false);
-        setVisibility(0,true);
+        setVisibility(0, true);
     }
 
     public void startSlideshow() {
@@ -79,19 +74,21 @@ public class LightboxImage extends Widget {
     }
 
     private void setAllVisibility(boolean visible) {
-        for (int i = 0; i < anchors.length; i++) {
+        for (int i = 0; i < childrens.length; i++) {
             setVisibility(i, visible);
         }
     }
 
     private void setVisibility(int idx, boolean visible) {
-        Element anchorElem = anchors[idx];
+        Element anchorElem = childrens[idx];
         UIObject.setVisible(anchorElem, visible);
     }
 
-    public void showSlideshowImage(int imageIdx) {
-        setAllVisibility(false);
-        setVisibility(imageIdx, true);
+    public void toggleSlideshowImage(int imageIdx) {
+        if (slideshow) {
+            setAllVisibility(false);
+            setVisibility(imageIdx, true);
+        }
     }
 
 
@@ -127,7 +124,7 @@ public class LightboxImage extends Widget {
             if (prevIdx > -1) {
                 setVisibility(prevIdx, false);
             }
-            if (currentIdx == anchors.length) {
+            if (currentIdx == childrens.length) {
                 currentIdx = 0;
             }
             setVisibility(currentIdx, true);
