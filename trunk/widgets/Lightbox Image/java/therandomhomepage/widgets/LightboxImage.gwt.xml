@@ -18,7 +18,6 @@
           return false;
       ]]>
     </script>
-    
 
     <script src="lightbox/lightbox_s.js"><![CDATA[
     if ($wnd.initLightbox)
@@ -28,6 +27,6 @@
     ]]>
     </script>
 
-    <stylesheet src="lightbox/lightbox.css"/> 
+    <stylesheet src="lightbox/lightbox.css"/>
 
 </module>
