@@ -1,5 +1,5 @@
 table.ig_tbl_line .ig_smbluetext {
-    font-family: arial, sans-serif;
+    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -14,7 +14,7 @@ table.ig_tbl_line .ig_smbluetext {
 }
 
 table.ig_tbl_line .ig_lgbluetext {
-    font-family: arial, sans-serif;
+    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -29,7 +29,7 @@ table.ig_tbl_line .ig_lgbluetext {
 }
 
 table.ig_tbl_line .ig_smbluelink, table.ig_tbl_line .ig_smbluelink:link {
-    font-family: arial, sans-serif;
+    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -45,7 +45,7 @@ table.ig_tbl_line .ig_smbluelink, table.ig_tbl_line .ig_smbluelink:link {
 }
 
 table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
-    font-family: arial, sans-serif;
+    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -61,7 +61,7 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
 }
 
 .ig_smbluelink:hover {
-    font-family: arial, sans-serif;
+    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -77,7 +77,7 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
 }
 
 .ig_smbluelink:visited {
-    font-family: arial, sans-serif;
+    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -93,7 +93,7 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
 }
 
 .ig_smbluelink:active {
-    font-family: arial, sans-serif;
+    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -109,7 +109,7 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
 }
 
 .ig_lgbluelink:hover {
-    font-family: arial, sans-serif;
+    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -125,7 +125,7 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
 }
 
 .ig_lgbluelink:visited {
-    font-family: arial, sans-serif;
+    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;

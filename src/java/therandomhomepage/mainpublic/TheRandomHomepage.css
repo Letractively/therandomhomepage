@@ -1,5 +1,5 @@
 /*Credits: Dynamic Drive CSS Library */
-/*URL: http://www.dynamicdrive.com/style/ */
+/*URL: http://www.dynamicdrive.com/style/
 
 html, body{
 scrollbar-face-color:#EBF5FF;
@@ -12,10 +12,13 @@ scrollbar-3dlight-color:#78AAFF;
 scrollbar-darkshadow-Color:#78AAFF;
 }
 
+*/
+
 body {
     background: repeat url(./images/background.gif);
     color: black;
-	font-family: Arial, sans-serif;
+    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+    /*font-family: Arial, sans-serif;*/
 	font-size: small;
 	margin: 0px;
 }
