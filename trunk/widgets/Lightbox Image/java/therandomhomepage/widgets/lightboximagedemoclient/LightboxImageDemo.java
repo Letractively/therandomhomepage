@@ -1,3 +1,20 @@
+/*
+ * Copyright 2006 Siddique Hameed - http://www.therandomhomepage.com
+ *
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package therandomhomepage.widgets.lightboximagedemoclient;
 
 import com.google.gwt.core.client.EntryPoint;
@@ -18,7 +35,7 @@ public class LightboxImageDemo implements EntryPoint {
         tabs.setWidth("100%");
 
         tabs.add(buildSingleImageLightboxPanel(),"Single Image");
-        tabs.add(buildMultiImageLightboxPanel(),"Multiple Image");
+        tabs.add(buildMultiImageLightboxPanel(),"Multiple Images");
         tabs.add(buildMultiImageLightboxPanelWithSlideShow(),"Slideshow");
 
         tabs.addTabListener(new TabSelectionListener());
@@ -37,13 +54,20 @@ public class LightboxImageDemo implements EntryPoint {
 
     private LightboxImagePanel buildMultiImageLightboxPanel() {
         Image image1 = new Image("lightbox/image-2.jpg");
-        image1.setTitle("Image 1");
+        image1.setTitle("Image 2");
+        image1.setStyleName("multipleImage");
+
         Image image2 = new Image("lightbox/image-3.jpg");
         image2.setTitle("Image 2");
+        image2.setStyleName("multipleImage");
+
         Image image3 = new Image("lightbox/image-4.jpg");
         image3.setTitle("Image 3");
+        image3.setStyleName("multipleImage");
+
         Image image4 = new Image("lightbox/image-5.jpg");
-        image4.setTitle("Image 3");
+        image4.setTitle("Image 4");
+        image4.setStyleName("multipleImage");
 
         Image images[] = {image1, image2, image3, image4};
 

@@ -2,6 +2,12 @@ img {
         border:none;
     }
 
+.multipleImage {
+    height:150px;
+    width:150px;
+    margin:5px;
+}
+
 .gwt-TabPanel {
 }
 
