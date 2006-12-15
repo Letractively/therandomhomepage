@@ -1,12 +1,7 @@
 package therandomhomepage.widgets.lightboximagedemoclient;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.*;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.WindowResizeListener;
-import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Element;
 import therandomhomepage.widgets.client.LightboxImage;
 
 /**
@@ -19,58 +14,74 @@ public class LightboxImageDemo implements EntryPoint {
     
     public void onModuleLoad() {
         TabPanel tabs = new TabPanel();
-        tabs.add(buildSingleImageLightbox(),"Single Image");
-        tabs.add(buildMultiImageLightbox(),"Multiple Image");
         tabs.setHeight("100%");
         tabs.setWidth("100%");
+
+        tabs.add(buildSingleImageLightboxPanel(),"Single Image");
+        tabs.add(buildMultiImageLightboxPanel(),"Multiple Image");
+        tabs.add(buildMultiImageLightboxPanelWithSlideShow(),"Slideshow");
+
+        tabs.addTabListener(new TabSelectionListener());
+
         tabs.selectTab(0);
-
-//        Image image = new Image("lightbox/image-1.jpg");
-//        LightboxImage lightboxImage = new LightboxImage(image);
         RootPanel.get().add(tabs);
-
-        addResizeListener();
     }
 
-    private void addResizeListener() {
-        Window.addWindowResizeListener(new WindowResizeListener(){
-
-            public void onWindowResized(int width, int height) {
-                Element element = DOM.getElementById("lightbox");
-                System.out.println("lightbox html = "+DOM.getInnerHTML(element));
-                Element overlayElement = DOM.getElementById("overlay");
-                System.out.println("Overlay html = "+DOM.getInnerHTML(overlayElement));
-            }
-        });
-    }
-
-
-    private Panel buildMultiImageLightbox() {
-        Image image2 = new Image("lightbox/image-2.jpg");
-        Image image3 = new Image("lightbox/image-3.jpg");
-        Image image4 = new Image("lightbox/image-4.jpg");
-        Image image5 = new Image("lightbox/image-5.jpg");
-        Image images[] = {image2, image3, image4, image5};
-
-        VerticalPanel p = new VerticalPanel();
-        p.setHorizontalAlignment(VerticalPanel.ALIGN_CENTER);
-        p.setVerticalAlignment(VerticalPanel.ALIGN_MIDDLE);
-        LightboxImage lightboxImage = new LightboxImage(images);
-        p.add(lightboxImage);
-
-        return p;
-    }
-
-    private Panel buildSingleImageLightbox() {
+    private LightboxImagePanel buildSingleImageLightboxPanel() {
         Image image = new Image("lightbox/image-1.jpg");
-
-        VerticalPanel panel = new VerticalPanel();
-        panel.setHorizontalAlignment(VerticalPanel.ALIGN_CENTER);
-        panel.setVerticalAlignment(VerticalPanel.ALIGN_MIDDLE);
-
-        panel.add(new Label("Single Image"));
-        panel.add(new LightboxImage(image));
-
-        return panel;
+        image.setTitle("Image 1");
+        LightboxImage lightboxImage = new LightboxImage(image);
+        return new LightboxImagePanel("Single Image",lightboxImage);
     }
+
+
+    private LightboxImagePanel buildMultiImageLightboxPanel() {
+        Image image1 = new Image("lightbox/image-2.jpg");
+        image1.setTitle("Image 1");
+        Image image2 = new Image("lightbox/image-3.jpg");
+        image2.setTitle("Image 2");
+        Image image3 = new Image("lightbox/image-4.jpg");
+        image3.setTitle("Image 3");
+        Image image4 = new Image("lightbox/image-5.jpg");
+        image4.setTitle("Image 3");
+
+        Image images[] = {image1, image2, image3, image4};
+
+        LightboxImage lightboxImage = new LightboxImage(images);
+        return new LightboxImagePanel("Multiple Images",lightboxImage);
+    }
+
+    private LightboxImagePanel buildMultiImageLightboxPanelWithSlideShow() {
+        Image image1 = new Image("lightbox/image-2.jpg");
+        image1.setTitle("Image 1");
+        Image image2 = new Image("lightbox/image-3.jpg");
+        image2.setTitle("Image 2");
+        Image image3 = new Image("lightbox/image-4.jpg");
+        image3.setTitle("Image 3");
+        Image image4 = new Image("lightbox/image-5.jpg");
+        image4.setTitle("Image 3");
+
+        Image images[] = {image1, image2, image3, image4};
+        
+        LightboxImage lightboxImage = new LightboxImage(images,true,2);
+        return new LightboxImagePanel("Slideshow",lightboxImage);
+    }
+
+    private class TabSelectionListener implements TabListener{
+
+        public boolean onBeforeTabSelected(SourcesTabEvents sender, int tabIndex) {
+            return true;
+        }
+
+        public void onTabSelected(SourcesTabEvents sender, int tabIndex) {
+            TabPanel tabPanel = (TabPanel) sender;
+
+            LightboxImagePanel panel = (LightboxImagePanel) tabPanel.getWidget(tabIndex);
+            if (panel.getHeader().equals("Slideshow")){
+                panel.getLightboxImage().startSlideshow();
+            }
+        }
+    }
+
+
 }
