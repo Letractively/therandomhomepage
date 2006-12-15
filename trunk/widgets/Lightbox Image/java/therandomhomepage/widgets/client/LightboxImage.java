@@ -18,24 +18,21 @@ public class LightboxImage extends Widget {
     private Element anchor = null;
     private Element anchors[] = null;
 
+    boolean multiImageMode = false;
+
     private boolean slideshow;
     private int slideshowDelayInSeconds;
+    private static int instance = 0;
+    private static int loadedInstance = 0;
 
     public LightboxImage(Image image) {
         anchor = createAnchor(image, "lightbox");
         setElement(anchor);
-    }
-
-    private Element createAnchor(Image image, String relValue) {
-        Element anchorElement = DOM.createAnchor();
-        DOM.setAttribute(anchorElement, "rel", relValue);
-        DOM.setAttribute(anchorElement, "href", image.getUrl());
-        DOM.setAttribute(anchorElement, "title", image.getTitle());
-        DOM.appendChild(anchorElement, image.getElement());
-        return anchorElement;
+        instance++;
     }
 
     public LightboxImage(Image images[]) {
+        multiImageMode = true;
         anchors = new Element[images.length];
         Element tempDiv = DOM.createDiv();
         for (int i = 0; i < images.length; i++) {
@@ -44,6 +41,7 @@ public class LightboxImage extends Widget {
             DOM.appendChild(tempDiv, anchors[i]);
         }
         setElement(tempDiv);
+        instance++;
     }
 
     public LightboxImage(Image images[], boolean slideshow, int slideshowDelayInSeconds) {
@@ -55,6 +53,15 @@ public class LightboxImage extends Widget {
             DOM.setAttribute(element, "slideDuration", String.valueOf(slideshowDelayInSeconds));
         }
         setAllVisibility(false);
+    }
+
+    private Element createAnchor(Image image, String relValue) {
+        Element anchorElement = DOM.createAnchor();
+        DOM.setAttribute(anchorElement, "rel", relValue);
+        DOM.setAttribute(anchorElement, "href", image.getUrl());
+        DOM.setAttribute(anchorElement, "title", image.getTitle());
+        DOM.appendChild(anchorElement, image.getElement());
+        return anchorElement;
     }
 
     private void setAllVisibility(boolean visible) {
@@ -91,7 +98,11 @@ public class LightboxImage extends Widget {
     }
 
     protected void onLoad() {
-        init();
+        loadedInstance++;
+        if (loadedInstance == instance) {
+            init();
+            loadedInstance--;
+        }
     }
 
     public static native void init() /*-{
