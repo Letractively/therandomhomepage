@@ -36,6 +36,7 @@ public class LightboxImage extends Widget {
     private Element childrens[] = null;
     private boolean slideshow;
     private int slideshowDelayInSeconds;
+    private static int imagesets = 0;
     private static int createdInstance = 0;
     private static int loadedInstance = 0;
     private LightboxImageTimer timer = null;
@@ -49,12 +50,13 @@ public class LightboxImage extends Widget {
         childrens = new Element[images.length];
         Element tempDiv = DOM.createDiv();
         for (int i = 0; i < images.length; i++) {
-            childrens[i] = createAnchor(images[i], "lightbox[imageset]");
+            childrens[i] = createAnchor(images[i], "lightbox["+imagesets+"]");
             DOM.setAttribute(childrens[i], "startslideshow", "false");
             DOM.appendChild(tempDiv, childrens[i]);
         }
         setElement(tempDiv);
         createdInstance++;
+        imagesets++;
     }
 
     public LightboxImage(Image images[], boolean slideshow, int slideshowDelayInSeconds) {
