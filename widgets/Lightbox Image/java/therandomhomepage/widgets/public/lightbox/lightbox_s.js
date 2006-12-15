@@ -600,7 +600,9 @@ Lightbox.prototype = {
 			Element.setInnerHTML( 'caption', "&nbsp;");
 		}
 
-		// if image is part of set display 'Image x of x'
+        Element.show('lightboxImage');
+
+        // if image is part of set display 'Image x of x'
 if(imageArray.length>1){
 var ndhtml;
 Element.show('numberDisplay');
@@ -1045,4 +1047,4 @@ if (/WebKit/i.test(navigator.userAgent)) { // sniff
 
 
 /* for other browsers */
-window.onload = init;
+//window.onload = init;
