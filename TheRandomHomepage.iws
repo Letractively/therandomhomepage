@@ -18,8 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\src\java\user.properties" afterPath="" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -220,15 +219,6 @@
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox_s.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="611" column="129" selection-start="19656" selection-end="19656" vertical-scroll-proportion="0.020961776">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComplexPanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/ComplexPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="44" selection-start="833" selection-end="833" vertical-scroll-proportion="0.020581113">
               <folding />
             </state>
           </provider>
@@ -1340,16 +1330,6 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1400" column="59" selection-start="40553" selection-end="40553" vertical-scroll-proportion="0.7985348">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="52" selection-start="215" selection-end="215" vertical-scroll-proportion="0.12734082">
@@ -1384,13 +1364,6 @@
     <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/ComplexPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="44" selection-start="833" selection-end="833" vertical-scroll-proportion="0.020581113">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/Panel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="22" selection-start="867" selection-end="867" vertical-scroll-proportion="0.020581113">
           <folding />
         </state>
       </provider>
@@ -1442,6 +1415,13 @@
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="32" selection-start="2409" selection-end="2409" vertical-scroll-proportion="0.51452786">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/Panel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="22" selection-start="867" selection-end="867" vertical-scroll-proportion="0.020581113">
           <folding />
         </state>
       </provider>
