@@ -29,7 +29,7 @@ import com.google.gwt.user.client.ui.Widget;
  * @see <a target="_new" href="http://www.huddletogether.com/projects/lightbox2/">http://www.huddletogether.com/projects/lightbox2/</a>
  *
  * @author Siddique Hameed
- * @version 1.0
+ * @version 0.1
  */
 public class LightboxImage extends Widget {
 
