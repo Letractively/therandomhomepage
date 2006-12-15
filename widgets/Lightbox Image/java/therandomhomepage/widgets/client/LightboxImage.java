@@ -2,7 +2,7 @@ package therandomhomepage.widgets.client;
 
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
-import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.UIObject;
 import com.google.gwt.user.client.ui.Widget;
@@ -24,10 +24,10 @@ public class LightboxImage extends Widget {
     private int slideshowDelayInSeconds;
     private static int instance = 0;
     private static int loadedInstance = 0;
+    LightboxImageTimer timer = null;
 
     public LightboxImage(Image image) {
-        anchor = createAnchor(image, "lightbox");
-        setElement(anchor);
+        setElement(createAnchor(image, "lightbox"));
         instance++;
     }
 
@@ -53,6 +53,20 @@ public class LightboxImage extends Widget {
             DOM.setAttribute(element, "slideDuration", String.valueOf(slideshowDelayInSeconds));
         }
         setAllVisibility(false);
+        setVisibility(0,true);
+    }
+
+    public void startSlideshow() {
+        if (timer != null) {
+            timer = new LightboxImageTimer();
+            timer.scheduleRepeating(slideshowDelayInSeconds * 1000);
+        }
+    }
+
+    public void stopSlideshow() {
+        if (timer != null) {
+            timer.cancel();
+        }
     }
 
     private Element createAnchor(Image image, String relValue) {
@@ -102,6 +116,23 @@ public class LightboxImage extends Widget {
         if (loadedInstance == instance) {
             init();
             loadedInstance--;
+        }
+    }
+
+    private class LightboxImageTimer extends Timer {
+        int prevIdx = -1;
+        int currentIdx = 0;
+
+        public void run() {
+            if (prevIdx > -1) {
+                setVisibility(prevIdx, false);
+            }
+            if (currentIdx == anchors.length) {
+                currentIdx = 0;
+            }
+            setVisibility(currentIdx, true);
+            prevIdx = currentIdx;
+            currentIdx++;
         }
     }
 
