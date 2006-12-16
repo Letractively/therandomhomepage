@@ -1,0 +1,43 @@
+
+Using GWT-WL By Eugine Levitov
+
+For those of us who have no clue how to incorporate this release
+into the existing project, the way to do is as follows (the 
+instructions are for an Eclipse project, but should work for 
+any IDE with reasonable adjustments):
+
+
+1. Unpack the files, and put them in an arbitrary folder (possibly
+inside the GWT folder)
+
+2. In Eclipse go to "Project->Properties", "Java Build Path" menu item
+and "Libraries" tab, and "Add External JARs" button - and browse to the
+gwt-widgets-x.x.x.jar, press OK. This added the source code of the
+distribution to your project. Now you should be able to use the
+libraries in the code.
+
+3. In Eclipse in the  "Package Explorer", which is the tree usually on
+the left, describing the structure of the project, select the file
+"projectName.gwt.xml (should be under package "com.companyName"). Under
+the line "<inherits name='com.google.gwt.user.User'/>" add the line
+"<inherits name='org.gwtwidgets.WidgetLibrary'/>"
+
+4. Likewise in the "Package Explorer" at the bottom you have a file
+called "projectName.launch". Open the file, and you will see a number
+of lines starting with "<listEntry" and containing jar files to be used
+in your project. Copy the last such line and change the path to point
+to the "gwt-widgets-x.x.x.jar" on your disk. Do this and the previous
+step right, and Eclipse will be able to start your project in hosted
+mode.
+
+5. Finally at the bottom of the list of files you will see
+"projectName-compile.cmd" and "projectName-shell.cmd" open these files
+in a text editor (either in Eclipse or just in a note pad) in the first
+line you will see a command that goes like so:
+
+"@java -cp "%~dp0\src;--path--;--path--;"
+
+The two paths are your paths to "gwt-user.jar" and "gwt-dev-windows.jar".
+Now, obviously, add to these your path to "gwt-widgets-x.x.x.jar" in
+both files. Now you've got the two scripts working and you'll be able 
+to run your project both in hosted mode and in web mode.
