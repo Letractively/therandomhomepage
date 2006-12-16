@@ -28,7 +28,8 @@ import therandomhomepage.widgets.client.LightboxImage;
  * Time: 11:24:15 AM
  */
 public class LightboxImageDemo implements EntryPoint {
-    
+
+
     public void onModuleLoad() {
         TabPanel tabs = new TabPanel();
         tabs.setHeight("100%");
@@ -41,7 +42,19 @@ public class LightboxImageDemo implements EntryPoint {
         tabs.addTabListener(new TabSelectionListener());
 
         tabs.selectTab(0);
+
+
+        RootPanel.get().add(getPageHeader());
         RootPanel.get().add(tabs);
+    }
+
+    private Widget getPageHeader() {
+        return new HTML("<p<b>Lightbox Image</b>, a GWT wrapper implementation for Lightbox JS by Lokesh Dhakar(<a target=\"_new\" href=\"http://www.huddletogether.com/projects/lightbox2/\">http://www.huddletogether.com/projects/lightbox2/</a>)" +
+                "<ul>Features :" +
+                "<li>built on top of prototype.js, scriptaculous(effects.js) & Lightbox JS</li>"+
+                "<li>single image and multi-image with slideshow</li>"+
+                "</ul>" +
+                "</p>");
     }
 
     private LightboxImagePanel buildSingleImageLightboxPanel() {
