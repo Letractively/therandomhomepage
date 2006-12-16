@@ -66,6 +66,7 @@ public class LightboxImage extends Widget {
         this.slideshowDelayInSeconds = slideshowDelayInSeconds;
         for (int i = 0; i < childrens.length; i++) {
             Element element = childrens[i];
+            DOM.setAttribute(childrens[i], "startslideshow", "true");
             DOM.setAttribute(element, "slideDuration", String.valueOf(slideshowDelayInSeconds));
         }
         setAllVisibility(false);
@@ -73,7 +74,7 @@ public class LightboxImage extends Widget {
     }
 
     public void startSlideshow() {
-        if (timer != null) {
+        if (timer == null) {
             timer = new LightboxImageTimer();
             timer.scheduleRepeating(slideshowDelayInSeconds * 1000);
         }
@@ -143,7 +144,7 @@ public class LightboxImage extends Widget {
 
     private class LightboxImageTimer extends Timer {
         int prevIdx = -1;
-        int currentIdx = 0;
+        int currentIdx = 1;
 
         public void run() {
             if (prevIdx > -1) {
