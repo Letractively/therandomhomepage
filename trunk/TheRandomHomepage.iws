@@ -18,11 +18,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/COPYING" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/CHANGES" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/gwt-widgets-0.1.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/blank.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prev.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/image-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/next.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/closelabel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/nextlabel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prevlabel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/stop.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/close.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/prev.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/blank.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/next.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/start.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/close1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/close.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/nextlabel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/prevlabel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/closelabel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/thumb-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/images/bigshadow.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/images/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/thumb-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/randomflickrpublic/lightbox/css/lightbox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-5.jpg" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -163,19 +192,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LightboxImageDemo.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="20" selection-start="241" selection-end="241" vertical-scroll-proportion="0.019767443">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LightboxImageDemo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="70" selection-start="3664" selection-end="3664" vertical-scroll-proportion="0.45680472">
+            <state line="97" column="70" selection-start="3664" selection-end="3664" vertical-scroll-proportion="1.882353">
               <folding />
             </state>
           </provider>
@@ -190,12 +210,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/README">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blank.gif" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/blank.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -220,7 +247,7 @@
       <file leaf-file-name="LightboxImage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="62" selection-start="4063" selection-end="4063" vertical-scroll-proportion="0.13491124">
+            <state line="122" column="62" selection-start="4063" selection-end="4063" vertical-scroll-proportion="0.54901963">
               <folding />
             </state>
           </provider>
@@ -229,7 +256,7 @@
       <file leaf-file-name="TheRandomHomepage.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/TheRandomHomepage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="70" selection-start="440" selection-end="506" vertical-scroll-proportion="0.019767443">
+            <state line="19" column="70" selection-start="440" selection-end="506" vertical-scroll-proportion="0.07762557">
               <folding />
             </state>
           </provider>
@@ -238,7 +265,7 @@
       <file leaf-file-name="LightboxImageDemo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.040718563">
+            <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.17525773">
               <folding />
             </state>
           </provider>
@@ -707,6 +734,70 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\mainpublic" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
@@ -764,7 +855,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure ProjectPane="false" PackagesPane="false" Scope="false" Favorites="false" />
+      <showStructure Scope="false" ProjectPane="false" PackagesPane="false" Favorites="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -821,7 +912,176 @@
       <recent name="therandomhomepage.randomflickrclient" />
     </key>
   </component>
-  <component name="RestoreUpdateTree" />
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="12/16/06 11:36 AM" ActionInfo="Chec_k Status">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="UpdatedOnServer" />
+            <option name="myStatusName" value="Modified on Server" />
+            <option name="mySupportsDeletion" value="true" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="Modified On Server" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="ReplacedOnServer" />
+            <option name="myStatusName" value="Replaced on Server" />
+            <option name="mySupportsDeletion" value="true" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="Replaced On Server" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+          <PATH>C:\sid\projects\TheRandomHomepage\TheRandomHomepage.iws</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+          <PATH>C:\sid\projects\TheRandomHomepage\google\gadgets\Random Flickr\screenshot.jpg</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\google\gadgets\Random Wikipedia Article\screenshot.png</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\google\gadgets\Random Wikipedia Article\thumbnail.png</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\netvibes\modules\PodcastShuffle\Flickr.js</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\mainpublic\images\Thumbs.db</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\mainpublic\images\bigshadow.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\mainpublic\images\logos\Thumbs.db</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\.gwt-cache</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\out</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\tomcat</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\blank.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\close.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\close1.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\closelabel.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\image-1.jpg</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\image-2.jpg</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\image-3.jpg</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\image-4.jpg</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\image-5.jpg</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\loading.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\next.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\nextlabel.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\prev.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\prevlabel.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\start.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\stop.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\thumb-1.jpg</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox\Thumbs.db</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\.gwt-cache</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\out</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\classes</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\Firefox\extension\Build.xml</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\Firefox\extension\META-INF</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\Firefox\extension\chrome.manifest</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\Firefox\extension\defaults</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\Firefox\extension\install.js</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\Firefox\extension\install.rdf</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\Firefox\extension\chrome\content</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\Firefox\extension\chrome\therandomhomepage.jar</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\Firefox\extension\chrome\locale\en-US\therandomhomepage</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\Firefox\extension\chrome\skin\classic</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\css</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\css\lightbox.css</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images\blank.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images\close.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images\closelabel.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images\image-1.jpg</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images\loading.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images\next.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images\nextlabel.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images\prev.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images\prevlabel.gif</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images\thumb-1.jpg</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\randomflickrpublic\lightbox\images\Thumbs.db</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Missing" />
+          <option name="myStatusName" value="Missing" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="missing" />
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\demo</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\Firefox</PATH>
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
   <component name="RunManager" selected="Application.LightboxImageDemo">
     <tempConfiguration default="false" name="therandomhomepage.test" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="TheRandomHomepage" />
@@ -1057,6 +1317,7 @@
     <option name="UPDATE_RECURSIVELY" value="true" />
     <option name="MERGE_DRY_RUN" value="false" />
     <configuration useDefault="true">C:\Documents and Settings\sihameed\Application Data\Subversion</configuration>
+    <remoteStatus />
     <upgradeMode>auto</upgradeMode>
   </component>
   <component name="TodoView" selected-index="0">
@@ -1074,7 +1335,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1408" height="1030" extended-state="6" />
+    <frame x="-4" y="-4" width="1288" height="1004" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
@@ -1082,7 +1343,7 @@
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28529194" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28467155" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23216309" order="14" />
@@ -1098,7 +1359,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5005714" order="4" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="17" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50285715" order="12" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6840317" order="12" />
       <window_info id="FaTPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6202965" order="8" />
       <window_info id="SVN Properties" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295583" order="9" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
@@ -1124,7 +1385,7 @@
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
     <option name="PUT_FOCUS_INTO_COMMENT" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding gwt-widgets-0.1.3 library" />
     <option name="SAVE_LAST_COMMIT_MESSAGE" value="true" />
     <option name="CHECKIN_DIALOG_SPLITTER_PROPORTION" value="0.8" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -1137,7 +1398,6 @@
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Initial revision" />
     <MESSAGE value="Modified for Netvibes" />
     <MESSAGE value="Prior to working for IE" />
     <MESSAGE value="Added Netvibe RandomFlickr module" />
@@ -1147,6 +1407,7 @@
     <MESSAGE value="removing user.properties" />
     <MESSAGE value="change in stylesheet" />
     <MESSAGE value="minor refactoring" />
+    <MESSAGE value="Adding gwt-widgets-0.1.3 library" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1214,16 +1475,6 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/php/configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/style/BorderStyle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="13" selection-start="814" selection-end="814" vertical-scroll-proportion="0.59177214">
@@ -1252,6 +1503,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="20" selection-start="241" selection-end="241" vertical-scroll-proportion="0.020383693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="70" selection-start="3664" selection-end="3664" vertical-scroll-proportion="1.882353">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/COPYING">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1268,21 +1533,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="62" selection-start="4063" selection-end="4063" vertical-scroll-proportion="0.13491124">
+        <state line="122" column="62" selection-start="4063" selection-end="4063" vertical-scroll-proportion="0.54901963">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/TheRandomHomepage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="70" selection-start="440" selection-end="506" vertical-scroll-proportion="0.019767443">
+        <state line="19" column="70" selection-start="440" selection-end="506" vertical-scroll-proportion="0.07762557">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.040718563">
+        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.17525773">
           <folding />
         </state>
       </provider>
@@ -1293,20 +1558,6 @@
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Gadget.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="241" selection-end="241" vertical-scroll-proportion="0.019767443">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="70" selection-start="3664" selection-end="3664" vertical-scroll-proportion="0.45680472">
           <folding />
         </state>
       </provider>
@@ -1323,6 +1574,11 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/blank.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
