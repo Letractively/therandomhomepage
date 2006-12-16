@@ -20,6 +20,7 @@ package therandomhomepage.widgets.client;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.UIObject;
 import com.google.gwt.user.client.ui.Widget;
@@ -132,8 +133,12 @@ public class LightboxImage extends Widget {
         loadedInstance++;
         if (loadedInstance == createdInstance) {
             init();
-            loadedInstance--;
         }
+    }
+
+    protected void onDetach() {
+        super.onDetach();
+        loadedInstance--;
     }
 
     private class LightboxImageTimer extends Timer {
