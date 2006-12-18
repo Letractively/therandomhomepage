@@ -20,17 +20,16 @@ package therandomhomepage.widgets.client;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.Timer;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.UIObject;
 import com.google.gwt.user.client.ui.Widget;
 
 /**
  * LightboxImage widget, a GWT wrapper for Lightbox JS by Lokesh Dhakar.
- * @see <a target="_new" href="http://www.huddletogether.com/projects/lightbox2/">http://www.huddletogether.com/projects/lightbox2/</a>
  *
  * @author Siddique Hameed
  * @version 0.1
+ * @see <a target="_new" href="http://www.huddletogether.com/projects/lightbox2/">http://www.huddletogether.com/projects/lightbox2/</a>
  */
 public class LightboxImage extends Widget {
 
@@ -43,33 +42,54 @@ public class LightboxImage extends Widget {
     private int prevIdx = -1;
     private int currentIdx = 0;
 
+    /**
+     * Create LightboxImage with a single image
+     *
+     * @param image image for the Lightbox
+     */
+
     public LightboxImage(Image image) {
         setElement(createAnchor(image, "lightbox"));
     }
 
+    /**
+     * Create LightboxImage with multiple images
+     *
+     * @param images images for the Lightbox
+     */
+
     public LightboxImage(Image images[]) {
-        childrens = new Element[images.length];
-        Element tempDiv = DOM.createDiv();
-        for (int i = 0; i < images.length; i++) {
-            childrens[i] = createAnchor(images[i], "lightbox["+imagesets+"]");
-            DOM.setAttribute(childrens[i], "startslideshow", "false");
-            DOM.appendChild(tempDiv, childrens[i]);
-        }
-        setElement(tempDiv);
-        imagesets++;
+        this(images, false, 0);
     }
 
+    /**
+     * Create LightboxImage with multiple images and with slideshow options
+     *
+     * @param images                  images for the Lightbox
+     * @param slideshow               Is slideshow
+     * @param slideshowDelayInSeconds Slideshow delay in seconds
+     */
+
     public LightboxImage(Image images[], boolean slideshow, int slideshowDelayInSeconds) {
-        this(images);
         this.slideshow = slideshow;
         this.slideshowDelayInSeconds = slideshowDelayInSeconds;
-        for (int i = 0; i < childrens.length; i++) {
-            Element element = childrens[i];
-            DOM.setAttribute(childrens[i], "startslideshow", "true");
-            DOM.setAttribute(element, "slideDuration", String.valueOf(slideshowDelayInSeconds));
+        Element tempDiv = DOM.createDiv();
+        childrens = new Element[images.length];
+        for (int i = 0; i < images.length; i++) {
+            childrens[i] = createAnchor(images[i], "lightbox[" + imagesets + "]");
+            if (slideshow) {
+                DOM.setAttribute(childrens[i], "startslideshow", Boolean.toString(slideshow));
+                DOM.setAttribute(childrens[i], "slideDuration", String.valueOf(slideshowDelayInSeconds));
+            }
+            DOM.appendChild(tempDiv, childrens[i]);
         }
-        toggleSlideshowImage(currentIdx);
+        imagesets++;
+        setElement(tempDiv);
+        if (slideshow) {
+            toggleSlideshowImage(currentIdx);
+        }
     }
+
 
     public void startSlideshow() {
         if (timer == null) {
@@ -105,10 +125,8 @@ public class LightboxImage extends Widget {
     }
 
     public void toggleSlideshowImage(int imageIdx) {
-        if (slideshow) {
-            setAllVisibility(false);
-            setVisibility(imageIdx, true);
-        }
+        setAllVisibility(false);
+        setVisibility(imageIdx, true);
     }
 
 
@@ -129,14 +147,10 @@ public class LightboxImage extends Widget {
     }
 
     protected void onLoad() {
-        if (DOM.getElementById("overlay") != null) {
+        if (DOM.getElementById("overlay") != null || DOM.getElementById("lightbox") != null) {
             clear();
         }
         init();
-    }
-
-    protected void onDetach() {
-        super.onDetach();
     }
 
     private class LightboxImageTimer extends Timer {
@@ -162,6 +176,5 @@ public class LightboxImage extends Widget {
         $wnd.Element.remove('overlay');
         $wnd.Element.remove('lightbox');
     }-*/;
-
 
 }
