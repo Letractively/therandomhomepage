@@ -2,7 +2,6 @@ package therandomhomepage.randomflickrclient;
 
 import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.ui.Widget;
-import org.gwtwidgets.client.wrap.Callback;
 import org.gwtwidgets.client.wrap.Effect;
 import org.gwtwidgets.client.wrap.EffectOption;
 
@@ -33,7 +32,7 @@ public class EffectsHelper {
 
 
     public static void applyEffects(Widget widget, int effectConst) {
-        System.out.println("EffectsHelper.applyEffects effectConst = "+effectConst);   
+        System.out.println("TransitionEffects.applyEffects effectConst = "+effectConst);
         if (widget != null) {
             switch (effectConst) {
                 case RANDOM:
