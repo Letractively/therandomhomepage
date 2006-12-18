@@ -18,8 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/Build.xml" afterPath="$PROJECT_DIR$/src/java/Build.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mail.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.ipr" afterPath="$PROJECT_DIR$/TheRandomHomepage.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
@@ -165,7 +164,7 @@
       <file leaf-file-name="effectshelper.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/effectshelper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="4" selection-start="332" selection-end="332" vertical-scroll-proportion="0.021935483">
+            <state line="13" column="4" selection-start="332" selection-end="332" vertical-scroll-proportion="0.021437578">
               <folding />
             </state>
           </provider>
@@ -174,7 +173,7 @@
       <file leaf-file-name="Effect.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/Effect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="13" selection-start="2522" selection-end="2522" vertical-scroll-proportion="0.021935483">
+            <state line="79" column="13" selection-start="2522" selection-end="2522" vertical-scroll-proportion="0.021437578">
               <folding />
             </state>
           </provider>
@@ -183,7 +182,7 @@
       <file leaf-file-name="Build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="50" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.69548386">
+            <state line="61" column="50" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.667087">
               <folding />
             </state>
           </provider>
@@ -192,7 +191,7 @@
       <file leaf-file-name="Build.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="72" column="0" selection-start="2432" selection-end="2432" vertical-scroll-proportion="0.9029004">
               <folding />
             </state>
           </provider>
@@ -201,7 +200,7 @@
       <file leaf-file-name="AbstractRandomGadget.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="134" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.047741935">
+            <state line="38" column="134" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.023959646">
               <folding />
             </state>
           </provider>
@@ -210,7 +209,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1395" column="40" selection-start="39961" selection-end="39961" vertical-scroll-proportion="0.492">
+            <state line="1395" column="40" selection-start="39961" selection-end="39961" vertical-scroll-proportion="0.45703125">
               <folding />
             </state>
           </provider>
@@ -222,7 +221,7 @@
       <file leaf-file-name="UIObject.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="345" column="17" selection-start="10362" selection-end="10362" vertical-scroll-proportion="0.90064514">
+            <state line="345" column="17" selection-start="10362" selection-end="10362" vertical-scroll-proportion="0.8575032">
               <folding />
             </state>
           </provider>
@@ -231,7 +230,7 @@
       <file leaf-file-name="TheRandomHomepage.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/TheRandomHomepage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="2" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.9664516">
+            <state line="106" column="2" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.9218159">
               <folding />
             </state>
           </provider>
@@ -240,7 +239,7 @@
       <file leaf-file-name="LightboxImageDemo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.045333333">
+            <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.044270832">
               <folding />
             </state>
           </provider>
@@ -252,7 +251,7 @@
       <file leaf-file-name="Gadget.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Gadget.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="185" column="0" selection-start="4589" selection-end="4589" vertical-scroll-proportion="0.42064515">
+            <state line="185" column="0" selection-start="4589" selection-end="4589" vertical-scroll-proportion="0.3883985">
               <folding />
             </state>
           </provider>
@@ -432,7 +431,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure Favorites="false" ProjectPane="false" Scope="false" PackagesPane="false" />
+      <showStructure Favorites="false" PackagesPane="false" Scope="false" ProjectPane="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -744,14 +743,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="996" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" order="18" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40816328" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32979593" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30577576" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43085715" order="14" />
@@ -861,15 +860,10 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-    <buildFile url="file://$PROJECT_DIR$/src/java/Build.xml">
-      <antCommandLine value="-d" />
+    <buildFile url="file://$PROJECT_DIR$/src/Build.xml">
+      <antCommandLine value="" />
       <runInBackground value="false" />
-      <targetFilters>
-        <filter targetName="backupWebsite" isVisible="false" />
-        <filter targetName="deployLightbox" isVisible="true" />
-        <filter targetName="deployRandomFlickrGadget" isVisible="true" />
-        <filter targetName="init" isVisible="false" />
-      </targetFilters>
+      <targetFilters />
       <treeView value="true" />
       <verbose value="true" />
       <viewClosedWhenNoErrors value="false" />
@@ -923,21 +917,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/effectshelper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="332" selection-end="332" vertical-scroll-proportion="0.021935483">
+        <state line="13" column="4" selection-start="332" selection-end="332" vertical-scroll-proportion="0.021437578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/Effect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="13" selection-start="2522" selection-end="2522" vertical-scroll-proportion="0.021437578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="50" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.667087">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="134" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.047741935">
+        <state line="38" column="134" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.023959646">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1395" column="40" selection-start="39961" selection-end="39961" vertical-scroll-proportion="0.492">
+        <state line="1395" column="40" selection-start="39961" selection-end="39961" vertical-scroll-proportion="0.45703125">
           <folding />
         </state>
       </provider>
@@ -947,21 +955,21 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="345" column="17" selection-start="10362" selection-end="10362" vertical-scroll-proportion="0.90064514">
+        <state line="345" column="17" selection-start="10362" selection-end="10362" vertical-scroll-proportion="0.8575032">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/TheRandomHomepage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="2" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.9664516">
+        <state line="106" column="2" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.9218159">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.045333333">
+        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.044270832">
           <folding />
         </state>
       </provider>
@@ -971,28 +979,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Gadget.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="0" selection-start="4589" selection-end="4589" vertical-scroll-proportion="0.42064515">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/Effect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="13" selection-start="2522" selection-end="2522" vertical-scroll-proportion="0.021935483">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="50" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.69548386">
+        <state line="185" column="0" selection-start="4589" selection-end="4589" vertical-scroll-proportion="0.3883985">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="72" column="0" selection-start="2432" selection-end="2432" vertical-scroll-proportion="0.9029004">
           <folding />
         </state>
       </provider>
