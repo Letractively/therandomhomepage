@@ -73,6 +73,32 @@ public class EffectsHelper {
         }
     }
 
+    private native static void applyEffects(Element element,int effectConst)/*-{
+        switch(effectsConstant){
+            case TRANSITION_EFFECT_RANDOM:
+                applyEffect(element,getRandomNo(TRANSITION_EFFECT_SLIDEDOWN));
+                break;
+            case TRANSITION_EFFECT_BLINDOWN:
+                new Effect.BlindDown(element,{afterFinish: callBackOnFinish});
+                break;
+            case TRANSITION_EFFECT_HIGHLIGHT:
+                new Effect.Highlight(element,{afterFinish: callBackOnFinish});
+                break;
+            case TRANSITION_EFFECT_SHAKE:
+                new Effect.Shake(element,{afterFinish: callBackOnFinish});
+                break;
+            case TRANSITION_EFFECT_PULSATE:
+                new Effect.Pulsate(element,{afterFinish: callBackOnFinish});
+                break;
+            case TRANSITION_EFFECT_GROW:
+                new Effect.Grow(element,{afterFinish: callBackOnFinish});
+                break;
+            case TRANSITION_EFFECT_SLIDEDOWN:
+                new Effect.SlideDown(element,{afterFinish: callBackOnFinish});
+                break;
+        }
+    }-*/;
+
     private native static void appear (Element element, JavaScriptObject opts) /*-{
         new $wnd.Effect.Appear(element, opts);
     }-*/;
