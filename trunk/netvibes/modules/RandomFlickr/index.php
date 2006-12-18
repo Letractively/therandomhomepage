@@ -5,7 +5,7 @@
 <link rel="icon" type="image/ico" href="http://www.flickr.com/favicon.ico"/>
 <meta name="author" content="Siddique Hameed"/>
 <!--
-	Last Updated: 12/13/2006
+	Last Updated: 12/18/2006
 	Version 0.1
 -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -39,7 +39,7 @@
 	}
 </style>
 <script type="text/javascript">
-<?php include '/home/content/r/a/n/randomadmin/html/js/effects.js';?>
+<?php include 'http://www.therandomhomepage.com/js/effects.js';?>
 
 // -----------------------------------------------------------------------------------
 //
@@ -1084,11 +1084,11 @@ if (/WebKit/i.test(navigator.userAgent)) { // sniff
 //window.onload = init;
 
 
-<?php include '/home/content/r/a/n/randomadmin/html/js/effectshelper.js';?>
+<?php include 'http://www.therandomhomepage.com/js/effectshelper.js';?>
 
-<?php include '/home/content/r/a/n/randomadmin/html/js/utils.js';?>
+<?php include 'http://www.therandomhomepage.com/js/utils.js';?>
 
-<?php include '/home/content/r/a/n/randomadmin/html/js/urchin.js';?>
+<?php include 'http://www.therandomhomepage.com/js/urchin.js';?>
 </script>
 
 <script type="text/javascript">
