@@ -104,7 +104,7 @@ public class LightboxImageDemo implements EntryPoint {
 
         Image images[] = {image1, image2, image3, image4};
         
-        LightboxImage lightboxImage = new LightboxImage(images,true,2);
+        LightboxImage lightboxImage = new LightboxImage(images,true,3);
 
         String desc = "Click on the image to see Lightbox in action. Mouse over on top of Lightbox image's right for next or left for previous image.";
 
