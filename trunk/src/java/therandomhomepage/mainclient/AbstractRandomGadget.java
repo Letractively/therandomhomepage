@@ -45,10 +45,10 @@ public class AbstractRandomGadget extends HTML {
                 "            <DIV class=\"gadgetFrame\">");
         if (googleGadgetURL != null) {
             html.append("<IFRAME frameborder=\"0\"\n" +
-                    "                     style=\"display: block; width: " + width + "px; height: " + height + "px;\" src=\"" + getCompleteGoogleGadgetURL(googleGadgetURL) + "\"></IFRAME>\n");
+                    "                     style=\"display: block; margin-left: 5px; margin-right: 5px; width: " + width + "px; height: " + height + "px;\" src=\"" + getCompleteGoogleGadgetURL(googleGadgetURL) + "\"></IFRAME>\n");
         } else {
             html.append("<IFRAME id=\"myIframe\" frameborder=\"0\"\n" +
-                    "                     style=\"display: block; width: " + width + "px; height: " + height + "px;\" src=\"" + iframeURL + "\"></IFRAME>\n");
+                    "                     style=\"display: block; margin-left: 5px; margin-right: 5px; width: " + width + "px; height: " + height + "px;\" src=\"" + iframeURL + "\"></IFRAME>\n");
 
         }
 
