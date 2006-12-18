@@ -58,7 +58,7 @@
         basedir="${backup.dir}"
         includes="**"
         />
-
+        
         <!-- TODO: Work on email this jar file -->
 
         <!--<mail mailhost="smtp.gmail.com" from="me" tolist="${backup_mailbox}" subject="Backup files for ${ftp_host} at {build.time}"-->
