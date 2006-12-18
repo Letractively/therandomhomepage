@@ -73,7 +73,7 @@ public class LightboxImage extends Widget {
     public LightboxImage(Image images[], boolean slideshow, int slideshowDelayInSeconds) {
         this.slideshow = slideshow;
         this.slideshowDelayInSeconds = slideshowDelayInSeconds;
-        Element tempDiv = DOM.createDiv();
+        Element anchorsDiv = DOM.createDiv();
         childrens = new Element[images.length];
         for (int i = 0; i < images.length; i++) {
             childrens[i] = createAnchor(images[i], "lightbox[" + imagesets + "]");
@@ -81,10 +81,10 @@ public class LightboxImage extends Widget {
                 DOM.setAttribute(childrens[i], "startslideshow", Boolean.toString(slideshow));
                 DOM.setAttribute(childrens[i], "slideDuration", String.valueOf(slideshowDelayInSeconds));
             }
-            DOM.appendChild(tempDiv, childrens[i]);
+            DOM.appendChild(anchorsDiv, childrens[i]);
         }
         imagesets++;
-        setElement(tempDiv);
+        setElement(anchorsDiv);
         if (slideshow) {
             toggleSlideshowImage(currentIdx);
         }
