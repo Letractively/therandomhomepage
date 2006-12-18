@@ -19,6 +19,7 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/EffectsHelper.java" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/EffectsHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -182,7 +183,7 @@
       <file leaf-file-name="EffectsHelper.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/EffectsHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="57" selection-start="531" selection-end="531" vertical-scroll-proportion="0.2716895">
+            <state line="99" column="9" selection-start="4715" selection-end="4715" vertical-scroll-proportion="0.9417808">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2302,7 +2303,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/EffectsHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="57" selection-start="531" selection-end="531" vertical-scroll-proportion="0.2716895">
+        <state line="99" column="9" selection-start="4715" selection-end="4715" vertical-scroll-proportion="0.9417808">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
