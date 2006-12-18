@@ -2,69 +2,81 @@ package therandomhomepage.widgets.client;
 
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.Random;
 import com.google.gwt.core.client.JavaScriptObject;
 import org.gwtwidgets.client.wrap.EffectOption;
 import org.gwtwidgets.client.wrap.Effect;
 import org.gwtwidgets.client.wrap.Callback;
 import org.gwtwidgets.client.style.Color;
+import therandomhomepage.randomflickrclient.EffectsCallback;
 
-/**
- * Effect is a wrapper for the Scriptaculous effects JavaScript library, which
- * can be found at http://script.aculo.us/.
- *
- * Example of using an effect with options:
- *
- * <pre>
- * Effect.highlight(widget, new EffectOption[] { new EffectOption(&quot;startcolor&quot;, &quot;#ff0000&quot;) });
- * </pre>
- *
- * Example of using an effect with a callback:
- *
- * <pre>
- * Callback callback = new Callback(){
- *     public void execute()
- *     {
- *         Window.alert("done!");
- *     }
- * };
- *
- * Effect.fade(widget, new EffectOption[]{new EffectOption("afterFinish", callback)});
- *
- * </pre>
- *
- * Example of using an effect with no options:
- *
- * <pre>
- * Effect.fade(widget);
- * </pre>
- *
- * Example of using an effect on a specific element id:
- *
- * <pre>
- * Effect.switchOff(RootPanel.get(&quot;leftNav&quot;));
- * </pre>
- *
- * You must reference the Scriptaculous JavaScript code in your HTML page to be
- * able to use the wrapper. Failure to do so will result in error messages
- * similar to this, "'$wnd.Effect.Fade' is null or not an object".
- *
- * <pre>
- *
- *   &lt;script type=&quot;text/javascript&quot; src=&quot;script/prototype.js&quot;&gt;&lt;/script&gt;
- *   &lt;script type=&quot;text/javascript&quot; src=&quot;script/effects.js&quot;&gt;&lt;/script&gt;
- * </pre>
- *
- * You will also need to add the gwt-widgets jar file to your project classpath,
- * and add the following reference in your .gwt.xml file:
- *
- * <pre>
- *   &lt;inherits name='org.gwtwidgets.WidgetLibrary'/&gt;
- * </pre>
- *
- * @author Robert Hanson <iamroberthanson[at]gmail.com>
- * @author George Georgovassilis <g.georgovassilis[at]gmail.com>
- */
 public class EffectsHelper {
+
+    public static final int NONE = -1;
+    public static final int RANDOM = 0;
+    public static final int BLINDOWN = 1;
+    public static final int BLINDUP = 2;
+    public static final int HIGHLIGHT = 3;
+    public static final int DROPOUT = 4;
+    public static final int SHAKE = 5;
+    public static final int PULSATE = 6;
+    public static final int FOLD = 7;
+    public static final int GROW = 8;
+    public static final int SHRINK = 9;
+    public static final int PUFF = 10;
+    public static final int SLIDEDOWN = 11;
+    public static final int SLIDEUP = 12;
+    public static final int FADE = 13;
+    private static final String AFTER_FINISH_EFFECT_OPTION = "afterFinish";
+
+
+    public static void applyEffects(Widget widget, int effectConst) {
+        
+        System.out.println("EffectsHelper.applyEffects effectConst = "+effectConst);
+        if (widget != null) {
+            switch (effectConst) {
+                case RANDOM:
+                    int i = Random.nextInt(SLIDEUP);
+                    applyEffects(widget, i);
+                    break;
+                case FADE:
+//                    Effect.fade(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case BLINDOWN:
+//                    Effect.blindDown(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case BLINDUP:
+//                    Effect.blindUp(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case HIGHLIGHT:
+//                    Effect.highlight(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case DROPOUT:
+//                    Effect.dropOut(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case SHAKE:
+//                    Effect.shake(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case PULSATE:
+//                    Effect.pulsate(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case PUFF:
+//                    Effect.puff(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case SLIDEDOWN:
+//                    Effect.slideDown(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+                case SLIDEUP:
+//                    Effect.slideUp(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+                    break;
+            }
+        }
+    }
+
+
+
+
+
     public static void appear (Widget widget)
     {
         appear(widget.getElement(), null);
