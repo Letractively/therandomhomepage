@@ -39,7 +39,7 @@ public class LightboxImage extends Widget {
     private static int imagesets = 0;
     private LightboxImageTimer timer = null;
 
-    private int prevIdx = -1;
+    private int prevIdx = 0;
     private int currentIdx = 0;
 
     /**
@@ -156,15 +156,13 @@ public class LightboxImage extends Widget {
     private class LightboxImageTimer extends Timer {
 
         public void run() {
-            if (prevIdx > -1) {
-                setVisibility(prevIdx, false);
-            }
-            prevIdx = currentIdx;
+            setVisibility(prevIdx, false);
             currentIdx++;
             if (currentIdx == childrens.length) {
                 currentIdx = 0;
             }
             setVisibility(currentIdx, true);
+            prevIdx = currentIdx;
         }
     }
 
