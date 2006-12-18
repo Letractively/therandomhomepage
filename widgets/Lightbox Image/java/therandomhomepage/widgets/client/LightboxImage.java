@@ -1,5 +1,5 @@
 /*
- * Copyright 2006 Siddique Hameed <siddii AT gmail.com> - http://www.therandomhomepage.com
+ * Copyright 2006 Siddique Hameed <siddii AT gmail.com> - http://www.TheRandomHomepage.com
  *
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,13 +38,13 @@ public class LightboxImage extends Widget {
     private boolean slideshow;
     private int slideshowDelayInSeconds;
     private static int imagesets = 0;
-    private static int createdInstance = 0;
-    private static int loadedInstance = 0;
     private LightboxImageTimer timer = null;
+
+    private int prevIdx = -1;
+    private int currentIdx = 0;
 
     public LightboxImage(Image image) {
         setElement(createAnchor(image, "lightbox"));
-        createdInstance++;
     }
 
     public LightboxImage(Image images[]) {
@@ -56,7 +56,6 @@ public class LightboxImage extends Widget {
             DOM.appendChild(tempDiv, childrens[i]);
         }
         setElement(tempDiv);
-        createdInstance++;
         imagesets++;
     }
 
@@ -69,8 +68,7 @@ public class LightboxImage extends Widget {
             DOM.setAttribute(childrens[i], "startslideshow", "true");
             DOM.setAttribute(element, "slideDuration", String.valueOf(slideshowDelayInSeconds));
         }
-        setAllVisibility(false);
-        setVisibility(0, true);
+        toggleSlideshowImage(currentIdx);
     }
 
     public void startSlideshow() {
@@ -131,35 +129,39 @@ public class LightboxImage extends Widget {
     }
 
     protected void onLoad() {
-        loadedInstance++;
-        if (loadedInstance == createdInstance) {
-            init();
+        if (DOM.getElementById("overlay") != null) {
+            clear();
         }
+        init();
     }
 
     protected void onDetach() {
         super.onDetach();
-        loadedInstance--;
     }
 
     private class LightboxImageTimer extends Timer {
-        int prevIdx = -1;
-        int currentIdx = 1;
 
         public void run() {
             if (prevIdx > -1) {
                 setVisibility(prevIdx, false);
             }
+            prevIdx = currentIdx;
+            currentIdx++;
             if (currentIdx == childrens.length) {
                 currentIdx = 0;
             }
             setVisibility(currentIdx, true);
-            prevIdx = currentIdx;
-            currentIdx++;
         }
     }
 
-    public static native void init() /*-{
+    protected static native void init() /*-{
         $wnd.initLightbox();
     }-*/;
+
+    protected static native void clear() /*-{
+        $wnd.Element.remove('overlay');
+        $wnd.Element.remove('lightbox');
+    }-*/;
+
+
 }
