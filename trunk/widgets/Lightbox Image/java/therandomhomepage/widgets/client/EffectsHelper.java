@@ -40,7 +40,7 @@ public class EffectsHelper {
                     applyEffects(widget, i);
                     break;
                 case FADE:
-//                    Effect.fade(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
+//                    fade(widget.getElement(), new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
                     break;
                 case BLINDOWN:
 //                    Effect.blindDown(widget, new EffectOption[]{new EffectOption(AFTER_FINISH_EFFECT_OPTION, new EffectsCallback(widget))});
@@ -73,109 +73,30 @@ public class EffectsHelper {
         }
     }
 
-
-
-
-
-    public static void appear (Widget widget)
-    {
-        appear(widget.getElement(), null);
-    }
-
-    public static void appear (Widget widget, EffectOption[] opts)
-    {
-        appear(widget.getElement(), buildOptions(opts));
-    }
-
     private native static void appear (Element element, JavaScriptObject opts) /*-{
-        $wnd._nativeExtensions = false;
         new $wnd.Effect.Appear(element, opts);
     }-*/;
 
-    public static void blindDown (Widget widget)
-    {
-        blindDown(widget.getElement(), null);
-    }
-
-    public static void blindDown (Widget widget, EffectOption[] opts)
-    {
-        blindDown(widget.getElement(), buildOptions(opts));
-    }
 
     private native static void blindDown (Element element, JavaScriptObject opts) /*-{
-        $wnd._nativeExtensions = false;
         new $wnd.Effect.BlindDown(element, opts);
     }-*/;
 
-    public static void blindUp (Widget widget)
-    {
-        blindUp(widget.getElement(), createJsObject());
-    }
-
-    public static void blindUp (Widget widget, EffectOption[] opts)
-    {
-        blindUp(widget.getElement(), buildOptions(opts));
-    }
-
     private native static void blindUp (Element element, JavaScriptObject opts) /*-{
-        $wnd._nativeExtensions = false;
         new $wnd.Effect.BlindUp(element, opts);
     }-*/;
 
-    public static void dropOut (Widget widget)
-    {
-        dropOut(widget.getElement(), null);
-    }
-
-    public static void dropOut (Widget widget, EffectOption[] opts)
-    {
-        dropOut(widget.getElement(), buildOptions(opts));
-    }
-
     private native static void dropOut (Element element, JavaScriptObject opts) /*-{
-        $wnd._nativeExtensions = false;
         new $wnd.Effect.DropOut(element, opts);
     }-*/;
 
-    public static void fade (Widget widget)
-    {
-        fade(widget.getElement(), null);
-    }
-
-    public static void fade (Widget widget, EffectOption[] opts)
-    {
-        fade(widget.getElement(), buildOptions(opts));
-    }
-
     private native static void fade (Element element, JavaScriptObject opts) /*-{
-        $wnd._nativeExtensions = false;
         new $wnd.Effect.Fade(element, opts);
     }-*/;
 
-    public static void fold (Widget widget)
-    {
-        fold(widget.getElement(), null);
-    }
-
-    public static void fold (Widget widget, EffectOption[] opts)
-    {
-        fold(widget.getElement(), buildOptions(opts));
-    }
-
     private native static void fold (Element element, JavaScriptObject opts) /*-{
-        $wnd._nativeExtensions = false;
         new $wnd.Effect.Fold(element, opts);
     }-*/;
-
-    public static void grow (Widget widget)
-    {
-        grow(widget.getElement(), null);
-    }
-
-    public static void grow (Widget widget, EffectOption[] opts)
-    {
-        grow(widget.getElement(), buildOptions(opts));
-    }
 
     private native static void grow (Element element, JavaScriptObject opts) /*-{
         $wnd._nativeExtensions = false;

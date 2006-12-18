@@ -19,7 +19,6 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/EffectsHelper.java" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/EffectsHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -183,7 +182,7 @@
       <file leaf-file-name="EffectsHelper.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/EffectsHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="86" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.64041096">
+            <state line="14" column="57" selection-start="531" selection-end="531" vertical-scroll-proportion="0.2716895">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -194,7 +193,7 @@
       <file leaf-file-name="EffectsCallback.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsCallback.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="4" selection-start="366" selection-end="366" vertical-scroll-proportion="0.2522831">
+            <state line="20" column="22" selection-start="486" selection-end="486" vertical-scroll-proportion="0.34931508">
               <folding />
             </state>
           </provider>
@@ -2280,13 +2279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="366" selection-end="366" vertical-scroll-proportion="0.2522831">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/Effect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="148" column="43" selection-start="4469" selection-end="4469" vertical-scroll-proportion="0.24200913">
@@ -2301,9 +2293,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/randomflickrclient/EffectsCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="22" selection-start="486" selection-end="486" vertical-scroll-proportion="0.34931508">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/EffectsHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="86" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.64041096">
+        <state line="14" column="57" selection-start="531" selection-end="531" vertical-scroll-proportion="0.2716895">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
