@@ -18,7 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.ipr" afterPath="$PROJECT_DIR$/TheRandomHomepage.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Gadget.css" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Gadget.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
@@ -164,7 +164,7 @@
       <file leaf-file-name="LightboxImage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="60" selection-start="5219" selection-end="5219" vertical-scroll-proportion="0.92804426">
+            <state line="165" column="60" selection-start="5219" selection-end="5219" vertical-scroll-proportion="0.6031175">
               <folding />
             </state>
           </provider>
@@ -173,7 +173,7 @@
       <file leaf-file-name="TransitionEffects.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/TransitionEffects.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="26" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.6858169">
+            <state line="49" column="26" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.45803356">
               <folding />
             </state>
           </provider>
@@ -182,7 +182,7 @@
       <file leaf-file-name="effectshelper.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/effectshelper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="4" selection-start="332" selection-end="332" vertical-scroll-proportion="0.030520646">
+            <state line="13" column="4" selection-start="332" selection-end="332" vertical-scroll-proportion="0.020383693">
               <folding />
             </state>
           </provider>
@@ -191,7 +191,7 @@
       <file leaf-file-name="Effect.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/Effect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="13" selection-start="2522" selection-end="2522" vertical-scroll-proportion="0.031365313">
+            <state line="79" column="13" selection-start="2522" selection-end="2522" vertical-scroll-proportion="0.020383693">
               <folding />
             </state>
           </provider>
@@ -200,7 +200,7 @@
       <file leaf-file-name="Build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/Build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="89" selection-start="519" selection-end="519" vertical-scroll-proportion="0.4578097">
+            <state line="15" column="89" selection-start="519" selection-end="519" vertical-scroll-proportion="0.3057554">
               <folding />
             </state>
           </provider>
@@ -209,7 +209,7 @@
       <file leaf-file-name="AbstractRandomGadget.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="78" selection-start="830" selection-end="830" vertical-scroll-proportion="0.24538745">
+            <state line="38" column="134" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.47741148">
               <folding />
             </state>
           </provider>
@@ -218,7 +218,7 @@
       <file leaf-file-name="UIObject.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="345" column="17" selection-start="10362" selection-end="10362" vertical-scroll-proportion="1.2351885">
+            <state line="345" column="17" selection-start="10362" selection-end="10362" vertical-scroll-proportion="0.82494">
               <folding />
             </state>
           </provider>
@@ -227,7 +227,7 @@
       <file leaf-file-name="TheRandomHomepage.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/TheRandomHomepage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="2" selection-start="1818" selection-end="1818" vertical-scroll-proportion="1.2836624">
+            <state line="106" column="2" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.8860911">
               <folding />
             </state>
           </provider>
@@ -236,7 +236,7 @@
       <file leaf-file-name="LightboxImageDemo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.06390978">
+            <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.042027194">
               <folding />
             </state>
           </provider>
@@ -248,7 +248,7 @@
       <file leaf-file-name="Gadget.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Gadget.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="10" selection-start="3553" selection-end="3559" vertical-scroll-proportion="0.3321033">
+            <state line="185" column="0" selection-start="4589" selection-end="4589" vertical-scroll-proportion="0.6556777">
               <folding />
             </state>
           </provider>
@@ -638,6 +638,10 @@
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google\gadgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
       </PATH>
     </subPane>
   </component>
@@ -652,7 +656,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure Favorites="false" PackagesPane="false" Scope="false" ProjectPane="false" />
+      <showStructure ProjectPane="false" PackagesPane="false" Scope="false" Favorites="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -971,8 +975,8 @@
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26034063" order="0" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6387316" order="1" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26034063" order="0" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30577576" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23216309" order="14" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
@@ -981,7 +985,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24979591" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19542857" order="16" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30577576" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30577576" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5005714" order="4" />
@@ -1138,42 +1142,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="60" selection-start="5219" selection-end="5219" vertical-scroll-proportion="0.92804426">
+        <state line="165" column="60" selection-start="5219" selection-end="5219" vertical-scroll-proportion="0.6031175">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/TransitionEffects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="26" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.6858169">
+        <state line="49" column="26" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.45803356">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/effectshelper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="332" selection-end="332" vertical-scroll-proportion="0.030520646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="345" column="17" selection-start="10362" selection-end="10362" vertical-scroll-proportion="1.2351885">
+        <state line="13" column="4" selection-start="332" selection-end="332" vertical-scroll-proportion="0.020383693">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src/java/org/gwtwidgets/client/wrap/Effect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="13" selection-start="2522" selection-end="2522" vertical-scroll-proportion="0.031365313">
+        <state line="79" column="13" selection-start="2522" selection-end="2522" vertical-scroll-proportion="0.020383693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/Build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="89" selection-start="519" selection-end="519" vertical-scroll-proportion="0.3057554">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="345" column="17" selection-start="10362" selection-end="10362" vertical-scroll-proportion="0.82494">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/TheRandomHomepage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="2" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.8860911">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.06390978">
+        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.042027194">
           <folding />
         </state>
       </provider>
@@ -1181,30 +1199,16 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/TheRandomHomepage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="2" selection-start="1818" selection-end="1818" vertical-scroll-proportion="1.2836624">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/Build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="89" selection-start="519" selection-end="519" vertical-scroll-proportion="0.4578097">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Gadget.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="10" selection-start="3553" selection-end="3559" vertical-scroll-proportion="0.3321033">
+        <state line="185" column="0" selection-start="4589" selection-end="4589" vertical-scroll-proportion="0.6556777">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="78" selection-start="830" selection-end="830" vertical-scroll-proportion="0.24538745">
+        <state line="38" column="134" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.47741148">
           <folding />
         </state>
       </provider>

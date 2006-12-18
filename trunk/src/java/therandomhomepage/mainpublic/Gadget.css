@@ -153,7 +153,7 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
     height: auto;
     background: transparent none;
     background-position: 0%;
-    font-family: arial, sans-serif;
+    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -183,7 +183,7 @@ background: transparent url(images/bigshadow.gif) no-repeat bottom right;
     background-repeat: repeat-x;
     vertical-align:middle;
     display:block;
-    font-size:13px;
+    /*font-size:13px;*/
     font-weight:bold;
     -moz-background-clip: -moz-initial;
     -moz-background-origin: -moz-initial;
