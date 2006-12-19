@@ -12,9 +12,11 @@ import com.google.gwt.user.client.ui.Image;
 public class SlideshowLightboxImagePanel extends LightboxImagePanel {
     private static final String HEADER = "Slideshow";
     private static final String DESC = "Slideshow in action";
+    private static final String SNIPPET = "<p><b>Code Snippet :</b><div class=\"codeSnippet\"></div></p>";
+
 
     public SlideshowLightboxImagePanel(){
-        super(createLightboxImage(), HEADER, DESC);
+        super(createLightboxImage(), HEADER, DESC, SNIPPET);
     }
 
     private static LightboxImage createLightboxImage() {

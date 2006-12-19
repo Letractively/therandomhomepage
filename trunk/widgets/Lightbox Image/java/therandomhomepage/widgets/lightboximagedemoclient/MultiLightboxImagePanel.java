@@ -13,9 +13,10 @@ public class MultiLightboxImagePanel extends LightboxImagePanel {
 
     private static final String HEADER = "Multiple Images";
     private static final String DESC = "Click on any of the image. Mouse over on top of Lightbox image's right for next or left for previous image.";
+    private static final String SNIPPET = "<p><b>Code Snippet :</b><div class=\"codeSnippet\"></div></p>";
 
     public MultiLightboxImagePanel(){
-        super(createLightboxImage(), HEADER, DESC);
+        super(createLightboxImage(), HEADER, DESC, SNIPPET);
     }
     
 

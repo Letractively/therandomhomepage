@@ -6,6 +6,16 @@ b {
     font-weight: bold;
 }
 
+.pCodeSnippet {
+    font-size:small;
+    text-align:left;
+}
+
+.divCodeSnippet {
+    font-style:italic;
+    text-align:left;
+}
+
 img {
     border: none;
 }
