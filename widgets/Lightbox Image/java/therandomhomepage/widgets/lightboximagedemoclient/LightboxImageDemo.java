@@ -31,7 +31,7 @@ public class LightboxImageDemo implements EntryPoint {
 
     public void onModuleLoad() {
         TabPanel tabs = new TabPanel();
-        tabs.setHeight("100%");
+//        tabs.setHeight("100%");
         tabs.setWidth("100%");
 
         tabs.add(new SingleLightboxImagePanel(), "Single Image");

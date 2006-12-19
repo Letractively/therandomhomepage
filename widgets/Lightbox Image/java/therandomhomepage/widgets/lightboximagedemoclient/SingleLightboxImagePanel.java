@@ -13,9 +13,15 @@ public class SingleLightboxImagePanel extends LightboxImagePanel {
 
     private static final String HEADER = "Single Image";
     private static final String DESC = "Click on the image to see Lightbox in action";
+    private static final String SNIPPET = "<p class=\"pCodeSnippet\">&nbsp;&nbsp;<b>Code Snippet :</b><div class=\"divCodeSnippet\">" +
+            "Image image = new Image(\"lightbox/image-1.jpg\");<br/>" +
+            "image.setTitle(\"Image 1\"); <br/>" +
+            "LightboxImage lightboxImage = new LightboxImage(image);<br/>" +
+            "</div></p>";
+
 
     public SingleLightboxImagePanel(){
-        super(createLightboxImage(), HEADER, DESC);
+        super(createLightboxImage(), HEADER, DESC, SNIPPET);
     }
 
     private static LightboxImage createLightboxImage() {
