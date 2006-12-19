@@ -35,7 +35,7 @@ public class AbstractRandomGadget extends HTML {
     protected void initWidget() {
         StringBuffer html = new StringBuffer("<DIV class=\"divGadget\"><TABLE cellspacing=\"0\" cellpadding=\"2\" class=\"ig_reset ig_tbl_line\" align=\"center\">\n" +
                 "        <TR>\n" +
-                "          <TD valign=\"middle\">\n" +
+                "          <TD class=\"tdGadgetHeader\">\n" +
                 "            <DIV title=\"Click on the right arrows(&gt;&gt;) to see next random item.\" class=\"gadgetHeader\">&nbsp;\n" +
                 header + "</div>" +
                 "           </TD>\n" +
