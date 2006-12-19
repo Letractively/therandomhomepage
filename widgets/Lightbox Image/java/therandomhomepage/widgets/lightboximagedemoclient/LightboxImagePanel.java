@@ -9,9 +9,11 @@ import therandomhomepage.widgets.client.LightboxImage;
  * Date: Dec 15, 2006
  * Time: 9:40:47 AM
  */
-public class LightboxImagePanel extends Composite {
+public abstract class LightboxImagePanel extends Composite {
+
     private String header;
     private LightboxImage lightboxImage;
+    private LightboxImagePanel instance = null;
 
     public LightboxImagePanel(LightboxImage lightboxImage, String header, String description) {
         this.header = header;
