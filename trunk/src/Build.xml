@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="TheRandomHomepage-Java" default="" basedir=".">
+<project name="TheRandomHomepage-Java" default="backupWebsite" basedir=".">
 
     <property file="${user.home}/user.properties"/>
     <property name="build.dir" value="./build"/>
     <property name="backup.dir" value="${build.dir}/backups"/>
     <property name="lib.dir" value="../../lib"/>
 
-    <!--<taskdef name="mail" classname="org.apache.tools.ant.taskdefs.email.MimeMailer"/>-->
-
     <tstamp>
         <format property="build.time" pattern="MMMM-dd-yyyy-HH-mm"/>
-    </tstamp>    
+    </tstamp>
+
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${backup.dir}"/>
+    </target>
+
+    <target name="clean">
+        <delete dir="${backup.dir}"/>
+        <delete dir="${build.dir}"/>
+    </target>
 
     <target name="deployRandomFlickrGadget" description="FTP">
         <ftp server="${ftp_host}"
@@ -36,39 +44,37 @@
         </ftp>
     </target>
 
-    <target name="init">
-        <mkdir dir="${build.dir}"/>
-        <mkdir dir="${backup.dir}"/>
-    </target>
 
-    <target name="backupWebsite" depends="init">
+    <target name="backupWebsite" depends="clean,init">
         <echo>Backing up ${ftp_host}...</echo>
         <ftp action="get"
-        server="${ftp_host}"
-        userid="${user_id}"
-        password="${password}">
-        <fileset dir="${backup.dir}">
-        <include name="**/*"/>
-        <exclude name="**/cache/**"/>
-        <exclude name="**/_vti_cnf/**"/>
-        </fileset>
+             server="${ftp_host}"
+             userid="${user_id}"
+             password="${password}">
+            <fileset dir="${backup.dir}">
+                <include name="**/*"/>
+                <exclude name="**/cache/**"/>
+                <exclude name="**/_vti_cnf/**"/>
+                <exclude name="**/stats/**"/>
+            </fileset>
         </ftp>
-
-        <jar destfile="${build.dir}/${build.time}.jar"
-        basedir="${backup.dir}"
-        includes="**"
-        />
-        
-        <!-- TODO: Work on email this jar file -->
-
-        <!--<mail mailhost="smtp.gmail.com" from="me" tolist="${backup_mailbox}" subject="Backup files for ${ftp_host} at {build.time}"-->
-        <!--files="${build.time}.jar"/>-->
-
-        <!--<mail mailhost="siddii@gmail.com" mailport="25" subject="Test build" charset="utf-8">-->
-            <!--<from address="siddii@gmail.com"/>-->
-            <!--<to address="siddii@gmail.com"/>-->
-            <!--<message>some text</message>-->
-        <!--</mail>-->
+        <jar destfile="${build.dir}/${ftp_host}-${build.time}.jar"
+             basedir="${backup.dir}"
+             includes="**"
+                />
+        <mail
+                mailhost="${backup_mail_host}"
+                mailport="${backup_mail_port}"
+                from="${backup_mail_user}"
+                tolist="${backup_mail_user}"
+                user="${backup_mail_user}"
+                password="${backup_mail_password}"
+                ssl="on"
+                encoding="mime"
+                subject="Backup for ${ftp_host} since ${build.time}"
+                message="Backup for ${ftp_host} since ${build.time}"
+                files="${build.dir}/${build.time}.jar"/>
+        <delete file="${build.dir}/${build.time}.jar"/>
     </target>
 
 </project>

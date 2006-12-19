@@ -163,7 +163,6 @@ public class LightboxImage extends Widget {
             }
             setVisibility(currentIdx, true);
             prevIdx = currentIdx;
-            TransitionEffects.applyEffects(childrens[currentIdx],TransitionEffects.BLINDOWN);
         }
     }
 
