@@ -15,6 +15,6 @@ public class Logo extends Composite {
     logo.setSize("531px","108px");
     panel.setHorizontalAlignment(HorizontalPanel.ALIGN_CENTER);
     panel.add(logo);
-    setWidget(panel);
+    initWidget(panel);
   }
 }
