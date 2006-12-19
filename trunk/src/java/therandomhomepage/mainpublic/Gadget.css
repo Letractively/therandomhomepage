@@ -1,5 +1,4 @@
 table.ig_tbl_line .ig_smbluetext {
-    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -14,7 +13,6 @@ table.ig_tbl_line .ig_smbluetext {
 }
 
 table.ig_tbl_line .ig_lgbluetext {
-    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -29,7 +27,6 @@ table.ig_tbl_line .ig_lgbluetext {
 }
 
 table.ig_tbl_line .ig_smbluelink, table.ig_tbl_line .ig_smbluelink:link {
-    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -45,7 +42,6 @@ table.ig_tbl_line .ig_smbluelink, table.ig_tbl_line .ig_smbluelink:link {
 }
 
 table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
-    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -61,7 +57,6 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
 }
 
 .ig_smbluelink:hover {
-    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -77,7 +72,6 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
 }
 
 .ig_smbluelink:visited {
-    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -93,7 +87,6 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
 }
 
 .ig_smbluelink:active {
-    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -109,7 +102,6 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
 }
 
 .ig_lgbluelink:hover {
-    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -125,7 +117,6 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
 }
 
 .ig_lgbluelink:visited {
-    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -153,7 +144,6 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
     height: auto;
     background: transparent none;
     background-position: 0%;
-    /*font-family: arial, sans-serif;*/
     font-variant: normal;
     font-style: normal;
     word-spacing: normal;
@@ -163,16 +153,14 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
     text-indent: 0;
     line-height: 1.0;
     white-space: normal;
-    top: auto;
-    bottom: auto;
 }
 
-.shiftcontainer{
-position: relative;
-left: 7px; /*Number should match -left shadow depth below*/
-top: 7px; /*Number should match -top shadow depth below*/
-width: 300px;    
-background: transparent url(images/bigshadow.gif) no-repeat bottom right;
+.shiftcontainer {
+    position: relative;
+    left: 7px; /*Number should match -left shadow depth below*/
+    top: 7px; /*Number should match -top shadow depth below*/
+    width: 300px;
+    background: transparent url( images/bigshadow.gif ) no-repeat bottom right;
 }
 
 .gadgetHeader {
@@ -181,17 +169,17 @@ background: transparent url(images/bigshadow.gif) no-repeat bottom right;
     border-spacing: 0;
     background-image: url( ./images/gray_gradient.gif );
     background-repeat: repeat-x;
-    vertical-align:middle;
-    display:block;
-    /*font-size:13px;*/
-    font-weight:bold;
+    vertical-align: middle;
+    display: block;
+    font-weight: bold;
     -moz-background-clip: -moz-initial;
     -moz-background-origin: -moz-initial;
     -moz-background-inline-policy: -moz-initial;
 }
 
 .gadgetFrameTR {
-    border: 1px solid rgb(153, 153, 153); border-spacing:0;
+    border: 1px solid rgb( 153, 153, 153 );
+    border-spacing: 0;
 }
 
 .gadgetFrame {
@@ -205,6 +193,11 @@ background: transparent url(images/bigshadow.gif) no-repeat bottom right;
     -moz-background-inline-policy: -moz-initial;
 }
 
-.addToTD{
-    text-align: left;vertical-align: middle;
+.tdGadgetHeader {
+    vertical-align: middle;
+}
+
+.addToTD {
+    text-align: left;
+    vertical-align: middle;
 }
