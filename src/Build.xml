@@ -4,7 +4,6 @@
     <property file="${user.home}/user.properties"/>
     <property name="build.dir" value="./build"/>
     <property name="backup.dir" value="${build.dir}/backups"/>
-    <property name="lib.dir" value="../../lib"/>
 
     <tstamp>
         <format property="build.time" pattern="MMMM-dd-yyyy-HH-mm"/>
@@ -19,31 +18,6 @@
         <delete dir="${backup.dir}"/>
         <delete dir="${build.dir}"/>
     </target>
-
-    <target name="deployRandomFlickrGadget" description="FTP">
-        <ftp server="${ftp_host}"
-             remotedir="dev/gadgets/RandomFlickr"
-             userid="${user_id}"
-             password="${password}"
-             depends="yes"
-             verbose="yes"
-                >
-            <fileset dir="out/therandomhomepage.RandomFlickr"/>
-        </ftp>
-    </target>
-
-    <target name="deployLightbox" description="FTP">
-        <ftp server="${ftp_host}"
-             remotedir="dev/google/gadgets/RandomFlickr"
-             userid="${user_id}"
-             password="${password}"
-             depends="yes"
-             verbose="yes"
-                >
-            <fileset dir="C:\downloads\lightbox2.02"/>
-        </ftp>
-    </target>
-
 
     <target name="backupWebsite" depends="clean,init">
         <echo>Backing up ${ftp_host}...</echo>
@@ -75,6 +49,30 @@
                 message="Backup for ${ftp_host} since ${build.time}"
                 files="${build.dir}/${build.time}.jar"/>
         <delete file="${build.dir}/${build.time}.jar"/>
+    </target>
+
+    <target name="deployRandomFlickrGadget" description="FTP">
+        <ftp server="${ftp_host}"
+             remotedir="dev/gadgets/RandomFlickr"
+             userid="${user_id}"
+             password="${password}"
+             depends="yes"
+             verbose="yes"
+                >
+            <fileset dir="out/therandomhomepage.RandomFlickr"/>
+        </ftp>
+    </target>
+
+    <target name="deployLightbox" description="FTP">
+        <ftp server="${ftp_host}"
+             remotedir="dev/google/gadgets/RandomFlickr"
+             userid="${user_id}"
+             password="${password}"
+             depends="yes"
+             verbose="yes"
+                >
+            <fileset dir="C:\downloads\lightbox2.02"/>
+        </ftp>
     </target>
 
 </project>
