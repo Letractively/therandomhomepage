@@ -84,8 +84,9 @@ History of changes by ahavriluk:
 //
 //	Configuration
 //
-var musicPlayer = "lightbox/playerMini.swf"
-var fileLoadingImage = "lightbox//loading.gif";
+//var musicPlayer = "lightbox/playerMini.swf"
+var musicPlayer = "lightbox/musicplayer.swf"
+var fileLoadingImage = "lightbox/loading.gif";
 var fileBottomNavCloseImage = "lightbox//close1.gif";
 var resizeSpeed = 7;
 // controls the speed of the image resizing (1=slowest and 10=fastest)
@@ -810,9 +811,12 @@ Lightbox.prototype = {
 
     createMusicPlayer: function() {
         var color = Element.getStyle('imageDataContainer', 'background-color').parseColor();
-        obj = new SWFObject(musicPlayer, "mymovie", "75", "30", "7", color);
-        obj.addVariable("soundPath", slideshowMusic);
-        obj.addVariable("playerSkin", "5");
+        obj = new SWFObject(musicPlayer, "mymovie", "17", "17", "7", color);
+//        obj.addVariable("soundPath", slideshowMusic);
+//        obj.addVariable("playerSkin", "5");
+        obj.addVariable("song_url", slideshowMusic);
+        obj.addVariable("repeat", "true");
+        obj.addVariable("autoplay", "true");
         //skin 1-5
         return obj;
     },
