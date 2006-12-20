@@ -92,12 +92,8 @@ public class LightboxImage extends Widget {
         }
     }
 
-    public void setSlideshowBackgroundMusicURL(String mp3URL){
+    public void setSlideshowBackgroundMusicURL(String mp3URL) {
         this.mp3URL = mp3URL;
-        for (int i = 0; i < childrens.length; i++) {
-            Element children = childrens[i];
-            DOM.setAttribute(children,"music",mp3URL);
-        }
     }
 
 
@@ -161,8 +157,15 @@ public class LightboxImage extends Widget {
     }
 
     protected void onLoad() {
+        super.onLoad();
         if (DOM.getElementById("overlay") != null || DOM.getElementById("lightbox") != null) {
             clear();
+        }
+        if (slideshow && mp3URL != null) {
+            for (int i = 0; i < childrens.length; i++) {
+                Element children = childrens[i];
+                setAttribute(children, "music", mp3URL);
+            }
         }
         init();
     }
@@ -187,6 +190,12 @@ public class LightboxImage extends Widget {
     protected static native void clear() /*-{
         $wnd.Element.remove('overlay');
         $wnd.Element.remove('lightbox');
+    }-*/;
+
+    protected static native void setAttribute(Element element, String attribName, String attribValue) /*-{
+        var attrib = $wnd.document.createAttribute(attribName);
+        attrib.nodeValue = attribValue;
+        element.setAttributeNode(attrib);
     }-*/;
 
 }

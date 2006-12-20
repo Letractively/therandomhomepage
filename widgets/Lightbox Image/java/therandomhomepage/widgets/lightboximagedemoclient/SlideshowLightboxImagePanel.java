@@ -26,10 +26,8 @@ public class SlideshowLightboxImagePanel extends LightboxImagePanel {
         image2.setTitle("Image 2");
         Image image3 = new Image("image-4.jpg");
         image3.setTitle("Image 3");
-        Image image4 = new Image("image-5.jpg");
-        image4.setTitle("Image 3");
 
-        Image images[] = {image1, image2, image3, image4};
+        Image images[] = {image1, image2, image3};
 
         return new LightboxImage(images,true,3);
     }

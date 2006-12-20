@@ -2,6 +2,7 @@ package therandomhomepage.widgets.lightboximagedemoclient;
 
 import therandomhomepage.widgets.client.LightboxImage;
 import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.Window;
 
 /**
  * Created by IntelliJ IDEA.
