@@ -20,13 +20,13 @@ public class SlideshowLightboxImagePanel extends LightboxImagePanel {
     }
 
     private static LightboxImage createLightboxImage() {
-        Image image1 = new Image("lightbox/image-2.jpg");
+        Image image1 = new Image("image-2.jpg");
         image1.setTitle("Image 1");
-        Image image2 = new Image("lightbox/image-3.jpg");
+        Image image2 = new Image("image-3.jpg");
         image2.setTitle("Image 2");
-        Image image3 = new Image("lightbox/image-4.jpg");
+        Image image3 = new Image("image-4.jpg");
         image3.setTitle("Image 3");
-        Image image4 = new Image("lightbox/image-5.jpg");
+        Image image4 = new Image("image-5.jpg");
         image4.setTitle("Image 3");
 
         Image images[] = {image1, image2, image3, image4};
