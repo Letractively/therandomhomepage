@@ -31,7 +31,7 @@ public class SingleLightboxImagePanel extends LightboxImagePanel {
 
 
     static {
-        Image image = new Image("lightbox/image-1.jpg");
+        Image image = new Image("image-1.jpg");
         image.setTitle("Image 1");
         lightboxImage = new LightboxImage(image);
     }

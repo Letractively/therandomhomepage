@@ -77,8 +77,8 @@ public class LightboxImage extends Widget {
         childrens = new Element[images.length];
         for (int i = 0; i < images.length; i++) {
             childrens[i] = createAnchor(images[i], "lightbox[" + imagesets + "]");
+            DOM.setAttribute(childrens[i], "startslideshow", Boolean.toString(slideshow));
             if (slideshow) {
-                DOM.setAttribute(childrens[i], "startslideshow", Boolean.toString(slideshow));
                 DOM.setAttribute(childrens[i], "slideDuration", String.valueOf(slideshowDelayInSeconds));
             }
             DOM.appendChild(anchorsDiv, childrens[i]);
@@ -86,6 +86,7 @@ public class LightboxImage extends Widget {
         imagesets++;
         setElement(anchorsDiv);
         if (slideshow) {
+            // show the first image
             toggleSlideshowImage(currentIdx);
         }
     }
