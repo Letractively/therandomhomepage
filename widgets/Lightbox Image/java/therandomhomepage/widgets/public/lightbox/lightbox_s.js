@@ -826,7 +826,7 @@ Lightbox.prototype = {
             Element.show('flashPlayer');
             so = this.createMusicPlayer();
 
-            so.addVariable("autoPlay", "no");
+//            so.addVariable("autoPlay", "no");
             so.write("flashPlayer");
         } else {
             Element.hide('flashPlayer');
@@ -837,7 +837,7 @@ Lightbox.prototype = {
         if (slideshowMusic != null) {
             so = this.createMusicPlayer();
 
-            so.addVariable("autoPlay", "yes");
+//            so.addVariable("autoPlay", "yes");
             so.write("flashPlayer");
         }
     },
@@ -846,7 +846,7 @@ Lightbox.prototype = {
         if ((slideshowMusic != null) && (so != null)) {
             so = this.createMusicPlayer();
 
-            so.addVariable("autoPlay", "no");
+//            so.addVariable("autoPlay", "no");
             so.write("flashPlayer");
         }
     },
