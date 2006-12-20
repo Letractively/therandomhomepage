@@ -41,6 +41,7 @@ public class LightboxImage extends Widget {
 
     private int prevIdx = 0;
     private int currentIdx = 0;
+    private String mp3URL;
 
     /**
      * Create LightboxImage with a single image
@@ -91,6 +92,18 @@ public class LightboxImage extends Widget {
         }
     }
 
+    public void setSlideshowBackgroundMusicURL(String mp3URL){
+        this.mp3URL = mp3URL;
+        for (int i = 0; i < childrens.length; i++) {
+            Element children = childrens[i];
+            DOM.setAttribute(children,"music",mp3URL);
+        }
+    }
+
+
+    public String getMp3URL() {
+        return mp3URL;
+    }
 
     public void startSlideshow() {
         if (timer == null) {

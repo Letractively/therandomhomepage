@@ -18,7 +18,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/server" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImage.gwt.xml" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImage.gwt.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxWithBackgroundMusicPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/swfobject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/playerMini.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
@@ -160,26 +165,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="next.gif" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/next.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LightboxImageDemo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="13" selection-start="902" selection-end="902" vertical-scroll-proportion="0.010165184">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LightboxImagePanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImagePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="22" selection-start="282" selection-end="282" vertical-scroll-proportion="0.21601017">
+            <state line="39" column="8" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0655106">
               <folding />
             </state>
           </provider>
@@ -188,7 +177,7 @@
       <file leaf-file-name="SingleLightboxImagePanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SingleLightboxImagePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="278" selection-end="278" vertical-scroll-proportion="0.21601017">
+            <state line="11" column="13" selection-start="278" selection-end="278" vertical-scroll-proportion="0.32755297">
               <folding />
             </state>
           </provider>
@@ -197,16 +186,16 @@
       <file leaf-file-name="SlideshowLightboxImagePanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxImagePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="34" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.58322746">
+            <state line="11" column="33" selection-start="298" selection-end="298" vertical-scroll-proportion="0.32755297">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultiLightboxImagePanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/MultiLightboxImagePanel.java">
+      <file leaf-file-name="SlideshowLightboxWithBackgroundMusicPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxWithBackgroundMusicPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="30" selection-start="1436" selection-end="1436" vertical-scroll-proportion="0.8640407">
+            <state line="34" column="38" selection-start="1290" selection-end="1290" vertical-scroll-proportion="1.0809249">
               <folding />
             </state>
           </provider>
@@ -215,7 +204,16 @@
       <file leaf-file-name="LightboxImage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="35" selection-start="3057" selection-end="3057" vertical-scroll-proportion="-0.59720457">
+            <state line="98" column="0" selection-start="3339" selection-end="3339" vertical-scroll-proportion="0.75915223">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="swfobject.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/swfobject.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="19" selection-start="583" selection-end="592" vertical-scroll-proportion="0.39306358">
               <folding />
             </state>
           </provider>
@@ -224,7 +222,16 @@
       <file leaf-file-name="swfobject.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/swfobject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="60" selection-start="996" selection-end="996" vertical-scroll-proportion="0.06480305">
+            <state line="21" column="60" selection-start="996" selection-end="996" vertical-scroll-proportion="-1.4739884">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lightbox_s.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox_s.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -233,7 +240,7 @@
       <file leaf-file-name="LightboxImage.gwt.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImage.gwt.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="35" selection-start="584" selection-end="584" vertical-scroll-proportion="0.6359102">
+            <state line="38" column="38" selection-start="729" selection-end="729" vertical-scroll-proportion="0.77715355">
               <folding />
             </state>
           </provider>
@@ -448,6 +455,202 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\lightboximagedemopublic" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\lightboximagedemoclient" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\client" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\js" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -784,7 +987,7 @@
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32685715" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3844898" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43510205" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47542858" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24114285" order="14" />
@@ -793,8 +996,8 @@
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="15" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24979591" order="1" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53509784" order="16" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30514285" order="2" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53485715" order="16" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30514285" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5005714" order="4" />
@@ -921,26 +1124,9 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/image-4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/image-5.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox_s.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="35" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.021766966">
           <folding />
         </state>
       </provider>
@@ -955,51 +1141,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="902" selection-end="902" vertical-scroll-proportion="0.010165184">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImagePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="282" selection-end="282" vertical-scroll-proportion="0.21601017">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SingleLightboxImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="278" selection-end="278" vertical-scroll-proportion="0.21601017">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="34" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.58322746">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/MultiLightboxImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="30" selection-start="1436" selection-end="1436" vertical-scroll-proportion="0.8640407">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="35" selection-start="3057" selection-end="3057" vertical-scroll-proportion="-0.59720457">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/swfobject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="60" selection-start="996" selection-end="996" vertical-scroll-proportion="0.06480305">
+        <state line="11" column="22" selection-start="282" selection-end="282" vertical-scroll-proportion="0.20581114">
           <folding />
         </state>
       </provider>
@@ -1011,9 +1155,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/swfobject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="60" selection-start="996" selection-end="996" vertical-scroll-proportion="-1.4739884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox_s.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SingleLightboxImagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="278" selection-end="278" vertical-scroll-proportion="0.32755297">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxImagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="33" selection-start="298" selection-end="298" vertical-scroll-proportion="0.32755297">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="8" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0655106">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxWithBackgroundMusicPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="38" selection-start="1290" selection-end="1290" vertical-scroll-proportion="1.0809249">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/MultiLightboxImagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="30" selection-start="1436" selection-end="1436" vertical-scroll-proportion="1.3102119">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="0" selection-start="3339" selection-end="3339" vertical-scroll-proportion="0.75915223">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/swfobject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="19" selection-start="583" selection-end="592" vertical-scroll-proportion="0.39306358">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImage.gwt.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="35" selection-start="584" selection-end="584" vertical-scroll-proportion="0.6359102">
+        <state line="38" column="38" selection-start="729" selection-end="729" vertical-scroll-proportion="0.77715355">
           <folding />
         </state>
       </provider>
