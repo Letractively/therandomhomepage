@@ -2,7 +2,6 @@ package therandomhomepage.widgets.lightboximagedemoclient;
 
 import therandomhomepage.widgets.client.LightboxImage;
 import com.google.gwt.user.client.ui.Image;
-import com.google.gwt.user.client.Window;
 
 /**
  * Created by IntelliJ IDEA.
@@ -11,7 +10,7 @@ import com.google.gwt.user.client.Window;
  * Time: 12:10:58 PM
  */
 public class SlideshowLightboxWithBackgroundMusicPanel extends LightboxImagePanel {
-    private static final String HEADER = "Slideshow With Background Music";
+    private static final String HEADER = "Slideshow With Background Music Demo";
     private static final String DESC = "Slideshow in action";
     private static final String SNIPPET = "<p><b>Code Snippet :</b><div class=\"codeSnippet\"></div></p>";
 
@@ -33,7 +32,7 @@ public class SlideshowLightboxWithBackgroundMusicPanel extends LightboxImagePane
         Image images[] = {image1, image2, image3, image4};
 
         LightboxImage lightboxImage = new LightboxImage(images, true, 3);
-        lightboxImage.setSlideshowBackgroundMusicURL("song.mp3");
+        lightboxImage.setBackgroundMusicURL("song.mp3");
         return lightboxImage;
     }
 }

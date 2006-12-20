@@ -15,6 +15,10 @@ public abstract class LightboxImagePanel extends Composite {
     private LightboxImage lightboxImage;
 
     public LightboxImagePanel(LightboxImage lightboxImage, String header, String description, String codeSnippet) {
+        this(lightboxImage,header,new HTML(description),codeSnippet);
+    }
+
+    public LightboxImagePanel(LightboxImage lightboxImage, String header, Widget description, String codeSnippet) {
         this.header = header;
         this.lightboxImage = lightboxImage;
         VerticalPanel panel = new VerticalPanel();
@@ -23,7 +27,7 @@ public abstract class LightboxImagePanel extends Composite {
 
         Label headerLabel = new Label(header);
         panel.add(headerLabel);
-        panel.add(new HTML(description));
+        panel.add(description);
         panel.add(lightboxImage);
         panel.add(new HTML(codeSnippet));
         initWidget(panel);
