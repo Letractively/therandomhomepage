@@ -18,10 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.css" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.ipr" afterPath="$PROJECT_DIR$/TheRandomHomepage.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SingleLightboxImagePanel.java" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SingleLightboxImagePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox_s.js" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox_s.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
@@ -163,71 +160,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LightboxImage.gwt.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImage.gwt.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="585" selection-end="585" vertical-scroll-proportion="0.9547101">
-              <folding />
-            </state>
+      <file leaf-file-name="image-3.jpg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-3.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LightboxImageDemo.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1720" selection-end="1720" vertical-scroll-proportion="0.6331471">
-              <folding />
-            </state>
+      <file leaf-file-name="image-4.jpg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-4.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SingleLightboxImagePanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SingleLightboxImagePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="56" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.8547486">
-              <folding />
-            </state>
+      <file leaf-file-name="image-5.jpg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-5.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LightboxImageDemo.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="66" selection-start="374" selection-end="374" vertical-scroll-proportion="0.52355075">
-              <folding />
-            </state>
+      <file leaf-file-name="prev.gif" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prev.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultiLightboxImagePanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/MultiLightboxImagePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="278" selection-end="278" vertical-scroll-proportion="0.29528984">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SlideshowLightboxImagePanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxImagePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="602" selection-end="602" vertical-scroll-proportion="0.52355075">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LightboxImagePanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImagePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="22" selection-start="282" selection-end="282" vertical-scroll-proportion="0.307971">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LightboxImageDemo.gwt.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImageDemo.gwt.xml">
+      <file leaf-file-name="prototype.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prototype.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -235,10 +197,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LightboxImage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
+      <file leaf-file-name="start.gif" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/start.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stop.gif" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/stop.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prevlabel.gif" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prevlabel.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lightbox_s.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox_s.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="13" selection-start="1238" selection-end="1238" vertical-scroll-proportion="-2.5561595">
+            <state line="50" column="35" selection-start="1795" selection-end="1795" vertical-scroll-proportion="-1.1586121">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lightbox.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -481,7 +473,11 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\lightboximagedemopublic" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\public\lightbox" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -983,14 +979,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="996" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" order="18" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32685715" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3844898" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3844898" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47542858" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24114285" order="14" />
@@ -1000,7 +996,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24979591" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53509784" order="16" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30514285" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30514285" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5005714" order="4" />
@@ -1127,113 +1123,89 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/netvibes/modules/PodcastShuffle/xmlProxy.php">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/netvibes/modules/PodcastShuffle/dev.php">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-dev-windows.jar!/com/google/gwt/dev/shell/ModuleSpace.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="681" selection-end="681" vertical-scroll-proportion="0.3001261">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Gadget.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="41" selection-start="3896" selection-end="3896" vertical-scroll-proportion="0.045397226">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TheRandomHomepage.iws">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="23" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.34300125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/style/maven-classic.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="51" selection-start="3611" selection-end="3611" vertical-scroll-proportion="0.638">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImage.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="585" selection-end="585" vertical-scroll-proportion="0.9547101">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/MultiLightboxImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="278" selection-end="278" vertical-scroll-proportion="0.29528984">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="602" selection-end="602" vertical-scroll-proportion="0.52355075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="282" selection-end="282" vertical-scroll-proportion="0.307971">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImageDemo.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SingleLightboxImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="56" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.8547486">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="66" selection-start="374" selection-end="374" vertical-scroll-proportion="0.52355075">
+        <state line="74" column="49" selection-start="2908" selection-end="2908" vertical-scroll-proportion="0.6088632">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="13" selection-start="1238" selection-end="1238" vertical-scroll-proportion="-2.5561595">
+        <state line="93" column="16" selection-start="3106" selection-end="3106" vertical-scroll-proportion="2.1233141">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImageDemo.gwt.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1720" selection-end="1720" vertical-scroll-proportion="0.6331471">
+        <state line="10" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.21601017">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/image-5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prev.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prototype.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/start.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/stop.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/prevlabel.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox_s.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="35" selection-start="1795" selection-end="1795" vertical-scroll-proportion="-1.1586121">
           <folding />
         </state>
       </provider>
