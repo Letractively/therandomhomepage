@@ -37,6 +37,7 @@ public class LightboxImageDemo implements EntryPoint {
         tabs.add(new SingleLightboxImagePanel(), "Single Image");
         tabs.add(new MultiLightboxImagePanel(), "Multiple Images");
         tabs.add(new SlideshowLightboxImagePanel(), "Slideshow");
+        tabs.add(new SlideshowLightboxWithBackgroundMusicPanel(), "Slideshow With BG Music");
 
         tabs.addTabListener(new TabSelectionListener());
 
