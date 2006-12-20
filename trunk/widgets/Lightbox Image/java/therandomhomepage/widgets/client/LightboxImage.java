@@ -41,7 +41,7 @@ public class LightboxImage extends Widget {
 
     private int prevIdx = 0;
     private int currentIdx = 0;
-    private String mp3URL;
+    private String bgMusicURL;
 
     /**
      * Create LightboxImage with a single image
@@ -92,13 +92,8 @@ public class LightboxImage extends Widget {
         }
     }
 
-    public void setSlideshowBackgroundMusicURL(String mp3URL) {
-        this.mp3URL = mp3URL;
-    }
-
-
-    public String getMp3URL() {
-        return mp3URL;
+    public void setBackgroundMusicURL(String mp3URL) {
+        this.bgMusicURL = mp3URL;
     }
 
     public void startSlideshow() {
@@ -111,6 +106,7 @@ public class LightboxImage extends Widget {
     public void stopSlideshow() {
         if (timer != null) {
             timer.cancel();
+            timer = null;
         }
     }
 
@@ -161,10 +157,10 @@ public class LightboxImage extends Widget {
         if (DOM.getElementById("overlay") != null || DOM.getElementById("lightbox") != null) {
             clear();
         }
-        if (slideshow && mp3URL != null) {
+        if (slideshow && bgMusicURL != null) {
             for (int i = 0; i < childrens.length; i++) {
                 Element children = childrens[i];
-                setAttribute(children, "music", mp3URL);
+                setAttribute(children, "music", bgMusicURL);
             }
         }
         init();
@@ -192,6 +188,15 @@ public class LightboxImage extends Widget {
         $wnd.Element.remove('lightbox');
     }-*/;
 
+    /**
+     * Native implementation of DOM.setAttribute(element,attributeName,attributeValue)
+     * DOM.setAttribute() doesn't work for non-defined attributes. For eg. <a music="song.mp3" />
+     * Hence, this method
+     *
+     * @param element DOM element
+     * @param attribName attribute name
+     * @param attribValue attribute value
+     */
     protected static native void setAttribute(Element element, String attribName, String attribValue) /*-{
         var attrib = $wnd.document.createAttribute(attribName);
         attrib.nodeValue = attribValue;

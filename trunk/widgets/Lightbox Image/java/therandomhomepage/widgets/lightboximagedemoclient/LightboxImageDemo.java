@@ -31,13 +31,12 @@ public class LightboxImageDemo implements EntryPoint {
 
     public void onModuleLoad() {
         TabPanel tabs = new TabPanel();
-        tabs.setHeight("80%");
         tabs.setWidth("100%");
 
         tabs.add(new SingleLightboxImagePanel(), "Single Image");
-        tabs.add(new MultiLightboxImagePanel(), "Multiple Images");
+        tabs.add(new MultiLightboxImagePanel(), "Image Sets");
         tabs.add(new SlideshowLightboxImagePanel(), "Slideshow");
-        tabs.add(new SlideshowLightboxWithBackgroundMusicPanel(), "Slideshow With BG Music");
+        tabs.add(new SlideshowLightboxWithBackgroundMusicPanel(), "Slideshow with music");
 
         tabs.addTabListener(new TabSelectionListener());
 
@@ -49,14 +48,14 @@ public class LightboxImageDemo implements EntryPoint {
     }
 
     private Widget getPageHeader() {
-        return new HTML("<p<b>Lightbox Image</b> widget, a GWT wrapper for Lightbox JS (<a target=\"_new\" href=\"http://www.huddletogether.com/projects/lightbox2/\">http://www.huddletogether.com/projects/lightbox2/</a>. " +
-                "It an <I>unobtrusive</I> script used for overlaying image on browser window. It was built on top of prototype.js & scriptaculous (effects.js)." +
-                "<ul>Features :" +
-                "<li>Single and multi-image set with slideshow feature</li>" +
-                "<li>Easier image navigation</li>" +
+        return new HTML("<p><b>Lightbox Image</b> widget, a GWT wrapper for Lightbox JS (<a target=\"_new\" class=\"borderBottom\" href=\"http://www.huddletogether.com/projects/lightbox2/\">http://www.huddletogether.com/projects/lightbox2/)</a>. " +
+                "Lightbox JS is an <I>unobtrusive</I> script used for overlaying image on browser window and it was built on top of prototype.js & scriptaculous (effects.js)." +
+                "<ul><b>Features :</b>" +
+                "<li>Single and Image Sets with slideshow feature</li>" +
+                "<li>Easier image navigation (Please see '<b>Image Sets</b>' demo)</li>" +
                 "<li>Automatic image resizing based on available window size.</li>" +
-                "<li>Toggle slideshow control.</li>" +
-                "<li>Background music capabiility.</li>" +
+                "<li>Toggle slideshow.</li>" +
+                "<li>Background music while slideshow</li>" +
                 "<li>Easy installation and supposed to work on all modern browsers.</li>" +
                 "</ul>" +
                 "</p>");

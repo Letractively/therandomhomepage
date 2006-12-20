@@ -1,7 +1,7 @@
 package therandomhomepage.widgets.lightboximagedemoclient;
 
 import therandomhomepage.widgets.client.LightboxImage;
-import com.google.gwt.user.client.ui.Image;
+import com.google.gwt.user.client.ui.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,13 +10,22 @@ import com.google.gwt.user.client.ui.Image;
  * Time: 12:10:58 PM
  */
 public class SlideshowLightboxImagePanel extends LightboxImagePanel {
-    private static final String HEADER = "Slideshow";
-    private static final String DESC = "Slideshow in action";
-    private static final String SNIPPET = "<p><b>Code Snippet :</b><div class=\"codeSnippet\"></div></p>";
+    private static String HEADER = "Slideshow Demo";
+    private static VerticalPanel descriptionPanel = new VerticalPanel();
+    private static String SNIPPET = "<p><b>Code Snippet :</b><div class=\"codeSnippet\"></div></p>";
+
+    private static LightboxImage lightboxImage = null;
+
+    static {
+        Button btnSlideshow = new Button("Start Slideshow");
+        btnSlideshow.addClickListener(new SlideshowButtonListener(btnSlideshow));
+        descriptionPanel.add(btnSlideshow);
+        lightboxImage = createLightboxImage();        
+    }
 
 
     public SlideshowLightboxImagePanel(){
-        super(createLightboxImage(), HEADER, DESC, SNIPPET);
+        super(lightboxImage, HEADER, descriptionPanel, SNIPPET);
     }
 
     private static LightboxImage createLightboxImage() {
@@ -30,5 +39,24 @@ public class SlideshowLightboxImagePanel extends LightboxImagePanel {
         Image images[] = {image1, image2, image3};
 
         return new LightboxImage(images,true,3);
+    }
+
+    private static class SlideshowButtonListener implements ClickListener {
+        private Button button;
+
+        SlideshowButtonListener(Button button) {
+            this.button = button;
+        }
+
+        public void onClick(Widget sender) {
+            if (button.getText().equals("Start Slideshow")) {
+                lightboxImage.stopSlideshow();
+                button.setText("Stop Slideshow");
+            }
+            else {
+                lightboxImage.startSlideshow();
+                button.setText("Start Slideshow");
+            }
+        }
     }
 }

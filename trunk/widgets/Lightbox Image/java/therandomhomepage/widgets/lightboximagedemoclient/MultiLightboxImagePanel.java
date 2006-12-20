@@ -11,8 +11,8 @@ import com.google.gwt.user.client.ui.Image;
  */
 public class MultiLightboxImagePanel extends LightboxImagePanel {
 
-    private static final String HEADER = "Multiple Images";
-    private static final String DESC = "Click on any of the image. Mouse over on top of Lightbox image's right for next or left for previous image.";
+    private static final String HEADER = "Image Sets Demo";
+    private static final String DESC = "<br/>Click on any of the image to see lightbox. Mouse over on Lightbox image's top right for 'next' or top left for 'previous' image.<br/>Press '<b>N</b>' for next, '<b>P</b>' for previous, or '<b>X</b>' to close the lightbox effect.<br/>";
     private static final String SNIPPET = "<p><b>Code Snippet :</b><div class=\"codeSnippet\"></div></p>";
 
     public MultiLightboxImagePanel(){

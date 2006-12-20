@@ -1,9 +1,15 @@
 body {
     font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+    font-size:0.9em;
 }
 
 b {
     font-weight: bold;
+}
+
+.borderBottom {
+    border-bottom:#333 dotted 1px;
+    text-decoration:none;
 }
 
 .codeSnippetHeader {
@@ -35,7 +41,7 @@ img {
 
 .gwt-Label {
     font-weight: bold;
-    font-size: large;
+    font-size: 1.0em;
 }
 
 .gwt-TabPanel {
