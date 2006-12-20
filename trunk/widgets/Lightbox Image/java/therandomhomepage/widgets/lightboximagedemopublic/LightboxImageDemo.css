@@ -6,13 +6,20 @@ b {
     font-weight: bold;
 }
 
-.pCodeSnippet {
-    font-size:small;
-    text-align:left;
+.codeSnippetHeader {
+    font-size:1em;
+    text-align:right;
+    font-weight:bold;
 }
 
-.divCodeSnippet {
-    font-style:italic;
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+
+.codeSnippet{
+    font-size:1em;
     text-align:left;
 }
 

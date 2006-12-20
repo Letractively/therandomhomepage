@@ -31,7 +31,7 @@ public class LightboxImageDemo implements EntryPoint {
 
     public void onModuleLoad() {
         TabPanel tabs = new TabPanel();
-//        tabs.setHeight("100%");
+        tabs.setHeight("80%");
         tabs.setWidth("100%");
 
         tabs.add(new SingleLightboxImagePanel(), "Single Image");
@@ -48,10 +48,15 @@ public class LightboxImageDemo implements EntryPoint {
     }
 
     private Widget getPageHeader() {
-        return new HTML("<p<b>Lightbox Image</b>, a GWT wrapper implementation for Lightbox JS by Lokesh Dhakar(<a target=\"_new\" href=\"http://www.huddletogether.com/projects/lightbox2/\">http://www.huddletogether.com/projects/lightbox2/</a>)" +
+        return new HTML("<p<b>Lightbox Image</b> widget, a GWT wrapper for Lightbox JS (<a target=\"_new\" href=\"http://www.huddletogether.com/projects/lightbox2/\">http://www.huddletogether.com/projects/lightbox2/</a>. " +
+                "It an <I>unobtrusive</I> script used for overlaying image on browser window. It was built on top of prototype.js & scriptaculous (effects.js)." +
                 "<ul>Features :" +
-                "<li>built on top of prototype.js, scriptaculous(effects.js) & Lightbox JS</li>" +
-                "<li>single image and multi-image with slideshow</li>" +
+                "<li>Single and multi-image set with slideshow feature</li>" +
+                "<li>Easier image navigation</li>" +
+                "<li>Automatic image resizing based on available window size.</li>" +
+                "<li>Toggle slideshow control.</li>" +
+                "<li>Background music capabiility.</li>" +
+                "<li>Easy installation and supposed to work on all modern browsers.</li>" +
                 "</ul>" +
                 "</p>");
     }

@@ -71,7 +71,7 @@
   <component name="ExportToHTMLSettings">
     <option name="PRINT_LINE_NUMBERS" value="false" />
     <option name="OPEN_IN_BROWSER" value="false" />
-    <option name="OUTPUT_DIRECTORY" />
+    <option name="OUTPUT_DIRECTORY" value="C:\sid\scratch\SingleImageLightboxImagePanel.html" />
   </component>
   <component name="GUI Designer component loader factory" />
   <component name="IdProvider" IDEtalkID="7A44056759FECDB7330A0A09487FF5D7" />
