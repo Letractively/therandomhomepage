@@ -19,6 +19,18 @@
     <defaultexcludes add="**/_svn"/>
     <defaultexcludes add="**/_svn/**"/>
 
+    <patternset id="compiler.resources">
+      <include name="**/?*.properties"/>
+      <include name="**/?*.xml"/>
+      <include name="**/?*.gif"/>
+      <include name="**/?*.png"/>
+      <include name="**/?*.jpeg"/>
+      <include name="**/?*.jpg"/>
+      <include name="**/?*.html"/>
+      <include name="**/?*.dtd"/>
+      <include name="**/?*.tld"/>
+    </patternset>
+
     <tstamp>
         <format property="build.time" pattern="MMMM-dd-yyyy-HH-mm"/>
     </tstamp>
@@ -86,9 +98,15 @@
     <target name="buildWidgetsLibrary" description="FTP">
         <echo>Building widget library from source path ${widgets.source.dir}</echo>
         <javac srcdir="${widgets.source.dir}" target="${widgets.output.dir}" classpathref="lib.path">
-            <includesfile name="therandomhomepage/widgets/client/**"/>
-            <includesfile name="therandomhomepage/widgets/public/**"/>
+            <include name="${widgets.source.dir}/therandomhomepage/widgets/client/**/*.java"/>
+            <include name="${widgets.source.dir}/therandomhomepage/widgets/public/**/*.java"/>
         </javac>
+        <copy todir="${widgets.output.dir}">
+          <fileset dir="${widgets.source.dir}">
+            <patternset refid="compiler.resources"/>
+            <type type="file"/>
+          </fileset>
+        </copy>
     </target>
 
 
