@@ -19,6 +19,7 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Build.xml" afterPath="$PROJECT_DIR$/src/Build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.ipr" afterPath="$PROJECT_DIR$/TheRandomHomepage.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
@@ -160,68 +161,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LightboxImage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
+      <file leaf-file-name="Build.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1411" selection-end="1411" vertical-scroll-proportion="-6.0875463">
-              <folding>
-                <marker date="1166730673196" expanded="false" signature="0:657" placeholder="/.../" />
-                <marker date="1166730673196" expanded="true" signature="907:1462" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="2029:2138" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="2178:2250" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="2256:2368" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="2411:2450" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="2456:2723" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="2814:2988" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="2994:3095" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="3141:3372" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="3378:3528" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="3596:3657" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="3664:3755" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="3799:3841" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="3847:3885" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="3920:4118" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="4125:4162" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="4196:4334" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="4340:4465" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="4507:4547" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="4553:4733" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="4798:5138" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="5144:5267" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="5320:5429" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="5435:5592" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="5651:5753" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="5759:5911" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="5964:6043" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="6049:6146" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="6181:6214" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="6220:6319" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="6365:6412" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="6418:6478" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="6508:7702" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="7708:7827" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="7886:8039" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="8045:8163" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="8226:8326" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="8332:8442" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="8484:8524" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="8530:8634" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="8699:8756" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="8763:8807" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="8860:9150" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="8889:9144" placeholder="{...}" />
-                <marker date="1166730673196" expanded="true" signature="9156:9244" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="9335:9420" placeholder="/**...*/" />
-                <marker date="1166730673196" expanded="true" signature="9564:9914" placeholder="/**...*/" />
-              </folding>
+            <state line="125" column="70" selection-start="4753" selection-end="4753" vertical-scroll-proportion="0.7733333">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Build.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Build.xml">
+      <file leaf-file-name="TheRandomHomepage.iml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TheRandomHomepage.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="64" selection-start="3654" selection-end="3654" vertical-scroll-proportion="0.5883777">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -230,7 +182,7 @@
       <file leaf-file-name="SingleLightboxImagePanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SingleLightboxImagePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.20961775">
+            <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.20987654">
               <folding>
                 <marker date="1166712435010" expanded="true" signature="156:260" placeholder="/**...*/" />
                 <marker date="1166712435010" expanded="true" signature="357:969" placeholder="{...}" />
@@ -244,7 +196,7 @@
       <file leaf-file-name="SourcesClickEvents.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/SourcesClickEvents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="999" selection-end="1123" vertical-scroll-proportion="0.43220338">
+            <state line="35" column="0" selection-start="999" selection-end="1123" vertical-scroll-proportion="0.43272728">
               <folding />
             </state>
           </provider>
@@ -253,7 +205,7 @@
       <file leaf-file-name="ImageSetsPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/ImageSetsPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="8" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.54500616">
+            <state line="51" column="8" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.3160494">
               <folding>
                 <marker date="1166727846498" expanded="true" signature="156:260" placeholder="/**...*/" />
                 <marker date="1166727846498" expanded="true" signature="338:1521" placeholder="{...}" />
@@ -267,7 +219,7 @@
       <file leaf-file-name="SlideshowLightboxImagePanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxImagePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="126" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.5659679">
+            <state line="70" column="126" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.020987654">
               <folding>
                 <marker date="1166727846482" expanded="true" signature="156:260" placeholder="/**...*/" />
                 <marker date="1166727846482" expanded="true" signature="476:2006" placeholder="{...}" />
@@ -287,7 +239,7 @@
       <file leaf-file-name="SlideshowLightboxWithBackgroundMusicPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxWithBackgroundMusicPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="401" selection-end="401" vertical-scroll-proportion="0.27250308">
+            <state line="14" column="17" selection-start="401" selection-end="401" vertical-scroll-proportion="0.020987654">
               <folding>
                 <marker date="1166727846498" expanded="true" signature="156:260" placeholder="/**...*/" />
                 <marker date="1166727846498" expanded="true" signature="504:2162" placeholder="{...}" />
@@ -307,7 +259,7 @@
       <file leaf-file-name="LightboxImageDemo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="13" selection-start="902" selection-end="902" vertical-scroll-proportion="0.20345253">
+            <state line="28" column="13" selection-start="902" selection-end="902" vertical-scroll-proportion="0.23209876">
               <folding>
                 <marker date="1166716564072" expanded="false" signature="0:635" placeholder="/.../" />
                 <marker date="1166716564072" expanded="true" signature="784:888" placeholder="/**...*/" />
@@ -321,7 +273,7 @@
       <file leaf-file-name="UIObject.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="0" selection-start="4133" selection-end="4133" vertical-scroll-proportion="0.15375303">
+            <state line="132" column="0" selection-start="4133" selection-end="4133" vertical-scroll-proportion="0.020606061">
               <folding />
             </state>
           </provider>
@@ -562,15 +514,7 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -587,7 +531,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure Scope="false" ProjectPane="false" PackagesPane="false" Favorites="false" />
+      <showStructure PackagesPane="false" ProjectPane="false" Scope="false" Favorites="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -601,6 +545,7 @@
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="cvs_file_history_flatWidth1" value="292" />
     <property name="cvs_file_history_treeWidth1" value="292" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -614,8 +559,11 @@
     <property name="RunManagerConfig.compileBeforeRunning" value="true" />
     <property name="cvs_file_history_flatOrder0" value="0" />
     <property name="cvs_file_history_treeOrder3" value="3" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="cvs_file_history_treeOrder2" value="2" />
     <property name="cvs_file_history_treeWidth3" value="292" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="cvs_file_history_flatWidth0" value="292" />
     <property name="cvs_file_history_flatWidth3" value="292" />
     <property name="cvs_file_history_treeOrder0" value="0" />
@@ -668,6 +616,14 @@
         <option name="Make" value="true" />
       </method>
     </tempConfiguration>
+    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="RUN_PAGE" value="" />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -679,14 +635,6 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="RUN_PAGE" value="" />
-      <method>
-        <option name="Make" value="true" />
-      </method>
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -899,23 +847,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="996" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1280" height="995" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" order="18" />
+      <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837528" order="18" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" order="4" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32685715" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43510205" order="0" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32608697" order="7" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22122449" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4137143" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.544" order="14" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59610987" order="14" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="15" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24979591" order="1" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24979591" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53485715" order="16" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30514285" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
@@ -1021,12 +969,11 @@
       <antCommandLine value="-d" />
       <runInBackground value="false" />
       <targetFilters>
+        <filter targetName="backupUserProperties" isVisible="false" />
         <filter targetName="backupWebsite" isVisible="false" />
+        <filter targetName="buildWidgetsLibrary" isVisible="true" />
         <filter targetName="clean" isVisible="false" />
-        <filter targetName="deployLightbox" isVisible="true" />
-        <filter targetName="deployRandomFlickrGadget" isVisible="true" />
         <filter targetName="init" isVisible="false" />
-        <filter targetName="mailBackupJar" isVisible="false" />
       </targetFilters>
       <treeView value="true" />
       <verbose value="true" />
@@ -1036,96 +983,17 @@
   <component name="com.intellij.ide.util.scopeChooser.ScopeChooserConfigurable" proportions="" version="1">
     <option name="myLastEditedConfigurable" />
   </component>
-  <component name="com.intellij.openapi.roots.ui.configuration.projectRoot.ProjectRootMasterDetailsConfigurable" proportions="0.16666667,0.5" version="1">
+  <component name="com.intellij.openapi.roots.ui.configuration.projectRoot.ProjectRootMasterDetailsConfigurable" proportions="0.16666667" version="1">
     <option name="myPlainMode" value="false" />
-    <option name="myLastEditedConfigurable" value="TheRandomHomepage" />
+    <option name="myLastEditedConfigurable" value="gwt-user.jar" />
   </component>
   <component name="com.intellij.profile.ui.ErrorOptionsConfigurable" proportions="0.16666667,0.5314286" version="1">
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/LightboxImageDemo.html">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/TheRandomHomepageWidgets.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/LightboxImageDemo.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="318" selection-end="318" vertical-scroll-proportion="0.20581114">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/public/lightbox/lightbox.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/ImageSetsPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="8" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.54500616">
-          <folding>
-            <marker date="1166727846498" expanded="true" signature="156:260" placeholder="/**...*/" />
-            <marker date="1166727846498" expanded="true" signature="338:1521" placeholder="{...}" />
-            <marker date="1166727846498" expanded="true" signature="1557:1873" placeholder="{...}" />
-            <marker date="1166727846498" expanded="true" signature="1909:3279" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="126" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.5659679">
-          <folding>
-            <marker date="1166727846482" expanded="true" signature="156:260" placeholder="/**...*/" />
-            <marker date="1166727846482" expanded="true" signature="476:2006" placeholder="{...}" />
-            <marker date="1166727846482" expanded="true" signature="1712:1899" placeholder="{...}" />
-            <marker date="1166727846482" expanded="true" signature="1761:1889" placeholder="{...}" />
-            <marker date="1166727846482" expanded="true" signature="2042:2185" placeholder="{...}" />
-            <marker date="1166727846482" expanded="true" signature="2221:3975" placeholder="{...}" />
-            <marker date="1166727846482" expanded="true" signature="4010:4144" placeholder="{...}" />
-            <marker date="1166727846482" expanded="true" signature="4180:4313" placeholder="{...}" />
-            <marker date="1166727846482" expanded="true" signature="4382:4628" placeholder="{...}" />
-            <marker date="1166727846482" expanded="true" signature="4428:4621" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxWithBackgroundMusicPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="401" selection-end="401" vertical-scroll-proportion="0.27250308">
-          <folding>
-            <marker date="1166727846498" expanded="true" signature="156:260" placeholder="/**...*/" />
-            <marker date="1166727846498" expanded="true" signature="504:2162" placeholder="{...}" />
-            <marker date="1166727846498" expanded="true" signature="1868:2055" placeholder="{...}" />
-            <marker date="1166727846498" expanded="true" signature="1917:2045" placeholder="{...}" />
-            <marker date="1166727846498" expanded="true" signature="2198:2342" placeholder="{...}" />
-            <marker date="1166727846498" expanded="true" signature="2378:4286" placeholder="{...}" />
-            <marker date="1166727846498" expanded="true" signature="4321:4455" placeholder="{...}" />
-            <marker date="1166727846498" expanded="true" signature="4491:4624" placeholder="{...}" />
-            <marker date="1166727846498" expanded="true" signature="4693:4939" placeholder="{...}" />
-            <marker date="1166727846498" expanded="true" signature="4739:4932" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="4133" selection-end="4133" vertical-scroll-proportion="0.15375303">
           <folding />
         </state>
       </provider>
@@ -1137,40 +1005,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/SourcesClickEvents.java">
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/COPYING">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="999" selection-end="1123" vertical-scroll-proportion="0.43220338">
+        <state line="31" column="36" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.33663365">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SingleLightboxImagePanel.java">
+    <entry file="file://$PROJECT_DIR$/src/build/widgets/therandomhomepage/widgets/TheRandomHomepageWidgets.gwt.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.20961775">
-          <folding>
-            <marker date="1166712435010" expanded="true" signature="156:260" placeholder="/**...*/" />
-            <marker date="1166712435010" expanded="true" signature="357:969" placeholder="{...}" />
-            <marker date="1166712435010" expanded="true" signature="1005:1101" placeholder="{...}" />
-            <marker date="1166712435010" expanded="true" signature="1137:1482" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="902" selection-end="902" vertical-scroll-proportion="0.20345253">
-          <folding>
-            <marker date="1166716564072" expanded="false" signature="0:635" placeholder="/.../" />
-            <marker date="1166716564072" expanded="true" signature="784:888" placeholder="/**...*/" />
-            <marker date="1166716564072" expanded="true" signature="976:1488" placeholder="{...}" />
-            <marker date="1166716564072" expanded="true" signature="1525:2414" placeholder="{...}" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/client/LightboxImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1411" selection-end="1411" vertical-scroll-proportion="-6.0875463">
+        <state line="33" column="0" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.020606061">
           <folding>
             <marker date="1166730673196" expanded="false" signature="0:657" placeholder="/.../" />
             <marker date="1166730673196" expanded="true" signature="907:1462" placeholder="/**...*/" />
@@ -1224,16 +1075,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/COPYING">
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SingleLightboxImagePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="36" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.33663365">
+        <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.20987654">
+          <folding>
+            <marker date="1166712435010" expanded="true" signature="156:260" placeholder="/**...*/" />
+            <marker date="1166712435010" expanded="true" signature="357:969" placeholder="{...}" />
+            <marker date="1166712435010" expanded="true" signature="1005:1101" placeholder="{...}" />
+            <marker date="1166712435010" expanded="true" signature="1137:1482" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/SourcesClickEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="999" selection-end="1123" vertical-scroll-proportion="0.43272728">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/ImageSetsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="8" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.3160494">
+          <folding>
+            <marker date="1166727846498" expanded="true" signature="156:260" placeholder="/**...*/" />
+            <marker date="1166727846498" expanded="true" signature="338:1521" placeholder="{...}" />
+            <marker date="1166727846498" expanded="true" signature="1557:1873" placeholder="{...}" />
+            <marker date="1166727846498" expanded="true" signature="1909:3279" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxImagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="126" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.020987654">
+          <folding>
+            <marker date="1166727846482" expanded="true" signature="156:260" placeholder="/**...*/" />
+            <marker date="1166727846482" expanded="true" signature="476:2006" placeholder="{...}" />
+            <marker date="1166727846482" expanded="true" signature="1712:1899" placeholder="{...}" />
+            <marker date="1166727846482" expanded="true" signature="1761:1889" placeholder="{...}" />
+            <marker date="1166727846482" expanded="true" signature="2042:2185" placeholder="{...}" />
+            <marker date="1166727846482" expanded="true" signature="2221:3975" placeholder="{...}" />
+            <marker date="1166727846482" expanded="true" signature="4010:4144" placeholder="{...}" />
+            <marker date="1166727846482" expanded="true" signature="4180:4313" placeholder="{...}" />
+            <marker date="1166727846482" expanded="true" signature="4382:4628" placeholder="{...}" />
+            <marker date="1166727846482" expanded="true" signature="4428:4621" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/SlideshowLightboxWithBackgroundMusicPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="401" selection-end="401" vertical-scroll-proportion="0.020987654">
+          <folding>
+            <marker date="1166727846498" expanded="true" signature="156:260" placeholder="/**...*/" />
+            <marker date="1166727846498" expanded="true" signature="504:2162" placeholder="{...}" />
+            <marker date="1166727846498" expanded="true" signature="1868:2055" placeholder="{...}" />
+            <marker date="1166727846498" expanded="true" signature="1917:2045" placeholder="{...}" />
+            <marker date="1166727846498" expanded="true" signature="2198:2342" placeholder="{...}" />
+            <marker date="1166727846498" expanded="true" signature="2378:4286" placeholder="{...}" />
+            <marker date="1166727846498" expanded="true" signature="4321:4455" placeholder="{...}" />
+            <marker date="1166727846498" expanded="true" signature="4491:4624" placeholder="{...}" />
+            <marker date="1166727846498" expanded="true" signature="4693:4939" placeholder="{...}" />
+            <marker date="1166727846498" expanded="true" signature="4739:4932" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemoclient/LightboxImageDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="13" selection-start="902" selection-end="902" vertical-scroll-proportion="0.23209876">
+          <folding>
+            <marker date="1166716564072" expanded="false" signature="0:635" placeholder="/.../" />
+            <marker date="1166716564072" expanded="true" signature="784:888" placeholder="/**...*/" />
+            <marker date="1166716564072" expanded="true" signature="976:1488" placeholder="{...}" />
+            <marker date="1166716564072" expanded="true" signature="1525:2414" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/ui/UIObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="0" selection-start="4133" selection-end="4133" vertical-scroll-proportion="0.020606061">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="64" selection-start="3654" selection-end="3654" vertical-scroll-proportion="0.5883777">
+        <state line="125" column="70" selection-start="4753" selection-end="4753" vertical-scroll-proportion="0.7733333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TheRandomHomepage.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
