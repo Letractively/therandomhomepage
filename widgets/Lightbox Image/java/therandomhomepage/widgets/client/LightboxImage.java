@@ -42,7 +42,7 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
 
     private int prevIdx = 0;
     private int currentIdx = 0;
-    private String bgMusicURL;
+    private String backgroundMusicURL;
     private boolean slideshowRunning = false;
     private ClickListenerCollection clickListeners;
 
@@ -75,9 +75,10 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
      */
 
     public LightboxImage(Image images[], boolean slideshow, int slideshowDelayInSeconds) {
+        setElement(DOM.createDiv());
         this.slideshow = slideshow;
         this.slideshowDelayInSeconds = slideshowDelayInSeconds;
-        Element anchorsDiv = DOM.createDiv();
+        //TODO: Move this to common place ? May be onLoad() ?
         childrens = new Element[images.length];
         for (int i = 0; i < images.length; i++) {
             childrens[i] = createAnchor(images[i], "lightbox[" + imagesets + "]");
@@ -85,16 +86,21 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
             if (slideshow) {
                 DOM.setAttribute(childrens[i], "slideDuration", String.valueOf(slideshowDelayInSeconds));
             }
-            DOM.appendChild(anchorsDiv, childrens[i]);
+            DOM.appendChild(getElement(), childrens[i]);
         }
         imagesets++;
-        setElement(anchorsDiv);
+
         if (slideshow) {
             // show the first image
             toggleSlideshowImage(currentIdx);
         }
     }
 
+    /**
+     * Overridden method to capture browser event
+     *
+     * @param event Event object
+     */
 
     public void onBrowserEvent(Event event) {
         switch (DOM.eventGetType(event)) {
@@ -106,9 +112,31 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
         }
     }
 
-    public void setBackgroundMusicURL(String mp3URL) {
-        this.bgMusicURL = mp3URL;
+    /**
+     * Set background music url. Works fine with mp3 files. Not sure about other formats :)
+     *
+     * @param backgroundMusicURL String
+     */
+
+
+    public void setBackgroundMusicURL(String backgroundMusicURL) {
+        this.backgroundMusicURL = backgroundMusicURL;
     }
+
+
+    /**
+     * Get background music url
+     *
+     * @return backgroundMusicURL String
+     */
+
+    public String getBackgroundMusicURL() {
+        return backgroundMusicURL;
+    }
+
+    /**
+     * Start the slideshow
+     */
 
     public void startSlideshow() {
         if (timer == null) {
@@ -118,6 +146,11 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
         }
     }
 
+
+    /**
+     * Stop the slideshow
+     */
+
     public void stopSlideshow() {
         if (timer != null) {
             timer.cancel();
@@ -126,9 +159,23 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
         }
     }
 
+    /**
+     * Returns boolean flag indicating if the slideshow is running
+     *
+     * @return slideshowRunning boolean
+     */
+
     public boolean isSlideshowRunning() {
         return slideshowRunning;
     }
+
+    /**
+     * Utility method to create anchor tags
+     *
+     * @param image    Image
+     * @param relValue anchor "rel" attribute value
+     * @return anchorElement Element
+     */
 
     private Element createAnchor(Image image, String relValue) {
         Element anchorElement = DOM.createAnchor();
@@ -139,22 +186,46 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
         return anchorElement;
     }
 
+    /**
+     * Set the visibility of all the childrens to the specified value
+     *
+     * @param visible boolean flag
+     */
+
     private void setAllVisibility(boolean visible) {
         for (int i = 0; i < childrens.length; i++) {
             setVisibility(i, visible);
         }
     }
 
+    /**
+     * Set the visibility of particular child for the specified index
+     *
+     * @param idx Child index
+     * @param visible boolean flag
+     */
+
     private void setVisibility(int idx, boolean visible) {
         Element anchorElem = childrens[idx];
         UIObject.setVisible(anchorElem, visible);
     }
+
+    /**
+     * Toggles the slideshow image by hiding all the images and displaying only one
+     *
+     * @param imageIdx Index of the image to show
+     */
 
     public void toggleSlideshowImage(int imageIdx) {
         setAllVisibility(false);
         setVisibility(imageIdx, true);
     }
 
+    /**
+     * Is it running in slideshow mode ?
+     *
+     * @return slideshow boolean flag
+     */
 
     public boolean isSlideshow() {
         return slideshow;
@@ -173,14 +244,13 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
     }
 
     protected void onLoad() {
-        super.onLoad();
         if (DOM.getElementById("overlay") != null || DOM.getElementById("lightbox") != null) {
             clear();
         }
-        if (slideshow && (bgMusicURL != null || slideshowForever)) {
+        if (childrens != null && slideshow && (backgroundMusicURL != null || slideshowForever)) {
             for (int i = 0; i < childrens.length; i++) {
                 Element children = childrens[i];
-                setAttribute(children, "music", bgMusicURL);
+                setAttribute(children, "music", backgroundMusicURL);
                 setAttribute(children, "forever", Boolean.toString(slideshowForever));
             }
         }
