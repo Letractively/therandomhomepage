@@ -24,7 +24,9 @@ import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.ui.*;
 
 /**
- * LightboxImage widget, a GWT wrapper for Lightbox JS by Lokesh Dhakar.
+ * LightboxImage widget, a GWT wrapper for Lightbox JS (http://www.huddletogether.com/projects/lightbox2/).
+ * It's a lightweight widget, that overlays image on top of browser window with amazing visual effects.
+ * Currently supports single image, image sets, slideshow and background music playback during slideshow.
  *
  * @author Siddique Hameed
  * @version 0.1
@@ -45,6 +47,8 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
     private String backgroundMusicURL;
     private boolean slideshowRunning = false;
     private ClickListenerCollection clickListeners;
+    private Image[] images;
+    private Image image;
 
     /**
      * Create LightboxImage with a single image
@@ -53,7 +57,8 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
      */
 
     public LightboxImage(Image image) {
-        setElement(createAnchor(image, "lightbox"));
+        setElement(DOM.createDiv());
+        this.image = image;
     }
 
     /**
@@ -67,7 +72,7 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
     }
 
     /**
-     * Create LightboxImage with multiple images and with slideshow options
+     * Create LightboxImage with multiple images and slideshow options
      *
      * @param images                  images for the Lightbox
      * @param slideshow               Is slideshow
@@ -76,24 +81,9 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
 
     public LightboxImage(Image images[], boolean slideshow, int slideshowDelayInSeconds) {
         setElement(DOM.createDiv());
+        this.images = images;
         this.slideshow = slideshow;
         this.slideshowDelayInSeconds = slideshowDelayInSeconds;
-        //TODO: Move this to common place ? May be onLoad() ?
-        childrens = new Element[images.length];
-        for (int i = 0; i < images.length; i++) {
-            childrens[i] = createAnchor(images[i], "lightbox[" + imagesets + "]");
-            DOM.setAttribute(childrens[i], "startslideshow", Boolean.toString(slideshow));
-            if (slideshow) {
-                DOM.setAttribute(childrens[i], "slideDuration", String.valueOf(slideshowDelayInSeconds));
-            }
-            DOM.appendChild(getElement(), childrens[i]);
-        }
-        imagesets++;
-
-        if (slideshow) {
-            // show the first image
-            toggleSlideshowImage(currentIdx);
-        }
     }
 
     /**
@@ -201,7 +191,7 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
     /**
      * Set the visibility of particular child for the specified index
      *
-     * @param idx Child index
+     * @param idx     Child index
      * @param visible boolean flag
      */
 
@@ -231,31 +221,55 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
         return slideshow;
     }
 
-    public void setSlideshow(boolean slideshow) {
-        this.slideshow = slideshow;
-    }
+    /**
+     * Get the slideshow delay in seconds
+     *
+     * @return slideshowDelayInSeconds
+     */
 
     public int getSlideshowDelayInSeconds() {
         return slideshowDelayInSeconds;
     }
 
-    public void setSlideshowDelayInSeconds(int slideshowDelayInSeconds) {
-        this.slideshowDelayInSeconds = slideshowDelayInSeconds;
-    }
+    /**
+     * Called when this widget is getting loaded
+     */
 
     protected void onLoad() {
         if (DOM.getElementById("overlay") != null || DOM.getElementById("lightbox") != null) {
             clear();
         }
-        if (childrens != null && slideshow && (backgroundMusicURL != null || slideshowForever)) {
-            for (int i = 0; i < childrens.length; i++) {
-                Element children = childrens[i];
-                setAttribute(children, "music", backgroundMusicURL);
-                setAttribute(children, "forever", Boolean.toString(slideshowForever));
+        if (image != null) {
+            DOM.appendChild(getElement(), createAnchor(image, "lightbox"));
+        } else if (images != null) {
+            childrens = new Element[images.length];
+            for (int i = 0; i < images.length; i++) {
+                childrens[i] = createAnchor(images[i], "lightbox[" + imagesets + "]");
+
+                setAttribute(childrens[i], "startslideshow", Boolean.toString(slideshow));
+                setAttribute(childrens[i], "slideDuration", String.valueOf(slideshowDelayInSeconds));
+
+                if (backgroundMusicURL != null) {
+                    setAttribute(childrens[i], "music", backgroundMusicURL);
+                }
+                if (slideshow) {
+                    setAttribute(childrens[i], "forever", Boolean.toString(slideshowForever));
+                }
+                DOM.appendChild(getElement(), childrens[i]);
+            }
+            imagesets++;
+            if (slideshow && images.length > 0) {
+                toggleSlideshowImage(currentIdx);
             }
         }
         init();
     }
+
+    /**
+     * Adds a listener to receive click events.
+     *
+     * @param listener the listener interface to add
+     */
 
     public void addClickListener(ClickListener listener) {
         if (clickListeners == null) {
@@ -264,26 +278,51 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
         clickListeners.add(listener);
     }
 
+    /**
+     * Removes a previously added listener.
+     *
+     * @param listener the listener interface to remove
+     */
+
+
     public void removeClickListener(ClickListener listener) {
         if (clickListeners != null) {
             clickListeners.remove(listener);
         }
     }
 
+    /**
+     * Is this slideshow set to run forever ?
+     *
+     * @return slideshowForever boolean value
+     */
+
     public boolean isSlideshowForever() {
         return slideshowForever;
     }
 
+    /**
+     * Set this slideshow to run forever.
+     *
+     * @param slideshowForever boolean flag
+     */
+
+
     public void setSlideshowForever(boolean slideshowForever) {
         this.slideshowForever = slideshowForever;
     }
+
+
+    /**
+     * Timer class for slideshow
+     */
 
     private class LightboxImageTimer extends Timer {
 
         public void run() {
             setVisibility(prevIdx, false);
             currentIdx++;
-            if (currentIdx == childrens.length) {
+            if (currentIdx >= childrens.length) {
                 currentIdx = 0;
             }
             setVisibility(currentIdx, true);
@@ -291,9 +330,17 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
         }
     }
 
+    /**
+     * Native interface to lightbox script to initialise DOM node generation
+     */
+
     protected static native void init() /*-{
         $wnd.initLightbox();
     }-*/;
+
+    /**
+     * Native interface to lightbox script to clear the created DOM nodes
+     */
 
     protected static native void clear() /*-{
         $wnd.Element.remove('overlay');
