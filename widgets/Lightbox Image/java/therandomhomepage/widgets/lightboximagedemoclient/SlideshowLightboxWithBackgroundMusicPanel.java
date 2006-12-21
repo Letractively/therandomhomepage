@@ -70,7 +70,7 @@ public class SlideshowLightboxWithBackgroundMusicPanel extends Composite{
     }
 
     private HTML getDescription() {
-        return new HTML("<br/>Image will change every 3 seconds. Click on the image to see slideshow with background music.<br/>");
+        return new HTML("<br/>Image will be changing every 3 seconds. Click on the image to see slideshow with background music.<br/>");
     }
 
     private HTML getCodeSnippet() {
