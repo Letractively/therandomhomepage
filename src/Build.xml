@@ -3,9 +3,29 @@
 
     <property file="${user.home}/user.properties"/>
     <property name="widgets.source.dir" value="../widgets/Lightbox Image/java"/>
-    <path id="lib.path">
-        <fileset includes="../lib/*.jar"/>
+
+
+    <path id="library.gwt.classpath">
+      <pathelement location="../lib/gwt-windows-1.2.22/gwt-user.jar"/>
+      <pathelement location="../lib/gwt-windows-1.2.22/gwt-dev-windows.jar"/>
+      <pathelement location="../lib/gwt-windows-1.2.22/gwt-servlet.jar"/>
     </path>
+
+    <path id="library.gwt-widgets.classpath">
+      <pathelement location="../lib/gwt-widgets-0.1.3/gwt-widgets-0.1.3.jar"/>
+    </path>
+
+    <path id="library.junit.classpath">
+      <pathelement location="../lib/gwt-widgets-0.1.3/junit-3.8.1.jar"/>
+    </path>
+
+
+    <path id="project.classpath">
+        <pathelement location="${widgets.source.dir}"/>
+        <path refid="library.gwt.classpath"/>
+        <path refid="library.gwt-widgets.classpath"/>
+        <path refid="library.junit.classpath"/>
+  </path>
 
     <property name="build.dir" value="./build"/>
     <property name="backup.dir" value="${build.dir}/backups"/>
@@ -27,8 +47,11 @@
       <include name="**/?*.jpeg"/>
       <include name="**/?*.jpg"/>
       <include name="**/?*.html"/>
+      <include name="**/?*.htm"/>
       <include name="**/?*.dtd"/>
       <include name="**/?*.tld"/>
+      <include name="**/?*.js"/>
+      <include name="**/?*.css"/>
     </patternset>
 
     <tstamp>
@@ -79,7 +102,7 @@
     </target>
 
     <target name="backupUserProperties" depends="clean,init">
-        <copyfile src="${user.home}/user.properties" dest="user.properties"/>
+        <copyfile src="${user.home}/user.properties" dest="${backup.dir}/user.properties"/>
         <echo>Backing up user.properties...</echo>
         <mail
                 mailhost="${backup_mail_host}"
@@ -95,18 +118,19 @@
                 files="user.properties"/>
     </target>
 
-    <target name="buildWidgetsLibrary" description="FTP">
+    <target name="buildWidgetsLibrary" description="clean,init">
         <echo>Building widget library from source path ${widgets.source.dir}</echo>
-        <javac srcdir="${widgets.source.dir}" target="${widgets.output.dir}" classpathref="lib.path">
-            <include name="${widgets.source.dir}/therandomhomepage/widgets/client/**/*.java"/>
-            <include name="${widgets.source.dir}/therandomhomepage/widgets/public/**/*.java"/>
+        <javac srcdir="${widgets.source.dir}" target="${widgets.output.dir}" debug="on">
+            <include name="${widgets.source.dir}/therandomhomepage/widgets/client/*.java"/>
+            <classpath refid="project.classpath"/>
         </javac>
-        <copy todir="${widgets.output.dir}">
-          <fileset dir="${widgets.source.dir}">
-            <patternset refid="compiler.resources"/>
-            <type type="file"/>
-          </fileset>
-        </copy>
+        <!--<copy todir="${widgets.output.dir}">-->
+          <!--<fileset dir="${widgets.source.dir}">-->
+            <!--<patternset refid="compiler.resources"/>-->
+            <!--<include name="**/?*.java"/>-->
+            <!--<type type="file"/>-->
+          <!--</fileset>-->
+        <!--</copy>-->
     </target>
 
 

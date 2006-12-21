@@ -8,7 +8,7 @@
         <entry path="file://$PROJECT_DIR$/lib/commons-net-1.4.1.jar" />
         <entry path="file://$PROJECT_DIR$/lib/mail.jar" />
       </additionalClassPath>
-      <antReference name="Apache Ant version 1.6.5" />
+      <antReference projectDefault="true" />
       <customJdkName value="IDEA 6107" />
       <maximumHeapSize value="128" />
       <properties />
