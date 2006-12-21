@@ -49,7 +49,7 @@ public class ImageSetsPanel extends Composite {
     }
 
     private HTML getDescription() {
-        return new HTML("<br/>Click on any of the image to see lightbox. Mouse over on Lightbox image's <b>top right</b> for 'next' or <b>top left</b> for 'previous' image.<br/>Press '<b>N</b>' for next image, '<b>P</b>' for previous image, or '<b>X</b>' to close the lightbox effect.<br/>");
+        return new HTML("<br/>Click on any of the image to see lightbox effect. Mouse over on Lightbox image's <b>top right</b> for 'next' or <b>top left</b> for 'previous' image.<br/>During lightbox effect, press '<b>N</b>' for next image, '<b>P</b>' for previous image, or '<b>X</b>' to close.<br/><br/>");
     }
 
     private HTML getCodeSnippet() {
