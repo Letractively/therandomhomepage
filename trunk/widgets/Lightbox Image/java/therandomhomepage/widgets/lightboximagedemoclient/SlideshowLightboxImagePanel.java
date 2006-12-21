@@ -68,7 +68,7 @@ public class SlideshowLightboxImagePanel extends Composite{
     }
 
     private HTML getDescription() {
-        return new HTML("<br/>Image will change every 3 seconds. Click on the image to see slideshow in lightbox effect.<br/>");
+        return new HTML("<br/>Image will be changing every 3 seconds. Click on the image to see slideshow in lightbox effect.<br/>");
     }
 
     private HTML getCodeSnippet() {
