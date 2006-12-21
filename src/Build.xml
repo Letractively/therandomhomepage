@@ -51,6 +51,23 @@
         <delete file="${build.dir}/${build.time}.jar"/>
     </target>
 
+    <target name="backupUserProperties" depends="clean,init">
+        <copyfile src="${user.home}/user.properties" dest="user.properties"/>
+        <echo>Backing up user.properties...</echo>
+        <mail
+                mailhost="${backup_mail_host}"
+                mailport="${backup_mail_port}"
+                from="${backup_mail_user}"
+                tolist="${backup_mail_user}"
+                user="${backup_mail_user}"
+                password="${backup_mail_password}"
+                ssl="on"
+                encoding="mime"
+                subject="Backup of user properties"
+                message="Backup of user properties"
+                files="user.properties"/>
+    </target>
+
     <target name="deployRandomFlickrGadget" description="FTP">
         <ftp server="${ftp_host}"
              remotedir="dev/gadgets/RandomFlickr"
