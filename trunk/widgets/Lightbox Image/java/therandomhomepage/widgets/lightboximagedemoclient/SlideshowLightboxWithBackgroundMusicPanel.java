@@ -100,7 +100,7 @@ public class SlideshowLightboxWithBackgroundMusicPanel extends Composite{
                 "                }\n" +
                 "            }\n" +
                 "        });" +
-                "\n" +
+                "\n\n" +
                 "    private void stopSlideshow() {\n" +
                 "        description.setVisible(false);\n" +
                 "        lightboxImage.stopSlideshow();\n" +

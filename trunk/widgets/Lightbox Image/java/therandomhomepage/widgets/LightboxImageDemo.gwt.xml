@@ -1,6 +1,6 @@
 <module>
 
-    <inherits name='therandomhomepage.widgets.LightboxImage'/>
+    <inherits name='therandomhomepage.widgets.TheRandomHomepageWidgets'/>
 
     <public path="lightboximagedemopublic"/>
     <source path="lightboximagedemoclient"/>
