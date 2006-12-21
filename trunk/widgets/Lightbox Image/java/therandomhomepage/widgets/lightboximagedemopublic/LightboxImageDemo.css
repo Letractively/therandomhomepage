@@ -12,17 +12,31 @@ b {
     text-decoration:none;
 }
 
-.codeSnippetHeader {
-    font-size:1em;
-    text-align:right;
-    font-weight:bold;
+h3 {
+    font-size:0.9em;
+    text-align:left;
+    /*font-weight:bold;*/
 }
 
-.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
-.s0 { color: rgb(0,0,128); font-weight: bold; }
-.s1 { }
-.s2 { color: rgb(128,128,128); font-style: italic; }
-.s3 { color: rgb(0,128,0); font-weight: bold; }
+pre, code {
+  font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+  color:midnightblue;
+  font-size: 90%;
+  text-align:left;
+}
+
+pre {
+  border: 1px solid silver;
+  background-color: #f5f5f5;
+  padding: 0.5em;
+  margin: 2em;
+  width:75%;      
+}
+
+.gwt-Image {
+   height:250px;
+   width:250px;     
+}
 
 .codeSnippet{
     font-size:1em;
@@ -33,7 +47,7 @@ img {
     border: none;
 }
 
-.multipleImage {
+.imageset {
     height: 150px;
     width: 150px;
     margin: 5px;

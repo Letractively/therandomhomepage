@@ -19,10 +19,9 @@ package therandomhomepage.widgets.client;
 
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.Timer;
-import com.google.gwt.user.client.ui.Image;
-import com.google.gwt.user.client.ui.UIObject;
-import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.*;
 
 /**
  * LightboxImage widget, a GWT wrapper for Lightbox JS by Lokesh Dhakar.
@@ -31,17 +30,21 @@ import com.google.gwt.user.client.ui.Widget;
  * @version 0.1
  * @see <a target="_new" href="http://www.huddletogether.com/projects/lightbox2/">http://www.huddletogether.com/projects/lightbox2/</a>
  */
-public class LightboxImage extends Widget {
+public class LightboxImage extends Widget implements SourcesClickEvents {
 
-    private Element childrens[] = null;
     private boolean slideshow;
     private int slideshowDelayInSeconds;
+    private boolean slideshowForever;
+
+    private Element childrens[] = null;
     private static int imagesets = 0;
     private LightboxImageTimer timer = null;
 
     private int prevIdx = 0;
     private int currentIdx = 0;
     private String bgMusicURL;
+    private boolean slideshowRunning = false;
+    private ClickListenerCollection clickListeners;
 
     /**
      * Create LightboxImage with a single image
@@ -92,6 +95,17 @@ public class LightboxImage extends Widget {
         }
     }
 
+
+    public void onBrowserEvent(Event event) {
+        switch (DOM.eventGetType(event)) {
+            case Event.ONCLICK:
+                if (clickListeners != null) {
+                    clickListeners.fireClick(this);
+                }
+                break;
+        }
+    }
+
     public void setBackgroundMusicURL(String mp3URL) {
         this.bgMusicURL = mp3URL;
     }
@@ -100,6 +114,7 @@ public class LightboxImage extends Widget {
         if (timer == null) {
             timer = new LightboxImageTimer();
             timer.scheduleRepeating(slideshowDelayInSeconds * 1000);
+            slideshowRunning = true;
         }
     }
 
@@ -107,7 +122,12 @@ public class LightboxImage extends Widget {
         if (timer != null) {
             timer.cancel();
             timer = null;
+            slideshowRunning = false;
         }
+    }
+
+    public boolean isSlideshowRunning() {
+        return slideshowRunning;
     }
 
     private Element createAnchor(Image image, String relValue) {
@@ -157,13 +177,35 @@ public class LightboxImage extends Widget {
         if (DOM.getElementById("overlay") != null || DOM.getElementById("lightbox") != null) {
             clear();
         }
-        if (slideshow && bgMusicURL != null) {
+        if (slideshow && (bgMusicURL != null || slideshowForever)) {
             for (int i = 0; i < childrens.length; i++) {
                 Element children = childrens[i];
                 setAttribute(children, "music", bgMusicURL);
+                setAttribute(children, "forever", Boolean.toString(slideshowForever));
             }
         }
         init();
+    }
+
+    public void addClickListener(ClickListener listener) {
+        if (clickListeners == null) {
+            clickListeners = new ClickListenerCollection();
+        }
+        clickListeners.add(listener);
+    }
+
+    public void removeClickListener(ClickListener listener) {
+        if (clickListeners != null) {
+            clickListeners.remove(listener);
+        }
+    }
+
+    public boolean isSlideshowForever() {
+        return slideshowForever;
+    }
+
+    public void setSlideshowForever(boolean slideshowForever) {
+        this.slideshowForever = slideshowForever;
     }
 
     private class LightboxImageTimer extends Timer {
@@ -193,8 +235,8 @@ public class LightboxImage extends Widget {
      * DOM.setAttribute() doesn't work for non-defined attributes. For eg. <a music="song.mp3" />
      * Hence, this method
      *
-     * @param element DOM element
-     * @param attribName attribute name
+     * @param element     DOM element
+     * @param attribName  attribute name
      * @param attribValue attribute value
      */
     protected static native void setAttribute(Element element, String attribName, String attribValue) /*-{

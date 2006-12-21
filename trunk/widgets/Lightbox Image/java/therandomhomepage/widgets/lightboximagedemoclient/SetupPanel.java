@@ -9,14 +9,14 @@ import therandomhomepage.widgets.client.LightboxImage;
  * Date: Dec 19, 2006
  * Time: 12:10:58 PM
  */
-public class SingleLightboxImagePanel extends Composite {
+public class SetupPanel extends Composite {
 
-    public SingleLightboxImagePanel(){
+    public SetupPanel(){
         VerticalPanel panel = new VerticalPanel();
         panel.setHorizontalAlignment(VerticalPanel.ALIGN_CENTER);
         panel.setVerticalAlignment(VerticalPanel.ALIGN_MIDDLE);
 
-        Label headerLabel = new Label("Single Image Demo");
+        Label headerLabel = new Label("Setup");
         panel.add(headerLabel);
         panel.add(getDescription());
 

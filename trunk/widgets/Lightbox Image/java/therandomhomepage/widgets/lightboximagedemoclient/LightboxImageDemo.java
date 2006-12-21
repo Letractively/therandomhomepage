@@ -28,17 +28,15 @@ import com.google.gwt.user.client.ui.*;
  */
 public class LightboxImageDemo implements EntryPoint {
 
-
     public void onModuleLoad() {
         TabPanel tabs = new TabPanel();
         tabs.setWidth("100%");
 
         tabs.add(new SingleLightboxImagePanel(), "Single Image");
-        tabs.add(new MultiLightboxImagePanel(), "Image Sets");
+        tabs.add(new ImageSetsPanel(), "Image Sets");
         tabs.add(new SlideshowLightboxImagePanel(), "Slideshow");
         tabs.add(new SlideshowLightboxWithBackgroundMusicPanel(), "Slideshow with music");
-
-        tabs.addTabListener(new TabSelectionListener());
+        tabs.add(new SetupPanel(), "Setup");
 
         tabs.selectTab(0);
 
@@ -49,33 +47,14 @@ public class LightboxImageDemo implements EntryPoint {
 
     private Widget getPageHeader() {
         return new HTML("<p><b>Lightbox Image</b> widget, a GWT wrapper for Lightbox JS (<a target=\"_new\" class=\"borderBottom\" href=\"http://www.huddletogether.com/projects/lightbox2/\">http://www.huddletogether.com/projects/lightbox2/)</a>. " +
-                "Lightbox JS is an <I>unobtrusive</I> script used for overlaying image on browser window and it was built on top of prototype.js & scriptaculous (effects.js)." +
+                "It's a lightweight widget, that overlays image on top of browser window with amazing visual effects. Currently supports single image, image sets, slideshow and background music playback during slideshow." +
                 "<ul><b>Features :</b>" +
-                "<li>Single and Image Sets with slideshow feature</li>" +
                 "<li>Easier image navigation (Please see '<b>Image Sets</b>' demo)</li>" +
                 "<li>Automatic image resizing based on available window size.</li>" +
                 "<li>Toggle slideshow.</li>" +
-                "<li>Background music while slideshow</li>" +
-                "<li>Easy installation and supposed to work on all modern browsers.</li>" +
+                "<li>Simplified setup and supposed to work on all modern browsers.</li>" +
                 "</ul>" +
                 "</p>");
     }
-
-    private class TabSelectionListener implements TabListener {
-
-        public boolean onBeforeTabSelected(SourcesTabEvents sender, int tabIndex) {
-            return true;
-        }
-
-        public void onTabSelected(SourcesTabEvents sender, int tabIndex) {
-            TabPanel tabPanel = (TabPanel) sender;
-
-            LightboxImagePanel panel = (LightboxImagePanel) tabPanel.getWidget(tabIndex);
-            if (panel.getHeader().equals("Slideshow")) {
-                panel.getLightboxImage().startSlideshow();
-            }
-        }
-    }
-
 
 }
