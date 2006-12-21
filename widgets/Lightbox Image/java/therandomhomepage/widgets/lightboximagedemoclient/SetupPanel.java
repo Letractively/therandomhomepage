@@ -18,24 +18,12 @@ public class SetupPanel extends Composite {
 
         Label headerLabel = new Label("Setup");
         panel.add(headerLabel);
-        panel.add(getDescription());
 
-        Image image = new Image("image.jpg");
-        image.setTitle("Image Title"); // Not required, but will be used as caption
-        LightboxImage lightboxImage = new LightboxImage(image);
+        HTML frameHTML = new HTML("<IFRAME scrolling=\"no\" frameborder=\"0\"\n" +
+                    "                     style=\"display: block; margin-left: 5px; margin-right: 5px; width: 100%; height: 100%;\" src=\"setup.html\"></IFRAME>");
+        panel.add(frameHTML);
 
-        panel.add(lightboxImage);
-        panel.add(getCodeSnippet());
         initWidget(panel);
     }
 
-    private HTML getDescription() {
-        return new HTML("<br/>Click on the image to see Lightbox in action.<br/><br/>");
-    }
-
-    private HTML getCodeSnippet() {
-        return new HTML("<h3>&nbsp;&nbsp;&nbsp;Code Snippet : </h3><pre class=\"code\">        Image image = new Image(\"image.jpg\");\n" +
-                "        image.setTitle(\"Image Title\"); // Not required, but will be used as caption\n" +
-                "        LightboxImage lightboxImage = new LightboxImage(image);</pre>");
-    }
 }
