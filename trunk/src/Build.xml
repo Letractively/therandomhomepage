@@ -2,8 +2,22 @@
 <project name="TheRandomHomepage-Java" default="backupWebsite" basedir=".">
 
     <property file="${user.home}/user.properties"/>
+    <property name="widgets.source.dir" value="../widgets/Lightbox Image/java"/>
+    <path id="lib.path">
+        <fileset includes="../lib/*.jar"/>
+    </path>
+
     <property name="build.dir" value="./build"/>
     <property name="backup.dir" value="${build.dir}/backups"/>
+    <property name="widgets.output.dir" value="./build/widgets"/>
+
+    <defaultexcludes echo="true" add="**/out/**"/>
+    <defaultexcludes echo="true" add="**/tomcat/**"/>
+    <defaultexcludes echo="true" add="**/.gwt-cache/**"/>
+    <defaultexcludes add="**/.svn"/>
+    <defaultexcludes add="**/.svn/**"/>
+    <defaultexcludes add="**/_svn"/>
+    <defaultexcludes add="**/_svn/**"/>
 
     <tstamp>
         <format property="build.time" pattern="MMMM-dd-yyyy-HH-mm"/>
@@ -12,6 +26,7 @@
     <target name="init">
         <mkdir dir="${build.dir}"/>
         <mkdir dir="${backup.dir}"/>
+        <mkdir dir="${widgets.output.dir}"/>
     </target>
 
     <target name="clean">
@@ -68,28 +83,13 @@
                 files="user.properties"/>
     </target>
 
-    <target name="deployRandomFlickrGadget" description="FTP">
-        <ftp server="${ftp_host}"
-             remotedir="dev/gadgets/RandomFlickr"
-             userid="${user_id}"
-             password="${password}"
-             depends="yes"
-             verbose="yes"
-                >
-            <fileset dir="out/therandomhomepage.RandomFlickr"/>
-        </ftp>
+    <target name="buildWidgetsLibrary" description="FTP">
+        <echo>Building widget library from source path ${widgets.source.dir}</echo>
+        <javac srcdir="${widgets.source.dir}" target="${widgets.output.dir}" classpathref="lib.path">
+            <includesfile name="therandomhomepage/widgets/client/**"/>
+            <includesfile name="therandomhomepage/widgets/public/**"/>
+        </javac>
     </target>
 
-    <target name="deployLightbox" description="FTP">
-        <ftp server="${ftp_host}"
-             remotedir="dev/google/gadgets/RandomFlickr"
-             userid="${user_id}"
-             password="${password}"
-             depends="yes"
-             verbose="yes"
-                >
-            <fileset dir="C:\downloads\lightbox2.02"/>
-        </ftp>
-    </target>
 
 </project>
