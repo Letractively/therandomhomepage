@@ -46,7 +46,7 @@ public class LightboxImageDemo implements EntryPoint {
     }
 
     private Widget getPageHeader() {
-        return new HTML("<p><b>Lightbox Image</b> widget, a GWT wrapper for Lightbox JS (<a target=\"_new\" class=\"borderBottom\" href=\"http://www.huddletogether.com/projects/lightbox2/\">http://www.huddletogether.com/projects/lightbox2/)</a>. " +
+        return new HTML("<p><b>Lightbox Image</b> widget, a GWT wrapper for Lightbox JS (<a target=\"_new\" href=\"http://www.huddletogether.com/projects/lightbox2/\">http://www.huddletogether.com/projects/lightbox2/)</a>. " +
                 "It's a lightweight widget, that overlays image on top of browser window with amazing visual effects. Currently supports single image, image sets, slideshow and background music playback during slideshow." +
                 "<ul><b>Features :</b>" +
                 "<li>Easier image navigation (Please see '<b>Image Sets</b>' demo)</li>" +

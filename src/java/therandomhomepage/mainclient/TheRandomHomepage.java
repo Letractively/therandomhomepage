@@ -15,13 +15,20 @@ public class TheRandomHomepage implements EntryPoint {
     private void buildBody() {
         RootPanel body = RootPanel.get("divBody");
 
+        TabPanel tabs = new TabPanel();
+        tabs.setWidth("100%");
+        tabs.add(getMainPanel(),"");
+        body.add(tabs);
+        tabs.selectTab(0);
+    }
+
+    private FlexTable getMainPanel() {
         FlexTable flexTable = new FlexTable();
         flexTable.setCellPadding(2);
         flexTable.setCellSpacing(5);
         flexTable.setHeight("100%");
         flexTable.setWidth("100%");
-        body.add(flexTable);
-        
+
         flexTable.getRowFormatter().setVerticalAlign(0, HasVerticalAlignment.ALIGN_TOP);
 
         String randomFeedURL = "http://www.therandomhomepage.com/google/gadget/RandomFeedModule.xml";
@@ -44,5 +51,6 @@ public class TheRandomHomepage implements EntryPoint {
         flexTable.setWidget(0, 2, randomQuotesWidget);
         flexTable.getCellFormatter().setHorizontalAlignment(0,2, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 2, "33%");
+        return flexTable;
     }
 }
