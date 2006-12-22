@@ -2,7 +2,7 @@
 <project version="4" relativePaths="false">
   <component name="AntConfiguration">
     <defaultAnt bundledAnt="true" />
-    <buildFile url="file://$PROJECT_DIR$/src/Build.xml">
+    <buildFile url="file://$PROJECT_DIR$/Build.xml">
       <additionalClassPath>
         <entry path="file://$PROJECT_DIR$/lib/activation.jar" />
         <entry path="file://$PROJECT_DIR$/lib/commons-net-1.4.1.jar" />
