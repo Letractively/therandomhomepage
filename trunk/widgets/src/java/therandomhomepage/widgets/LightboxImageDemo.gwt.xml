@@ -1,0 +1,11 @@
+<module>
+
+    <inherits name='therandomhomepage.widgets.LightboxImage'/>
+
+    <public path="lightboximagedemopublic"/>
+    <source path="lightboximagedemoclient"/>
+
+    <stylesheet src='LightboxImageDemo.css'/>
+
+    <entry-point class="therandomhomepage.widgets.lightboximagedemoclient.LightboxImageDemo"/>
+</module>
