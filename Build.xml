@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="TheRandomHomepage-Java" default="backupWebsite" basedir=".">
+<project name="TheRandomHomepage" default="init" basedir=".">
 
     <property file="${user.home}/user.properties"/>
     <property name="widgets.source.dir" value="widgets/Lightbox Image/java"/>
@@ -25,21 +25,6 @@
     <defaultexcludes add="**/.svn/**"/>
     <defaultexcludes add="**/_svn"/>
     <defaultexcludes add="**/_svn/**"/>
-
-    <patternset id="compiler.resources">
-      <include name="**/?*.properties"/>
-      <include name="**/?*.xml"/>
-      <include name="**/?*.gif"/>
-      <include name="**/?*.png"/>
-      <include name="**/?*.jpeg"/>
-      <include name="**/?*.jpg"/>
-      <include name="**/?*.html"/>
-      <include name="**/?*.htm"/>
-      <include name="**/?*.dtd"/>
-      <include name="**/?*.tld"/>
-      <include name="**/?*.js"/>
-      <include name="**/?*.css"/>
-    </patternset>
 
     <tstamp>
         <format property="build.time" pattern="MMMM-dd-yyyy-HH-mm"/>
@@ -83,8 +68,30 @@
                 password="${backup_mail_password}"
                 ssl="on"
                 encoding="mime"
-                subject="Backup for ${ftp_host} since ${build.time}"
-                message="Backup for ${ftp_host} since ${build.time}"
+                subject="Backup of ${ftp_host} since ${build.time}"
+                message="Backup of ${ftp_host} since ${build.time}"
+                files="${backupFile}"/>
+        <delete file="${backupFile}"/>
+    </target>
+
+    <target name="backupWorkspace" depends="clean,init">
+        <echo>Backing up workspace...</echo>
+        <property name="backupFile" value="${build.dir}/${ant.project.name}-${build.time}.jar"/>
+        <jar destfile="${backupFile}"
+             basedir="."
+             includes="**"
+                />
+        <mail
+                mailhost="${backup_mail_host}"
+                mailport="${backup_mail_port}"
+                from="${backup_mail_user}"
+                tolist="${backup_mail_user}"
+                user="${backup_mail_user}"
+                password="${backup_mail_password}"
+                ssl="on"
+                encoding="mime"
+                subject="Backup of ${ant.project.name} since ${build.time}"
+                message="Backup of ${ant.project.name} since ${build.time}"
                 files="${backupFile}"/>
         <delete file="${backupFile}"/>
     </target>
