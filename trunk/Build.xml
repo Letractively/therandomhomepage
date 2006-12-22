@@ -69,7 +69,8 @@
                 <exclude name="**/stats/**"/>
             </fileset>
         </ftp>
-        <jar destfile="${build.dir}/${ftp_host}-${build.time}.jar"
+        <property name="backupFile" value="${build.dir}/${ftp_host}-${build.time}.jar"/>
+        <jar destfile="${backupFile}"
              basedir="${backup.dir}"
              includes="**"
                 />
@@ -84,8 +85,8 @@
                 encoding="mime"
                 subject="Backup for ${ftp_host} since ${build.time}"
                 message="Backup for ${ftp_host} since ${build.time}"
-                files="${build.dir}/${build.time}.jar"/>
-        <delete file="${build.dir}/${build.time}.jar"/>
+                files="${backupFile}"/>
+        <delete file="${backupFile}"/>
     </target>
 
     <target name="backupUserProperties" depends="clean,init">

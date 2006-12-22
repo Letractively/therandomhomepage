@@ -7,6 +7,7 @@
         <entry path="file://$PROJECT_DIR$/lib/activation.jar" />
         <entry path="file://$PROJECT_DIR$/lib/commons-net-1.4.1.jar" />
         <entry path="file://$PROJECT_DIR$/lib/mail.jar" />
+        <entry path="file://$PROJECT_DIR$/lib/oro-2.0.8.jar" />
       </additionalClassPath>
       <antReference projectDefault="true" />
       <customJdkName value="IDEA 6107" />
