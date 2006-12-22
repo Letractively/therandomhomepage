@@ -7,5 +7,5 @@
 
     <stylesheet src='LightboxImageDemo.css'/>
 
-    <entry-point class="therandomhomepage.widgets.lightboximagedemoclient.LightboxImageDemo"/>
+    <entry-point class="therandomhomepage.lightboximagedemoclient.LightboxImageDemo"/>
 </module>

@@ -27,6 +27,14 @@
     ]]>
     </script>
 
+    <script src="lightbox/swfobject.js"><![CDATA[
+    if ($wnd.SWFObject)
+      return true;
+    else
+      return false;
+    ]]>
+    </script>
+
     <stylesheet src="lightbox/lightbox.css"/>
 
 </module>

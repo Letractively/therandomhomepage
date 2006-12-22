@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<link rel="stylesheet" href="LightboxImageDemo.css"/>
+</HEAD>
+
+<BODY>
+<ol>
+<li>Download the widget jar file (Provide <a href="http://www.therandomhomepage.com">link</a> here)</li>
+<li>Inherit the downloaded widget module.
+In your GWT module xml (For ex. module.gwt.xml) under the line <code><inherits name='com.google.gwt.user.User'/></code> add the line <code><inherits name='therandomhomepage.Widgets'/></code>
+</li>
+<li>Please make sure that the widget jar file is available in your GWT module classpath.</li>
+</ol>
+
+<p>
+<b>Note:</b>
+	No need to include javascripts in your GWT module
+	For ex:
+	<code>&lt;script type="text/javascript" src="js/prototype.js"&gt;&lt;/script&gt;</code>
+	There were some minor modifications to the original Lightbox JS script to work as GWT widget and all the required javascripts are injected into the Widget library for easier plugging.
+</p>
+</BODY>
+</HTML>
