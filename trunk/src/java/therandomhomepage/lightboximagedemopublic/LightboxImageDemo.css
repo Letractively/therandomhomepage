@@ -7,7 +7,7 @@ b {
     font-weight: bold;
 }
 
-.borderBottom {
+a:visited a:active a:hover {
     border-bottom:#333 dotted 1px;
     text-decoration:none;
 }
