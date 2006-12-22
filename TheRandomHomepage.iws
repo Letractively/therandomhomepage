@@ -18,750 +18,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\downloads.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GsearcherOptionsImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GblogSearchImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ext\impl\ExtDOMImplIE6.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\public\style\gwl-progressBar.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wwrapper\WImage.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\pagination\Column.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGPath.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\ExtDOM.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\WHyperlink.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_infosml.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\impl\class-use\ExtDOMImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GdrawOptions.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\SortablePaginationBehavior.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GblogSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\update.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\server\rpc\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\WidgetLibrary.gwt.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\package-list" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\pagination\DataProvider.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\style\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\test\org\gwtwidgets" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\class-use\RowRenderer.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\util\WindowUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\CookieUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\cvs-usage.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\BorderStyle.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_doc_lrg.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\temp\TMouseListenerCollection.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GwebResultImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\cal\CalendarDate.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_warning_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\class-use\BorderStyle.BorderStyleConstant.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\ImageButton.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\cal\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-black.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\impl\PNGImageImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\OptionList.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-brewed.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\EditableLabel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\EffectOption.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\server\rpc\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GResult.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\WBuilder.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\WindowUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wwrapper\WTextBox.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/impl/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\test\org" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGContainerBase.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGContainerBase.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GlocalSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_sortleft.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\temp\TGrid.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\test\org\gwtwidgets\test\client\TestBase.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\ProgressBar.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGCircle.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\SimpleCalcPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GblogSearchImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\server\rpc\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\server" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Lightbox Image/java/therandomhomepage/widgets/lightboximagedemopublic/song.mp3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.ipr" afterPath="$PROJECT_DIR$/TheRandomHomepage.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/oro-2.0.8.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_folder_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\util\CalcEngine.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\pagination" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_waste_lrg.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\class-use\Column.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_warning_lrg.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-bolt.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\package.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\util\ArrayUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\style\Color.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\test\org\gwtwidgets\test\client\util" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\pagination\PaginationBehavior.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GlocalSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wwrapper\WBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-purple.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGStop.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_success_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\folder-closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGBasicShape.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GSearch.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGLinearGradient.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\pagination\Column.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ext\impl\ExtDOMImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\temp\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GwebResult.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGEllipse.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ext\impl\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\cal\CalendarMonth.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\pagination\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\util\Location.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\pagination\PaginationParameters.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGPanelBase.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\LightBox.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GResult.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GsearcherOptionsImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\nw_min.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\WTextBox.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GSearchWidget.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wrap\JSCalendar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GblogSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\class-use\SearchUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\sw_med_rond.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-feather.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\impl\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\style\maven-base.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\server\rpc\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ext\impl" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\public\images\desc.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\class-use\SimpleDateFormat.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\class-use\CalendarPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\impl" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\util\Cookie.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GResultImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wrap\JSCalendar.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\impl\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\style\Coords.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\overview-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\cal\CalendarPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wwrapper\WBuilder.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGPanelBase.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GdrawOptions.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\PNGImage.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\temp\TFocusPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\KeepListener.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-build-successfull.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGPath.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\class-use\DefaultPaginationBehavior.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\WrappedWidget.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\nw_min_036.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\SearchUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\util\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\ProgressBar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GwebSearch.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\KeepListener.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ext\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\LightBox.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\util\SimpleDateFormat.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGEllipse.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-bulldozer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/cal" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\cal\CalendarDate.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GvideoSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\FormPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_arrowfolderopen2_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\Effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wrap\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\impl\class-use\PNGImageImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GdrawOptionsImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\class-use\WHyperlink.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\Location.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wwrapper\WButton.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\JSCalendar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\test\org\gwtwidgets\test" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\CalendarEvent.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_usergroups_lrg.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\impl\PNGImageImplIE6.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GSearchWidget.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\class-use\CalendarMonth.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\temp\TMouseListenerCollection.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\deprecated-list.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\pagination\Results.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wwrapper\WHyperlink.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-petesucks.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\class-use\EffectOption.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGContainerBase.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGRectangle.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GwebSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\util\SimpleDateFormat.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wwrapper\WrappedWidget.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\class-use\JsGraphicsPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\cal\CalendarEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\ImageButton.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\class-use\Effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\test\org\gwtwidgets\test\WidgetTestSuite.gwt.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_sortdown.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\index-all.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GResult.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/cal" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\ProgressBar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\nw_med_rond.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\OptionList.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\temp\TGrid.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\nw_maj.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGDefs.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\OptionList.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\pagination\PaginationBehavior.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\CalcKeyboardListener.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\FileUploadField.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\pagination\RowRenderer.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\impl\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wrap\Effect.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_arrowwaste2_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\jdepend-report.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/resources" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\help-doc.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\EditableLabel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\FileUploadField.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wrap" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GdrawOptionsImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\fix.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\sw_min.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wrap\Callback.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\allclasses-noframe.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GvideoSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGBasicShape.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GsearcherOptions.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\issue-tracking.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GsearcherOptionsImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ext\impl\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-mavenfactured.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GsearcherOptionsImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GwebResultImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wwrapper\WButton.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GlocalSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\RowRenderer.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGBasicShape.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GwebResultImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GResultImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\style" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ext\Namespace.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\none.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GlocalSearchImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GSearchControlImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\Results.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_arrowmembers1_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-built.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\impl\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\impl\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\class-use\Callback.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\test\org\gwtwidgets\test\client" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\temp\class-use\TGrid.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GblogSearch.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\class-use\ExtDOM.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\temp\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GSearchControl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ext" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\util" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\util\Location.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GlocalSearch.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\server\rpc" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_doc_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\class-use\CalendarFactory.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-green.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GwebSearchImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\pagination\RowRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GwebResult.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\WImage.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\temp" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GSearchWidget.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGLinearGradient.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\temp\class-use\TMouseListenerCollection.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wrap\EffectOption.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_help_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\public" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GlocalSearchImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\nw_maj_hi.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wrap\JsGraphicsPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\CalendarListener.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\impl\PNGImageImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\OptionList.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\test\org\gwtwidgets\test\client\util\SimpleDateFormatTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\overview-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\file.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGCircle.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\PNGImage.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\style\BorderStyle.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GblogSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGStop.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\util\CalcEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\public\images" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\nw_maj_rond.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\se_maj_rond.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/util" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\util\CookieUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\ToggleButton.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\temp\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\CalendarPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\class-use\CalendarEvent.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\server\rpc\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\temp\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\collapsed.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-propaganda-2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\CalcDisplayListener.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_members_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GSearchControlImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GwebResult.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\WPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-5.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\CalcKeyboardListener.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-propaganda.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\CalcDisplayListener.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\temp\TGrid.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGGradient.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GResult.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGRectangle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\pagination\DefaultPaginationBehavior.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GsearcherOptions.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GdrawOptionsImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GwebResultImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GwebSearch.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GdrawOptions.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\ImageButtonFactory.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\nw_med_hi.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\test" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_arrowusergroups2_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\newwindow.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_alertsml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\BorderStyle.BorderStyleConstant.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GvideoSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGLinearGradient.SVGLinearGradientWidget.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\impl\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\cal\CalendarFactory.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\temp\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wwrapper\WrappedWidget.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/style" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wrap\CallbackDelegate.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\add.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_arrowusergroups1_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/server/rpc" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GResultImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_arrowfolder2_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GwebSearchImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GwebSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGDefs.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\EditableLabel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wrap\CallbackDelegate.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\class-use\Coords.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\style\print.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GvideoSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGPanelBase.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\SimpleDateFormat.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_sortright.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GblogSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\util\Cookie.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\class-use\PaginationParameters.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\class-use\ArrayUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\pagination\SortablePaginationBehavior.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GvideoSearchImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\ToggleButton.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wrap\JsGraphicsPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\class-use\WTextBox.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GSearchImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\serialized-form.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\allclasses-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wrap\TinyMCEEditor.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wrap\EffectOption.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGEllipse.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wrap" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\LightBox.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\server\rpc\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\CalendarDate.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\class-use\Location.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_info_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGContainerBase.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\impl\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext/impl" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\cal\CalendarEvent.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\temp\TFocusPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\PopupCalcPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\external.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGPath.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\maven-reports.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_arrowfolderclosed1_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wwrapper\WTextBox.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\class-use\ElementNotFoundException.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GblogSearch.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\cal\CalendarPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\class-use\WImage.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\util\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\util\ArrayUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\DataProvider.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\PopupCalcPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\PaginationBehavior.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\javadoc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server/rpc" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\test\org\gwtwidgets\test\client\WidgetTestSuite.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_alert.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wwrapper" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GlocalSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GsearcherOptions.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GvideoSearch.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GwebSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\newwindow-classic.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\ImageButtonFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\nw_med.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\ImageButtonFactory.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\PNGImage.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\Namespace.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl/class-use" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GwebSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GSearchControl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_confirmsml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\temp\package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GSearchWidget.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wrap\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\CalendarFactory.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\ToggleButton.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\ToggleButton.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GdrawOptionsImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\pagination\PaginationParameters.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_arrowwaste1_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\SimpleCalcPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\style\Color.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/server" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\class-use\WPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/style" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\class-use\PaginationBehavior.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGGradient.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/images/logos" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-teal.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\util\SearchUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\class-use\Namespace.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ext\ExtDOM.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GSearchControl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\TinyMCEEditor.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\FileUploadField.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\style\maven-classic.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ext\impl\ExtDOMImplIE6.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\class-use\CookieUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\server\rpc\GWTSpringController.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\util\CookieUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\overview-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\pagination\Results.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\impl\class-use\PNGImageImplIE6.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\JsGraphicsPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\public\style\gwl-editableLabel.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wwrapper\WHyperlink.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\class-use\Cookie.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-redgreen.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GSearchWidget.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\SimpleCalcPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\class-use\CalcEngine.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wrap\Effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\public\style" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\temp\TMouseListenerCollection.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\class-use\TinyMCEEditor.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\folder-open.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GSearchControlImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GlocalSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGEllipse.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\class-use\DataProvider.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\temp\TFocusPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GwebResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/impl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\pagination\DefaultPaginationBehavior.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ext\impl\ExtDOMImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GResultImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGBasicShape.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\WButton.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\impl\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\DefaultPaginationBehavior.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GvideoSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\class-use\WButton.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wwrapper\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wwrapper" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGLinearGradient.SVGLinearGradientWidget.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GvideoSearch.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GResult.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ext\ExtDOM.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GwebSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GlocalSearch.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GResultImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GSearchImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\server\rpc\GWTSpringController.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGText.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\pagination\DataProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\ImageButtonFactory.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\class-use\WindowUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\project-info.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGLinearGradient.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\public\images\asc.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wwrapper\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wwrapper\WImage.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGCircle.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGRectangle.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\util\SearchUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\Cookie.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\style\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\CalcDisplayListener.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_arrowmembers2_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wwrapper\ElementNotFoundException.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\class-use\NumberFormat.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\remove.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGLinearGradient.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\util\NumberFormat.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\server\rpc\GWTSpringController.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGStop.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_sortup.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\SimpleCalcPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/pagination" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\allclasses-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGDefs.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\NumberFormat.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GwebResult.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGText.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GSearchControlImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/style" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\product_logo.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\PopupCalcPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGGradient.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\public\style\gwl-calcPanel.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\LightBox.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\impl\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\overview-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GSearchControl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\temp\TFlexTable.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\class-use\CalendarDate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/gsearch" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GblogSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\CalcDisplayListener.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GdrawOptions.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ext\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-copper.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_error_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\cal\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_error_lrg.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\nw_min_hi.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_usergroups_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\class-use\GSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wwrapper\ElementNotFoundException.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/temp/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\class-use\Color.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\KeepListener.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ext" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/server/rpc/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\style\BorderStyle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/wwrapper" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ext\Namespace.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\strich.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\class-use\JSCalendar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\pagination\SortablePaginationBehavior.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\ImageButton.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\impl\PNGImageImplIE6.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/ui/pagination" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_help_lrg.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GSearch.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\class-use\Results.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\Column.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wwrapper\WPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\PNGImage.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\cal\CalendarMonth.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\wwrapper\WPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\impl\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\impl\ExtDOMImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\style\maven-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\impl\PNGImageImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GwebResultImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_waste_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\PopupCalcPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGPanelBase.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GsearcherOptions.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\class-use\BorderStyle.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGRectangle.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GSearchControl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\style\Coords.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/src" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\COPYING" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/temp" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GsearcherOptions.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGWidget.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-frankenstein.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\temp\TFlexTable.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\FormPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\FormPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\ElementNotFoundException.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\Coords.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_success_lrg.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\util\NumberFormat.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\class-use\SortablePaginationBehavior.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGCircle.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\pagination\package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGGradient.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGWidget.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\dependencies.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\cal\CalendarListener.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\javadoc-warnings-report.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GwebSearchImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\class-use\WBuilder.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\team-list.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\overview-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\ImageButton.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\cal" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\mail-lists.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\impl\class-use\ExtDOMImplIE6.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\public\images\lightbox.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ext\impl\ExtDOMImplIE6.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GSearchControl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/impl" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\sw_maj_rond.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGPath.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\SVGText.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GdrawOptions.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\CalcKeyboardListener.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wrap\TinyMCEEditor.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\pagination\PaginationParameters.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\poweredby_036.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\cal\CalendarListener.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\util\WindowUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_members_lrg.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\wrap\Callback.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\external-classic.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wwrapper\class-use\WrappedWidget.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GdrawOptionsImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\svg\class-use\SVGText.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/util/class-use" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GvideoSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\help_logo.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_folder_lrg.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\wrap\Callback.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\constant-values.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\temp\class-use\TFocusPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\ProgressBar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GlocalSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GvideoSearchImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\style\Color.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\impl\PNGImageImplIE6.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\KeepListener.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\GSearchControlImpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\server\rpc\class-use\GWTSpringController.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\CalcKeyboardListener.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\CalendarMonth.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGDefs.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\resources\inherit.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\ui\gsearch\KeepListener.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ext" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-4.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGStop.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/xref/org/gwtwidgets/client/ui/gsearch" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_info_lrg.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\pdf.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\xref\org\gwtwidgets\client\svg\SVGWidget.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\svg\SVGWidget.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\gsearch\GblogSearch.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-pinky.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\icon_arrowfolder1_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\FileUploadField.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/gwt-widgets-0.1.3/docs/apidocs/org/gwtwidgets/client/wrap" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\cal\class-use\CalendarListener.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\ArrayUtils.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\cal\CalendarFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\EditableLabel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\util\CalcEngine.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\logos\maven-button-blue.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java\org\gwtwidgets\client\ui\gsearch\GsearcherOptionsImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\apidocs\org\gwtwidgets\client\ui\class-use\FormPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\src\java" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3\docs\images\expanded.gif" afterPath="" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -903,10 +163,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Build.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="26" selection-start="2305" selection-end="2305" vertical-scroll-proportion="0.020531401">
+            <state line="50" column="58" selection-start="1682" selection-end="1682" vertical-scroll-proportion="0.2874396">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="COPYING" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/COPYING">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1037,72 +306,6 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\lib\gwt-widgets-0.1.3" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
     </subPane>
   </component>
   <component name="ProjectReloadState">
@@ -1178,7 +381,129 @@
       <recent name="therandomhomepage.randomflickrclient" />
     </key>
   </component>
-  <component name="RestoreUpdateTree" />
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="12/22/06 11:56 AM" ActionInfo="Chec_k Status">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="UpdatedOnServer" />
+            <option name="myStatusName" value="Modified on Server" />
+            <option name="mySupportsDeletion" value="true" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="Modified On Server" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="ReplacedOnServer" />
+            <option name="myStatusName" value="Replaced on Server" />
+            <option name="mySupportsDeletion" value="true" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="Replaced On Server" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+          <PATH>C:\sid\projects\TheRandomHomepage\TheRandomHomepage.ipr</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\TheRandomHomepage.iws</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+          <PATH>C:\sid\projects\TheRandomHomepage\lib\oro-2.0.8.jar</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\mainpublic\images\Thumbs.db</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\mainpublic\images\logos\Thumbs.db</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\src\java\.gwt-cache</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\lightboximagedemopublic\song.mp3</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\therandomhomepage\widgets\lightboximagedemopublic\Thumbs.db</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\.gwt-cache</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\bin</PATH>
+          <PATH>C:\sid\projects\TheRandomHomepage\build</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Missing" />
+          <option name="myStatusName" value="Missing" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="missing" />
+          <PATH>C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\demo</PATH>
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
   <component name="RunManager" selected="Application.LightboxImageDemo">
     <tempConfiguration default="false" name="therandomhomepage.test" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="TheRandomHomepage" />
@@ -1440,7 +765,7 @@
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32608697" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5420408" order="0" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34285715" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41210046" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5949657" order="14" />
@@ -1456,7 +781,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5005714" order="4" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="17" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49543378" order="12" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49542335" order="12" />
       <window_info id="FaTPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6202965" order="8" />
       <window_info id="SVN Properties" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295583" order="9" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
@@ -1490,7 +815,7 @@
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
     <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ERROR_OCCURED" value="true" />
+    <option name="ERROR_OCCURED" value="false" />
     <option name="ACTIVE_VCS_NAME" value="svn" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
@@ -1568,9 +893,9 @@
   <component name="com.intellij.ide.util.scopeChooser.ScopeChooserConfigurable" proportions="" version="1">
     <option name="myLastEditedConfigurable" />
   </component>
-  <component name="com.intellij.openapi.roots.ui.configuration.projectRoot.ProjectRootMasterDetailsConfigurable" proportions="0.16666667,0.5" version="1">
+  <component name="com.intellij.openapi.roots.ui.configuration.projectRoot.ProjectRootMasterDetailsConfigurable" proportions="0.16666667" version="1">
     <option name="myPlainMode" value="false" />
-    <option name="myLastEditedConfigurable" value="TheRandomHomepage" />
+    <option name="myLastEditedConfigurable" value="gwt-widgets" />
   </component>
   <component name="com.intellij.profile.ui.ErrorOptionsConfigurable" proportions="0.16666667,0.5314286" version="1">
     <option name="myLastEditedConfigurable" value="Default" />
@@ -1604,9 +929,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-windows-1.2.22/gwt-user.jar!/com/google/gwt/user/client/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="21" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gwt-widgets-0.1.3/gwt-widgets-0.1.3.jar!/org/gwtwidgets/client/ui/LightBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="28" selection-start="1818" selection-end="1818" vertical-scroll-proportion="-0.8007246">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="26" selection-start="2305" selection-end="2305" vertical-scroll-proportion="0.020531401">
+        <state line="50" column="58" selection-start="1682" selection-end="1682" vertical-scroll-proportion="0.2874396">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/Lightbox Image/java/COPYING">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
