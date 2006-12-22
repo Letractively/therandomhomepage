@@ -15,11 +15,10 @@
  * limitations under the License.
  */
 
-package therandomhomepage.widgets.lightboximagedemoclient;
+package therandomhomepage.lightboximagedemoclient;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.*;
-import therandomhomepage.widgets.client.LightboxImage;
 
 /**
  * Created by IntelliJ IDEA.
@@ -29,17 +28,15 @@ import therandomhomepage.widgets.client.LightboxImage;
  */
 public class LightboxImageDemo implements EntryPoint {
 
-
     public void onModuleLoad() {
         TabPanel tabs = new TabPanel();
-        tabs.setHeight("100%");
         tabs.setWidth("100%");
 
-        tabs.add(buildSingleImageLightboxPanel(),"Single Image");
-        tabs.add(buildMultiImageLightboxPanel(),"Multiple Images");
-        tabs.add(buildMultiImageLightboxPanelWithSlideShow(),"Slideshow");
-
-        tabs.addTabListener(new TabSelectionListener());
+        tabs.add(new SingleLightboxImagePanel(), "Single Image");
+        tabs.add(new ImageSetsPanel(), "Image Sets");
+        tabs.add(new SlideshowLightboxImagePanel(), "Slideshow");
+        tabs.add(new SlideshowLightboxWithBackgroundMusicPanel(), "Slideshow with music");
+        tabs.add(new SetupPanel(), "Setup");
 
         tabs.selectTab(0);
 
@@ -49,83 +46,15 @@ public class LightboxImageDemo implements EntryPoint {
     }
 
     private Widget getPageHeader() {
-        return new HTML("<p<b>Lightbox Image</b>, a GWT wrapper implementation for Lightbox JS by Lokesh Dhakar(<a target=\"_new\" href=\"http://www.huddletogether.com/projects/lightbox2/\">http://www.huddletogether.com/projects/lightbox2/</a>)" +
-                "<ul>Features :" +
-                "<li>built on top of prototype.js, scriptaculous(effects.js) & Lightbox JS</li>"+
-                "<li>single image and multi-image with slideshow</li>"+
+        return new HTML("<p><b>Lightbox Image</b> widget, a GWT wrapper for Lightbox JS (<a target=\"_new\" class=\"borderBottom\" href=\"http://www.huddletogether.com/projects/lightbox2/\">http://www.huddletogether.com/projects/lightbox2/)</a>. " +
+                "It's a lightweight widget, that overlays image on top of browser window with amazing visual effects. Currently supports single image, image sets, slideshow and background music playback during slideshow." +
+                "<ul><b>Features :</b>" +
+                "<li>Easier image navigation (Please see '<b>Image Sets</b>' demo)</li>" +
+                "<li>Automatic image resizing based on available window size.</li>" +
+                "<li>Toggle slideshow.</li>" +
+                "<li>Simplified setup and supposed to work on all modern browsers.</li>" +
                 "</ul>" +
                 "</p>");
     }
-
-    private LightboxImagePanel buildSingleImageLightboxPanel() {
-        Image image = new Image("lightbox/image-1.jpg");
-        image.setTitle("Image 1");
-        LightboxImage lightboxImage = new LightboxImage(image);
-
-        String desc = "Click on the image to see Lightbox in action";
-        return new LightboxImagePanel(lightboxImage, "Single Image", desc);
-    }
-
-
-    private LightboxImagePanel buildMultiImageLightboxPanel() {
-        Image image1 = new Image("lightbox/image-2.jpg");
-        image1.setTitle("Image 2");
-        image1.setStyleName("multipleImage");
-
-        Image image2 = new Image("lightbox/image-3.jpg");
-        image2.setTitle("Image 2");
-        image2.setStyleName("multipleImage");
-
-        Image image3 = new Image("lightbox/image-4.jpg");
-        image3.setTitle("Image 3");
-        image3.setStyleName("multipleImage");
-
-        Image image4 = new Image("lightbox/image-5.jpg");
-        image4.setTitle("Image 4");
-        image4.setStyleName("multipleImage");
-
-        Image images[] = {image1, image2, image3, image4};
-
-        String desc = "Click on the image to see Lightbox in action. Mouse over on top of Lightbox image's right for next or left for previous image.";
-
-        LightboxImage lightboxImage = new LightboxImage(images);
-        return new LightboxImagePanel(lightboxImage, "Multiple Images", desc);
-    }
-
-    private LightboxImagePanel buildMultiImageLightboxPanelWithSlideShow() {
-        Image image1 = new Image("lightbox/image-2.jpg");
-        image1.setTitle("Image 1");
-        Image image2 = new Image("lightbox/image-3.jpg");
-        image2.setTitle("Image 2");
-        Image image3 = new Image("lightbox/image-4.jpg");
-        image3.setTitle("Image 3");
-        Image image4 = new Image("lightbox/image-5.jpg");
-        image4.setTitle("Image 3");
-
-        Image images[] = {image1, image2, image3, image4};
-        
-        LightboxImage lightboxImage = new LightboxImage(images,true,3);
-
-        String desc = "Click on the image to see Lightbox in action. Mouse over on top of Lightbox image's right for next or left for previous image.";
-
-        return new LightboxImagePanel(lightboxImage, "Slideshow", desc);
-    }
-
-    private class TabSelectionListener implements TabListener{
-
-        public boolean onBeforeTabSelected(SourcesTabEvents sender, int tabIndex) {
-            return true;
-        }
-
-        public void onTabSelected(SourcesTabEvents sender, int tabIndex) {
-            TabPanel tabPanel = (TabPanel) sender;
-
-            LightboxImagePanel panel = (LightboxImagePanel) tabPanel.getWidget(tabIndex);
-            if (panel.getHeader().equals("Slideshow")){
-                panel.getLightboxImage().startSlideshow();
-            }
-        }
-    }
-
 
 }
