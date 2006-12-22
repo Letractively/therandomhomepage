@@ -17,24 +17,7 @@
     <option name="USER" value="" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\webapps" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\conf\gwt\localhost" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\webapps\ROOT\WEB-INF\web.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\work" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\webapps\ROOT" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\webapps\ROOT\WEB-INF" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\conf\gwt" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\work\gwt\localhost" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\conf" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\work\gwt\localhost\_" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\conf\web.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat\work\gwt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/Random Flickr" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iml" afterPath="$PROJECT_DIR$/TheRandomHomepage.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Lightbox Image\java\tomcat" afterPath="" />
-    </list>
+    <list default="true" name="Default" comment="" />
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
     <list name="Failed commit: Default (2)" comment="Layout changes" />
@@ -43,8 +26,8 @@
       <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\conf" afterPath="" />
       <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\webapps\ROOT\WEB-INF\web.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\work\gwt\localhost" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat" afterPath="" />
       <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\conf\web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat" afterPath="" />
       <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\conf\gwt\localhost" afterPath="" />
       <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\webapps\ROOT\WEB-INF" afterPath="" />
       <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\work" afterPath="" />
@@ -361,6 +344,32 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\java\tomcat" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -751,7 +760,7 @@
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
     <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ERROR_OCCURED" value="true" />
+    <option name="ERROR_OCCURED" value="false" />
     <option name="ACTIVE_VCS_NAME" value="svn" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
