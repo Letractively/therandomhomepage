@@ -9,33 +9,62 @@
     <option name="USE_DATE_AFTER_FILTER" value="false" />
     <option name="USE_CHANGE_BEFORE_FILTER" value="false" />
     <option name="USE_CHANGE_AFTER_FILTER" value="false" />
-    <option name="DATE_BEFORE" value="" />
-    <option name="DATE_AFTER" value="" />
+    <option name="DATE_BEFORE" />
+    <option name="DATE_AFTER" />
     <option name="CHANGE_BEFORE" value="" />
     <option name="CHANGE_AFTER" value="" />
     <option name="USE_USER_FILTER" value="false" />
     <option name="USER" value="" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" name="Default" comment="" />
+    <list default="true" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\therandomhomepagegadget.TheRandomHomepageGadget.nocache.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\C9CDE00CB35D2BB148AD1F0CC34397AE.cache.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/Random Feed" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\B44E0C588D9B2834FDD2D6E343813DFE.cache.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\tree_closed.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\RandomFeedModuleDev.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\images\start.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\B44E0C588D9B2834FDD2D6E343813DFE.cache.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\ED3AA5C462392FB7BF4D5C3E29A11143.cache.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/Random Feed" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\images\screenshot.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\TheRandomHomepageGadget.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\446EAE721F823C02C4559E7B9BBEEF0B.cache.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\ED3AA5C462392FB7BF4D5C3E29A11143.cache.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\tree_white.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/Random Feed/web/images" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\gwt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\446EAE721F823C02C4559E7B9BBEEF0B.cache.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\C9CDE00CB35D2BB148AD1F0CC34397AE.cache.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\tree_open.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\images\stop.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\RandomFeedModule.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\images\thumbnail.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\history.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/Random Feed/web" afterPath="" />
+      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\Random Feed\web\TheRandomHomepageGadget.html" afterPath="" />
+    </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
     <list name="Failed commit: Default (2)" comment="Layout changes" />
     <list name="Failed commit: Default (3)" comment="Refactored some directories">
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\work\gwt\localhost\_" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat/work/gwt/localhost/_" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat/conf" afterPath="" />
       <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\webapps\ROOT\WEB-INF\web.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\work\gwt\localhost" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat/work/gwt/localhost" afterPath="" />
       <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\conf\web.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\conf\gwt\localhost" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\webapps\ROOT\WEB-INF" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\work" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\work\gwt" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/java" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\conf\gwt" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\webapps" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\widgets\java\tomcat\webapps\ROOT" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat/conf/gwt/localhost" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat/work" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat/webapps/ROOT/WEB-INF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat/work/gwt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat/conf/gwt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat/webapps" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/java/tomcat/webapps/ROOT" afterPath="" />
     </list>
   </component>
   <component name="ChangeListSynchronizer" />
@@ -172,17 +201,7 @@
     <option name="myCurrentFavoritesList" value="TheRandomHomepage" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="COPYING" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/widgets/java/COPYING">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -339,37 +358,15 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\modules" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\modules\Random Feed" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\java\tomcat" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\modules\Random Feed\web" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -386,7 +383,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure ProjectPane="false" PackagesPane="false" Scope="false" Favorites="false" />
+      <showStructure Scope="false" ProjectPane="false" PackagesPane="false" Favorites="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -400,8 +397,8 @@
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="cvs_file_history_flatWidth1" value="292" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="cvs_file_history_treeWidth1" value="292" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -669,9 +666,9 @@
     <option name="myReportErrorsAsWarnings" value="true" />
   </component>
   <component name="SvnChangesBrowserSettings">
-    <option name="USE_AUTHOR_FIELD" value="true" />
+    <option name="USE_AUTHOR_FIELD" value="false" />
     <option name="AUTHOR" value="" />
-    <option name="LOCATION" value="" />
+    <option name="LOCATION" value="https://therandomhomepage.googlecode.com/svn/trunk" />
     <option name="USE_PROJECT_SETTINGS" value="true" />
     <option name="USE_ALTERNATE_LOCATION" value="false" />
   </component>
@@ -680,8 +677,8 @@
     <option name="PASSWORD" value="" />
     <option name="PROCESS_UNRESOLVED" value="false" />
     <option name="LAST_MERGED_REVISION" />
-    <option name="UPDATE_RUN_STATUS" value="false" />
-    <option name="UPDATE_RECURSIVELY" value="true" />
+    <option name="UPDATE_RUN_STATUS" value="true" />
+    <option name="UPDATE_RECURSIVELY" value="false" />
     <option name="MERGE_DRY_RUN" value="false" />
     <configuration useDefault="true">C:\Documents and Settings\sihameed\Application Data\Subversion</configuration>
     <remoteStatus />
@@ -711,7 +708,7 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32608697" order="7" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5420408" order="0" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41304347" order="1" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41210046" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59610987" order="14" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
