@@ -95,7 +95,7 @@
         <property name="backupFile" value="${build.dir}/${ant.project.name}-${build.time}.jar"/>
         <jar destfile="${backupFile}"
              basedir="."
-             includes="**"
+             includes="**" excludes="**/bin/**,**/build/**"
                 />
         <mail
                 mailhost="${backup_mail_host}"
