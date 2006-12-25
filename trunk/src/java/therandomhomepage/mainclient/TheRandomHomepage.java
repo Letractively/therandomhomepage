@@ -2,9 +2,9 @@ package therandomhomepage.mainclient;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.*;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Command;
 
 public class TheRandomHomepage implements EntryPoint {
 
@@ -20,6 +20,9 @@ public class TheRandomHomepage implements EntryPoint {
         tabs.add(getMainPanel(),"");
         body.add(tabs);
         tabs.selectTab(0);
+        tabs.setHeight("70%");
+
+        body.add(getFooter());
     }
 
     private FlexTable getMainPanel() {
@@ -52,5 +55,41 @@ public class TheRandomHomepage implements EntryPoint {
         flexTable.getCellFormatter().setHorizontalAlignment(0,2, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 2, "33%");
         return flexTable;
+    }
+
+    private VerticalPanel getFooter() {
+        VerticalPanel footerPanel = new VerticalPanel();
+        footerPanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+        footerPanel.setStyleName("footerPanel");
+        DOM.setAttribute(footerPanel.getElement(),"align","center");
+
+
+        MenuItem home = new MenuItem("TheRandomHomepage",true,new Command(){
+            public void execute() {
+            }
+        });
+        home.setStyleName("footerMenuItem");
+        MenuItem aboutUs = new MenuItem("What's this site",true,new Command(){
+            public void execute() {
+            }
+        });
+
+        aboutUs.setStyleName("footerMenuItem");
+
+        MenuItem feedback = new MenuItem("Feedback",true,new Command(){
+            public void execute() {
+            }
+        });
+        feedback.setStyleName("footerMenuItem");
+
+        MenuBar footerMenu = new MenuBar();
+        footerMenu.setStyleName("footerMenuBar");
+        footerMenu.addItem(home);
+        footerMenu.addItem(aboutUs);
+        footerMenu.addItem(feedback);
+        DOM.setAttribute(DOM.getFirstChild(footerMenu.getElement()),"align","center");
+
+        footerPanel.add(footerMenu);
+        return footerPanel;
     }
 }
