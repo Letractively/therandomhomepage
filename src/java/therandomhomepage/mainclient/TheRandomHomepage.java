@@ -22,7 +22,9 @@ public class TheRandomHomepage implements EntryPoint {
 
         tabs.add(getMainPanel(),"");
         tabs.add(new AboutUsPanel(),"");
+        tabs.add(new DevelopersPanel(),"");
         tabs.add(new FeedbackPanel(),"");
+
 
         RootPanel.get().add(tabs);
         tabs.selectTab(0);
@@ -69,17 +71,21 @@ public class TheRandomHomepage implements EntryPoint {
         footerPanel.setStyleName("footerPanel");
         DOM.setAttribute(footerPanel.getElement(),"align","center");
 
-
-        FooterMenuItem home = new FooterMenuItem("TheRandomHomepage",tabs,0);
-        FooterMenuItem aboutUs = new FooterMenuItem("What's this site",tabs,1);
-        FooterMenuItem feedback = new FooterMenuItem("Feedback",tabs,2);
-
-
         MenuBar footerMenu = new MenuBar();
         footerMenu.setStyleName("footerMenuBar");
+
+        FooterMenuItem home = new FooterMenuItem("TheRandomHomepage",tabs,0);
         footerMenu.addItem(home);
+
+        FooterMenuItem aboutUs = new FooterMenuItem("What's this site?",tabs,1);
         footerMenu.addItem(aboutUs);
+
+        FooterMenuItem developers = new FooterMenuItem("Developers",tabs,2);
+        footerMenu.addItem(developers);
+
+        FooterMenuItem feedback = new FooterMenuItem("Feedback",tabs,3);
         footerMenu.addItem(feedback);
+
         DOM.setAttribute(DOM.getFirstChild(footerMenu.getElement()),"align","center");
 
         footerPanel.add(footerMenu);
