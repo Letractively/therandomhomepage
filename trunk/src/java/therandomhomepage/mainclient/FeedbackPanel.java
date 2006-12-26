@@ -1,6 +1,7 @@
 package therandomhomepage.mainclient;
 
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.*;
 
 /**
@@ -11,13 +12,18 @@ import com.google.gwt.user.client.ui.*;
  */
 public class FeedbackPanel extends Composite {
 
-    TextArea txtMessage;
+    private TextBox txtEmail;
+    private TextArea txtMessage;
+    private VerticalPanel panel;
+    private FlexTable table;
+
 
     public FeedbackPanel() {
 
         NamedFrame mailFrame = new NamedFrame("mailFrame");
         mailFrame.setHeight("0px");
         mailFrame.setWidth("0px");
+        mailFrame.setVisible(false);
 
         final FormPanel form = new FormPanel(mailFrame);
         form.setAction("/php/sendMail.php");
@@ -25,7 +31,7 @@ public class FeedbackPanel extends Composite {
         form.setEncoding(FormPanel.ENCODING_URLENCODED);
         form.setMethod(FormPanel.METHOD_POST);
 
-        VerticalPanel panel = new VerticalPanel();
+        panel = new VerticalPanel();
         panel.setHorizontalAlignment(VerticalPanel.ALIGN_CENTER);
         panel.setVerticalAlignment(VerticalPanel.ALIGN_TOP);
 
@@ -36,22 +42,30 @@ public class FeedbackPanel extends Composite {
 
         initWidget(panel);
 
-        FlexTable table = new FlexTable();
-        table.setStyleName("FeedbackForm");
+
+
+        table = new FlexTable();
+        table.addStyleName("divBlock");
+        table.addStyleName("feedbackForm");
 
         table.setWidget(0, 0, new HTML("<h3>Feedback</h3>"));
 
         table.setWidget(1, 0, new Label("Name: "));
+        table.getFlexCellFormatter().setVerticalAlignment(1,0, HasVerticalAlignment.ALIGN_TOP);
+
         TextBox txtName = new TextBox();
         txtName.setName("txtName");
         table.setWidget(1, 1, txtName);
 
         table.setWidget(2, 0, new Label("Email: "));
-        TextBox txtEmail = new TextBox();
+        table.getFlexCellFormatter().setVerticalAlignment(2,0, HasVerticalAlignment.ALIGN_TOP);
+
+        txtEmail = new TextBox();
         txtEmail.setName("txtEmail");
         table.setWidget(2, 1, txtEmail);
 
         table.setWidget(3, 0, new Label("Subject: "));
+        table.getFlexCellFormatter().setVerticalAlignment(3,0, HasVerticalAlignment.ALIGN_TOP);
 
         ListBox subject = new ListBox();
         subject.setName("selSubject");
@@ -64,6 +78,7 @@ public class FeedbackPanel extends Composite {
         table.setWidget(3, 1, subject);
 
         table.setWidget(4, 0, new Label("Message: "));
+        table.getFlexCellFormatter().setVerticalAlignment(4,0, HasVerticalAlignment.ALIGN_TOP);
 
         txtMessage = new TextArea();
         txtMessage.setName("txtMessage");
@@ -77,7 +92,6 @@ public class FeedbackPanel extends Composite {
             }
         });
 
-//        table.getFlexCellFormatter().setColSpan(5, 0, 2);
         table.setWidget(5, 0, btnSubmit);
 
         form.add(table);
@@ -85,18 +99,23 @@ public class FeedbackPanel extends Composite {
         // Add an event handler to the form.
         form.addFormHandler(new FormHandler() {
             public void onSubmitComplete(FormSubmitCompleteEvent event) {
-                // do nothing
             }
 
             public void onSubmit(FormSubmitEvent event) {
-                // This event is fired just before the form is submitted. We can take
-                // this opportunity to perform validation.
-
-
-                if (txtMessage.getText().length() == 0) {
-                    Window.alert("Please provide ");
+                if (txtEmail.getText().length() == 0){
+                    Window.alert("Please provide your email address !");
                     event.setCancelled(true);
+                    txtEmail.setFocus(true);
                 }
+                else if (txtMessage.getText().length() == 0) {
+                    Window.alert("Please provide some email contents !");
+                    event.setCancelled(true);
+                    txtMessage.setFocus(true);
+                }
+                table.clear();
+                table.setWidget(0,0,new HTML("<h4>Thanks for your feedback !, We really appreciate this :)</h4"));
+                //TODO: Make this center aligned in FF
+                DOM.setAttribute(table.getWidget(0,0).getElement(),"align","center");
             }
         });
 
