@@ -22,7 +22,7 @@ public class TheRandomHomepage implements EntryPoint {
 
         tabs.add(getMainPanel(),"");
         tabs.add(new AboutUsPanel(),"");
-        tabs.add(getMainPanel(),"");
+        tabs.add(new FeedbackPanel(),"");
 
         RootPanel.get().add(tabs);
         tabs.selectTab(0);
