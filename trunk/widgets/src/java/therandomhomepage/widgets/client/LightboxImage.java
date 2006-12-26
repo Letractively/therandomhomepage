@@ -350,7 +350,7 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
 
     /**
      * Native implementation of DOM.setAttribute(element,attributeName,attributeValue)
-     * DOM.setAttribute() doesn't work for non-defined attributes. For eg. <a music="song.mp3" />
+     * DOM.setAttribute() doesn't work for non-defined attributes. For eg. <a music="music.mp3" />
      * Hence, this method
      *
      * @param element     DOM element

@@ -55,7 +55,7 @@ public class SlideshowLightboxWithBackgroundMusicPanel extends Composite{
         Image images[] = {image1, image2, image3, image4, image5};
         lightboxImage = new LightboxImage(images,true,3);
         lightboxImage.setSlideshowForever(true);
-        lightboxImage.setBackgroundMusicURL("song.mp3");
+        lightboxImage.setBackgroundMusicURL("music.mp3");
         lightboxImage.addClickListener(new ClickListener(){
             public void onClick(Widget sender) {
                 if (lightboxImage.isSlideshowRunning()) {
@@ -92,7 +92,7 @@ public class SlideshowLightboxWithBackgroundMusicPanel extends Composite{
                 "        Image images[] = {image1, image2, image3, image4, image5};\n" +
                 "        lightboxImage = new LightboxImage(images,true,3);\n" +
                 "        lightboxImage.setSlideshowForever(true);\n" +
-                "        lightboxImage.setBackgroundMusicURL(\"song.mp3\");\n" +
+                "        lightboxImage.setBackgroundMusicURL(\"music.mp3\");\n" +
                 "        lightboxImage.addClickListener(new ClickListener(){\n" +
                 "            public void onClick(Widget sender) {\n" +
                 "                if (lightboxImage.isSlideshowRunning()) {\n" +
