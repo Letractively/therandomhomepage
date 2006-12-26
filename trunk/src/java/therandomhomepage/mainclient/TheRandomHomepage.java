@@ -5,24 +5,30 @@ import com.google.gwt.user.client.ui.*;
 import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Command;
+import com.google.gwt.user.client.EventListener;
 
 public class TheRandomHomepage implements EntryPoint {
+
+  TabPanel tabs;
 
   public void onModuleLoad() {
       buildBody();
   }
 
     private void buildBody() {
-        RootPanel body = RootPanel.get("divBody");
 
-        TabPanel tabs = new TabPanel();
+        tabs = new TabPanel();
         tabs.setWidth("100%");
-        tabs.add(getMainPanel(),"");
-        body.add(tabs);
-        tabs.selectTab(0);
-        tabs.setHeight("70%");
 
-        body.add(getFooter());
+        tabs.add(getMainPanel(),"");
+        tabs.add(new AboutUsPanel(),"");
+        tabs.add(getMainPanel(),"");
+
+        RootPanel.get().add(tabs);
+        tabs.selectTab(0);
+        tabs.setHeight("80%");
+
+        RootPanel.get().add(getFooter());
     }
 
     private FlexTable getMainPanel() {
@@ -64,23 +70,10 @@ public class TheRandomHomepage implements EntryPoint {
         DOM.setAttribute(footerPanel.getElement(),"align","center");
 
 
-        MenuItem home = new MenuItem("TheRandomHomepage",true,new Command(){
-            public void execute() {
-            }
-        });
-        home.setStyleName("footerMenuItem");
-        MenuItem aboutUs = new MenuItem("What's this site",true,new Command(){
-            public void execute() {
-            }
-        });
+        FooterMenuItem home = new FooterMenuItem("TheRandomHomepage",tabs,0);
+        FooterMenuItem aboutUs = new FooterMenuItem("What's this site",tabs,1);
+        FooterMenuItem feedback = new FooterMenuItem("Feedback",tabs,2);
 
-        aboutUs.setStyleName("footerMenuItem");
-
-        MenuItem feedback = new MenuItem("Feedback",true,new Command(){
-            public void execute() {
-            }
-        });
-        feedback.setStyleName("footerMenuItem");
 
         MenuBar footerMenu = new MenuBar();
         footerMenu.setStyleName("footerMenuBar");

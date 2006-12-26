@@ -7,6 +7,17 @@ body {
 	margin: 0px;
 }
 
+#divHeader {
+    text-align:center;
+    vertical-align:top;
+}
+
+.divBlock{
+	border: 2px solid #EEE;
+	background: #FFF;
+	padding: 12px 18px 18px 18px;
+}
+
 .footerMessage {
   font-style: italic;
   font-weight: bold;
@@ -51,12 +62,13 @@ a:visited {
     padding-left:5px;
     padding-right:5px;
     cursor: pointer;
+    font-weight:bold;
 }
 
 .footerMenuItemSelected {
     color: black;
     background-color: #F3F3F3;
-    border-bottom: 4px solid black;
+    border-bottom: 1px solid black;
     padding-bottom: 0;
 }
 
