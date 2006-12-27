@@ -1,14 +1,9 @@
 body {
     background: repeat url( ./images/background.gif );
     color: black;
-    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; /*font-family: Arial, sans-serif;*/
+    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
     font-size: small;
     margin: 0px;
-}
-
-#divHeader {
-    text-align: center;
-    vertical-align: top;
 }
 
 a.helpLink {
