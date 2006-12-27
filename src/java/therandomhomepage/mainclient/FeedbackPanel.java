@@ -1,7 +1,7 @@
 package therandomhomepage.mainclient;
 
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
 
 /**
@@ -21,8 +21,6 @@ public class FeedbackPanel extends Composite {
     public FeedbackPanel() {
 
         NamedFrame mailFrame = new NamedFrame("mailFrame");
-        mailFrame.setHeight("0px");
-        mailFrame.setWidth("0px");
         mailFrame.setVisible(false);
 
         final FormPanel form = new FormPanel(mailFrame);
@@ -42,8 +40,6 @@ public class FeedbackPanel extends Composite {
 
         initWidget(panel);
 
-
-
         table = new FlexTable();
         table.addStyleName("divBlock");
         table.addStyleName("feedbackForm");
@@ -51,21 +47,21 @@ public class FeedbackPanel extends Composite {
         table.setWidget(0, 0, new HTML("<h3>Feedback</h3>"));
 
         table.setWidget(1, 0, new Label("Name: "));
-        table.getFlexCellFormatter().setVerticalAlignment(1,0, HasVerticalAlignment.ALIGN_TOP);
+        table.getFlexCellFormatter().setVerticalAlignment(1, 0, HasVerticalAlignment.ALIGN_TOP);
 
         TextBox txtName = new TextBox();
         txtName.setName("txtName");
         table.setWidget(1, 1, txtName);
 
         table.setWidget(2, 0, new Label("Email: "));
-        table.getFlexCellFormatter().setVerticalAlignment(2,0, HasVerticalAlignment.ALIGN_TOP);
+        table.getFlexCellFormatter().setVerticalAlignment(2, 0, HasVerticalAlignment.ALIGN_TOP);
 
         txtEmail = new TextBox();
         txtEmail.setName("txtEmail");
         table.setWidget(2, 1, txtEmail);
 
         table.setWidget(3, 0, new Label("Subject: "));
-        table.getFlexCellFormatter().setVerticalAlignment(3,0, HasVerticalAlignment.ALIGN_TOP);
+        table.getFlexCellFormatter().setVerticalAlignment(3, 0, HasVerticalAlignment.ALIGN_TOP);
 
         ListBox subject = new ListBox();
         subject.setName("selSubject");
@@ -78,7 +74,7 @@ public class FeedbackPanel extends Composite {
         table.setWidget(3, 1, subject);
 
         table.setWidget(4, 0, new Label("Message: "));
-        table.getFlexCellFormatter().setVerticalAlignment(4,0, HasVerticalAlignment.ALIGN_TOP);
+        table.getFlexCellFormatter().setVerticalAlignment(4, 0, HasVerticalAlignment.ALIGN_TOP);
 
         txtMessage = new TextArea();
         txtMessage.setName("txtMessage");
@@ -98,25 +94,24 @@ public class FeedbackPanel extends Composite {
 
         form.addFormHandler(new FormHandler() {
             public void onSubmitComplete(FormSubmitCompleteEvent event) {
-//                Window.alert(event.getResults());
+                Window.alert(event.getResults());
             }
 
             public void onSubmit(FormSubmitEvent event) {
-                if (txtEmail.getText().trim().length() == 0){
+                if (txtEmail.getText().trim().length() == 0) {
                     Window.alert("Please provide your email address !");
                     event.setCancelled(true);
                     txtEmail.setFocus(true);
-                }
-                else if (txtMessage.getText().trim().length() == 0) {
+                } else if (txtMessage.getText().trim().length() == 0) {
                     Window.alert("Please provide feedback !");
                     event.setCancelled(true);
                     txtMessage.setFocus(true);
                 }
                 table.clear();
                 HTML thanksHTML = new HTML("<h4>We really appreciate your feedback. Thanks a lot !</h4");
-                table.setWidget(0,0, thanksHTML);
-                DOM.setAttribute(table.getWidget(0,0).getElement(),"align","center");
-                DOM.setAttribute(table.getCellFormatter().getElement(0,0),"width","100%");
+                table.setWidget(0, 0, thanksHTML);
+                DOM.setAttribute(table.getWidget(0, 0).getElement(), "align", "center");
+                DOM.setAttribute(table.getCellFormatter().getElement(0, 0), "width", "100%");
             }
         });
 
