@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <!-- Last updated 12/12/2006 -->
+  <!--
+	Last Updated: 12/27/2006
+	Change Notes: Default transition effect was made to "None"
+  -->
   <ModulePrefs title="__UP_moduletitle__" directory_title="Random Flickring" title_url="http://www.therandomhomepage.com"
 			   height="350"
                author="Siddique Hameed"
-               description="Flip through tagged pictures from Flickr or view them as slideshows in various visual effects.
+               description="Flip through tagged pictures from Flickr or view them as slideshows in amazing visual effects.
 			   Click on the image to see 'Lightbox' effect. Mouse over Lightbox image's top right or top left for 'next' or 'previous' image."
                author_email="siddii+randomhomepage@gmail.com"
                render_inline="optional"
@@ -16,7 +19,7 @@
   </ModulePrefs>
   <UserPref name="moduletitle" display_name="Title" default_value="Random Flickring" required="true"/>
   <UserPref name="tags" display_name="Tags(comma separated)" required="true" datatype="string" default_value="art,colorful,travel"/>
-  <UserPref name="transition_effect" display_name="Transition effect" datatype="enum" default_value="0">
+  <UserPref name="transition_effect" display_name="Transition effect" datatype="enum" default_value="-1">
    <EnumValue display_value="None"  value="-1" />
    <EnumValue display_value="Random"  value="0" />
    <EnumValue display_value="BlindDown "  value="1" />
