@@ -14,7 +14,6 @@ public class FeedbackPanel extends Composite {
 
     private TextBox txtEmail;
     private TextArea txtMessage;
-    private VerticalPanel panel;
     private FlexTable table;
 
 
@@ -27,9 +26,8 @@ public class FeedbackPanel extends Composite {
         form.setAction("/php/sendMail.php");
 
         form.setEncoding(FormPanel.ENCODING_URLENCODED);
-        form.setMethod(FormPanel.METHOD_POST);
 
-        panel = new VerticalPanel();
+        VerticalPanel panel = new VerticalPanel();
         panel.setHorizontalAlignment(VerticalPanel.ALIGN_CENTER);
         panel.setVerticalAlignment(VerticalPanel.ALIGN_TOP);
 
@@ -94,7 +92,7 @@ public class FeedbackPanel extends Composite {
 
         form.addFormHandler(new FormHandler() {
             public void onSubmitComplete(FormSubmitCompleteEvent event) {
-                Window.alert(event.getResults());
+                //Ignore this
             }
 
             public void onSubmit(FormSubmitEvent event) {
@@ -106,12 +104,13 @@ public class FeedbackPanel extends Composite {
                     Window.alert("Please provide feedback !");
                     event.setCancelled(true);
                     txtMessage.setFocus(true);
+                } else {
+                    table.clear();
+                    HTML thanksHTML = new HTML("<h4>We really appreciate your feedback. Thanks a lot !</h4");
+                    table.setWidget(0, 0, thanksHTML);
+                    DOM.setAttribute(table.getWidget(0, 0).getElement(), "align", "center");
+                    DOM.setAttribute(table.getCellFormatter().getElement(0, 0), "width", "100%");
                 }
-                table.clear();
-                HTML thanksHTML = new HTML("<h4>We really appreciate your feedback. Thanks a lot !</h4");
-                table.setWidget(0, 0, thanksHTML);
-                DOM.setAttribute(table.getWidget(0, 0).getElement(), "align", "center");
-                DOM.setAttribute(table.getCellFormatter().getElement(0, 0), "width", "100%");
             }
         });
 

@@ -1,53 +1,59 @@
 body {
-    background: repeat url(./images/background.gif);
+    background: repeat url( ./images/background.gif );
     color: black;
-    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
-    /*font-family: Arial, sans-serif;*/
-	font-size: small;
-	margin: 0px;
+    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; /*font-family: Arial, sans-serif;*/
+    font-size: small;
+    margin: 0px;
 }
 
 #divHeader {
-    text-align:center;
-    vertical-align:top;
+    text-align: center;
+    vertical-align: top;
 }
 
-.divBlock{
-	border: 2px solid #EEE;
-	background: #FFF;
-	padding: 12px 18px 18px 18px;
+a.helpLink {
+    border-bottom: #333 dotted 1px;
+    text-decoration: none;
+    color: #000000;
+    cursor: help;
 }
 
-.feedbackForm{
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    border-bottom: black solid 1px;
+}
+
+.divBlock {
+    border: 2px solid #EEE;
+    background: #FFF;
+    padding: 12px 18px 18px 18px;
+}
+
+.feedbackForm {
     width: 50%;
     height: 350px;
     display: block;
     margin-left: 5px;
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 .footerMessage {
-  font-style: italic;
-  font-weight: bold;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .randomWidgetHeader {
-	background-image: url(./images/gray_gradient.gif);
-	background-repeat: repeat-x;
-	font-weight: bold;
+    background-image: url( ./images/gray_gradient.gif );
+    background-repeat: repeat-x;
+    font-weight: bold;
 }
 
-.randomWidgetHeader-arrow{
-  cursor: pointer;
-}
-
-
-a {	
-	color: darkblue;
-}
-
-a:visited {	
-	color: darkblue; 
+.randomWidgetHeader-arrow {
+    cursor: pointer;
 }
 
 .footerPanel {
@@ -56,8 +62,8 @@ a:visited {
 }
 
 .footerMenuBar {
-	cursor: default;
-    text-align:center;
+    cursor: default;
+    text-align: center;
     margin-bottom: 1em;
     font-weight: bold;
     border-bottom: 1px solid #DFDFDF;
@@ -65,12 +71,12 @@ a:visited {
 }
 
 .footerMenuItem {
-	font-size: 70%;
+    font-size: 70%;
     margin: 5px;
-    padding-left:5px;
-    padding-right:5px;
+    padding-left: 5px;
+    padding-right: 5px;
     cursor: pointer;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .footerMenuItemSelected {
@@ -80,110 +86,108 @@ a:visited {
     padding-bottom: 0;
 }
 
-
 .gwt-DialogBox {
-	border: 2px solid #AAAAAA;
-	background-color: white;
+    border: 2px solid #AAAAAA;
+    background-color: white;
 }
 
 .gwt-DialogBox .Caption {
-	background-image: url(images/gray_gradient.gif);
-	background-repeat: repeat-x;
-	padding: 4px;
-	padding-bottom: 8px;
-	font-weight: bold;
-	cursor: default;
+    background-image: url( images/gray_gradient.gif );
+    background-repeat: repeat-x;
+    padding: 4px;
+    padding-bottom: 8px;
+    font-weight: bold;
+    cursor: default;
 }
 
 .gwt-MenuBar {
-	background-color: #C3D9FF;
-	cursor: default;
+    background-color: #C3D9FF;
+    cursor: default;
 }
 
 .gwt-MenuItem {
-	font-size: 80%;
-	margin: 1px;
-	cursor: default;
+    font-size: 80%;
+    margin: 1px;
+    cursor: default;
 }
 
 .gwt-MenuItem-selected {
-	background-color: #E8EEF7;
+    background-color: #E8EEF7;
 }
 
 .gwt-Tree {
-	margin-top: 1em;
-	margin-bottom: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .gwt-Tree .gwt-TreeItem {
-	font-size: 80%;
-	cursor: default;
+    font-size: 80%;
+    cursor: default;
 }
 
 .gwt-Tree .gwt-TreeItem-selected {
-	background-color: #C3D9FF;
+    background-color: #C3D9FF;
 }
 
 .gwt-StackPanel {
-	background-color: white;
-	border: 1px solid #AAAAAA;
-	width: 15em;
+    background-color: white;
+    border: 1px solid #AAAAAA;
+    width: 15em;
 }
 
 .gwt-StackPanel .gwt-StackPanelItem {
-	background-image: url(images/gray_gradient.gif);
-	background-repeat: repeat-x;
-	background-color: #EEEEEE;
-	cursor: pointer;
+    background-image: url( images/gray_gradient.gif );
+    background-repeat: repeat-x;
+    background-color: #EEEEEE;
+    cursor: pointer;
 }
 
 .gwt-StackPanel .gwt-StackPanelItem-selected {
 }
 
-
 /*Credits: Dynamic Drive CSS Library */
 /*URL: http://www.dynamicdrive.com/style/ */
 
-#underlinemenu{
-margin: 5px;
-padding: 5px;
-font-size:0.8em;    
+#underlinemenu {
+    margin: 5px;
+    padding: 5px;
+    font-size: 0.8em;
 }
 
-#underlinemenu ul{
-margin: 5px;
-margin-bottom: 1em;
-padding-left: 5px;
-float: left;
-font-weight: bold;
-width: 100%;
-border: 1px solid #DFDFDF;
-border-width: 1px 0;
+#underlinemenu ul {
+    margin: 5px;
+    margin-bottom: 1em;
+    padding-left: 5px;
+    float: left;
+    font-weight: bold;
+    width: 100%;
+    border: 1px solid #DFDFDF;
+    border-width: 1px 0;
 }
 
-* html #underlinemenu ul{ /*IE only rule. Delete extra margin-bottom*/
-margin-bottom: 0;
+* html #underlinemenu ul {
+/*IE only rule. Delete extra margin-bottom*/
+    margin-bottom: 0;
 }
 
-#underlinemenu ul li{
-display: inline;
+#underlinemenu ul li {
+    display: inline;
 }
 
-
-#underlinemenu ul li a{
-float: left;
-color: gray;
-font-weight: bold;
-padding: 2px 6px 4px 6px;
-text-decoration: none;
-background: white url(menudivide.gif) top right repeat-y;
+#underlinemenu ul li a {
+    float: left;
+    color: gray;
+    font-weight: bold;
+    padding: 2px 6px 4px 6px;
+    text-decoration: none;
+    background: white url( menudivide.gif ) top right repeat-y;
 }
 
-#underlinemenu ul li a:hover{
-color: black;
-background-color: #F3F3F3;
-border-bottom: 4px solid black;
-padding-bottom: 0;
+#underlinemenu ul li a:hover {
+    color: black;
+    background-color: #F3F3F3;
+    border-bottom: 4px solid black;
+    padding-bottom: 0;
 }
 
 /*Credits: Dynamic Drive CSS Library */

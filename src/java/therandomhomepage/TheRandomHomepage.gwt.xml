@@ -5,6 +5,11 @@
     <public path="mainpublic"/>
     <entry-point class='therandomhomepage.mainclient.TheRandomHomepage'/>
 
+
+    <stylesheet src="TheRandomHomepage.css"/>
+    <stylesheet src="Gadget.css"/>
+
+
     <servlet path="/php/GoogleGadget.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
     <servlet path="/php/GetRandomFeed.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
     <servlet path="/php/GetRandomNewsfeed.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
