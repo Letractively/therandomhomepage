@@ -18,12 +18,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/TheRandomHomepage.css" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/TheRandomHomepage.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/FeedbackPanel.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/FeedbackPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Developers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/DevelopersPanel.java" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -183,7 +179,7 @@
       <file leaf-file-name="FeedbackPanel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/FeedbackPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="54" selection-start="3860" selection-end="3860" vertical-scroll-proportion="1.065177">
+            <state line="98" column="0" selection-start="2935" selection-end="2935" vertical-scroll-proportion="2.0074074">
               <folding />
             </state>
           </provider>
@@ -192,7 +188,7 @@
       <file leaf-file-name="SetupPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemoclient/SetupPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.31657356">
+            <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.20987654">
               <folding />
             </state>
           </provider>
@@ -201,7 +197,7 @@
       <file leaf-file-name="SlideshowLightboxImagePanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemoclient/SlideshowLightboxImagePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="-2.1527002">
+            <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.020987654">
               <folding />
             </state>
           </provider>
@@ -210,7 +206,7 @@
       <file leaf-file-name="TheRandomHomepage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="66" selection-start="3761" selection-end="3761" vertical-scroll-proportion="1.1284916">
+            <state line="88" column="66" selection-start="3761" selection-end="3761" vertical-scroll-proportion="0.7777778">
               <folding />
             </state>
           </provider>
@@ -219,7 +215,7 @@
       <file leaf-file-name="FooterMenuItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/FooterMenuItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="17" selection-start="426" selection-end="426" vertical-scroll-proportion="0.2771739">
+            <state line="17" column="17" selection-start="426" selection-end="426" vertical-scroll-proportion="0.122424245">
               <folding />
             </state>
           </provider>
@@ -228,7 +224,7 @@
       <file leaf-file-name="AboutUsPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AboutUsPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="22" selection-start="310" selection-end="310" vertical-scroll-proportion="0.31657356">
+            <state line="12" column="22" selection-start="310" selection-end="310" vertical-scroll-proportion="0.20987654">
               <folding />
             </state>
           </provider>
@@ -237,7 +233,7 @@
       <file leaf-file-name="DevelopersPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/DevelopersPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="301" selection-end="301" vertical-scroll-proportion="0.31657356">
+            <state line="12" column="13" selection-start="301" selection-end="301" vertical-scroll-proportion="0.20987654">
               <folding />
             </state>
           </provider>
@@ -249,7 +245,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="71" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.53125">
+            <state line="16" column="71" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.34649682">
               <folding />
             </state>
           </provider>
@@ -261,7 +257,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="222" selection-end="222" vertical-scroll-proportion="0.265625">
+            <state line="8" column="13" selection-start="222" selection-end="222" vertical-scroll-proportion="0.17324841">
               <folding />
             </state>
           </provider>
@@ -920,6 +916,24 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
@@ -1093,7 +1107,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure Scope="false" ProjectPane="false" PackagesPane="false" Favorites="false" />
+      <showStructure Favorites="false" ProjectPane="false" Scope="false" PackagesPane="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -1107,8 +1121,8 @@
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="cvs_file_history_flatWidth1" value="296" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="cvs_file_history_treeWidth1" value="296" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -1155,104 +1169,7 @@
       <recent name="therandomhomepage.randomflickrclient" />
     </key>
   </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="12/26/06 9:09 AM" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-          <PATH>C:\sid\projects\TheRandomHomepage\TheRandomHomepage.iws</PATH>
-          <PATH>C:\sid\projects\TheRandomHomepage\widgets\src\java\therandomhomepage\widgets\public\lightbox\Thumbs.db</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-          <PATH>C:\sid\projects\TheRandomHomepage\bin</PATH>
-          <PATH>C:\sid\projects\TheRandomHomepage\build</PATH>
-          <PATH>C:\sid\projects\TheRandomHomepage\src\java\.gwt-cache</PATH>
-          <PATH>C:\sid\projects\TheRandomHomepage\src\java\out</PATH>
-          <PATH>C:\sid\projects\TheRandomHomepage\src\java\tomcat</PATH>
-          <PATH>C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\lightboximagedemopublic\music.mp3</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
-  </component>
+  <component name="RestoreUpdateTree" />
   <component name="RunManager" selected="Application.TheRandomHomepage">
     <tempConfiguration default="false" name="therandomhomepage.test" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="TheRandomHomepage" />
@@ -1530,7 +1447,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24979591" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53432494" order="16" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3043478" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3043478" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33752862" order="4" />
@@ -1693,35 +1610,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemoclient/SetupPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.31657356">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AboutUsPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="310" selection-end="310" vertical-scroll-proportion="0.31657356">
+        <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.20987654">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemoclient/SlideshowLightboxImagePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="-2.1527002">
+        <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.020987654">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="66" selection-start="3761" selection-end="3761" vertical-scroll-proportion="0.7777778">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/FooterMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="17" selection-start="426" selection-end="426" vertical-scroll-proportion="0.2771739">
+        <state line="17" column="17" selection-start="426" selection-end="426" vertical-scroll-proportion="0.122424245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AboutUsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="310" selection-end="310" vertical-scroll-proportion="0.20987654">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/DevelopersPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="301" selection-end="301" vertical-scroll-proportion="0.31657356">
+        <state line="12" column="13" selection-start="301" selection-end="301" vertical-scroll-proportion="0.20987654">
           <folding />
         </state>
       </provider>
@@ -1731,7 +1655,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="71" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.53125">
+        <state line="16" column="71" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.34649682">
           <folding />
         </state>
       </provider>
@@ -1741,7 +1665,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="222" selection-end="222" vertical-scroll-proportion="0.265625">
+        <state line="8" column="13" selection-start="222" selection-end="222" vertical-scroll-proportion="0.17324841">
           <folding />
         </state>
       </provider>
@@ -1756,16 +1680,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="66" selection-start="3761" selection-end="3761" vertical-scroll-proportion="1.1284916">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/FeedbackPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="54" selection-start="3860" selection-end="3860" vertical-scroll-proportion="1.065177">
+        <state line="98" column="0" selection-start="2935" selection-end="2935" vertical-scroll-proportion="2.0074074">
           <folding />
         </state>
       </provider>
