@@ -48,20 +48,30 @@ public class TheRandomHomepage implements EntryPoint {
         flexTable.getCellFormatter().setWidth(0, 0, "33%");
 
 
-        String randomWikipediaModuleURL = "http://www.therandomhomepage.com/google/gadgets/randomwiki/RandomWikiModule.xml";
-        String randomWikipediaNetvibesModuleURL = "http://www.therandomhomepage.com/netvibes/modules/RandomWikipediaArticle/index.php";
-        AbstractRandomGadget randomWikipediaGadget = new AbstractRandomGadget("Random Wikipedia Article", randomWikipediaModuleURL, randomWikipediaNetvibesModuleURL, 320, 350);
-        flexTable.setWidget(0, 1, randomWikipediaGadget);
+        RandomFlickrWidget randomFlickrWidget = new RandomFlickrWidget();
+        flexTable.setWidget(0, 1, randomFlickrWidget);
         flexTable.getCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);
         flexTable.getCellFormatter().setHorizontalAlignment(0, 1, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 1, "33%");
 
+
+
         String randomQuotesURL = "http://quotes4all.net/quotations.html";
-        AbstractRandomGadget randomQuotesWidget = new AbstractRandomGadget("Random Quotes", randomQuotesURL, 300, 300);
-        flexTable.setWidget(0, 2, randomQuotesWidget);
+        AbstractRandomGadget randomQuotesWidget = new AbstractRandomGadget("Random Quotes", randomQuotesURL, 300, 150);
+        flexTable.setWidget(1, 1, randomQuotesWidget);
+        flexTable.getCellFormatter().setVerticalAlignment(1, 1, HasVerticalAlignment.ALIGN_TOP);
+        flexTable.getCellFormatter().setHorizontalAlignment(1, 1, HasHorizontalAlignment.ALIGN_CENTER);
+        flexTable.getCellFormatter().setWidth(1, 1, "33%");
+
+
+        String randomWikipediaModuleURL = "http://www.therandomhomepage.com/google/gadgets/randomwiki/RandomWikiModule.xml";
+        String randomWikipediaNetvibesModuleURL = "http://www.therandomhomepage.com/netvibes/modules/RandomWikipediaArticle/index.php";
+        AbstractRandomGadget randomWikipediaGadget = new AbstractRandomGadget("Random Wikipedia Article", randomWikipediaModuleURL, randomWikipediaNetvibesModuleURL, 320, 350);
+        flexTable.setWidget(0, 2, randomWikipediaGadget);
         flexTable.getCellFormatter().setVerticalAlignment(0, 2, HasVerticalAlignment.ALIGN_TOP);
         flexTable.getCellFormatter().setHorizontalAlignment(0, 2, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 2, "33%");
+
         return flexTable;
     }
 

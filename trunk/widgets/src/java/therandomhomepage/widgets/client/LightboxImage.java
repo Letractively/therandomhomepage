@@ -202,12 +202,12 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
     }
 
     /**
-     * Toggles the slideshow image by hiding all the images and displaying only one
+     * Toggle images by hiding all and displaying only one
      *
      * @param imageIdx Index of the image to show
      */
 
-    public void toggleSlideshowImage(int imageIdx) {
+    public void toggleImage(int imageIdx) {
         setAllVisibility(false);
         setVisibility(imageIdx, true);
     }
@@ -260,7 +260,7 @@ public class LightboxImage extends Widget implements SourcesClickEvents {
             }
             imagesets++;
             if (slideshow && images.length > 0) {
-                toggleSlideshowImage(currentIdx);
+                toggleImage(currentIdx);
             }
         }
         init();
