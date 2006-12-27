@@ -25,6 +25,7 @@ public class FeedbackPanel extends Composite {
         final FormPanel form = new FormPanel(mailFrame);
         form.setAction("/php/sendMail.php");
 
+        form.setMethod(FormPanel.METHOD_GET);
         form.setEncoding(FormPanel.ENCODING_URLENCODED);
 
         VerticalPanel panel = new VerticalPanel();
@@ -92,7 +93,7 @@ public class FeedbackPanel extends Composite {
 
         form.addFormHandler(new FormHandler() {
             public void onSubmitComplete(FormSubmitCompleteEvent event) {
-                //Ignore this
+                Window.alert(event.getResults());
             }
 
             public void onSubmit(FormSubmitEvent event) {
