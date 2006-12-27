@@ -20,7 +20,7 @@ public class SetupPanel extends Composite {
         panel.add(headerLabel);
 
         HTML frameHTML = new HTML("<IFRAME scrolling=\"no\" frameborder=\"0\"\n" +
-                    "                     style=\"display: block; margin-left: 5px; margin-right: 5px; width: 100%; height: 100%;\" src=\"setup.html\"></IFRAME>");
+                    "                     style=\"display: block; margin-left: 5px; margin-right: 5px; width: 100%; height: 400px;\" src=\"setup.html\"></IFRAME>");
         panel.add(frameHTML);
 
         initWidget(panel);
