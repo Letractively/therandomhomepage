@@ -5,7 +5,8 @@
 <link rel="icon" type="image/ico" href="http://www.flickr.com/favicon.ico"/>
 <meta name="author" content="Siddique Hameed"/>
 <!--
-	Last Updated: 12/18/2006
+	Last Updated: 12/27/2006
+	Change Notes: Default transition effect was made to "None"
 	Version 0.1
 -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -1088,7 +1089,10 @@ if (/WebKit/i.test(navigator.userAgent)) { // sniff
 
 <?php include 'http://www.therandomhomepage.com/js/utils.js';?>
 
-<?php include 'http://www.therandomhomepage.com/js/urchin.js';?>
+<?php include 'http://www.google-analytics.com/urchin.js';?>
+
+_uacct = "UA-941159-1";
+urchinTracker();
 </script>
 
 <script type="text/javascript">
@@ -1097,7 +1101,7 @@ var rssFeedArr = new Array();
 var prevIdx = -1;
 
 var tags = "art,colorful,travel";
-var transitionEffect = 0;
+var transitionEffect = -1; //default to "None"
 var imageClickBehaviour = 0;
 var slideshowDelay = 0;
 
@@ -1360,8 +1364,6 @@ NV_ONLOAD = function()
 	applyLightboxStyleSheet();
 	setTitle();
 	randomFlickrLoad();
-	_uacct = "UA-941159-1";
-	urchinTracker();
 }
 </script>
 </head>
@@ -1384,8 +1386,8 @@ NV_ONLOAD = function()
             <td><label>Transition effect:</label></td>
             <td>
                 <select name="transition_effect" style="vertical-align: top; padding: 0; margin: 0 0.4em;">
-                    <option value="-1">None</option>
-                    <option value="0" selected="selected">Random</option>
+                    <option value="-1" selected="selected">None</option>
+                    <option value="0">Random</option>
                     <option value="1">BlindDown</option>
                     <option value="2">Highlight</option>
                     <option value="3">Shake</option>
