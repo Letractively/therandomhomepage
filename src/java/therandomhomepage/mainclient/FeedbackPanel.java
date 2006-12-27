@@ -96,26 +96,27 @@ public class FeedbackPanel extends Composite {
 
         form.add(table);
 
-        // Add an event handler to the form.
         form.addFormHandler(new FormHandler() {
             public void onSubmitComplete(FormSubmitCompleteEvent event) {
+//                Window.alert(event.getResults());
             }
 
             public void onSubmit(FormSubmitEvent event) {
-                if (txtEmail.getText().length() == 0){
+                if (txtEmail.getText().trim().length() == 0){
                     Window.alert("Please provide your email address !");
                     event.setCancelled(true);
                     txtEmail.setFocus(true);
                 }
-                else if (txtMessage.getText().length() == 0) {
-                    Window.alert("Please provide some email contents !");
+                else if (txtMessage.getText().trim().length() == 0) {
+                    Window.alert("Please provide feedback !");
                     event.setCancelled(true);
                     txtMessage.setFocus(true);
                 }
                 table.clear();
-                table.setWidget(0,0,new HTML("<h4>Thanks for your feedback !, We really appreciate this :)</h4"));
-                //TODO: Make this center aligned in FF
+                HTML thanksHTML = new HTML("<h4>We really appreciate your feedback. Thanks a lot !</h4");
+                table.setWidget(0,0, thanksHTML);
                 DOM.setAttribute(table.getWidget(0,0).getElement(),"align","center");
+                DOM.setAttribute(table.getCellFormatter().getElement(0,0),"width","100%");
             }
         });
 
