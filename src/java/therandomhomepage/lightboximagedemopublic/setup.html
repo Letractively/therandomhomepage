@@ -11,15 +11,15 @@ In your GWT module xml (For ex. <i>KitchenSink.gwt.xml</i>) under the line <br/>
 <code>&lt;inherits name='com.google.gwt.user.User'/&gt;</code> add line <br/>
 <code>&lt;inherits name='therandomhomepage.widgets.LightboxImage'/&gt;</code>
 </li>
-<li>Please make sure that widget jar file is available in your GWT module classpath.</li>
+<li>Add widget jar to your GWT module's classpath.</li>
 </ol>
 <p>
 <b>Note:
 	No need to include javascript files in your GWT module</b><br/>
 	For ex:
 	<code>&lt;script type="text/javascript" src="js/prototype.js"&gt;&lt;/script&gt;</code><br/>
-	There are some modifications to original Lightbox JS to work in GWT and all the
-    required javascript libraries (prototype.js, effects.js & swfobject.js) & stylesheets are injected into the LightboxImage Widget module for easier plugging. Enjoy...
+	There are some modifications to the original Lightbox JS script to work in GWT and all the required javascript libraries (prototype.js, effects.js & swfobject.js) and stylesheets are bundled with LightboxImage Widget module for easier plugging.<br/> 
+    Enjoy...
 </p>
 </BODY>
 </HTML>
