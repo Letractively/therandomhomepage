@@ -21,6 +21,10 @@ public abstract class RandomWidget extends Composite implements ClickListener {
     protected static final String ERROR_MESSAGE = "Error retrieving content !. Please try later...";
     protected AbstractPreferenceMap preferenceMap;
 
+    public RandomWidget(){
+        this(null);
+    }
+
     public RandomWidget(AbstractPreferenceMap preferenceMap) {
         this.preferenceMap = preferenceMap;
         buildUI();

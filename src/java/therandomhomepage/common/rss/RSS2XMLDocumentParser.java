@@ -35,7 +35,6 @@ public class RSS2XMLDocumentParser {
                 rssItem.setLink(getNodeTextValue(item,"link"));
                 String desc = getNodeTextValue(item, "description");
                 rssItem.setDesc(desc);
-                Image snippetImage = extractImage(desc);
                 rssItem.setGuid(getNodeTextValue(item,"guid"));
                 rssItem.setMediaContentNode(getNodeByNodeName(item,"media:content"));
                 rssItem.setMediaThumbnailNode(getNodeByNodeName(item,"media:thumbnail"));
@@ -55,8 +54,6 @@ public class RSS2XMLDocumentParser {
         NodeList childNodes = node.getChildNodes();
         for (int i = 0; i < childNodes.getLength(); i++) {
             if (childNodes.item(i).getNodeName().equals(nodeName) && childNodes.item(i).getFirstChild() != null){
-//                if (nodeName.equals("description")) {
-//                }
                 return childNodes.item(i).getFirstChild().getNodeValue().trim();
             }
         }
