@@ -2,10 +2,12 @@ package therandomhomepage.mainclient;
 
 import com.google.gwt.http.client.URL;
 import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.ui.*;
 import therandomhomepage.common.HttpRequestUtil;
+import therandomhomepage.common.StringUtil;
 import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 import therandomhomepage.common.rss.RSSItem;
 import therandomhomepage.widgets.client.LightboxImage;
@@ -23,6 +25,7 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
     private LightboxImage lightbox;
     private Label randomFlickrImageTitle = new Label();
+    private int prevIdx = -1;
 
 
     protected static final String ERROR_MESSAGE = "Error retrieving content !. Please try later...";
@@ -57,8 +60,9 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
         table.getRowFormatter().addStyleName(0, "gadgetFrameTR");
         width += 10;
 
-        bodyPanel = new HTMLPanel("<div class=\"gadgetBody\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><table width=\"100%\"><tr><td width=\"90%\" id=\"randomFlickrHeader\"></td><td width=\"10%\" align=\"right\" id=\"randomFlickrControl\"></td></tr><tr><td align=\"center\" colspan=\"2\" id=\"randomFlickrImage\"></td></tr></table></div>");
+        bodyPanel = new HTMLPanel("<div class=\"gadgetBody\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><table align=\"center\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><tbody align=\"center\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><tr><td width=\"90%\" id=\"randomFlickrHeader\"></td><td width=\"10%\" align=\"right\" id=\"randomFlickrControl\"></td></tr><tr><td align=\"center\" colspan=\"2\" id=\"randomFlickrImage\"></td></tr><TR><TD style=\"height:2px;\"></TD></TR></tbody></table></div>");
         table.setWidget(1, 0, bodyPanel);
+        table.setWidget(2,0,new HTML(getAddToTable()));
     }
 
     protected void retrieveRandomItem() {
@@ -75,7 +79,7 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
 
     public String getFeedURL() {
-        return "/php/xmlProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags=colorful&format=rss_200");
+        return "/php/xmlProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags=art,colorful,travel&format=rss_200");
     }
 
     protected void displayRandomItem(List rssItems) {
@@ -94,10 +98,21 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
                 addWidgetToBodyPanel(randomFlickrImageTitle, "randomFlickrHeader");
             }
 
+            if (prevIdx > -1) {
+                Element imageElement = DOM.getChild(lightbox.getElement(), prevIdx);
+                UIObject.setVisible(imageElement, false);
+            }
+
+
             int randomIdx = Random.nextInt(rssItems.size());
-            lightbox.toggleImage(randomIdx);
-            RSSItem rssItem = (RSSItem) rssItems.get(randomIdx);
-            randomFlickrImageTitle.setText(rssItem.getTitle());
+            RSSItem randomItem = (RSSItem) rssItems.get(randomIdx);
+
+            Element imageElement = DOM.getChild(lightbox.getElement(), randomIdx);
+            DOM.setInnerHTML(imageElement, StringUtil.grep(randomItem.getDesc(), "<img", ">"));
+
+            UIObject.setVisible(imageElement, true);
+            prevIdx = randomIdx;
+            randomFlickrImageTitle.setText(randomItem.getTitle());
         }
     }
 
@@ -106,7 +121,7 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
         for (int i = 0; i < rssItems.size(); i++) {
             RSSItem rssItem = (RSSItem) rssItems.get(i);
             images[i] = rssItem.getMedia().getContent();
-            images[i].setStyleName("randomFlickrthumbnailImage");
+            images[i].setVisible(false);
         }
         return images;
     }
