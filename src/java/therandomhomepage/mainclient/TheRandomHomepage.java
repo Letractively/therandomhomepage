@@ -41,27 +41,20 @@ public class TheRandomHomepage implements EntryPoint {
 
         String randomFeedURL = "http://www.therandomhomepage.com/google/gadget/RandomFeedModule.xml";
         String randomFeedNetvibesModuleURL = "http://www.therandomhomepage.com/netvibes/modules/RandomFeed/index.php";
-        AbstractRandomGadget randomFeedGadget = new AbstractRandomGadget("Random News", randomFeedURL, randomFeedNetvibesModuleURL, 300, 300);
+        AbstractRandomGadget randomFeedGadget = new AbstractRandomGadget("Random News", randomFeedURL, randomFeedNetvibesModuleURL, 300, 350);
         flexTable.setWidget(0, 0, randomFeedGadget);
         flexTable.getCellFormatter().setVerticalAlignment(0, 0, HasVerticalAlignment.ALIGN_TOP);
         flexTable.getCellFormatter().setHorizontalAlignment(0, 0, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 0, "33%");
 
-
-
         VerticalPanel panel = new VerticalPanel();
         panel.setVerticalAlignment(HasVerticalAlignment.ALIGN_TOP);
         panel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 
-        RandomFlickrWidget randomFlickrWidget = new RandomFlickrWidget("Random Flickring","","",300,300);
+        RandomFlickrWidget randomFlickrWidget = new RandomFlickrWidget("Random Flickring","http://www.therandomhomepage.com/google/gadgets/RandomFlickr/module.xml","http://www.therandomhomepage.com/netvibes/modules/RandomFlickr/index.php",300,350);
         panel.add(randomFlickrWidget);
 
-        panel.add(new HTML("<br/>"));
-
-        String randomQuotesURL = "http://quotes4all.net/quotations.html";
-        AbstractRandomGadget randomQuotesWidget = new AbstractRandomGadget("Random Quotes", randomQuotesURL, 300, 150);
-        panel.add(randomQuotesWidget);
-        
+        panel.add(new HTML("<br/>"));        
 
         flexTable.setWidget(0, 1, panel);
         flexTable.getCellFormatter().setVerticalAlignment(0, 1, HasVerticalAlignment.ALIGN_TOP);

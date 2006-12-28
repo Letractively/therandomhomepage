@@ -23,6 +23,7 @@ a.widgetGallery:hover {
 }
 
 #randomFlickrImage {
+    height:100%;
     vertical-align: middle;
     text-align: center;
 }
