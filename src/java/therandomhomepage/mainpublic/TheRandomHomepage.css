@@ -13,19 +13,34 @@ a.helpLink {
     cursor: help;
 }
 
-a {
+a.widgetGallery {
     text-decoration: none;
     color: #000000;
 }
 
-a:hover {
+a.widgetGallery:hover {
     border-bottom: black solid 1px;
 }
 
-.randomFlickrthumbnailImage{
-   height:250px;
-   width:250px;
-   border:none; 
+#randomFlickrImage {
+    vertical-align: middle;
+    text-align: center;
+}
+
+#randomFlickrHeader {
+    font-weight: bold;
+    text-align: center;
+}
+
+#randomFlickrControl {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.randomFlickrthumbnailImage {
+    height: 250px;
+    width: 250px;
+    border: none;
 }
 
 .divBlock {

@@ -505,7 +505,9 @@
         <root url="jar://$PROJECT_DIR$/lib/widgets/TheRandomHomepageWidgets-0.1.jar!/" />
       </CLASSES>
       <JAVADOC />
-      <SOURCES />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/lib/widgets/TheRandomHomepageWidgets-0.1.jar!/" />
+      </SOURCES>
     </library>
   </component>
   <component name="uidesigner-configuration">

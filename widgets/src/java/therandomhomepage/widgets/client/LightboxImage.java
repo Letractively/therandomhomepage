@@ -24,14 +24,13 @@ import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.ui.*;
 
 /**
- * LightboxImage widget, a GWT wrapper for Lightbox JS (http://www.huddletogether.com/projects/lightbox2/).
+ * LightboxImage widget, a GWT wrapper for <a target="_new" href="http://www.huddletogether.com/projects/lightbox2/">Lightbox JS</a>.
  * It's a lightweight widget, that overlays image on top of browser window with amazing visual effects.
  * Currently supports single image, image sets, slideshow and background music playback during slideshow.
  *
  * @author Siddique Hameed
  * @version 0.1
- * @see <a target="_new" href="http://www.huddletogether.com/projects/lightbox2/">http://www.huddletogether.com/projects/lightbox2/</a>
- * //TODO: Provide LightboxImage demo link here
+ * @see <a target="_new" href="http://demo.therandomhomepage.com/widgets/LightboxImage/index.html">Demo</a>
  */
 public class LightboxImage extends Widget implements SourcesClickEvents {
 

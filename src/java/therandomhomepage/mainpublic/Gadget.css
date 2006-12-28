@@ -177,6 +177,14 @@ table.ig_tbl_line .ig_lgbluelink, table.ig_tbl_line .ig_lgbluelink:link {
     -moz-background-inline-policy: -moz-initial;
 }
 
+.gadgetBody {
+    vertical-align:top;
+    display: block;
+    border-left: 1px solid rgb( 153, 153, 153 );
+    border-right: 1px solid rgb( 153, 153, 153 );
+    border-bottom: 1px solid rgb( 153, 153, 153 );
+}
+
 .gadgetFrameTR {
     border: 1px solid rgb( 153, 153, 153 );
     border-spacing: 0;
