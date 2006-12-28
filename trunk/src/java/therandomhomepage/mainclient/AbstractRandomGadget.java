@@ -1,38 +1,46 @@
 package therandomhomepage.mainclient;
 
-import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.FlexTable;
+import com.google.gwt.user.client.ui.HTMLPanel;
+import therandomhomepage.common.RSSCache;
 
-public class AbstractRandomGadget extends HTML {
+public class AbstractRandomGadget extends Composite {
 
-    private String header;
+    protected String header;
     private String googleGadgetURL = null;
     private String netvibesModuleURL = null;
-    private int height;
-    private int width;
+    protected int height;
+    protected int width;
     private String iframeURL;
+    protected FlexTable table = new FlexTable();
+    protected HTMLPanel bodyPanel;
+    protected RSSCache cache = new RSSCache();
 
-    public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL, int width, int height) {
-        this.netvibesModuleURL = netvibesModuleURL;
+
+    public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL,int width, int height) {
         this.header = header;
         this.googleGadgetURL = googleGadgetURL;
+        this.netvibesModuleURL = netvibesModuleURL;
         this.height = height;
         this.width = width;
-        initWidget();
+        buildUI();
     }
 
     public AbstractRandomGadget(String header, String iframeURL, int width, int height) {
-        this.iframeURL = "/php/ajaxProxy.php?url="+iframeURL+"&loadedIFrameId=myIframe&rightArrows=true";
+        this.iframeURL = "/php/ajaxProxy.php?url=" + iframeURL + "&loadedIFrameId=myIframe&rightArrows=true";
         this.header = header;
         this.height = height;
         this.width = width;
-        initWidget();
+        buildUI();
     }
 
-    private String getCompleteGoogleGadgetURL(String url) {
+    protected String getCompleteGoogleGadgetURL(String url) {
         return "http://gmodules.com/ig/ifr?url=" + url + "&amp;up_moduletitle=" + header + "&amp;up_language=en&amp;synd=open&amp;w=" + width + "&amp;h=" + height + "&amp;title=&amp;lang=en&amp;country=ALL&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;";
     }
 
-    protected void initWidget() {
+    protected void buildUI() {
         StringBuffer html = new StringBuffer("<DIV class=\"divGadget\"><TABLE cellspacing=\"0\" cellpadding=\"2\" class=\"ig_reset ig_tbl_line\" align=\"center\">\n" +
                 "        <TR>\n" +
                 "          <TD class=\"tdGadgetHeader\">\n" +
@@ -54,27 +62,32 @@ public class AbstractRandomGadget extends HTML {
 
         html.append("            </DIV>\n" +
                 "          </TD>\n" +
-                "        </TR>\n"+
+                "        </TR>\n" +
                 "<TR><TD style=\"height:2px;\"></TD></TR>");
 
         if (googleGadgetURL != null && netvibesModuleURL != null) {
             html.append("        <TR>\n" +
-                    "          <TD class=\"addToTD\">\n" +
-                    "           <TABLE><TR><TD style=\"border: 0pt none ; height: 17px; \">"+
-                    "            <A href=\"http://fusion.google.com/ig/add?moduleurl=" + googleGadgetURL + "\">\n" +
-                    "              <IMG src=\"http://gmodules.com/ig/images/plus_google.gif\" style=\"border: 0pt none ; height: 17px; \"/>\n" +
-                    "            </A>" +
-                    "            </TD>"+
-                    "            <TD style=\"width:4px;\">&nbsp;</TD>"+
-                    "            <TD style=\"border: 0pt none ; width:91px; height: 17px; \">"+
-                    "            <a href=\"http://www.netvibes.com/subscribe.php?url=" + netvibesModuleURL + "&type=api\"><img border=\"0\" src=\"http://www.netvibes.com/img/add2netvibes.gif\" width=\"91\" height=\"17\" alt=\"Add to Netvibes\"/></a>" +
-                    "            </TD></TR></TABLE>"+
-                    "           </TD>" +
+                    "          <TD class=\"addToTD\">");
+            html.append(getAddToTable());
+            html.append("           </TD>" +
                     "        </TR>\n");
         }
 
         html.append("    </TABLE></DIV>");
-        setHTML(html.toString());
+        initWidget(new HTML(html.toString()));
+    }
+
+    protected String getAddToTable() {
+        return "           <TABLE><TR><TD style=\"border: 0pt none ; height: 17px; \">" +
+                "            <A href=\"http://fusion.google.com/ig/add?moduleurl=" + googleGadgetURL + "\">\n" +
+                "              <IMG src=\"http://gmodules.com/ig/images/plus_google.gif\" style=\"border: 0pt none ; height: 17px; \"/>\n" +
+                "            </A>" +
+                "            </TD>" +
+                "            <TD style=\"width:4px;\">&nbsp;</TD>" +
+                "            <TD style=\"border: 0pt none ; width:91px; height: 17px; \">" +
+                "            <a href=\"http://www.netvibes.com/subscribe.php?url=" + netvibesModuleURL + "&type=api\"><img border=\"0\" src=\"http://www.netvibes.com/img/add2netvibes.gif\" width=\"91\" height=\"17\" alt=\"Add to Netvibes\"/></a>" +
+                "            </TD></TR></TABLE>";
+
     }
 
 }

@@ -1,9 +1,11 @@
 package therandomhomepage.mainclient;
 
 import com.google.gwt.http.client.URL;
-import com.google.gwt.user.client.ui.Image;
-import therandomhomepage.common.RandomWidget;
-import therandomhomepage.common.Randomizer;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Random;
+import com.google.gwt.user.client.ResponseTextHandler;
+import com.google.gwt.user.client.ui.*;
+import therandomhomepage.common.HttpRequestUtil;
 import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 import therandomhomepage.common.rss.RSSItem;
 import therandomhomepage.widgets.client.LightboxImage;
@@ -16,10 +18,60 @@ import java.util.List;
  * Date: Aug 6, 2006
  * Time: 12:15:23 PM
  */
-public class RandomFlickrWidget extends RandomWidget {
+public class RandomFlickrWidget extends AbstractRandomGadget {
 
 
     private LightboxImage lightbox;
+    private Label randomFlickrImageTitle = new Label();
+
+
+    protected static final String ERROR_MESSAGE = "Error retrieving content !. Please try later...";
+
+
+    public RandomFlickrWidget(String header, String googleGadgetURL, String netvibesModuleURL, int width, int height) {
+        super(header, googleGadgetURL, netvibesModuleURL, width, height);
+        retrieveRandomItem();
+    }
+
+    private void addWidgetToBodyPanel(Widget widget, String id) {
+        bodyPanel.add(widget, id);
+    }
+
+    private void initTable() {
+        table.setCellSpacing(0);
+        table.setCellPadding(2);
+        DOM.setAttribute(table.getElement(), "align", "center");
+        DOM.setAttribute(table.getElement(), "valign", "top");
+        initWidget(table);
+        table.addStyleName("ig_reset");
+        table.addStyleName("ig_tbl_line");
+    }
+
+
+    protected void buildUI() {
+        initTable();
+        table.getCellFormatter().setStyleName(0, 0, "tdGadgetHeader");
+        String headerHTML = "<DIV title=\"Click on the right arrows(&gt;&gt;) to see next random item.\" class=\"gadgetHeader\">&nbsp;\n" + header + "</div>";
+        table.setHTML(0, 0, headerHTML);
+
+        table.getRowFormatter().addStyleName(0, "gadgetFrameTR");
+        width += 10;
+
+        bodyPanel = new HTMLPanel("<div class=\"gadgetBody\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><table width=\"100%\"><tr><td width=\"90%\" id=\"randomFlickrHeader\"></td><td width=\"10%\" align=\"right\" id=\"randomFlickrControl\"></td></tr><tr><td align=\"center\" colspan=\"2\" id=\"randomFlickrImage\"></td></tr></table></div>");
+        table.setWidget(1, 0, bodyPanel);
+    }
+
+    protected void retrieveRandomItem() {
+        String url = getFeedURL();
+        if (cache.getFromCache(url) == null) {
+            if (!HttpRequestUtil.sendAsyncGetRequest(url, new FeedResponseHandler(url))) {
+                showError();
+            }
+        } else {
+            List itemList = cache.getFromCache(url);
+            displayRandomItem(itemList);
+        }
+    }
 
 
     public String getFeedURL() {
@@ -29,12 +81,23 @@ public class RandomFlickrWidget extends RandomWidget {
     protected void displayRandomItem(List rssItems) {
         if (rssItems != null && rssItems.size() > 0) {
             if (lightbox == null) {
-                lightbox = new LightboxImage(getImages(rssItems));
-                setContent(lightbox);
+                Image[] images = getImages(rssItems);
+                lightbox = new LightboxImage(images);
+                addWidgetToBodyPanel(lightbox, "randomFlickrImage");
+                Label arrow = new Label(">>");
+                arrow.addClickListener(new ClickListener() {
+                    public void onClick(Widget sender) {
+                        retrieveRandomItem();
+                    }
+                });
+                addWidgetToBodyPanel(arrow, "randomFlickrControl");
+                addWidgetToBodyPanel(randomFlickrImageTitle, "randomFlickrHeader");
             }
 
-            int randomIdx = Randomizer.getRandomIdx(rssItems);
+            int randomIdx = Random.nextInt(rssItems.size());
             lightbox.toggleImage(randomIdx);
+            RSSItem rssItem = (RSSItem) rssItems.get(randomIdx);
+            randomFlickrImageTitle.setText(rssItem.getTitle());
         }
     }
 
@@ -53,5 +116,25 @@ public class RandomFlickrWidget extends RandomWidget {
         List rssItems = RSS2XMLDocumentParser.parse(responseText);
         cache.addToCache(url, rssItems);
         displayRandomItem(rssItems);
+    }
+
+    protected void showError() {
+        addWidgetToBodyPanel(new Label(ERROR_MESSAGE), "randomFlickrImage");
+    }
+
+
+    protected class FeedResponseHandler implements ResponseTextHandler {
+        private String url;
+
+        public FeedResponseHandler(String url) {
+            this.url = url;
+        }
+
+        public void onCompletion(String responseText) {
+            if (!HttpRequestUtil.isErrorResponse(responseText)) {
+                handleResponse(url, responseText);
+            }
+        }
+
     }
 }
