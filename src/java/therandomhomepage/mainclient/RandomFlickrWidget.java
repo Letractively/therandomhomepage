@@ -1,10 +1,7 @@
 package therandomhomepage.mainclient;
 
 import com.google.gwt.http.client.URL;
-import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Element;
-import com.google.gwt.user.client.Random;
-import com.google.gwt.user.client.ResponseTextHandler;
+import com.google.gwt.user.client.*;
 import com.google.gwt.user.client.ui.*;
 import therandomhomepage.common.HttpRequestUtil;
 import therandomhomepage.common.StringUtil;
@@ -27,6 +24,7 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
     private LightboxImage lightbox;
     private Label randomFlickrImageTitle = new Label();
     private int prevIdx = -1;
+    private RSSItem rssItems[] = null;
 
     private String[] flickrTags = {"art,colorful","travel,autumn"};
 
@@ -69,13 +67,12 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
     protected void retrieveRandomItem() {
         String url = getFeedURL();
-        if (cache.getFromCache(url) == null) {
+        if (rssItems == null) {
             if (!HttpRequestUtil.sendAsyncGetRequest(url, new FeedResponseHandler(url))) {
                 showError();
             }
         } else {
-            List itemList = cache.getFromCache(url);
-            displayRandomItem(itemList);
+            displayRandomItem(rssItems);
         }
     }
 
@@ -85,8 +82,8 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
         return "/php/xmlProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags="+flickrTag+"&format=rss_200");
     }
 
-    protected void displayRandomItem(List rssItems) {
-        if (rssItems != null && rssItems.size() > 0) {
+    protected void displayRandomItem(RSSItem[] rssItems) {
+        if (rssItems != null && rssItems.length > 0) {
             if (lightbox == null) {
                 Image[] images = getImages(rssItems);
                 lightbox = new LightboxImage(images);
@@ -107,8 +104,8 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
             }
 
 
-            int randomIdx = Random.nextInt(rssItems.size());
-            RSSItem randomItem = (RSSItem) rssItems.get(randomIdx);
+            int randomIdx = Random.nextInt(rssItems.length);
+            RSSItem randomItem = (RSSItem) rssItems[randomIdx];
 
             Element imageElement = DOM.getChild(lightbox.getElement(), randomIdx);
             DOM.setInnerHTML(imageElement, StringUtil.grep(randomItem.getDesc(), "<img", ">"));
@@ -119,10 +116,10 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
         }
     }
 
-    private Image[] getImages(List rssItems) {
-        Image[] images = new Image[rssItems.size()];
-        for (int i = 0; i < rssItems.size(); i++) {
-            RSSItem rssItem = (RSSItem) rssItems.get(i);
+    private Image[] getImages(RSSItem rssItems[]) {
+        Image[] images = new Image[rssItems.length];
+        for (int i = 0; i < rssItems.length; i++) {
+            RSSItem rssItem = (RSSItem) rssItems[i];
             images[i] = rssItem.getMedia().getContent();
             images[i].setVisible(false);
         }
@@ -131,8 +128,7 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
 
     protected void handleResponse(String url, String responseText) {
-        List rssItems = RSS2XMLDocumentParser.parse(responseText);
-        cache.addToCache(url, rssItems);
+        rssItems = RSS2XMLDocumentParser.parseItemsAsArray(responseText);
         displayRandomItem(rssItems);
     }
 
