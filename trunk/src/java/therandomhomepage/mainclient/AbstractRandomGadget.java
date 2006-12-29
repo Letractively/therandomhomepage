@@ -39,6 +39,7 @@ public class AbstractRandomGadget extends Composite {
         return "http://gmodules.com/ig/ifr?url=" + url + "&amp;up_moduletitle=" + header + "&amp;up_language=en&amp;synd=open&amp;w=" + width + "&amp;h=" + height + "&amp;title=&amp;lang=en&amp;country=ALL&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;";
     }
 
+    //TODO: Convert this to HTMLPanel
     protected void buildUI() {
         StringBuffer html = new StringBuffer("<DIV class=\"divGadget\"><TABLE cellspacing=\"0\" cellpadding=\"2\" class=\"ig_reset ig_tbl_line\" align=\"center\">\n" +
                 "        <TR>\n" +
