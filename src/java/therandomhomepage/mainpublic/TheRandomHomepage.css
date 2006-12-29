@@ -23,7 +23,7 @@ a.widgetGallery:hover {
 }
 
 #randomFlickrImage {
-    height:100%;
+    height: 100%;
     vertical-align: middle;
     text-align: center;
 }
@@ -34,8 +34,16 @@ a.widgetGallery:hover {
 }
 
 #randomFlickrControl {
+    font-family: Arial, sans-serif;
     font-weight: bold;
+    color: darkblue;
     cursor: pointer;
+}
+
+b.thanks {
+    font-size:0.9em;
+    color:cadetblue;
+    text-align:center;
 }
 
 .randomFlickrthumbnailImage {
@@ -52,7 +60,7 @@ a.widgetGallery:hover {
 
 .feedbackForm {
     width: 50%;
-    height: 350px;
+    height: 370px;
     display: block;
     margin-left: 5px;
     margin-right: 5px;

@@ -62,7 +62,7 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
         bodyPanel = new HTMLPanel("<div class=\"gadgetBody\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><table align=\"center\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><tbody align=\"center\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><tr><td width=\"90%\" id=\"randomFlickrHeader\"></td><td width=\"10%\" align=\"right\" id=\"randomFlickrControl\"></td></tr><tr><td align=\"center\" colspan=\"2\" id=\"randomFlickrImage\"></td></tr><TR><TD style=\"height:2px;\"></TD></TR></tbody></table></div>");
         table.setWidget(1, 0, bodyPanel);
-        table.setWidget(2,0,new HTML(getAddToTable()));
+        table.setWidget(2, 0, new HTML(getAddToTable()));
     }
 
     protected void retrieveRandomItem() {
