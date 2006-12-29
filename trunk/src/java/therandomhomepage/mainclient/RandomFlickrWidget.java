@@ -8,6 +8,7 @@ import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.ui.*;
 import therandomhomepage.common.HttpRequestUtil;
 import therandomhomepage.common.StringUtil;
+import therandomhomepage.common.Randomizer;
 import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 import therandomhomepage.common.rss.RSSItem;
 import therandomhomepage.widgets.client.LightboxImage;
@@ -27,6 +28,7 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
     private Label randomFlickrImageTitle = new Label();
     private int prevIdx = -1;
 
+    private String[] flickrTags = {"art,colorful","travel,autumn"};
 
     protected static final String ERROR_MESSAGE = "Error retrieving content !. Please try later...";
 
@@ -79,7 +81,8 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
 
     public String getFeedURL() {
-        return "/php/xmlProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags=art,colorful,travel&format=rss_200");
+        String flickrTag = flickrTags[Randomizer.getRandomNo(flickrTags.length)];
+        return "/php/xmlProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags="+flickrTag+"&format=rss_200");
     }
 
     protected void displayRandomItem(List rssItems) {
