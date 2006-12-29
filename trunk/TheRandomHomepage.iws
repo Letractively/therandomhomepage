@@ -18,56 +18,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\swfobject.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\A578575E1A74F70C99E6696052B78DDF.cache.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\TheRandomHomepageWidgets-0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\prev.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\prototype.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\setup.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\tree_open.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\closelabel.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\image.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\image-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\image-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\close.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\545E28DE30F259D43D42D8750946EE80.cache.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\LightboxImageDemo.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\lightbox.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\545E28DE30F259D43D42D8750946EE80.cache.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\lightbox_s.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\music.mp3" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\image-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\gwt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\tree_white.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\nextlabel.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\therandomhomepage.LightboxImageDemo.nocache.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\close1.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\07F69EFD826AF019DC21D7D05C0ED712.cache.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\A578575E1A74F70C99E6696052B78DDF.cache.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Developers.html" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Developers.html" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\C58EE8691D76EA3849C2535E6FB56222.cache.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\start.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\next.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\history.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\thumb-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\LightboxImageDemo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/LightboxImageWidget" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/tree_white.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/image-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/thumb-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/CC9662425BFF660A02D460384BD93DF1.cache.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/playerMini.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/stop.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/3D41C6A82E62EE72B026380930058B33.cache.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/closelabel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/swfobject.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/prevlabel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/close1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/music.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/effects.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/nextlabel.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/CC9662425BFF660A02D460384BD93DF1.cache.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\playerMini.swf" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\prevlabel.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\tree_closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\stop.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\07F69EFD826AF019DC21D7D05C0ED712.cache.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\image-2.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/widgets/TheRandomHomepageWidgets-0.1.jar" afterPath="$PROJECT_DIR$/lib/widgets/TheRandomHomepageWidgets-0.1.jar" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\C58EE8691D76EA3849C2535E6FB56222.cache.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\sid\projects\TheRandomHomepage\modules\LightboxImageWidget\lightbox\effects.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/LightboxImageDemo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/LightboxImageDemo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/setup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/0FEFCFEBBA9E0DE9DC2849574649FCAC.cache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/history.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/prev.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/0FEFCFEBBA9E0DE9DC2849574649FCAC.cache.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/close.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/3D41C6A82E62EE72B026380930058B33.cache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/TheRandomHomepageWidgets-0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/lightbox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/image.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/1F5A5C1ACBE40E1BB57EF12A9452C7C4.cache.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/next.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/image-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/therandomhomepage.LightboxImageDemo.nocache.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/start.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/tree_open.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/tree_closed.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/image-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/image-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/prototype.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/gwt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/lightbox_s.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/lightbox/blank.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/index.html.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/image-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/LightboxImageDemo/1F5A5C1ACBE40E1BB57EF12A9452C7C4.cache.xml" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -366,28 +363,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
