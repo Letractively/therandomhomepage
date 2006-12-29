@@ -16,7 +16,6 @@ public class AbstractRandomGadget extends Composite {
     private String iframeURL;
     protected FlexTable table = new FlexTable();
     protected HTMLPanel bodyPanel;
-    protected RSSCache cache = new RSSCache();
 
 
     public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL,int width, int height) {

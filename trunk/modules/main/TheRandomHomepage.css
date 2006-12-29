@@ -1,0 +1,232 @@
+body {
+    background: repeat url( ./images/background.gif );
+    color: black;
+    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+    font-size: small;
+    margin: 0px;
+}
+
+a.helpLink {
+    border-bottom: #333 dotted 1px;
+    text-decoration: none;
+    color: #000000;
+    cursor: help;
+}
+
+a.widgetGallery {
+    text-decoration: none;
+    color: #000000;
+}
+
+a.widgetGallery:hover {
+    border-bottom: black solid 1px;
+}
+
+#randomFlickrImage {
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#randomFlickrHeader {
+    font-weight: bold;
+    text-align: center;
+}
+
+#randomFlickrControl {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: darkblue;
+    cursor: pointer;
+}
+
+b.thanks {
+    font-size:0.9em;
+    color:cadetblue;
+    text-align:center;
+}
+
+.randomFlickrthumbnailImage {
+    height: 250px;
+    width: 250px;
+    border: none;
+}
+
+.divBlock {
+    border: 2px solid #EEE;
+    background: #FFF;
+    padding: 12px 18px 18px 18px;
+}
+
+.feedbackForm {
+    width: 50%;
+    height: 370px;
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.footerMessage {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.randomWidgetHeader {
+    background-image: url( ./images/gray_gradient.gif );
+    background-repeat: repeat-x;
+    font-weight: bold;
+}
+
+.randomWidgetHeader-arrow {
+    cursor: pointer;
+}
+
+.footerPanel {
+    text-align: center;
+    width: 35%;
+}
+
+.footerMenuBar {
+    cursor: default;
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: bold;
+    border-bottom: 1px solid #DFDFDF;
+    border-top: 1px solid #DFDFDF;
+}
+
+.footerMenuItem {
+    font-size: 70%;
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footerMenuItemSelected {
+    color: black;
+    background-color: #F3F3F3;
+    border-bottom: 1px solid black;
+    padding-bottom: 0;
+}
+
+.gwt-DialogBox {
+    border: 2px solid #AAAAAA;
+    background-color: white;
+}
+
+.gwt-DialogBox .Caption {
+    background-image: url( images/gray_gradient.gif );
+    background-repeat: repeat-x;
+    padding: 4px;
+    padding-bottom: 8px;
+    font-weight: bold;
+    cursor: default;
+}
+
+.gwt-MenuBar {
+    background-color: #C3D9FF;
+    cursor: default;
+}
+
+.gwt-MenuItem {
+    font-size: 80%;
+    margin: 1px;
+    cursor: default;
+}
+
+.gwt-MenuItem-selected {
+    background-color: #E8EEF7;
+}
+
+.gwt-Tree {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.gwt-Tree .gwt-TreeItem {
+    font-size: 80%;
+    cursor: default;
+}
+
+.gwt-Tree .gwt-TreeItem-selected {
+    background-color: #C3D9FF;
+}
+
+.gwt-StackPanel {
+    background-color: white;
+    border: 1px solid #AAAAAA;
+    width: 15em;
+}
+
+.gwt-StackPanel .gwt-StackPanelItem {
+    background-image: url( images/gray_gradient.gif );
+    background-repeat: repeat-x;
+    background-color: #EEEEEE;
+    cursor: pointer;
+}
+
+.gwt-StackPanel .gwt-StackPanelItem-selected {
+}
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+#underlinemenu {
+    margin: 5px;
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+#underlinemenu ul {
+    margin: 5px;
+    margin-bottom: 1em;
+    padding-left: 5px;
+    float: left;
+    font-weight: bold;
+    width: 100%;
+    border: 1px solid #DFDFDF;
+    border-width: 1px 0;
+}
+
+* html #underlinemenu ul {
+/*IE only rule. Delete extra margin-bottom*/
+    margin-bottom: 0;
+}
+
+#underlinemenu ul li {
+    display: inline;
+}
+
+#underlinemenu ul li a {
+    float: left;
+    color: gray;
+    font-weight: bold;
+    padding: 2px 6px 4px 6px;
+    text-decoration: none;
+    background: white url( menudivide.gif ) top right repeat-y;
+}
+
+#underlinemenu ul li a:hover {
+    color: black;
+    background-color: #F3F3F3;
+    border-bottom: 4px solid black;
+    padding-bottom: 0;
+}
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/
+
+html, body{
+scrollbar-face-color:#EBF5FF;
+scrollbar-base-color:#EBF5FF;
+scrollbar-arrow-color:black;
+scrollbar-track-color:#F3F3F3;
+scrollbar-shadow-color:#EBF5FF;
+scrollbar-highlight-color:#EBF5FF;
+scrollbar-3dlight-color:#78AAFF;
+scrollbar-darkshadow-Color:#78AAFF;
+}
+
+*/
