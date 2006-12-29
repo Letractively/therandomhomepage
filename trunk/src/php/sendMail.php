@@ -9,6 +9,6 @@
 	mail($to_email, $subject, $message,
      "From: $from_name<$from_email>\r\n" .
      "Reply-To: $from_name<$from_email>\r\n");
-    header('Content-type: text/plain');
+    header('Content-Type: text/plain; charset=utf-8');
 	echo "Success";
 ?>
