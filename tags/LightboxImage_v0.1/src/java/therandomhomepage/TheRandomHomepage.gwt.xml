@@ -1,0 +1,22 @@
+<module>
+    <inherits name='therandomhomepage.Common'/>
+    <inherits name='therandomhomepage.widgets.LightboxImage'/>
+
+    <source path="mainclient"/>
+    <public path="mainpublic"/>
+    <entry-point class='therandomhomepage.mainclient.TheRandomHomepage'/>
+
+
+    <stylesheet src="TheRandomHomepage.css"/>
+    <stylesheet src="Gadget.css"/>
+
+
+    <servlet path="/php/GoogleGadget.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+    <servlet path="/php/GetRandomFeed.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+    <servlet path="/php/GetRandomNewsfeed.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+    <servlet path="/php/GetRandomRecipe.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+    <servlet path="/php/Redirect.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+    <servlet path="/php/ajaxProxy.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+    <servlet path="/php/sendMail.php" class="therandomhomepage.server.TheRandomHomepageProxyServlet"/>
+    <servlet path="/php/xmlProxy.php" class="therandomhomepage.server.TheRandomHomepageProxyXMLServlet"/>
+</module>

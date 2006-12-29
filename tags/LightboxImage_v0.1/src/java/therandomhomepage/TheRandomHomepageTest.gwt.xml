@@ -1,0 +1,18 @@
+<module>
+
+    <inherits name="com.google.gwt.junit.JUnit"/>
+    <inherits name='therandomhomepage.Common'/>
+
+    <inherits name="therandomhomepage.TheRandomHomepage"/>
+    <inherits name="therandomhomepage.RandomFlickr"/>
+
+    <!-- Include client-side source we might like to test -->
+    <source path="mainclient"/>
+    <source path="randomflickrclient"/>
+    <!-- Include client-side source for the test cases -->
+    <source path="test"/>
+
+    <public path="testpublic"/>
+
+    <servlet path='/readfile' class='therandomhomepage.server.FileReaderServlet'/>
+</module>

@@ -1,0 +1,30 @@
+body {
+	background-color: white;
+	color: black;
+	font-family: Arial, sans-serif;
+	font-size: small;
+	margin: 0px;
+	/*margin-top: 3px;*/
+}
+.randomWidgetHeader-arrow{
+  cursor: pointer;
+  color: darkblue;
+  font-weight:bold;
+}
+
+.randomWidgetHeader-StartStopControl{
+  cursor: pointer;
+  border:none;
+}
+
+.randomWidgetHeader-errorMessage{
+  font-style:italic;
+}
+
+a {
+	color: darkblue;
+}
+
+a:visited {
+	color: darkblue;
+}

@@ -1,0 +1,187 @@
+==================== GWT Widget Library 0.1.3 ====================
+
+  * Pagination tools for tables (Joe Toth)
+    http://jroller.com/page/weazelb0y?entry=contributed_pagination_to_gwt_widget
+  * TinyMCEEditor wrapper (Joe Toth)
+  * NumberFormat utility (Jason Essington)
+  * Effect.toggle() (Jason Essington)
+  
+==================== GWT Widget Library 0.1.2 ====================
+
+  * Patch GWTSpringController for missing interface (George Georgovassilis)
+  * Patch LightBox for browser resize issue (Jason Paignigiannes)
+  * Patch LightBox for GWT 1.1.10 transparancy issue in IE (Robert Hanson)
+  * New constructors for CalendarPanel which take a date (Robert Hanson)
+  * New methods for CalendarPanel to set current month (Ilia Pritzker)
+  * Depricated GWTSpringController, it is now part of the GWT Server Library
+  
+==================== GWT Widget Library 0.1.1 ====================
+
+  * Added LightBox component (Brian Glick)
+  * Added ProgressBar component (Bjarne Matzen)
+
+  * Patch SimpleDateFormat for incorrect month formatting (Alex Bahlai)
+  * Patch Effect for incorrect moveBy signature (Robert Hanson)
+  * Patch TMouseListenerCollection for erronous exceptions (Robert Light)
+
+
+==================== GWT Widget Library 0.1.0 ====================
+
+  This version is a compatibility release to make the library
+  compatibile with GWT 1.1.0.  The version number jumped up
+  to 0.1.0 to match the jump made by GWT, and signify
+  compatibility with that release.
+
+  FormPanel
+    * return type for FormPanel.add to void from boolean
+    * depricated
+
+  FileUploadField
+    * depricated
+
+  SVGContainerBase
+    * Minor change, does not affect API
+
+
+==================== GWT Widget Library 0.0.8 ====================
+
+  * Added SimpleDateFormat (Jason Essington)
+  
+  * Added CookieUtils (Brian Glick)
+
+  * Added TFlexTable to fix removeRow() bug (Iancu Mihai)
+    
+  * Fixed GWTSpringController for NPE in hosted-mode (George Georgovassilis)
+
+
+==================== GWT Widget Library 0.0.7 ====================
+
+  * Added widget for Google AJAX Search API (Adam Tacy)
+
+  * Added callbacks for Scriptaculous events [1524442] (George Georgovassilis)
+
+  * Added GWTSpringController (George Georgovassilis)
+
+  * Added CalendarPanel/CalendarFactory widget (Robert Hanson)
+
+  * Added SVGText widget (Robert Hanson)
+  
+  * Added TGrid widget (Robert Hanson)
+
+  * Scriptaculous bug fix for Safari [1524683] (Jason Essington)
+
+  * Allow cancelling of EditableLabel [1518134] (Adam Tacy)
+
+
+==================== GWT Widget Library 0.0.6 ====================
+
+  * Added EditableLabel widget.  Many thanks to Adam Tacy for this
+  
+  * Fixed FormPanel with regard to enctype [1505586]. Thanks to Matt Gamble.
+
+  * Added PopupCalcPanel, SimpleCalcPanel, and CalcEngine.
+  
+  
+==================== GWT Widget Library 0.0.5 ====================
+
+   * Added README with instructions for using the distribution (Eugine Levitov)
+
+   * Added SVGPanel and basic shapes
+   
+   * Added JSCalendar (Aaron Watkins)
+
+   * Changed to the Apache 2.0 License
+
+
+==================== GWT Widget Library 0.0.4 ====================
+
+New Packages:
+
+    * org.gwtwidgets.client.temp
+
+This is a package for temporary classes meant to temporarily fix issues 
+with GWT components. It is expected that these classes will be removed 
+at some point with little warning.
+
+New Classes:
+
+    * JsGraphicsPanel - A wrapper for Walter Zorn's JsGraphics library. 
+      Used to lines and shapes, very high browser compatability.
+
+    * Coords - A simple x/y coordinate container, to be extended later.
+
+    * TMouseListenerCollection - Changes the behaviour of the GWT mouse 
+      listener collection be changing the X and Y values returned by 
+      the events onMouseDown, onMouseUp, and onMouseMove. The X and Y 
+      coordinates return the position relative to the top-left corner 
+      of the panel.
+
+    * TFocusPanel - The same as GWT FocusPanel, except that it uses 
+      TMouseListerCollection handling mouse events.
+
+    * ArrayUtils - The start if a collection of new utilities. Initial 
+      methods includes toJsArray(double[]), toJsArray(int[]), and 
+      toJsArray(Object[]).
+
+    * WindowUtils - The start if a collection of new utilities. Includes 
+      the method getLocation(), to get a Location object reflecting the 
+      URL of the page. See Location below.
+
+    * Location - Similar to the window.location JavaScript object. 
+      Returns individual parts of the URL like getHost() and getPort(). 
+      Also parses the query string, allowing access to paremeters by name 
+      using getParameter().
+
+
+Changes:
+
+    * OptionList - Added indexOfValue(String) (thanks to Aaron Watkins)
+
+    * Effect - Added highlight(widget, startColor, endColor, duration)
+
+    * PNGImageImpl - New PNGImage will now set the width and height of 
+      the image tag. This allows for the use of spacers and such, where 
+      you need to stretch the image to a specific size.
+
+    * WBuilder - replaceElement() fixed. Caused problems when replacing 
+      a widget with another widget that wasn't already attached to the 
+      RootPanel.
+
+    * WPanel - Changed WIDGET_TYPE value from the erroneous "hyperlink' 
+      to "panel".
+    
+
+==================== GWT Widget Library 0.0.3 ====================
+
+    * Major package reorganization
+
+    * WHyperlink - Added getHref()
+
+    * New Classes
+          o WTextBox (John Menke)
+          o OptionList (Jack Tang)
+          o FormPanel
+          o FileUploadField
+          o SearchUtils
+          
+
+==================== GWT Widget Library 0.0.2 ====================
+
+   * Wrap existing HTML elements as widgets. Support for hyperlinks, 
+     images, buttons, and panels.
+
+   * Replace existing elements and widgets on the page with other widgets.
+
+   * PNGImage widget, with support for transparancy in IE5.5 and IE6.
+
+   * Color and BorderStyle constants for setting styles. Currently
+     used in the new ImageButton widget.
+
+   * ImageButton widget designed for use in tool bars. Allows for 
+     creation of buttons individually, or with the help of the 
+     ImageButtonFactory.
+
+
+==================== GWT Widget Library 0.0.1 ====================
+
+   * Scriptaculous Effect Wrapper

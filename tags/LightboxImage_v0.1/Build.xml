@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="TheRandomHomepage" default="init" basedir=".">
+
+    <property file="${user.home}/user.properties"/>
+
+    <property name="project.url" value="http://www.TheRandomHomepage.com"/>
+    <property name="lib.dir" value="lib"/>
+
+    <property name="build.dir" value="./build"/>
+    <property name="backup.dir" value="${build.dir}/backups"/>
+
+    <property name="widgets.build.dir" value="${build.dir}/widgets"/>
+    <property name="widgets.source.dir" value="widgets/src/java"/>
+    <property name="widgets.lib.prefix" value="${ant.project.name}Widgets"/>
+    <property name="widgets.lib.version" value="0.1"/>
+    <property name="widgets.lib.name" value="${widgets.lib.prefix}-${widgets.lib.version}.jar"/>
+    <property name="widgets.lib.dir" value="${lib.dir}/widgets"/>
+
+
+    <path id="project.classpath">
+		<pathelement location="${widgets.source.dir}" />
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+
+    <defaultexcludes add="**/out/**"/>
+    <defaultexcludes add="**/tomcat/**"/>
+    <defaultexcludes add="**/.gwt-cache/**"/>
+    <defaultexcludes add="**/.svn"/>
+    <defaultexcludes add="**/.svn/**"/>
+    <defaultexcludes add="**/_svn"/>
+    <defaultexcludes add="**/_svn/**"/>
+
+    <tstamp>
+        <format property="build.time" pattern="MMMM-dd-yyyy-HH-mm"/>
+        <format property="build.date" pattern="MMMM-dd-yyyy"/>
+    </tstamp>
+
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+    <target name="init.backup.dirs" depends="init">
+        <mkdir dir="${backup.dir}"/>
+    </target>
+
+    <target name="init.widget.dirs" depends="init">
+        <mkdir dir="${widgets.build.dir}"/>
+        <mkdir dir="${widgets.lib.dir}"/>
+    </target>
+
+
+    <target name="clean">
+        <delete dir="${backup.dir}"/>
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="backup.website" depends="clean,init.backup.dirs">
+        <echo>Backing up ${ftp_host}...</echo>
+        <ftp action="get"
+             server="${ftp_host}"
+             userid="${user_id}"
+             password="${password}">
+            <fileset dir="${backup.dir}">
+                <include name="**/*"/>
+                <exclude name="**/cache/**"/>
+                <exclude name="**/_vti_cnf/**"/>
+                <exclude name="**/stats/**"/>
+            </fileset>
+        </ftp>
+        <property name="backupFile" value="${build.dir}/${ftp_host}-${build.time}.jar"/>
+        <jar destfile="${backupFile}"
+             basedir="${backup.dir}"
+             includes="**"
+                />
+        <mail
+                mailhost="${backup_mail_host}"
+                mailport="${backup_mail_port}"
+                from="${backup_mail_user}"
+                tolist="${backup_mail_user}"
+                user="${backup_mail_user}"
+                password="${backup_mail_password}"
+                ssl="on"
+                encoding="mime"
+                subject="Backup of ${ftp_host} since ${build.time}"
+                message="Backup of ${ftp_host} since ${build.time}"
+                files="${backupFile}"/>
+        <delete file="${backupFile}"/>
+    </target>
+
+    <target name="backup.workspace" depends="clean,init.backup.dirs">
+        <echo>Backing up workspace...</echo>
+        <property name="backupFile" value="${build.dir}/${ant.project.name}-${build.time}.jar"/>
+        <jar destfile="${backupFile}"
+             basedir="."
+             includes="**" excludes="**/bin/**,**/build/**"
+                />
+        <mail
+                mailhost="${backup_mail_host}"
+                mailport="${backup_mail_port}"
+                from="${backup_mail_user}"
+                tolist="${backup_mail_user}"
+                user="${backup_mail_user}"
+                password="${backup_mail_password}"
+                ssl="on"
+                encoding="mime"
+                subject="Backup of ${ant.project.name} since ${build.time}"
+                message="Backup of ${ant.project.name} since ${build.time}"
+                files="${backupFile}"/>
+        <delete file="${backupFile}"/>
+    </target>
+
+    <target name="backup.userproperties" depends="clean,init.backup.dirs">
+        <copyfile src="${user.home}/user.properties" dest="${backup.dir}/user.properties"/>
+        <echo>Backing up user.properties...</echo>
+        <mail
+                mailhost="${backup_mail_host}"
+                mailport="${backup_mail_port}"
+                from="${backup_mail_user}"
+                tolist="${backup_mail_user}"
+                user="${backup_mail_user}"
+                password="${backup_mail_password}"
+                ssl="on"
+                encoding="mime"
+                subject="Backup of user properties"
+                message="Backup of user properties"
+                files="user.properties"/>
+    </target>
+
+    <target name="build.widgetslibrary" depends="clean,init.widget.dirs">
+        <echo>Building widget library from source path ${widgets.source.dir}</echo>
+        <javac srcdir="${widgets.source.dir}" destdir="${widgets.build.dir}" debug="on" debuglevel="lines,vars,source" classpathref="project.classpath">
+            <classpath refid="project.classpath"/>
+        </javac>
+        <copy todir="${widgets.build.dir}">
+          <fileset dir="${widgets.source.dir}">
+            <include name="**/public/**"/>
+            <include name="**/*.java"/>
+            <include name="**/*.gwt.xml"/>
+            <include name="**/COPYING"/>
+            <type type="file"/>
+          </fileset>
+        </copy>
+
+        <jar destfile="${widgets.build.dir}/${widgets.lib.name}" basedir="${widgets.build.dir}">
+            <manifest>
+              <attribute name="Built-By" value="Siddique Hameed"/>
+              <attribute name="Implementation-Title" value="${ant.project.name}"/>
+              <attribute name="Implementation-Vendor" value="Siddique Hameed"/>
+              <attribute name="Implementation-Version" value="${widgets.lib.version}"/>
+              <attribute name="Ant-Version" value="${ant.version}"/>
+              <attribute name="Implementation-URL" value="${project.url}"/>
+            </manifest>
+          </jar>
+    </target>
+
+    <target name="deploy.widgetslibrary" depends="build.widgetslibrary">
+        <echo>Deploying widget library ${widgets.build.dir}/${widgets.lib.name} to ${widgets.lib.dir}</echo>
+        <copy todir="${widgets.lib.dir}" file="${widgets.build.dir}/${widgets.lib.name}"/>
+    </target>
+
+
+</project>
