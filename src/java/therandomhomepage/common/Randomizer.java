@@ -26,4 +26,8 @@ public class Randomizer {
         }
         return -1;
     }
+
+    public static int getRandomNo(int upperBound){
+        return Random.nextInt(upperBound);        
+    }
 }
