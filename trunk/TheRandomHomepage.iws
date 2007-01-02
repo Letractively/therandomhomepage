@@ -18,67 +18,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/images/bigshadow.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/swfobject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/gwt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/playerMini.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/tree_white.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/prev.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/6D19D87C454075CEB556C4D1D4B8742C.cache.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/images" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/images/gray_gradient.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/blank.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/style/gwl-progressBar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSS2XMLDocumentParser.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSS2XMLDocumentParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/history.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/closelabel.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/images/blue_gradient.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/AboutUs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/65667CB54CFAB2BA142B12D31ED698DF.cache.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/C500FB98E83CBD648FD5EC1768A7E7AB.cache.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/images/desc.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/stop.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/C500FB98E83CBD648FD5EC1768A7E7AB.cache.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/TheRandomHomepage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/TheRandomHomepage.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/tree_closed.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/next.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/close.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/style/gwl-calcPanel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/images/background.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/8DD22DA5C95F73B881DF82D1DA1DE660.cache.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/8DD22DA5C95F73B881DF82D1DA1DE660.cache.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/images/asc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/menudivide.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/prevlabel.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/therandomhomepage.TheRandomHomepage.nocache.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/Developers.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/style/gwl-editableLabel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/effects.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/google/gadgets/Random Wikipedia Article/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.ipr" afterPath="$PROJECT_DIR$/TheRandomHomepage.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/images/logos/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/6D19D87C454075CEB556C4D1D4B8742C.cache.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/65667CB54CFAB2BA142B12D31ED698DF.cache.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/start.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/lightbox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/nextlabel.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/images/lightbox.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/lightbox_s.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/RandomFlickrWidget.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/RandomFlickrWidget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/thumb-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/prototype.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/tree_open.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/images/logos" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/Gadget.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/style" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/main/lightbox/close1.gif" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -220,19 +162,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TheRandomHomepage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java">
+      <file leaf-file-name="Build.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="178" selection-end="178" vertical-scroll-proportion="0.03219697">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomFlickrWidget.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/RandomFlickrWidget.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="0" selection-start="4516" selection-end="4516" vertical-scroll-proportion="1.3844697">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -244,7 +177,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="33" selection-start="661" selection-end="661" vertical-scroll-proportion="0.6891892">
+            <state line="21" column="33" selection-start="661" selection-end="661" vertical-scroll-proportion="0.4654498">
               <folding />
             </state>
           </provider>
@@ -256,7 +189,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="8" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.70974153">
+            <state line="21" column="8" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.4654498">
               <folding />
             </state>
           </provider>
@@ -268,7 +201,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.27037773">
+            <state line="8" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.1773142">
               <folding />
             </state>
           </provider>
@@ -277,7 +210,7 @@
       <file leaf-file-name="FeedbackPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/FeedbackPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="2695" selection-end="2695" vertical-scroll-proportion="2.7045455">
+            <state line="85" column="0" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.2777778">
               <folding />
             </state>
           </provider>
@@ -286,7 +219,19 @@
       <file leaf-file-name="AbstractRandomGadget.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="606" selection-end="606" vertical-scroll-proportion="0.03219697">
+            <state line="51" column="124" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.022727273">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/google/gadgets/Random Wikipedia Article/index.php">
+          <provider editor-type-id="HtmlPreview">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="0" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.82007825">
               <folding />
             </state>
           </provider>
@@ -295,7 +240,7 @@
       <file leaf-file-name="LightboxImage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/widgets/TheRandomHomepageWidgets-0.1.jar!/therandomhomepage/widgets/client/LightboxImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="11" selection-start="2331" selection-end="2331" vertical-scroll-proportion="0.03219697">
+            <state line="69" column="11" selection-start="2331" selection-end="2331" vertical-scroll-proportion="0.021464646">
               <folding />
             </state>
           </provider>
@@ -304,7 +249,7 @@
       <file leaf-file-name="RSSCache.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RSSCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="14" selection-start="632" selection-end="632" vertical-scroll-proportion="0.48618785">
+            <state line="26" column="14" selection-start="632" selection-end="632" vertical-scroll-proportion="0.36363637">
               <folding />
             </state>
           </provider>
@@ -313,7 +258,7 @@
       <file leaf-file-name="RSS2XMLDocumentParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSS2XMLDocumentParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.031307552">
+            <state line="48" column="0" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.021464646">
               <folding />
             </state>
           </provider>
@@ -461,22 +406,12 @@
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
-      </PATH>
-      <PATH>
         <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\src" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\widgets\src\java" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -494,11 +429,15 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google\gadgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google\gadgets\Random Wikipedia Article" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -516,7 +455,11 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\modules" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google\gadgets" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -533,7 +476,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure Favorites="false" PackagesPane="false" Scope="false" ProjectPane="false" />
+      <showStructure Scope="false" ProjectPane="false" PackagesPane="false" Favorites="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -543,12 +486,12 @@
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="cvs_file_history_treeWidth0" value="296" />
-    <property name="cvs_file_history_flatWidth2" value="296" />
+    <property name="cvs_file_history_flatWidth2" value="189" />
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="cvs_file_history_flatWidth1" value="296" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="cvs_file_history_flatWidth1" value="296" />
     <property name="cvs_file_history_treeWidth1" value="296" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -567,7 +510,7 @@
     <property name="cvs_file_history_treeWidth3" value="296" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="cvs_file_history_flatWidth0" value="296" />
-    <property name="cvs_file_history_flatWidth3" value="296" />
+    <property name="cvs_file_history_flatWidth3" value="403" />
     <property name="cvs_file_history_treeOrder0" value="0" />
   </component>
   <component name="ReadonlyStatusHandler">
@@ -618,6 +561,13 @@
         <option name="Make" value="true" />
       </method>
     </tempConfiguration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
       <module name="" />
       <option name="VM_PARAMETERS" value="" />
@@ -645,25 +595,6 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="VM_PARAMETERS" value="" />
@@ -676,6 +607,18 @@
       <method>
         <option name="Make" value="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration default="false" name="TheRandomHomepage" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" value="com.google.gwt.dev.GWTShell" />
@@ -856,14 +799,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="995" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837528" order="18" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" order="4" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32608697" order="7" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23265307" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5077551" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23226544" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45881006" order="14" />
@@ -873,7 +816,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24979591" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53432494" order="16" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31464532" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31464532" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33752862" order="4" />
@@ -988,12 +931,12 @@
       <viewClosedWhenNoErrors value="false" />
     </buildFile>
   </component>
-  <component name="com.intellij.ide.util.scopeChooser.ScopeChooserConfigurable" proportions="" version="1">
-    <option name="myLastEditedConfigurable" />
+  <component name="com.intellij.ide.util.scopeChooser.ScopeChooserConfigurable" proportions="0.16666667" version="1">
+    <option name="myLastEditedConfigurable" value="Local Scopes" />
   </component>
   <component name="com.intellij.openapi.roots.ui.configuration.projectRoot.ProjectRootMasterDetailsConfigurable" proportions="0.16666667" version="1">
     <option name="myPlainMode" value="false" />
-    <option name="myLastEditedConfigurable" value="TheRandomHomepageWidgets" />
+    <option name="myLastEditedConfigurable" value="Global libraries" />
   </component>
   <component name="com.intellij.profile.ui.ErrorOptionsConfigurable" proportions="0.16666667,0.5314286" version="1">
     <option name="myLastEditedConfigurable" value="Default" />
@@ -1008,62 +951,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="178" selection-end="178" vertical-scroll-proportion="0.03219697">
+        <state line="6" column="13" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/RandomFlickrWidget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="8" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.70974153">
+        <state line="20" column="48" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Developers.html">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.27037773">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="606" selection-end="606" vertical-scroll-proportion="0.03219697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/widgets/TheRandomHomepageWidgets-0.1.jar!/therandomhomepage/widgets/client/LightboxImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="11" selection-start="2331" selection-end="2331" vertical-scroll-proportion="0.03219697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RSSCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="14" selection-start="632" selection-end="632" vertical-scroll-proportion="0.48618785">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSS2XMLDocumentParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.031307552">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/FeedbackPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="2695" selection-end="2695" vertical-scroll-proportion="2.7045455">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1073,14 +975,72 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="33" selection-start="661" selection-end="661" vertical-scroll-proportion="0.6891892">
+        <state line="21" column="33" selection-start="661" selection-end="661" vertical-scroll-proportion="0.4654498">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/RandomFlickrWidget.java">
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="0" selection-start="4516" selection-end="4516" vertical-scroll-proportion="1.3844697">
+        <state line="21" column="8" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.4654498">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/Developers.html">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.1773142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/widgets/TheRandomHomepageWidgets-0.1.jar!/therandomhomepage/widgets/client/LightboxImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="11" selection-start="2331" selection-end="2331" vertical-scroll-proportion="0.021464646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/RSSCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="14" selection-start="632" selection-end="632" vertical-scroll-proportion="0.36363637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/common/rss/RSS2XMLDocumentParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.021464646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/FeedbackPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="0" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.2777778">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/AbstractRandomGadget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="124" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.022727273">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google/gadgets/Random Wikipedia Article/index.php">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.82007825">
           <folding />
         </state>
       </provider>
