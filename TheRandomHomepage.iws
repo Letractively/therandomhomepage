@@ -185,7 +185,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="112" selection-start="1875" selection-end="1875" vertical-scroll-proportion="0.72704405">
+            <state line="34" column="112" selection-start="1875" selection-end="1875" vertical-scroll-proportion="0.5446541">
               <folding />
             </state>
           </provider>
@@ -194,7 +194,7 @@
       <file leaf-file-name="module.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google/gadgets/Random Gadget/module.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="80" selection-start="516" selection-end="516" vertical-scroll-proportion="0.21118012">
+            <state line="10" column="80" selection-start="516" selection-end="516" vertical-scroll-proportion="0.021118013">
               <folding />
             </state>
           </provider>
@@ -203,7 +203,7 @@
       <file leaf-file-name="RandomWikiModule.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google/gadgets/Random Wikipedia Article/RandomWikiModule.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="98" selection-start="862" selection-end="862" vertical-scroll-proportion="0.23229814">
+            <state line="11" column="98" selection-start="862" selection-end="862" vertical-scroll-proportion="0.021118013">
               <folding />
             </state>
           </provider>
@@ -212,7 +212,7 @@
       <file leaf-file-name="RandomFeedModule.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/google/gadgets/Random Feed/RandomFeedModule.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="21" selection-start="2178" selection-end="2178" vertical-scroll-proportion="0.78136647">
+            <state line="14" column="143" selection-start="866" selection-end="866" vertical-scroll-proportion="0.29565218">
               <folding />
             </state>
           </provider>
@@ -614,7 +614,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure ProjectPane="false" PackagesPane="false" Scope="false" Favorites="false" />
+      <showStructure Scope="false" ProjectPane="false" PackagesPane="false" Favorites="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -628,8 +628,8 @@
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="cvs_file_history_flatWidth1" value="296" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="cvs_file_history_flatWidth1" value="296" />
     <property name="cvs_file_history_treeWidth1" value="296" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -1109,6 +1109,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="49" selection-start="2999" selection-end="2999" vertical-scroll-proportion="0.021118013">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/client/LightboxImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="13" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.020731708">
@@ -1119,6 +1126,30 @@
     <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/client/MediaPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.3109756">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="112" selection-start="1875" selection-end="1875" vertical-scroll-proportion="0.5446541">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google/gadgets/Random Gadget/module.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="80" selection-start="516" selection-end="516" vertical-scroll-proportion="0.021118013">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google/gadgets/Random Wikipedia Article/RandomWikiModule.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="98" selection-start="862" selection-end="862" vertical-scroll-proportion="0.021118013">
           <folding />
         </state>
       </provider>
@@ -1151,40 +1182,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="49" selection-start="2999" selection-end="2999" vertical-scroll-proportion="0.021118013">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="112" selection-start="1875" selection-end="1875" vertical-scroll-proportion="0.72704405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google/gadgets/Random Gadget/module.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="80" selection-start="516" selection-end="516" vertical-scroll-proportion="0.21118012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google/gadgets/Random Wikipedia Article/RandomWikiModule.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="98" selection-start="862" selection-end="862" vertical-scroll-proportion="0.23229814">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/google/gadgets/Random Feed/RandomFeedModule.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="21" selection-start="2178" selection-end="2178" vertical-scroll-proportion="0.78136647">
+        <state line="14" column="143" selection-start="866" selection-end="866" vertical-scroll-proportion="0.29565218">
           <folding />
         </state>
       </provider>

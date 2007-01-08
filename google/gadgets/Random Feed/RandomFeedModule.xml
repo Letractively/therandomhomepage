@@ -11,8 +11,8 @@
                screenshot="http://www.therandomhomepage.com/google/gadget/images/screenshot.png"
           />
   <!--
-        Last updated: 12/08/2007
-        Change Notes: Added "moduletitle" user preference
+        Last updated: 01/08/2007
+        Change Notes: Added "moduletitle" user preference 
   -->
   <UserPref name="moduletitle" display_name="Title" default_value="Random Feed" required="true"/>
   <UserPref name="url1" display_name="RSS/Atom Feed 1" required="true" datatype="string" default_value="http://news.google.com/?output=rss"/>
