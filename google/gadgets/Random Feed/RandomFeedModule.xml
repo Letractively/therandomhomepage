@@ -3,7 +3,7 @@
   <ModulePrefs title="__UP_moduletitle__" directory_title="Random Feed" title_url="http://www.therandomhomepage.com"
                height="250"
                author="Siddique Hameed"
-               description="Randomly displays an item from the list of RSS/Atom feeds. Flip through the feed items manually (by clicking on the right arrows &gt;&gt;) or view it as a slideshow."
+               description="Randomly displays an item from the list of RSS/Atom feeds. Flip through the feed items manually (by clicking on the right arrows &gt;&gt;) or view them as slideshow."
                author_email="siddii+randomhomepage@gmail.com"
                render_inline="optional"
                scrolling="true"
@@ -12,7 +12,7 @@
           />
   <!--
         Last updated: 12/08/2007
-        Change Notes: Added "moduletitle" user preference 
+        Change Notes: Added "moduletitle" user preference
   -->
   <UserPref name="moduletitle" display_name="Title" default_value="Random Feed" required="true"/>
   <UserPref name="url1" display_name="RSS/Atom Feed 1" required="true" datatype="string" default_value="http://news.google.com/?output=rss"/>
