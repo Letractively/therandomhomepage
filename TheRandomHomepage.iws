@@ -164,7 +164,7 @@
       <file leaf-file-name="swfobject.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/swfobject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="51" selection-start="5046" selection-end="5046" vertical-scroll-proportion="0.19751553">
+            <state line="96" column="51" selection-start="5046" selection-end="5046" vertical-scroll-proportion="0.23354037">
               <folding />
             </state>
           </provider>
@@ -212,7 +212,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="13" selection-start="2281" selection-end="2281" vertical-scroll-proportion="0.9622642">
+            <state line="51" column="0" selection-start="2348" selection-end="2348" vertical-scroll-proportion="1.090566">
               <folding />
             </state>
           </provider>
@@ -668,7 +668,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure Favorites="false" ProjectPane="false" Scope="false" PackagesPane="false" />
+      <showStructure PackagesPane="false" ProjectPane="false" Scope="false" Favorites="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -682,8 +682,8 @@
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="cvs_file_history_flatWidth1" value="296" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="cvs_file_history_treeWidth1" value="296" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -1049,7 +1049,7 @@
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
     <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ERROR_OCCURED" value="true" />
+    <option name="ERROR_OCCURED" value="false" />
     <option name="ACTIVE_VCS_NAME" value="svn" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
@@ -1175,7 +1175,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/swfobject.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="51" selection-start="5046" selection-end="5046" vertical-scroll-proportion="0.19751553">
+        <state line="96" column="51" selection-start="5046" selection-end="5046" vertical-scroll-proportion="0.23354037">
           <folding />
         </state>
       </provider>
@@ -1197,6 +1197,13 @@
     <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/client/LightboxImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="13" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.020731708">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/client/MediaPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.3109756">
           <folding />
         </state>
       </provider>
@@ -1229,19 +1236,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/client/MediaPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.3109756">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html">
       <provider editor-type-id="HtmlPreview">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="13" selection-start="2281" selection-end="2281" vertical-scroll-proportion="0.9622642">
+        <state line="51" column="0" selection-start="2348" selection-end="2348" vertical-scroll-proportion="1.090566">
           <folding />
         </state>
       </provider>
