@@ -19,7 +19,10 @@ public abstract class TheRandomHomepageAbstract_UT extends GWTTestCase {
     }
 
     protected void readFile(String fileName, ResponseTextHandler responseHandler) {
-        if (!HTTPRequest.asyncGet(GWT.getModuleBaseURL()+"/readfile?fileName="+fileName,responseHandler)){
+//        if (!HTTPRequest.asyncGet(GWT.getModuleBaseURL()+"/readfile?fileName="+fileName,responseHandler)){
+//            fail("Unable to read file - "+fileName);
+//        }
+        if (!HTTPRequest.asyncGet(GWT.getModuleBaseURL()+"/"+fileName,responseHandler)){
             fail("Unable to read file - "+fileName);
         }
     }

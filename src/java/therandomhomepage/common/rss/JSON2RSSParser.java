@@ -2,6 +2,7 @@ package therandomhomepage.common.rss;
 
 
 import com.google.gwt.json.client.*;
+import com.google.gwt.core.client.GWT;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,28 @@ public class JSON2RSSParser {
                 }
             }
         } catch (JSONException e) {
+        }
+        return rssItems;
+    }
+
+    public static RSSItem[] parseAsArray(String jsonText,int elementCount) {
+        JSONValue jsonValue;
+        RSSItem rssItems[] = null;
+        try {
+            jsonValue = JSONParser.parse(jsonText);
+            if (jsonValue != null) {
+                JSONArray jsonArray = jsonValue.isArray();
+
+                if (jsonArray != null) {
+                    rssItems = new RSSItem[elementCount];
+                    for (int i = 0; i < jsonArray.size() && i < elementCount; i++) {
+                        JSONValue jsonObject = (JSONValue) jsonArray.get(i);
+                        rssItems[i] = parseChild(jsonObject);
+                    }
+                }
+            }
+        } catch (JSONException e) {
+            GWT.log("Unable to parse RSS Items",e);            
         }
         return rssItems;
     }

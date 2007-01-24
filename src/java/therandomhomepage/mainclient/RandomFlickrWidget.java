@@ -1,16 +1,21 @@
 package therandomhomepage.mainclient;
 
 import com.google.gwt.http.client.URL;
-import com.google.gwt.user.client.*;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.Random;
+import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.ui.*;
+import com.google.gwt.core.client.GWT;
 import therandomhomepage.common.HttpRequestUtil;
-import therandomhomepage.common.StringUtil;
 import therandomhomepage.common.Randomizer;
+import therandomhomepage.common.StringUtil;
 import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 import therandomhomepage.common.rss.RSSItem;
+import therandomhomepage.common.rss.JSON2RSSParser;
 import therandomhomepage.widgets.client.LightboxImage;
 
-import java.util.List;
+import java.util.Arrays;
 
 /**
  * Created by IntelliJ IDEA.
@@ -26,7 +31,7 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
     private int prevIdx = -1;
     private RSSItem rssItems[] = null;
 
-    private String[] flickrTags = {"art,colorful","travel,autumn"};
+    private String[] flickrTags = {"art", "colorful", "travel", "autumn", "water", "nature", "sunset", "tree"};
 
     protected static final String ERROR_MESSAGE = "Error retrieving content !. Please try later...";
 
@@ -79,7 +84,8 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
     public String getFeedURL() {
         String flickrTag = flickrTags[Randomizer.getRandomNo(flickrTags.length)];
-        return "/php/xmlProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags="+flickrTag+"&format=rss_200");
+//        return "/php/ajaxProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags=" + flickrTag + "&format=json");
+        return GWT.getModuleBaseURL()+"/colorful.txt";
     }
 
     protected void displayRandomItem(RSSItem[] rssItems) {
@@ -128,7 +134,8 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
 
     protected void handleResponse(String url, String responseText) {
-        rssItems = RSS2XMLDocumentParser.parseItemsAsArray(responseText);
+        //rssItems = RSS2XMLDocumentParser.parseItemsAsArray(responseText);
+        rssItems = JSON2RSSParser.parseAsArray(responseText,10);
         displayRandomItem(rssItems);
     }
 

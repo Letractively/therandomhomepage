@@ -6,6 +6,8 @@ import therandomhomepage.common.rss.RSSItem;
 import java.util.List;
 import java.util.Iterator;
 
+import com.google.gwt.user.client.ResponseTextHandler;
+
 /**
  * Created by IntelliJ IDEA.
  * User: SHAMEED
@@ -83,6 +85,16 @@ public class JSON2RSSParser_UT extends TheRandomHomepageAbstract_UT {
       assertEquals(expectedMessage, e.getMessage());
     }
   }
+
+    public void testParseFlickrFeed() throws Exception {
+        delayTestFinish(30000);
+        readFile("colorful.txt", new ResponseTextHandler() {
+            public void onCompletion(String responseText) {
+                assertEquals(1,1);
+            }
+        }
+        );
+    }
 
   private void assertRSSItem(RSSItem expectedRSSItem, List actualRSSItems) {
 
