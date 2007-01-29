@@ -4,7 +4,6 @@ import therandomhomepage.common.rss.JSON2RSSParser;
 import therandomhomepage.common.rss.RSSItem;
 
 import java.util.List;
-import java.util.Iterator;
 
 import com.google.gwt.user.client.ResponseTextHandler;
 
@@ -87,10 +86,12 @@ public class JSON2RSSParser_UT extends TheRandomHomepageAbstract_UT {
   }
 
     public void testParseFlickrFeed() throws Exception {
-        delayTestFinish(30000);
-        readFile("colorful.txt", new ResponseTextHandler() {
+        readTestFile("colorful.txt", new ResponseTextHandler() {
             public void onCompletion(String responseText) {
-                assertEquals(1,1);
+                RSSItem[] rssItems = JSON2RSSParser.parseAsArray(responseText, 10);
+                assertNotNull(rssItems);
+                assertEquals(10,rssItems.length);
+                finishTest();
             }
         }
         );

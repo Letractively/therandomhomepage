@@ -12,6 +12,4 @@
     <source path="test"/>
 
     <public path="testpublic"/>
-
-    <servlet path='/readfile' class='therandomhomepage.server.FileReaderServlet'/>
 </module>
