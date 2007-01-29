@@ -53,7 +53,7 @@ public class JSON2RSSParser {
                 }
             }
         } catch (JSONException e) {
-            GWT.log("Unable to parse RSS Items",e);            
+            GWT.log("Unable to parse RSS Items",e);
         }
         return rssItems;
     }
