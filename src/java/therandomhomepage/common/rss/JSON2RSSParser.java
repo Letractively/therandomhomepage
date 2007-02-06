@@ -6,6 +6,7 @@ import com.google.gwt.core.client.GWT;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Iterator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -42,14 +43,23 @@ public class JSON2RSSParser {
         try {
             jsonValue = JSONParser.parse(jsonText);
             if (jsonValue != null) {
-                JSONArray jsonArray = jsonValue.isArray();
-
-                if (jsonArray != null) {
+                if (jsonValue.isArray() != null) {
                     rssItems = new RSSItem[elementCount];
-                    for (int i = 0; i < jsonArray.size() && i < elementCount; i++) {
-                        JSONValue jsonObject = (JSONValue) jsonArray.get(i);
+                    for (int i = 0; i < jsonValue.isArray().size() && i < elementCount; i++) {
+                        JSONValue jsonObject = (JSONValue) jsonValue.isArray().get(i);
                         rssItems[i] = parseChild(jsonObject);
                     }
+                }
+                else if (jsonValue.isObject() != null){
+                    JSONObject jsonObject = jsonValue.isObject();
+                    System.out.println("jsonObject.size() = " + jsonObject.size());
+
+                    JSONObject childObject = (JSONObject) jsonObject.get("ResultSet");
+
+                    if (childObject.isArray() != null) {
+                        System.out.println("childObject.isArray().size() = " + childObject.isArray().size());
+                    }
+
                 }
             }
         } catch (JSONException e) {
