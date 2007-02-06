@@ -269,7 +269,7 @@
       <module fileurl="file://$PROJECT_DIR$/TheRandomHomepage.iml" filepath="$PROJECT_DIR$/TheRandomHomepage.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="IDEA 5784" />
+  <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="false" project-jdk-name="IDEA 5784" project-jdk-type="IDEA JDK" />
   <component name="ProjectRunConfigurationManager">
     <configuration default="false" name="RandomFlickrIFrameTest" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" value="com.google.gwt.dev.GWTShell" />
