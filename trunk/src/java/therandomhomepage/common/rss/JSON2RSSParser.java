@@ -1,12 +1,11 @@
 package therandomhomepage.common.rss;
 
 
-import com.google.gwt.json.client.*;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.json.client.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Iterator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -33,11 +32,12 @@ public class JSON2RSSParser {
                 }
             }
         } catch (JSONException e) {
+            GWT.log("Error while parsing ",e);
         }
         return rssItems;
     }
 
-    public static RSSItem[] parseAsArray(String jsonText,int elementCount) {
+    public static RSSItem[] parseAsArray(String jsonText, int elementCount) {
         JSONValue jsonValue;
         RSSItem rssItems[] = null;
         try {
@@ -49,8 +49,7 @@ public class JSON2RSSParser {
                         JSONValue jsonObject = (JSONValue) jsonValue.isArray().get(i);
                         rssItems[i] = parseChild(jsonObject);
                     }
-                }
-                else if (jsonValue.isObject() != null){
+                } else if (jsonValue.isObject() != null) {
                     JSONObject jsonObject = jsonValue.isObject();
                     System.out.println("jsonObject.size() = " + jsonObject.size());
 
@@ -63,7 +62,7 @@ public class JSON2RSSParser {
                 }
             }
         } catch (JSONException e) {
-            GWT.log("Unable to parse RSS Items",e);
+            GWT.log("Unable to parse RSS Items", e);
         }
         return rssItems;
     }
@@ -93,7 +92,7 @@ public class JSON2RSSParser {
     }
 
     private static String parseString(JSONValue str) {
-        if (str != null && str.isString() != null){
+        if (str != null && str.isString() != null) {
             return str.isString().stringValue().trim();
         }
         return "";
