@@ -45,26 +45,28 @@ public class JSON2RSSParser {
             if (jsonValue != null) {
                 if (jsonValue.isArray() != null) {
                     rssItems = new RSSItem[elementCount];
-                    for (int i = 0; i < jsonValue.isArray().size() && i < elementCount; i++) {
-                        JSONValue jsonObject = (JSONValue) jsonValue.isArray().get(i);
-                        rssItems[i] = parseChild(jsonObject);
-                    }
+                    JSONArray array = jsonValue.isArray();
+                    parseArray(array, elementCount, rssItems);
                 } else if (jsonValue.isObject() != null) {
                     JSONObject jsonObject = jsonValue.isObject();
-                    System.out.println("jsonObject.size() = " + jsonObject.size());
-
-                    JSONObject childObject = (JSONObject) jsonObject.get("ResultSet");
-
-                    if (childObject.isArray() != null) {
-                        System.out.println("childObject.isArray().size() = " + childObject.isArray().size());
+                    JSONObject resultSet = (JSONObject) jsonObject.get("jsonFlickrFeed");
+                    JSONArray resultArray = (JSONArray) resultSet.get("items");
+                    if (resultArray != null) {
+                        parseArray(resultArray, elementCount, rssItems);
                     }
-
                 }
             }
         } catch (JSONException e) {
             GWT.log("Unable to parse RSS Items", e);
         }
         return rssItems;
+    }
+
+    private static void parseArray(JSONArray array, int elementCount, RSSItem[] rssItems) {
+        for (int i = 0; i < array.size() && i < elementCount; i++) {
+            JSONValue jsonObject = (JSONValue) array.get(i);
+            rssItems[i] = parseChild(jsonObject);
+        }
     }
 
     private static RSSItem parseChild(JSONValue jsonValue) {
