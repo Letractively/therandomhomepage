@@ -11,6 +11,7 @@ public class AbstractRandomGadget extends Composite {
     protected String header;
     private String googleGadgetURL = null;
     private String netvibesModuleURL = null;
+    private String widgetBoxURL;
     protected int height;
     protected int width;
     private String iframeURL;
@@ -18,10 +19,11 @@ public class AbstractRandomGadget extends Composite {
     protected HTMLPanel bodyPanel;
 
 
-    public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL,int width, int height) {
+    public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL,String widgetBoxURL, int width, int height) {
         this.header = header;
         this.googleGadgetURL = googleGadgetURL;
         this.netvibesModuleURL = netvibesModuleURL;
+        this.widgetBoxURL = widgetBoxURL;
         this.height = height;
         this.width = width;
         buildUI();
@@ -34,6 +36,7 @@ public class AbstractRandomGadget extends Composite {
         this.width = width;
         buildUI();
     }
+
 
     protected String getCompleteGoogleGadgetURL(String url) {
         return "http://gmodules.com/ig/ifr?url=" + url + "&amp;up_moduletitle=" + header + "&amp;up_language=en&amp;synd=open&amp;w=" + width + "&amp;h=" + height + "&amp;title=&amp;lang=en&amp;country=ALL&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;";
@@ -86,7 +89,12 @@ public class AbstractRandomGadget extends Composite {
                 "            <TD style=\"width:4px;\">&nbsp;</TD>" +
                 "            <TD style=\"border: 0pt none ; width:91px; height: 17px; \">" +
                 "            <a href=\"http://www.netvibes.com/subscribe.php?url=" + netvibesModuleURL + "&type=api\"><img border=\"0\" src=\"http://www.netvibes.com/img/add2netvibes.gif\" width=\"91\" height=\"17\" alt=\"Add to Netvibes\"/></a>" +
-                "            </TD></TR></TABLE>";
+                "            </TD>" +
+                "            <TD style=\"width:4px;\">&nbsp;</TD>" +
+                "            <TD style=\"border: 0pt none ; width:91px; height: 17px; \">" +
+                "            <a href=\"" + widgetBoxURL + "\" title=\"Get this widget from Widgetbox\"><img src=\"http://widgetserver.com/images/add-widgetbox.gif\" border=\"0\" alt=\"Get this widget from Widgetbox\" /></a>" +
+                "            </TD>" +
+                "           </TR></TABLE>";
 
     }
 

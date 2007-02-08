@@ -41,7 +41,8 @@ public class TheRandomHomepage implements EntryPoint {
 
         String randomFeedURL = "http://www.therandomhomepage.com/google/gadget/RandomFeedModule.xml";
         String randomFeedNetvibesModuleURL = "http://www.therandomhomepage.com/netvibes/modules/RandomFeed/index.php";
-        AbstractRandomGadget randomFeedGadget = new AbstractRandomGadget("Random News", randomFeedURL, randomFeedNetvibesModuleURL, 300, 350);
+        String randomFeedWidgetBoxURL = "http://www.widgetbox.com/widget/RandomFeed?wbx.refer=1";
+        AbstractRandomGadget randomFeedGadget = new AbstractRandomGadget("Random News", randomFeedURL, randomFeedNetvibesModuleURL, randomFeedWidgetBoxURL, 300, 350);
         flexTable.setWidget(0, 0, randomFeedGadget);
         flexTable.getCellFormatter().setVerticalAlignment(0, 0, HasVerticalAlignment.ALIGN_TOP);
         flexTable.getCellFormatter().setHorizontalAlignment(0, 0, HasHorizontalAlignment.ALIGN_CENTER);
@@ -63,7 +64,8 @@ public class TheRandomHomepage implements EntryPoint {
 
         String randomWikipediaModuleURL = "http://www.therandomhomepage.com/google/gadgets/randomwiki/RandomWikiModule.xml";
         String randomWikipediaNetvibesModuleURL = "http://www.therandomhomepage.com/netvibes/modules/RandomWikipediaArticle/index.php";
-        AbstractRandomGadget randomWikipediaGadget = new AbstractRandomGadget("Random Wikipedia Article", randomWikipediaModuleURL, randomWikipediaNetvibesModuleURL, 340, 350);
+        String randomWikipediaWidgetBoxURL = "http://www.widgetbox.com/widget/RandomWikipediaArticle?wbx.refer=1";
+        AbstractRandomGadget randomWikipediaGadget = new AbstractRandomGadget("Random Wikipedia Article", randomWikipediaModuleURL, randomWikipediaNetvibesModuleURL, randomWikipediaWidgetBoxURL, 340, 350);
         flexTable.setWidget(0, 2, randomWikipediaGadget);
         flexTable.getCellFormatter().setVerticalAlignment(0, 2, HasVerticalAlignment.ALIGN_TOP);
         flexTable.getCellFormatter().setHorizontalAlignment(0, 2, HasHorizontalAlignment.ALIGN_CENTER);
