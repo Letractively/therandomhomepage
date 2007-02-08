@@ -134,7 +134,6 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
 
     protected void handleResponse(String url, String responseText) {
-        //rssItems = RSS2XMLDocumentParser.parseItemsAsArray(responseText);
         rssItems = JSON2RSSParser.parseAsArray(responseText,10);
         displayRandomItem(rssItems);
     }
