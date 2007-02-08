@@ -19,14 +19,17 @@ public class AbstractRandomGadget extends Composite {
     protected HTMLPanel bodyPanel;
 
 
-    public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL,String widgetBoxURL, int width, int height) {
+    public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL, int width, int height) {
         this.header = header;
         this.googleGadgetURL = googleGadgetURL;
         this.netvibesModuleURL = netvibesModuleURL;
-        this.widgetBoxURL = widgetBoxURL;
         this.height = height;
         this.width = width;
-        buildUI();
+    }
+
+    public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL,String widgetBoxURL, int width, int height) {
+        this(header,googleGadgetURL,netvibesModuleURL,width,height);
+        this.widgetBoxURL = widgetBoxURL;
     }
 
     public AbstractRandomGadget(String header, String iframeURL, int width, int height) {
@@ -34,9 +37,12 @@ public class AbstractRandomGadget extends Composite {
         this.header = header;
         this.height = height;
         this.width = width;
-        buildUI();
     }
 
+
+    protected void onLoad() {
+        buildUI();
+    }
 
     protected String getCompleteGoogleGadgetURL(String url) {
         return "http://gmodules.com/ig/ifr?url=" + url + "&amp;up_moduletitle=" + header + "&amp;up_language=en&amp;synd=open&amp;w=" + width + "&amp;h=" + height + "&amp;title=&amp;lang=en&amp;country=ALL&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;";

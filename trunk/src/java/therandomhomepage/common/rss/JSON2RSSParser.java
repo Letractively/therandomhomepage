@@ -48,6 +48,7 @@ public class JSON2RSSParser {
                     JSONArray array = jsonValue.isArray();
                     parseArray(array, elementCount, rssItems);
                 } else if (jsonValue.isObject() != null) {
+                    rssItems = new RSSItem[elementCount];
                     JSONObject jsonObject = jsonValue.isObject();
                     JSONObject resultSet = (JSONObject) jsonObject.get("jsonFlickrFeed");
                     JSONArray resultArray = (JSONArray) resultSet.get("items");
