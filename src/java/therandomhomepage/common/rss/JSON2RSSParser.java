@@ -2,6 +2,7 @@ package therandomhomepage.common.rss;
 
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.json.client.*;
 
 import java.util.ArrayList;
@@ -62,6 +63,10 @@ public class JSON2RSSParser {
         }
         return rssItems;
     }
+
+     private static native JavaScriptObject evaluate(String jsonString) /*-{
+        return eval('(' + jsonString + ')');
+      }-*/;    
 
     private static void parseArray(JSONArray array, int elementCount, RSSItem[] rssItems) {
         for (int i = 0; i < array.size() && i < elementCount; i++) {
