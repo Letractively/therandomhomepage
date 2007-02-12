@@ -25,7 +25,7 @@ import java.util.List;
 public class RandomFlickrWidget extends AbstractRandomGadget {
 
     private LightboxImage lightbox;
-    private Label randomFlickrImageTitle = new Label();
+    private HTML randomFlickrImageTitle = new HTML();
     private int prevIdx = -1;
     private RSSItem rssItems[] = null;
 
@@ -114,7 +114,7 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
             UIObject.setVisible(imageElement, true);
             prevIdx = randomIdx;
-            randomFlickrImageTitle.setText(randomItem.getTitle());
+            randomFlickrImageTitle.setHTML("<a class=\"randomFlickrImageTitle\" target=\"_new\" href=\">"+randomItem.getLink()+"\">"+randomItem.getTitle()+"</a>");
         }
     }
 
