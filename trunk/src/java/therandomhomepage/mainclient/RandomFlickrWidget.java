@@ -6,16 +6,15 @@ import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.ResponseTextHandler;
 import com.google.gwt.user.client.ui.*;
-import com.google.gwt.core.client.GWT;
 import therandomhomepage.common.HttpRequestUtil;
 import therandomhomepage.common.Randomizer;
 import therandomhomepage.common.StringUtil;
-import therandomhomepage.common.rss.RSS2XMLDocumentParser;
-import therandomhomepage.common.rss.RSSItem;
 import therandomhomepage.common.rss.JSON2RSSParser;
+import therandomhomepage.common.rss.RSSItem;
+import therandomhomepage.common.rss.RSS2XMLDocumentParser;
 import therandomhomepage.widgets.client.LightboxImage;
 
-import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -24,7 +23,6 @@ import java.util.Arrays;
  * Time: 12:15:23 PM
  */
 public class RandomFlickrWidget extends AbstractRandomGadget {
-
 
     private LightboxImage lightbox;
     private Label randomFlickrImageTitle = new Label();
@@ -81,11 +79,9 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
         }
     }
 
-
     public String getFeedURL() {
         String flickrTag = flickrTags[Randomizer.getRandomNo(flickrTags.length)];
-//        return "/php/ajaxProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags=" + flickrTag + "&format=json");
-        return GWT.getModuleBaseURL()+"/colorful.txt";
+        return "/php/xmlProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags="+flickrTag+"&format=rss_200");
     }
 
     protected void displayRandomItem(RSSItem[] rssItems) {
@@ -134,7 +130,13 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
 
     protected void handleResponse(String url, String responseText) {
-        rssItems = JSON2RSSParser.parseAsArray(responseText,10);
+        List itemsList = RSS2XMLDocumentParser.parse(responseText);
+        if (itemsList.size() >= 10) {
+            rssItems = new RSSItem[10];
+            for (int i = 0; i < rssItems.length; i++) {
+                rssItems[i] = (RSSItem) itemsList.get(i);
+            }
+        }
         displayRandomItem(rssItems);
     }
 

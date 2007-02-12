@@ -1,10 +1,9 @@
 package therandomhomepage.mainclient;
 
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.FlexTable;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HTMLPanel;
-import therandomhomepage.common.RSSCache;
 
 public class AbstractRandomGadget extends Composite {
 
@@ -28,8 +27,12 @@ public class AbstractRandomGadget extends Composite {
         buildUI();
     }
 
-    public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL,String widgetBoxURL, int width, int height) {
-        this(header,googleGadgetURL,netvibesModuleURL,width,height);
+    public AbstractRandomGadget(String header, String googleGadgetURL, String netvibesModuleURL, String widgetBoxURL, int width, int height) {
+        this.header = header;
+        this.googleGadgetURL = googleGadgetURL;
+        this.netvibesModuleURL = netvibesModuleURL;
+        this.height = height;
+        this.width = width;
         this.widgetBoxURL = widgetBoxURL;
         buildUI();
     }
@@ -86,21 +89,23 @@ public class AbstractRandomGadget extends Composite {
     }
 
     protected String getAddToTable() {
-        return "           <TABLE><TR><TD style=\"border: 0pt none ; height: 17px; \">" +
-                "            <A href=\"http://fusion.google.com/ig/add?moduleurl=" + googleGadgetURL + "\">\n" +
-                "              <IMG src=\"http://gmodules.com/ig/images/plus_google.gif\" style=\"border: 0pt none ; height: 17px; \"/>\n" +
-                "            </A>" +
-                "            </TD>" +
-                "            <TD style=\"width:4px;\">&nbsp;</TD>" +
-                "            <TD style=\"border: 0pt none ; width:91px; height: 17px; \">" +
-                "            <a href=\"http://www.netvibes.com/subscribe.php?url=" + netvibesModuleURL + "&type=api\"><img border=\"0\" src=\"http://www.netvibes.com/img/add2netvibes.gif\" width=\"91\" height=\"17\" alt=\"Add to Netvibes\"/></a>" +
-                "            </TD>" +
-                "            <TD style=\"width:4px;\">&nbsp;</TD>" +
-                "            <TD style=\"border: 0pt none ; width:91px; height: 17px; \">" +
-                "            <a href=\"" + widgetBoxURL + "\" title=\"Get this widget from Widgetbox\"><img src=\"http://widgetserver.com/images/add-widgetbox.gif\" border=\"0\" alt=\"Get this widget from Widgetbox\" /></a>" +
-                "            </TD>" +
-                "           </TR></TABLE>";
-
+        StringBuffer tableStr = new StringBuffer("<TABLE><TR><TD style=\"border: 0pt none ; height: 17px; \">" +
+                "<A href=\"http://fusion.google.com/ig/add?moduleurl=" + googleGadgetURL + "\">\n" +
+                "<IMG src=\"http://gmodules.com/ig/images/plus_google.gif\" style=\"border: 0pt none ; height: 17px; \"/>\n" +
+                "</A>" +
+                "</TD>" +
+                "<TD style=\"width:4px;\">&nbsp;</TD>" +
+                "<TD style=\"border: 0pt none ; width:91px; height: 17px; \">" +
+                "<a href=\"http://www.netvibes.com/subscribe.php?url=" + netvibesModuleURL + "&type=api\"><img border=\"0\" src=\"http://www.netvibes.com/img/add2netvibes.gif\" width=\"91\" height=\"17\" alt=\"Add to Netvibes\"/></a>" +
+                "</TD>");
+        if (widgetBoxURL != null) {
+            tableStr.append("<TD style=\"width:4px;\">&nbsp;</TD>" +
+                    "<TD style=\"border: 0pt none ; width:91px; height: 17px; \">" +
+                    "<a href=\"" + widgetBoxURL + "\" title=\"Get this widget from Widgetbox\"><img src=\"http://widgetserver.com/images/add-widgetbox.gif\" border=\"0\" alt=\"Get this widget from Widgetbox\" /></a>" +
+                    "</TD>");
+        }
+        tableStr.append("</TR></TABLE>");
+        return tableStr.toString();
     }
 
 }
