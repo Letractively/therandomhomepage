@@ -9,9 +9,8 @@ import com.google.gwt.user.client.ui.*;
 import therandomhomepage.common.HttpRequestUtil;
 import therandomhomepage.common.Randomizer;
 import therandomhomepage.common.StringUtil;
-import therandomhomepage.common.rss.JSON2RSSParser;
-import therandomhomepage.common.rss.RSSItem;
 import therandomhomepage.common.rss.RSS2XMLDocumentParser;
+import therandomhomepage.common.rss.RSSItem;
 import therandomhomepage.widgets.client.LightboxImage;
 
 import java.util.List;
@@ -63,7 +62,11 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
         table.getRowFormatter().addStyleName(0, "gadgetFrameTR");
         width += 10;
 
-        bodyPanel = new HTMLPanel("<div class=\"gadgetBody\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><table align=\"center\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><tbody align=\"center\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><tr><td width=\"90%\" id=\"randomFlickrHeader\"></td><td width=\"10%\" align=\"right\" id=\"randomFlickrControl\"></td></tr><tr><td align=\"center\" colspan=\"2\" id=\"randomFlickrImage\"></td></tr><TR><TD style=\"height:2px;\"></TD></TR></tbody></table></div>");
+        bodyPanel = new HTMLPanel("<div class=\"gadgetBody\" style=\"display: block; width: " + width + "px; height: " + height + "px;\">" +
+                "<table align=\"center\" style=\"display: block; width: " + width + "px; height: " + height + "px;\">" +
+                "<tbody align=\"center\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><tr><td width=\"90%\" id=\"randomFlickrHeader\"></td><td width=\"10%\" align=\"right\" id=\"randomFlickrControl\"></td></tr>" +
+                "<tr><td align=\"center\" colspan=\"2\" id=\"randomFlickrImage\"></td></tr>" +
+                "<TR><TD style=\"height:2px;\"></TD></TR></tbody></table></div>");
         table.setWidget(1, 0, bodyPanel);
         table.setWidget(2, 0, new HTML(getAddToTable()));
     }
@@ -81,7 +84,7 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
     public String getFeedURL() {
         String flickrTag = flickrTags[Randomizer.getRandomNo(flickrTags.length)];
-        return "/php/xmlProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags="+flickrTag+"&format=rss_200");
+        return "/php/xmlProxy.php?url=" + URL.encodeComponent("http://www.flickr.com/services/feeds/photos_public.gne?tags=" + flickrTag + "&format=rss_200");
     }
 
     protected void displayRandomItem(RSSItem[] rssItems) {
@@ -114,7 +117,7 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
             UIObject.setVisible(imageElement, true);
             prevIdx = randomIdx;
-            randomFlickrImageTitle.setHTML("<a class=\"randomFlickrImageTitle\" target=\"_new\" href=\">"+randomItem.getLink()+"\">"+randomItem.getTitle()+"</a>");
+            randomFlickrImageTitle.setHTML("<a class=\"randomFlickrImageTitle\" target=\"_new\" href=\">" + randomItem.getLink() + "\">" + randomItem.getTitle() + "</a>");
         }
     }
 
