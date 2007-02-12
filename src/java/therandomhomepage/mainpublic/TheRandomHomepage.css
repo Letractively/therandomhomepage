@@ -22,6 +22,15 @@ a.widgetGallery:hover {
     border-bottom: black solid 1px;
 }
 
+a.randomFlickrImageTitle {
+    text-decoration: none;
+    color: #000000;
+}
+
+a.randomFlickrImageTitle:hover {
+    background: #FFFFFF;
+}
+
 #randomFlickrImage {
     height: 100%;
     vertical-align: middle;
@@ -41,9 +50,9 @@ a.widgetGallery:hover {
 }
 
 b.thanks {
-    font-size:0.9em;
-    color:cadetblue;
-    text-align:center;
+    font-size: 0.9em;
+    color: cadetblue;
+    text-align: center;
 }
 
 .randomFlickrthumbnailImage {
