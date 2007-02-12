@@ -6,7 +6,7 @@ import com.google.gwt.user.client.ui.*;
 
 public class TheRandomHomepage implements EntryPoint {
 
-    TabPanel tabs;
+    private TabPanel tabs;
 
     public void onModuleLoad() {
         buildBody();
