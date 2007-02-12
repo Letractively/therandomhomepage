@@ -63,10 +63,12 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
         width += 10;
 
         bodyPanel = new HTMLPanel("<div class=\"gadgetBody\" style=\"display: block; width: " + width + "px; height: " + height + "px;\">" +
-                "<table align=\"center\" style=\"display: block; width: " + width + "px; height: " + height + "px;\">" +
-                "<tbody align=\"center\" style=\"display: block; width: " + width + "px; height: " + height + "px;\"><tr><td width=\"90%\" id=\"randomFlickrHeader\"></td><td width=\"10%\" align=\"right\" id=\"randomFlickrControl\"></td></tr>" +
+                "<table align=\"center\" style=\"display: block; width: 100%; height: 100%;\">" +
+                "<tr><td align=\"center\" colspan=\"2\">&nbsp;</td></tr>" +
+                "<tbody align=\"center\" style=\"display: block; width: 100%; height: 100%\"><tr><td width=\"80%\" id=\"randomFlickrHeader\"></td><td width=\"20%\" align=\"right\" id=\"randomFlickrControl\"></td></tr>" +
+                "<tr><td align=\"center\" colspan=\"2\">&nbsp;</td></tr>" +
                 "<tr><td align=\"center\" colspan=\"2\" id=\"randomFlickrImage\"></td></tr>" +
-                "<TR><TD style=\"height:2px;\"></TD></TR></tbody></table></div>");
+                "</tbody></table></div>");
         table.setWidget(1, 0, bodyPanel);
         table.setWidget(2, 0, new HTML(getAddToTable()));
     }
@@ -117,8 +119,15 @@ public class RandomFlickrWidget extends AbstractRandomGadget {
 
             UIObject.setVisible(imageElement, true);
             prevIdx = randomIdx;
-            randomFlickrImageTitle.setHTML("<a class=\"randomFlickrImageTitle\" target=\"_new\" href=\">" + randomItem.getLink() + "\">" + randomItem.getTitle() + "</a>");
+            randomFlickrImageTitle.setHTML("<a class=\"randomFlickrImageTitle\" target=\"_new\" href=\"" + randomItem.getLink() + "\">" + getTitle(randomItem) + "</a>");
         }
+    }
+
+    private String getTitle(RSSItem randomItem) {
+        if (randomItem.getTitle() != null && randomItem.getTitle().trim().length() > 0) {
+            return randomItem.getTitle().trim();
+        }
+        return "Untitled";
     }
 
     private Image[] getImages(RSSItem rssItems[]) {
