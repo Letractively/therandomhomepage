@@ -5,6 +5,12 @@
 <link rel="icon" type="image/ico" href="http://www.flickr.com/favicon.ico"/>
 <meta name="author" content="Siddique Hameed"/>
 <!--
+
+	Last Updated: 2/16/2007
+	Bug fix: Removed urchin tracker as it broke this module
+	Version 0.1
+
+
 	Last Updated: 12/27/2006
 	Change Notes: Default transition effect was made to "None"
 	Version 0.1
@@ -1089,10 +1095,6 @@ if (/WebKit/i.test(navigator.userAgent)) { // sniff
 
 <?php include 'http://www.therandomhomepage.com/js/utils.js';?>
 
-<?php include 'http://www.google-analytics.com/urchin.js';?>
-
-_uacct = "UA-941159-1";
-urchinTracker();
 </script>
 
 <script type="text/javascript">
