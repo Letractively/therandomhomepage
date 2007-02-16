@@ -5,6 +5,10 @@
 <link rel="icon" type="image/png" href="http://en.wikipedia.org/favicon.ico"/>
 <meta name="author" content="Siddique Hameed"/>
 <!--
+	Last Updated: 2/16/2007
+	Bug fix: Removed urchin tracker as it broke this module
+	Version 0.3
+
 	Last Updated: 1/31/2007
 	Change Notes: Added support for czech (Česky) language
 	Version 0.3
@@ -55,10 +59,6 @@
 
 <script type="text/javascript" src="http://www.netvibes.com/api/0.3/emulation.js"></script>
 
-<script type="text/javascript">
-<?php include 'http://www.google-analytics.com/urchin.js';?>
-</script>
-
 <?php
     $height = "400";
 	if(!empty($_COOKIE['height'])) {
@@ -99,8 +99,6 @@ NV_ONLOAD = function()
 	resize();
     getRandomArticleFromWikipedia();
     setTitle();
-	_uacct = "UA-941159-1";
-	urchinTracker();
 }
 
 function initLanguage() {
