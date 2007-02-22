@@ -12,7 +12,7 @@
     <property name="widgets.build.dir" value="${build.dir}/widgets"/>
     <property name="widgets.source.dir" value="widgets/src/java"/>
     <property name="widgets.lib.prefix" value="${ant.project.name}Widgets"/>
-    <property name="widgets.lib.version" value="0.1"/>
+    <property name="widgets.lib.version" value="0.2"/>
     <property name="widgets.lib.name" value="${widgets.lib.prefix}-${widgets.lib.version}.jar"/>
     <property name="widgets.lib.dir" value="${lib.dir}/widgets"/>
 
