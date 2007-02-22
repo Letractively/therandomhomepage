@@ -37,6 +37,7 @@ public class LightboxImageDemo implements EntryPoint {
         tabs.add(new SlideshowLightboxImagePanel(), "Slideshow");
         tabs.add(new SlideshowLightboxWithBackgroundMusicPanel(), "Slideshow with music");
         tabs.add(new SetupPanel(), "Setup");
+        tabs.add(new TestPanel(),"Google Video Bar");
 
         tabs.selectTab(0);
 

@@ -1,6 +1,7 @@
 <module>
 
     <inherits name='therandomhomepage.widgets.LightboxImage'/>
+    <inherits name='therandomhomepage.widgets.GoogleVideoBar'/>
 
     <public path="lightboximagedemopublic"/>
     <source path="lightboximagedemoclient"/>

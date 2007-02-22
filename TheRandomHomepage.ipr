@@ -507,11 +507,11 @@
     </library>
     <library name="TheRandomHomepageWidgets">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/widgets/TheRandomHomepageWidgets-0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/widgets/TheRandomHomepageWidgets-0.2.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$PROJECT_DIR$/lib/widgets/TheRandomHomepageWidgets-0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/widgets/TheRandomHomepageWidgets-0.2.jar!/" />
       </SOURCES>
     </library>
   </component>
