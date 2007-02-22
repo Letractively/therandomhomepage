@@ -5,6 +5,9 @@
 <link rel="icon" type="image/png" href="http://en.wikipedia.org/favicon.ico"/>
 <meta name="author" content="Siddique Hameed"/>
 <!--
+	Last Updated: 2/22/2007
+	Bug fix: Added urchin tracker back using "iframe" approach
+
 	Last Updated: 2/16/2007
 	Bug fix: Removed urchin tracker as it broke this module
 	Version 0.3
@@ -384,5 +387,6 @@ function setHTML(className, str)
         </tr>
     </table>
 </form>
+<iframe style="height:0px; width:0px; display:none;" src="http://www.therandomhomepage.com/php/GoogleAnalyticsTracker.php" />
 </body>
 </html>
