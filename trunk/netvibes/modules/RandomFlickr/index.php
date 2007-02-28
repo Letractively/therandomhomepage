@@ -1313,10 +1313,9 @@ var RssFeed = Class.create();
 		slideshowDelay = getSlideShowDelay();
 
 		var flickrFeedURL = "http://www.flickr.com/services/feeds/photos_public.gne?tags="+tags+"&format=rss_200";
-		if (!NV_XML_REQUEST_URL )
-		{
-			NV_XML_REQUEST_URL = "http://www.netvibes.com/xmlProxy.php";
-		}
+
+		var NV_XML_REQUEST_URL = "http://www.netvibes.com/xmlProxy.php";
+
 		var request = new Ajax.Request(NV_XML_REQUEST_URL + '?url=' + escape(flickrFeedURL), { method: 'get', onSuccess: xmlResponseHandler, onFailure: showErrorMessage });
 	}
 
