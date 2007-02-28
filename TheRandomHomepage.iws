@@ -18,20 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src/googleVideoBarTest/client/GoogleVideoBarTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src/googleVideoBarTest/server/GoogleVideoBarTestServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src/googleVideoBarTest/client/GoogleVideoBarTestService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src/googleVideoBarTest/public/GoogleVideoBarTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src/googleVideoBarTest/public" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src/googleVideoBarTest/public/GoogleVideoBarTestWorking.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src/googleVideoBarTest" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src/googleVideoBarTest/server" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src/googleVideoBarTest/client/GoogleVideoBarTestServiceAsync.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src/googleVideoBarTest/client" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scratch/src/googleVideoBarTest/GoogleVideoBarTest.gwt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iml" afterPath="$PROJECT_DIR$/TheRandomHomepage.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php" afterPath="$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
@@ -189,22 +176,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LightboxImageDemo.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemopublic/LightboxImageDemo.html">
-          <provider editor-type-id="HtmlPreview">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="127" selection-end="127" vertical-scroll-proportion="0.14078675">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GoogleVideoBar.gwt.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/GoogleVideoBar.gwt.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="4" selection-start="72" selection-end="72" vertical-scroll-proportion="0.16732283">
+            <state line="5" column="4" selection-start="72" selection-end="72" vertical-scroll-proportion="0.10611735">
               <folding />
             </state>
           </provider>
@@ -222,7 +197,7 @@
       <file leaf-file-name="GoogleVideoBarTestService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scratch/src/googleVideoBarTest/client/GoogleVideoBarTestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="17" selection-start="307" selection-end="307" vertical-scroll-proportion="0.33464566">
+            <state line="12" column="17" selection-start="307" selection-end="307" vertical-scroll-proportion="0.2122347">
               <folding />
             </state>
           </provider>
@@ -231,7 +206,7 @@
       <file leaf-file-name="GoogleVideoBarTestServiceAsync.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scratch/src/googleVideoBarTest/client/GoogleVideoBarTestServiceAsync.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="17" selection-start="360" selection-end="360" vertical-scroll-proportion="0.3250478">
+            <state line="13" column="17" selection-start="360" selection-end="360" vertical-scroll-proportion="0.20833333">
               <folding />
             </state>
           </provider>
@@ -240,7 +215,7 @@
       <file leaf-file-name="GoogleVideoBarTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scratch/src/googleVideoBarTest/client/GoogleVideoBarTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="295" selection-end="295" vertical-scroll-proportion="0.23425196">
+            <state line="10" column="13" selection-start="295" selection-end="295" vertical-scroll-proportion="0.02122347">
               <folding />
             </state>
           </provider>
@@ -261,19 +236,31 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="41" selection-start="2161" selection-end="2161" vertical-scroll-proportion="0.6832298">
+            <state line="62" column="41" selection-start="2161" selection-end="2161" vertical-scroll-proportion="0.021907216">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoogleVideoBarTestWorking.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GoogleVideoBarTestWorking.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scratch/src/googleVideoBarTest/public/GoogleVideoBarTestWorking.html">
           <provider editor-type-id="HtmlPreview">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="75" column="47" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.6572165">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php">
+          <provider editor-type-id="HtmlPreview">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1423" column="7" selection-start="41289" selection-end="41289" vertical-scroll-proportion="0.9755155">
               <folding />
             </state>
           </provider>
@@ -282,7 +269,7 @@
       <file leaf-file-name="TestPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemoclient/TestPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.61759084">
+            <state line="23" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.39583334">
               <folding />
             </state>
           </provider>
@@ -401,6 +388,24 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="Libraries" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\scratch\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -615,6 +620,54 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\netvibes" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\netvibes\modules" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\netvibes" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\netvibes\modules" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\netvibes\modules\RandomFlickr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
     </subPane>
   </component>
   <component name="ProjectReloadState">
@@ -628,7 +681,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure Favorites="false" PackagesPane="false" Scope="false" ProjectPane="false" />
+      <showStructure ProjectPane="false" PackagesPane="false" Scope="false" Favorites="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -642,8 +695,8 @@
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="cvs_file_history_flatWidth1" value="299" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="cvs_file_history_flatWidth1" value="299" />
     <property name="cvs_file_history_treeWidth1" value="299" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -1008,7 +1061,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3256617" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32200646" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3276699" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26160815" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45979616" order="14" />
@@ -1018,7 +1071,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919094" order="1" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35558113" order="16" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3238958" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3238958" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29671574" order="4" />
@@ -1027,8 +1080,8 @@
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="11" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49490374" order="12" />
       <window_info id="FaTPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6202965" order="8" />
-      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="SVN Properties" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295583" order="9" />
+      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" order="4" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" order="10" />
@@ -1055,7 +1108,7 @@
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
     <option name="PUT_FOCUS_INTO_COMMENT" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working &quot;GoogleVideoBar&quot; widget" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on &quot;GoogleVideoBar&quot; widget" />
     <option name="SAVE_LAST_COMMIT_MESSAGE" value="true" />
     <option name="CHECKIN_DIALOG_SPLITTER_PROPORTION" value="0.8" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -1068,7 +1121,6 @@
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Added &quot;moduletitle&quot; user preference to &quot;Random Feed&quot; Google gadget" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="Added support for czech language" />
     <MESSAGE value="Change in title" />
@@ -1078,6 +1130,7 @@
     <MESSAGE value="Updated images for Random Feed" />
     <MESSAGE value="Added urchin tracker back using &quot;iframe&quot; approach" />
     <MESSAGE value="Working &quot;GoogleVideoBar&quot; widget" />
+    <MESSAGE value="Working on &quot;GoogleVideoBar&quot; widget" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1149,13 +1202,6 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemoclient/SlideshowLightboxImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="266" selection-end="266" vertical-scroll-proportion="0.020757021">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemoclient/LightboxImageDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="50" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.44810745">
@@ -1184,19 +1230,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemoclient/TestPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.61759084">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemopublic/LightboxImageDemo.html">
       <provider editor-type-id="HtmlPreview">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="127" selection-end="127" vertical-scroll-proportion="0.14078675">
+        <state line="4" column="0" selection-start="127" selection-end="127" vertical-scroll-proportion="0.087628864">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/GoogleVideoBar.gwt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="72" selection-end="72" vertical-scroll-proportion="0.10611735">
           <folding />
         </state>
       </provider>
@@ -1210,14 +1256,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scratch/src/googleVideoBarTest/client/GoogleVideoBarTestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="307" selection-end="307" vertical-scroll-proportion="0.33464566">
+        <state line="12" column="17" selection-start="307" selection-end="307" vertical-scroll-proportion="0.2122347">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scratch/src/googleVideoBarTest/client/GoogleVideoBarTestServiceAsync.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="360" selection-end="360" vertical-scroll-proportion="0.3250478">
+        <state line="13" column="17" selection-start="360" selection-end="360" vertical-scroll-proportion="0.20833333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch/src/googleVideoBarTest/client/GoogleVideoBarTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="295" selection-end="295" vertical-scroll-proportion="0.02122347">
           <folding />
         </state>
       </provider>
@@ -1229,16 +1282,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scratch/src/googleVideoBarTest/client/GoogleVideoBarTest.java">
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemoclient/TestPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="295" selection-end="295" vertical-scroll-proportion="0.23425196">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/GoogleVideoBar.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="72" selection-end="72" vertical-scroll-proportion="0.16732283">
+        <state line="23" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.39583334">
           <folding />
         </state>
       </provider>
@@ -1248,7 +1294,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="41" selection-start="2161" selection-end="2161" vertical-scroll-proportion="0.6832298">
+        <state line="62" column="41" selection-start="2161" selection-end="2161" vertical-scroll-proportion="0.021907216">
           <folding />
         </state>
       </provider>
@@ -1258,7 +1304,17 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="75" column="47" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.6572165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1423" column="7" selection-start="41289" selection-end="41289" vertical-scroll-proportion="0.9755155">
           <folding />
         </state>
       </provider>
