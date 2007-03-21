@@ -18,9 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/google/gadgets/GoogleNewsBar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainclient/BookmarkThisWidget.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html" afterPath="$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
@@ -164,19 +162,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GoogleVideoBarTestServiceAsync.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scratch/src/googleVideoBarTest/client/GoogleVideoBarTestServiceAsync.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="17" selection-start="360" selection-end="360" vertical-scroll-proportion="0.21039604">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FooterMenuItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/FooterMenuItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="288" selection-end="288" vertical-scroll-proportion="0.021039603">
+            <state line="12" column="13" selection-start="288" selection-end="288" vertical-scroll-proportion="0.020581113">
               <folding />
             </state>
           </provider>
@@ -185,16 +174,28 @@
       <file leaf-file-name="TheRandomHomepage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="37" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.78814626">
+            <state line="100" column="37" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.79038227">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookmarkThisWidget.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BookmarkThisWidget.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/BookmarkThisWidget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="901" selection-end="901" vertical-scroll-proportion="0.34300125">
+            <state line="16" column="0" selection-start="901" selection-end="901" vertical-scroll-proportion="0.33538842">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutUs.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html">
+          <provider editor-type-id="HtmlPreview">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="0" selection-start="2321" selection-end="2321" vertical-scroll-proportion="0.975827">
               <folding />
             </state>
           </provider>
@@ -215,7 +216,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="41" selection-start="2161" selection-end="2161" vertical-scroll-proportion="0.022135416">
+            <state line="62" column="41" selection-start="2161" selection-end="2161" vertical-scroll-proportion="0.021628499">
               <folding />
             </state>
           </provider>
@@ -227,7 +228,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="47" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.22786458">
+            <state line="75" column="47" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.24300255">
               <folding />
             </state>
           </provider>
@@ -239,7 +240,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1404" column="37" selection-start="40141" selection-end="40141" vertical-scroll-proportion="0.44921875">
+            <state line="1404" column="37" selection-start="40141" selection-end="40141" vertical-scroll-proportion="0.45928752">
               <folding />
             </state>
           </provider>
@@ -248,7 +249,7 @@
       <file leaf-file-name="module.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google/gadgets/GoogleNewsBar/module.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="39" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.021437578">
+            <state line="18" column="39" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.020961776">
               <folding />
             </state>
           </provider>
@@ -257,7 +258,7 @@
       <file leaf-file-name="TestPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemoclient/TestPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.39975247">
+            <state line="23" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.39104116">
               <folding />
             </state>
           </provider>
@@ -435,6 +436,10 @@
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -455,6 +460,10 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java\therandomhomepage\mainpublic" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -513,28 +522,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage.ipr" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\src\java" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -1178,7 +1165,7 @@
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
     <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ERROR_OCCURED" value="true" />
+    <option name="ERROR_OCCURED" value="false" />
     <option name="ACTIVE_VCS_NAME" value="svn" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
@@ -1264,16 +1251,6 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemopublic/LightboxImageDemo.html">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="127" selection-end="127" vertical-scroll-proportion="0.087628864">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/GoogleVideoBar.gwt.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="4" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
@@ -1311,14 +1288,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/FooterMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="288" selection-end="288" vertical-scroll-proportion="0.021039603">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="37" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.78814626">
+        <state line="12" column="13" selection-start="288" selection-end="288" vertical-scroll-proportion="0.020581113">
           <folding />
         </state>
       </provider>
@@ -1335,7 +1305,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="41" selection-start="2161" selection-end="2161" vertical-scroll-proportion="0.022135416">
+        <state line="62" column="41" selection-start="2161" selection-end="2161" vertical-scroll-proportion="0.021628499">
           <folding />
         </state>
       </provider>
@@ -1345,7 +1315,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="47" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.22786458">
+        <state line="75" column="47" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.24300255">
           <folding />
         </state>
       </provider>
@@ -1355,28 +1325,45 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1404" column="37" selection-start="40141" selection-end="40141" vertical-scroll-proportion="0.44921875">
+        <state line="1404" column="37" selection-start="40141" selection-end="40141" vertical-scroll-proportion="0.45928752">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/google/gadgets/GoogleNewsBar/module.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="39" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.021437578">
+        <state line="18" column="39" selection-start="1257" selection-end="1257" vertical-scroll-proportion="0.020961776">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/lightboximagedemoclient/TestPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.39975247">
+        <state line="23" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="0.39104116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/TheRandomHomepage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="37" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.79038227">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainclient/BookmarkThisWidget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="901" selection-end="901" vertical-scroll-proportion="0.34300125">
+        <state line="16" column="0" selection-start="901" selection-end="901" vertical-scroll-proportion="0.33538842">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="2321" selection-end="2321" vertical-scroll-proportion="0.975827">
           <folding />
         </state>
       </provider>
