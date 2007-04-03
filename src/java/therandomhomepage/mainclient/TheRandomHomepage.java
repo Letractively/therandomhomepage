@@ -17,7 +17,8 @@ public class TheRandomHomepage implements EntryPoint {
         tabs = new TabPanel();
         tabs.setWidth("100%");
 
-        tabs.add(getMainPanel(), "");
+        tabs.add(getGeneralPanel(), "General");
+        tabs.add(getVideoBarPanel(), "Video");
         tabs.add(new AboutUsPanel(), "");
         tabs.add(new DevelopersPanel(), "");
         tabs.add(new FeedbackPanel(), "");
@@ -30,7 +31,7 @@ public class TheRandomHomepage implements EntryPoint {
         RootPanel.get().add(getFooter());
     }
 
-    private FlexTable getMainPanel() {
+    private FlexTable getGeneralPanel() {
         FlexTable flexTable = new FlexTable();
         flexTable.setCellPadding(2);
         flexTable.setCellSpacing(5);
@@ -71,6 +72,24 @@ public class TheRandomHomepage implements EntryPoint {
         flexTable.getCellFormatter().setHorizontalAlignment(0, 2, HasHorizontalAlignment.ALIGN_CENTER);
         flexTable.getCellFormatter().setWidth(0, 2, "33%");
 
+        return flexTable;
+    }
+
+    private FlexTable getVideoBarPanel() {
+        FlexTable flexTable = new FlexTable();
+        flexTable.setCellPadding(2);
+        flexTable.setCellSpacing(5);
+        flexTable.setHeight("100%");
+        flexTable.setWidth("100%");
+
+        flexTable.getRowFormatter().setVerticalAlign(0, HasVerticalAlignment.ALIGN_TOP);
+
+        flexTable.getCellFormatter().setVerticalAlignment(0, 0, HasVerticalAlignment.ALIGN_TOP);
+        flexTable.getCellFormatter().setHorizontalAlignment(0, 0, HasHorizontalAlignment.ALIGN_CENTER);
+
+        TextBox searchBox = new TextBox();
+
+        flexTable.setWidget(0, 0, searchBox);
         return flexTable;
     }
 
