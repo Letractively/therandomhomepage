@@ -264,3 +264,11 @@ b.thanks {
     padding: 2px;
     cursor: default;
 }
+
+input.searchBox{
+	background: transparent url(./images/searchcontrol.png) no-repeat 4px center;
+	padding: 3px 3px 3px 20px;
+	border: 1px solid #CCC;
+    color: rgb(170, 170, 170);
+    width:250px;
+}
