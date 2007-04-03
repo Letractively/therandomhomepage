@@ -88,6 +88,7 @@ public class TheRandomHomepage implements EntryPoint {
         flexTable.getCellFormatter().setHorizontalAlignment(0, 0, HasHorizontalAlignment.ALIGN_CENTER);
 
         TextBox searchBox = new TextBox();
+        searchBox.setStyleName("searchBox");
 
         flexTable.setWidget(0, 0, searchBox);
         return flexTable;
