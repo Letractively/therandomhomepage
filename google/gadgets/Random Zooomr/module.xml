@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <!--
-	Last Updated: 05/01/2007
-	Change Notes: Default transition effect was made to "None"
-  -->
   <ModulePrefs title="__UP_moduletitle__" directory_title="Random Zooomring" title_url="http://www.therandomhomepage.com"
 			   height="350"
                author="Siddique Hameed"
                description="Flip through tagged pictures from Zooomr or view them as slideshows in amazing visual effects.
-			   Click on the image to see 'Lightbox' effect. Mouse over Lightbox image's top right or top left for 'next' or 'previous' image."
+			   In inline mode, click on the image to see the 'Lightbox' effect in action. Press 'N' for 'Next', 'P' for 'Previous' image and 'X' to close."
                author_email="siddii+randomhomepage@gmail.com"
                render_inline="optional"
                scrolling="false"
@@ -16,9 +12,11 @@
                thumbnail="http://www.therandomhomepage.com/google/gadget/images/thumbnail.png"
                screenshot="http://www.therandomhomepage.com/google/gadgets/RandomFlickr/screenshot.jpg"
           >
+  <Require feature="minimessage" />
+  <Require feature="setprefs" />
   </ModulePrefs>
-  <UserPref name="moduletitle" display_name="Title" default_value="Random Flickring" required="true"/>
-  <UserPref name="tags" display_name="Tags(comma separated)" required="true" datatype="string" default_value="art,colorful,travel"/>
+  <UserPref name="moduletitle" display_name="Title" default_value="Random Zooomring" required="true"/>
+  <UserPref name="tags" display_name="Tags(comma separated)" required="true" datatype="string" default_value="travel"/>
   <UserPref name="transition_effect" display_name="Transition effect" datatype="enum" default_value="-1">
    <EnumValue display_value="None"  value="-1" />
    <EnumValue display_value="Random"  value="0" />
@@ -44,13 +42,13 @@
    <EnumValue value="55" />
    <EnumValue value="60" />
 </UserPref>
-<UserPref name="image_click_behaviour" display_name="On Image Click" datatype="enum" default_value="0">
-	<EnumValue display_value="Lightbox Effect"  value="0" />
-	<EnumValue display_value="Open Original Image"  value="1" />
-	<EnumValue display_value="Open Flickr Link"  value="2" />
+<UserPref name="image_click_behaviour" display_name="On Image Click" datatype="enum" default_value="1">
+	<EnumValue display_value="Open Zooomr Link"  value="1" />
+	<EnumValue display_value="Open Original Image"  value="2" />
+	<EnumValue display_value="Lightbox Effect (Supported only in inline mode)"  value="0" />
 </UserPref>
 
-<Content type="html-inline">
+<Content type="html">
   <![CDATA[
 	<script type="text/javascript" src="http://www.therandomhomepage.com/js/prototype.js"></script>
 	<script type="text/javascript" src="http://www.therandomhomepage.com/js/effects.js"></script>
@@ -83,6 +81,7 @@
 	<script type="text/javascript">
 
 	var prefs = new _IG_Prefs(__MODULE_ID__);
+	var mini = new _IG_MiniMessage(__MODULE_ID__);
 
 	var rssFeedArr = new Array();
 
@@ -246,10 +245,25 @@
 		tags = prefs.getString("tags");
 		transitionEffect = prefs.getInt("transition_effect");
 		imageClickBehaviour = prefs.getInt("image_click_behaviour");
+
+		try
+		{
+			var modulesLength = remote_modules.length;
+		}
+		catch (error)
+		{
+			if (imageClickBehaviour == 0)
+			{
+				mini.createDismissibleMessage("Lightbox effect is supported only in inline mode !");
+				imageClickBehaviour = 2;
+				prefs.set("image_click_behaviour",imageClickBehaviour);
+			}
+		}
 		slideshowDelay = prefs.getInt("slideshow_delay");
 		var flickrFeedURL = "http://beta.zooomr.com/bluenote/feeds:rss/tags/"+tags;
 		_IG_FetchXmlContent(flickrFeedURL,xmlResponseHandler);
 	}
+
     _IG_RegisterOnloadHandler(randomFlickrLoad);
 
     </script>
