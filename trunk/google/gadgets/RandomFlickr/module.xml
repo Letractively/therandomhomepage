@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <!--
+	Last Updated: 12/27/2006
+	Change Notes: Default transition effect was made to "None"
+  -->
+  <ModulePrefs title="__UP_moduletitle__" directory_title="Random Flickring" title_url="http://www.therandomhomepage.com"
+			   height="350"
+               author="Siddique Hameed"
+               description="Flip through tagged pictures from Flickr or view them as slideshows in amazing visual effects.
+			   Click on the image to see 'Lightbox' effect. Mouse over Lightbox image's top right or top left for 'next' or 'previous' image."
+               author_email="siddii+randomhomepage@gmail.com"
+               render_inline="optional"
+               scrolling="false"
+			   singleton="true"
+               thumbnail="http://www.therandomhomepage.com/google/gadgets/RandomFlickr/thumbnail.gif"
+               screenshot="http://www.therandomhomepage.com/google/gadgets/RandomFlickr/screenshot.jpg"
+          >
+  </ModulePrefs>
+  <UserPref name="moduletitle" display_name="Title" default_value="Random Flickring" required="true"/>
+  <UserPref name="tags" display_name="Tags(comma separated)" required="true" datatype="string" default_value="art,colorful,travel"/>
+  <UserPref name="transition_effect" display_name="Transition effect" datatype="enum" default_value="-1">
+   <EnumValue display_value="None"  value="-1" />
+   <EnumValue display_value="Random"  value="0" />
+   <EnumValue display_value="BlindDown "  value="1" />
+   <EnumValue display_value="Highlight"  value="2" />
+   <EnumValue display_value="Shake"  value="3" />
+   <EnumValue display_value="Pulsate"  value="4" />
+   <EnumValue display_value="Grow"  value="5" />
+   <EnumValue display_value="Slidedown"  value="6" />
+   </UserPref>
+  <UserPref name="slideshow_delay" display_name="Slideshow delay(in seconds)" datatype="enum" default_value="0">
+   <EnumValue display_value="No slideshow"  value="0" />
+   <EnumValue value="5" />
+   <EnumValue value="10" />
+   <EnumValue value="15" />
+   <EnumValue value="20" />
+   <EnumValue value="25" />
+   <EnumValue value="30" />
+   <EnumValue value="35" />
+   <EnumValue value="40" />
+   <EnumValue value="45" />
+   <EnumValue value="50" />
+   <EnumValue value="55" />
+   <EnumValue value="60" />
+</UserPref>
+<UserPref name="image_click_behaviour" display_name="On Image Click" datatype="enum" default_value="0">
+	<EnumValue display_value="Lightbox Effect"  value="0" />
+	<EnumValue display_value="Open Original Image"  value="1" />
+	<EnumValue display_value="Open Flickr Link"  value="2" />
+</UserPref>
+
+<Content type="html-inline">
+  <![CDATA[
+	<script type="text/javascript" src="http://www.therandomhomepage.com/js/prototype.js"></script>
+	<script type="text/javascript" src="http://www.therandomhomepage.com/js/effects.js"></script>
+	<script type="text/javascript" src="http://www.therandomhomepage.com/js/lightbox_s.js"></script>
+	<link rel="stylesheet" href="http://www.therandomhomepage.com/css/lightbox.css" type="text/css" media="screen" />
+
+	<script type="text/javascript" src="http://www.therandomhomepage.com/js/effectshelper.js"></script>
+	<script type="text/javascript" src="http://www.therandomhomepage.com/js/utils.js"></script>
+	<style type="text/css">
+		img {
+			border-style: none;
+			cursor: pointer;
+		}
+
+		#divRandomFlickrControl {
+			cursor: pointer;
+			color: darkblue;
+			font-weight: bold;
+		}
+
+		#divRandomFlickrHeader {
+			color: black;
+			font-weight: bold;
+			text-align: center;
+		}
+		#divRandomFlickrContent {
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+
+	var prefs = new _IG_Prefs(__MODULE_ID__);
+
+	var rssFeedArr = new Array();
+
+	var prevIdx = -1;
+
+	var tags = "";
+	var transitionEffect = 0;
+	var imageClickBehaviour = 0;
+	var slideshowDelay = 0;
+
+	var controlElement = null;
+
+	var shouldBeRunning = true;
+
+	var RssFeed = Class.create();
+
+	RssFeed.prototype = {
+
+	   initialize: function(idx,title,link,desc,contentURL,thumbnailURL) {
+			this.idx = idx;
+			this.title = title;
+			this.link = link;
+			this.desc = desc;
+			this.contentURL = contentURL;
+			this.thumbnailURL = thumbnailURL;
+	   },
+
+	   getImage:function() {
+		  var imgHTML =  "<a title='"+this.title+"' target='_new' id='lightboxAnc"+this.idx+"' style='display: none;' ";
+
+		  if (imageClickBehaviour == 2) {
+			imgHTML += " href='"+this.link+"' ";
+		  }
+		  else {
+			imgHTML += " href='"+this.contentURL+"' ";
+		  }
+
+		  if (imageClickBehaviour == 0)
+		  {
+			imgHTML += " rel='lightbox["+tags+"]' ";
+		  }
+
+		  if (slideshowDelay > 0)
+		  {
+				imgHTML += " startslideshow='true' slideDuration='"+slideshowDelay+"' forever='true' ";
+		  }
+		  else {
+			imgHTML += " startslideshow='false' ";
+		  }
+		  imgHTML += " >"+extractBetween(this.desc,"<img",">")+"</a>";
+		  return imgHTML;
+	   },
+
+	   getTitle:function() {
+		  return this.title;
+	   }
+	};
+
+	function xmlResponseHandler(response) {
+		var items = response.getElementsByTagName("item");
+		var nodes = $A(items);
+		var i = 0;
+
+		nodes.each(function(itemNode){
+				var title = getChildNodeValueByNodeName(itemNode,"title");
+				var link = getChildNodeValueByNodeName(itemNode,"link");
+				var desc = getChildNodeValueByNodeName(itemNode,"description");
+				var content = getChildNodeByNodeName(itemNode,"media:content").getAttribute("url");
+				var thumbnail = getChildNodeByNodeName(itemNode,"media:thumbnail").getAttribute("url");
+				rssFeedArr[i] = new RssFeed(i,title,link,desc,content,thumbnail);
+				i++;
+	    });
+
+		if (nodes.length > 0)
+		{
+
+			var lightboxHTML = "";
+			rssFeedArr.each( function(rssFeed){
+				lightboxHTML += rssFeed.getImage();
+			});
+
+
+			var divContent = $('divRandomFlickrContent');
+
+			if (divContent)
+			{
+				Element.update(divContent,lightboxHTML);
+			}
+
+			if (imageClickBehaviour == 0)
+			{
+				Element.remove("overlay");
+				Element.remove("lightbox");
+				initLightbox();
+			}
+
+			showRandomFlickrImage();
+
+			controlElement = $('divRandomFlickrControl');
+			if (slideshowDelay > 0)
+			{
+				new PeriodicalExecuter(showRandomFlickrImage, slideshowDelay);
+				Element.update(controlElement,"<img src='http://www.therandomhomepage.com/images/lightbox/stop.gif' onclick='stopSlideShow();' title='Stop Slideshow'/>");
+
+				$(divRandomFlickrContent).onclick = stopSlideShow;
+			}
+			else {
+				Element.update(controlElement,"&gt;&gt;");
+				$("divRandomFlickrHeader").title = "Click on the arrows (>>) for next random picture";
+				controlElement.title = "Next Random Picture";
+				controlElement.onclick = function() {
+					showRandomFlickrImage();
+				}
+			}
+		}
+		else {
+			$('divRandomFlickrContent').innerHTML = "<center><I>Error retrieving pictures from Flickr! <br/>Please verify the tag names and try again later.</I></center>";
+		}
+	}
+
+	function showRandomFlickrImage(){
+		if (shouldBeRunning)
+		{
+			if (prevIdx > -1)
+			{
+				var prevAnchorElement = $('lightboxAnc'+prevIdx);
+				Element.hide(prevAnchorElement);
+			}
+
+			var randIdx = getRandomNo(rssFeedArr.length);
+
+			var ancElem = $('lightboxAnc'+randIdx);
+			if (ancElem)
+			{
+				$("divRandomFlickrHeader").innerHTML = rssFeedArr[randIdx].getTitle();
+				Element.show(ancElem);
+				applyEffect($("divRandomFlickrContent"),transitionEffect);
+				prevIdx = randIdx;
+			}
+		}
+	}
+
+
+	function stopSlideShow(){
+		if (shouldBeRunning)
+		{
+			Element.update(controlElement,"<img src='http://www.therandomhomepage.com/images/lightbox/start.gif' onclick='startSlideShow();' title='Start Slideshow'/>");
+			shouldBeRunning = false;
+		}
+	}
+
+	function startSlideShow(){
+		if (!shouldBeRunning)
+		{
+			Element.update(controlElement,"<img src='http://www.therandomhomepage.com/images/lightbox/stop.gif' onclick='stopSlideShow();' title='Stop Slideshow'/>");
+			shouldBeRunning = true;
+		}
+	}
+
+	function randomFlickrLoad(){
+		tags = prefs.getString("tags");
+		transitionEffect = prefs.getInt("transition_effect");
+		imageClickBehaviour = prefs.getInt("image_click_behaviour");
+		slideshowDelay = prefs.getInt("slideshow_delay");
+		var flickrFeedURL = "http://www.flickr.com/services/feeds/photos_public.gne?tags="+tags+"&format=rss_200";
+		_IG_FetchXmlContent(flickrFeedURL,xmlResponseHandler);
+	}
+
+    _IG_RegisterOnloadHandler(randomFlickrLoad);
+
+    </script>
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+	_uacct = "UA-941159-1";
+	urchinTracker();
+	</script>
+	<table width="100%"><tr><td><div id="divRandomFlickrHeader"></div></td><td align="right" valign="top"><div id="divRandomFlickrControl"></div></td></tr>
+	<tr colspan="2"><td><div id="divRandomFlickrContent"><center><I>Loading...</I></center></div></td></tr>
+	</table>
+  ]]>
+  </Content>
+</Module>

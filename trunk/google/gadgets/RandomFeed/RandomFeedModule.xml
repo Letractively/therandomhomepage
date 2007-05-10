@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="__UP_moduletitle__" directory_title="Random Feed" title_url="http://www.therandomhomepage.com"
+               height="250"
+               author="Siddique Hameed"
+               description="Randomly displays an item from the list of RSS/Atom feeds. Flip through the feed items manually (by clicking on the right arrows &gt;&gt;) or view them as slideshow."
+               author_email="siddii+randomhomepage@gmail.com"
+               render_inline="optional"
+               scrolling="true"
+               thumbnail="http://www.therandomhomepage.com/google/gadget/images/thumbnail.png"
+               screenshot="http://www.therandomhomepage.com/google/gadget/images/screenshot.png"
+          />
+  <!--
+        Last updated: 01/08/2007
+        Change Notes: Added "moduletitle" user preference 
+  -->
+  <UserPref name="moduletitle" display_name="Title" default_value="Random Feed" required="true"/>
+  <UserPref name="url1" display_name="RSS/Atom Feed 1" required="true" datatype="string" default_value="http://news.google.com/?output=rss"/>
+  <UserPref name="url2" display_name="RSS/Atom Feed 2" datatype="string" default_value="http://rss.news.yahoo.com/rss/topstories"/>
+  <UserPref name="url3" display_name="RSS/Atom Feed 3" datatype="string" default_value="http://www.digg.com/rss/index.xml"/>
+  <UserPref name="url4" display_name="RSS/Atom Feed 4" datatype="string" default_value="http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml"/>
+  <UserPref name="url5" display_name="RSS/Atom Feed 5" datatype="string" default_value="http://www.npr.org/rss/rss.php?id=1001"/>
+  <UserPref name="autoplay" display_name="Autoplay? " datatype="bool"/>
+  <UserPref name="delay" display_name="Delay in seconds" datatype="enum" default_value="10">
+   <EnumValue value="5" />
+   <EnumValue value="10" />
+   <EnumValue value="15" />
+   <EnumValue value="20" />
+   <EnumValue value="25" />
+   <EnumValue value="30" />
+   <EnumValue value="35" />
+   <EnumValue value="40" />
+   <EnumValue value="45" />
+   <EnumValue value="50" />
+   <EnumValue value="55" />
+   <EnumValue value="60" />
+</UserPref>
+  <Content type="url" href="http://www.therandomhomepage.com/google/gadget/index.html"/>
+</Module>
