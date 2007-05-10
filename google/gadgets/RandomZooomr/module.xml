@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="__UP_moduletitle__" directory_title="Random Zooomring" title_url="http://www.therandomhomepage.com"
+               author="Siddique Hameed"
+               description="Flip through public tagged pictures from Zooomr or view them as slideshows in amazing visual effects.
+			   In inline mode, click on the image to see the 'Lightbox' effect in action. While in Lightbox effect, press 'N' for next, 'P' for previous image and 'X' to close."
+               author_email="siddii+randomhomepage@gmail.com"
+               render_inline="optional"
+               scrolling="false"
+			   singleton="true"
+               thumbnail="http://www.therandomhomepage.com/google/gadgets/RandomZooomr/thumbnail.jpg"
+               screenshot="http://www.therandomhomepage.com/google/gadgets/RandomZooomr/screenshot.jpg"
+          >
+  <Require feature="analytics"/>
+  <Require feature="minimessage" />
+  </ModulePrefs>
+  <UserPref name="moduletitle" display_name="Title" default_value="Random Zooomring" required="true"/>
+  <UserPref name="tags" display_name="Tags(comma separated)" required="true" datatype="string" default_value="colorful,travel"/>
+  <UserPref name="transition_effect" display_name="Transition effect" datatype="enum" default_value="-1">
+   <EnumValue display_value="None"  value="-1" />
+   <EnumValue display_value="Random"  value="0" />
+   <EnumValue display_value="BlindDown "  value="1" />
+   <EnumValue display_value="Highlight"  value="2" />
+   <EnumValue display_value="Shake"  value="3" />
+   <EnumValue display_value="Pulsate"  value="4" />
+   <EnumValue display_value="Grow"  value="5" />
+   <EnumValue display_value="Slidedown"  value="6" />
+   </UserPref>
+  <UserPref name="slideshow_delay" display_name="Slideshow delay(in seconds)" datatype="enum" default_value="0">
+   <EnumValue display_value="No slideshow"  value="0" />
+   <EnumValue value="5" />
+   <EnumValue value="10" />
+   <EnumValue value="15" />
+   <EnumValue value="20" />
+   <EnumValue value="25" />
+   <EnumValue value="30" />
+   <EnumValue value="35" />
+   <EnumValue value="40" />
+   <EnumValue value="45" />
+   <EnumValue value="50" />
+   <EnumValue value="55" />
+   <EnumValue value="60" />
+</UserPref>
+<UserPref name="image_click_behaviour" display_name="On Image Click" datatype="enum" default_value="1">
+	<EnumValue display_value="Open Zooomr Link"  value="1" />
+	<EnumValue display_value="Open Original Image"  value="2" />
+	<EnumValue display_value="Lightbox Effect (Only in inline mode)"  value="0" />
+</UserPref>
+
+<Content type="html">
+  <![CDATA[
+	<script type="text/javascript" src="http://www.therandomhomepage.com/js/prototype.js"></script>
+	<script type="text/javascript" src="http://www.therandomhomepage.com/js/effects.js"></script>
+	<script type="text/javascript" src="http://www.therandomhomepage.com/js/lightbox_s.js"></script>
+	<link rel="stylesheet" href="http://www.therandomhomepage.com/css/lightbox.css" type="text/css" media="screen" />
+
+	<script type="text/javascript" src="http://www.therandomhomepage.com/js/effectshelper.js"></script>
+	<script type="text/javascript" src="http://www.therandomhomepage.com/js/utils.js"></script>
+	<style type="text/css">
+		img {
+			border-style: none;
+			cursor: pointer;
+		}
+
+		#divRandomZooomrControl {
+			cursor: pointer;
+			color: darkblue;
+			font-weight: bold;
+		}
+
+		#divRandomZooomrHeader {
+			color: black;
+			font-weight: bold;
+			text-align: center;
+		}
+		#divRandomZooomrContent {
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+
+	var prefs = new _IG_Prefs(__MODULE_ID__);
+	var mini = new _IG_MiniMessage(__MODULE_ID__);
+
+	var rssFeedArr = new Array();
+
+	var tagArr = new Array();
+
+	var tagRespCount = 0;
+
+	var prevIdx = -1;
+
+	var tags = "";
+	var transitionEffect = 0;
+	var imageClickBehaviour = 0;
+	var slideshowDelay = 0;
+
+	var controlElement = null;
+
+	var shouldBeRunning = true;
+
+	var RssFeed = Class.create();
+
+	RssFeed.prototype = {
+
+	   initialize: function(idx,title,link,desc,contentURL,thumbnailURL) {
+			this.idx = idx;
+			this.title = title;
+			this.link = link;
+			this.desc = desc;
+			this.contentURL = contentURL;
+			this.thumbnailURL = thumbnailURL;
+	   },
+
+	   getImage:function() {
+		  var imgHTML =  "<a title='"+this.title+"' target='_new' id='lightboxAnc"+this.idx+"' style='display: none;' ";
+
+		  if (imageClickBehaviour == 2) {
+			imgHTML += " href='"+this.link+"' ";
+		  }
+		  else {
+			imgHTML += " href='"+this.contentURL+"' ";
+		  }
+
+		  if (imageClickBehaviour == 0)
+		  {
+			imgHTML += " rel='lightbox["+tags+"]' ";
+		  }
+
+		  if (slideshowDelay > 0)
+		  {
+				imgHTML += " startslideshow='true' slideDuration='"+slideshowDelay+"' forever='true' ";
+		  }
+		  else {
+			imgHTML += " startslideshow='false' ";
+		  }
+		  imgHTML += " >"+extractBetween(this.desc,"<img",">")+"</a>";
+		  return imgHTML;
+	   },
+
+	   getTitle:function() {
+		  return this.title;
+	   }
+	};
+
+	var i = 0;
+
+	function xmlResponseHandler(response) {
+		tagRespCount++;
+		var items = response.getElementsByTagName("item");
+		var nodes = $A(items);
+		var xmlFeedArr = new Array();
+
+		nodes.each(function(itemNode){
+				var title = getChildNodeValueByNodeName(itemNode,"title");
+				var link = getChildNodeValueByNodeName(itemNode,"link");
+				var desc = getChildNodeValueByNodeName(itemNode,"description");
+				var content = getChildNodeByNodeName(itemNode,"media:content").getAttribute("url");
+				var thumbnail = getChildNodeByNodeName(itemNode,"media:thumbnail").getAttribute("url");
+				rssFeedArr[i] = new RssFeed(i,title,link,desc,content,thumbnail);
+				i++;
+	    });
+
+		if (tagRespCount == tagArr.length)
+		{
+			refreshGadget();
+		}
+	}
+
+	function refreshGadget() {
+		if (rssFeedArr.length > 0)
+		{
+
+			var lightboxHTML = "";
+			rssFeedArr.each( function(rssFeed){
+				lightboxHTML += rssFeed.getImage();
+			});
+
+
+			var divContent = $('divRandomZooomrContent');
+
+			if (divContent)
+			{
+				Element.update(divContent,lightboxHTML);
+			}
+
+			if (imageClickBehaviour == 0)
+			{
+				Element.remove("overlay");
+				Element.remove("lightbox");
+				initLightbox();
+			}
+
+			showRandomZooomrImage();
+
+			controlElement = $('divRandomZooomrControl');
+			if (slideshowDelay > 0)
+			{
+				new PeriodicalExecuter(showRandomZooomrImage, slideshowDelay);
+				Element.update(controlElement,"<img src='http://www.therandomhomepage.com/images/lightbox/stop.gif' onclick='stopSlideShow();' title='Stop Slideshow'/>");
+
+				$(divRandomZooomrContent).onclick = stopSlideShow;
+			}
+			else {
+				Element.update(controlElement,"&gt;&gt;");
+				$("divRandomZooomrHeader").title = "Click on the arrows (>>) for next random picture";
+				controlElement.title = "Next Random Picture";
+				controlElement.onclick = function() {
+					showRandomZooomrImage();
+				}
+			}
+		}
+		else {
+			$('divRandomZooomrContent').innerHTML = "<center><I>Error retrieving pictures from Zooomr! <br/>Please verify the tag names are correct and try again later.</I></center>";
+		}
+	}
+
+	function showRandomZooomrImage(){
+		if (shouldBeRunning)
+		{
+			if (prevIdx > -1)
+			{
+				var prevAnchorElement = $('lightboxAnc'+prevIdx);
+				Element.hide(prevAnchorElement);
+			}
+
+			var randIdx = getRandomNo(rssFeedArr.length);
+
+			var ancElem = $('lightboxAnc'+randIdx);
+			if (ancElem)
+			{
+				$("divRandomZooomrHeader").innerHTML = rssFeedArr[randIdx].getTitle();
+				Element.show(ancElem);
+				applyEffect($("divRandomZooomrContent"),transitionEffect);
+				prevIdx = randIdx;
+			}
+		}
+	}
+
+
+	function stopSlideShow(){
+		if (shouldBeRunning)
+		{
+			Element.update(controlElement,"<img src='http://www.therandomhomepage.com/images/lightbox/start.gif' onclick='startSlideShow();' title='Start Slideshow'/>");
+			shouldBeRunning = false;
+		}
+	}
+
+	function startSlideShow(){
+		if (!shouldBeRunning)
+		{
+			Element.update(controlElement,"<img src='http://www.therandomhomepage.com/images/lightbox/stop.gif' onclick='stopSlideShow();' title='Stop Slideshow'/>");
+			shouldBeRunning = true;
+		}
+	}
+
+	function randomZooomrLoad(){
+		tags = prefs.getString("tags");
+		transitionEffect = prefs.getInt("transition_effect");
+		imageClickBehaviour = prefs.getInt("image_click_behaviour");
+
+		try
+		{
+			var modulesLength = remote_modules.length;
+		}
+		catch (error)
+		{
+			if (imageClickBehaviour == 0)
+			{
+				mini.createDismissibleMessage("Lightbox effect is supported only in inline mode !");
+				imageClickBehaviour = 2;
+			}
+		}
+		slideshowDelay = prefs.getInt("slideshow_delay");
+
+		tagArr = tags.split(",");
+
+		for(var i=0; i < tagArr.length; i++) {
+			var zooomrFeedURL = "http://beta.zooomr.com/bluenote/feeds:rss/tags/"+tagArr[i];
+			_IG_FetchXmlContent(zooomrFeedURL,xmlResponseHandler);
+		}
+
+	}
+
+	_IG_Analytics("UA-941159-1", "/RandomZooomrGoogleGadget");
+
+    _IG_RegisterOnloadHandler(randomZooomrLoad);
+
+    </script>
+	<table width="100%"><tr><td><div id="divRandomZooomrHeader"></div></td><td align="right" valign="top"><div id="divRandomZooomrControl"></div></td></tr>
+	<tr colspan="2"><td><div id="divRandomZooomrContent"><center><I>Loading...</I></center></div></td></tr>
+	</table>
+  ]]>
+  </Content>
+</Module>
