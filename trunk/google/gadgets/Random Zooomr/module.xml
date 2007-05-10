@@ -8,7 +8,7 @@
                render_inline="optional"
                scrolling="false"
 			   singleton="true"
-               thumbnail="http://www.therandomhomepage.com/google/gadget/images/thumbnail.png"
+               thumbnail="http://www.therandomhomepage.com/google/gadgets/RandomZooomr/thumbnail.jpg"
                screenshot="http://www.therandomhomepage.com/google/gadgets/RandomZooomr/screenshot.jpg"
           >
   <Require feature="analytics"/>
