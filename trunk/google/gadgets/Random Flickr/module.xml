@@ -13,7 +13,7 @@
                render_inline="optional"
                scrolling="false"
 			   singleton="true"
-               thumbnail="http://www.therandomhomepage.com/google/gadget/images/thumbnail.png"
+               thumbnail="http://www.therandomhomepage.com/google/gadgets/RandomFlickr/thumbnail.gif"
                screenshot="http://www.therandomhomepage.com/google/gadgets/RandomFlickr/screenshot.jpg"
           >
   </ModulePrefs>
