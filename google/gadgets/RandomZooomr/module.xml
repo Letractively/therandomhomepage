@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="__UP_moduletitle__" directory_title="Random Zooomring" title_url="http://www.therandomhomepage.com"
+			   height="225"
                author="Siddique Hameed"
                description="Flip through public tagged pictures from Zooomr or view them as slideshows in amazing visual effects.
-			   In inline mode, click on the image to see the 'Lightbox' effect in action. While in Lightbox effect, press 'N' for next, 'P' for previous image and 'X' to close."
+			   Inline this gadget to see 'Lightbox' effect in action. While in Lightbox mode, press 'N' for next, 'P' for previous image and 'X' to close."
                author_email="siddii+randomhomepage@gmail.com"
                render_inline="optional"
                scrolling="false"
@@ -41,9 +42,9 @@
    <EnumValue value="55" />
    <EnumValue value="60" />
 </UserPref>
-<UserPref name="image_click_behaviour" display_name="On Image Click" datatype="enum" default_value="1">
-	<EnumValue display_value="Open Zooomr Link"  value="1" />
-	<EnumValue display_value="Open Original Image"  value="2" />
+<UserPref name="image_click_behaviour" display_name="On Image Click" datatype="enum" default_value="2">
+	<EnumValue display_value="Open Zooomr Link"  value="2" />
+	<EnumValue display_value="Open Original Image"  value="1" />
 	<EnumValue display_value="Lightbox Effect (Only in inline mode)"  value="0" />
 </UserPref>
 
