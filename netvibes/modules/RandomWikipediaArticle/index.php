@@ -5,6 +5,9 @@
 <link rel="icon" type="image/png" href="http://en.wikipedia.org/favicon.ico"/>
 <meta name="author" content="Siddique Hameed"/>
 <!--
+	Last Updated: 5/14/2007
+	Change Notes: Used phonifier from therandomhomepage because of its support from new host
+
 	Last Updated: 2/22/2007
 	Bug fix: Added urchin tracker back using "iframe" approach
 
@@ -123,7 +126,8 @@ function getRandomArticleFromWikipedia() {
 
 	randomWikipediaURL = arrRandomWikipediaURL[getValue("language")];
 
-    var url = "http://www.phonifier.com/phonify.php?i=1&m=0&l=0&u=" + randomWikipediaURL;
+    //var url = "http://www.phonifier.com/phonify.php?i=1&m=0&l=0&u=" + randomWikipediaURL;
+	var url = "http://www.therandomhomepage.com/php/phonifier/index.php?i=1&m=0&l=0&u=" + randomWikipediaURL;
     var d = new Date();
     url += "&rnd=" + d.getTime();
 
