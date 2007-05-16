@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <!--
+	Last Updated: 05/16/2006
+	Change Notes: Modified to non-inline gadget by default and fixed the annoying "Internet Explored cannot open the site" error
+
 	Last Updated: 12/27/2006
 	Change Notes: Default transition effect was made to "None"
   -->
   <ModulePrefs title="__UP_moduletitle__" directory_title="Random Flickring" title_url="http://www.therandomhomepage.com"
-			   height="350"
+			   height="250"
                author="Siddique Hameed"
                description="Flip through tagged pictures from Flickr or view them as slideshows in amazing visual effects.
 			   Click on the image to see 'Lightbox' effect. Mouse over Lightbox image's top right or top left for 'next' or 'previous' image."
@@ -16,6 +19,8 @@
                thumbnail="http://www.therandomhomepage.com/google/gadgets/RandomFlickr/thumbnail.gif"
                screenshot="http://www.therandomhomepage.com/google/gadgets/RandomFlickr/screenshot.jpg"
           >
+  <Require feature="analytics"/>
+  <Require feature="minimessage" />
   </ModulePrefs>
   <UserPref name="moduletitle" display_name="Title" default_value="Random Flickring" required="true"/>
   <UserPref name="tags" display_name="Tags(comma separated)" required="true" datatype="string" default_value="art,colorful,travel"/>
@@ -44,17 +49,17 @@
    <EnumValue value="55" />
    <EnumValue value="60" />
 </UserPref>
-<UserPref name="image_click_behaviour" display_name="On Image Click" datatype="enum" default_value="0">
-	<EnumValue display_value="Lightbox Effect"  value="0" />
-	<EnumValue display_value="Open Original Image"  value="1" />
+<UserPref name="image_click_behaviour" display_name="On Image Click" datatype="enum" default_value="2">
 	<EnumValue display_value="Open Flickr Link"  value="2" />
+	<EnumValue display_value="Open Original Image"  value="1" />
+	<EnumValue display_value="Lightbox Effect(Only in inline mode)"  value="0" />
 </UserPref>
 
-<Content type="html-inline">
+<Content type="html">
   <![CDATA[
 	<script type="text/javascript" src="http://www.therandomhomepage.com/js/prototype.js"></script>
 	<script type="text/javascript" src="http://www.therandomhomepage.com/js/effects.js"></script>
-	<script type="text/javascript" src="http://www.therandomhomepage.com/js/lightbox_s.js"></script>
+	<script type="text/javascript" src="http://www.therandomhomepage.com/js/lightbox_updated.js"></script>
 	<link rel="stylesheet" href="http://www.therandomhomepage.com/css/lightbox.css" type="text/css" media="screen" />
 
 	<script type="text/javascript" src="http://www.therandomhomepage.com/js/effectshelper.js"></script>
@@ -83,6 +88,7 @@
 	<script type="text/javascript">
 
 	var prefs = new _IG_Prefs(__MODULE_ID__);
+	var mini = new _IG_MiniMessage(__MODULE_ID__);
 
 	var rssFeedArr = new Array();
 
@@ -174,8 +180,6 @@
 
 			if (imageClickBehaviour == 0)
 			{
-				Element.remove("overlay");
-				Element.remove("lightbox");
 				initLightbox();
 			}
 
@@ -246,20 +250,21 @@
 		tags = prefs.getString("tags");
 		transitionEffect = prefs.getInt("transition_effect");
 		imageClickBehaviour = prefs.getInt("image_click_behaviour");
+
+		if ((window.top != window.self) && imageClickBehaviour == 0)
+		{
+			mini.createDismissibleMessage("Lightbox effect is supported only in inline mode !");
+			imageClickBehaviour = 2;
+		}
+
+
 		slideshowDelay = prefs.getInt("slideshow_delay");
 		var flickrFeedURL = "http://www.flickr.com/services/feeds/photos_public.gne?tags="+tags+"&format=rss_200";
 		_IG_FetchXmlContent(flickrFeedURL,xmlResponseHandler);
+		_IG_Analytics("UA-941159-1", "/RandomFlickrGoogleGadget");
 	}
-
     _IG_RegisterOnloadHandler(randomFlickrLoad);
-
     </script>
-	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-	</script>
-	<script type="text/javascript">
-	_uacct = "UA-941159-1";
-	urchinTracker();
-	</script>
 	<table width="100%"><tr><td><div id="divRandomFlickrHeader"></div></td><td align="right" valign="top"><div id="divRandomFlickrControl"></div></td></tr>
 	<tr colspan="2"><td><div id="divRandomFlickrContent"><center><I>Loading...</I></center></div></td></tr>
 	</table>
