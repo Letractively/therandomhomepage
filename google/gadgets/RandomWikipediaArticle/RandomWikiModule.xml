@@ -4,7 +4,14 @@
                  title_url="http://www.TheRandomHomepage.com" description="Flip through random articles from Wikipedia in your favorite language. Currently supported in English, Deutsch, Español, Français, Italiano, 日本語, Polski, Português, Русский and Svenska"
                  author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
                  thumbnail="http://www.therandomhomepage.com/google/gadgets/randomwiki/thumbnail.png"
-                 screenshot="http://www.therandomhomepage.com/google/gadgets/randomwiki/screenshot.png">
+                 screenshot="http://www.therandomhomepage.com/google/gadgets/randomwiki/screenshot.png"
+                 author_affiliation="http://www.boxysystems.com"
+                 author_location = "Ann Arbor, MI"
+                 author_photo = "http://www.therandomhomepage.com/images/author.jpg"
+                 author_aboutme = "I am an aspiring entrepreneur who fell in love in the craft of building software since my early age. Still searching for the perfect click of my life..."
+                 author_link = "http://blogs.boxysystems.com"
+                 author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"            
+            >
         <Locale lang="de"/>
         <Locale lang="en"/>
         <Locale lang="es"/>

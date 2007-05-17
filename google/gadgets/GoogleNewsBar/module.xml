@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
     <ModulePrefs title="Google News Bar" title_url="http://www.TheRandomHomepage.com"
-                 description="Google Newsbar based on Google AJAX search API." author="Siddique Hameed"
+                 description="Keep up to minute with the latest headlines using this Google News Bar gadget (based on Google AJAX search API). Add the search terms of your interest and view them as vertical or horizontal newsbars." author="Siddique Hameed"
                  author_email="siddii+randomhomepage@gmail.com" thumbnail="http://news.google.com/images/news.gif"
-                 screenshot="http://www.therandomhomepage.com/google/gadgets/GoogleNewsBar/GoogleNewsBarScreenShot.png">
+                 screenshot="http://www.therandomhomepage.com/google/gadgets/GoogleNewsBar/GoogleNewsBarScreenShot.png"
+                 author_affiliation="http://www.boxysystems.com"
+                 author_location = "Ann Arbor, MI"
+                 author_photo = "http://www.therandomhomepage.com/images/author.jpg"
+                 author_aboutme = "I am an aspiring entrepreneur who fell in love in the craft of building software since my early age. Still searching for the perfect click of my life..."
+                 author_link = "http://blogs.boxysystems.com"
+                 author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"                        
+            >
         <Require feature="dynamic-height"/>
+		<Require feature="analytics" />
     </ModulePrefs>
     <UserPref name="displayMode" display_name="Display Mode" default_value="horizontal" datatype="enum" required="true">
         <EnumValue value="horizontal"/>
@@ -72,16 +80,10 @@
 	function loadModule() {
 		LoadNewsBar();
 		_IG_AdjustIFrameHeight();
+		_IG_Analytics("UA-941159-1", "/GoogleNewsBar");
 	}
 	GSearch.setOnLoadCallback(loadModule);
-	//_IG_RegisterOnloadHandler(loadModule);
   </script>
-  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-_uacct = "UA-941159-1";
-urchinTracker();
-</script>
  ]]>
     </Content>
 </Module>
