@@ -9,6 +9,12 @@
                scrolling="true"
                thumbnail="http://www.therandomhomepage.com/google/gadget/images/thumbnail.png"
                screenshot="http://www.therandomhomepage.com/google/gadget/images/screenshot.png"
+               author_affiliation="http://www.boxysystems.com"
+               author_location = "Ann Arbor, MI"
+               author_photo = "http://www.therandomhomepage.com/images/author.jpg"
+               author_aboutme = "I am an aspiring entrepreneur who fell in love in the craft of building software since my early age. Still searching for the perfect click of my life..."
+               author_link = "http://blogs.boxysystems.com"
+               author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
           />
   <!--
         Last updated: 01/08/2007
