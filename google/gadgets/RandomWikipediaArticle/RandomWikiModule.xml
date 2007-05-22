@@ -10,8 +10,12 @@
                  author_photo = "http://www.therandomhomepage.com/images/author.jpg"
                  author_aboutme = "I am an aspiring entrepreneur who fell in love in the craft of building software since my early age. Still searching for the perfect click of my life..."
                  author_link = "http://blogs.boxysystems.com"
-                 author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"            
+                 author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
             >
+	<!--
+		Last Updated : 5/22/2007
+		Change Notes: Modified to crispier fonts
+	-->
         <Locale lang="de"/>
         <Locale lang="en"/>
         <Locale lang="es"/>
@@ -37,8 +41,9 @@
         <EnumValue value="ru" display_value="Русский"/>
         <EnumValue value="sv" display_value="Svenska"/>
     </UserPref>
-	<!-- Last Updated : 12/11/2006 -->
+
     <Content type="html"><![CDATA[
+<link rel='stylesheet' type='text/css' media='all' href='http://www.therandomhomepage.com/php/phonifier/phonify.css'/>
 <style type="text/css">
 a {
     text-decoration: none;
@@ -61,20 +66,12 @@ p {
     line-height: 1.5em;
 }
 p img { margin: 0; }
-hr {
-    height: 1px;
-    color: #aaaaaa;
-    background-color: #aaaaaa;
-    border: 0;
-    margin: 0.2em 0 0.2em 0;
-}
-h1, h2, h3, h4, h5, h6 {
-    color: Black;
-    background: none;
-    font-weight: normal;
-    margin: 0;
-    padding-top: 0.5em;
-    padding-bottom: 0.17em;
+
+h3 {
+	font-weight:bold;
+	font-size:15px;
+	margin:3px 0px;
+	color: #000000;
 }
 div.contentClass {
 	background-color:#F4F4F4;
@@ -126,7 +123,7 @@ div.contentClass {
 		 var actualURL = grep(responseText,arrFooterLimit[lang],'">http://');
          var title = grep(responseText,'<h1 class="firstHeading">','</h1>');
          setHTML("header__MODULE_ID__","<a title='"+title+"' target='_new' href='"+actualURL+"'><h3>"+title+"</h3></a>");
-         setHTML("arrow__MODULE_ID__","<div title='Next Random Article' style='font-family: Arial, sans-serif;font-weight:bold;color:darkblue;cursor:pointer;' onClick='getRandomWiki__MODULE_ID__()'>&gt;&gt;&nbsp;&nbsp;</div>");
+         setHTML("arrow__MODULE_ID__","<div title='Next Random Article' style='font-size:15px;font-family: Arial, sans-serif;font-weight:bold;color:darkblue;cursor:pointer;' onClick='getRandomWiki__MODULE_ID__()'>&gt;&gt;&nbsp;&nbsp;</div>");
 
          var bodyContent = grep(responseText,'<div id="bodyContent">','<div class="printfooter">');
          var actualBodyContent = grep(bodyContent,'<p>','Saved in parser cache');
@@ -195,7 +192,7 @@ function grep(wholeStr, startsWith, endsWith)
 	iFrom += startsWith.length;
 	if (iTo > iFrom) {
 		grepStr = wholeStr.substring(iFrom, iTo);
-	} 
+	}
 	return grepStr;
 }
 // Function grep() ends here
