@@ -18,7 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/google/gadgets/RandomWikipediaArticle/RandomWikiModule.xml" afterPath="$PROJECT_DIR$/google/gadgets/RandomWikipediaArticle/RandomWikiModule.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/google/gadgets/RandomFlickr/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
@@ -162,22 +162,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomWikipediaArticle/index.php">
-          <provider editor-type-id="HtmlPreview">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="79" selection-start="3427" selection-end="3427" vertical-scroll-proportion="0.99625933">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="prototype.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/public/lightbox/prototype.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="68" selection-start="804" selection-end="804" vertical-scroll-proportion="0.020190023">
+            <state line="28" column="68" selection-start="804" selection-end="804" vertical-scroll-proportion="0.020681266">
               <folding />
             </state>
           </provider>
@@ -186,7 +174,7 @@
       <file leaf-file-name="lightbox_s.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/main/lightbox/lightbox_s.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1096" column="48" selection-start="34940" selection-end="34940" vertical-scroll-proportion="0.74584323">
+            <state line="1096" column="48" selection-start="34940" selection-end="34940" vertical-scroll-proportion="0.77819085">
               <folding />
             </state>
           </provider>
@@ -195,7 +183,19 @@
       <file leaf-file-name="module.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFlickr/module.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="87" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.020556228">
+            <state line="35" column="87" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.021065675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFlickr/index.php">
+          <provider editor-type-id="HtmlPreview">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="25" selection-start="469" selection-end="469" vertical-scroll-proportion="0.5217391">
               <folding />
             </state>
           </provider>
@@ -204,7 +204,7 @@
       <file leaf-file-name="module.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google/gadgets/GoogleNewsBar/module.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="627" selection-end="1207" vertical-scroll-proportion="0.020556228">
+            <state line="12" column="0" selection-start="627" selection-end="1207" vertical-scroll-proportion="0.021065675">
               <folding />
             </state>
           </provider>
@@ -213,7 +213,7 @@
       <file leaf-file-name="module.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google/gadgets/RandomZooomr/module.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="71" selection-start="1900" selection-end="1900" vertical-scroll-proportion="0.020556228">
+            <state line="26" column="71" selection-start="1900" selection-end="1900" vertical-scroll-proportion="0.021065675">
               <folding />
             </state>
           </provider>
@@ -222,16 +222,16 @@
       <file leaf-file-name="RandomFeedModule.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFeed/RandomFeedModule.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="755" selection-end="1299" vertical-scroll-proportion="0.34945586">
+            <state line="17" column="0" selection-start="755" selection-end="1299" vertical-scroll-proportion="0.35811648">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomWikiModule.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RandomWikiModule.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google/gadgets/RandomWikipediaArticle/RandomWikiModule.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="219" column="9" selection-start="8679" selection-end="8679" vertical-scroll-proportion="3.5767837">
+            <state line="219" column="9" selection-start="8679" selection-end="8679" vertical-scroll-proportion="4.613383">
               <folding />
             </state>
           </provider>
@@ -470,7 +470,7 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google\gadgets\RandomWikipediaArticle" />
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google\gadgets\RandomFlickr" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -487,7 +487,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure Favorites="false" ProjectPane="false" Scope="false" PackagesPane="false" />
+      <showStructure PackagesPane="false" ProjectPane="false" Scope="false" Favorites="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -501,8 +501,8 @@
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="cvs_file_history_flatWidth1" value="297" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="cvs_file_history_treeWidth1" value="297" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -584,12 +584,13 @@
         <option name="Make" value="true" />
       </method>
     </tempConfiguration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
+    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="RUN_PAGE" value="" />
+      <method>
+        <option name="Make" value="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
@@ -602,14 +603,6 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="RUN_PAGE" value="" />
-      <method>
-        <option name="Make" value="true" />
-      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="TheRandomHomepage" />
@@ -642,6 +635,13 @@
       <method>
         <option name="Make" value="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="false" name="TheRandomHomepage" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" value="com.google.gwt.dev.GWTShell" />
@@ -872,7 +872,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3256617" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4169381" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21416938" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21828571" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45828572" order="14" />
@@ -890,8 +890,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371428" order="12" />
       <window_info id="FaTPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6202965" order="8" />
-      <window_info id="SVN Properties" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295583" order="9" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
+      <window_info id="SVN Properties" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295583" order="9" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" order="4" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" order="10" />
@@ -1013,16 +1013,6 @@
     <option name="myLastEditedConfigurable" value="Default" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/therandomhomepage/mainpublic/AboutUs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="2321" selection-end="2321" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/google/gadgets/RandomZooomr/thumbnail.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1034,13 +1024,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="1236" column="83" selection-start="35393" selection-end="35393" vertical-scroll-proportion="0.021197008">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="HtmlPreview">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Build.xml">
@@ -1050,44 +1040,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomWikipediaArticle/index.php">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="79" selection-start="3427" selection-end="3427" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/public/lightbox/prototype.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="68" selection-start="804" selection-end="804" vertical-scroll-proportion="0.020190023">
+        <state line="28" column="68" selection-start="804" selection-end="804" vertical-scroll-proportion="0.020681266">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/main/lightbox/lightbox_s.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1096" column="48" selection-start="34940" selection-end="34940" vertical-scroll-proportion="0.74584323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFlickr/module.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="87" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.020556228">
+        <state line="1096" column="48" selection-start="34940" selection-end="34940" vertical-scroll-proportion="0.77819085">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/google/gadgets/GoogleNewsBar/module.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="627" selection-end="1207" vertical-scroll-proportion="0.020556228">
+        <state line="12" column="0" selection-start="627" selection-end="1207" vertical-scroll-proportion="0.021065675">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/google/gadgets/RandomZooomr/module.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="71" selection-start="1900" selection-end="1900" vertical-scroll-proportion="0.020556228">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFeed/RandomFeedModule.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="755" selection-end="1299" vertical-scroll-proportion="0.34945586">
+        <state line="26" column="71" selection-start="1900" selection-end="1900" vertical-scroll-proportion="0.021065675">
           <folding />
         </state>
       </provider>
@@ -1104,19 +1090,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomWikipediaArticle/index.php">
+    <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFeed/RandomFeedModule.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="79" selection-start="3427" selection-end="3427" vertical-scroll-proportion="0.99625933">
+        <state line="17" column="0" selection-start="755" selection-end="1299" vertical-scroll-proportion="0.35811648">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="HtmlPreview">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/google/gadgets/RandomWikipediaArticle/RandomWikiModule.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="9" selection-start="8679" selection-end="8679" vertical-scroll-proportion="3.5767837">
+        <state line="219" column="9" selection-start="8679" selection-end="8679" vertical-scroll-proportion="4.613383">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFlickr/module.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="87" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.021065675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFlickr/index.php">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="25" selection-start="469" selection-end="469" vertical-scroll-proportion="0.5217391">
           <folding />
         </state>
       </provider>
