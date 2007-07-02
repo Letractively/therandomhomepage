@@ -18,7 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/google/gadgets/RandomFlickr/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/google/gadgets/RandomWikipediaArticle/RandomWikiModule.xml" afterPath="$PROJECT_DIR$/google/gadgets/RandomWikipediaArticle/RandomWikiModule.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
     </list>
     <list name="Excluded List" comment="" />
@@ -174,7 +174,7 @@
       <file leaf-file-name="lightbox_s.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/main/lightbox/lightbox_s.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1096" column="48" selection-start="34940" selection-end="34940" vertical-scroll-proportion="0.77819085">
+            <state line="1096" column="48" selection-start="34940" selection-end="34940" vertical-scroll-proportion="0.7348203">
               <folding />
             </state>
           </provider>
@@ -189,15 +189,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFlickr/index.php">
-          <provider editor-type-id="HtmlPreview">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="25" selection-start="469" selection-end="469" vertical-scroll-proportion="0.5217391">
+            <state line="40" column="12" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.769821">
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="HtmlPreview">
+            <state />
           </provider>
         </entry>
       </file>
@@ -222,16 +222,16 @@
       <file leaf-file-name="RandomFeedModule.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFeed/RandomFeedModule.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="755" selection-end="1299" vertical-scroll-proportion="0.35811648">
+            <state line="17" column="0" selection-start="755" selection-end="1299" vertical-scroll-proportion="0.3345725">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomWikiModule.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RandomWikiModule.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/google/gadgets/RandomWikipediaArticle/RandomWikiModule.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="219" column="9" selection-start="8679" selection-end="8679" vertical-scroll-proportion="4.613383">
+            <state line="16" column="58" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.3370508">
               <folding />
             </state>
           </provider>
@@ -470,6 +470,32 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google\gadgets\RandomWikipediaArticle" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage.ipr" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google\gadgets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\sid\projects\TheRandomHomepage\google\gadgets\RandomFlickr" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
@@ -487,7 +513,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure PackagesPane="false" ProjectPane="false" Scope="false" Favorites="false" />
+      <showStructure Favorites="false" PackagesPane="false" Scope="false" ProjectPane="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -501,8 +527,8 @@
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="cvs_file_history_flatWidth1" value="297" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="cvs_file_history_flatWidth1" value="297" />
     <property name="cvs_file_history_treeWidth1" value="297" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -584,26 +610,6 @@
         <option name="Make" value="true" />
       </method>
     </tempConfiguration>
-    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="RUN_PAGE" value="" />
-      <method>
-        <option name="Make" value="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="TheRandomHomepage" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -623,6 +629,33 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
+    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="RUN_PAGE" value="" />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="VM_PARAMETERS" value="" />
@@ -635,13 +668,6 @@
       <method>
         <option name="Make" value="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="false" name="TheRandomHomepage" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" value="com.google.gwt.dev.GWTShell" />
@@ -872,7 +898,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3256617" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21416938" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25081432" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21828571" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45828572" order="14" />
@@ -886,16 +912,16 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="File View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29671574" order="4" />
-      <window_info id="Library Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371428" order="12" />
       <window_info id="FaTPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6202965" order="8" />
-      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="SVN Properties" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295583" order="9" />
+      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" order="4" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" order="10" />
       <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
+      <window_info id="Library Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="11" />
       <window_info id="Lib Finder" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837528" order="18" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
@@ -919,7 +945,7 @@
     <option name="PERFORM_COMMIT_IN_BACKGROUND" value="false" />
     <option name="PUT_FOCUS_INTO_COMMENT" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made it to crispier font" />
+    <option name="LAST_COMMIT_MESSAGE" value="Random Flickring for widget box" />
     <option name="SAVE_LAST_COMMIT_MESSAGE" value="true" />
     <option name="CHECKIN_DIALOG_SPLITTER_PROPORTION" value="0.8" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -932,7 +958,6 @@
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Working on &quot;GoogleVideoBar&quot; widget" />
     <MESSAGE value="Fix for RandomFlickr netvibes module" />
     <MESSAGE value="Google News Bar gadget" />
     <MESSAGE value="Working on Random Zooomr" />
@@ -942,6 +967,7 @@
     <MESSAGE value="Fix to Random Flickr" />
     <MESSAGE value="Added author info on google gadgets" />
     <MESSAGE value="Made it to crispier font" />
+    <MESSAGE value="Random Flickring for widget box" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1024,13 +1050,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomFlickr/index.php">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="1236" column="83" selection-start="35393" selection-end="35393" vertical-scroll-proportion="0.021197008">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="HtmlPreview">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Build.xml">
@@ -1041,13 +1067,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/netvibes/modules/RandomWikipediaArticle/index.php">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="107" column="79" selection-start="3427" selection-end="3427" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="HtmlPreview">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widgets/src/java/therandomhomepage/widgets/public/lightbox/prototype.js">
@@ -1059,7 +1085,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/main/lightbox/lightbox_s.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1096" column="48" selection-start="34940" selection-end="34940" vertical-scroll-proportion="0.77819085">
+        <state line="1096" column="48" selection-start="34940" selection-end="34940" vertical-scroll-proportion="0.7348203">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFlickr/module.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="87" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.021065675">
           <folding />
         </state>
       </provider>
@@ -1078,6 +1111,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFeed/RandomFeedModule.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="755" selection-end="1299" vertical-scroll-proportion="0.3345725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFlickr/thumbnail.gif">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1090,33 +1130,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFeed/RandomFeedModule.xml">
+    <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFlickr/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="755" selection-end="1299" vertical-scroll-proportion="0.35811648">
+        <state line="40" column="12" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.769821">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="HtmlPreview">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/google/gadgets/RandomWikipediaArticle/RandomWikiModule.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="9" selection-start="8679" selection-end="8679" vertical-scroll-proportion="4.613383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFlickr/module.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="87" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.021065675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google/gadgets/RandomFlickr/index.php">
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="25" selection-start="469" selection-end="469" vertical-scroll-proportion="0.5217391">
+        <state line="16" column="58" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.3370508">
           <folding />
         </state>
       </provider>

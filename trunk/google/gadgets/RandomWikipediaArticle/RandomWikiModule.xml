@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
     <ModulePrefs title="__UP_moduletitle__" directory_title="Random Wikipedia Article"
-                 title_url="http://www.TheRandomHomepage.com" description="Flip through random articles from Wikipedia in your favorite language. Currently supported in English, Deutsch, Español, Français, Italiano, 日本語, Polski, Português, Русский and Svenska"
+                 title_url="http://www.TheRandomHomepage.com" description="Flip through random articles from Wikipedia in your favorite language. Supported in English, Deutsch, Español, Français, Italiano, 日本語, Polski, Português, Русский, Svenska, Norsk (bokmål), Suomi, 中文 and العربية"
                  author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
                  thumbnail="http://www.therandomhomepage.com/google/gadgets/randomwiki/thumbnail.png"
                  screenshot="http://www.therandomhomepage.com/google/gadgets/randomwiki/screenshot.png"
-                 author_affiliation="http://www.boxysystems.com"
+                 author_affiliation="http://www.BoxySystems.com"
                  author_location = "Ann Arbor, MI"
                  author_photo = "http://www.therandomhomepage.com/images/author.jpg"
                  author_aboutme = "I am an aspiring entrepreneur who fell in love in the craft of building software since my early age. Still searching for the perfect click of my life..."
@@ -13,6 +13,9 @@
                  author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
             >
 	<!--
+		Last Updated : 7/02/2007
+		Change Notes: Added support for four more languages(Norsk (bokmål), Suomi, 中文 & العربية)
+
 		Last Updated : 5/22/2007
 		Change Notes: Modified to crispier fonts
 	-->
@@ -26,20 +29,28 @@
         <Locale lang="pt"/>
         <Locale lang="ru"/>
         <Locale lang="sv"/>
+		<Locale lang="no"/>
+		<Locale lang="fi"/>
+		<Locale lang="zh"/>
+		<Locale lang="ar"/>
+    <Require feature="analytics"/>
     </ModulePrefs>
     <UserPref name="moduletitle" display_name="Title" default_value="Random Wikipedia Article" required="true"/>
     <UserPref name="language" display_name="Language" default_value="en" datatype="enum">
+		<EnumValue value="en" display_value="English"/>
         <EnumValue value="de" display_value="Deutsch"/>
-        <EnumValue value="en" display_value="English"/>
         <EnumValue value="es" display_value="Español"/>
         <EnumValue value="fr" display_value="Français"/>
         <EnumValue value="it" display_value="Italiano"/>
-        <!--<EnumValue value="nl" display_value="Nederlands"/>-->
         <EnumValue value="ja" display_value="日本語"/>
         <EnumValue value="pl" display_value="Polski"/>
         <EnumValue value="pt" display_value="Português"/>
         <EnumValue value="ru" display_value="Русский"/>
         <EnumValue value="sv" display_value="Svenska"/>
+		<EnumValue value="no" display_value="Norsk (bokmål)"/>
+		<EnumValue value="fi" display_value="Suomi"/>
+		<EnumValue value="zh" display_value="中文"/>
+		<EnumValue value="ar" display_value="العربية"/>
     </UserPref>
 
     <Content type="html"><![CDATA[
@@ -78,8 +89,8 @@ div.contentClass {
 	border:solid 1px #aaaaaa;padding:8px;
 }
 </style>
- <table width="100%"><tr><td width="95%" align="left"><div id="header__MODULE_ID__"></div></td><td width="5%" align="right" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td></table>
- <div id="content__MODULE_ID__" class="contentClass"><center><I>Loading article from Wikipedia...</I></center></div>
+ <table id="tblContent" width="100%"><tr><td width="95%" align="left"><div id="header__MODULE_ID__"></div></td><td width="5%" align="right" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td></tr><tr><td colspan="2"><div id="content__MODULE_ID__" class="contentClass"><center><I>Loading article from Wikipedia...</I></center></div></td></tr>
+ </table>
  <script type="text/javascript">
 
 	var arrRandomWikipediaURL = new Array();
@@ -93,6 +104,10 @@ div.contentClass {
 	arrRandomWikipediaURL["pl"] = "http://pl.wikipedia.org/wiki/Specjalna:Random";
 	arrRandomWikipediaURL["de"] = "http://de.wikipedia.org/wiki/Spezial:Random";
 	arrRandomWikipediaURL["ru"] = "http://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Random";
+	arrRandomWikipediaURL["no"] = "http://no.wikipedia.org/wiki/Spesial:Tilfeldig_side";
+	arrRandomWikipediaURL["fi"] = "http://fi.wikipedia.org/wiki/Toiminnot:Satunnainen_sivu";
+	arrRandomWikipediaURL["zh"] = "http://zh.wikipedia.org/wiki/Special:Random";
+	arrRandomWikipediaURL["ar"] = "http://ar.wikipedia.org/wiki/%D8%AE%D8%A7%D8%B5:%D8%B9%D8%B4%D9%88%D8%A7%D8%A6%D9%8A";
 
 	var arrFooterLimit = new Array();
 	arrFooterLimit["en"] = 'Retrieved from "<a href="';
@@ -105,25 +120,49 @@ div.contentClass {
 	arrFooterLimit["pl"] = 'Źródło: "<a href="';
 	arrFooterLimit["de"] = 'Von „<a href="';
 	arrFooterLimit["ru"] = 'Получено с "<a href="';
+	arrFooterLimit["no"] = 'Hentet fra «<a href="';
+	arrFooterLimit["fi"] = 'Haettu osoitteesta <a href="';
+	arrFooterLimit["zh"] = '来自“<a href="';
+	arrFooterLimit["ar"] = 'تم الاسترجاع من "<a href="';
 
 
 	var prefs = new _IG_Prefs(__MODULE_ID__);
-	var lang = null;
+	var lang = prefs.getString("language");
+	var randomWikipediaURL = arrRandomWikipediaURL[lang];
+
+
+	function loadModule__MODULE_ID__(){
+
+		if (lang == "ar")
+		{
+			var tblContent = _gel("tblContent");
+			if (tblContent)
+			{
+				tblContent.innerHTML = '<tr><td width="5%" align="left" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td><td width="95%" align="right"><div id="header__MODULE_ID__"></div></td></tr><tr><td colspan="2"><div id="content__MODULE_ID__" class="contentClass" style="text-align:right;"><center><I>Loading article from Wikipedia...</I></center></div></td></tr>';
+			}
+		}
+		getRandomWiki__MODULE_ID__();
+	}
 
     function getRandomWiki__MODULE_ID__() {
-        lang = prefs.getString("language");
-        var randomWikipediaURL = arrRandomWikipediaURL[lang];
         var url = randomWikipediaURL+"?rnd="+Math.random();
         _IG_FetchContent( url, fetchContentFromWikipedia);
 		setHTML("content__MODULE_ID__","<center><I>Loading article from Wikipedia...</I></center>");
 		setHTML("header__MODULE_ID__","&nbsp;");
+		_IG_Analytics("UA-941159-1", "/RandomWikipediaArticleGoogleGadget");
 	}
 
 	function fetchContentFromWikipedia(responseText) {
 		 var actualURL = grep(responseText,arrFooterLimit[lang],'">http://');
          var title = grep(responseText,'<h1 class="firstHeading">','</h1>');
          setHTML("header__MODULE_ID__","<a title='"+title+"' target='_new' href='"+actualURL+"'><h3>"+title+"</h3></a>");
+
          setHTML("arrow__MODULE_ID__","<div title='Next Random Article' style='font-size:15px;font-family: Arial, sans-serif;font-weight:bold;color:darkblue;cursor:pointer;' onClick='getRandomWiki__MODULE_ID__()'>&gt;&gt;&nbsp;&nbsp;</div>");
+
+		 if (lang == "ar")
+		 {
+			 setHTML("arrow__MODULE_ID__","<div title='Next Random Article' style='font-size:15px;font-family: Arial, sans-serif;font-weight:bold;color:darkblue;cursor:pointer;' onClick='getRandomWiki__MODULE_ID__()'>&lt;&lt;&nbsp;&nbsp;</div>");
+		 }
 
          var bodyContent = grep(responseText,'<div id="bodyContent">','<div class="printfooter">');
          var actualBodyContent = grep(bodyContent,'<p>','Saved in parser cache');
@@ -180,6 +219,22 @@ function massageExternalLinks(bodyContent){
 		 {
 			bodyContent = bodyContent.replace(/http:\/\/ru.wikipedia.orghttp/g, 'http');
 		 }
+ 		 else if (lang == "no")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/no.wikipedia.orghttp/g, 'http');
+		 }
+ 		 else if (lang == "fi")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/fi.wikipedia.orghttp/g, 'http');
+		 }
+ 		 else if (lang == "zh")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/zh.wikipedia.orghttp/g, 'http');
+		 }
+ 		 else if (lang == "ar")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/ar.wikipedia.orghttp/g, 'http');
+		 }
 		 return bodyContent;
 }
 
@@ -207,14 +262,8 @@ function setHTML(id, str)
 }
 // Function setHTML() starts here
 
- _IG_RegisterOnloadHandler(getRandomWiki__MODULE_ID__);
+ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
  </script>
- <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-_uacct = "UA-941159-1";
-urchinTracker();
-</script>
  ]]>
     </Content>
 </Module>
