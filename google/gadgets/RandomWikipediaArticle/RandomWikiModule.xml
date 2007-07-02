@@ -89,8 +89,10 @@ div.contentClass {
 	border:solid 1px #aaaaaa;padding:8px;
 }
 </style>
- <table id="tblContent" width="100%"><tr><td width="95%" align="left"><div id="header__MODULE_ID__"></div></td><td width="5%" align="right" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td></tr><tr><td colspan="2"><div id="content__MODULE_ID__" class="contentClass"><center><I>Loading article from Wikipedia...</I></center></div></td></tr>
+ <div id="divContent__MODULE_ID__">
+ <table width="100%"><tr><td width="95%" align="left"><div id="header__MODULE_ID__"></div></td><td width="5%" align="right" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td></tr><tr><td colspan="2"><div id="content__MODULE_ID__" class="contentClass"><center><I>Loading article from Wikipedia...</I></center></div></td></tr>
  </table>
+ </div>
  <script type="text/javascript">
 
 	var arrRandomWikipediaURL = new Array();
@@ -135,10 +137,10 @@ div.contentClass {
 
 		if (lang == "ar")
 		{
-			var tblContent = _gel("tblContent");
-			if (tblContent)
+			var divContent = _gel("divContent__MODULE_ID__");
+			if (divContent)
 			{
-				tblContent.innerHTML = '<tr><td width="5%" align="left" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td><td width="95%" align="right"><div id="header__MODULE_ID__"></div></td></tr><tr><td colspan="2"><div id="content__MODULE_ID__" class="contentClass" style="text-align:right;"><center><I>Loading article from Wikipedia...</I></center></div></td></tr>';
+				divContent.innerHTML = '<table width="100%"><tr><td width="5%" align="left" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td><td width="95%" align="right"><div id="header__MODULE_ID__"></div></td></tr><tr><td colspan="2"><div id="content__MODULE_ID__" class="contentClass" style="text-align:right;"><center><I>Loading article from Wikipedia...</I></center></div></td></tr></table>';
 			}
 		}
 		getRandomWiki__MODULE_ID__();
