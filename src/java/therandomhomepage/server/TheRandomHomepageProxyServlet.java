@@ -18,9 +18,7 @@ import java.net.MalformedURLException;
  */
 public class TheRandomHomepageProxyServlet extends RemoteServiceServlet {
 
-    private static String ACTUAL_BASE_URL = "http://dev.therandomhomepage.com";
-
-    //TODO: Refactor this to use stream based I/0
+    private static String ACTUAL_BASE_URL = "http://www.therandomhomepage.com";
 
     protected void doGet(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
         HttpURLConnection connection = null;
