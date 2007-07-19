@@ -17,7 +17,7 @@ public class AuthenticationToken {
     public String getAuthenticationToken(String email, String passwd){
 
         final String[] token = new String[]{null};
-        String postData = "accountType=GOOGLE&Email="+email+"&Passwd="+passwd+"&source=quickadd-testapp-1&service=wise";
+        String postData = "accountType=GOOGLE&Email="+email+"&Passwd="+passwd+"&source=GoogleLookup&service=wise";
         String url ="https://www.google.com/accounts/ClientLogin";
         ResponseTextHandler handler = new ResponseTextHandler() {
             public void onCompletion( String responseText ) {

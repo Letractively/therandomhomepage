@@ -17,11 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
-      <change type="NEW" beforePath="" afterPath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/CellbasedFeedResponseHandler.java" />
-      <change type="NEW" beforePath="" afterPath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/AuthenticationToken.java" />
-      <change type="MODIFICATION" beforePath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/Lookup.java" afterPath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/Lookup.java" />
-      <change type="MODIFICATION" beforePath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/Lookup.gwt.xml" afterPath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/Lookup.gwt.xml" />
+      <change type="MODIFICATION" beforePath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/AuthenticationToken.java" afterPath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/AuthenticationToken.java" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -165,7 +161,7 @@
       <file leaf-file-name="AuthenticationToken.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/AuthenticationToken.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="33" selection-start="355" selection-end="355" vertical-scroll-proportion="0.3087167">
+            <state line="19" column="99" selection-start="580" selection-end="580" vertical-scroll-proportion="0.39104116">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1163,7 +1159,7 @@
     </entry>
     <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/AuthenticationToken.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="33" selection-start="355" selection-end="355" vertical-scroll-proportion="0.3087167">
+        <state line="19" column="99" selection-start="580" selection-end="580" vertical-scroll-proportion="0.39104116">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
