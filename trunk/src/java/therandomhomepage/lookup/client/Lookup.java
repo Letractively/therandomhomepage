@@ -1,16 +1,10 @@
 package therandomhomepage.lookup.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.user.client.ui.*;
-import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.http.client.*;
 import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.HTTPRequest;
-import com.google.gwt.user.client.ResponseTextHandler;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.json.client.JSONParser;
-import com.google.gwt.json.client.JSONValue;
-import com.google.gwt.json.client.JSONObject;
-import com.google.gwt.json.client.JSONArray;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.*;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -20,6 +14,10 @@ public class Lookup implements EntryPoint {
     /**
      * This is the entry point method.
      */
+
+    //cell-based feed http://spreadsheets.google.com/feeds/cells/o13837216796238448969.8709533337254498963/od6/private/full
+
+    //POST-URL http://spreadsheets.google.com/feeds/cells/o13837216796238448969.8709533337254498963/od6/private/full
     public void onModuleLoad() {
         final TextBox txtBox = new TextBox();
 
@@ -30,41 +28,37 @@ public class Lookup implements EntryPoint {
             public void onClick(Widget sender) {
                 if (label.getText().equals("")) {
 
-                    String url = "http://spreadsheets.google.com/feeds/cells/pSYncC12rB8CTEnrWbHreeA/od6/public/values?alt=json";
+//                    String url = "http://spreadsheets.google.com/feeds/cells/pSYncC12rB8CTEnrWbHreeA/od6/public/values?alt=json";
+//                    HTTPRequest.asyncGet(url, new CellbasedFeedResponseHandler(txtBox,label));
 
-                    HTTPRequest.asyncGet(url,new ResponseTextHandler(){
+                    String postDataURL = "http://spreadsheets.google.com/feeds/cells/o13837216796238448969.8709533337254498963/od6/private/full";
+                    RequestBuilder builder = new RequestBuilder(RequestBuilder.POST, postDataURL);
 
-                        public void onCompletion(String responseText) {
-                            Window.alert("responseText = "+responseText);
-                            JSONValue jsonValue = JSONParser.parse(responseText);
-                            JSONObject jsonObject = jsonValue.isObject();
+                    builder.setHeader("Content-Type","application/x-www-form-urlencoded; charset=utf-8");
 
-                            if (jsonObject != null){
-                                JSONValue feedValue = jsonObject.get("feed");
-                                if (feedValue != null && feedValue.isObject() != null){
-                                    JSONObject feedObject = feedValue.isObject();
-                                        JSONValue entryObject = feedObject.get("entry");
-                                        if (entryObject != null && entryObject.isArray() != null){
-                                            JSONArray entryArray = entryObject.isArray();
-                                            for(int i=0; i < entryArray.size(); i++){
-                                                JSONValue entryValue = entryArray.get(i);
-                                                if (entryValue != null && entryValue.isObject() != null){
-                                                    JSONValue cell = entryValue.isObject().get("gs$cell");
-                                                    JSONObject cellObject = cell.isObject();
-                                                    System.out.println("cellObject = " + cellObject);
-                                                    JSONValue cellStr = cellObject.get("$t");
-                                                    System.out.println("cellStr = " + cellStr);
-                                                }
-                                            }
-                                        }
+                    String postContent = "<entry>\n" +
+                            "  <gsx:hours>1</gsx:hours>\n" +
+                            "  <gsx:ipm>1</gsx:ipm>\n" +
+                            "  <gsx:items>60</gsx:items>\n" +
+                            "  <gsx:name>Elizabeth Bennet</gsx:name>\n" +
+                            "</entry>";
 
-                                }
+                    try {
+                        Request response = builder.sendRequest(postContent, new RequestCallback() {
+
+                            public void onResponseReceived(Request request, Response response) {
+                                System.out.println("response = " + response.getText());
                             }
 
-                        }
-                    });
+                            public void onError(Request request, Throwable exception) {
+                                exception.printStackTrace();
+                            }
+                        });
 
-//                    LookupService.App.getInstance().getMessage("Hello, World!", new MyAsyncCallback(label));
+                    } catch (RequestException e) {
+                        e.printStackTrace();
+                    }
+
                 } else
                     label.setText("");
             }
