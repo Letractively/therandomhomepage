@@ -50,7 +50,10 @@ public class Lookup implements EntryPoint {
                                                 JSONValue entryValue = entryArray.get(i);
                                                 if (entryValue != null && entryValue.isObject() != null){
                                                     JSONValue cell = entryValue.isObject().get("gs$cell");
-                                                    System.out.println("cell.toString() = " + cell.toString());
+                                                    JSONObject cellObject = cell.isObject();
+                                                    System.out.println("cellObject = " + cellObject);
+                                                    JSONValue cellStr = cellObject.get("$t");
+                                                    System.out.println("cellStr = " + cellStr);
                                                 }
                                             }
                                         }
