@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../widgets/src/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../build" />
+      <excludeFolder url="file://$MODULE_DIR$/../src/java/gen" />
       <excludeFolder url="file://$MODULE_DIR$/../src/java/out" />
       <excludeFolder url="file://$MODULE_DIR$/../src/java/tomcat" />
     </content>
