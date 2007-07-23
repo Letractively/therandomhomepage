@@ -36,20 +36,4 @@ public class Lookup implements EntryPoint {
         RootPanel.get("slot1").add(button);
         RootPanel.get("slot2").add(label);
     }
-
-    static class MyAsyncCallback implements AsyncCallback {
-        public void onSuccess(Object object) {
-            DOM.setInnerHTML(label.getElement(), (String) object);
-        }
-
-        public void onFailure(Throwable throwable) {
-            label.setText("Failed to receive answer from server!");
-        }
-
-        Label label;
-
-        public MyAsyncCallback(Label label) {
-            this.label = label;
-        }
-    }
 }
