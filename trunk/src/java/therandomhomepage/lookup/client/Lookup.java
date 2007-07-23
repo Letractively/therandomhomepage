@@ -29,6 +29,8 @@ public class Lookup implements EntryPoint {
         button.addClickListener(new ClickListener() {
             public void onClick(Widget sender) {
                 label.setText(Authentication.getToken());
+                GData gdata = new GData();
+                gdata.showMetafeed();
             }
         });
 
