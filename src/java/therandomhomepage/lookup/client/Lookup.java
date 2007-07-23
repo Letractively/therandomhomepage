@@ -23,14 +23,11 @@ public class Lookup implements EntryPoint {
 
         final Button button = new Button("Show Token");
         final Label label = new Label();
-
-        Authentication.login();
+        GData.init();
 
         button.addClickListener(new ClickListener() {
             public void onClick(Widget sender) {
                 label.setText(Authentication.getToken());
-                GData gdata = new GData();
-                gdata.showMetafeed();
             }
         });
 

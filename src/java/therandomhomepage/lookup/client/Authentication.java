@@ -1,7 +1,6 @@
 package therandomhomepage.lookup.client;
 
 import com.google.gwt.http.client.*;
-import com.google.gwt.core.client.GWT;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,7 +15,7 @@ public class Authentication {
 
     private static String token = null;
 
-    public static void login() {
+    public static void login(final LoginCallback callback) {
 
         String url = "https://www.google.com/accounts/ClientLogin";
         RequestBuilder builder = new RequestBuilder(RequestBuilder.POST, url);
@@ -26,18 +25,21 @@ public class Authentication {
             builder.sendRequest(postData, new RequestCallback() {
                 public void onError(Request request, Throwable exception) {
                     exception.printStackTrace();
+                    callback.onFailure();
                 }
 
                 public void onResponseReceived(Request request, Response response) {
                     String responseText = response.getText();
                     token = parseAuth(responseText);
                     System.out.println("Login Successful");
+                    callback.onSuccess();
                 }
             });
         } catch (RequestException e) {
             e.printStackTrace();
         }
     }
+
 
     public static String getToken() {
         if (token != null) {
