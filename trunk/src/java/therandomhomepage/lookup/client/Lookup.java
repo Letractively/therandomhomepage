@@ -1,9 +1,6 @@
 package therandomhomepage.lookup.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.http.client.*;
-import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
 
 /**
@@ -22,17 +19,17 @@ public class Lookup implements EntryPoint {
         final TextBox txtBox = new TextBox();
 
         final Button button = new Button("Show Token");
-        final Label label = new Label();
+        final Label answerLabel = new Label();
         GData.init();
 
         button.addClickListener(new ClickListener() {
             public void onClick(Widget sender) {
-                label.setText(Authentication.getToken());
+                GData.lookupAnswer(txtBox.getText(),answerLabel);
             }
         });
 
-        RootPanel.get("inputSlot").add(txtBox);
-        RootPanel.get("slot1").add(button);
-        RootPanel.get("slot2").add(label);
+        RootPanel.get("tdInput").add(txtBox);
+        RootPanel.get("tdButton").add(button);
+        RootPanel.get("tdAnswer").add(answerLabel);
     }
 }

@@ -1,7 +1,7 @@
 package therandomhomepage.lookup.client;
 
-import com.google.gwt.http.client.Request;
-import com.google.gwt.http.client.Response;
+import com.google.gwt.http.client.*;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.xml.client.*;
 
 import java.util.HashSet;
@@ -16,6 +16,8 @@ import java.util.Set;
 public class GData {
 
     public static String metadataFeedURL = null;
+    public static String postURL = null;
+    public static int rowCount = 0;
 
     public static final String SPREADSHEET_LISTING_URL = "http://spreadsheets.google.com/feeds/spreadsheets/private/full";
     private static Set entities = new HashSet();
@@ -24,8 +26,8 @@ public class GData {
     public static void init() {
         Authentication.login(new LoginCallback() {
             public void onSuccess() {
-                GDataRequestBuilder builder = new GDataRequestBuilder(SPREADSHEET_LISTING_URL);
-                builder.sendRequest(new SpreadSheetListingURLRequestCallback());
+                GDataRequest builder = new GDataRequest(SPREADSHEET_LISTING_URL);
+                builder.sendGetRequest(new SpreadSheetListingURLRequestCallback());
             }
 
             public void onFailure() {
@@ -35,16 +37,16 @@ public class GData {
     }
 
     private static void initMetadaFeed() {
-        GDataRequestBuilder builder = new GDataRequestBuilder(metadataFeedURL);
-        builder.sendRequest(new SpreadsheetMetadataFeedRequestCallback());
+        GDataRequest builder = new GDataRequest(metadataFeedURL);
+        builder.sendGetRequest(new SpreadsheetMetadataFeedRequestCallback());
     }
 
     private static void initEntitiesAndAttributes(Document document) {
 
     }
 
-    private static String parseURLWithHrefSuffix(String response, String suffix) {
-        Document document = XMLParser.parse(response);
+    private static String parseURLWithHrefSuffix(Document document, String suffix) {
+
         NodeList list = document.getElementsByTagName("entry");
 
         for (int i = 0; i < list.getLength(); i++) {
@@ -71,10 +73,43 @@ public class GData {
         return null;
     }
 
+    public static void lookupAnswer(final String lookupText, final Label answerLabel) {
+
+        String strArr[] = lookupText.split(";");
+        System.out.println("strArr[0] = " + strArr[0]);
+        System.out.println("strArr[1] = " + strArr[1]); 
+
+
+        String postData = "<entry xmlns='http://www.w3.org/2005/Atom' xmlns:gsx='http://schemas.google.com/spreadsheets/2006/extended'>" +
+                "<gsx:entity>"+strArr[0]+"</gsx:entity> \n" +
+                "<gsx:attribute>"+strArr[1]+"</gsx:attribute> \n" +
+                "</entry>";
+        System.out.println("postData = " + postData);
+
+        GDataRequest builder = new GDataRequest(postURL);
+
+            builder.sendPostRequest(postData, new RequestCallback() {
+
+                public void onResponseReceived(Request request, Response response) {
+                    System.out.println("AFTER POST response = " + response.getText());
+                    updateFormula(lookupText);
+                    answerLabel.setText(response.getText());
+                }
+
+                public void onError(Request request, Throwable exception) {
+                    exception.printStackTrace();
+                }
+            });
+    }
+
+    private static void updateFormula(String lookupText) {
+
+    }
+
     private static class SpreadSheetListingURLRequestCallback extends GDataRequestCallback {
 
         public void onResponseReceived(Request request, Response response) {
-            metadataFeedURL = parseURLWithHrefSuffix(response.getText(), "#worksheetsfeed");
+            metadataFeedURL = parseURLWithHrefSuffix(XMLParser.parse(response.getText()), "#worksheetsfeed");
             initMetadaFeed();
         }
     }
@@ -82,10 +117,11 @@ public class GData {
     private static class SpreadsheetMetadataFeedRequestCallback extends GDataRequestCallback {
 
         public void onResponseReceived(Request request, Response response) {
-            System.out.println("response.getText() = " + response.getText());
-            String listFeedURL = parseURLWithHrefSuffix(response.getText(), "#listfeed");
-            GDataRequestBuilder builder = new GDataRequestBuilder(listFeedURL);
-            builder.sendRequest(new ListFeedRequestCallback());
+            System.out.println("Spreadsheet MetadataFeed response.getText() = " + response.getText());
+            String listFeedURL = parseURLWithHrefSuffix(XMLParser.parse(response.getText()), "#listfeed");
+            System.out.println("listFeedURL = " + listFeedURL);
+            GDataRequest builder = new GDataRequest(listFeedURL);
+            builder.sendGetRequest(new ListFeedRequestCallback());
         }
     }
 
@@ -93,6 +129,24 @@ public class GData {
 
         public void onResponseReceived(Request request, Response response) {
             System.out.println("ListFeed response = " + response.getText());
+            Document document = XMLParser.parse(response.getText());
+            postURL = parsePostURL(document);
+            NodeList list = document.getElementsByTagName("openSearch:totalResults");
+            if (list != null && list.getLength() > 0){
+                rowCount = Integer.parseInt(list.item(0).getFirstChild().getNodeValue());
+                System.out.println("rowCount = " + rowCount);
+            }
+            initEntitiesAndAttributes(document);
+        }
+
+        private String parsePostURL(Document document) {
+            NodeList childNodes = document.getElementsByTagName("link");
+            for (int j = 0; j < childNodes.getLength(); j++) {
+                if (getURLForLinkHrefSuffix(childNodes.item(j), "#post") != null) {
+                    return getURLForLinkHrefSuffix(childNodes.item(j), "#post");
+                }
+            }
+            return null;
         }
     }
 }
