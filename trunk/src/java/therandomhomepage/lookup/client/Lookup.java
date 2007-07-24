@@ -15,16 +15,20 @@ public class Lookup implements EntryPoint {
     //cell-based feed http://spreadsheets.google.com/feeds/cells/o13837216796238448969.8709533337254498963/od6/private/full
 
     //POST-URL http://spreadsheets.google.com/feeds/cells/o13837216796238448969.8709533337254498963/od6/private/full
+
+    private GData gData = null;
+
     public void onModuleLoad() {
         final TextBox txtBox = new TextBox();
 
         final Button button = new Button("Show Token");
         final Label answerLabel = new Label();
-        GData.init();
+
+        gData = new GData();
 
         button.addClickListener(new ClickListener() {
             public void onClick(Widget sender) {
-                GData.lookupAnswer(txtBox.getText(),answerLabel);
+                gData.lookupAnswer(txtBox.getText(),answerLabel);
             }
         });
 
