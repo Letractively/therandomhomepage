@@ -27,6 +27,7 @@ public class ReadLookupValuesCallback extends GDataRequestCallback{
     }
 
     public void onResponseReceived(Request request, Response response) {
+        System.out.println("ReadLookupValuesCallback response.getText() = " + response.getText());
         responseDocument = XMLParser.parse(response.getText());
         NodeList entryNodes = responseDocument.getElementsByTagName("entry");
 

@@ -109,9 +109,7 @@ public class GData {
                 System.out.println("AFTER POST response = " + response.getText());
                 Document responseDoc = XMLParser.parse(response.getText());
                 
-                if (cellPostURL != null){
-                    updateFormula(answerLabel);
-                }
+                 updateFormula(answerLabel);
 
                 answerLabel.setText(response.getText());
             }
@@ -124,9 +122,8 @@ public class GData {
 
     private void updateFormula(final Label answerLabel) {
         rowCount++;
-        String postData = "<entry xmlns='http://www.w3.org/2005/Atom' xmlns:gs='http://schemas.google.com/spreadsheets/2006'>"+
-                "<gs:cell row=\""+rowCount+"\" col=\"3\" inputValue='=GoogleLookup(R"+rowCount+"1C1,R"+rowCount+"C2)'/>" +
-                ENTRY_NODE_END;
+        String postData = "<?xml version='1.0' encoding='UTF-8'?><entry xmlns='http://www.w3.org/2005/Atom' xmlns:gs='http://schemas.google.com/spreadsheets/2006'>"+
+                "<gs:cell row=\""+rowCount+"\" col=\"3\" inputValue=\"=GoogleLookup(A"+rowCount+",B"+rowCount+")\" /></entry>";
         System.out.println("postData = " + postData);
 
         GDataRequest request = new GDataRequest(cellPostURL);
@@ -163,7 +160,9 @@ public class GData {
             if (cellFeedURL != null) {
                 System.out.println("cellFeedURL = " + cellFeedURL);
 
-                GDataRequest readEntitiesRequest = new GDataRequest(cellFeedURL + "?min-col=" + ENTITY_COL_NUM + "&max-col=" + ENTITY_COL_NUM);
+                String readLookupValuesAndMetadataURL = cellFeedURL + "?min-col=" + ENTITY_COL_NUM + "&max-col=" + ENTITY_COL_NUM;
+                System.out.println("readLookupValuesAndMetadataURL = " + readLookupValuesAndMetadataURL);
+                GDataRequest readEntitiesRequest = new GDataRequest(readLookupValuesAndMetadataURL);
                 readEntitiesRequest.sendGetRequest(new ReadLookupValuesAndMetadataCallback(entities));
 
                 GDataRequest readAttributesRequest = new GDataRequest(cellFeedURL + "?min-col=" + ATTRIBUTE_COL_NUM + "&max-col=" + ATTRIBUTE_COL_NUM);
@@ -231,8 +230,7 @@ public class GData {
         NodeList idNodes = responseDocument.getElementsByTagName("id");
 
         if (idNodes != null && idNodes.getLength() > 0 && cellPostURL == null) {
-            cellPostURL = idNodes.item(0).getFirstChild().getNodeValue();
-            return cellPostURL;
+            return idNodes.item(0).getFirstChild().getNodeValue();
         }
         return null;
     }
