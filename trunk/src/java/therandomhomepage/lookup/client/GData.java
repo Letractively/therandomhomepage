@@ -27,6 +27,7 @@ public class GData {
     public static final String SPREADSHEET_LISTING_URL = "http://spreadsheets.google.com/feeds/spreadsheets/private/full";
     private static Set entities = new HashSet();
     private static Set attributes = new HashSet();
+    private static Set answers = new HashSet();
     private static final int ENTITY_COL_NUM = 1;
     private static final int ATTRIBUTE_COL_NUM = 2;
     private static final int ANSWER_COL_NUM = 3;
@@ -121,9 +122,12 @@ public class GData {
     }
 
     private void updateFormula(final Label answerLabel) {
+        System.out.println("-----------  Updating Formula -------------------------");
         rowCount++;
+//        String postData = "<?xml version='1.0' encoding='UTF-8'?><entry xmlns='http://www.w3.org/2005/Atom' xmlns:gs='http://schemas.google.com/spreadsheets/2006'>"+
+//                "<gs:cell row=\""+rowCount+"\" col=\"3\" inputValue=\"=GoogleLookup(A"+rowCount+",B"+rowCount+")\" /></entry>";
         String postData = "<?xml version='1.0' encoding='UTF-8'?><entry xmlns='http://www.w3.org/2005/Atom' xmlns:gs='http://schemas.google.com/spreadsheets/2006'>"+
-                "<gs:cell row=\""+rowCount+"\" col=\"3\" inputValue=\"=GoogleLookup(A"+rowCount+",B"+rowCount+")\" /></entry>";
+                "<gs:cell row=\""+rowCount+"\" col=\"3\" inputValue=\"answer\" /></entry>";
         System.out.println("postData = " + postData);
 
         GDataRequest request = new GDataRequest(cellPostURL);
@@ -210,7 +214,10 @@ public class GData {
                 System.out.println("rowCount = " + rowCount);
             }
 
-            cellPostURL = getPostURL(responseDocument);
+            if (cellPostURL == null) {
+                cellPostURL = getPostURL(responseDocument);
+                System.out.println("cellPostURL = " + cellPostURL);
+            }
         }
 
     }
@@ -221,15 +228,18 @@ public class GData {
             System.out.println("response.getText() = " + response.getText());
 
             Document responseDocument = XMLParser.parse(response.getText());
-            rowPostURL = getPostURL(responseDocument);
-            System.out.println("rowPostURL = " + rowPostURL);
+            if (rowPostURL == null) {
+                rowPostURL = getPostURL(responseDocument);
+                System.out.println("rowPostURL = " + rowPostURL);
+            }
+
         }
     }
 
     private String getPostURL(Document responseDocument) {
         NodeList idNodes = responseDocument.getElementsByTagName("id");
 
-        if (idNodes != null && idNodes.getLength() > 0 && cellPostURL == null) {
+        if (idNodes != null && idNodes.getLength() > 0) {
             return idNodes.item(0).getFirstChild().getNodeValue();
         }
         return null;

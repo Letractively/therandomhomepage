@@ -43,8 +43,27 @@ public class GDataRequest {
         return null;
     }
 
+    public Request sendPutRequest(String postData,RequestCallback callback) {
+        try {
+            requestBuilder = new MyRequestBuilder("PUT",url);
+            requestBuilder.setHeader("Authorization", "GoogleLogin auth=" + Authentication.getToken());
+            requestBuilder.setHeader("Content-Type","application/atom+xml");
+            return requestBuilder.sendRequest(postData, callback);
+        } catch (RequestException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     private void initRequestBuilder(RequestBuilder.Method requestMethod) {
         requestBuilder = new RequestBuilder(requestMethod,url);
+        System.out.println("Authentication.getToken() = " + Authentication.getToken());
         requestBuilder.setHeader("Authorization", "GoogleLogin auth=" + Authentication.getToken());
+    }
+
+    private class MyRequestBuilder extends RequestBuilder{
+        protected MyRequestBuilder(String httpMethod, String url) {
+            super(httpMethod, url);
+        }
     }
 }
