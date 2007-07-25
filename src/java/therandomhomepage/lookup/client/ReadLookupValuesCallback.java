@@ -36,7 +36,9 @@ public class ReadLookupValuesCallback extends GDataRequestCallback{
             NodeList entryNodeChilds = entryNode.getChildNodes();
             for(int j=0; j < entryNodeChilds.getLength(); j++){
                 if (entryNodeChilds.item(j).getNodeName().equals("content")){
-                    lookupValuesSet.add(entryNodeChilds.item(j).getFirstChild().getNodeValue());
+                    String lookupValue = entryNodeChilds.item(j).getFirstChild().getNodeValue();
+                    System.out.println("lookupValue = " + lookupValue);
+                    lookupValuesSet.add(lookupValue);
                 }
             }
         }

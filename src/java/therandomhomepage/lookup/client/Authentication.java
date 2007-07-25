@@ -45,7 +45,7 @@ public class Authentication {
         if (token != null) {
             return token;
         }
-        return null;
+        return token;
     }
 
     static String parseAuth(String s) {
