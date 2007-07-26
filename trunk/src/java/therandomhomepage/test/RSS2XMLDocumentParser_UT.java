@@ -16,9 +16,9 @@ import java.util.List;
 public class RSS2XMLDocumentParser_UT extends TheRandomHomepageAbstract_UT {
 
     public void testParseSingleNode() throws Exception {
-        delayTestFinish(10000);
         readTestFile("RandomFlickr_RSS_200_SingleNode.xml", new ResponseTextHandler() {
             public void onCompletion(String responseText) {
+                System.out.println("responseText = " + responseText);
                 assertResult(responseText);
             }
         }
