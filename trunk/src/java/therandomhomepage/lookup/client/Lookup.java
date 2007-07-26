@@ -21,7 +21,7 @@ public class Lookup implements EntryPoint {
     public void onModuleLoad() {
         final TextBox txtBox = new TextBox();
 
-        final Button button = new Button("Show Token");
+        final Button button = new Button("Lookup");
         final Label answerLabel = new Label();
 
         gData = new GData();
