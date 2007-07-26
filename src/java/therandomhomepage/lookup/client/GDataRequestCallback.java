@@ -2,6 +2,7 @@ package therandomhomepage.lookup.client;
 
 import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.Response;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,14 +11,21 @@ import com.google.gwt.http.client.Request;
  * Time: 5:03:45 PM
  */
 public abstract class GDataRequestCallback implements RequestCallback {
+    private boolean requestComplete = false;
+
+    public void onResponseReceived(Request request, Response response) {
+        requestComplete = true;
+        processResponse(response);
+    }
+
     public void onError(Request request, Throwable exception) {
+        requestComplete = true;
         exception.printStackTrace();
     }
 
-    public void waitUntilTheRequestIsProcessed(Request request){
-        while (request.isPending()){
-            //do nothing
-            System.out.println("Waiting ....");
-        }
+    public boolean isRequestComplete() {
+        return requestComplete;
     }
+
+    public abstract void processResponse(Response response);
 }
