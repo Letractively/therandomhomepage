@@ -7,7 +7,6 @@ import com.google.gwt.xml.client.XMLParser;
 import com.google.gwt.xml.client.NodeList;
 import com.google.gwt.xml.client.Node;
 
-import java.util.List;
 import java.util.Set;
 import java.util.HashSet;
 
@@ -43,5 +42,9 @@ public class ReadLookupValuesCallback extends GDataRequestCallback{
             }
         }
 
+    }
+
+    public void processResponse(Response response) {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 }
