@@ -4,6 +4,7 @@
     <inherits name='therandomhomepage.Common'/>
 
     <inherits name="therandomhomepage.TheRandomHomepage"/>
+    <inherits name="therandomhomepage.lookup.Lookup"/>
 
     <!-- Include client-side source we might like to test -->
     <source path="mainclient"/>
