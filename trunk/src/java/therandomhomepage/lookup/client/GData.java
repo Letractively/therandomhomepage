@@ -40,7 +40,7 @@ public class GData {
     public GData() {
         Authentication.login(new LoginCallback() {
             public void onSuccess() {
-                initialiseMetadata();
+                init();
             }
 
             public void onFailure() {
@@ -49,7 +49,7 @@ public class GData {
         });
     }
 
-    private void initialiseMetadata() {
+    private void init() {
         GDataRequest builder = new GDataRequest(SPREADSHEET_LISTING_URL);
         builder.sendGetRequest(new SpreadSheetListingURLRequestCallback());
     }
@@ -101,22 +101,7 @@ public class GData {
         System.out.println("postData = " + postData);
 
         GDataRequest builder = new GDataRequest(rowPostURL);
-
-        builder.sendPostRequest(postData, new RequestCallback() {
-
-            public void onResponseReceived(Request request, Response response) {
-                System.out.println("AFTER POST response = " + response.getText());
-                Document responseDoc = XMLParser.parse(response.getText());
-                
-                 updateFormula(answerLabel);
-
-                answerLabel.setText(response.getText());
-            }
-
-            public void onError(Request request, Throwable exception) {
-                exception.printStackTrace();
-            }
-        });
+        builder.sendSynchronousPostRequest(postData, new AddRowRequestCallback(answerLabel));
     }
 
     private void updateFormula(final Label answerLabel) {
@@ -137,6 +122,10 @@ public class GData {
         public void onResponseReceived(Request request, Response response) {
             String metadataFeedURL = parseURLWithHrefSuffix(XMLParser.parse(response.getText()), "#worksheetsfeed");
             initMetadaFeed(metadataFeedURL);
+        }
+
+        public void processResponse(Response response) {
+            //To change body of implemented methods use File | Settings | File Templates.
         }
     }
 
@@ -166,6 +155,10 @@ public class GData {
                 GDataRequest readListFeedRequest = new GDataRequest(listFeedURL + "?start-index=1&max-results=1");
                 readListFeedRequest.sendGetRequest(new ReadListFeedMetadataCallback());
             }
+        }
+
+        public void processResponse(Response response) {
+            //To change body of implemented methods use File | Settings | File Templates.
         }
 
         private String getFeedURLForLinkHrefPrefix(Document responseDoc, String suffix) {
@@ -207,6 +200,10 @@ public class GData {
             }
         }
 
+        public void processResponse(Response response) {
+            //To change body of implemented methods use File | Settings | File Templates.
+        }
+
     }
 
     private class ReadListFeedMetadataCallback extends GDataRequestCallback {
@@ -220,6 +217,10 @@ public class GData {
                 System.out.println("rowPostURL = " + rowPostURL);
             }
 
+        }
+
+        public void processResponse(Response response) {
+            //To change body of implemented methods use File | Settings | File Templates.
         }
     }
 
@@ -240,8 +241,27 @@ public class GData {
         }
 
         public void onResponseReceived(Request request, Response response) {
-            waitUntilTheRequestIsProcessed(request);
             System.out.println("AFTER UPDATE FORMULA response.getText() = " + response.getText());
+            answerLabel.setText(response.getText());
+        }
+
+        public void processResponse(Response response) {
+            //To change body of implemented methods use File | Settings | File Templates.
+        }
+    }
+
+    private class AddRowRequestCallback extends GDataRequestCallback{
+        private Label answerLabel;
+
+
+        public AddRowRequestCallback(Label answerLabel) {
+            this.answerLabel = answerLabel;
+        }
+
+        public void processResponse(Response response) {
+            System.out.println("AFTER POST response = " + response.getText());
+            Document responseDoc = XMLParser.parse(response.getText());                
+            updateFormula(answerLabel);
             answerLabel.setText(response.getText());
         }
     }
