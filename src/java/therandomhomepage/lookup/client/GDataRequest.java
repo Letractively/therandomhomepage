@@ -4,6 +4,8 @@ import com.google.gwt.http.client.Request;
 import com.google.gwt.http.client.RequestBuilder;
 import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.http.client.RequestException;
+import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.Window;
 
 /**
  * Created by IntelliJ IDEA.
@@ -18,6 +20,11 @@ public class GDataRequest extends RequestBuilder {
         setHeader("Authorization", "GoogleLogin auth=" + Authentication.getToken());
     }
 
+
+    protected GDataRequest(Method httpMethod, String url) {
+        this(httpMethod.toString(), url);
+    }
+
     public GDataRequest(String url) {
         this("GET", url);
     }
@@ -29,6 +36,29 @@ public class GDataRequest extends RequestBuilder {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public Request sendSynchronousGetRequest(GDataRequestCallback callback) {
+        Request request = sendGetRequest(callback);
+        waitUntilTheRequestIsProcessed(callback);
+        return request;
+    }
+
+    public Request sendSynchronousPostRequest(String postData, GDataRequestCallback callback) {
+        Request request = sendPostRequest(postData,callback);
+        waitUntilTheRequestIsProcessed(callback);
+        return request;
+    }
+
+    private void waitUntilTheRequestIsProcessed(final GDataRequestCallback callback) {
+        final Timer timer = new Timer() {
+            public void run() {
+                if (callback.isRequestComplete()){
+                    cancel();
+                }
+            }
+        };
+        timer.schedule(100);
     }
 
     public Request sendPostRequest(String postData, RequestCallback callback) {
