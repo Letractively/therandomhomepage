@@ -18,10 +18,7 @@
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheRandomHomepage.iws" afterPath="$PROJECT_DIR$/TheRandomHomepage.iws" />
-      <change type="MODIFICATION" beforePath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/Lookup.java" afterPath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/Lookup.java" />
-      <change type="MODIFICATION" beforePath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GDataRequestCallback.java" afterPath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GDataRequestCallback.java" />
-      <change type="NEW" beforePath="" afterPath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GWorkSheet.java" />
-      <change type="MODIFICATION" beforePath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GData.java" afterPath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GData.java" />
+      <change type="MODIFICATION" beforePath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GDataRequest.java" afterPath="C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GDataRequest.java" />
     </list>
     <list name="Excluded List" comment="" />
     <list name="Failed commit: Default" comment="Updated with Google analytics script." />
@@ -154,7 +151,7 @@
       <file leaf-file-name="GData.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="242" column="29" selection-start="9768" selection-end="9768" vertical-scroll-proportion="0.7274969">
+            <state line="242" column="29" selection-start="9768" selection-end="9768" vertical-scroll-proportion="1.3859433">
               <folding />
             </state>
           </provider>
@@ -172,13 +169,13 @@
       <file leaf-file-name="Authentication.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/Authentication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="55" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.54500616">
+            <state line="32" column="55" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.4217016">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GDataRequestCallback.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GDataRequestCallback.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GDataRequestCallback.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="18" column="16" selection-start="539" selection-end="539" vertical-scroll-proportion="0.34987894">
@@ -187,10 +184,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GDataRequest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GDataRequest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GDataRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="17" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.6585956">
+            <state line="23" column="54" selection-start="646" selection-end="646" vertical-scroll-proportion="0.4116223">
               <folding />
             </state>
           </provider>
@@ -234,13 +231,13 @@
       </file>
       <file leaf-file-name="Lookup.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/public/Lookup.html">
+          <provider editor-type-id="HtmlPreview">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state line="70" column="36" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.7965044">
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="HtmlPreview">
-            <state />
           </provider>
         </entry>
       </file>
@@ -1074,7 +1071,7 @@
       <showLibraryContents />
       <hideEmptyPackages ProjectPane="false" />
       <abbreviatePackageNames />
-      <showStructure Scope="false" ProjectPane="false" PackagesPane="false" Favorites="false" />
+      <showStructure Favorites="false" ProjectPane="false" Scope="false" PackagesPane="false" />
       <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <sortByType />
@@ -1088,8 +1085,8 @@
     <property name="cvs_file_history_treeOrder1" value="1" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="cvs_file_history_flatOrder1" value="1" />
-    <property name="cvs_file_history_flatWidth1" value="297" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="cvs_file_history_flatWidth1" value="297" />
     <property name="cvs_file_history_treeWidth1" value="297" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -1172,6 +1169,21 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="RUN_PAGE" value="" />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="VM_PARAMETERS" value="" />
@@ -1184,21 +1196,6 @@
       <method>
         <option name="Make" value="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="GWT.ConfigurationType" factoryName="GWT Configuration">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="RUN_PAGE" value="" />
-      <method>
-        <option name="Make" value="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="TheRandomHomepage" />
@@ -1421,7 +1418,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="18" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3256617" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31514657" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32003257" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25714287" order="1" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="1" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.296" order="16" />
@@ -1438,8 +1435,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371428" order="15" />
       <window_info id="FaTPlugin" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6202965" order="8" />
-      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="9" />
       <window_info id="SVN Properties" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295583" order="12" />
+      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="9" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" order="4" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" order="13" />
@@ -1561,9 +1558,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GDataRequest.java">
+    <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GWorkSheet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="17" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.6585956">
+        <state line="9" column="4" selection-start="176" selection-end="176" vertical-scroll-proportion="0.18523003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/Authentication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="55" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.4217016">
           <folding />
         </state>
       </provider>
@@ -1589,30 +1593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/public/Lookup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="36" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.7965044">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="HtmlPreview">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/Authentication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="55" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.54500616">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GWorkSheet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="176" selection-end="176" vertical-scroll-proportion="0.18523003">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/Lookup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="13" selection-start="209" selection-end="209" vertical-scroll-proportion="0.14673243">
@@ -1620,9 +1600,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GData.java">
+    <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/public/Lookup.html">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="242" column="29" selection-start="9768" selection-end="9768" vertical-scroll-proportion="0.7274969">
+        <state line="70" column="36" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.7965044">
           <folding />
         </state>
       </provider>
@@ -1630,6 +1613,20 @@
     <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GDataRequestCallback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="16" selection-start="539" selection-end="539" vertical-scroll-proportion="0.34987894">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="242" column="29" selection-start="9768" selection-end="9768" vertical-scroll-proportion="1.3859433">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/sid/projects/TheRandomHomepage/src/java/therandomhomepage/lookup/client/GDataRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="54" selection-start="646" selection-end="646" vertical-scroll-proportion="0.4116223">
           <folding />
         </state>
       </provider>
