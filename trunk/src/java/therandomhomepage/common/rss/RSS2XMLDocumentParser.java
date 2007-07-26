@@ -1,9 +1,6 @@
 package therandomhomepage.common.rss;
 
 import com.google.gwt.xml.client.*;
-import com.google.gwt.xml.client.Element;
-import com.google.gwt.user.client.*;
-import com.google.gwt.user.client.ui.Image;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,13 +28,13 @@ public class RSS2XMLDocumentParser {
             for (int i = 0; i < items.getLength(); i++) {
                 rssItem = new RSSItem();
                 Node item = items.item(i);
-                rssItem.setTitle(getNodeTextValue(item,"title"));
-                rssItem.setLink(getNodeTextValue(item,"link"));
+                rssItem.setTitle(getNodeTextValue(item, "title"));
+                rssItem.setLink(getNodeTextValue(item, "link"));
                 String desc = getNodeTextValue(item, "description");
                 rssItem.setDesc(desc);
-                rssItem.setGuid(getNodeTextValue(item,"guid"));
-                rssItem.setMediaContentNode(getNodeByNodeName(item,"media:content"));
-                rssItem.setMediaThumbnailNode(getNodeByNodeName(item,"media:thumbnail"));
+                rssItem.setGuid(getNodeTextValue(item, "guid"));
+                rssItem.setMediaContentNode(getNodeByNodeName(item, "media:content"));
+                rssItem.setMediaThumbnailNode(getNodeByNodeName(item, "media:thumbnail"));
                 rssItems.add(rssItem);
             }
         } catch (Exception e) {
@@ -57,17 +54,17 @@ public class RSS2XMLDocumentParser {
             NodeList items = element.getElementsByTagName("item");
             rssItems = new RSSItem[items.getLength()];
 
-            RSSItem rssItem = null;
+            RSSItem rssItem;
             for (int i = 0; i < items.getLength(); i++) {
                 rssItem = new RSSItem();
                 Node item = items.item(i);
-                rssItem.setTitle(getNodeTextValue(item,"title"));
-                rssItem.setLink(getNodeTextValue(item,"link"));
+                rssItem.setTitle(getNodeTextValue(item, "title"));
+                rssItem.setLink(getNodeTextValue(item, "link"));
                 String desc = getNodeTextValue(item, "description");
                 rssItem.setDesc(desc);
-                rssItem.setGuid(getNodeTextValue(item,"guid"));
-                rssItem.setMediaContentNode(getNodeByNodeName(item,"media:content"));
-                rssItem.setMediaThumbnailNode(getNodeByNodeName(item,"media:thumbnail"));
+                rssItem.setGuid(getNodeTextValue(item, "guid"));
+                rssItem.setMediaContentNode(getNodeByNodeName(item, "media:content"));
+                rssItem.setMediaThumbnailNode(getNodeByNodeName(item, "media:thumbnail"));
                 rssItems[i] = rssItem;
             }
         } catch (Exception e) {
@@ -76,21 +73,21 @@ public class RSS2XMLDocumentParser {
         return rssItems;
     }
 
-    private static String getNodeTextValue(Node node,String nodeName){
+    private static String getNodeTextValue(Node node, String nodeName) {
         NodeList childNodes = node.getChildNodes();
         for (int i = 0; i < childNodes.getLength(); i++) {
-            if (childNodes.item(i).getNodeName().equals(nodeName) && childNodes.item(i).getFirstChild() != null){
+            if (childNodes.item(i).getNodeName().equals(nodeName) && childNodes.item(i).getFirstChild() != null) {
                 return childNodes.item(i).getFirstChild().getNodeValue().trim();
             }
         }
         return "";
     }
 
-    private static Node getNodeByNodeName(Node node,String nodeName){
+    private static Node getNodeByNodeName(Node node, String nodeName) {
         NodeList childNodes = node.getChildNodes();
         for (int i = 0; i < childNodes.getLength(); i++) {
             Node childNode = childNodes.item(i);
-            if (childNode.getNodeName().equals(nodeName)){
+            if (childNode.getNodeName().equals(nodeName)) {
                 return childNode;
             }
         }
