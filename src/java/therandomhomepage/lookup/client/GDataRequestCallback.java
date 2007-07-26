@@ -13,4 +13,11 @@ public abstract class GDataRequestCallback implements RequestCallback {
     public void onError(Request request, Throwable exception) {
         exception.printStackTrace();
     }
+
+    public void waitUntilTheRequestIsProcessed(Request request){
+        while (request.isPending()){
+            //do nothing
+            System.out.println("Waiting ....");
+        }
+    }
 }

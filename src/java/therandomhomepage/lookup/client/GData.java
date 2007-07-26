@@ -94,8 +94,6 @@ public class GData {
         System.out.println("strArr[0] = " + strArr[0]);
         System.out.println("strArr[1] = " + strArr[1]);
 
-        rowCount++;
-
         String postData = ENTRY_NODE_BEGIN +
                 "<gsx:entity>" + strArr[0] + "</gsx:entity> \n" +
                 "<gsx:attribute>" + strArr[1] + "</gsx:attribute> \n" +
@@ -124,24 +122,13 @@ public class GData {
     private void updateFormula(final Label answerLabel) {
         System.out.println("-----------  Updating Formula -------------------------");
         rowCount++;
-//        String postData = "<?xml version='1.0' encoding='UTF-8'?><entry xmlns='http://www.w3.org/2005/Atom' xmlns:gs='http://schemas.google.com/spreadsheets/2006'>"+
-//                "<gs:cell row=\""+rowCount+"\" col=\"3\" inputValue=\"=GoogleLookup(A"+rowCount+",B"+rowCount+")\" /></entry>";
         String postData = "<?xml version='1.0' encoding='UTF-8'?><entry xmlns='http://www.w3.org/2005/Atom' xmlns:gs='http://schemas.google.com/spreadsheets/2006'>"+
-                "<gs:cell row=\""+rowCount+"\" col=\"3\" inputValue=\"answer\" /></entry>";
+                "<gs:cell row=\""+rowCount+"\" col=\"3\" inputValue=\"=GoogleLookup(R"+rowCount+"C1,R"+rowCount+"C2)\" /></entry>";
         System.out.println("postData = " + postData);
 
         GDataRequest request = new GDataRequest(cellPostURL);
-        request.sendPostRequest(postData, new RequestCallback() {
+        request.sendPostRequest(postData, new UpdateFormulaCallback(answerLabel));
 
-            public void onResponseReceived(Request request, Response response) {
-                System.out.println("AFTER UPDATE FORMULA response.getText() = " + response.getText());
-                answerLabel.setText(response.getText());
-            }
-
-            public void onError(Request request, Throwable exception) {
-                exception.printStackTrace();
-            }
-        });
 
     }
 
@@ -243,6 +230,20 @@ public class GData {
             return idNodes.item(0).getFirstChild().getNodeValue();
         }
         return null;
+    }
+
+    private class UpdateFormulaCallback extends GDataRequestCallback {
+        private Label answerLabel;
+
+        public UpdateFormulaCallback(Label answerLabel) {
+            this.answerLabel = answerLabel;
+        }
+
+        public void onResponseReceived(Request request, Response response) {
+            waitUntilTheRequestIsProcessed(request);
+            System.out.println("AFTER UPDATE FORMULA response.getText() = " + response.getText());
+            answerLabel.setText(response.getText());
+        }
     }
 
 }
