@@ -118,7 +118,6 @@ public class TheRandomHomepage implements EntryPoint {
         DOM.setAttribute(DOM.getFirstChild(footerMenu.getElement()), "align", "center");
 
         footerPanel.add(footerMenu);
-        footerPanel.add(new BookmarkThisWidget());
         return footerPanel;
     }
 }
