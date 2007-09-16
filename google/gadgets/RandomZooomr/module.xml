@@ -3,7 +3,7 @@
   <ModulePrefs title="__UP_moduletitle__" directory_title="Random Zooomring" title_url="http://www.therandomhomepage.com"
 			   height="225"
                author="Siddique Hameed"
-               description="Flip through public tagged pictures from Zooomr or view them as slideshows in amazing visual effects.
+               description="Flip through the public pictures from Zooomr or view them as slideshows in amazing visual effects.
 			   Inline this gadget to see 'Lightbox' effect in action. While in Lightbox mode, press 'N' for next, 'P' for previous image and 'X' to close."
                author_email="siddii+randomhomepage@gmail.com"
                render_inline="optional"
@@ -22,7 +22,7 @@
   <Require feature="minimessage" />
   </ModulePrefs>
   <UserPref name="moduletitle" display_name="Title" default_value="Random Zooomring" required="true"/>
-  <UserPref name="tags" display_name="Tags(comma separated)" required="true" datatype="string" default_value="colorful,travel"/>
+  <UserPref name="user_id" display_name="User Id" required="true" datatype="string" default_value="siddii"/>
   <UserPref name="transition_effect" display_name="Transition effect" datatype="enum" default_value="-1">
    <EnumValue display_value="None"  value="-1" />
    <EnumValue display_value="Random"  value="0" />
@@ -33,7 +33,7 @@
    <EnumValue display_value="Grow"  value="5" />
    <EnumValue display_value="Slidedown"  value="6" />
    </UserPref>
-  <UserPref name="slideshow_delay" display_name="Slideshow delay(in seconds)" datatype="enum" default_value="0">
+  <UserPref name="slideshow_delay" display_name="Slideshow delay(in seconds)" datatype="enum" default_value="5">
    <EnumValue display_value="No slideshow"  value="0" />
    <EnumValue value="5" />
    <EnumValue value="10" />
@@ -91,7 +91,7 @@
 
 	var rssFeedArr = new Array();
 
-	var tagArr = new Array();
+	var userId = "";
 
 	var tagRespCount = 0;
 
@@ -153,7 +153,6 @@
 	var i = 0;
 
 	function xmlResponseHandler(response) {
-		tagRespCount++;
 		var items = response.getElementsByTagName("item");
 		var nodes = $A(items);
 		var xmlFeedArr = new Array();
@@ -168,15 +167,10 @@
 				i++;
 	    });
 
-		if (tagRespCount == tagArr.length)
-		{
-			refreshGadget();
-		}
+		refreshGadget();
 	}
 
 	function refreshGadget() {
-		if (rssFeedArr.length > 0)
-		{
 
 			var lightboxHTML = "";
 			rssFeedArr.each( function(rssFeed){
@@ -216,10 +210,6 @@
 					showRandomZooomrImage();
 				}
 			}
-		}
-		else {
-			$('divRandomZooomrContent').innerHTML = "<center><I>Error retrieving pictures from Zooomr! <br/>Please verify the tag names are correct and try again later.</I></center>";
-		}
 	}
 
 	function showRandomZooomrImage(){
@@ -262,7 +252,8 @@
 	}
 
 	function randomZooomrLoad(){
-		tags = prefs.getString("tags");
+		//tags = prefs.getString("tags");
+		userId = prefs.getString("user_id");
 		transitionEffect = prefs.getInt("transition_effect");
 		imageClickBehaviour = prefs.getInt("image_click_behaviour");
 
@@ -280,12 +271,8 @@
 		}
 		slideshowDelay = prefs.getInt("slideshow_delay");
 
-		tagArr = tags.split(",");
-
-		for(var i=0; i < tagArr.length; i++) {
-			var zooomrFeedURL = "http://beta.zooomr.com/bluenote/feeds:rss/tags/"+tagArr[i];
-			_IG_FetchXmlContent(zooomrFeedURL,xmlResponseHandler);
-		}
+		var zooomrFeedURL = "http://www.zooomr.com/bluenote/feeds:rss/people/"+userId;
+		_IG_FetchXmlContent(zooomrFeedURL,xmlResponseHandler);
 
 	}
 
