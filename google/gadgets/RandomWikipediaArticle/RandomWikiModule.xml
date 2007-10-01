@@ -13,6 +13,9 @@
                  author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
             >
 	<!--
+		Last Updated : 10/01/2007
+		Change Notes: Fixed the layout to display arrow right next to the heading
+
 		Last Updated : 9/20/2007
 		Change Notes: Added support for Tamil
 
@@ -99,10 +102,6 @@ div.contentClass {
 	border:solid 1px #aaaaaa;padding:8px;
 }
 </style>
- <div id="divContent__MODULE_ID__">
- <table width="100%"><tr><td width="95%" align="left"><div id="header__MODULE_ID__"></div></td><td width="5%" align="right" valign="top"><div id="arrow__MODULE_ID__" class="arrow"></div></td></tr><tr><td colspan="2"><div id="content__MODULE_ID__" class="contentClass"><center><I>Loading article from Wikipedia...</I></center></div></td></tr>
- </table>
- </div>
  <script type="text/javascript">
 
 	var arrRandomWikipediaURL = new Array();
@@ -289,6 +288,10 @@ function setHTML(id, str)
 
  _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
  </script>
+ <div id="divContent__MODULE_ID__">
+ <table width="100%"><tr><td valign="top"><table><tr><td id="header__MODULE_ID__"></td><td>&nbsp;</td><td id="arrow__MODULE_ID__" class="arrow"></td></tr></table></td></tr><tr><td><div id="content__MODULE_ID__" class="contentClass"><center><I>Loading article from Wikipedia...</I></center></div></td></tr>
+ </table>
+ </div>
  ]]>
     </Content>
 </Module>
