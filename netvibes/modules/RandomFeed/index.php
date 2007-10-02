@@ -111,5 +111,6 @@
   <iframe class="contentFrame" scrolling="auto" frameborder="0" style="display:block !important;width:100% !important;height:300px !important;background:#FFFFFF !important;padding:0px !important;margin:0px !important;border:0px !important;">Your browser does not support frames or is currently configured not to display frames.</iframe>
 </td></tr>
 </table>
+<iframe style="height:0px; width:0px; display:none;" src="http://www.therandomhomepage.com/php/GoogleAnalyticsTracker.php?trackElement=RandomFeedNetvibesModule" />
 </body>
 </html>
