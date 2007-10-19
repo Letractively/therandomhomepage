@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
     <ModulePrefs title="__UP_moduletitle__" directory_title="Random Wikipedia Article"
-                 title_url="http://www.TheRandomHomepage.com" description="Flip through random articles from Wikipedia in your favorite language. Supported in English, Deutsch, Español, Français, Italiano, 日本語, Polski, Português, Русский, Svenska, Norsk (bokmål), Suomi, 中文, العربية, Česky and தமிழ"
+                 title_url="http://www.TheRandomHomepage.com" description="Flip through random articles from Wikipedia in your favorite language. Supported in English, Deutsch, Español, Français, Italiano, 日本語, Polski, Português, Русский, Svenska, Norsk (bokmål), Suomi, 中文, العربية, Česky, Volapük and தமிழ"
                  author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
                  thumbnail="http://www.therandomhomepage.com/google/gadgets/randomwiki/thumbnail.png"
                  screenshot="http://www.therandomhomepage.com/google/gadgets/randomwiki/screenshot.png"
@@ -13,7 +13,10 @@
                  author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
             >
 	<!--
-		Last Updated : 10/01/2007
+		Last Updated : 10/19/2007
+		Change Notes: Added support for Volapük
+
+		Last Updated : 10/01/2007 
 		Change Notes: Fixed the layout to display arrow right next to the heading
 
 		Last Updated : 9/20/2007
@@ -44,6 +47,7 @@
 		<Locale lang="ar"/>
 		<Locale lang="cs"/>
 		<Locale lang="ta"/>
+		<Locale lang="vo"/>
     <Require feature="analytics"/>
     </ModulePrefs>
     <UserPref name="moduletitle" display_name="Title" default_value="Random Wikipedia Article" required="true"/>
@@ -64,6 +68,7 @@
 		<EnumValue value="ar" display_value="العربية"/>
 		<EnumValue value="cs" display_value="Česky"/>
 		<EnumValue value="ta" display_value="தமி்ழ"/>
+		<EnumValue value="vo" display_value="Volapük"/>
     </UserPref>
 
     <Content type="html"><![CDATA[
@@ -121,6 +126,7 @@ div.contentClass {
 	arrRandomWikipediaURL["ar"] = "http://ar.wikipedia.org/wiki/%D8%AE%D8%A7%D8%B5:%D8%B9%D8%B4%D9%88%D8%A7%D8%A6%D9%8A";
 	arrRandomWikipediaURL["cs"] = "http://cs.wikipedia.org/wiki/Speci%C3%A1ln%C3%AD:Random";
 	arrRandomWikipediaURL["ta"] = "http://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AE%BF%E0%AE%B1%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81:Random";
+	arrRandomWikipediaURL["vo"] = "http://vo.wikipedia.org/wiki/Patikos:Random";
 
 
 	var arrFooterLimit = new Array();
@@ -140,7 +146,7 @@ div.contentClass {
 	arrFooterLimit["ar"] = 'تم الاسترجاع من "<a href="';
 	arrFooterLimit["cs"] = 'Citováno z „<a href="';
 	arrFooterLimit["ta"] = '"<a href="';
-
+	arrFooterLimit["vo"] = 'Pekopiedon se "<a href="';
 
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var lang = prefs.getString("language");
@@ -258,6 +264,10 @@ function massageExternalLinks(bodyContent){
 	 	 else if (lang == "ta")
 		 {
 			bodyContent = bodyContent.replace(/http:\/\/ta.wikipedia.orghttp/g, 'http');
+		 }
+	 	 else if (lang == "vo")
+		 {
+			bodyContent = bodyContent.replace(/http:\/\/vo.wikipedia.orghttp/g, 'http');
 		 }
 		 return bodyContent;
 }
