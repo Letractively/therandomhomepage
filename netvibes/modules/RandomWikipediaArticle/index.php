@@ -1,76 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:widget="http://www.netvibes.com/ns/">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Expires" content="" />
+<meta name="author" content="Siddique Hameed" />
+<meta name="description" content="Random Wikipedia Article" />
+<meta name="version" content="0.1" />
+<meta name="apiVersion" content="1.0" />
+<meta name="inline" content="0.1" />
+<meta name="website" content="http://www.TheRandomHomepage.com" />
+<meta name="debugMode" content="true" />
 <title>Random Wikipedia Article</title>
-<link rel="icon" type="image/png" href="http://en.wikipedia.org/favicon.ico"/>
-<meta name="author" content="Siddique Hameed"/>
-<!--
-	Last Updated: 5/14/2007
-	Change Notes: Used phonifier from therandomhomepage because of its support from new host
+<link rel="stylesheet" type="text/css"
+	href="http://www.netvibes.com/themes/uwa/style.css" />
+<script type="text/javascript"
+  src="http://www.netvibes.com/js/UWA/load.js.php?env=Standalone"></script>
 
-	Last Updated: 2/22/2007
-	Bug fix: Added urchin tracker back using "iframe" approach
+<widget:preferences>
+      <preference name="language" type="list" label="Language" defaultValue="en">
+		<option value="en" label="English" />
+	  </preference>
 
-	Last Updated: 2/16/2007
-	Bug fix: Removed urchin tracker as it broke this module
-	Version 0.3
+</widget:preferences>
 
-	Last Updated: 1/31/2007
-	Change Notes: Added support for czech (Česky) language
-	Version 0.3
--->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link rel="stylesheet" type="text/css" href="http://www.netvibes.com/api/0.3/style.css"/>
-<style type="text/css">
-    img {
-        border: none;
-        vertical-align: middle;
-    }
-
-    hr {
-        height: 1px;
-        color: #aaaaaa;
-        background-color: #aaaaaa;
-        border: 0;
-        margin: 0.2em 0 0.2em 0;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        color: Black;
-        background: none;
-        font-weight: normal;
-        margin: 0;
-        padding-top: 0.5em;
-        padding-bottom: 0.17em;
-    }
-
-    div.divWikipediaContent {
-        vertical-align: top;
-        background-color: #F4F4F4;
-        border: solid 1px #aaaaaa;
-        padding: 8px;
-    }
-
-    div.divRandomWikipediaTitle {
-        color: Black;
-    }
-
-    div.divArrow {
-        font-weight: bold;
-        color: darkblue;
-        cursor: pointer;
-    }
-
-</style>
-
-<script type="text/javascript" src="http://www.netvibes.com/api/0.3/emulation.js"></script>
-
-<?php
-    $height = "400";
-	if(!empty($_COOKIE['height'])) {
-		$height = $_COOKIE['height'];
-	}
-?>
 <script type="text/javascript">
 
 var arrRandomWikipediaURL = new Array();
@@ -99,105 +53,63 @@ arrFooterLimit["cs"] = 'Citováno z „<a href="';
 
 var randomWikipediaURL = "http://en.wikipedia.org/wiki/Special:Random";
 
-NV_ONLOAD = function()
-{
-	initLanguage();
-	resize();
-    getRandomArticleFromWikipedia();
-    setTitle();
+var randomWikipediaArticleWidget = {}
+
+randomWikipediaArticleWidget.loadModule = function() {
+	randomWikipediaURL = arrRandomWikipediaURL["en"];
+	getRandomArticleFromWikipedia();
 }
 
-function initLanguage() {
-	if (isEmpty(getValue("language")))
-	{
-		//default language
-		saveValue("language","en");
-	}
-}
-
-function setTitle() {
-    if (!isEmpty(getValue("title")))
-    {
-        NV_TITLE.innerHTML = getValue("title");
-    }
-}
-
-function getRandomArticleFromWikipedia() {
-
-	randomWikipediaURL = arrRandomWikipediaURL[getValue("language")];
-
-    //var url = "http://www.phonifier.com/phonify.php?i=1&m=0&l=0&u=" + randomWikipediaURL;
+function getRandomArticleFromWikipedia(){
 	var url = "http://www.therandomhomepage.com/php/phonifier/index.php?i=1&m=0&l=0&u=" + randomWikipediaURL;
-    var d = new Date();
-    url += "&rnd=" + d.getTime();
+	var d = new Date();
+	url += "&rnd=" + d.getTime();
 
-    if (!NV_XML_REQUEST_URL) {
-        var NV_XML_REQUEST_URL = 'http://www.netvibes.com/ajaxProxy.php';
-    }
+  try
+  {
+	  UWA.Data.request(
+		url,
+		 {
+		 method: 'get',
+		 proxy: 'ajax',
+		 type: 'text',
+		 onComplete: showContent
+		 }
+	  );
+  }
+  catch (e)
+  {
+	  alert("AJAX error = "+e);
+  }
 
-    var requestParams = { method: 'get', onSuccess: ShowWikipediaArticle, onFailure: ShowFailure };
-    var request = new Ajax.Request(NV_XML_REQUEST_URL + '?url=' + escape(url), requestParams);
-
-    setHTML("divRandomWikipediaTitle", "&nbsp;");
-	setHTML("divWikipediaContent", "<p style='text-align:center;display:block;width:350px'>Loading article from Wikipedia...</p>");
-	var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
-    if (arrow)
-    {
-        Element.toggle(arrow);
-    }
 }
 
-function resize(){
-	var moduleWidth = getValue("width");
-	if (!isEmpty(moduleWidth))
-	{
-		var moduleElements = document.getElementsByClassName("module",document);
-		if (moduleElements)
-		{
-			for(var i=0; i < moduleElements.length; i++){
-				var divWikipediaContent = document.getElementsByClassName("divWikipediaContent",moduleElements[i])[0];
-				if (divWikipediaContent)
-				{
-					Element.setStyle(moduleElements[i],{width: moduleWidth+"px"});
-					break;
-				}
-			}
-		}
-	}
-}
+showContent = function(responseText) {
 
-function ShowFailure(xhr)
-{
-    setHTML("divWikipediaContent", xhr.responseText);
-}
-
-function ShowWikipediaArticle(xhr)
-{
     try
     {
-
-        var responseDocument = document.createElement("response");
+        var responseDocument = widget.createElement("response");
 		var respText = "";
 		var tooltipText = "";
 
-        var retrievedFrmIdx = xhr.responseText.indexOf(arrFooterLimit[getValue("language")]);
+        var retrievedFrmIdx = responseText.indexOf(arrFooterLimit["en"]);
         if (retrievedFrmIdx > -1)
         {
 
             var wikipediaBaseURL = randomWikipediaURL.substring(0, randomWikipediaURL.lastIndexOf("/"));
 
-            var articleURLStartIdx = xhr.responseText.indexOf(wikipediaBaseURL, retrievedFrmIdx);
+            var articleURLStartIdx = responseText.indexOf(wikipediaBaseURL, retrievedFrmIdx);
 
-            var articleURLEndIdx = xhr.responseText.indexOf('</a>', articleURLStartIdx);
+            var articleURLEndIdx = responseText.indexOf('</a>', articleURLStartIdx);
 
 
-            var articleURL = xhr.responseText.substring(articleURLStartIdx, articleURLEndIdx);
+            var articleURL = responseText.substring(articleURLStartIdx, articleURLEndIdx);
 
-            var articleTitle = grep(xhr.responseText, '<h1 class="firstHeading">', '</h1>');
+            var articleTitle = grep(responseText, '<h1 class="firstHeading">', '</h1>');
 
             setHTML("divRandomWikipediaTitle", "<h3><a target='_new' href='" + articleURL + "'>" + articleTitle + "</a></h3>");
 
-            respText = xhr.responseText.substring(0, retrievedFrmIdx);
+            respText = responseText.substring(0, retrievedFrmIdx);
             var paraIdx = respText.indexOf("<p>");
 
             if (paraIdx > -1)
@@ -205,50 +117,66 @@ function ShowWikipediaArticle(xhr)
                 respText = respText.substring(paraIdx);
             }
 
-            responseDocument.innerHTML = respText;
+            responseDocument.setHTML(respText);
         }
 		else {
-			responseDocument.innerHTML = "There was some error reading content from Wikipedia !.<br/> Please try again later...";
+			responseDocument.setHTML("There was some error reading content from Wikipedia !.<br/> Please try again later...");
 		}
 
         removeElements(responseDocument, 'form');
 
         var links = $A(responseDocument.getElementsByTagName('a'));
-        var localLinks = links.findAll(function(link) {
-            var linkURL = link.href;
-            if (linkURL.indexOf('phonify.php') != -1)
-            {
-                var idx = linkURL.indexOf("http%3A%2F%2F");
-                linkURL = linkURL.substr(idx + 13);
-                linkURL = "http://" + unescape(linkURL);
-                link.href = linkURL;
-                link.target = "_new";
-            }
-        });
+
+		for(var i=0; i < links.length || i < 10; i++) {
+			var link = links[i];
+			if (link)
+			{
+				var linkURL = link.href;
+				if (linkURL.indexOf('&u=') != -1)
+				{
+					var idx = linkURL.indexOf("&u=");
+					linkURL = linkURL.substr(idx + 3);
+					linkURL = unescape(linkURL);
+					link.href = linkURL;
+					link.target = "_new";
+				}
+			}
+		}
 
         removeElementsWithIds(responseDocument, "h3", "siteSub");
         removeElementsWithIds(responseDocument, "ul", "f-list");
         removeElementsWithIds(responseDocument, "ul", "t-whatlinkshere");
 
-        setHTML("divWikipediaContent", responseDocument.innerHTML);
+		var editSections = responseDocument.getElementsByClassName("editsection");
 
-        var arrow = document.getElementsByClassName("divArrow", NV_CONTENT)[0];
+		for(var i=0; i < editSections.length; i++){
+			if (editSections[i])
+			{
+				responseDocument.remove(editSections[i]);
+			}
+		}
+
+
+		setHTML("divWikipediaContent", responseDocument.innerHTML);
+
+        var arrow = widget.body.getElementsByClassName("divArrow", widget.body)[0];
         if (arrow)
         {
-            Element.toggle(arrow);
+            //widget.body.toggle();
             arrow.onclick = function() {
                 getRandomArticleFromWikipedia();
             }
         }
 
-		var tdArrow = document.getElementsByClassName('tdArrow',NV_CONTENT)[0];
+		var tdArrow = widget.body.getElementsByClassName('tdArrow',widget.body)[0];
 	    tdArrow.onmouseover = function()
 	    {
 			setToolTip(this, "Click on the arrows (&gt;&gt;) for next random article.");
+
 		}
 
 
-		var divTitle = document.getElementsByClassName('divRandomWikipediaTitle',NV_CONTENT)[0];
+		var divTitle = widget.body.getElementsByClassName('divRandomWikipediaTitle',widget.body)[0];
 	    divTitle.onmouseover = function()
 	    {
 			if (tooltipText == "")
@@ -273,6 +201,46 @@ function ShowWikipediaArticle(xhr)
     }
 }
 
+function setToolTip(element,text){
+	UWA.Utils.setTooltip(element, text, 250);
+}
+
+
+
+widget.onLoad = function() {
+  randomWikipediaArticleWidget.loadModule();
+}
+
+
+/*
+	function getRandomArticleFromWikipedia() {
+		try{
+			var requestParams = { method: 'get', onSuccess: ShowWikipediaArticle, onFailure: ShowFailure };
+			var request = UWA.Data.request(NV_XML_REQUEST_URL + '?url=' + escape(url), requestParams);
+
+			setHTML("divRandomWikipediaTitle", "&nbsp;");
+			setHTML("divWikipediaContent", "<p style='text-align:center;display:block;width:350px'>Loading article from Wikipedia...</p>");
+			var arrow = widget.body.getElementsByClassName("divArrow", widget.body)[0];
+			if (arrow)
+			{
+				Element.toggle(arrow);
+			}
+		}
+		catch(e){
+			alert("Error "+e);
+		}
+	}
+*/
+
+function ShowFailure(xhr)
+{
+    setHTML("divWikipediaContent", xhr.responseText);
+}
+
+function ShowWikipediaArticle(xhr)
+{
+}
+
 function stripHTML(str){
 	try
 	{
@@ -290,19 +258,23 @@ function stripHTML(str){
 
 function removeElementsWithIds(parentDocument, tagName, idName) {
     var nodes = $A(parentDocument.getElementsByTagName(tagName));
-    var foundNodes = nodes.findAll(function(node) {
-        if (node.id == idName)
-        {
-            Element.remove(node);
-        }
-    });
+
+	for(var i=0; i < nodes.length; i++){
+		if (nodes[i].id == idName)
+		{
+			widget.body.remove(node);
+		}
+	}
 }
 
 function removeElements(baseElement, elementName) {
     var forms = $A(baseElement.getElementsByTagName(elementName));
-    var localForms = forms.findAll(function(form) {
-        Element.remove(form);
-    });
+	for(var i=0; i < forms.length; i++) {
+		if (forms[i])
+		{
+			widget.body.remove(forms[i]);
+		}
+	}
 }
 
 
@@ -324,10 +296,10 @@ function grep(wholeStr, startsWith, endsWith)
 
 function setHTML(className, str)
 {
-    var element = document.getElementsByClassName(className, NV_CONTENT)[0];
+    var element = widget.body.getElementsByClassName(className)[0];
     if (element)
     {
-        element.innerHTML = str;
+        element.setHTML(str);
     }
 }
 
@@ -336,7 +308,7 @@ function setHTML(className, str)
 
 <body>
 <table cellspacing="0"
-       style="display:block !important;width:100% !important;height:<?php echo htmlspecialchars($height) ?>px !important;background:#FFFFFF !important;padding:0px !important;margin:0px !important;border:0px !important;overflow: auto;">
+       style="display:block !important;width:100% !important;height:350px !important;background:#FFFFFF !important;padding:0px !important;margin:0px !important;border:0px !important;overflow: auto;">
     <tr>
         <td align="left">
             <div class="divRandomWikipediaTitle"/>
@@ -353,44 +325,5 @@ function setHTML(className, str)
         </td>
     </tr>
 </table>
-<form class="configuration" method="post" action="">
-    <table border="0">
-        <tr>
-            <td><label>Title:</label></td>
-            <td><input name="title" type="text" value="Random Wikipedia Article" size="40"/></td>
-        </tr>
-        <tr>
-            <td><label>Height:</label></td>
-            <td><input name="height" type="text" size="4" value="400"/></td>
-        </tr>
-        <tr>
-            <td><label>Width:</label></td>
-            <td><input name="width" type="text" size="4"/></td>
-        </tr>
-        <tr>
-            <td><label>Language:</label></td>
-            <td>
-                <select name="language" style="vertical-align: top; padding: 0; margin: 0 0.4em;">
-                    <option value="de" lang="de" xml:lang="de">Deutsch</option>
-                    <option value="en" lang="en" xml:lang="en" selected="selected">English</option>
-                    <option value="es" lang="es" xml:lang="es">Español</option>
-                    <option value="fr" lang="fr" xml:lang="fr">Français</option>
-                    <option value="it" lang="it" xml:lang="it">Italiano</option>
-                    <option value="ja" lang="ja" xml:lang="ja">日本語</option>
-                    <option value="pl" lang="pl" xml:lang="pl">Polski</option>
-                    <option value="pt" lang="pt" xml:lang="pt">Português</option>
-                    <option value="sv" lang="sv" xml:lang="sv">Svenska</option>
-					<option value="cs" lang="cs" xml:lang="cs">Česky</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <input type="submit" value="OK"/>
-            </td>
-        </tr>
-    </table>
-</form>
-<iframe style="height:0px; width:0px; display:none;" src="http://www.therandomhomepage.com/php/GoogleAnalyticsTracker.php" />
 </body>
 </html>
