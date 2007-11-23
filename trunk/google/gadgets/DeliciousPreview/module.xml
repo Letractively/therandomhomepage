@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
     <ModulePrefs title="Delicious Preview"
-                 title_url="http://www.BoxySystems.com" description="Preview what everyone is bookmarking in del.icio.us using this gadget."
+                 title_url="http://www.BoxySystems.com" description="Preview what everyone is bookmarking in http://del.icio.us using this gadget. Dynamically add or remove tabs for the tag of your interest from Tagcloud."
                  author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
                  thumbnail="http://www.therandomhomepage.com/google/gadgets/DeliciousPreview/deliciousthumbnail.png"
                  screenshot="http://www.therandomhomepage.com/google/gadgets/DeliciousPreview/deliciousscreenshot.gif"
                  author_affiliation="http://www.BoxySystems.com"
                  author_location = "Ann Arbor, MI"
                  author_photo = "http://www.therandomhomepage.com/images/author.jpg"
-                 author_aboutme = "I am an aspiring entrepreneur who likes crafting software both for living and hobbies. Still searching for the perfect click of my life..."
+                 author_aboutme = "I am an aspiring entrepreneur who loves crafting software both for living and hobbies. Still searching for the perfect click of my life..."
                  author_link = "http://blogs.boxysystems.com"
                  author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
             >
 	<!--
+		Last Updated : 11/23/2007
+		Change Notes: Improved tabbing
+
 		Last Updated : 11/21/2007
-		Initial version
+		Change Notes: Initial version
 	-->
     <Require feature="analytics"/>
 	<Require feature="tabs"/>
@@ -23,7 +26,9 @@
 	<UserPref name="Hotlist" default_value="http://del.icio.us/rss/" datatype="hidden" />
 	<UserPref name="Popular" default_value="http://del.icio.us/rss/popular" datatype="hidden" />
 	<UserPref name="Recent" default_value="http://del.icio.us/rss/recent" datatype="hidden" />
+	<UserPref name="TagCloud" default_value="http://del.icio.us/tag/" datatype="hidden" />
 	<UserPref name="selectedTab" datatype="hidden" />
+	<UserPref name="Tags" datatype="hidden" />
     <Content type="html">
 <![CDATA[
 <style type="text/css">
@@ -44,6 +49,13 @@
 
 		a.titleLink:hover {
 			text-decoration: underline;
+		}
+
+		div.closeTab {
+			font-size:90%;
+			margin-bottom: 5px;
+			width: 100%;
+			text-align: right;
 		}
 
 		div.feedItem {
@@ -67,9 +79,38 @@
 			font-size:90%;
 		}
 
+		closeTab {
+			width: 100%;
+			text-align: right;
+		}
+
+		/* Tag Cloud */
+		.alphacloud a
+		{
+			line-height: 1.4em; padding-right: 0.4em;
+			text-decoration: none;
+			color: blue;
+		}
+
+		.alphacloud a:hover
+		{
+			text-decoration: underline;
+		}
+
+		.freqcloud a { line-height: 1.7em; padding-right: 0.4em; }
+		.s1 { font-size: 80%; }
+		.s2 { font-size: 90%; }
+		.s3 { font-size: 100%; }
+		.s4 { font-size: 115%; }
+		.s5 { font-size: 150%; }
+		.lb { color: #77f; }
+		.lr { color: #f77; }
+		.r { color: #f00 !important; }
+		.explaincloud { text-align: center; padding: 0.3em 0.5em 0.3em 0; font-size: 80%; }
+		.explaincloud p { margin-bottom: 0.25em; }
+		h4 { float: left; font-size: 120%; }
+
 </style>
-<!--<script type="text/javascript" src="http://www.therandomhomepage.com/js/prototype.js"></script>-->
-<script type="text/javascript" src="http://www.therandomhomepage.com/js/utils.js"></script>
 
  <script type="text/javascript">
 	var prefs = new _IG_Prefs(__MODULE_ID__);
@@ -77,13 +118,29 @@
 
 	var websnaprURLPrefix = "http://images.websnapr.com/?key=zLcr3AbYt202&url=";
 
-
 	function loadModule__MODULE_ID__(){
 		_IG_Analytics("UA-941159-1", "/DeliciousPreviewGoogleGadget");
 
 		tabs.addDynamicTab("Hotlist", loadTabsCallbackGenerator(prefs.getString("Hotlist")));
 		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator(prefs.getString("Popular")));
 		tabs.addDynamicTab("Recent", loadTabsCallbackGenerator(prefs.getString("Recent")));
+
+		var tags = prefs.getString("Tags");
+
+		if (tags != '')
+		{
+			var tagNames = tags.split("|");
+			for (var i=0; i < tagNames.length; i++)
+			{
+				if (tagNames[i] != '')
+				{
+					var feedURL = "http://del.icio.us/rss/tag/"+tagNames[i];
+					tabs.addDynamicTab(tagNames[i], loadTabsCallbackGenerator(feedURL));
+				}
+			}
+		}
+
+		tabs.addDynamicTab("Tagcloud", tagCloudCallbackGenerator(prefs.getString("TagCloud")));
 	}
 
 	function feedItemMouseOver(feedItem){
@@ -100,7 +157,78 @@
 		}
 	}
 
+	function tagCloudCallbackGenerator(url) {
+		return function(tabId) {
+			tagCloudCallback(tabId, url);
+		}
+	}
 
+	function tagCloudCallback(tabId,url) {
+	   var container = _gel(tabId);
+	  _IG_FetchContent(
+		url,
+		function(responseText) {
+			showTagCloud(container, tabId, responseText)
+		});
+	}
+
+	function showTagCloud(container, tabId, responseText){
+
+		if (responseText == null)
+		{
+			 container.innerHTML = "Error reading content from http://del.icio.us";
+			 return;
+		}
+
+		var tagsDiv = document.createElement("div");
+		tagsDiv.innerHTML = responseText;
+
+		var divs = tagsDiv.getElementsByTagName("div");
+
+		var alphacloudDiv = document.createElement("div");
+		for(var i=0; i < divs.length; i++) {
+			if (divs[i] && divs[i].className == "alphacloud")
+			{
+				alphacloudDiv.appendChild(divs[i]);
+				break;
+			}
+		}
+
+		var anchors = alphacloudDiv.getElementsByTagName("a");
+		for (var i=0; i < anchors.length; i++)
+		{
+			var tagName = anchors[i].innerHTML;
+			anchors[i].href = "javascript:createTabForTag('"+tagName+"');";
+		}
+
+		container.innerHTML = alphacloudDiv.innerHTML;
+	}
+
+	function createTabForTag(tagName){
+
+		var actualTabs = tabs.getTabs();
+		var tabExist = false;
+		for(var i=0; i < actualTabs.length; i++) {
+			if (actualTabs[i].getName() == tagName)
+			{
+				tabs.setSelectedTab(i);
+				tabExist = true;
+				break;
+			}
+		}
+
+		if (!tabExist)
+		{
+			var feedURL = "http://del.icio.us/rss/tag/"+tagName;
+			tabs.addDynamicTab(tagName, loadTabsCallbackGenerator(feedURL));
+			tabs.moveTab(i-1,i);
+			tabs.setSelectedTab(i-1);
+
+			var tags = prefs.getString("Tags");
+			tags  = tags + "|" +tagName;
+			prefs.set("Tags",tags);
+		}
+	}
 
    function loadTab(tabId,feedUrl) {
 	   var container = _gel(tabId);
@@ -113,12 +241,34 @@
 		true);
 	}
 
-	function showFeedsCallbackGenerator(feedUrl,tabId) {
-		return function(feed) {
-		  showFeeds(feed, feedUrl,tabId);
+	function removeSelectedTab(){
+
+		if (tabs.getSelectedTab() != null)
+		{
+			var tabName = tabs.getSelectedTab().getName();
+			var response = confirm("Are you sure you want to remove '"+tabName+"' tab ?");
+
+			if (response)
+			{
+				var tabIdx = tabs.getSelectedTab().getIndex();
+				tabs.removeTab(tabIdx);
+
+				tabs.setSelectedTab(tabIdx);
+
+				var tags = prefs.getString("Tags");
+				var tagNames = tags.split("|");
+				var modifiedTags = '';
+				for (var i=0; i < tagNames.length; i++ )
+				{
+					if (tagNames[i] != '' && tagNames[i] != tabName)
+					{
+						modifiedTags = modifiedTags + '|' + tagNames[i];
+					}
+				}
+				prefs.set("Tags",modifiedTags);
+			}
 		}
 	}
-
 
 	function showFeeds(container, tabId, feed){
 
@@ -128,7 +278,15 @@
          }
 
 		if (feed.Entry) {
+
 			var linksHTML = '';
+
+			var tags = prefs.getString("Tags");
+			if (tags != null && tags.indexOf(tabs.getSelectedTab().getName()) != -1)
+			{
+				linksHTML += '<div class="closeTab">[<a title="Remove Tab" href="javascript:removeSelectedTab();">X</a>]&nbsp;&nbsp;</div>';
+			}
+
              for (var i = 0; i < feed.Entry.length; i++) {
 
 				linksHTML += '<div class="feedItem" onmouseover="feedItemMouseOver(this);" onmouseout="feedItemMouseOut(this);"><table><tr><td colspan="2"><div class="title"><a class="titleLink" target="_new" href="'+feed.Entry[i].Link+'">'+feed.Entry[i].Title+'</a></div></td></tr>';
