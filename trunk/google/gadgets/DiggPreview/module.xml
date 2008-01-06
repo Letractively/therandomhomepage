@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="Digg Preview"
+                 title_url="http://www.BoxySystems.com" description="Preview what everyone is digging in http://www.digg.com using this gadget. Dynamically add or remove tabs for the topics of your interest."
+                 author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
+                 thumbnail="http://www.therandomhomepage.com/google/gadgets/DiggPreview/diggthumbnail.png"
+                 screenshot="http://www.therandomhomepage.com/google/gadgets/DiggPreview/diggscreenshot.png"
+                 author_affiliation="http://www.BoxySystems.com"
+                 author_location = "St. Louis, MO"
+                 author_photo = "http://www.therandomhomepage.com/images/author.jpg"
+                 author_aboutme = "I am an aspiring entrepreneur who loves crafting software both for living and hobbies. Still searching for the perfect click of my life..."
+                 author_link = "http://blogs.boxysystems.com"
+                 author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
+            >
+	<!--
+		Last Updated : 1/6/2008
+		Change Notes: Initial version
+	-->
+    <Require feature="analytics"/>
+	<Require feature="tabs"/>
+	<Require feature="setprefs"/>
+    </ModulePrefs>
+	<UserPref name="selectedTab" datatype="hidden" />
+	<UserPref name="Topics" datatype="hidden" />
+    <Content type="html">
+<![CDATA[
+<style type="text/css">
+		body, td {
+			font-family:arial,helvetica,sans-serif;
+			font-size:83%;
+			font-size-adjust:none;
+			font-stretch:normal;
+			font-style:normal;
+			font-variant:normal;
+			font-weight:normal;
+			line-height:1.4;
+		}
+
+		img {
+			border-style: none;
+			cursor: pointer;
+		}
+
+		td.tdSummary {
+			font-size:75%;
+		}
+
+		div.title {
+			font-weight: bold;
+			font-size:90%;
+		}
+
+		a.titleLink {
+			color: #000000;
+			text-decoration: none;
+		}
+
+		a.titleLink:hover {
+			text-decoration: underline;
+		}
+
+		div.closeTab {
+			font-size:90%;
+			margin-bottom: 5px;
+			width: 100%;
+			text-align: right;
+		}
+
+		div.feedItem {
+			font-size:90%;
+			margin-bottom: 5px;
+		}
+
+		div.feedItemMouseOver {
+			background-color:#EDF4FC;
+		}
+
+		div.feedItemMouseOut {
+			background-color:#FFFFFF;
+		}
+
+		ul {
+			font-size:90%;
+		}
+
+		li {
+			font-size:90%;
+		}
+
+		p {
+			font-size:90%;
+			/*font-weight: bold;*/
+		}
+
+		closeTab {
+			width: 100%;
+			text-align: right;
+		}
+
+		a.digg-count{
+			display: block;
+			float: left;
+			padding: 3px 4px;
+			background: #ff9;
+			border: 1px solid #EEE393;
+			font-size: 85%;
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+			margin: -1px 5px 7px 0;
+			color: #B6B631;
+		}
+
+		 a.comments {
+			background: url(http://www.digg.com/img/tools.gif) no-repeat 0 -196px;
+			word-spacing: -0.1em;
+			padding: 4px 6px 4px 18px;
+			font-size: 85%;
+			text-align: center;
+			text-decoration: none;
+			color: #000000;
+		}
+
+		a.comments:visited {
+			color: #000000;
+		}
+
+		a.alphacloud
+		{
+			line-height: 1.4em; padding-right: 0.4em;
+			text-decoration: none;
+			font-size: 90%;
+			color: #000000;
+		}
+
+		a.containeralphacloud {
+			line-height: 1.4em; padding-right: 0.4em;
+			text-decoration: none;
+			font-weight: bold;
+			color: #000000;
+		}
+
+		a.alphacloud:hover
+		{
+			text-decoration: underline;
+		}
+
+		a.containeralphacloud:hover
+		{
+			text-decoration: underline;
+		}
+</style>
+
+<script type="text/javascript" src="http://www.therandomhomepage.com/js/utils.js"></script>
+
+ <script type="text/javascript">
+	var prefs = new _IG_Prefs(__MODULE_ID__);
+	var tabs = new _IG_Tabs(__MODULE_ID__);
+
+	var errorHTML = "<p align='center'><i>Unable to read content from http://www.digg.com! <br/>Please try again later.</i></p>";
+
+	var websnaprURLPrefix = "http://images.websnapr.com/?key=zLcr3AbYt202&url=";
+
+	function loadModule__MODULE_ID__(){
+		_IG_Analytics("UA-941159-1", "/DiggPreviewGoogleGadget");
+
+		//http://services.digg.com/stories/popular?count=15&appkey=http%3A%2F%2Ftherandomhomepage.com
+
+		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator('http://services.digg.com/stories/popular?appkey=http%3A%2F%2Ftherandomhomepage.com'));
+		var topics = prefs.getString("Topics");
+
+		if (topics != '')
+		{
+			var topicNamesStr = topics.split("|");
+			for (var i=0; i < topicNamesStr.length; i++)
+			{
+				if (topicNamesStr[i] != '')
+				{
+					var topicNamesStrArr = topicNamesStr[i].split("^");
+					if (topicNamesStrArr.length == 3)
+					{
+						var feedURL = buildFeedURL(topicNamesStrArr[0],topicNamesStrArr[2]);
+						tabs.addDynamicTab(topicNamesStrArr[1], loadTabsCallbackGenerator(feedURL));
+					}
+				}
+			}
+		}
+
+		tabs.addDynamicTab("Topics", tagCloudCallbackGenerator("http://services.digg.com/topics?appkey=http%3A%2F%2Ftherandomhomepage.com"));
+	}
+
+	function buildFeedURL(topicName,isContainer){
+
+		var feedURL = 'http://services.digg.com/stories/topic/'+topicName+'/popular?appkey=http%3A%2F%2Ftherandomhomepage.com';
+		if (isContainer == "true")
+		{
+			feedURL = 'http://services.digg.com/stories/container/'+topicName+'/popular?appkey=http%3A%2F%2Ftherandomhomepage.com';
+		}
+
+		return feedURL;
+	}
+
+	function feedItemMouseOver(feedItem){
+		feedItem.className = "feedItemMouseOver";
+	}
+
+	function feedItemMouseOut(feedItem){
+		feedItem.className = "feedItemMouseOut";
+	}
+
+	function loadTabsCallbackGenerator(feedUrl) {
+		return function(tabId) {
+			loadTab(tabId, feedUrl);
+		}
+	}
+
+	function tagCloudCallbackGenerator(url) {
+		return function(tabId) {
+			tagCloudCallback(tabId, url);
+		}
+	}
+
+	function tagCloudCallback(tabId,url) {
+	   var container = _gel(tabId);
+	  _IG_FetchXmlContent(
+		url,
+		function(responseText) {
+			showTagCloud(container, tabId, responseText)
+		});
+	}
+
+	function showTagCloud(container, tabId, response){
+
+		 if (response == null || typeof(response) != "object" ||
+                      response.firstChild == null) {
+              container.innerHTML = errorHTML;
+			  return;
+         }
+
+
+		var arrContainerTopics = new Array();
+		var topics = response.getElementsByTagName("topic");
+		for (var i=0; i < topics.length; i++)
+		{
+			var displayName = topics[i].getAttribute("name");
+			var topicName = topics[i].getAttribute("short_name");
+			var topic = new Topic(displayName,topicName,false);
+			arrContainerTopics.push(topic);
+		}
+
+		var arrContainer = new Array();
+		var containers = response.getElementsByTagName("container");
+		var arrIdx = 0;
+		for (var i=0; i < containers.length; i++)
+		{
+			var displayName = containers[i].getAttribute("name");
+			var topicName = containers[i].getAttribute("short_name");
+			if (!isExist(arrContainerTopics,topicName))
+			{
+				var topic = new Topic(displayName,topicName,true);
+				arrContainerTopics.push(topic);
+			}
+		}
+
+
+		arrContainerTopics.sort(sortAscending);
+		var htmlStr = '<p>';
+
+		for (var i=0; i < arrContainerTopics.length; i++)
+		{
+
+			if (arrContainerTopics[i].isContainer == true)
+			{
+				htmlStr += '<a class="containeralphacloud" ';
+			}
+			else {
+				htmlStr += '<a class="alphacloud" ';
+			}
+
+			htmlStr += ' href="javascript:createTabForTopic(\''+arrContainerTopics[i].name+'\',\''+arrContainerTopics[i].displayName+'\',\''+arrContainerTopics[i].isContainer+'\');"> '+arrContainerTopics[i].displayName+'</a>';
+		}
+
+		htmlStr += '</p>';
+
+		container.innerHTML = htmlStr;
+	}
+
+	function sortAscending(a,b) {
+		var aDisplayName = a.displayName;
+		var bDisplayName = b.displayName;
+		if(aDisplayName > bDisplayName)
+		  return 1
+		if(aDisplayName < bDisplayName)
+		  return -1
+		return 0
+	}
+
+	function isExist(arrContainerTopics,topicName) {
+		for (var k=0; k < arrContainerTopics.length; k++)
+		{
+			if (arrContainerTopics[k].name == topicName)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	function Topic(displayName,name,isContainer) {
+		this.name = name;
+		this.displayName = displayName;
+		this.isContainer = isContainer;
+	}
+
+	function createTabForTopic(topic,displayName,isContainer){
+
+		var actualTabs = tabs.getTabs();
+		var tabExist = false;
+		for(var i=0; i < actualTabs.length; i++) {
+			if (actualTabs[i].getName() == displayName)
+			{
+				tabs.setSelectedTab(i);
+				tabExist = true;
+				break;
+			}
+		}
+
+		if (!tabExist)
+		{
+			var feedURL = buildFeedURL(topic,isContainer);
+			tabs.addDynamicTab(displayName, loadTabsCallbackGenerator(feedURL));
+			tabs.moveTab(i-1,i);
+			tabs.setSelectedTab(i-1);
+
+			var topics = prefs.getString("Topics");
+			topics  = topics + "|" + topic + "^" + displayName + "^" + isContainer;
+			prefs.set("Topics",topics);
+		}
+	}
+
+   function loadTab(tabId,feedUrl) {
+	   var container = _gel(tabId);
+	   container.innerHTML = "<p>Loading...</p>";
+	  _IG_FetchXmlContent(
+		feedUrl,
+		function(feed) {
+			showFeeds(container, tabId, feed)
+		});
+	}
+
+	function removeSelectedTab(){
+
+		if (tabs.getSelectedTab() != null)
+		{
+			var tabName = tabs.getSelectedTab().getName();
+			var response = confirm("Are you sure you want to remove '"+tabName+"' tab ?");
+
+			if (response)
+			{
+				tabName = tabs.getSelectedTab().getName().replace(/&amp;/g,'&');
+				var tabIdx = tabs.getSelectedTab().getIndex();
+				tabs.removeTab(tabIdx);
+
+				tabs.setSelectedTab(tabIdx);
+
+				var tags = prefs.getString("Topics");
+				var tagNames = tags.split("|");
+				var modifiedTags = '';
+				for (var i=0; i < tagNames.length; i++ )
+				{
+					if (tagNames[i] != '' && tagNames[i].indexOf(tabName) == -1)
+					{
+						modifiedTags = modifiedTags + '|' + tagNames[i];
+					}
+				}
+				prefs.set("Topics",modifiedTags);
+			}
+		}
+	}
+
+	function showFeeds(container, tabId, response){
+
+		 if (response == null || typeof(response) != "object" ||
+                      response.firstChild == null) {
+              container.innerHTML = errorHTML;
+              return;
+         }
+
+		var linksHTML = '';
+
+		var topics = prefs.getString("Topics");
+		var tabName = tabs.getSelectedTab().getName().replace(/&amp;/g,'&');
+
+		if (topics != null && topics.indexOf(tabName) != -1)
+		{
+			linksHTML += '<div class="closeTab">[<a title="Remove Tab" href="javascript:removeSelectedTab();">X</a>]&nbsp;&nbsp;</div>';
+		}
+
+		var itemList = response.getElementsByTagName("story");
+
+		for(var i=0; i < itemList.length; i++) {
+
+			var title = getChildNodeValueByNodeName(itemList.item(i),"title");
+			var link = itemList.item(i).getAttribute("link");
+			var diggCount = itemList.item(i).getAttribute("diggs");
+			var commentsCount = itemList.item(i).getAttribute("comments");
+			var diggLink = itemList.item(i).getAttribute("href");
+			var description = getChildNodeValueByNodeName(itemList.item(i),"description");
+
+			if (isEmpty(description))
+			{
+				description = "";
+			}
+
+			linksHTML += '<div class="feedItem" onmouseover="feedItemMouseOver(this);" onmouseout="feedItemMouseOut(this);"><table><tr><td colspan="2" valign="top"><div class="title"><a class="titleLink" target="_new" href="'+diggLink+'">'+title+'</a></div></td></tr>';
+
+			linksHTML += '<tr><td valign="top"><a target="_new" href="'+link+'"><img src="'+websnaprURLPrefix + link+'" /"></a>';
+
+			linksHTML += '<br/><br/><a target="_new" href="'+diggLink+'" class="digg-count"><strong>'+diggCount+'</strong><br/>diggs</a>';
+
+			linksHTML += '&nbsp;<a target="_new" href="'+diggLink+'" class="comments">'+commentsCount+' Comments</a>';
+
+			linksHTML += '</td><td valign="top" class="tdSummary">'+description+'</td></tr></table></div>';
+		}
+		container.innerHTML = linksHTML;
+	}
+
+ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
+ </script>
+ ]]>
+    </Content>
+</Module>
