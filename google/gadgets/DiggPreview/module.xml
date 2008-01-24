@@ -13,6 +13,9 @@
                  author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
             >
 	<!--
+		Last Updated: 1/23/2008
+		Change Notes: Added feed caching & image caching and some code cleanup
+
 		Last Updated : 1/6/2008
 		Change Notes: Initial version
 	-->
@@ -89,7 +92,12 @@
 
 		p {
 			font-size:90%;
-			/*font-weight: bold;*/
+			font-weight: bold;
+		}
+
+		p.topics {
+			font-size:100%;
+			font-weight: normal;
 		}
 
 		closeTab {
@@ -151,22 +159,22 @@
 		}
 </style>
 
-<script type="text/javascript" src="http://www.therandomhomepage.com/js/utils.js"></script>
-
  <script type="text/javascript">
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var tabs = new _IG_Tabs(__MODULE_ID__);
 
 	var errorHTML = "<p align='center'><i>Unable to read content from http://www.digg.com! <br/>Please try again later.</i></p>";
 
+	var appKey = 'http%3A%2F%2Ftherandomhomepage.com';
+
 	var websnaprURLPrefix = "http://images.websnapr.com/?key=zLcr3AbYt202&url=";
+
+	var cacheInterval = '{refreshInterval:300}'; //5 mins
 
 	function loadModule__MODULE_ID__(){
 		_IG_Analytics("UA-941159-1", "/DiggPreviewGoogleGadget");
 
-		//http://services.digg.com/stories/popular?count=15&appkey=http%3A%2F%2Ftherandomhomepage.com
-
-		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator('http://services.digg.com/stories/popular?appkey=http%3A%2F%2Ftherandomhomepage.com'));
+		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator('http://services.digg.com/stories/popular?appkey='+appKey));
 		var topics = prefs.getString("Topics");
 
 		if (topics != '')
@@ -186,15 +194,15 @@
 			}
 		}
 
-		tabs.addDynamicTab("Topics", tagCloudCallbackGenerator("http://services.digg.com/topics?appkey=http%3A%2F%2Ftherandomhomepage.com"));
+		tabs.addDynamicTab("Topics", tagCloudCallbackGenerator("http://services.digg.com/topics?appkey="+appKey));
 	}
 
 	function buildFeedURL(topicName,isContainer){
 
-		var feedURL = 'http://services.digg.com/stories/topic/'+topicName+'/popular?appkey=http%3A%2F%2Ftherandomhomepage.com';
+		var feedURL = 'http://services.digg.com/stories/topic/'+topicName+'/popular?appkey='+appKey;
 		if (isContainer == "true")
 		{
-			feedURL = 'http://services.digg.com/stories/container/'+topicName+'/popular?appkey=http%3A%2F%2Ftherandomhomepage.com';
+			feedURL = 'http://services.digg.com/stories/container/'+topicName+'/popular?appkey='+appKey;
 		}
 
 		return feedURL;
@@ -226,7 +234,7 @@
 		url,
 		function(responseText) {
 			showTagCloud(container, tabId, responseText)
-		});
+		},cacheInterval);
 	}
 
 	function showTagCloud(container, tabId, response){
@@ -244,7 +252,8 @@
 		{
 			var displayName = topics[i].getAttribute("name");
 			var topicName = topics[i].getAttribute("short_name");
-			var topic = new Topic(displayName,topicName,false);
+			var containerName = topics[i].getElementsByTagName("container")[0].getAttribute("short_name");
+			var topic = new Topic(displayName,topicName,false,containerName);
 			arrContainerTopics.push(topic);
 		}
 
@@ -257,25 +266,27 @@
 			var topicName = containers[i].getAttribute("short_name");
 			if (!isExist(arrContainerTopics,topicName))
 			{
-				var topic = new Topic(displayName,topicName,true);
+				var topic = new Topic(displayName,topicName,true,topicName);
 				arrContainerTopics.push(topic);
 			}
 		}
 
 
 		arrContainerTopics.sort(sortAscending);
-		var htmlStr = '<p>';
+		var htmlStr = '<p class="topics">';
 
 		for (var i=0; i < arrContainerTopics.length; i++)
 		{
 
 			if (arrContainerTopics[i].isContainer == true)
 			{
-				htmlStr += '<a class="containeralphacloud" ';
+				htmlStr += '<a class="containeralphacloud"';
 			}
 			else {
-				htmlStr += '<a class="alphacloud" ';
+				htmlStr += '<a class="alphacloud"';
 			}
+
+			//htmlStr += arrContainerTopics[i].containerName+' "';
 
 			htmlStr += ' href="javascript:createTabForTopic(\''+arrContainerTopics[i].name+'\',\''+arrContainerTopics[i].displayName+'\',\''+arrContainerTopics[i].isContainer+'\');"> '+arrContainerTopics[i].displayName+'</a>';
 		}
@@ -307,10 +318,11 @@
 		return false;
 	}
 
-	function Topic(displayName,name,isContainer) {
+	function Topic(displayName,name,isContainer,containerName) {
 		this.name = name;
 		this.displayName = displayName;
 		this.isContainer = isContainer;
+		this.containerName = containerName;
 	}
 
 	function createTabForTopic(topic,displayName,isContainer){
@@ -346,19 +358,19 @@
 		feedUrl,
 		function(feed) {
 			showFeeds(container, tabId, feed)
-		});
+		},cacheInterval);
 	}
 
 	function removeSelectedTab(){
 
 		if (tabs.getSelectedTab() != null)
 		{
-			var tabName = tabs.getSelectedTab().getName();
+			var tabName = tabs.getSelectedTab().getName().replace(/&amp;/g,'&');
 			var response = confirm("Are you sure you want to remove '"+tabName+"' tab ?");
 
 			if (response)
 			{
-				tabName = tabs.getSelectedTab().getName().replace(/&amp;/g,'&');
+				//tabName = tabs.getSelectedTab().getName().replace(/&amp;/g,'&');
 				var tabIdx = tabs.getSelectedTab().getIndex();
 				tabs.removeTab(tabIdx);
 
@@ -378,6 +390,22 @@
 			}
 		}
 	}
+
+	function getChildNodeValueByNodeName(node,nodeNameStr){
+		var nodeList = node.childNodes;
+		 for (var j = 0; j < nodeList.length ; j++) {
+			var node = nodeList.item(j);
+			if (node.nodeName == nodeNameStr && node.firstChild)
+			{
+				return node.firstChild.nodeValue;
+			}
+		 }
+	}
+
+	function isEmpty(value) {
+		return value == "" || value == "undefined" || value == "null" || value == null;
+	}
+
 
 	function showFeeds(container, tabId, response){
 
@@ -415,7 +443,11 @@
 
 			linksHTML += '<div class="feedItem" onmouseover="feedItemMouseOver(this);" onmouseout="feedItemMouseOut(this);"><table><tr><td colspan="2" valign="top"><div class="title"><a class="titleLink" target="_new" href="'+diggLink+'">'+title+'</a></div></td></tr>';
 
-			linksHTML += '<tr><td valign="top"><a target="_new" href="'+link+'"><img src="'+websnaprURLPrefix + link+'" /"></a>';
+
+			var thumbnail = _IG_GetImage(websnaprURLPrefix + link,{refreshInterval:5});
+
+			//linksHTML += '<tr><td valign="top"><a target="_new" href="'+link+'"><img src="'+websnaprURLPrefix + link+'" /"></a>';
+			linksHTML += '<tr><td valign="top"><a target="_new" href="'+link+'"><img src="'+thumbnail.src+'" /"></a>';
 
 			linksHTML += '<br/><br/><a target="_new" href="'+diggLink+'" class="digg-count"><strong>'+diggCount+'</strong><br/>diggs</a>';
 
