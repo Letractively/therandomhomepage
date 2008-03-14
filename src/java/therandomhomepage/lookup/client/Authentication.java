@@ -2,16 +2,7 @@ package therandomhomepage.lookup.client;
 
 import com.google.gwt.http.client.*;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Siddique Hameed
- * Date: Jul 19, 2007
- * Time: 4:52:19 PM
- */
 public class Authentication {
-
-    private static String email = "googlookup@gmail.com";
-    private static String passwd = "googlelookup";
 
     private static String token = null;
 
