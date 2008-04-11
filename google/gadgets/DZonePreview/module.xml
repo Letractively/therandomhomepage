@@ -232,7 +232,7 @@
 
 		if (responseText == null)
 		{
-			 container.innerHTML = "Error reading content from http://www.dzone.com";
+			 container.innerHTML = errorHTML;
 			 return;
 		}
 
@@ -398,7 +398,7 @@
 					divSummaryAnchors[j].href = "http://www.therandomhomepage.com/google/gadgets/DZonePreview/redirectLink.php?url="+divSummaryAnchors[j].href;
 				}
 
-				linksHTML += '<tr><td valign="top" class="tdSummary">'+summary+'</td></tr>';
+				linksHTML += '<tr><td valign="top" class="tdSummary">'+divSummary.innerHTML+'</td></tr>';
 				linksHTML += '<tr><td><table align="right"><tr><td><div title="Votes up" class="ldStats-up">'+upCount+'</div></td><td><div title="Votes down" class="ldStats-down">'+downCount+'</div></td><td><div title="Comments count" class="ldStats-comments">'+commentCount+'</div></td><td><div title="Click count" class="ldStats-clicks">'+clickCount+'</div></td></tr></table></td></tr>';
 				linksHTML += '</table></div>';
 
