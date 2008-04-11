@@ -14,6 +14,9 @@
             >
 	<!--
 
+		Last Updated : 4/11/2008
+		Change Notes: Displaying the count statistic (vote up, vote down, comment counts & click counts)
+
 		Last Updated : 1/4/2008
 		Change Notes: Fix for not able to create ".net" tab
 
@@ -126,11 +129,45 @@
 		margin:0pt;
 		padding:0.5em 1em 1em;
 		}
+
+		div.ldStats-up {
+			padding-left: 1.1em;
+			background :url(http://dzone.com/links/themes/reader/images/vote-up-normal.gif ) 0 50% no-repeat;
+			/*font-weight: bold;*/
+			font-size:95%;
+			margin-right: 4px;
+		}
+
+		div.ldStats-down {
+			padding-left: 1.1em;
+			background :url(http://dzone.com/links/themes/reader/images/vote-down-normal.gif ) 0 50% no-repeat;
+			/*font-weight: bold;*/
+			font-size:95%;
+			margin-right: 4px;
+		}
+
+		div.ldStats-comments {
+			padding-left: 1.1em;
+			background :url(http://dzone.com/links/themes/reader/images/comment_new.gif) 0 50% no-repeat;
+			/*font-weight: bold;*/
+			font-size:95%;
+			margin-right: 4px;
+		}
+
+		div.ldStats-clicks {
+			padding-left: 1.1em;
+			background :url(http://dzone.com/links/themes/reader/images/icon-pointer.gif ) 0 50% no-repeat;
+			/*font-weight: bold;*/
+			font-size:95%;
+			margin-right: 4px;
+		}
 </style>
 
  <script type="text/javascript">
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var tabs = new _IG_Tabs(__MODULE_ID__);
+
+	var errorHTML = "<p align='center'><i>Unable to read content from http://www.DZone.com! <br/>Please try again later.</i></p>";
 
 	function loadModule__MODULE_ID__(){
 		_IG_Analytics("UA-941159-1", "/DZonePreviewGoogleGadget");
@@ -279,13 +316,13 @@
    function loadTab(tabId,feedUrl) {
 	   var container = _gel(tabId);
 	   container.innerHTML = "<p>Loading...</p>";
-	  _IG_FetchFeedAsJSON(
+
+	   _IG_FetchXmlContent(
 		feedUrl,
 		function(feed) {
 			showFeeds(container, tabId, feed)
-		},
-		15,
-		true);
+		});
+
 	}
 
 	function removeSelectedTab(){
@@ -317,14 +354,15 @@
 		}
 	}
 
-	function showFeeds(container, tabId, feed){
+	function showFeeds(container, tabId, response){
 
-		 if (feed == null){
-				 container.innerHTML = "Error reading content from http://www.dzone.com";
-                 return;
+		 if (response == null || typeof(response) != "object" ||
+                      response.firstChild == null) {
+              container.innerHTML = errorHTML;
+              return;
          }
 
-		if (feed.Entry) {
+		if (response.firstChild) {
 
 			var linksHTML = '';
 
@@ -334,13 +372,24 @@
 				linksHTML += '<div class="closeTab">[<a title="Remove Tab" href="javascript:removeSelectedTab();">X</a>]&nbsp;&nbsp;</div>';
 			}
 
+			var itemList = response.getElementsByTagName("item");
 
-             for (var i = 0; i < feed.Entry.length; i++) {
+             for (var i = 0; i < itemList.length; i++) {
 
-				linksHTML += '<div class="feedItem" onmouseover="feedItemMouseOver(this);" onmouseout="feedItemMouseOut(this);"><table><tr><td><div class="title"><a class="titleLink" target="_new" href="'+feed.Entry[i].Link+'">'+feed.Entry[i].Title+'</a></div></td></tr>';
+			 	var title = getChildNodeValueByNodeName(itemList.item(i),"title");
+				var link = getChildNodeValueByNodeName(itemList.item(i),"link");
+				var summary = getChildNodeValueByNodeName(itemList.item(i),"content:encoded");
+
+				var upCount = getChildNodeValueByNodeName(itemList.item(i),"dz:voteUpCount");
+				var downCount = getChildNodeValueByNodeName(itemList.item(i),"dz:voteDownCount");
+				var commentCount = getChildNodeValueByNodeName(itemList.item(i),"dz:commentCount");
+				var clickCount = getChildNodeValueByNodeName(itemList.item(i),"dz:clickCount");
+
+
+				linksHTML += '<div class="feedItem" onmouseover="feedItemMouseOver(this);" onmouseout="feedItemMouseOut(this);"><table><tr><td><div class="title"><a class="titleLink" target="_new" href="'+link+'">'+title+'</a></div></td></tr>';
 
 				var divSummary = document.createElement("div");
-				divSummary.innerHTML = feed.Entry[i].Summary;
+				divSummary.innerHTML = summary;
 
 				var divSummaryAnchors = divSummary.getElementsByTagName("a");
 
@@ -349,11 +398,24 @@
 					divSummaryAnchors[j].href = "http://www.therandomhomepage.com/google/gadgets/DZonePreview/redirectLink.php?url="+divSummaryAnchors[j].href;
 				}
 
-				linksHTML += '<tr><td valign="top" class="tdSummary">'+divSummary.innerHTML+'</td></tr></table></div>';
+				linksHTML += '<tr><td valign="top" class="tdSummary">'+summary+'</td></tr>';
+				linksHTML += '<tr><td><table align="right"><tr><td><div title="Votes up" class="ldStats-up">'+upCount+'</div></td><td><div title="Votes down" class="ldStats-down">'+downCount+'</div></td><td><div title="Comments count" class="ldStats-comments">'+commentCount+'</div></td><td><div title="Click count" class="ldStats-clicks">'+clickCount+'</div></td></tr></table></td></tr>';
+				linksHTML += '</table></div>';
 
              }
 			container.innerHTML = linksHTML;
         }
+	}
+
+	function getChildNodeValueByNodeName(node,nodeNameStr){
+		var nodeList = node.childNodes;
+		 for (var j = 0; j < nodeList.length ; j++) {
+			var node = nodeList.item(j);
+			if (node.nodeName == nodeNameStr && node.firstChild)
+			{
+				return node.firstChild.nodeValue;
+			}
+		 }
 	}
 
  _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
