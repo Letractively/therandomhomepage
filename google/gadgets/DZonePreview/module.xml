@@ -13,6 +13,10 @@
                  author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
             >
 	<!--
+
+		Last Updated : 1/4/2008
+		Change Notes: Fix for not able to create ".net" tab
+
 		Last Updated : 12/24/2007
 		Change Notes: Initial version
 	-->
@@ -179,6 +183,7 @@
 
 	function tagCloudCallback(tabId,url) {
 	   var container = _gel(tabId);
+	   container.innerHTML = "<p>Loading...</p>";
 	  _IG_FetchContent(
 		url,
 		function(responseText) {
@@ -212,6 +217,7 @@
 		for (var i=0; i < anchors.length; i++)
 		{
 			var tagName = anchors[i].innerHTML;
+
 			if (tagName != "all")
 			{
 				anchors[i].href = "javascript:createTabForTag('"+tagName+"');";
@@ -228,6 +234,18 @@
 		}
 
 		container.innerHTML = alphacloudDiv.innerHTML;
+
+		// for some reason .net tag is not showing up while getting all the anchor tags from alphacloudDiv
+		var anchors = container.getElementsByTagName("a");
+		for (var i=0; i < anchors.length; i++)
+		{
+			var tagName = anchors[i].innerHTML;
+			if (tagName == ".net")
+			{
+				anchors[i].href = "javascript:createTabForTag('"+tagName+"');";
+			}
+		}
+
 	}
 
 	function createTabForTag(tagName){
