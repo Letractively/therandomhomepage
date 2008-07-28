@@ -19,7 +19,7 @@
     <Require feature="analytics"/>
 	<Require feature="tabs"/>
 	<Require feature="setprefs"/>
-    </ModulePrefs>	
+    </ModulePrefs>
 	<UserPref name="selectedTab" datatype="hidden" />
 	<UserPref name="Topics" datatype="hidden" />
     <Content type="html">
@@ -408,8 +408,13 @@
 
 			linksHTML += '<div class="feedItem" onmouseover="feedItemMouseOver(this);" onmouseout="feedItemMouseOut(this);"><table><tr><td colspan="2" valign="top"><div class="title"><a class="titleLink" target="_new" href="'+articleLink+'">'+title+'</a></div></td></tr>';
 
-			linksHTML += '<tr><td valign="top"><a target="_new" href="'+articleLink+'"><img src="'+thumbnailURLPrefix + articleLink+'" /"></a></td></tr>';
+			linksHTML += '<tr><td valign="top"><a target="_new" href="'+articleLink+'"><img ';
+			if (screen.width <= 1280)
+			{
+				linksHTML += ' width="152px" height="114px" ';
+			}
 
+			linksHTML += ' src="'+thumbnailURLPrefix + articleLink+'" /"></a></td></tr>';
 
 			linksHTML += '<tr><td><a target="_new" href="'+commentLink+'" class="comments">Comments</a></td></tr></table></div>';
 
