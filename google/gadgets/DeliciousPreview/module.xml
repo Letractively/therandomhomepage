@@ -2,7 +2,7 @@
 <Module>
     <ModulePrefs title="Delicious Preview"
                  title_url="http://www.BoxySystems.com" description="Preview what everyone is bookmarking in http://del.icio.us using this gadget. Dynamically add or remove tabs for the tag of your interest from Tagcloud."
-                 author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
+                 author="Siddique Hameed" author_email="siddii@gmail.com" height="350" scrolling="true"
                  thumbnail="http://www.therandomhomepage.com/google/gadgets/DeliciousPreview/deliciousthumbnail.png"
                  screenshot="http://www.therandomhomepage.com/google/gadgets/DeliciousPreview/deliciousscreenshot.gif"
                  author_affiliation="http://www.BoxySystems.com"
@@ -79,6 +79,11 @@
 			font-size:90%;
 		}
 
+		p {
+			font-size:80%;
+			font-weight: bold;
+		}
+
 		closeTab {
 			width: 100%;
 			text-align: right;
@@ -116,7 +121,8 @@
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var tabs = new _IG_Tabs(__MODULE_ID__);
 
-	var websnaprURLPrefix = "http://images.websnapr.com/?key=zLcr3AbYt202&url=";
+	//var websnaprURLPrefix = "http://images.websnapr.com/?key=zLcr3AbYt202&url=";
+	var websnaprURLPrefix = "http://scurlr.appspot.com/thumbnail?url=";
 
 	function loadModule__MODULE_ID__(){
 		_IG_Analytics("UA-941159-1", "/DeliciousPreviewGoogleGadget");
@@ -165,6 +171,7 @@
 
 	function tagCloudCallback(tabId,url) {
 	   var container = _gel(tabId);
+	   container.innerHTML = "<p>Loading...</p>";
 	  _IG_FetchContent(
 		url,
 		function(responseText) {
@@ -232,6 +239,7 @@
 
    function loadTab(tabId,feedUrl) {
 	   var container = _gel(tabId);
+	   container.innerHTML = "<p>Loading...</p>";
 	  _IG_FetchFeedAsJSON(
 		feedUrl,
 		function(feed) {
@@ -312,8 +320,10 @@
 					ol += "</ul>";
 				}
 
-				linksHTML += '<tr><td valign="top"><a target="_new" href="'+feed.Entry[i].Link+'"><img src="'+websnaprURLPrefix + feed.Entry[i].Link+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';
+				var origImageLink = websnaprURLPrefix + feed.Entry[i].Link;
+				var cachedImageLink = _IG_GetCachedUrl(origImageLink);
 
+				linksHTML += '<tr><td valign="top"><a target="_new" href="'+feed.Entry[i].Link+'"><img src="'+origImageLink+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';
              }
 			container.innerHTML = linksHTML;
         }
