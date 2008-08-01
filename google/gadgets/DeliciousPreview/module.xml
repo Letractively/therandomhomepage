@@ -13,6 +13,9 @@
                  author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
             >
 	<!--
+		Last Updated : 8/1/2008
+		Change Notes: Synching with the changes to the new http://www.delicious.com
+
 		Last Updated : 11/23/2007
 		Change Notes: Improved tabbing
 
@@ -23,10 +26,6 @@
 	<Require feature="tabs"/>
 	<Require feature="setprefs"/>
     </ModulePrefs>
-	<UserPref name="Hotlist" default_value="http://del.icio.us/rss/" datatype="hidden" />
-	<UserPref name="Popular" default_value="http://del.icio.us/rss/popular" datatype="hidden" />
-	<UserPref name="Recent" default_value="http://del.icio.us/rss/recent" datatype="hidden" />
-	<UserPref name="TagCloud" default_value="http://del.icio.us/tag/" datatype="hidden" />
 	<UserPref name="selectedTab" datatype="hidden" />
 	<UserPref name="Tags" datatype="hidden" />
     <Content type="html">
@@ -90,30 +89,28 @@
 		}
 
 		/* Tag Cloud */
-		.alphacloud a
-		{
-			line-height: 1.4em; padding-right: 0.4em;
-			text-decoration: none;
-			color: blue;
-		}
-
-		.alphacloud a:hover
-		{
-			text-decoration: underline;
-		}
-
-		.freqcloud a { line-height: 1.7em; padding-right: 0.4em; }
-		.s1 { font-size: 80%; }
-		.s2 { font-size: 90%; }
-		.s3 { font-size: 100%; }
-		.s4 { font-size: 115%; }
-		.s5 { font-size: 150%; }
-		.lb { color: #77f; }
-		.lr { color: #f77; }
-		.r { color: #f00 !important; }
-		.explaincloud { text-align: center; padding: 0.3em 0.5em 0.3em 0; font-size: 80%; }
-		.explaincloud p { margin-bottom: 0.25em; }
-		h4 { float: left; font-size: 120%; }
+		#alphacloud{text-align:justify;border-bottom:1px solid #ccc;padding-bottom:10px;}
+		#alphacloud div{margin-left:-5px;_margin-left:0;}
+		#alphacloud a.label,#alphacloud a{color:#aaa;font-size:92%;margin:0;padding:0;text-decoration:none;padding:0 3px;line-height:1.6em;}
+		#alphacloud a:hover{color:white;background-color:#575757;}
+		#alphacloud label.size0,#alphacloud a.size0{font-size:110%;line-height:1.5em;color:#aaa;}
+		#alphacloud label.size1,#alphacloud a.size1{font-size:120%;line-height:1.4em;color:#777;}
+		#alphacloud label.size2,#alphacloud a.size2{font-size:130%;line-height:1.3em;color:#666;}
+		#alphacloud label.size3,#alphacloud a.size3{font-size:140%;line-height:1.2em;color:#444;}
+		#alphacloud label.size4,#alphacloud a.size4{font-size:150%;line-height:1.1em;color:#333;}
+		#alphacloud label.size5,#alphacloud a.size5{font-size:160%;line-height:1.0em;color:#111;}
+		#alphacloud label.size0{padding-top:1px;}
+		#alphacloud label.size1{padding-top:1px;}
+		#alphacloud a strong{font-weight:normal;color:#aaa;}
+		#alphacloud a.size0 strong{color:#ccc;}
+		#alphacloud a:hover{color:white;background-color:#575757;}
+		#alphacloud a.common0{color:#73ADFF!important;}
+		#alphacloud a.common1{color:#5592E9!important;}
+		#alphacloud a.common2{color:#3274D0!important;}
+		#alphacloud a.common3{color:#2261A0!important;}
+		#alphacloud a.common4{color:#1D4F82!important;}
+		#alphacloud a.common5{color:#16416C!important;}
+		#alphacloud a:hover{color:#fff!important;}
 
 </style>
 
@@ -121,15 +118,16 @@
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var tabs = new _IG_Tabs(__MODULE_ID__);
 
-	//var websnaprURLPrefix = "http://images.websnapr.com/?key=zLcr3AbYt202&url=";
-	var websnaprURLPrefix = "http://scurlr.appspot.com/thumbnail?url=";
+	var thumbnailURLPrefix = "http://www.scurlr.com/thumbnail?url=";
+
+	var errorHTML = "<p>Error reading content from http://del.icio.us<br/>Please try again later...</p>";
 
 	function loadModule__MODULE_ID__(){
 		_IG_Analytics("UA-941159-1", "/DeliciousPreviewGoogleGadget");
 
-		tabs.addDynamicTab("Hotlist", loadTabsCallbackGenerator(prefs.getString("Hotlist")));
-		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator(prefs.getString("Popular")));
-		tabs.addDynamicTab("Recent", loadTabsCallbackGenerator(prefs.getString("Recent")));
+		tabs.addDynamicTab("Hotlist", loadTabsCallbackGenerator("http://del.icio.us/rss/"));
+		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator("http://del.icio.us/rss/popular"));
+		tabs.addDynamicTab("Recent", loadTabsCallbackGenerator("http://del.icio.us/rss/recent"));
 
 		var tags = prefs.getString("Tags");
 
@@ -146,7 +144,7 @@
 			}
 		}
 
-		tabs.addDynamicTab("Tagcloud", tagCloudCallbackGenerator(prefs.getString("TagCloud")));
+		tabs.addDynamicTab("Tagcloud", tagCloudCallbackGenerator("http://del.icio.us/tag/"));
 	}
 
 	function feedItemMouseOver(feedItem){
@@ -183,7 +181,7 @@
 
 		if (responseText == null)
 		{
-			 container.innerHTML = "Error reading content from http://del.icio.us";
+			 container.innerHTML = errorHTML;
 			 return;
 		}
 
@@ -194,7 +192,7 @@
 
 		var alphacloudDiv = document.createElement("div");
 		for(var i=0; i < divs.length; i++) {
-			if (divs[i] && divs[i].className == "alphacloud")
+			if (divs[i] && divs[i].id == "alphacloud")
 			{
 				alphacloudDiv.appendChild(divs[i]);
 				break;
@@ -281,7 +279,7 @@
 	function showFeeds(container, tabId, feed){
 
 		 if (feed == null){
-				 container.innerHTML = "Error reading content from http://del.icio.us";
+				 container.innerHTML = errorHTML;
                  return;
          }
 
@@ -320,10 +318,10 @@
 					ol += "</ul>";
 				}
 
-				var origImageLink = websnaprURLPrefix + feed.Entry[i].Link;
-				var cachedImageLink = _IG_GetCachedUrl(origImageLink);
+				var origImageLink = thumbnailURLPrefix + feed.Entry[i].Link;
 
-				linksHTML += '<tr><td valign="top"><a target="_new" href="'+feed.Entry[i].Link+'"><img src="'+origImageLink+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';
+
+				linksHTML += '<tr><td valign="top"><a target="_new" href="'+feed.Entry[i].Link+'"><img alt="'+feed.Entry[i].Title+'" src="'+origImageLink+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';
              }
 			container.innerHTML = linksHTML;
         }
