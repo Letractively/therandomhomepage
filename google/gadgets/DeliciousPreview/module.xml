@@ -89,7 +89,7 @@
 		}
 
 		/* Tag Cloud */
-		#alphacloud{text-align:justify;border-bottom:1px solid #ccc;padding-bottom:10px;}
+		#alphacloud{text-align:justify;border-bottom:1px solid #ccc;padding-left:3px;font-size:80%;}
 		#alphacloud div{margin-left:-5px;_margin-left:0;}
 		#alphacloud a.label,#alphacloud a{color:#aaa;font-size:92%;margin:0;padding:0;text-decoration:none;padding:0 3px;line-height:1.6em;}
 		#alphacloud a:hover{color:white;background-color:#575757;}
@@ -174,7 +174,8 @@
 		url,
 		function(responseText) {
 			showTagCloud(container, tabId, responseText)
-		});
+		},
+		{ refreshInterval: (60 * 60 * 24) });
 	}
 
 	function showTagCloud(container, tabId, responseText){
