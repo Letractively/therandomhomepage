@@ -335,6 +335,11 @@
 			container.innerHTML = linksHTML;
         }
 	}
+   
+         $(document).ready(function() {
+            alert("Loading JQuery");
+        });
+  
  
  _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
  </script> 
