@@ -121,12 +121,6 @@
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var tabs = new _IG_Tabs(__MODULE_ID__);
 	
-	//var thumbnailURLPrefix = "http://scurlr.com/thumbnail?url=";
-	//var thumbnailURLPrefix = "http://images.pageglimpse.com/v1/thumbnails?size=small&devkey=b8bd312d289aa5d176a48cf9cd65248c&nothumb=http://www.scurlr.com/static/screenshotqueued.png&url=";
- 
- 
-	var thumbnailURLPrefix = "http://images.websnapr.com/?key=zLcr3AbYt202&url=";
-	//var thumbnailURLPrefix = "http://images.websnapr.com/?key=5et6411TMS1Z&url=";
  
 	var errorHTML = "<p>Error reading content from http://del.icio.us<br/>Please try again later...</p>";
 		
