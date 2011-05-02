@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module> 
     <ModulePrefs title="Delicious Preview" 
@@ -31,6 +30,9 @@
 	<UserPref name="Tags" datatype="hidden" /> 
     <Content type="html"> 
 <![CDATA[
+
+<script type="text/javascript" src="http://therandomhomepage.googlecode.com/svn/trunk/google/gadgets/DeliciousPreview/jquery-1.3.2.js"></script>
+
 <style type="text/css"> 
 		img {
 			border-style: none;
