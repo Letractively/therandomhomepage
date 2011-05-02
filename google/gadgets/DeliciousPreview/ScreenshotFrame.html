@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script type="text/javascript" src="http://www.websnapr.com/js/websnapr.js"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+        function getScreenshotURL() {
+            var url = getUrlVars()["url"];
+            if (url && url != "") {
+                return url;
+            }
+            return "";
+        }
+
+
+    </script>
+
+</head>
+<body>
+<script type="text/javascript">wsr_snapshot(getScreenshotURL(), '5et6411TMS1Z');</script>
+</body>
+</html>
