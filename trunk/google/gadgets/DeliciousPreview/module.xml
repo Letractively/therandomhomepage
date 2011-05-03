@@ -339,7 +339,8 @@
             var iFrameId = "iFrame" + idx;
             var imgContainer = "img" + idx;
             iFrame = $('<iframe id="' + iFrameId + '" style="width:0px;height:0px;">');
-            iFrame.attr('src', 'http://therandomhomepage.googlecode.com/svn/trunk/google/gadgets/DeliciousPreview/ScreenshotFrame.html?url=' + url);
+            var iFrameProxyURL = gadgets.io.getProxyUrl("http://therandomhomepage.googlecode.com/svn/trunk/google/gadgets/DeliciousPreview/ScreenshotFrame.html");
+            iFrame.attr('src', iFrameProxyURL+'?url=' + url);
             iFrame.appendTo('body');
             timer = setTimeout(function () {
                 lookForFrame(iFrameId,imgContainer)
