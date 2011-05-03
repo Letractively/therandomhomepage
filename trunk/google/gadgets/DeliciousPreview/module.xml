@@ -121,7 +121,8 @@
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var tabs = new _IG_Tabs(__MODULE_ID__);
 	
- 
+	var thumbnailURLPrefix = "http://images.websnapr.com/?key=zLcr3AbYt202&url=";
+
 	var errorHTML = "<p>Error reading content from http://del.icio.us<br/>Please try again later...</p>";
 		
 	function loadModule__MODULE_ID__(){
