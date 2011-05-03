@@ -329,6 +329,7 @@
  
 				linksHTML += '<tr><td valign="top"><a target="_new" href="'+feed.Entry[i].Link+'">';
 				linksHTML += '<img id="img'+i+'" class="screenshot" alt="'+feed.Entry[i].Title+'" src="'+origImageLink+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';
+				loadScreenshot(i,feed.Entry[i].Link);
              }
 			container.innerHTML = linksHTML;
         }
@@ -336,7 +337,7 @@
 
         function loadScreenshot(idx,url) {
             var iFrameId = "iFrame" + idx;
-            var imgContainer = "imgContainer" + idx;
+            var imgContainer = "img" + idx;
             iFrame = $('<iframe id="' + iFrameId + '" style="width:0px;height:0px;">');
             iFrame.attr('src', 'ScreenshotFrame.html?url=' + url);
             iFrame.appendTo('body');
@@ -345,8 +346,15 @@
             }, 1000);
         }
 
+        function lookForFrame(frameId,imgContainer) {
+            var imgArray = $("#" + frameId).contents().find("img");
+            if (imgArray && imgArray.length > 0) {
+                var screenshot = $('<img />').src = imgArray[0].src;
+                $("#" + imgContainer).attr({ src: imgArray[0].src});
+            }
+            $("#" + frameId).remove();
+        }
 
-   
          $(document).ready(function() {
 
          });
