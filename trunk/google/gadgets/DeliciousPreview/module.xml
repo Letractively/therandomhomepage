@@ -332,12 +332,10 @@
 	}
    
          $(document).ready(function() {
-            alert("Loading JQuery");
+            alert("Loading JQuery & setting onload handler!");
+            _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
         });
-  
- 
- _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
- </script> 
+ </script>
 <!-- Google Ads starts here --> 
 <div style="text-align:center;"> 
  <script type="text/javascript"><!--
