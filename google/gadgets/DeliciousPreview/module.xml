@@ -328,7 +328,7 @@
 				
  
 				linksHTML += '<tr><td valign="top"><a target="_new" href="'+feed.Entry[i].Link+'">';
-				linksHTML += '<img class="screenshot" alt="'+feed.Entry[i].Title+'" src="'+origImageLink+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';
+				linksHTML += '<img id="img'+i+'" class="screenshot" alt="'+feed.Entry[i].Title+'" src="'+origImageLink+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';
              }
 			container.innerHTML = linksHTML;
         }
