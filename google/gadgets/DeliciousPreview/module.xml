@@ -34,9 +34,11 @@
 <script type="text/javascript" src="http://therandomhomepage.googlecode.com/svn/trunk/google/gadgets/DeliciousPreview/jquery-1.3.2.js"></script>
 
 <style type="text/css"> 
-		img {
+		img.screenshot {
 			border-style: none;
 			cursor: pointer;
+            width: 202px;
+            height: 152px;
 		}
  
 		div.title {
@@ -126,7 +128,6 @@
 	var errorHTML = "<p>Error reading content from http://del.icio.us<br/>Please try again later...</p>";
 		
 	function loadModule__MODULE_ID__(){
-	    alert("Module onload!");
 		_IG_Analytics("UA-941159-1", "/DeliciousPreviewGoogleGadget");
 		
 		//tabs.addDynamicTab("Hotlist", loadTabsCallbackGenerator("http://del.icio.us/rss/"));
@@ -326,15 +327,29 @@
 				var origImageLink = thumbnailURLPrefix + feed.Entry[i].Link;
 				
  
-				linksHTML += '<tr><td valign="top"><a target="_new" href="'+feed.Entry[i].Link+'"><img alt="'+feed.Entry[i].Title+'" src="'+origImageLink+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';				
+				linksHTML += '<tr><td valign="top"><a target="_new" href="'+feed.Entry[i].Link+'">';
+				linksHTML += '<img class="screenshot" alt="'+feed.Entry[i].Title+'" src="'+origImageLink+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';
              }
 			container.innerHTML = linksHTML;
         }
 	}
+
+        function loadScreenshot(idx,url) {
+            var iFrameId = "iFrame" + idx;
+            var imgContainer = "imgContainer" + idx;
+            iFrame = $('<iframe id="' + iFrameId + '" style="width:0px;height:0px;">');
+            iFrame.attr('src', 'ScreenshotFrame.html?url=' + url);
+            iFrame.appendTo('body');
+            timer = setTimeout(function () {
+                lookForFrame(iFrameId,imgContainer)
+            }, 1000);
+        }
+
+
    
          $(document).ready(function() {
-            alert("JQuery onload!");
-        });
+
+         });
     _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
  </script>
 <!-- Google Ads starts here --> 
