@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?> 
-<Module> 
-    <ModulePrefs title="Delicious Preview" 
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="Delicious Preview"
                  title_url="http://www.BoxySystems.com" description="Preview what everyone is bookmarking in http://del.icio.us using this gadget. Dynamically add or remove tabs for the tag of your interest from Tagcloud."
                  author="Siddique Hameed" author_email="siddii@gmail.com" height="350" scrolling="true"
                  thumbnail="http://www.therandomhomepage.com/google/gadgets/DeliciousPreview/deliciousthumbnail.png"
@@ -10,89 +11,84 @@
                  author_photo = "http://www.therandomhomepage.com/images/author.jpg"
                  author_aboutme = "I am an aspiring entrepreneur who loves crafting software both for living and hobbies. Still searching for the perfect click of my life..."
                  author_link = "http://blogs.boxysystems.com"
-                 author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"            
-            > 
-	<!-- 
+                 author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
+            >
+	<!--
 		Last Updated : 8/1/2008
 		Change Notes: Synching with the changes to the new http://www.delicious.com
- 
+
 		Last Updated : 11/23/2007
 		Change Notes: Improved tabbing
- 
+
 		Last Updated : 11/21/2007
 		Change Notes: Initial version
-	--> 
-    <Require feature="analytics"/> 
-	<Require feature="tabs"/> 
-	<Require feature="setprefs"/> 
-    </ModulePrefs>	
-	<UserPref name="selectedTab" datatype="hidden" /> 
-	<UserPref name="Tags" datatype="hidden" /> 
-    <Content type="html"> 
+	-->
+    <Require feature="analytics"/>
+	<Require feature="tabs"/>
+	<Require feature="setprefs"/>
+    </ModulePrefs>
+	<UserPref name="selectedTab" datatype="hidden" />
+	<UserPref name="Tags" datatype="hidden" />
+    <Content type="html">
 <![CDATA[
-
-<script type="text/javascript" src="http://therandomhomepage.googlecode.com/svn/trunk/google/gadgets/DeliciousPreview/jquery-1.3.2.js"></script>
-
-<style type="text/css"> 
-		img.screenshot {
+<style type="text/css">
+		img {
 			border-style: none;
 			cursor: pointer;
-            width: 202px;
-            height: 152px;
 		}
- 
+
 		div.title {
 			font-weight: bold;
 			font-size:90%;
 		}
- 
+
 		a.titleLink {
 			color: #000000;
 			text-decoration: none;
 		}
- 
+
 		a.titleLink:hover {
 			text-decoration: underline;
 		}
- 
+
 		div.closeTab {
 			font-size:90%;
 			margin-bottom: 5px;
 			width: 100%;
 			text-align: right;
 		}
-	
+
 		div.feedItem {
 			font-size:90%;
 			margin-bottom: 5px;
 		}
-	
+
 		div.feedItemMouseOver {
 			background-color:#EDF4FC;
 		}
- 
+
 		div.feedItemMouseOut {
 			background-color:#FFFFFF;
 		}
- 
+
 		ul {
 			font-size:90%;
 		}
- 
+
 		li {
 			font-size:90%;
 		}
- 
+
 		p {
 			font-size:80%;
 			font-weight: bold;
 		}
- 
+
 		closeTab {
 			width: 100%;
 			text-align: right;
 		}
- 
+
 		/* Tag Cloud */
 		#alphacloud{text-align:justify;border-bottom:1px solid #ccc;padding-left:3px;font-size:80%;}
 		#alphacloud div{margin-left:-5px;_margin-left:0;}
@@ -116,26 +112,31 @@
 		#alphacloud a.common4{color:#1D4F82!important;}
 		#alphacloud a.common5{color:#16416C!important;}
 		#alphacloud a:hover{color:#fff!important;}
- 
-</style> 
- 
- <script type="text/javascript"> 
+
+</style>
+
+ <script type="text/javascript">
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var tabs = new _IG_Tabs(__MODULE_ID__);
-	
+
+	//var thumbnailURLPrefix = "http://scurlr.com/thumbnail?url=";
+	//var thumbnailURLPrefix = "http://images.pageglimpse.com/v1/thumbnails?size=small&devkey=b8bd312d289aa5d176a48cf9cd65248c&nothumb=http://www.scurlr.com/static/screenshotqueued.png&url=";
+
+
 	var thumbnailURLPrefix = "http://images.websnapr.com/?key=zLcr3AbYt202&url=";
+	//var thumbnailURLPrefix = "http://images.websnapr.com/?key=5et6411TMS1Z&url=";
 
 	var errorHTML = "<p>Error reading content from http://del.icio.us<br/>Please try again later...</p>";
-		
+
 	function loadModule__MODULE_ID__(){
 		_IG_Analytics("UA-941159-1", "/DeliciousPreviewGoogleGadget");
-		
+
 		//tabs.addDynamicTab("Hotlist", loadTabsCallbackGenerator("http://del.icio.us/rss/"));
 		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator("http://del.icio.us/rss/popular"));
 		tabs.addDynamicTab("Recent", loadTabsCallbackGenerator("http://del.icio.us/rss/recent"));
- 
+
 		var tags = prefs.getString("Tags");
- 
+
 		if (tags != '')
 		{
 			var tagNames = tags.split("|");
@@ -144,34 +145,34 @@
 				if (tagNames[i] != '')
 				{
 					var feedURL = "http://del.icio.us/rss/tag/"+tagNames[i];
-					tabs.addDynamicTab(tagNames[i], loadTabsCallbackGenerator(feedURL));			
+					tabs.addDynamicTab(tagNames[i], loadTabsCallbackGenerator(feedURL));
 				}
 			}
 		}
- 
+
 		tabs.addDynamicTab("Tagcloud", tagCloudCallbackGenerator("http://del.icio.us/tag/"));
 	}
- 
+
 	function feedItemMouseOver(feedItem){
 		feedItem.className = "feedItemMouseOver";
 	}
- 
+
 	function feedItemMouseOut(feedItem){
 		feedItem.className = "feedItemMouseOut";
 	}
- 
+
 	function loadTabsCallbackGenerator(feedUrl) {
 		return function(tabId) {
 			loadTab(tabId, feedUrl);
 		}
 	}
- 
+
 	function tagCloudCallbackGenerator(url) {
 		return function(tabId) {
 			tagCloudCallback(tabId, url);
 		}
 	}
- 
+
 	function tagCloudCallback(tabId,url) {
 	   var container = _gel(tabId);
 	   container.innerHTML = "<p>Loading...</p>";
@@ -182,20 +183,20 @@
 		},
 		{ refreshInterval: (60 * 60 * 24) });
 	}
- 
+
 	function showTagCloud(container, tabId, responseText){
- 
+
 		if (responseText == null)
 		{
 			 container.innerHTML = errorHTML;
 			 return;
 		}
- 
+
 		var tagsDiv = document.createElement("div");
-		tagsDiv.innerHTML = responseText;	
- 
+		tagsDiv.innerHTML = responseText;
+
 		var divs = tagsDiv.getElementsByTagName("div");
- 
+
 		var alphacloudDiv = document.createElement("div");
 		for(var i=0; i < divs.length; i++) {
 			if (divs[i] && divs[i].id == "alphacloud")
@@ -204,19 +205,19 @@
 				break;
 			}
 		}
- 
+
 		var anchors = alphacloudDiv.getElementsByTagName("a");
 		for (var i=0; i < anchors.length; i++)
 		{
 			var tagName = anchors[i].innerHTML;
 			anchors[i].href = "javascript:createTabForTag('"+tagName+"');";
 		}
- 
+
 		container.innerHTML = alphacloudDiv.innerHTML;
 	}
- 
+
 	function createTabForTag(tagName){
- 
+
 		var actualTabs = tabs.getTabs();
 		var tabExist = false;
 		for(var i=0; i < actualTabs.length; i++) {
@@ -227,20 +228,20 @@
 				break;
 			}
 		}
- 
+
 		if (!tabExist)
 		{
 			var feedURL = "http://del.icio.us/rss/tag/"+tagName;
 			tabs.addDynamicTab(tagName, loadTabsCallbackGenerator(feedURL));
 			tabs.moveTab(i-1,i);
 			tabs.setSelectedTab(i-1);
- 
+
 			var tags = prefs.getString("Tags");
 			tags  = tags + "|" +tagName;
 			prefs.set("Tags",tags);
 		}
 	}
- 
+
    function loadTab(tabId,feedUrl) {
 	   var container = _gel(tabId);
 	   container.innerHTML = "<p>Loading...</p>";
@@ -252,21 +253,21 @@
 		10,
 		true);
 	}
- 
+
 	function removeSelectedTab(){
- 
+
 		if (tabs.getSelectedTab() != null)
 		{
 			var tabName = tabs.getSelectedTab().getName();
 			var response = confirm("Are you sure you want to remove '"+tabName+"' tab ?");
- 
+
 			if (response)
 			{
 				var tabIdx = tabs.getSelectedTab().getIndex();
 				tabs.removeTab(tabIdx);
- 
+
 				tabs.setSelectedTab(tabIdx);
- 
+
 				var tags = prefs.getString("Tags");
 				var tagNames = tags.split("|");
 				var modifiedTags = '';
@@ -281,31 +282,31 @@
 			}
 		}
 	}
- 
+
 	function showFeeds(container, tabId, feed){
- 
-		 if (feed == null){ 
+
+		 if (feed == null){
 				 container.innerHTML = errorHTML;
                  return;
          }
- 
+
 		if (feed.Entry) {
- 
+
 			var linksHTML = '';
- 
+
 			var tags = prefs.getString("Tags");
 			if (tags != null && tags.indexOf(tabs.getSelectedTab().getName()) != -1)
 			{
-				linksHTML += '<div class="closeTab">[<a title="Remove Tab" href="javascript:removeSelectedTab();">X</a>]&nbsp;&nbsp;</div>';	
+				linksHTML += '<div class="closeTab">[<a title="Remove Tab" href="javascript:removeSelectedTab();">X</a>]&nbsp;&nbsp;</div>';
 			}
-		
+
              for (var i = 0; i < feed.Entry.length; i++) {
- 
+
 				linksHTML += '<div class="feedItem" onmouseover="feedItemMouseOver(this);" onmouseout="feedItemMouseOut(this);"><table><tr><td colspan="2"><div class="title"><a class="titleLink" target="_new" href="'+feed.Entry[i].Link+'">'+feed.Entry[i].Title+'</a></div></td></tr>';
- 
+
 				var tagDiv = document.createElement("div");
-				tagDiv.innerHTML = feed.Entry[i].Summary;	
-	
+				tagDiv.innerHTML = feed.Entry[i].Summary;
+
 				var tagLinks = tagDiv.getElementsByTagName("a");
 				var ol = '';
 				for(var j=0; j < tagLinks.length; j++) {
@@ -313,59 +314,30 @@
 					{
 						if (ol == '')
 						{
-							ol += "<ul><b>Tags: </b>";	
+							ol += "<ul><b>Tags: </b>";
 						}
 						ol += "<li>"+tagLinks[j].innerHTML+"</li>";
 					}
 				}
- 
+
 				if (ol != '')
 				{
 					ol += "</ul>";
 				}
- 
+
 				var origImageLink = thumbnailURLPrefix + feed.Entry[i].Link;
-				
- 
-				linksHTML += '<tr><td valign="top"><a target="_new" href="'+feed.Entry[i].Link+'">';
-				linksHTML += '<img id="img'+i+'" class="screenshot" alt="'+feed.Entry[i].Title+'" src="'+origImageLink+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';
-				loadScreenshot(i,feed.Entry[i].Link);
+
+
+				linksHTML += '<tr><td valign="top"><a target="_new" href="'+feed.Entry[i].Link+'"><img alt="'+feed.Entry[i].Title+'" src="'+origImageLink+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';
              }
 			container.innerHTML = linksHTML;
         }
 	}
 
-        function loadScreenshot(idx,url) {
-            var iFrameId = "iFrame" + idx;
-            var imgContainer = "img" + idx;
-            iFrame = $('<iframe id="' + iFrameId + '" style="width:0px;height:0px;">');
-            var iFrameProxyURL = gadgets.io.getProxyUrl("http://therandomhomepage.googlecode.com/svn/trunk/google/gadgets/DeliciousPreview/ScreenshotFrame.html");
-            alert("iFrameProxyURL = "+iFrameProxyURL);
-            /*
-            iFrame.attr('src', iFrameProxyURL+'?url=' + url);
-            iFrame.appendTo('body');
-            timer = setTimeout(function () {
-                lookForFrame(iFrameId,imgContainer)
-            }, 1000);
-            */
-        }
-
-        function lookForFrame(frameId,imgContainer) {
-            var imgArray = $("#" + frameId).contents().find("img");
-            if (imgArray && imgArray.length > 0) {
-                var screenshot = $('<img />').src = imgArray[0].src;
-                $("#" + imgContainer).attr({ src: imgArray[0].src});
-            }
-            $("#" + frameId).remove();
-        }
-
-         $(document).ready(function() {
-
-         });
-    _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
+ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
  </script>
-<!-- Google Ads starts here --> 
-<div style="text-align:center;"> 
+<!-- Google Ads starts here -->
+<div style="text-align:center;">
  <script type="text/javascript"><!--
 google_ad_client = "pub-2474283764201301";
 /* 234x60, created 1/28/09 */
@@ -373,12 +345,12 @@ google_ad_slot = "3302875112";
 google_ad_width = 234;
 google_ad_height = 60;
 //-->
-</script> 
+</script>
 <script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
-</script> 
-</div> 
-<!-- Google Ads ends here --> 
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- Google Ads ends here -->
  ]]>
-    </Content> 
-</Module> 
+    </Content>
+</Module>
