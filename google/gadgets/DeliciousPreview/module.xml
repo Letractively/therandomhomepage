@@ -126,6 +126,7 @@
 	var errorHTML = "<p>Error reading content from http://del.icio.us<br/>Please try again later...</p>";
 		
 	function loadModule__MODULE_ID__(){
+	    alert("Module onload!");
 		_IG_Analytics("UA-941159-1", "/DeliciousPreviewGoogleGadget");
 		
 		//tabs.addDynamicTab("Hotlist", loadTabsCallbackGenerator("http://del.icio.us/rss/"));
@@ -332,9 +333,9 @@
 	}
    
          $(document).ready(function() {
-            alert("Loading JQuery & setting onload handler!");
-            _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
+            alert("JQuery onload!");
         });
+    _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
  </script>
 <!-- Google Ads starts here --> 
 <div style="text-align:center;"> 
