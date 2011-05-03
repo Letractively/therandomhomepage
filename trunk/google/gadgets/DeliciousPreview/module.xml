@@ -128,6 +128,26 @@
 
 	var errorHTML = "<p>Error reading content from http://del.icio.us<br/>Please try again later...</p>";
 
+function wsr_snapshot(url, key, size, link) {
+    if (typeof(websnapr_hash) == 'undefined') {
+        var websnapr_hash7 = "42fc3";
+        var websnapr_hash17 = "c54c9";
+        var websnapr_hash25 = "2b295";
+        var websnapr_hash38 = "a945e";
+        var websnapr_hash49 = "2e9f6";
+        var websnapr_hash50 = "05e96";
+        var websnapr_hash66 = "f1";
+        websnapr_hash = websnapr_hash7 + websnapr_hash17 + websnapr_hash25 + websnapr_hash38 + websnapr_hash49 + websnapr_hash50 + websnapr_hash66;
+    }
+
+    link = typeof(link) != 'undefined' ? link : 1;
+    if (size == '' || size == undefined) {
+        size = 's'
+    }
+    var src = "http://images.websnapr.com/?size=" + (size.toLowerCase() == 't' || '' ? 't' : 's') + "&key=" + encodeURIComponent(key) + "&hash=" + encodeURIComponent(websnapr_hash7 + websnapr_hash17 + websnapr_hash25 + websnapr_hash38 + websnapr_hash49 + websnapr_hash50 + websnapr_hash66) + "&url=" + encodeURIComponent(url);
+    return src;
+}
+
 	function loadModule__MODULE_ID__(){
 		_IG_Analytics("UA-941159-1", "/DeliciousPreviewGoogleGadget");
 
@@ -325,8 +345,8 @@
 					ol += "</ul>";
 				}
 
-				var origImageLink = thumbnailURLPrefix + feed.Entry[i].Link;
-
+				//var origImageLink = thumbnailURLPrefix + feed.Entry[i].Link;
+				var origImageLink = wsr_snapshot(feed.Entry[i].Link,'5et6411TMS1Z');
 
 				linksHTML += '<tr><td valign="top"><a target="_new" href="'+feed.Entry[i].Link+'"><img alt="'+feed.Entry[i].Title+'" src="'+origImageLink+'" /"></a></td><td valign="top">'+ol+'</td></tr></table></div>';
              }
