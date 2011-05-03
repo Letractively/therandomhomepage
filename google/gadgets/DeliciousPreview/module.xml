@@ -128,16 +128,16 @@
 
 	var errorHTML = "<p>Error reading content from http://del.icio.us<br/>Please try again later...</p>";
 
-function wsr_snapshot(url, key, size, link) {
-        var websnapr_hash7 = "42fc3";
-        var websnapr_hash17 = "c54c9";
-        var websnapr_hash25 = "2b295";
-        var websnapr_hash38 = "a945e";
-        var websnapr_hash49 = "2e9f6";
-        var websnapr_hash50 = "05e96";
-        var websnapr_hash66 = "f1";
-        websnapr_hash = websnapr_hash7 + websnapr_hash17 + websnapr_hash25 + websnapr_hash38 + websnapr_hash49 + websnapr_hash50 + websnapr_hash66;
+if (typeof(websnapr_hash) == 'undefined') {
+    var websnapr_hash4 = "d6ec218";
+    var websnapr_hash13 = "f3797f6";
+    var websnapr_hash24 = "74b4ff2";
+    var websnapr_hash35 = "a85b169";
+    var websnapr_hash44 = "4fd8";
+    websnapr_hash = websnapr_hash4 + websnapr_hash13 + websnapr_hash24 + websnapr_hash35 + websnapr_hash44;
+}
 
+function wsr_snapshot(url, key, size, link) {
     link = typeof(link) != 'undefined' ? link : 1;
     if (size == '' || size == undefined) {
         size = 's'
