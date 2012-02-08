@@ -171,6 +171,7 @@
 
 	function loadModule__MODULE_ID__(){
 		_IG_Analytics("UA-941159-1", "/DZonePreviewGoogleGadget");
+    console.log("Loading DZone Preview...");  
 
 		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator(prefs.getString("PopularLinks")));
 		tabs.addDynamicTab("New", loadTabsCallbackGenerator(prefs.getString("NewLinks")));
