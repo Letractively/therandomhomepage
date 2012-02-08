@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="DZone Preview"
+                 title_url="http://www.BoxySystems.com" description="Preview  the hottest links in http://www.dzone.com using this gadget.  Dynamically add or remove tabs for the tag of your interest from  Tagcloud."
+                 author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
+                 thumbnail="http://www.therandomhomepage.com/google/gadgets/DZonePreview/dzonethumbnail.png"
+                 screenshot="http://www.therandomhomepage.com/google/gadgets/DZonePreview/dzonescreenshot.png"
+                 author_affiliation="http://www.BoxySystems.com"
+                 author_location = "St. Louis, MO"
+                 author_photo = "http://www.therandomhomepage.com/images/author.jpg"
+                 author_aboutme = "I  am an aspiring entrepreneur who loves crafting software both for living  and hobbies. Still searching for the perfect click of my life..."
+                 author_link = "http://blogs.boxysystems.com"
+                 author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
+            >
+	<!--
+
+		Last Updated : 4/11/2008
+		Change Notes: Displaying the count statistic (vote up, vote down, comment counts & click counts)
+
+		Last Updated : 1/4/2008
+		Change Notes: Fix for not able to create ".net" tab
+
+		Last Updated : 12/24/2007
+		Change Notes: Initial version
+	-->
+    <Require feature="analytics"/>
+	<Require feature="tabs"/>
+	<Require feature="setprefs"/>
+    </ModulePrefs>
+	<UserPref name="PopularLinks" default_value="http://feeds.dzone.com/dzone/frontpage?format=xml" datatype="hidden" />
+	<UserPref name="NewLinks" default_value="http://www.dzone.com/links/feed/queue/rss.xml" datatype="hidden" />
+	<UserPref name="selectedTab" datatype="hidden" />
+	<UserPref name="Tags" datatype="hidden" />
+    <Content type="html">
+<![CDATA[
+<style type="text/css">
+		img {
+			border-style: none;
+			cursor: pointer;
+		}
+
+		td.tdSummary {
+			font-size:80%;
+		}
+
+		div.title {
+			font-weight: bold;
+			font-size:90%;
+		}
+
+		a.titleLink {
+			color: #000000;
+			text-decoration: none;
+		}
+
+		a.titleLink:hover {
+			text-decoration: underline;
+		}
+
+		div.closeTab {
+			font-size:90%;
+			margin-bottom: 5px;
+			width: 100%;
+			text-align: right;
+		}
+
+		div.feedItem {
+			font-size:90%;
+			margin-bottom: 5px;
+		}
+
+		div.feedItemMouseOver {
+			background-color:#EDF4FC;
+		}
+
+		div.feedItemMouseOut {
+			background-color:#FFFFFF;
+		}
+
+		ul {
+			font-size:90%;
+		}
+
+		li {
+			font-size:90%;
+		}
+
+		p {
+			font-size:80%;
+			font-weight: bold;
+		}
+
+		closeTab {
+			width: 100%;
+			text-align: right;
+		}
+
+		/* Tag Cloud */
+		.alphacloud a
+		{
+			line-height: 1.4em; padding-right: 0.4em;
+			text-decoration: none;
+			color: blue;
+		}
+
+		.alphacloud a:hover
+		{
+			text-decoration: underline;
+		}
+
+		.smallestTag {
+		font-size:85%;
+		}
+		.smallTag {
+		font-size:93%;
+		}
+		.mediumTag {
+		font-size:108%;
+		}
+		.largeTag {
+		font-size:124%;
+		}
+		.largestTag {
+		font-size:139%;
+		}
+		.tagCloudOuter {
+		border-bottom:1px solid #AEC4E2;
+		border-top:1px solid #AEC4E2;
+		margin:0pt;
+		padding:0.5em 1em 1em;
+		}
+
+		div.ldStats-up {
+			padding-left: 1.1em;
+			background :url(http://dzone.com/links/themes/reader/images/vote-up-normal.gif ) 0 50% no-repeat;
+			/*font-weight: bold;*/
+			font-size:95%;
+			margin-right: 4px;
+		}
+
+		div.ldStats-down {
+			padding-left: 1.1em;
+			background :url(http://dzone.com/links/themes/reader/images/vote-down-normal.gif ) 0 50% no-repeat;
+			/*font-weight: bold;*/
+			font-size:95%;
+			margin-right: 4px;
+		}
+
+		div.ldStats-comments {
+			padding-left: 1.1em;
+			background :url(http://dzone.com/links/themes/reader/images/comment_new.gif) 0 50% no-repeat;
+			/*font-weight: bold;*/
+			font-size:95%;
+			margin-right: 4px;
+		}
+
+		div.ldStats-clicks {
+			padding-left: 1.1em;
+			background :url(http://dzone.com/links/themes/reader/images/icon-pointer.gif ) 0 50% no-repeat;
+			/*font-weight: bold;*/
+			font-size:95%;
+			margin-right: 4px;
+		}
+</style>
+
+ <script type="text/javascript">
+	var prefs = new _IG_Prefs(__MODULE_ID__);
+	var tabs = new _IG_Tabs(__MODULE_ID__);
+
+	var  errorHTML = "<p align='center'><i>Unable to read content  from http://www.DZone.com! <br/>Please try again  later.</i></p>";
+
+	function loadModule__MODULE_ID__(){
+		_IG_Analytics("UA-941159-1", "/DZonePreviewGoogleGadget");
+
+		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator(prefs.getString("PopularLinks")));
+		tabs.addDynamicTab("New", loadTabsCallbackGenerator(prefs.getString("NewLinks")));
+
+		var tags = prefs.getString("Tags");
+
+		if (tags != '')
+		{
+			var tagNames = tags.split("|");
+			for (var i=0; i < tagNames.length; i++)
+			{
+				if (tagNames[i] != '')
+				{
+					var feedURL = buildFeedURL(tagNames[i]);
+					tabs.addDynamicTab(tagNames[i], loadTabsCallbackGenerator(feedURL));
+				}
+			}
+		}
+
+		tabs.addDynamicTab("Tagcloud", tagCloudCallbackGenerator("http://www.dzone.com"));
+	}
+
+	function buildFeedURL(tagName){
+		var feedURL = "http://dzone.com/links/feed/frontpage/"+escape(tagName)+"/rss.xml";
+		return feedURL;
+	}
+
+	function feedItemMouseOver(feedItem){
+		feedItem.className = "feedItemMouseOver";
+	}
+
+	function feedItemMouseOut(feedItem){
+		feedItem.className = "feedItemMouseOut";
+	}
+
+	function loadTabsCallbackGenerator(feedUrl) {
+		return function(tabId) {
+			loadTab(tabId, feedUrl);
+		}
+	}
+
+	function tagCloudCallbackGenerator(url) {
+		return function(tabId) {
+			tagCloudCallback(tabId, url);
+		}
+	}
+
+	function tagCloudCallback(tabId,url) {
+	   var container = _gel(tabId);
+	   container.innerHTML = "<p>Loading...</p>";
+	  _IG_FetchContent(
+		url,
+		function(responseText) {
+			showTagCloud(container, tabId, responseText)
+		});
+	}
+
+	function showTagCloud(container, tabId, responseText){
+
+		if (responseText == null)
+		{
+			 container.innerHTML = errorHTML;
+			 return;
+		}
+
+		var tagsDiv = document.createElement("div");
+		tagsDiv.innerHTML = responseText;
+
+		var divs = tagsDiv.getElementsByTagName("div");
+
+		var alphacloudDiv = document.createElement("div");
+		for(var i=0; i < divs.length; i++) {
+			if (divs[i] && divs[i].className == "tagCloud")
+			{
+				alphacloudDiv.appendChild(divs[i]);
+				break;
+			}
+		}
+
+		var anchors = alphacloudDiv.getElementsByTagName("a");
+		for (var i=0; i < anchors.length; i++)
+		{
+			var tagName = anchors[i].innerHTML;
+
+			if (tagName != "all")
+			{
+				anchors[i].href = "javascript:createTabForTag('"+tagName+"');";
+			}
+			else {
+				anchors[i].parentNode.removeChild(anchors[i]);
+			}
+		}
+
+		var h3s = alphacloudDiv.getElementsByTagName("h3");
+		for (var i=0; i < h3s.length; i++)
+		{
+			h3s[i].parentNode.removeChild(h3s[i]);
+		}
+
+		container.innerHTML = alphacloudDiv.innerHTML;
+
+		// for some reason .net tag is not showing up while getting all the anchor tags from alphacloudDiv
+		var anchors = container.getElementsByTagName("a");
+		for (var i=0; i < anchors.length; i++)
+		{
+			var tagName = anchors[i].innerHTML;
+			if (tagName == ".net")
+			{
+				anchors[i].href = "javascript:createTabForTag('"+tagName+"');";
+			}
+		}
+
+	}
+
+	function createTabForTag(tagName){
+
+		tagName = tagName.replace(/\u00a0/g,' ');
+
+		var actualTabs = tabs.getTabs();
+		var tabExist = false;
+		for(var i=0; i < actualTabs.length; i++) {
+			if (actualTabs[i].getName() == tagName)
+			{
+				tabs.setSelectedTab(i);
+				tabExist = true;
+				break;
+			}
+		}
+
+		if (!tabExist)
+		{
+			var feedURL = buildFeedURL(tagName);
+			tabs.addDynamicTab(tagName, loadTabsCallbackGenerator(feedURL));
+			tabs.moveTab(i-1,i);
+			tabs.setSelectedTab(i-1);
+
+			var tags = prefs.getString("Tags");
+			tags  = tags + "|" +tagName;
+			prefs.set("Tags",tags);
+		}
+	}
+
+   function loadTab(tabId,feedUrl) {
+	   var container = _gel(tabId);
+	   container.innerHTML = "<p>Loading...</p>";
+
+	   _IG_FetchXmlContent(
+		feedUrl,
+		function(feed) {
+			showFeeds(container, tabId, feed)
+		});
+
+	}
+
+	function removeSelectedTab(){
+
+		if (tabs.getSelectedTab() != null)
+		{
+			var tabName = tabs.getSelectedTab().getName();
+			var response = confirm("Are you sure you want to remove '"+tabName+"' tab ?");
+
+			if (response)
+			{
+				var tabIdx = tabs.getSelectedTab().getIndex();
+				tabs.removeTab(tabIdx);
+
+				tabs.setSelectedTab(tabIdx);
+
+				var tags = prefs.getString("Tags");
+				var tagNames = tags.split("|");
+				var modifiedTags = '';
+				for (var i=0; i < tagNames.length; i++ )
+				{
+					if (tagNames[i] != '' && tagNames[i] != tabName)
+					{
+						modifiedTags = modifiedTags + '|' + tagNames[i];
+					}
+				}
+				prefs.set("Tags",modifiedTags);
+			}
+		}
+	}
+
+	function showFeeds(container, tabId, response){
+
+		 if (response == null || typeof(response) != "object" ||
+                      response.firstChild == null) {
+              container.innerHTML = errorHTML;
+              return;
+         }
+
+		if (response.firstChild) {
+
+			var linksHTML = '';
+
+			var tags = prefs.getString("Tags");
+			if (tags != null && tags.indexOf(tabs.getSelectedTab().getName()) != -1)
+			{
+				linksHTML  += '<div class="closeTab">[<a title="Remove Tab"  href="javascript:removeSelectedTab();">X</a>]&nbsp;&nbsp;</div>';
+			}
+
+			var itemList = response.getElementsByTagName("item");
+
+             for (var i = 0; i < itemList.length; i++) {
+
+			 	var title = getChildNodeValueByNodeName(itemList.item(i),"title");
+				var link = getChildNodeValueByNodeName(itemList.item(i),"link");
+				var summary = getChildNodeValueByNodeName(itemList.item(i),"content:encoded");
+
+				var upCount = getChildNodeValueByNodeName(itemList.item(i),"dz:voteUpCount");
+				var downCount = getChildNodeValueByNodeName(itemList.item(i),"dz:voteDownCount");
+				var commentCount = getChildNodeValueByNodeName(itemList.item(i),"dz:commentCount");
+				var clickCount = getChildNodeValueByNodeName(itemList.item(i),"dz:clickCount");
+
+
+				linksHTML  += '<div class="feedItem" onmouseover="feedItemMouseOver(this);"  onmouseout="feedItemMouseOut(this);"><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
+
+				var divSummary = document.createElement("div");
+				divSummary.innerHTML = summary;
+
+				var divSummaryAnchors = divSummary.getElementsByTagName("a");
+
+				for(var j=0; j < divSummaryAnchors.length; j++) {
+					divSummaryAnchors[j].target = "_new";
+					divSummaryAnchors[j].href  =  "http://www.therandomhomepage.com/google/gadgets/DZonePreview/redirectLink.php?url="+divSummaryAnchors[j].href;
+				}
+
+				linksHTML += '<tr><td valign="top" class="tdSummary">'+divSummary.innerHTML+'</td></tr>';
+				linksHTML  += '<tr><td><table  align="right"><tr><td><div title="Votes up"  class="ldStats-up">'+upCount+'</div></td><td><div  title="Votes down"  class="ldStats-down">'+downCount+'</div></td><td><div  title="Comments count"  class="ldStats-comments">'+commentCount+'</div></td><td><div  title="Click count"  class="ldStats-clicks">'+clickCount+'</div></td></tr></table></td></tr>';
+				linksHTML += '</table></div>';
+
+             }
+			container.innerHTML = linksHTML;
+        }
+	}
+
+	function getChildNodeValueByNodeName(node,nodeNameStr){
+		var nodeList = node.childNodes;
+		 for (var j = 0; j < nodeList.length ; j++) {
+			var node = nodeList.item(j);
+			if (node.nodeName == nodeNameStr && node.firstChild)
+			{
+				return node.firstChild.nodeValue;
+			}
+		 }
+	}
+
+ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
+ </script>
+ ]]>
+    </Content>
+</Module>
