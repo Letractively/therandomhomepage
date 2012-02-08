@@ -165,7 +165,7 @@
 
 	function loadModule__MODULE_ID__(){
    
-   alert("Loading Module");
+   alert("Loading Module 1");
 
 		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator(prefs.getString("PopularLinks")));
 		tabs.addDynamicTab("New", loadTabsCallbackGenerator(prefs.getString("NewLinks")));
