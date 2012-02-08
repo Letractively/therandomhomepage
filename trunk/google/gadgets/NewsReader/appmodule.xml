@@ -166,7 +166,7 @@
 	function loadModule__MODULE_ID__(){
 
 		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator(prefs.getString("PopularLinks")));
-		tabs.addDynamicTab("New", loadTabsCallbackGenerator(prefs.getString("NewLinks")));
+		//tabs.addDynamicTab("New", loadTabsCallbackGenerator(prefs.getString("NewLinks")));
 
 		var tags = prefs.getString("Tags");
 
