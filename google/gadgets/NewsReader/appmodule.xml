@@ -165,7 +165,7 @@
 
 	function loadModule__MODULE_ID__(){
 
-		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator(prefs.getString("PopularLinks")));
+		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss");
 		//tabs.addDynamicTab("New", loadTabsCallbackGenerator(prefs.getString("NewLinks")));
 
 		var tags = prefs.getString("Tags");
@@ -374,18 +374,12 @@
 
 			 	var title = getChildNodeValueByNodeName(itemList.item(i),"title");
 				var link = getChildNodeValueByNodeName(itemList.item(i),"link");
-				var summary = getChildNodeValueByNodeName(itemList.item(i),"content:encoded");
+				var description = getChildNodeValueByNodeName(itemList.item(i),"description");
 
-				var upCount = getChildNodeValueByNodeName(itemList.item(i),"dz:voteUpCount");
-				var downCount = getChildNodeValueByNodeName(itemList.item(i),"dz:voteDownCount");
-				var commentCount = getChildNodeValueByNodeName(itemList.item(i),"dz:commentCount");
-				var clickCount = getChildNodeValueByNodeName(itemList.item(i),"dz:clickCount");
-
-
-				linksHTML  += '<div class="feedItem" onmouseover="feedItemMouseOver(this);"  onmouseout="feedItemMouseOut(this);"><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
+				linksHTML  += '<div><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
 
 				var divSummary = document.createElement("div");
-				divSummary.innerHTML = summary;
+				divSummary.innerHTML = description;
 
 				var divSummaryAnchors = divSummary.getElementsByTagName("a");
 
@@ -394,8 +388,7 @@
 					divSummaryAnchors[j].href  =  "http://www.therandomhomepage.com/google/gadgets/DZonePreview/redirectLink.php?url="+divSummaryAnchors[j].href;
 				}
 
-				linksHTML += '<tr><td valign="top" class="tdSummary">'+divSummary.innerHTML+'</td></tr>';
-				linksHTML  += '<tr><td><table  align="right"><tr><td><div title="Votes up"  class="ldStats-up">'+upCount+'</div></td><td><div  title="Votes down"  class="ldStats-down">'+downCount+'</div></td><td><div  title="Comments count"  class="ldStats-comments">'+commentCount+'</div></td><td><div  title="Click count"  class="ldStats-clicks">'+clickCount+'</div></td></tr></table></td></tr>';
+				linksHTML += '<tr><td valign="top" class="tdSummary">'+divSummary.innerHTML+'</td></tr>'
 				linksHTML += '</table></div>';
 
              }
