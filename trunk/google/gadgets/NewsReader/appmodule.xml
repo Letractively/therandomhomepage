@@ -164,8 +164,6 @@
 	var  errorHTML = "<p align='center'><i>Unable to read content  from http://www.DZone.com! <br/>Please try again  later.</i></p>";
 
 	function loadModule__MODULE_ID__(){
-   
-   alert("Loading Module 1");
 
 		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator(prefs.getString("PopularLinks")));
 		tabs.addDynamicTab("New", loadTabsCallbackGenerator(prefs.getString("NewLinks")));
