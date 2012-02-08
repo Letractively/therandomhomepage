@@ -42,12 +42,12 @@
 			font-size:90%;
 		}
 
-		a.titleLink {
+		a {
 			color: #000000;
 			text-decoration: none;
 		}
 
-		a.titleLink:hover {
+		a:hover {
 			text-decoration: underline;
 		}
 
@@ -61,14 +61,6 @@
 		div.feedItem {
 			font-size:90%;
 			margin-bottom: 5px;
-		}
-
-		div.feedItemMouseOver {
-			background-color:#EDF4FC;
-		}
-
-		div.feedItemMouseOut {
-			background-color:#FFFFFF;
 		}
 
 		ul {
@@ -89,72 +81,6 @@
 			text-align: right;
 		}
 
-		/* Tag Cloud */
-		.alphacloud a
-		{
-			line-height: 1.4em; padding-right: 0.4em;
-			text-decoration: none;
-			color: blue;
-		}
-
-		.alphacloud a:hover
-		{
-			text-decoration: underline;
-		}
-
-		.smallestTag {
-		font-size:85%;
-		}
-		.smallTag {
-		font-size:93%;
-		}
-		.mediumTag {
-		font-size:108%;
-		}
-		.largeTag {
-		font-size:124%;
-		}
-		.largestTag {
-		font-size:139%;
-		}
-		.tagCloudOuter {
-		border-bottom:1px solid #AEC4E2;
-		border-top:1px solid #AEC4E2;
-		margin:0pt;
-		padding:0.5em 1em 1em;
-		}
-
-		div.ldStats-up {
-			padding-left: 1.1em;
-			background :url(http://dzone.com/links/themes/reader/images/vote-up-normal.gif ) 0 50% no-repeat;
-			/*font-weight: bold;*/
-			font-size:95%;
-			margin-right: 4px;
-		}
-
-		div.ldStats-down {
-			padding-left: 1.1em;
-			background :url(http://dzone.com/links/themes/reader/images/vote-down-normal.gif ) 0 50% no-repeat;
-			/*font-weight: bold;*/
-			font-size:95%;
-			margin-right: 4px;
-		}
-
-		div.ldStats-comments {
-			padding-left: 1.1em;
-			background :url(http://dzone.com/links/themes/reader/images/comment_new.gif) 0 50% no-repeat;
-			/*font-weight: bold;*/
-			font-size:95%;
-			margin-right: 4px;
-		}
-
-		div.ldStats-clicks {
-			padding-left: 1.1em;
-			background :url(http://dzone.com/links/themes/reader/images/icon-pointer.gif ) 0 50% no-repeat;
-			/*font-weight: bold;*/
-			font-size:95%;
-			margin-right: 4px;
-		}
 </style>
 
  <script type="text/javascript">
