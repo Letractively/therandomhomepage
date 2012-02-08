@@ -302,7 +302,8 @@
 				var link = getChildNodeValueByNodeName(itemList.item(i),"link");
 				var description = getChildNodeValueByNodeName(itemList.item(i),"description");
 
-				linksHTML  += '<div><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
+				//linksHTML  += '<div><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
+        linksHTML  +=  '<div><table>';    
 
 				var divSummary = document.createElement("div");
 				divSummary.innerHTML = description;
