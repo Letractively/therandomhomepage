@@ -165,7 +165,7 @@
 
 	function loadModule__MODULE_ID__(){
 
-		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss");
+		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss"));
 		//tabs.addDynamicTab("New", loadTabsCallbackGenerator(prefs.getString("NewLinks")));
 
 		var tags = prefs.getString("Tags");
