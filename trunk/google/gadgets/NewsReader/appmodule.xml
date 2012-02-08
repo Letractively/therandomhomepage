@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-    <ModulePrefs title="DZone Preview"
-                 title_url="http://www.BoxySystems.com" description="Preview  the hottest links in http://www.dzone.com using this gadget.  Dynamically add or remove tabs for the tag of your interest from  Tagcloud."
+    <ModulePrefs title="Google News Reader"
+                 title_url="http://www.BoxySystems.com" description="Keep up with the latest and greatest news from all around the world.  Dynamically add or remove tabs for the topics of your interest."
                  author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
                  thumbnail="http://www.therandomhomepage.com/google/gadgets/DZonePreview/dzonethumbnail.png"
                  screenshot="http://www.therandomhomepage.com/google/gadgets/DZonePreview/dzonescreenshot.png"
@@ -14,14 +14,8 @@
             >
 	<!--
 
-		Last Updated : 4/11/2008
-		Change Notes: Displaying the count statistic (vote up, vote down, comment counts & click counts)
-
-		Last Updated : 1/4/2008
-		Change Notes: Fix for not able to create ".net" tab
-
-		Last Updated : 12/24/2007
-		Change Notes: Initial version
+		Last Updated : 2/08/2012
+		Change Notes: First revision
 	-->
     <Require feature="analytics"/>
 	<Require feature="tabs"/>
