@@ -164,7 +164,8 @@
 	var  errorHTML = "<p align='center'><i>Unable to read content  from http://www.DZone.com! <br/>Please try again  later.</i></p>";
 
 	function loadModule__MODULE_ID__(){
-		_IG_Analytics("UA-941159-1", "/DZonePreviewGoogleGadget");
+   
+   alert("Loading Module");
 
 		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator(prefs.getString("PopularLinks")));
 		tabs.addDynamicTab("New", loadTabsCallbackGenerator(prefs.getString("NewLinks")));
@@ -223,7 +224,7 @@
 	}
 
 	function showTagCloud(container, tabId, responseText){
-
+   
 		if (responseText == null)
 		{
 			 container.innerHTML = errorHTML;
