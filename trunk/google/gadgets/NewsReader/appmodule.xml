@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
     <ModulePrefs title="Google News Reader"
-                 title_url="http://www.BoxySystems.com" description="A simple sophisticated newreader app with core focus on usability."
+                 title_url="http://www.BoxySystems.com" description="A simple sophisticated newsreader app with core focus on usability."
                  author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
                  thumbnail="http://www.therandomhomepage.com/google/gadgets/DZonePreview/dzonethumbnail.png"
                  screenshot="http://www.therandomhomepage.com/google/gadgets/DZonePreview/dzonescreenshot.png"
