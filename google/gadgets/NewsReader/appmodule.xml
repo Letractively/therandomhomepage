@@ -223,6 +223,9 @@
 
 	function showTagCloud(container, tabId, responseText){
    
+    container.innerHTML = _gel("settings").innerHTML;
+    return;
+     
 		if (responseText == null)
 		{
 			 container.innerHTML = errorHTML;
