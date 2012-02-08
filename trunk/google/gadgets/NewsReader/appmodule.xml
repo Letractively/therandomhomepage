@@ -413,6 +413,10 @@
 
  _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
  </script>
+ 
+ <div id="settings">
+ <h2>This is where settings gonna come!</h2>
+ </div>
  ]]>
     </Content>
 </Module>
