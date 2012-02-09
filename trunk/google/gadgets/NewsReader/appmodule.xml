@@ -335,10 +335,9 @@
            $('#placeholder').find('font br:first-child').remove();
            $('#placeholder').find('font div:first-child').remove();
            
-           $('#placeholder').find('td .j > font:nth-child(3)').each(function(index) {
-              console.log("Font = "+$(this).text());
-           });
-                      
+           $('#placeholder').find('td .j').find('font').each(function(idx, item) {
+               console.log('idx = '+idx+' item = '+item);
+           });                                
            
            //$('#placeholder').find('font br:nth-child(3)').nextAll().remove()
 
