@@ -52,6 +52,10 @@
 			text-decoration: none;
 		}
 
+    a.topic {
+      font-weight: bold;
+    }  
+    
 		a:hover {
 			text-decoration: underline;
 		}
@@ -350,14 +354,14 @@
  <div id="placeholder" style="display:none;"></div>
  
  <div id="settings" style="display:none;">
- <p>
-  <span onclick="createTabForTopic('b');">
+ <p class="topics">
+  <a class="topic" href="javascript:createTabForTopic('b');">
     Business
   </span>
-  <span onclick="createTabForTopic('tc');">
+  <a class="topic" href="javascript:createTabForTopic('tc');">
     Technology
   </span>  
-  <span onclick="createTabForTopic('m');">
+  <a class="topic" href="javascript:createTabForTopic('m');">
      Health
    </span>    
  </p> 
