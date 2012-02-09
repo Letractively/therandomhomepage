@@ -27,7 +27,7 @@
 	<UserPref name="Tags" datatype="hidden" />
     <Content type="html">
 <![CDATA[
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <style type="text/css">
 		img {
 			border-style: none;
