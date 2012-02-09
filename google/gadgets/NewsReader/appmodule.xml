@@ -33,7 +33,11 @@
 			border-style: none;
 			cursor: pointer;
 		}
-
+      
+    hr {
+      width: 95%;
+    }  
+  
 		td.tdSummary {
 			font-size:80%;
 		}
@@ -325,6 +329,7 @@
            
            $('#placeholder').find('font br:first-child').remove();
            $('#placeholder').find('font div:first-child').remove();
+           $('#placeholder').find("td").append("<hr/>");
            
            
           //$("ul li:nth-child(2)").append("<span> - 2nd!</span>");           
