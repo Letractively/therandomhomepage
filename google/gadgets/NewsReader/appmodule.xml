@@ -321,7 +321,9 @@
     
            $('#placeholder').find('a').attr("target","_new");
            
-           $('#placeholder').find("br").remove();
+           //$('#placeholder').find("br").remove();
+           
+           $('#placeholder').find('font br:first-child').remove();
            
            
           //$("ul li:nth-child(2)").append("<span> - 2nd!</span>");           
