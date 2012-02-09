@@ -317,10 +317,12 @@
 				linksHTML += '</table></div>';
 
              }
-           $('#placeholder').html(linksHTML);          
-             
+           $('#placeholder').html(linksHTML);   
+    
+           $('a#placeholder').attr("target","_new");
+           
            container.innerHTML = $('#placeholder')[0].innerHTML;                      
-   
+           $('#placeholder').empty();   
         }
 	}
 
