@@ -313,6 +313,10 @@
 
 				//linksHTML  += '<div><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
         linksHTML  +=  '<div><table>';
+        
+        if (i != itemList.length-1) {
+          linksHTML += '<hr/>';
+        }
     
 				var divSummary = document.createElement("div");
 				divSummary.innerHTML = description;
@@ -329,12 +333,7 @@
            
            $('#placeholder').find('font br:first-child').remove();
            $('#placeholder').find('font div:first-child').remove();
-           $('#placeholder').find("td .j").append("<hr/>");
-           
-           
-          //$("ul li:nth-child(2)").append("<span> - 2nd!</span>");           
-           
-           
+
            container.innerHTML = $('#placeholder')[0].innerHTML;                      
            $('#placeholder').empty();   
         }
