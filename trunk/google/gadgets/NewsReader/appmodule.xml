@@ -101,27 +101,43 @@
 	var tabs = new _IG_Tabs(__MODULE_ID__);
    
   var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World"};  
-
+  
 	var  errorHTML = "<p align='center'><i>Unable to read content  from http://www.DZone.com! <br/>Please try again  later.</i></p>";
+   
+  function getPreference(prefName,defaultValue) {
+    if ((typeof localStorage != "undefined") && (typeof localStorage[prefName] != "undefined")) {
+        return localStorage[prefName];
+    }
+    
+    if (typeof defaultValue != "undefined") {
+      return defaultValue;
+    }
+    return "";
+  } 
+  
+  function setPreference(prefName, prefValue) {
+    if (typeof localStorage != "undefined") {
+      localStorage[prefName] = prefValue;
+    }
+  }
+  
+  
 
 	function loadModule__MODULE_ID__(){
 
 		tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss"));
 
-		var tags = prefs.getString("Tags");
-
-		if (tags != '')
-		{
-			var tagNames = tags.split("|");
-			for (var i=0; i < tagNames.length; i++)
-			{
-				if (tagNames[i] != '')
-				{
-					var feedURL = buildFeedURL(tagNames[i]);
-					tabs.addDynamicTab(tagNames[i], loadTabsCallbackGenerator(feedURL));
-				}
-			}
-		}
+		var savedTabs = getPreference("savedTabs",new Array());
+      
+     for (var i=0; i < savedTabs.length; i++)
+     {       
+        for(var key in topics) {
+          if (key == savedTabs[i]) {
+           var feedURL = buildFeedURL(key);
+           tabs.addDynamicTab(topics[key], loadTabsCallbackGenerator(feedURL));                        
+          }
+        }     
+     }
 
 		tabs.addDynamicTab("Settings", tagCloudCallbackGenerator("http://www.dzone.com"));
 	}
@@ -153,74 +169,9 @@
 		}
 	}
 
-	function tagCloudCallback(tabId,url) {
+	function tagCloudCallback(tabId) {
 	   var container = _gel(tabId);
-	   container.innerHTML = "<p>Loading...</p>";
-	  _IG_FetchContent(
-		url,
-		function(responseText) {
-			showTagCloud(container, tabId, responseText)
-		});
-	}
-
-	function showTagCloud(container, tabId, responseText){
-   
-    container.innerHTML = _gel("settings").innerHTML;
-    return;
-     
-		if (responseText == null)
-		{
-			 container.innerHTML = errorHTML;
-			 return;
-		}
-
-		var tagsDiv = document.createElement("div");
-		tagsDiv.innerHTML = responseText;
-
-		var divs = tagsDiv.getElementsByTagName("div");
-
-		var alphacloudDiv = document.createElement("div");
-		for(var i=0; i < divs.length; i++) {
-			if (divs[i] && divs[i].className == "tagCloud")
-			{
-				alphacloudDiv.appendChild(divs[i]);
-				break;
-			}
-		}
-
-		var anchors = alphacloudDiv.getElementsByTagName("a");
-		for (var i=0; i < anchors.length; i++)
-		{
-			var tagName = anchors[i].innerHTML;
-
-			if (tagName != "all")
-			{
-				anchors[i].href = "javascript:createTabForTag('"+tagName+"');";
-			}
-			else {
-				anchors[i].parentNode.removeChild(anchors[i]);
-			}
-		}
-
-		var h3s = alphacloudDiv.getElementsByTagName("h3");
-		for (var i=0; i < h3s.length; i++)
-		{
-			h3s[i].parentNode.removeChild(h3s[i]);
-		}
-
-		container.innerHTML = alphacloudDiv.innerHTML;
-
-		// for some reason .net tag is not showing up while getting all the anchor tags from alphacloudDiv
-		var anchors = container.getElementsByTagName("a");
-		for (var i=0; i < anchors.length; i++)
-		{
-			var tagName = anchors[i].innerHTML;
-			if (tagName == ".net")
-			{
-				anchors[i].href = "javascript:createTabForTag('"+tagName+"');";
-			}
-		}
-
+	   container.innerHTML = _gel("settings").innerHTML;
 	}
 
 	function createTabForTopic(topicName){
@@ -241,10 +192,10 @@
 			tabs.addDynamicTab(topics[topicName], loadTabsCallbackGenerator(feedURL));
 			tabs.moveTab(i-1,i);
 			tabs.setSelectedTab(i-1);
-
-			var tags = prefs.getString("Tags");
-			tags  = tags + "|" +tagName;
-			prefs.set("Tags",tags);
+         
+       var savedTabs = getPreference("savedTabs",new Array());   
+      savedTabs.push(topicName); 
+      setPreference("savedTabs",savedTabs);
 		}
 	}
 
