@@ -319,7 +319,10 @@
              }
            $('#placeholder').html(linksHTML);   
     
-           $('a#placeholder').attr("target","_new");
+           $('a#placeholder').each(function()
+           { 
+              this.target = "_new";
+           });
            
            container.innerHTML = $('#placeholder')[0].innerHTML;                      
            $('#placeholder').empty();   
