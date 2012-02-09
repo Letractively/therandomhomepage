@@ -152,13 +152,6 @@
 		return feedURL;
 	}
 
-	function feedItemMouseOver(feedItem){
-		feedItem.className = "feedItemMouseOver";
-	}
-
-	function feedItemMouseOut(feedItem){
-		feedItem.className = "feedItemMouseOut";
-	}
 
 	function loadTabsCallbackGenerator(feedUrl) {
 		return function(tabId) {
@@ -168,9 +161,9 @@
 
 	function settingsTabCallback() {
 		return function(tabId) {
-       if ($("#settings")) {                  
+       if (_gel("settings")) {                  
          var container = _gel(tabId);
-         $(container).innerHTML = _gel("settings").innerHTML;
+         container.innerHTML = _gel("settings").innerHTML;
          $("#settings").remove();        
        }
 		}
