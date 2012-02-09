@@ -161,7 +161,7 @@
 
 	function settingsTabCallback() {
 		return function(tabId) {
-       if (_gel("settings")) {                  
+       if (_gel("settings") != null) {                  
          var container = _gel(tabId);
          container.innerHTML = _gel("settings").innerHTML;
          $("#settings").remove();        
