@@ -313,16 +313,16 @@
 
 				//linksHTML  += '<div><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
         linksHTML  +=  '<div><table>';
-        
-        if (i != itemList.length-1) {
-          linksHTML += '<hr/>';
-        }
     
 				var divSummary = document.createElement("div");
 				divSummary.innerHTML = description;
 
 				linksHTML += '<tr><td valign="top" class="tdSummary">'+divSummary.innerHTML+'</td></tr>'
 				linksHTML += '</table></div>';
+            
+        if (i != itemList.length-1) {
+          linksHTML += '<hr/>';
+        }            
 
              }
            $('#placeholder').html(linksHTML);   
