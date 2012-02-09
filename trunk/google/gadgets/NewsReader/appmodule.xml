@@ -129,7 +129,7 @@
 	function buildFeedURL(topicName){
     var selEditionValue = selEdition.value;
     console.log("selEditionValue = "+selEditionValue);
-		var feedURL = "http://news.google.com/news?ned=us&topic="+topicName+"&output=rss"; 
+		var feedURL = "http://news.google.com/news?ned="+selEditionValue+"&topic="+topicName+"&output=rss"; 
 		return feedURL;
 	}
 
@@ -379,7 +379,8 @@
                <option value="ie">Ireland</option>
                <option value="nz">New Zealand</option> 
                <option value="en_za">South Africa</option> 
-               <option value="uk">UK</option>                              
+               <option value="uk">UK</option> 
+               <option selected="selected" value="us">US</option>               
              </select>    
    </center>  
      
