@@ -100,7 +100,7 @@
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var tabs = new _IG_Tabs(__MODULE_ID__);
    
-  var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science"};  
+  var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World"};  
 
 	var  errorHTML = "<p align='center'><i>Unable to read content  from http://www.DZone.com! <br/>Please try again  later.</i></p>";
 
@@ -370,11 +370,23 @@
  <div id="settings" style="display:none;">
    <center>
      <h3>News Edition:</h3>
+             <select id="selEdition">
+               <option value="au">Australia</option>
+               <option value="ca">Canada</option>
+               <option value="in">India</option>
+               <option value="ie">Ireland</option>
+               <option value="nz">New Zealand</option> 
+               <option value="en_za">South Africa</option> 
+               <option value="uk">UK</option>                              
+             </select>    
    </center>  
      
    <fieldset>
    <legend>Topics:</legend>
    <center>
+  <a class="topic" href="javascript:createTabForTopic('w');">
+       World    
+  </a>        
   <a class="topic" href="javascript:createTabForTopic('b');">
     Business
   </a>
@@ -392,7 +404,7 @@
   </a>       
   <a class="topic" href="javascript:createTabForTopic('snc');">
        Science    
-  </a>     
+  </a>       
   </center>  
   </fieldset>
  </div>
