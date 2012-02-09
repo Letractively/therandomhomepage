@@ -120,8 +120,8 @@
 		tabs.addDynamicTab("Tagcloud", tagCloudCallbackGenerator("http://www.dzone.com"));
 	}
 
-	function buildFeedURL(tagName){
-		var feedURL = "http://dzone.com/links/feed/frontpage/"+escape(tagName)+"/rss.xml";
+	function buildFeedURL(topicName){
+		var feedURL = "http://news.google.com/news?ned=us&topic="+topicName+"&output=rss"; 
 		return feedURL;
 	}
 
@@ -215,14 +215,11 @@
 
 	}
 
-	function createTabForTag(tagName){
-
-		tagName = tagName.replace(/\u00a0/g,' ');
-
+	function createTabForTopic(topicName,topicCaption){
 		var actualTabs = tabs.getTabs();
 		var tabExist = false;
 		for(var i=0; i < actualTabs.length; i++) {
-			if (actualTabs[i].getName() == tagName)
+			if (actualTabs[i].getName() == topicCaption)
 			{
 				tabs.setSelectedTab(i);
 				tabExist = true;
@@ -232,7 +229,7 @@
 
 		if (!tabExist)
 		{
-			var feedURL = buildFeedURL(tagName);
+			var feedURL = buildFeedURL(topicName);
 			tabs.addDynamicTab(tagName, loadTabsCallbackGenerator(feedURL));
 			tabs.moveTab(i-1,i);
 			tabs.setSelectedTab(i-1);
