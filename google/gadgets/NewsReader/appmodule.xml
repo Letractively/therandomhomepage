@@ -333,7 +333,7 @@
            //$('#placeholder').find("br").remove();
            
            $('#placeholder').find('font br:first-child').remove();
-           $('td.j').find('font div:first-child').remove();
+           $('#placeholder').find('font div:first-child').remove();
                       
            
            $('#placeholder').find('font br:nth-child(3)').nextAll().remove()
