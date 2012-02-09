@@ -324,7 +324,7 @@
            //$('#placeholder').find("br").remove();
            
            $('#placeholder').find('font br:first-child').remove();
-           $('#placeholder').find('div img:first-child').remove();
+           $('#placeholder').find('font div:first-child').remove();
            
            
           //$("ul li:nth-child(2)").append("<span> - 2nd!</span>");           
