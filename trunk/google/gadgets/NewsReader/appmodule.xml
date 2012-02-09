@@ -51,6 +51,10 @@
 			color: #000000;
 			text-decoration: none;
 		}
+      
+    a:visited {
+      color: gray;
+    }  
 
     a.topic {
       font-weight: bold;
@@ -119,7 +123,7 @@
 			}
 		}
 
-		tabs.addDynamicTab("Tagcloud", tagCloudCallbackGenerator("http://www.dzone.com"));
+		tabs.addDynamicTab("Settings", tagCloudCallbackGenerator("http://www.dzone.com"));
 	}
 
 	function buildFeedURL(topicName){
