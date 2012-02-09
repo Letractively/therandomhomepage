@@ -308,8 +308,8 @@
 				var description = getChildNodeValueByNodeName(itemList.item(i),"description");
 
 				//linksHTML  += '<div><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
-        linksHTML  +=  '<div><table>';    
-
+        linksHTML  +=  '<div><table>';
+    
 				var divSummary = document.createElement("div");
 				divSummary.innerHTML = description;
 
@@ -317,7 +317,10 @@
 				linksHTML += '</table></div>';
 
              }
-           container.innerHTML = linksHTML;
+           $('#placeholder').html(linksHTML);          
+             
+           container.innerHTML = $('#placeholder')[0].innerHTML;                      
+   
         }
 	}
 
