@@ -321,6 +321,10 @@
     
            $('#placeholder').find('a').attr("target","_new");
            
+           $('#placeholder').find("td.j").append("<h2>Hello</h2>");
+           
+           
+           
            container.innerHTML = $('#placeholder')[0].innerHTML;                      
            $('#placeholder').empty();   
         }
