@@ -338,7 +338,7 @@
            var tds = $('#placeholder').find('td .j');
            
            for(var i=0; i < tds.length; i++) {
-              $(tds[i]).find('font').each(function(idx, item) {
+              $(tds[i]).find('font,br').each(function(idx, item) {
                  //console.log('idx = '+idx+' item = '+item);
                   if (idx > 3) {
                     $(item).remove();                   
