@@ -280,7 +280,7 @@
 	function showFeeds(container, tabId, response){
    
      console.log("Jquery = "+typeof $);
-     console.log("Placeholder = "+$('.placeholder').length);
+     console.log("Placeholder = "+$('.placeholder')[0].innerHTML);
 
 		 if (response == null || typeof(response) != "object" ||
                       response.firstChild == null) {
