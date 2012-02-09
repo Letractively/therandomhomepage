@@ -280,7 +280,7 @@
 	function showFeeds(container, tabId, response){
    
      console.log("Jquery = "+typeof $);
-     console.log("Placeholder = "+$('div#settings').innerHTML);
+     console.log("Placeholder = "+$('.placeholder').innerHTML);
 
 		 if (response == null || typeof(response) != "object" ||
                       response.firstChild == null) {
@@ -341,7 +341,7 @@
  _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
  </script>
  
- <div id="placeholder"></div>
+ <div class="placeholder"></div>
  
  <div id="settings" style="display:none;">
  <h2>This is where settings gonna come!</h2>
