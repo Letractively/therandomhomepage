@@ -106,7 +106,7 @@
    
   function getPreference(prefName,defaultValue) {
     console.log(" getPreference - prefName = "+prefName+" defaultValue = "+defaultValue+" localStorage = "+localStorage);
-    if ((typeof localStorage != "undefined") && (typeof localStorage[prefName] != "undefined")) {
+    if ((typeof localStorage != "undefined") && (typeof localStorage[prefName] != null)) {
         console.log("returning - "+localStorage[prefName]);
         return localStorage[prefName];
     }
