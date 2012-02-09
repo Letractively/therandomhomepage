@@ -313,18 +313,11 @@
 				var divSummary = document.createElement("div");
 				divSummary.innerHTML = description;
 
-				var divSummaryAnchors = divSummary.getElementsByTagName("a");
-
-				for(var j=0; j < divSummaryAnchors.length; j++) {
-					divSummaryAnchors[j].target = "_new";
-					divSummaryAnchors[j].href  =  "http://www.therandomhomepage.com/google/gadgets/DZonePreview/redirectLink.php?url="+divSummaryAnchors[j].href;
-				}
-
 				linksHTML += '<tr><td valign="top" class="tdSummary">'+divSummary.innerHTML+'</td></tr>'
 				linksHTML += '</table></div>';
 
              }
-			container.innerHTML = linksHTML;
+           container.innerHTML = linksHTML;
         }
 	}
 
