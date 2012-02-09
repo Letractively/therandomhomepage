@@ -357,7 +357,8 @@
  <div id="placeholder" style="display:none;"></div>
  
  <div id="settings" style="display:none;">
- <p class="topics">
+   <fieldset>
+   <legend>Topics:</legend>
   <a class="topic" href="javascript:createTabForTopic('b');">
     Business
   </a>
@@ -376,7 +377,7 @@
   <a class="topic" href="javascript:createTabForTopic('snc');">
        Science    
   </a>         
- </p> 
+  </fieldset>
  </div>
  ]]>
     </Content>
