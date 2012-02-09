@@ -105,8 +105,8 @@
 	var  errorHTML = "<p align='center'><i>Unable to read content  from http://www.DZone.com! <br/>Please try again  later.</i></p>";
    
   function getPreference(prefName,defaultValue) {
-    console.log(" getPreference - prefName = "+prefName+" defaultValue = "+defaultValue+" localStorage = "+localStorage+" "+localStorage[prefName]);
-    if ((typeof localStorage != "undefined") && (typeof localStorage[prefName] != null)) {
+    console.log(" getPreference - prefName = "+prefName+" defaultValue = "+defaultValue+" localStorage = "+localStorage+" "+typeof localStorage[prefName]);
+    if ((typeof localStorage != "undefined") && (localStorage[prefName] != null)) {
         console.log("returning - "+localStorage[prefName]);
         return localStorage[prefName];
     }
