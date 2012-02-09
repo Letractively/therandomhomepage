@@ -17,14 +17,9 @@
 		Last Updated : 2/08/2012
 		Change Notes: First revision
 	-->
-    <Require feature="analytics"/>
-	<Require feature="tabs"/>
-	<Require feature="setprefs"/>
-    </ModulePrefs>
-	<UserPref name="PopularLinks" default_value="http://feeds.dzone.com/dzone/frontpage?format=xml" datatype="hidden" />
-	<UserPref name="NewLinks" default_value="http://www.dzone.com/links/feed/queue/rss.xml" datatype="hidden" />
-	<UserPref name="selectedTab" datatype="hidden" />
-	<UserPref name="Tags" datatype="hidden" />
+  <Require feature="tabs"/>
+ </ModulePrefs>
+  <UserPref name="selectedTab" datatype="hidden" />
     <Content type="html">
 <![CDATA[
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -85,17 +80,26 @@
 </style>
 
  <script type="text/javascript">
-	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var tabs = new _IG_Tabs(__MODULE_ID__);
 
-	var  errorHTML = "<p align='center'><i>Unable to read content  from http://www.DZone.com! <br/>Please try again  later.</i></p>";
+	var  errorHTML = "<p align='center'><i>Unable to read content from server! <br/>Please try again  later.</i></p>";
+   
+  function getPreference(prefName, defaultValue) {
+    if (typeof localStorage != "undefined" && typeof localStorage[prefName] != "undefined") {
+      return localStorage[prefName];
+    }
+    if (typeof defaultValue != "undefined") {
+      return defaultValue;
+    }
+    return "";
+  } 
 
 	function loadModule__MODULE_ID__(){
 
-		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss"));
-		//tabs.addDynamicTab("New", loadTabsCallbackGenerator(prefs.getString("NewLinks")));
+		tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss"));
 
-		var tags = prefs.getString("Tags");
+    /*
+		var tags = getPreference("Tags");
 
 		if (tags != '')
 		{
@@ -109,8 +113,9 @@
 				}
 			}
 		}
+    */  
 
-		tabs.addDynamicTab("Tagcloud", tagCloudCallbackGenerator("http://www.dzone.com"));
+		tabs.addDynamicTab("Settings", settingsCallbackGenerator());
 	}
 
 	function buildFeedURL(tagName){
@@ -132,13 +137,13 @@
 		}
 	}
 
-	function tagCloudCallbackGenerator(url) {
+	function settingsCallbackGenerator() {
 		return function(tabId) {
-			tagCloudCallback(tabId, url);
+			settingsCallback(tabId);
 		}
 	}
 
-	function tagCloudCallback(tabId,url) {
+	function settingsCallback(tabId) {
 	   var container = _gel(tabId);
 	   container.innerHTML = "<p>Loading...</p>";
 	  _IG_FetchContent(
