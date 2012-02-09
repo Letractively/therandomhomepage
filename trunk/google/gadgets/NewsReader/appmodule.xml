@@ -142,7 +142,7 @@
         }     
      }
 
-		tabs.addDynamicTab("Settings", tagCloudCallbackGenerator("http://www.dzone.com"));
+		tabs.addDynamicTab("Settings", settingsTabCallback());
 	}
 
 	function buildFeedURL(topicName){
@@ -166,15 +166,18 @@
 		}
 	}
 
-	function tagCloudCallbackGenerator(url) {
+	function settingsTabCallback() {
 		return function(tabId) {
-			tagCloudCallback(tabId, url);
+       if ($("#settings")) {                  
+         var container = _gel(tabId);
+         $(container).innerHTML = _gel("settings").innerHTML;
+         $("#settings").remove();        
+       }
 		}
 	}
 
 	function tagCloudCallback(tabId) {
-	   var container = _gel(tabId);
-	   container.innerHTML = _gel("settings").innerHTML;
+
 	}
 
 	function createTabForTopic(topicName){
