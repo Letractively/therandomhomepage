@@ -281,11 +281,6 @@
 	}
 
 	function showFeeds(container, tabId, response){
-   
-     console.log("Jquery = "+typeof $);
-     console.log("Settings = "+$('#settings')[0].innerHTML);
-     console.log("Settings = "+$('#settings').empty());
-
 		 if (response == null || typeof(response) != "object" ||
                       response.firstChild == null) {
               container.innerHTML = errorHTML;
