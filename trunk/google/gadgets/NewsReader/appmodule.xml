@@ -360,13 +360,22 @@
  <p class="topics">
   <a class="topic" href="javascript:createTabForTopic('b');">
     Business
-  </span>
+  </a>
   <a class="topic" href="javascript:createTabForTopic('tc');">
     Technology
-  </span>  
+  </a>  
   <a class="topic" href="javascript:createTabForTopic('m');">
      Health
-   </span>    
+   </a>    
+  <a class="topic" href="javascript:createTabForTopic('s');">
+     Sports
+   </a>    
+  <a class="topic" href="javascript:createTabForTopic('e');">
+      Entertainment    
+  </a>       
+  <a class="topic" href="javascript:createTabForTopic('snc');">
+       Science    
+  </a>         
  </p> 
  </div>
  ]]>
