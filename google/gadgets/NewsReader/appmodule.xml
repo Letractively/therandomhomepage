@@ -95,6 +95,8 @@
  <script type="text/javascript">
 	var prefs = new _IG_Prefs(__MODULE_ID__);
 	var tabs = new _IG_Tabs(__MODULE_ID__);
+   
+  var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science"};  
 
 	var  errorHTML = "<p align='center'><i>Unable to read content  from http://www.DZone.com! <br/>Please try again  later.</i></p>";
 
@@ -215,11 +217,11 @@
 
 	}
 
-	function createTabForTopic(topicName,topicCaption){
+	function createTabForTopic(topicName){
 		var actualTabs = tabs.getTabs();
 		var tabExist = false;
 		for(var i=0; i < actualTabs.length; i++) {
-			if (actualTabs[i].getName() == topicCaption)
+			if (actualTabs[i].getName() == topics[topicName])
 			{
 				tabs.setSelectedTab(i);
 				tabExist = true;
@@ -230,7 +232,7 @@
 		if (!tabExist)
 		{
 			var feedURL = buildFeedURL(topicName);
-			tabs.addDynamicTab(tagName, loadTabsCallbackGenerator(feedURL));
+			tabs.addDynamicTab(topics[topicName], loadTabsCallbackGenerator(feedURL));
 			tabs.moveTab(i-1,i);
 			tabs.setSelectedTab(i-1);
 
