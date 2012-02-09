@@ -96,8 +96,7 @@
 
 	function loadModule__MODULE_ID__(){
 
-		tabs.addDynamicTab("Popular", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss"));
-		//tabs.addDynamicTab("New", loadTabsCallbackGenerator(prefs.getString("NewLinks")));
+		tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss"));
 
 		var tags = prefs.getString("Tags");
 
@@ -356,7 +355,17 @@
  <div id="placeholder" style="display:none;"></div>
  
  <div id="settings" style="display:none;">
- <h2>This is where settings gonna come!</h2>
+ <p>
+  <span onclick="createTabForTopic('b');">
+    Business
+  </span>
+  <span onclick="createTabForTopic('tc');">
+    Technology
+  </span>  
+  <span onclick="createTabForTopic('m');">
+     Health
+   </span>    
+ </p> 
  </div>
  ]]>
     </Content>
