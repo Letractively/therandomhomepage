@@ -329,7 +329,7 @@
            
            $('#placeholder').find('font br:first-child').remove();
            $('#placeholder').find('font div:first-child').remove();
-           $('#placeholder').find("td").append("<hr/>");
+           $('#placeholder').find("td .j").append("<hr/>");
            
            
           //$("ul li:nth-child(2)").append("<span> - 2nd!</span>");           
