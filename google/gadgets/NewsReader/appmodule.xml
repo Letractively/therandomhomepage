@@ -357,8 +357,13 @@
  <div id="placeholder" style="display:none;"></div>
  
  <div id="settings" style="display:none;">
+   <center>
+     <h3>News Edition:</h3>
+   </center>  
+     
    <fieldset>
    <legend>Topics:</legend>
+   <center>
   <a class="topic" href="javascript:createTabForTopic('b');">
     Business
   </a>
@@ -376,7 +381,8 @@
   </a>       
   <a class="topic" href="javascript:createTabForTopic('snc');">
        Science    
-  </a>         
+  </a>     
+  </center>  
   </fieldset>
  </div>
  ]]>
