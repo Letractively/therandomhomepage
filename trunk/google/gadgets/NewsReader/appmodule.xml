@@ -335,11 +335,14 @@
            $('#placeholder').find('font br:first-child').remove();
            $('#placeholder').find('font div:first-child').remove();
            
-           $('#placeholder').find('td .j').find('font').each(function(idx, item) {
-               console.log('idx = '+idx+' item = '+item);
-           });                                
+           var tds = $('#placeholder').find('td .j');
            
-           //$('#placeholder').find('font br:nth-child(3)').nextAll().remove()
+           for(var i=0; i < tds.length; i++) {
+              $(tds[i]).find('font').each(function(idx, item) {
+                 console.log('idx = '+idx+' item = '+item);
+              });                                
+           }
+           
 
            container.innerHTML = $('#placeholder')[0].innerHTML;                      
            $('#placeholder').empty();   
