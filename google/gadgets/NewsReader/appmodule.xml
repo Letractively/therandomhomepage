@@ -339,7 +339,10 @@
            
            for(var i=0; i < tds.length; i++) {
               $(tds[i]).find('font').each(function(idx, item) {
-                 console.log('idx = '+idx+' item = '+item);
+                 //console.log('idx = '+idx+' item = '+item);
+                  if (idx > 3) {
+                    $(item).remove();                   
+                  }                  
               });                                
            }
            
