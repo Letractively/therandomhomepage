@@ -127,6 +127,8 @@
 	}
 
 	function buildFeedURL(topicName){
+    var selEditionValue = selEdition.value;
+    console.log("selEditionValue = "+selEditionValue);
 		var feedURL = "http://news.google.com/news?ned=us&topic="+topicName+"&output=rss"; 
 		return feedURL;
 	}
