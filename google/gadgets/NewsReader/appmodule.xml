@@ -279,7 +279,7 @@
 
 	function showFeeds(container, tabId, response){
    
-     console.log("Placeholder = "+$("#placeholder").innerHTML);
+     console.log("Placeholder = "+_gel("placeholder").innerHTML);
 
 		 if (response == null || typeof(response) != "object" ||
                       response.firstChild == null) {
