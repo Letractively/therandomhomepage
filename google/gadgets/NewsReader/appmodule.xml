@@ -341,7 +341,7 @@
  _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
  </script>
  
- <div class="placeholder"></div>
+ <div id="placeholder" style="display:none;"></div>
  
  <div id="settings" style="display:none;">
  <h2>This is where settings gonna come!</h2>
