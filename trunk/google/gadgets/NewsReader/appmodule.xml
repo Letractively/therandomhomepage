@@ -298,7 +298,9 @@
            }
            
 
-           container.innerHTML = $('#placeholder')[0].innerHTML;                      
+           container.innerHTML = $('#placeholder')[0].innerHTML;          
+           
+           $(container).fadeIn('slow');           
            $('#placeholder').empty();   
         }
 	}
