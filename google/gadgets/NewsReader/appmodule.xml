@@ -130,7 +130,7 @@
 
 		tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss"));
 
-		var savedTabs = getPreference("savedTabs",new Array());
+		var savedTabs = getPreference("savedTabs").split("|");
       
      for (var i=0; i < savedTabs.length; i++)
      {       
@@ -192,9 +192,9 @@
 			tabs.moveTab(i-1,i);
 			tabs.setSelectedTab(i-1);
          
-       var savedTabs = getPreference("savedTabs",new Array());   
+      var savedTabs = getPreference("savedTabs").split("|");   
       savedTabs.push(topicName); 
-      setPreference("savedTabs",savedTabs);
+      setPreference("savedTabs",savedTabs.join("|"));
 		}
 	}
 
