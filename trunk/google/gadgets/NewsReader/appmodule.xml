@@ -301,7 +301,7 @@
            container.innerHTML = $('#placeholder')[0].innerHTML;          
            console.log("Fading in "+$(container).length);
 
-           $(container).fadeIn('slow');           
+           $(container)[0].fadeIn('slow');           
            $('#placeholder').empty();   
         }
 	}
