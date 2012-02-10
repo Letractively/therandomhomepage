@@ -299,7 +299,8 @@
            
 
            container.innerHTML = $('#placeholder')[0].innerHTML;          
-           
+           console.log("Fading in "+$(container));
+
            $(container).fadeIn('slow');           
            $('#placeholder').empty();   
         }
