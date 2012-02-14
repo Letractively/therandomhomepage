@@ -112,8 +112,22 @@
    
   function getCacheTime(url) {
     if (localStorage["cacheTime"] != null) {
-    } 
-  }  
+      var cacheTime = JSON.parse(localStorage["cacheTime"]);
+      if (cacheTime[url] != null) {
+        return cacheTime[url];
+      }
+    }
+    return null; 
+  } 
+ 
+  function setCacheTime(url) {
+    var cacheTime = new Array();
+    if (localStorage["cacheTime"] != null) {
+      cacheTime = JSON.parse(localStorage["cacheTime"]);
+    }
+    //var date = new Date();
+    //cacheTime[url] = date.getTimein    
+  }
  
   function getPreference(prefName,defaultValue) {
     console.log(" getPreference - prefName = "+prefName+" defaultValue = "+defaultValue+" localStorage = "+localStorage+" "+typeof localStorage[prefName]);
