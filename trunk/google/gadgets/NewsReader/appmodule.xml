@@ -99,9 +99,8 @@
 		}
       
     .settings {
-        min-height: 10em;
-       display: table-cell;
-       vertical-align: middle;
+      display: table-cell; 
+      vertical-align: middle;    
     }
 
 </style>
@@ -332,6 +331,7 @@
  <div id="placeholder" style="display:none;"></div>
  
  <div id="settings" style="display:none;">
+   <div style="display: table-row;">
    <div class="settings">
    <center>
      <b>News Edition:</b>
@@ -373,6 +373,7 @@
   </a>       
   </center>  
   </fieldset>
+  </div>
   </div>
  </div>
  ]]>
