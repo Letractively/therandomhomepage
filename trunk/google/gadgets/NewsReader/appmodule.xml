@@ -331,7 +331,7 @@
  <div id="placeholder" style="display:none;"></div>
  
  <div id="settings" style="display:none;">
-   <table height="100%">
+   <table height="90%">
    <tr><td valign="middle">
    <center>
      <b>News Edition:</b>
@@ -346,6 +346,7 @@
                <option selected="selected" value="us">US</option>               
              </select>    
    </center>  
+   <br/>
 
    <fieldset>
    <legend>Topics:</legend>
