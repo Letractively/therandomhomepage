@@ -163,7 +163,8 @@
 		return function(tabId) {
        if (_gel("settings") != null) {                  
          var container = _gel(tabId);
-         container.innerHTML = _gel("settings").innerHTML;
+         //container.innerHTML = _gel("settings").innerHTML;
+         $(container).replaceWith(_gel("settings"));
          $("#settings").remove();        
        }
 		}
@@ -320,7 +321,7 @@
  
  <div id="placeholder" style="display:none;"></div>
  
- <div id="settings" style="display:none;">
+ <div id="settings" class="settings" style="display:none;">
    <center>
      <b>News Edition:</b>
              <select id="selEdition">
