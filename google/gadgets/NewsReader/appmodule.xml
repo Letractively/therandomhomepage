@@ -211,6 +211,10 @@
    function loadTab(tabId,feedUrl) {
 	   var container = _gel(tabId);
 	   container.innerHTML = "<p>Loading...</p>";
+      
+     if (localStorage[feedUrl] != null) {
+       container.innerHTML = localStorage[feedUrl];
+     } 
 
 	   _IG_FetchXmlContent(
 		feedUrl,
@@ -310,7 +314,6 @@
 
            container.innerHTML = $('#placeholder')[0].innerHTML;   
            localStorage[feedUrl] = container.innerHTML; 
-           console.log("localStorage["+feedUrl+"] = "+localStorage[feedUrl]);
            $('#placeholder').empty();             
         }
 	}
