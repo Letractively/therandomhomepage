@@ -99,7 +99,8 @@
 		}
       
     .settings {
-      padding-top: 10px;
+      vertical-align:middle;
+      height: 100%;
     }
 
 </style>
