@@ -114,11 +114,10 @@
     this.time = time;
   }
   
-  localStorage["cacheTimes"] = [];
+  localStorage["cacheTimes"] = "";
    
   function getCacheTime(url) {
-    if (localStorage["cacheTimes"] != null) {
-      console.log("JSON = "+JSON);
+    if (localStorage["cacheTimes"] != null && localStorage["cacheTimes"] != "") {
       var cacheTimes = JSON.parse(localStorage["cacheTimes"]);
       for(var i=0; i < cacheTimes.length; i++) {
         if (cacheTimes[i].url === url) {
