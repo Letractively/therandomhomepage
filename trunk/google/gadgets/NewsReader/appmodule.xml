@@ -110,24 +110,41 @@
   
 	var  errorHTML = "<p align='center'>Unable to read content  from Google News server! <br/>Please try again  later.</p>";
    
+  var CacheTime = function(url,time) {
+    this.url = url;
+    this.time = time;
+  }
+   
   function getCacheTime(url) {
-    if (localStorage["cacheTime"] != null) {
-      var cacheTime = JSON.parse(localStorage["cacheTime"]);
-      if (cacheTime[url] != null) {
-        return cacheTime[url];
+    if (localStorage["cacheTimes"] != null) {
+      var cacheTimes = JSON.parse(localStorage["cacheTimes"]);
+      for(var i=0; i < cacheTimes.length; i++) {
+        if (cacheTimes[i].url === url) {
+          return url;
+        }
       }
     }
     return null; 
   } 
  
   function setCacheTime(url) {
-    var cacheTime = new Array();
-    if (localStorage["cacheTime"] != null) {
-      cacheTime = JSON.parse(localStorage["cacheTime"]);
+    var cacheTimes = new Array();
+    if (localStorage["cacheTimes"] != null) {
+      cacheTimes = JSON.parse(localStorage["cacheTimes"]);
     }
     var date = new Date();
-    cacheTime[url] = date.getTime();
-    localStorage["cacheTime"] = JSON.stringify(cacheTime);
+    var timeSet = false;
+    for(var i=0; i < cacheTimes.length; i++) {
+      if (cacheTimes[i].url === url) {
+        cacheTimes[i].time = date.getTime();
+        timeSet = true;
+        break;         
+      }
+    }    
+    if (!timeSet) {
+      cacheTimes.push(new CacheTime(url,date.getTime()));      
+    }    
+    localStorage["cacheTimes"] = cacheTimes;
   }
  
   function getPreference(prefName,defaultValue) {
