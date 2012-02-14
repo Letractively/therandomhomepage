@@ -55,6 +55,10 @@
     a:visited {
       color: gray;
     }  
+    
+    a:active {
+      color: gray;
+    }  
 
     a.topic {
       font-weight: bold;
@@ -304,7 +308,9 @@
            }
            
 
-           container.innerHTML = $('#placeholder')[0].innerHTML;          
+           container.innerHTML = $('#placeholder')[0].innerHTML;   
+           var date = new Date();
+           $(contaner).attr("loadTime",date.getTime());       
            console.log("Fading in "+$(container).length);          
            $('#placeholder').empty();   
         }
