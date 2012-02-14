@@ -259,6 +259,7 @@
        return;
      } 
 
+     console.log("Loading tab from server");
 	   _IG_FetchXmlContent(
 		feedUrl,
 		function(feed) {
