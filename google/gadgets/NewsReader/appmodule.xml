@@ -315,7 +315,6 @@
            
 
            container.innerHTML = $('#placeholder')[0].innerHTML;              
-           $(container)[0].fadeIn('slow');           
            localStorage[feedUrl] = container.innerHTML; 
            $('#placeholder').empty();             
         }
