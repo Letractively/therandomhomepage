@@ -19,10 +19,7 @@
 	-->
 	<Require feature="tabs"/>
     </ModulePrefs>
-	<UserPref name="PopularLinks" default_value="http://feeds.dzone.com/dzone/frontpage?format=xml" datatype="hidden" />
-	<UserPref name="NewLinks" default_value="http://www.dzone.com/links/feed/queue/rss.xml" datatype="hidden" />
 	<UserPref name="selectedTab" datatype="hidden" />
-	<UserPref name="Tags" datatype="hidden" />
     <Content type="html">
 <![CDATA[
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
