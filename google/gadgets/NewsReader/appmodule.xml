@@ -17,9 +17,7 @@
 		Last Updated : 2/08/2012
 		Change Notes: First revision
 	-->
-    <Require feature="analytics"/>
 	<Require feature="tabs"/>
-	<Require feature="setprefs"/>
     </ModulePrefs>
 	<UserPref name="PopularLinks" default_value="http://feeds.dzone.com/dzone/frontpage?format=xml" datatype="hidden" />
 	<UserPref name="NewLinks" default_value="http://www.dzone.com/links/feed/queue/rss.xml" datatype="hidden" />
@@ -106,8 +104,7 @@
 </style>
 
  <script type="text/javascript">
-	var prefs = new _IG_Prefs(__MODULE_ID__);
-	var tabs = new _IG_Tabs(__MODULE_ID__);
+  var tabs = new _IG_Tabs(__MODULE_ID__);
    
   var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World"};  
   
@@ -240,7 +237,7 @@
 
 				tabs.setSelectedTab(tabIdx);
 
-				var tags = prefs.getString("Tags");
+				var tags = getPreference("Tags");
 				var tagNames = tags.split("|");
 				var modifiedTags = '';
 				for (var i=0; i < tagNames.length; i++ )
@@ -250,7 +247,7 @@
 						modifiedTags = modifiedTags + '|' + tagNames[i];
 					}
 				}
-				prefs.set("Tags",modifiedTags);
+				setPreference("Tags",modifiedTags);
 			}
 		}
 	}
@@ -266,7 +263,7 @@
 
 			var linksHTML = '';
 
-			var tags = prefs.getString("Tags");
+			var tags = getPreference("Tags");
 			if (tags != null && tags.indexOf(tabs.getSelectedTab().getName()) != -1)
 			{
 				linksHTML  += '<div class="closeTab">[<a title="Remove Tab"  href="javascript:removeSelectedTab();">X</a>]&nbsp;&nbsp;</div>';
