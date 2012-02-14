@@ -321,10 +321,8 @@
  <div id="placeholder" style="display:none;"></div>
  
  <div id="settings" style="display:none;">
-   <fieldset>
-   <legend>Topics:</legend>
    <center>
-     News Edition:
+     <b>News Edition:</b>
              <select id="selEdition">
                <option value="au">Australia</option>
                <option value="ca">Canada</option>
@@ -336,8 +334,7 @@
                <option selected="selected" value="us">US</option>               
              </select>    
    </center>  
-   </fieldset>
-     
+
    <fieldset>
    <legend>Topics:</legend>
    <center>
