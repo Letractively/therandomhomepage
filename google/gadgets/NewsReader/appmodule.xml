@@ -58,7 +58,7 @@
 
     a.topic {
       font-weight: bold;
-      padding: 3em;
+      padding: 5px;
     }  
     
 		a:hover {
