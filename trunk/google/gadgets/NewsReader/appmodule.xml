@@ -310,7 +310,7 @@
 
            container.innerHTML = $('#placeholder')[0].innerHTML;   
            var date = new Date();
-           $(contaner).attr("loadTime",date.getTime());       
+           $(contaner)[0].attr("loadTime",date.getTime());       
            console.log("Fading in "+$(container).length);          
            $('#placeholder').empty();   
         }
