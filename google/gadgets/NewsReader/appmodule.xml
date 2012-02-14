@@ -105,7 +105,9 @@
    
   var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World"};  
   
-	var  errorHTML = "<p align='center'>Unable to read content  from Google News server! <br/>Please try again  later.</p>";
+	var  errorHTML = "<p align='center'>Unable to read content from Google News server! <br/>Please try again  later.</p>";
+   
+  var CACHE_INTERVAL = 1000 * 60 * 15; //15 min 
    
   var CacheTime = function(url,time) {
     this.url = url;
@@ -142,6 +144,12 @@
       cacheTimes.push(new CacheTime(url,date.getTime()));      
     }    
     localStorage["cacheTimes"] = cacheTimes;
+  }
+  
+  function isCacheExpired(url) {    
+    var cacheTime = getCacheTime(url);
+    var date = new Date();
+    return cacheTime == null || ((date.getTime() - cacheTime) > CACHE_INTERVAL);
   }
  
   function getPreference(prefName,defaultValue) {
@@ -243,7 +251,7 @@
 	   var container = _gel(tabId);
 	   container.innerHTML = "<p>Loading...</p>";
       
-     if (localStorage[feedUrl] != null) {
+     if (localStorage[feedUrl] != null && !isCacheExpired(feedUrl)) {
        console.log("Loading tab from localStorage");
        container.innerHTML = localStorage[feedUrl];
        return;
@@ -347,6 +355,7 @@
 
            container.innerHTML = $('#placeholder')[0].innerHTML;              
            localStorage[feedUrl] = container.innerHTML; 
+           setCacheTime(feedUrl);
            $('#placeholder').empty();             
         }
 	}
