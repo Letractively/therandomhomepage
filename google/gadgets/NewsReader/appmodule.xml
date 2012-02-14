@@ -130,7 +130,7 @@
  
   function setCacheTime(url) {
     var cacheTimes = new Array();
-    if (localStorage["cacheTimes"] != null) {
+    if (localStorage["cacheTimes"] != null && localStorage["cacheTimes"] != "") {
       cacheTimes = JSON.parse(localStorage["cacheTimes"]);
     }
     var date = new Date();
