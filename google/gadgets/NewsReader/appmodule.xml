@@ -164,7 +164,7 @@
        if (_gel("settings") != null) {                  
          var container = _gel(tabId);
          //container.innerHTML = _gel("settings").innerHTML;
-         $(container).replaceWith(_gel("settings"));
+         $(container).replaceWith($("#settings"));
          $("#settings").remove();        
        }
 		}
