@@ -310,6 +310,7 @@
 
            container.innerHTML = $('#placeholder')[0].innerHTML;   
            localStorage[feedUrl] = container.innerHTML; 
+           console.log("localStorage["+feedUrl+"] = "+localStorage[feedUrl]);
            $('#placeholder').empty();             
         }
 	}
