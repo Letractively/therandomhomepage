@@ -169,6 +169,7 @@
          var container = _gel(tabId);
          container.innerHTML = _gel("settings").innerHTML;
          //$(container).replaceWith($("#settings"));
+         container.className = "settings";
          $("#settings").remove();        
        }
 		}
