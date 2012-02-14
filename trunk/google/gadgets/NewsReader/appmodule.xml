@@ -101,7 +101,6 @@
     .settings {
       display: table-cell; 
       vertical-align: middle;  
-      height: 90%;  
     }
 
 </style>
@@ -332,7 +331,7 @@
  <div id="placeholder" style="display:none;"></div>
  
  <div id="settings" style="display:none;">
-   <div style="display: table-row;">
+   <div style="display: table-row;height: 90%;">
    <div class="settings">
    <center>
      <b>News Edition:</b>
