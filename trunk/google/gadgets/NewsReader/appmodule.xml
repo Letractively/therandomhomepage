@@ -215,7 +215,7 @@
 	   _IG_FetchXmlContent(
 		feedUrl,
 		function(feed) {
-			showFeeds(container, tabId, feed)
+			showFeeds(container, tabId, feed,  feedUrl)
 		});
 
 	}
@@ -249,7 +249,7 @@
 		}
 	}
 
-	function showFeeds(container, tabId, response){
+	function showFeeds(container, tabId, response, feedUrl){
 		 if (response == null || typeof(response) != "object" ||
                       response.firstChild == null) {
               container.innerHTML = errorHTML;
@@ -312,7 +312,8 @@
            var date = new Date();
            $(contaner)[0].attr("loadTime",date.getTime());       
            console.log("Fading in "+$(container).length);          
-           $('#placeholder').empty();   
+           $('#placeholder').empty();  
+           localStorage[feedUrl] = container.innerHTML; 
         }
 	}
 
