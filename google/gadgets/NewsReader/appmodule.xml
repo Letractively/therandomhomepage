@@ -114,7 +114,7 @@
     this.time = time;
   }
   
-  localStorage["cacheTimes"] = null;
+  localStorage["cacheTimes"] = [];
    
   function getCacheTime(url) {
     if (localStorage["cacheTimes"] != null) {
