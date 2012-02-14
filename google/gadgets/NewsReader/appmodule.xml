@@ -112,10 +112,8 @@
    
   function getCacheTime(url) {
     if (localStorage["cacheTime"] != null) {
-      
-  
-    }
-  } 
+    } 
+  }  
  
   function getPreference(prefName,defaultValue) {
     console.log(" getPreference - prefName = "+prefName+" defaultValue = "+defaultValue+" localStorage = "+localStorage+" "+typeof localStorage[prefName]);
