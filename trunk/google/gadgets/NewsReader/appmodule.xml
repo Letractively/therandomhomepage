@@ -309,11 +309,8 @@
            
 
            container.innerHTML = $('#placeholder')[0].innerHTML;   
-           var date = new Date();
-           $(contaner)[0].attr("loadTime",date.getTime());       
-           console.log("Fading in "+$(container).length);          
-           $('#placeholder').empty();  
            localStorage[feedUrl] = container.innerHTML; 
+           $('#placeholder').empty();             
         }
 	}
 
