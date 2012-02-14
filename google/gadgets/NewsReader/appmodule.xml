@@ -93,6 +93,10 @@
 			width: 100%;
 			text-align: right;
 		}
+      
+    .settings {
+      padding-top: 10px;
+    }
 
 </style>
 
@@ -321,7 +325,7 @@
  
  <div id="placeholder" style="display:none;"></div>
  
- <div id="settings" class="settings" style="display:none;">
+ <div id="settings" style="display:none;">
    <center>
      <b>News Edition:</b>
              <select id="selEdition">
