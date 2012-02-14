@@ -213,7 +213,9 @@
 	   container.innerHTML = "<p>Loading...</p>";
       
      if (localStorage[feedUrl] != null) {
+       console.log("Loading tab from localStorage");
        container.innerHTML = localStorage[feedUrl];
+       return;
      } 
 
 	   _IG_FetchXmlContent(
