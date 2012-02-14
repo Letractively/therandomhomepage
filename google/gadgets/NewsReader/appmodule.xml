@@ -102,7 +102,7 @@
    
   var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World"};  
   
-	var  errorHTML = "<p align='center'><i>Unable to read content  from http://www.DZone.com! <br/>Please try again  later.</i></p>";
+	var  errorHTML = "<p align='center'>Unable to read content  from Google News server! <br/>Please try again  later.</p>";
    
   function getPreference(prefName,defaultValue) {
     console.log(" getPreference - prefName = "+prefName+" defaultValue = "+defaultValue+" localStorage = "+localStorage+" "+typeof localStorage[prefName]);
@@ -321,8 +321,10 @@
  <div id="placeholder" style="display:none;"></div>
  
  <div id="settings" style="display:none;">
+   <fieldset>
+   <legend>Topics:</legend>
    <center>
-     <h3>News Edition:</h3>
+     News Edition:
              <select id="selEdition">
                <option value="au">Australia</option>
                <option value="ca">Canada</option>
@@ -334,6 +336,7 @@
                <option selected="selected" value="us">US</option>               
              </select>    
    </center>  
+   </fieldset>
      
    <fieldset>
    <legend>Topics:</legend>
