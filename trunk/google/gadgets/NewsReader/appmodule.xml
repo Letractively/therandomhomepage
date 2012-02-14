@@ -98,11 +98,6 @@
 			text-align: right;
 		}
       
-    .settings {
-      display: table-cell; 
-      vertical-align: middle;  
-    }
-
 </style>
 
  <script type="text/javascript">
@@ -331,8 +326,7 @@
  <div id="placeholder" style="display:none;"></div>
  
  <div id="settings" style="display:none;">
-   <table height="90%">
-   <tr><td valign="middle">
+   <br/>  
    <center>
      <b>News Edition:</b>
              <select id="selEdition">
@@ -373,10 +367,6 @@
        Science    
   </a>       
   </center>  
-  </fieldset>
-  </td>
-  </tr>
-  </table>
   </div>
 
  ]]>
