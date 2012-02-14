@@ -110,6 +110,13 @@
   
 	var  errorHTML = "<p align='center'>Unable to read content  from Google News server! <br/>Please try again  later.</p>";
    
+  function getCacheTime(url) {
+    if (localStorage["cacheTime"] != null) {
+      
+  
+    }
+  } 
+ 
   function getPreference(prefName,defaultValue) {
     console.log(" getPreference - prefName = "+prefName+" defaultValue = "+defaultValue+" localStorage = "+localStorage+" "+typeof localStorage[prefName]);
     if ((typeof localStorage != "undefined") && (localStorage[prefName] != null)) {
