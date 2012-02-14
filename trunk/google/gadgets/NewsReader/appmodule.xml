@@ -113,6 +113,8 @@
     this.url = url;
     this.time = time;
   }
+  
+  localStorage["cacheTimes"] = null;
    
   function getCacheTime(url) {
     if (localStorage["cacheTimes"] != null) {
