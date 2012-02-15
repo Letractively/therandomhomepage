@@ -218,6 +218,10 @@
        if (_gel("settings") != null) {                  
          var container = _gel(tabId);
          container.innerHTML = _gel("settings").innerHTML;
+         $('#settings').fadeIn('slow', function() {
+          console.log("Settings Fade in complete!");
+         });
+
          //$(container).replaceWith($("#settings"));
          $("#settings").remove();        
        }
@@ -260,12 +264,7 @@
      if (localStorage[feedUrl] != null && !isCacheExpired(feedUrl)) {
        console.log("Loading tab from localStorage");
        container.innerHTML = localStorage[feedUrl];             
-       console.log("jQuery.fx.off = "+jQuery.fx.off);
-
-        $(container).fadeIn('slow', function() {
-          console.log("Fade in complete!");
-        });
-     
+       console.log("jQuery.fx.off = "+jQuery.fx.off);     
        return;
      } 
 
