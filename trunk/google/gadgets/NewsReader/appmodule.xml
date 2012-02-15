@@ -104,7 +104,7 @@
  <script type="text/javascript">
   var tabs = new _IG_Tabs(__MODULE_ID__);
    
-  var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World"};  
+  var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World","n": "Nation","po": "Most Popular","ir": "Spotlight"};  
   
 	var  errorHTML = "<p align='center'>Unable to read content from Google News server! <br/>Please try again  later.</p>";
    
