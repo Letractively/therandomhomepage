@@ -281,19 +281,20 @@
 
 			if (response)
 			{
-         				var tabIdx = tabs.getSelectedTab().getIndex();
+        var tabIdx = tabs.getSelectedTab().getIndex();
+        var removedTabName = tabs.getSelectedTab().getName();
 				tabs.removeTab(tabIdx);
-
 				tabs.setSelectedTab(tabIdx);
             
+        console.log("savedTabs = "+getPreference("savedTabs"));
+        
 				var savedTabs = getPreference("savedTabs").split("|");
 
             var newTabs = new Array();
-
             for (var i=0; i < savedTabs.length; i++)
             {
-                for(var key in topics) {
-                   if (savedTabs[i] == key && topics[key] != tabs.getSelectedTab().getName()) {
+                for(var key in topics) {                   
+                   if (savedTabs[i] == key && topics[key] != removedTabName) {
                       newTabs.push(savedTabs[i]);
                       break;
                     }
