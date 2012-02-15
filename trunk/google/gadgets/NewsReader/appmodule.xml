@@ -372,10 +372,12 @@
            }
            
            
-          $(".closeTab").click(function() {
-              removeSelectedTab();
-          });
            container.innerHTML = $('#placeholder')[0].innerHTML;              
+           
+           $(container).find("div.closeTab").click(function() {
+              removeSelectedTab();
+           });
+
            localStorage[feedUrl] = container.innerHTML; 
            setCacheTime(feedUrl);
            $('#placeholder').empty();             
