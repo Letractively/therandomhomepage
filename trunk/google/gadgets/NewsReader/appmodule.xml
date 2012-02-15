@@ -371,7 +371,10 @@
               });                                
            }
            
-
+           
+          $(".closeTab").click(function() {
+              removeSelectedTab();
+          });
            container.innerHTML = $('#placeholder')[0].innerHTML;              
            localStorage[feedUrl] = container.innerHTML; 
            setCacheTime(feedUrl);
