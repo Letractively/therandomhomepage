@@ -280,23 +280,22 @@
 
 			if (response)
 			{
+         				var tabIdx = tabs.getSelectedTab().getIndex();
+				tabs.removeTab(tabIdx);
+
+				tabs.setSelectedTab(tabIdx);
+            
 				var savedTabs = getPreference("savedTabs").split("|");
 
             var newTabs = new Array();
 
             for (var i=0; i < savedTabs.length; i++)
             {
-                var tabRemoved = false;
                 for(var key in topics) {
-                    if (savedTabs[i] == key && topics[key] == tabs.getSelectedTab().getName()) {
-                    	 var tabIdx = tabs.getSelectedTab().getIndex();
-				            tabs.removeTab(tabIdx);
-				            tabs.setSelectedTab(tabIdx);
-                        tabRemoved = true;
+                   if (savedTabs[i] == key && topics[key] != tabs.getSelectedTab().getName()) {
+                      newTabs.push(savedTabs[i]);
+                      break;
                     }
-                }
-                if (!tabRemoved) {
-                    newTabs.push(savedTabs[i])
                 }
             }
             
