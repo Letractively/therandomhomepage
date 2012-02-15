@@ -325,7 +325,7 @@
      {       
         for(var key in topics) {
            if (savedTabs[i] == key && topics[key] == tabs.getSelectedTab().getName()) {
-            linksHTML += '<div class="closeTab"><a title="Remove Tab" href="javascript:alert(\"Removing tab\");"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/delete.png"/></a></div>';               
+            linksHTML += '<div class="closeTab" onclick="alert(\"Removing tab\");"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/delete.png"/></div>';               
            }
         }     
      }
