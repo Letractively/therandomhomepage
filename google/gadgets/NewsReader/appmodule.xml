@@ -210,7 +210,11 @@
 $(document).ready(function() {
   $('#slidebottom button').click(function() {
     //$(this).next().slideToggle();
-    $("#slide").fadeIn("slow");   
+
+      $('#slide').fadeIn('slow', function() {
+        console.log("Animation complete");
+      });
+    
   });
 });
 
