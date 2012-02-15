@@ -211,7 +211,7 @@ $(document).ready(function() {
   $('#slidebottom button').click(function() {
     //$(this).next().slideToggle();
 
-      $('#slide').fadeIn('slow', function() {
+      $('#slidebottom').fadeIn('slow', function() {
         console.log("Animation complete");
       });
     
