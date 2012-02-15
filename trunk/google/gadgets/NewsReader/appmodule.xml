@@ -22,415 +22,446 @@
 	<UserPref name="selectedTab" datatype="hidden" />
     <Content type="html">
 <![CDATA[
+<html>
+<head>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <link href="http://therandomhomepage.com/google/gadgets/DZonePreview/loading.css" rel="stylesheet"/>
 <style type="text/css">
-		img {
-			border-style: none;
-			cursor: pointer;
-		}
-      
+    	img {
+        			border-style: none;
+        			cursor: pointer;
+        		}
+
     hr {
-      width: 95%;
-    }  
-  
-		td.tdSummary {
-			font-size:80%;
-		}
+        width: 95%;
+    }
 
-		div.title {
-			font-weight: bold;
-			font-size:90%;
-		}
+    		td.tdSummary {
+        			font-size:80%;
+        		}
 
-		a {
-			color: #000000;
-			text-decoration: none;
-		}
-      
+    		div.title {
+        			font-weight: bold;
+        			font-size:90%;
+        		}
+
+    		a {
+        			color: #000000;
+        			text-decoration: none;
+        		}
+
     a:visited {
-      color: gray;
-    }  
-    
+        color: gray;
+    }
+
     a:active {
-      color: gray;
-    }  
+        color: gray;
+    }
 
     a.topic {
-      font-weight: bold;
-      padding: 5px;
-    }  
-    
-		a:hover {
-			text-decoration: underline;
-		}
-      
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    		a:hover {
+        			text-decoration: underline;
+        		}
+
     legend {
-      font-weight: bold;
-    }  
+        font-weight: bold;
+    }
 
-		div.closeTab {
-			font-size:90%;
-			margin-bottom: 5px;
-			width: 100%;
-			text-align: right;
-		}
+    		div.closeTab {
+        			font-size:90%;
+        			margin-bottom: 5px;
+        			width: 100%;
+        			text-align: right;
+        		}
 
-		div.feedItem {
-			font-size:90%;
-			margin-bottom: 5px;
-		}
+    		div.feedItem {
+        			font-size:90%;
+        			margin-bottom: 5px;
+        		}
 
-		ul {
-			font-size:90%;
-		}
+    		ul {
+        			font-size:90%;
+        		}
 
-		li {
-			font-size:90%;
-		}
+    		li {
+        			font-size:90%;
+        		}
 
-		p {
-			font-size:80%;
-			font-weight: bold;
-		}
+    		p {
+        			font-size:80%;
+        			font-weight: bold;
+        		}
 
-		closeTab {
-			width: 100%;
-			text-align: right;
-		}
-      
+    		closeTab {
+        			width: 100%;
+        			text-align: right;
+        		}
+
 </style>
 
- <script type="text/javascript">
-  var tabs = new _IG_Tabs(__MODULE_ID__);
-   
-  var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World"};  
-  
-	var  errorHTML = "<p align='center'>Unable to read content from Google News server! <br/>Please try again  later.</p>";
-   
-  var LOADING_MSG = '<div class="loading"><h3>Loading...</h3></div><div class="spinner" id="div1"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div></div>'; 
-   
-  var CACHE_INTERVAL = 1000 * 60 * 15; //15 min 
-   
-  var CacheTime = function(url,time) {
+<script type="text/javascript">
+var tabs = new _IG_Tabs(__MODULE_ID__);
+
+var topics = {"b":"Business", "tc":"Technology", "m":"Health", "s":"Sports", "e":"Entertainment", "snc":"Science", "w":"World"};
+
+var errorHTML = "<p align='center'>Unable to read content from Google News server! <br/>Please try again  later.</p>";
+
+var LOADING_MSG = '<div class="loading"><h3>Loading...</h3></div><div class="spinner" id="div1"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div></div>';
+
+var CACHE_INTERVAL = 1000 * 60 * 15; //15 min
+
+var CacheTime = function (url, time) {
     this.url = url;
     this.time = time;
-  }
-  
-  localStorage["cacheTimes"] = "";
-   
-  function getCacheTime(url) {
+}
+
+localStorage["cacheTimes"] = "";
+
+function getCacheTime(url) {
     if (localStorage["cacheTimes"] != null && localStorage["cacheTimes"] != "") {
-      var cacheTimes = JSON.parse(localStorage["cacheTimes"]);
-      for(var i=0; i < cacheTimes.length; i++) {
-        if (cacheTimes[i].url === url) {
-          return url;
+        var cacheTimes = JSON.parse(localStorage["cacheTimes"]);
+        for (var i = 0; i < cacheTimes.length; i++) {
+            if (cacheTimes[i].url === url) {
+                return url;
+            }
         }
-      }
     }
-    return null; 
-  } 
- 
-  function setCacheTime(url) {
+    return null;
+}
+
+function setCacheTime(url) {
     var cacheTimes = new Array();
     if (localStorage["cacheTimes"] != null && localStorage["cacheTimes"] != "") {
-      cacheTimes = JSON.parse(localStorage["cacheTimes"]);
+        cacheTimes = JSON.parse(localStorage["cacheTimes"]);
     }
     var date = new Date();
     var timeSet = false;
-    for(var i=0; i < cacheTimes.length; i++) {
-      if (cacheTimes[i].url === url) {
-        cacheTimes[i].time = date.getTime();
-        timeSet = true;
-        break;         
-      }
-    }    
+    for (var i = 0; i < cacheTimes.length; i++) {
+        if (cacheTimes[i].url === url) {
+            cacheTimes[i].time = date.getTime();
+            timeSet = true;
+            break;
+        }
+    }
     if (!timeSet) {
-      cacheTimes.push(new CacheTime(url,date.getTime()));      
-    }    
+        cacheTimes.push(new CacheTime(url, date.getTime()));
+    }
     localStorage["cacheTimes"] = JSON.stringify(cacheTimes);
-  }
-  
-  function isCacheExpired(url) {    
+}
+
+function isCacheExpired(url) {
     var cacheTime = getCacheTime(url);
     var date = new Date();
     return cacheTime == null || ((date.getTime() - cacheTime) > CACHE_INTERVAL);
-  }
- 
-  function getPreference(prefName,defaultValue) {
-    console.log(" getPreference - prefName = "+prefName+" defaultValue = "+defaultValue+" localStorage = "+localStorage+" "+typeof localStorage[prefName]);
+}
+
+function getPreference(prefName, defaultValue) {
+    console.log(" getPreference - prefName = " + prefName + " defaultValue = " + defaultValue + " localStorage = " + localStorage + " " + typeof localStorage[prefName]);
     if ((typeof localStorage != "undefined") && (localStorage[prefName] != null)) {
-        console.log("returning - "+localStorage[prefName]);
+        console.log("returning - " + localStorage[prefName]);
         return localStorage[prefName];
     }
-    
+
     if (typeof defaultValue != "undefined") {
-      console.log("returning defaultValue - "+defaultValue);
-      return defaultValue;
+        console.log("returning defaultValue - " + defaultValue);
+        return defaultValue;
     }
     return "";
-  } 
-  
-  function setPreference(prefName, prefValue) {
-    if (typeof localStorage != "undefined") {
-      localStorage[prefName] = prefValue;
-    }
-  }
-  
-  
+}
 
-	function loadModule__MODULE_ID__(){
+function setPreference(prefName, prefValue) {
+    if (typeof localStorage != "undefined") {
+        localStorage[prefName] = prefValue;
+    }
+}
+
+
+ 
+function loadModule__MODULE_ID__(){
 
 		tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss"));
 
 		var savedTabs = getPreference("savedTabs").split("|");
-      
-     for (var i=0; i < savedTabs.length; i++)
-     {       
-        for(var key in topics) {
-          if (key == savedTabs[i]) {
-           var feedURL = buildFeedURL(key);
-           tabs.addDynamicTab(topics[key], loadTabsCallbackGenerator(feedURL));                        
-          }
-        }     
-     }
+
+    for (var i = 0; i < savedTabs.length; i++) {
+        for (var key in topics) {
+            if (key == savedTabs[i]) {
+                var feedURL = buildFeedURL(key);
+                tabs.addDynamicTab(topics[key], loadTabsCallbackGenerator(feedURL));
+            }
+        }
+    }
 
 		tabs.addDynamicTab("Settings", settingsTabCallback());
-	}
+ 
+}
 
-	function buildFeedURL(topicName){
+ 
+function buildFeedURL(topicName) {
     var selEditionValue = selEdition.value;
-    console.log("selEditionValue = "+selEditionValue);
-		var feedURL = "http://news.google.com/news?ned="+selEditionValue+"&topic="+topicName+"&output=rss"; 
+    console.log("selEditionValue = " + selEditionValue);
+		var feedURL = "http://news.google.com/news?ned=" + selEditionValue + "&topic=" + topicName + "&output=rss";
 		return feedURL;
-	}
+ 
+}
 
 
-	function loadTabsCallbackGenerator(feedUrl) {
-		return function(tabId) {
-			loadTab(tabId, feedUrl);
-		}
-	}
+ 
+function loadTabsCallbackGenerator(feedUrl) {
+		return function (tabId) {
+        			loadTab(tabId, feedUrl);
+	 
+    }
+ 
+}
 
-	function settingsTabCallback() {
-		return function(tabId) {
-       if (_gel("settings") != null) {                  
-         var container = _gel(tabId);
-         container.innerHTML = _gel("settings").innerHTML;
-         //$(container).replaceWith($("#settings"));
-         $("#settings").remove();        
-       }
-		}
-	}
+ 
+function settingsTabCallback() {
+		return function (tabId) {
+        if (_gel("settings") != null) {
+            var container = _gel(tabId);
+            container.innerHTML = _gel("settings").innerHTML;
+            //$(container).replaceWith($("#settings"));
+            $("#settings").remove();
+        }
+	 
+    }
+ 
+}
 
-	function tagCloudCallback(tabId) {
 
-	}
-
-	function createTabForTopic(topicName){
+ 
+function createTabForTopic(topicName) {
 		var actualTabs = tabs.getTabs();
 		var tabExist = false;
-		for(var i=0; i < actualTabs.length; i++) {
-			if (actualTabs[i].getName() == topics[topicName])
-			{
-				tabs.setSelectedTab(i);
+		for (var i = 0; i < actualTabs.length; i++) {
+    			if (actualTabs[i].getName() == topics[topicName])
+                			{
+        				tabs.setSelectedTab(i);
 				tabExist = true;
 				break;
-			}
-		}
+		 
+        }
+	 
+    }
 
 		if (!tabExist)
-		{
-			var feedURL = buildFeedURL(topicName);
+            		{
+    			var feedURL = buildFeedURL(topicName);
 			tabs.addDynamicTab(topics[topicName], loadTabsCallbackGenerator(feedURL));
-			tabs.moveTab(i-1,i);
-			tabs.setSelectedTab(i-1);
-         
-      var savedTabs = getPreference("savedTabs").split("|");   
-      savedTabs.push(topicName); 
-      setPreference("savedTabs",savedTabs.join("|"));
-		}
-	}
+			tabs.moveTab(i - 1, i);
+			tabs.setSelectedTab(i - 1);
 
-   function loadTab(tabId,feedUrl) {
+        var savedTabs = getPreference("savedTabs").split("|");
+        savedTabs.push(topicName);
+        setPreference("savedTabs", savedTabs.join("|"));
+	 
+    }
+ 
+}
+
+function loadTab(tabId, feedUrl) {
 	   var container = _gel(tabId);
 	   container.innerHTML = "<p>Loading...</p>";
-      
-     if (localStorage[feedUrl] != null && !isCacheExpired(feedUrl)) {
-       console.log("Loading tab from localStorage");
-       container.innerHTML = localStorage[feedUrl];
-       return;
-     } 
 
-     console.log("Loading tab from server");
+    if (localStorage[feedUrl] != null && !isCacheExpired(feedUrl)) {
+        console.log("Loading tab from localStorage");
+        container.innerHTML = localStorage[feedUrl];
+        return;
+    }
+
+    console.log("Loading tab from server");
 	   _IG_FetchXmlContent(
 		feedUrl,
-		function(feed) {
-			showFeeds(container, tabId, feed,  feedUrl)
-		});
+		function (feed) {
+    			showFeeds(container, tabId, feed, feedUrl)
+	 
+    }
 
-	}
+)
+    ;
 
-	function removeSelectedTab(){
+ 
+}
+
+ 
+function removeSelectedTab() {
 
 		if (tabs.getSelectedTab() != null)
-		{
-			var tabName = tabs.getSelectedTab().getName();
+            		{
+    			var tabName = tabs.getSelectedTab().getName();
 			var response = confirm("Are you sure you want to remove '"+tabName+"' tab ?");
 
 			if (response)
-			{
-				var tabIdx = tabs.getSelectedTab().getIndex();
-				tabs.removeTab(tabIdx);
+                			{
 
-				tabs.setSelectedTab(tabIdx);
 
-				var tags = getPreference("Tags");
-				var tagNames = tags.split("|");
-				var modifiedTags = '';
-				for (var i=0; i < tagNames.length; i++ )
-				{
-					if (tagNames[i] != '' && tagNames[i] != tabName)
-					{
-						modifiedTags = modifiedTags + '|' + tagNames[i];
-					}
-				}
-				setPreference("Tags",modifiedTags);
-			}
-		}
-	}
+            var savedTabs = getPreference("savedTabs").split("|");
 
-	function showFeeds(container, tabId, response, feedUrl){
+            var newTabs = new Array();
+
+            for (var i=0; i < savedTabs.length; i++)
+            {
+                var tabRemoved = false;
+                for(var key in topics) {
+                    if (savedTabs[i] == key && topics[key] == tabs.getSelectedTab().getName()) {
+                    	 var tabIdx = tabs.getSelectedTab().getIndex();
+				            tabs.removeTab(tabIdx);
+				            tabs.setSelectedTab(tabIdx);
+                        tabRemoved = true;
+                    }
+                }
+                if (!tabRemoved) {
+                    newTabs.push(savedTabs[i])
+                }
+            }
+            setPreference("savedTabs",newTabs.join("|"));
+   	}
+ 
+    }
+
+ 
+function showFeeds(container, tabId, response, feedUrl) {
 		 if (response == null || typeof(response) != "object" ||
-                      response.firstChild == null) {
-              container.innerHTML = errorHTML;
-              return;
-         }
+            response.firstChild == null) {
+        container.innerHTML = errorHTML;
+        return;
+    }
 
 		if (response.firstChild) {
 
-			var linksHTML = '';
+    			var linksHTML = '';
 
 			var savedTabs = getPreference("savedTabs").split("|");
-      
-     for (var i=0; i < savedTabs.length; i++)
-     {       
-        for(var key in topics) {
-           if (topics[key] == tabs.getSelectedTab().getName()) {
-            linksHTML += '<div class="closeTab"><a title="Remove Tab" href="javascript:removeSelectedTab();"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/delete.png"/></a></div>';               
-           }
-        }     
-     }
+
+        for (var i = 0; i < savedTabs.length; i++) {
+            for (var key in topics) {
+                if (savedTabs[i] == key && topics[key] == tabs.getSelectedTab().getName()) {
+                    linksHTML += '<div class="closeTab"><a title="Remove Tab" href="javascript:removeSelectedTab();"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/delete.png"/></a></div>';
+                    break;
+                }
+            }
+        }
 
 			var itemList = response.getElementsByTagName("item");
 
-             for (var i = 0; i < itemList.length; i++) {
+        for (var i = 0; i < itemList.length; i++) {
 
-			 	var title = getChildNodeValueByNodeName(itemList.item(i),"title");
-				var link = getChildNodeValueByNodeName(itemList.item(i),"link");
-				var description = getChildNodeValueByNodeName(itemList.item(i),"description");
+        			 	var title = getChildNodeValueByNodeName(itemList.item(i), "title");
+				var link = getChildNodeValueByNodeName(itemList.item(i), "link");
+				var description = getChildNodeValueByNodeName(itemList.item(i), "description");
 
 				//linksHTML  += '<div><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
-        linksHTML  +=  '<div><table>';
-    
+            linksHTML += '<div><table>';
+
 				var divSummary = document.createElement("div");
 				divSummary.innerHTML = description;
 
-				linksHTML += '<tr><td valign="top" class="tdSummary">'+divSummary.innerHTML+'</td></tr>'
+				linksHTML += '<tr><td valign="top" class="tdSummary">' + divSummary.innerHTML + '</td></tr>'
 				linksHTML += '</table></div>';
-            
-        if (i != itemList.length-1) {
-          linksHTML += '<hr/>';
-        }            
 
-             }
-           $('#placeholder').html(linksHTML);   
-    
-           $('#placeholder').find('a').attr("target","_new");
-           
-           //$('#placeholder').find("br").remove();
-           
-           $('#placeholder').find('font br:first-child').remove();
-           $('#placeholder').find('font div:first-child').remove();
-           
-           var tds = $('#placeholder').find('td .j');
-           
-           for(var i=0; i < tds.length; i++) {
-              $(tds[i]).find('font,br').each(function(idx, item) {
-                  if (idx > 6) {
-                    $(item).remove();                   
-                  }                  
-              });                                
-           }
-           
+            if (i != itemList.length - 1) {
+                linksHTML += '<hr/>';
+            }
 
-           container.innerHTML = $('#placeholder')[0].innerHTML;              
-           localStorage[feedUrl] = container.innerHTML; 
-           setCacheTime(feedUrl);
-           $('#placeholder').empty();             
         }
-	}
+        $('#placeholder').html(linksHTML);
 
-	function getChildNodeValueByNodeName(node,nodeNameStr){
+        $('#placeholder').find('a').attr("target", "_new");
+
+        //$('#placeholder').find("br").remove();
+
+        $('#placeholder').find('font br:first-child').remove();
+        $('#placeholder').find('font div:first-child').remove();
+
+        var tds = $('#placeholder').find('td .j');
+
+        for (var i = 0; i < tds.length; i++) {
+            $(tds[i]).find('font,br').each(function (idx, item) {
+                if (idx > 6) {
+                    $(item).remove();
+                }
+            });
+        }
+
+
+        container.innerHTML = $('#placeholder')[0].innerHTML;
+        localStorage[feedUrl] = container.innerHTML;
+        setCacheTime(feedUrl);
+        $('#placeholder').empty();
+    }
+ 
+}
+
+ 
+function getChildNodeValueByNodeName(node, nodeNameStr) {
 		var nodeList = node.childNodes;
-		 for (var j = 0; j < nodeList.length ; j++) {
-			var node = nodeList.item(j);
+		 for (var j = 0; j < nodeList.length; j++) {
+    			var node = nodeList.item(j);
 			if (node.nodeName == nodeNameStr && node.firstChild)
-			{
-				return node.firstChild.nodeValue;
-			}
-		 }
-	}
-
- _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
- </script>
+                			{
+        				return node.firstChild.nodeValue;
+		 
+        }
+	 
+    }
  
- <div id="placeholder" style="display:none;"></div>
- 
- <div id="settings" style="display:none;">
-   <br/>  
-   <center>
-     <b>News Edition:</b>
-             <select id="selEdition">
-               <option value="au">Australia</option>
-               <option value="ca">Canada</option>
-               <option value="in">India</option>
-               <option value="ie">Ireland</option>
-               <option value="nz">New Zealand</option> 
-               <option value="en_za">South Africa</option> 
-               <option value="uk">UK</option> 
-               <option selected="selected" value="us">US</option>               
-             </select>    
-   </center>  
-   <br/>
+}
 
-   <fieldset>
-   <legend>Topics:</legend>
-   <center>
-  <a class="topic" href="javascript:createTabForTopic('w');">
-       World    
-  </a>        
-  <a class="topic" href="javascript:createTabForTopic('b');">
-    Business
-  </a>
-  <a class="topic" href="javascript:createTabForTopic('tc');">
-    Technology
-  </a>  
-  <a class="topic" href="javascript:createTabForTopic('m');">
-     Health
-   </a>    
-  <a class="topic" href="javascript:createTabForTopic('s');">
-     Sports
-   </a>    
-  <a class="topic" href="javascript:createTabForTopic('e');">
-      Entertainment    
-  </a>       
-  <a class="topic" href="javascript:createTabForTopic('snc');">
-       Science    
-  </a>       
-  </center>  
-  </div>
+    _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
+</script>
+</head>
+<body>
+<div id="placeholder" style="display:none;"></div>
 
+<div id="settings" style="display:none;">
+    <br/>
+    <center>
+        <b>News Edition:</b>
+        <select id="selEdition">
+            <option value="au">Australia</option>
+            <option value="ca">Canada</option>
+            <option value="in">India</option>
+            <option value="ie">Ireland</option>
+            <option value="nz">New Zealand</option>
+            <option value="en_za">South Africa</option>
+            <option value="uk">UK</option>
+            <option selected="selected" value="us">US</option>
+        </select>
+    </center>
+    <br/>
+
+    <fieldset>
+        <legend>Topics:</legend>
+        <center>
+            <a class="topic" href="javascript:createTabForTopic('w');">
+                World
+            </a>
+            <a class="topic" href="javascript:createTabForTopic('b');">
+                Business
+            </a>
+            <a class="topic" href="javascript:createTabForTopic('tc');">
+                Technology
+            </a>
+            <a class="topic" href="javascript:createTabForTopic('m');">
+                Health
+            </a>
+            <a class="topic" href="javascript:createTabForTopic('s');">
+                Sports
+            </a>
+            <a class="topic" href="javascript:createTabForTopic('e');">
+                Entertainment
+            </a>
+            <a class="topic" href="javascript:createTabForTopic('snc');">
+                Science
+            </a>
+        </center>
+</div>
+</body>
  ]]>
     </Content>
 </Module>
