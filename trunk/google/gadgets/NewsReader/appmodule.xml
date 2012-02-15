@@ -99,6 +99,19 @@
 			text-align: right;
 		}
       
+   
+     .slide {
+      position: relative;
+    }
+    
+    .slide .inner {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+ 
+   
+      
 </style>
 
  <script type="text/javascript">
@@ -181,6 +194,13 @@
   
 
 	function loadModule__MODULE_ID__(){
+   
+   
+$(document).ready(function() {
+  $('#slidebottom button').click(function() {
+    $(this).next().slideToggle();
+  });
+});
 
 		tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss"));
 
@@ -457,6 +477,13 @@
     </a>          
   </center>  
   </div>
+  
+  
+ <div id="slidebottom" class="slide">
+  <button>slide it</button>
+  <div class="inner">Slide from bottom</div>
+</div>
+ 
 
  ]]>
     </Content>
