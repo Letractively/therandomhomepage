@@ -416,6 +416,9 @@
   <a class="topic" href="javascript:createTabForTopic('w');">
        World    
   </a>        
+  <a class="topic" href="javascript:createTabForTopic('n');">
+       Nation    
+  </a>          
   <a class="topic" href="javascript:createTabForTopic('b');">
     Business
   </a>
@@ -433,7 +436,13 @@
   </a>       
   <a class="topic" href="javascript:createTabForTopic('snc');">
        Science    
-  </a>       
+  </a>     
+  <a class="topic" href="javascript:createTabForTopic('ir');">
+      Spotlight
+   </a>       
+  <a class="topic" href="javascript:createTabForTopic('po');">
+       Most Popular
+    </a>          
   </center>  
   </div>
 
