@@ -316,7 +316,7 @@
      for (var i=0; i < savedTabs.length; i++)
      {       
         for(var key in topics) {
-           if (topics[key] == tabs.getSelectedTab().getName()) {
+           if (savedTabs[i] == key && topics[key] == tabs.getSelectedTab().getName()) {
             linksHTML += '<div class="closeTab"><a title="Remove Tab" href="javascript:removeSelectedTab();"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/delete.png"/></a></div>';               
            }
         }     
