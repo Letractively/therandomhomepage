@@ -300,6 +300,7 @@
             }
             
             var newTabsStr = newTabs.length > 0 ? newTabs.join("|") : "";
+            console.log("newTabsStr = "+newTabsStr);
             setPreference("savedTabs",newTabsStr);
 			}
 		}
