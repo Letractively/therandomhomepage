@@ -209,7 +209,7 @@
    
 $(document).ready(function() {
   $('#slidebottom button').click(function() {
-    $(this).next().fadeIn();    
+    $(this).next().slideToggle();   
   });
 });
 
