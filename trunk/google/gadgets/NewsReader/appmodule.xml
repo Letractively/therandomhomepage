@@ -210,7 +210,8 @@
 $(document).ready(function() {
   $('#slidebottom button').click(function() {
     //$(this).next().slideToggle();   
-    $(this).next().fadeIn('slow');
+    $(this).next().fadeOut();
+    $(this).next().fadeIn();
   });
 });
 
