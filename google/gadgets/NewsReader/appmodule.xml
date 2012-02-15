@@ -280,22 +280,28 @@
 
 			if (response)
 			{
-				var tabIdx = tabs.getSelectedTab().getIndex();
-				tabs.removeTab(tabIdx);
+				var savedTabs = getPreference("savedTabs").split("|");
 
-				tabs.setSelectedTab(tabIdx);
+            var newTabs = new Array();
 
-				var tags = getPreference("Tags");
-				var tagNames = tags.split("|");
-				var modifiedTags = '';
-				for (var i=0; i < tagNames.length; i++ )
-				{
-					if (tagNames[i] != '' && tagNames[i] != tabName)
-					{
-						modifiedTags = modifiedTags + '|' + tagNames[i];
-					}
-				}
-				setPreference("Tags",modifiedTags);
+            for (var i=0; i < savedTabs.length; i++)
+            {
+                var tabRemoved = false;
+                for(var key in topics) {
+                    if (savedTabs[i] == key && topics[key] == tabs.getSelectedTab().getName()) {
+                    	 var tabIdx = tabs.getSelectedTab().getIndex();
+				            tabs.removeTab(tabIdx);
+				            tabs.setSelectedTab(tabIdx);
+                        tabRemoved = true;
+                    }
+                }
+                if (!tabRemoved) {
+                    newTabs.push(savedTabs[i])
+                }
+            }
+            
+            var newTabsStr = newTabs.length > 0 ? newTabs.join("|") : "";
+            setPreference("savedTabs",newTabsStr);
 			}
 		}
 	}
