@@ -23,6 +23,7 @@
     <Content type="html">
 <![CDATA[
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<link href="http://therandomhomepage.com/google/gadgets/DZonePreview/loading.css" rel="stylesheet"/>
 <style type="text/css">
 		img {
 			border-style: none;
@@ -106,6 +107,8 @@
   var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World"};  
   
 	var  errorHTML = "<p align='center'>Unable to read content from Google News server! <br/>Please try again  later.</p>";
+   
+  var LOADING_MSG = '<div class="loading"><h3>Loading...</h3></div><div class="spinner" id="div1"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div></div>'; 
    
   var CACHE_INTERVAL = 1000 * 60 * 15; //15 min 
    
@@ -308,11 +311,16 @@
 
 			var linksHTML = '';
 
-			var tags = getPreference("Tags");
-			if (tags != null && tags.indexOf(tabs.getSelectedTab().getName()) != -1)
-			{
-				linksHTML  += '<div class="closeTab">[<a title="Remove Tab"  href="javascript:removeSelectedTab();">X</a>]&nbsp;&nbsp;</div>';
-			}
+			var savedTabs = getPreference("savedTabs").split("|");
+      
+     for (var i=0; i < savedTabs.length; i++)
+     {       
+        for(var key in topics) {
+           if (topics[key] == tabs.getSelectedTab().getName()) {
+            linksHTML += '<div class="closeTab"><a title="Remove Tab" href="javascript:removeSelectedTab();"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/delete.png"/></a></div>';               
+           }
+        }     
+     }
 
 			var itemList = response.getElementsByTagName("item");
 
