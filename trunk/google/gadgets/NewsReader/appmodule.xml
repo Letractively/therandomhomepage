@@ -254,7 +254,7 @@ $(document).ready(function() {
        if (_gel("settings") != null) {                  
          var container = _gel(tabId);
          container.innerHTML = _gel("settings").innerHTML;
-         $('#settings').fadeIn('slow', function() {
+         $('#settings').fadeTo('slow', 0.5, function() {
           console.log("Settings Fade in complete!");
          });
 
