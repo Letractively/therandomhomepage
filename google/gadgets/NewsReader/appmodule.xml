@@ -198,9 +198,9 @@
 	}
 
 	function buildFeedURL(topicName){
-    var selEditionValue = selEdition.value;
-    console.log("selEditionValue = "+selEditionValue);
-		var feedURL = "http://news.google.com/news?ned="+selEditionValue+"&topic="+topicName+"&output=rss"; 
+    var selectedEdition = getPreference("NewsEdition","us");
+    console.log("selectedEdition = "+selectedEdition);
+		var feedURL = "http://news.google.com/news?ned="+selectedEdition+"&topic="+topicName+"&output=rss"; 
 		return feedURL;
 	}
 
@@ -218,7 +218,7 @@
          $("#selEdition").val(getPreference("NewsEdition","us"));        
          showTab(container,_gel("settings").innerHTML);
          $("#selEdition").change(function() { 
-                console.log("selected value"+this.value);
+               setPreference("NewsEdition",this.value) 
              });
          $("#settings").remove();                 
        }
