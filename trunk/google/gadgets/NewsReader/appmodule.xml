@@ -215,7 +215,7 @@
 		return function(tabId) {
        if (_gel("settings") != null) {                  
          var container = _gel(tabId);
-         container.innerHTML = _gel("settings").innerHTML;
+         showTab(container,_gel("settings").innerHTML);
          $("#settings").remove();        
        }
 		}
@@ -317,7 +317,8 @@
 	function showFeeds(container, tabId, response, feedUrl){
 		 if (response == null || typeof(response) != "object" ||
                       response.firstChild == null) {
-              container.innerHTML = errorHTML;
+              //container.innerHTML = errorHTML;
+              showTab(container,errorHTML);
               return;
          }
 
@@ -378,7 +379,8 @@
            }
            
            
-           container.innerHTML = $('#placeholder')[0].innerHTML;              
+           //container.innerHTML = $('#placeholder')[0].innerHTML;              
+           showTab(container,$('#placeholder')[0].innerHTML);
            
            $(container).find("div.closeTab").click(function() {
               removeSelectedTab();
