@@ -275,6 +275,7 @@
 	}
    
   function showTab(tabContainer,newHTML) {
+    console.log(" tabContainer = "+tabContainer+" newHTML = "+newHTML);
     if (tabContainer && newHTML) {
       $(tabContainer).fadeOut();
       tabContainer.innerHTML = newHTML;
