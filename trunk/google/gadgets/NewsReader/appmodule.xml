@@ -214,9 +214,13 @@
 	function settingsTabCallback() {
 		return function(tabId) {
        var container = _gel(tabId);  
-       if (_gel("settings") != null) {                           
+       if (_gel("settings") != null) {       
+         $("#selEdition").val(getPreference("NewsEdition","us"));        
          showTab(container,_gel("settings").innerHTML);
-         $("#settings").remove();        
+         $("#selEdition").change(function() { 
+                console.log("selected value"+this.value);
+             });
+         $("#settings").remove();                 
        }
        else {
          showTab(container);
@@ -280,7 +284,6 @@
       $(tabContainer).fadeIn();
     }
     else if (tabContainer && !newHTML){
-      console.log("Just showing tab");
       $(tabContainer).fadeOut();
       $(tabContainer).fadeIn();
     }
