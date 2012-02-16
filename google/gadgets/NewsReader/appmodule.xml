@@ -279,7 +279,7 @@
       tabContainer.innerHTML = newHTML;
       $(tabContainer).fadeIn();
     }
-    else if (tabContainer){
+    else if (tabContainer && !newHTML){
       console.log("Just showing tab");
       $(tabContainer).fadeOut();
       $(tabContainer).fadeIn();
