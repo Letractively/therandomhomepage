@@ -219,7 +219,8 @@
          $("#selEdition").val(getPreference("NewsEdition","us"));        
          showTab(container,_gel("settings").innerHTML);
          $("#selEdition").change(function() { 
-               setPreference("NewsEdition",this.value) 
+               console.log("Setting NewsEdition to "+this.value);
+               setPreference("NewsEdition",this.value)                
              });
          $("#settings").remove();                 
        }
