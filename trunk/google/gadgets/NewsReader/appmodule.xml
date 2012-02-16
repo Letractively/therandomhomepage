@@ -201,6 +201,7 @@
     var selectedEdition = getPreference("NewsEdition","us");
     console.log("selectedEdition = "+selectedEdition);
 		var feedURL = "http://news.google.com/news?ned="+selectedEdition+"&topic="+topicName+"&output=rss"; 
+    console.log("feedURL = "+feedURL);  
 		return feedURL;
 	}
 
