@@ -218,6 +218,10 @@
          showTab(container,_gel("settings").innerHTML);
          $("#settings").remove();        
        }
+       else {
+         container.fadeOut();
+         container.fadeIn();
+       }
 		}
 	}
 
