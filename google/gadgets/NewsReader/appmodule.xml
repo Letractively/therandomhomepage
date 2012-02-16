@@ -213,9 +213,8 @@
 
 	function settingsTabCallback() {
 		return function(tabId) {
-       console.log(" settingsTabCallback - "+_gel("settings"));
-       if (_gel("settings") != null) {                  
-         var container = _gel(tabId);
+       var container = _gel(tabId);  
+       if (_gel("settings") != null) {                           
          showTab(container,_gel("settings").innerHTML);
          $("#settings").remove();        
        }
@@ -275,7 +274,6 @@
 	}
    
   function showTab(tabContainer,newHTML) {
-    console.log(" tabContainer = "+tabContainer+" newHTML = "+newHTML);
     if (tabContainer && newHTML) {
       $(tabContainer).fadeOut();
       tabContainer.innerHTML = newHTML;
