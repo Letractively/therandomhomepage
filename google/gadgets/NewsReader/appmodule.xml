@@ -280,6 +280,7 @@
       $(tabContainer).fadeIn();
     }
     else if (tabContainer){
+      console.log("Just showing tab");
       $(tabContainer).fadeOut();
       $(tabContainer).fadeIn();
     }
