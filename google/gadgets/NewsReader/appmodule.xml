@@ -219,8 +219,7 @@
          $("#settings").remove();        
        }
        else {
-         container.fadeOut();
-         container.fadeIn();
+         showTab(container);
        }
 		}
 	}
@@ -275,9 +274,13 @@
 	}
    
   function showTab(tabContainer,newHTML) {
-    if (tabContainer) {
+    if (tabContainer && newHTML) {
       $(tabContainer).fadeOut();
       tabContainer.innerHTML = newHTML;
+      $(tabContainer).fadeIn();
+    }
+    else if (tabContainer){
+      $(tabContainer).fadeOut();
       $(tabContainer).fadeIn();
     }
   } 
