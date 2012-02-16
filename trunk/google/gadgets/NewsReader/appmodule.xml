@@ -99,30 +99,6 @@
 			text-align: right;
 		}
       
-.slide {
-    background-color: #FFFFCC;
-    border: 1px solid #999999;
-    height: 120px;
-    margin: 1em 0;
-    overflow: hidden;
-    position: relative;
-    width: 350px;
-}
-      
-      
-   
-     .slide {
-      position: relative;
-    }
-    
-    .slide .inner {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
- 
-   
-      
 </style>
 
  <script type="text/javascript">
@@ -141,8 +117,6 @@
     this.url = url;
     this.time = time;
   }
-  
-  localStorage["cacheTimes"] = "";
    
   function getCacheTime(url) {
     if (localStorage["cacheTimes"] != null && localStorage["cacheTimes"] != "") {
@@ -204,16 +178,7 @@
   
   
 
-	function loadModule__MODULE_ID__(){
-   
-   
-$(document).ready(function() {
-  $('#slidebottom button').click(function() {
-    //$(this).next().slideToggle();   
-    $(this).next().fadeOut();
-    $(this).next().fadeIn();
-  });
-});
+	function loadModule__MODULE_ID__(){   
 
 		tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss"));
 
@@ -291,9 +256,8 @@ $(document).ready(function() {
       
      if (localStorage[feedUrl] != null && !isCacheExpired(feedUrl)) {
        console.log("Loading tab from localStorage");
-       container.innerHTML = localStorage[feedUrl];             
-       $(container).fadeOut();
-       $(container).fadeIn();
+       //container.innerHTML = localStorage[feedUrl];             
+       showTab(container,localStorage[feedUrl]);
        return;
      } 
 
@@ -305,6 +269,14 @@ $(document).ready(function() {
 		});
 
 	}
+   
+  function showTab(tabContainer,newHTML) {
+    if (tabContainer) {
+      $(tabContainer).fadeOut();
+      tabContainer.innerHTML = newHTML;
+      $(tabContainer).fadeIn();
+    }
+  } 
 
 	function removeSelectedTab(){
 
@@ -486,14 +458,6 @@ $(document).ready(function() {
     </a>          
   </center>  
   </div>
-  
-  
- <div id="slidebottom" class="slide">
-  <button>slide it</button>
-  <div class="inner">Slide from bottom</div>
-</div>
- 
-
  ]]>
     </Content>
 </Module>
