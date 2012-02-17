@@ -135,6 +135,7 @@
       var cacheTimes = JSON.parse(localStorage["cacheTimes"]);
       console.log("getCacheTime() cacheTimes = "+cacheTimes);
       for(var i=0; i < cacheTimes.length; i++) {
+        console.log("cacheTimes["+i+"].url = "+cacheTimes[i].url+", "+cacheTimes[i].time);
         if (cacheTimes[i].url == url) {
           return url;
         }
