@@ -426,7 +426,7 @@
                 });                          
            }                                      
            
-           $('#placeholder').find('td:not(.j)').append('<div class="back-top"><img  src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div>');           
+           $('#placeholder').find('td:not(.j):not(.tdSummary)').append('<div class="back-top"><img  src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div>');           
            
            //container.innerHTML = $('#placeholder')[0].innerHTML;              
            showTab(container,$('#placeholder')[0].innerHTML);
