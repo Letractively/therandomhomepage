@@ -87,6 +87,10 @@
       padding-right: 15px;
 			text-align: right;
 		}
+      
+    div.back-top {
+      valign: bottom;
+    }  
 
 		div.feedItem {
 			font-size:90%;
