@@ -383,10 +383,10 @@
       if (itemList.length == 0) {
         linksHTML += newsNotAvailableMessage;
         showTab(container,linksHTML);
-        return;
-      }     
+      }    
+      else { 
 
-             for (var i = 0; i < itemList.length; i++) {
+         for (var i = 0; i < itemList.length; i++) {
 
 			 	var title = getChildNodeValueByNodeName(itemList.item(i),"title");
 				var link = getChildNodeValueByNodeName(itemList.item(i),"link");
@@ -428,6 +428,7 @@
            
            //container.innerHTML = $('#placeholder')[0].innerHTML;              
            showTab(container,$('#placeholder')[0].innerHTML);
+       }    
            
            $(container).find("div.closeTab").click(function() {
               removeSelectedTab();
