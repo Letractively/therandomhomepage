@@ -260,18 +260,22 @@
 	function tagCloudCallback(tabId) {
 
 	}
-
-	function createTabForTopic(topicName){
+   
+  function selectTabIfExist(topicName) {
 		var actualTabs = tabs.getTabs();
 		var tabExist = false;
 		for(var i=0; i < actualTabs.length; i++) {
 			if (actualTabs[i].getName() == topics[topicName])
 			{
 				tabs.setSelectedTab(i);
-				tabExist = true;
-				break;
+        return true;    
 			}
 		}
+    return false;  
+  }
+
+	function createTabForTopic(topicName){
+    var tabExist = selectTabIfExist(topicName);
 
 		if (!tabExist)
 		{
