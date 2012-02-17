@@ -36,6 +36,8 @@
       
     hr {
       width: 95%;
+      margin-top: 4px;
+      margin-bottom: 4px;
     }  
   
 		td.tdSummary {
