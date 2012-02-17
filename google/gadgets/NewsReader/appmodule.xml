@@ -297,7 +297,6 @@
      if (localStorage[feedUrl] != null && cacheValid(feedUrl)) {
        var tabExist = selectTabIfExist(topic); 
        console.log("tabExist = "+tabExist);
-        container.innerHTML = LOADING_MSG;
        if (!tabExist) {          
          console.log("Loading tab from localStorage "+feedUrl);
          //container.innerHTML = localStorage[feedUrl];             
@@ -306,7 +305,8 @@
        }
        return;
      } 
-
+     
+     container.innerHTML = LOADING_MSG;
      console.log("Loading tab from server"+feedUrl);
 	   _IG_FetchXmlContent(
 		feedUrl,
