@@ -399,6 +399,7 @@
 				divSummary.innerHTML = description;
 
 				linksHTML += '<tr><td valign="top" class="tdSummary">'+divSummary.innerHTML+'</td></tr>'
+        linksHTML += '<tr><td><div class="back-top"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div></td></tr>';    
 				linksHTML += '</table></div>';
             
         if (i != itemList.length-1) {
