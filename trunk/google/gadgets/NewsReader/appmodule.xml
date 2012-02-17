@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
     <ModulePrefs title="Google News Reader"
-                 title_url="http://www.BoxySystems.com" description="A simple, sophisticated newsreader app with focus on usability & user experience."
+                 title_url="http://www.BoxySystems.com" description="A simple, sophisticated newsreader app with core focus on usability."
                  author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
-                 thumbnail=""
-                 screenshot=""
-                 author_affiliation=""
-                 author_location = ""
-                 author_photo = ""
+                 thumbnail="http://www.therandomhomepage.com/google/gadgets/DZonePreview/dzonethumbnail.png"
+                 screenshot="http://www.therandomhomepage.com/google/gadgets/DZonePreview/dzonescreenshot.png"
+                 author_affiliation="http://www.BoxySystems.com"
+                 author_location = "St. Louis, MO"
+                 author_photo = "http://www.therandomhomepage.com/images/author.jpg"
                  author_aboutme = "I  am an aspiring entrepreneur who loves crafting software both for living  and hobbies. Still searching for the perfect click of my life..."
                  author_link = "http://blogs.boxysystems.com"
                  author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
@@ -105,7 +105,7 @@
   var tabs = new _IG_Tabs(__MODULE_ID__);
    
   var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World","n": "Nation","po": "Most Popular","ir": "Spotlight"};  
-  var countryCodes = {"es_ar" : "Argentina", "au" : "Australia", "nl_be" : "België", "fr_be" : "Belgique", "en_bw" : "Botswana", "pt-BR_br" : "Brasil", "ca" : "Canada English", "fr_ca" : "Canada Français", "cs_cz" : "Ceská republika", "es_cl" : "Chile", "es_co" : "Colombia", "es_cu" : "Cuba", "de" : "Deutschland", "es" : "España", "es_us" : "Estados Unidos", "en_et" : "Ethiopia", "fr" : "France", "en_gh" : "Ghana", "in" : "India", "en_ie" : "Ireland", "en_il" : "Israel English", "it" : "Italia", "en_ke" : "Kenya", "hu_hu" : "Magyarország", "en_my" : "Malaysia", "es_mx" : "México", "en_na" : "Namibia", "nl_nl" : "Nederland", "nz" : "New Zealand", "en_ng" : "Nigeria", "no_no" : "Norge", "de_at" : "Österreich", "en_pk" : "Pakistan", "es_pe" : "Perú", "en_ph" : "Philippines", "pl_pl" : "Polska", "pt-PT_pt" : "Portugal", "de_ch" : "Schweiz", "fr_sn" : "Sénégal", "en_sg" : "Singapore", "en_za" : "South Africa", "fr_ch" : "Suisse", "sv_se" : "Sverige", "en_tz" : "Tanzania", "tr_tr" : "Türkiye", "uk" : "U.K.", "us" : "U.S.", "en_ug" : "Uganda", "es_ve" : "Venezuela", "vi_vn" : "Vit NamVietnam", "en_zw" : "Zimbabwe", "el_gr" : "daGreece", "ru_ru" : "Russia", "ru_ua" : "Ukraine", "uk_ua" : "Ukraine", "iw_il" : "Israel", "ar_ae" : "UAE", "ar_sa" : "KSA", "ar_me" : "Arabic", "ar_lb" : "Lebanon", "ar_eg" : "Egypt", "hi_in" : "India", "ta_in" : "India", "te_in" : "India", "ml_in" : "India", "kr" : "Korea", "cn" : "China", "tw" : "Taiwan", "jp" : "Japan", "hk" : "Hong Kong"};
+  var countryCodes = {"es_ar" : "Argentina", "au" : "Australia", "nl_be" : "BelgiÃ«", "fr_be" : "Belgique", "en_bw" : "Botswana", "pt-BR_br" : "Brasil", "ca" : "Canada English", "fr_ca" : "Canada FranÃ§ais", "cs_cz" : "CeskÃ¡ republika", "es_cl" : "Chile", "es_co" : "Colombia", "es_cu" : "Cuba", "de" : "Deutschland", "es" : "EspaÃ±a", "es_us" : "Estados Unidos", "en_et" : "Ethiopia", "fr" : "France", "en_gh" : "Ghana", "in" : "India", "en_ie" : "Ireland", "en_il" : "Israel English", "it" : "Italia", "en_ke" : "Kenya", "hu_hu" : "MagyarorszÃ¡g", "en_my" : "Malaysia", "es_mx" : "MÃ©xico", "en_na" : "Namibia", "nl_nl" : "Nederland", "nz" : "New Zealand", "en_ng" : "Nigeria", "no_no" : "Norge", "de_at" : "Ã–sterreich", "en_pk" : "Pakistan", "es_pe" : "PerÃº", "en_ph" : "Philippines", "pl_pl" : "Polska", "pt-PT_pt" : "Portugal", "de_ch" : "Schweiz", "fr_sn" : "SÃ©nÃ©gal", "en_sg" : "Singapore", "en_za" : "South Africa", "fr_ch" : "Suisse", "sv_se" : "Sverige", "en_tz" : "Tanzania", "tr_tr" : "TÃ¼rkiye", "uk" : "U.K.", "us" : "U.S.", "en_ug" : "Uganda", "es_ve" : "Venezuela", "vi_vn" : "Vit NamVietnam", "en_zw" : "Zimbabwe", "el_gr" : "daGreece", "ru_ru" : "Russia", "ru_ua" : "Ukraine", "uk_ua" : "Ukraine", "iw_il" : "Israel", "ar_ae" : "UAE", "ar_sa" : "KSA", "ar_me" : "Arabic", "ar_lb" : "Lebanon", "ar_eg" : "Egypt", "hi_in" : "India", "ta_in" : "India", "te_in" : "India", "ml_in" : "India", "kr" : "Korea", "cn" : "China", "tw" : "Taiwan", "jp" : "Japan", "hk" : "Hong Kong"};
   
 	var  errorHTML = "<p align='center'>Unable to read content from Google News server! <br/>Please try again  later.</p>";
    
