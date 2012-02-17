@@ -162,10 +162,10 @@
     localStorage["cacheTimes"] = JSON.stringify(cacheTimes);
   }
   
-  function isCacheExpired(url) {    
+  function cacheValid(url) {    
     var cacheTime = getCacheTime(url);
     var date = new Date();
-    return cacheTime == null || ((date.getTime() - cacheTime) > CACHE_INTERVAL);
+    return cacheTime != null && ((date.getTime() - cacheTime) < CACHE_INTERVAL);
   }
  
   function getPreference(prefName,defaultValue) {
@@ -276,14 +276,14 @@
 	   var container = _gel(tabId);
 	   container.innerHTML = "<p>Loading...</p>";
       
-     if (localStorage[feedUrl] != null && !isCacheExpired(feedUrl)) {
-       console.log("Loading tab from localStorage");
+     if (localStorage[feedUrl] != null && cacheValid(feedUrl)) {
+       console.log("Loading tab from localStorage "+feedUrl);
        //container.innerHTML = localStorage[feedUrl];             
        showTab(container,localStorage[feedUrl]);
        return;
      } 
 
-     console.log("Loading tab from server");
+     console.log("Loading tab from server"+feedUrl);
 	   _IG_FetchXmlContent(
 		feedUrl,
 		function(feed) {
