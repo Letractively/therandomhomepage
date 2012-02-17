@@ -84,7 +84,6 @@
 
 		div.closeTab {
       padding-top: 5px;
-      padding-bottom: 0px;
       padding-right: 15px;
 			text-align: right;
 		}
