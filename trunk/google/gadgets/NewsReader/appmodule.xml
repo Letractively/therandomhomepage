@@ -293,20 +293,15 @@
    function loadTab(tabId,topic) {
      var feedUrl = buildFeedURL(topic);
 	   var container = _gel(tabId);
+     container.innerHTML = LOADING_MSG; 
       
      if (localStorage[feedUrl] != null && cacheValid(feedUrl)) {
-       var tabExist = selectTabIfExist(topic); 
-       console.log("tabExist = "+tabExist);
-       if (!tabExist) {          
-         console.log("Loading tab from localStorage "+feedUrl);
-         //container.innerHTML = localStorage[feedUrl];             
-         showTab(container,localStorage[feedUrl]);
-         assignCloseTabHandler(container);
-       }
+       console.log("Loading tab from localStorage "+feedUrl);
+       showTab(container,localStorage[feedUrl]);
+       assignCloseTabHandler(container);
        return;
      } 
      
-     container.innerHTML = LOADING_MSG;
      console.log("Loading tab from server"+feedUrl);
 	   _IG_FetchXmlContent(
 		feedUrl,
