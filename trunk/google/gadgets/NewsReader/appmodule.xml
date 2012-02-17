@@ -180,7 +180,7 @@
 
 	function loadModule__MODULE_ID__(){   
 
-		tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("http://news.google.com/news?ned=us&topic=h&output=rss"));
+		tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("h"));
 
 		var savedTabs = getPreference("savedTabs").split("|");
       
@@ -188,8 +188,7 @@
      {       
         for(var key in topics) {
           if (key == savedTabs[i]) {
-           var feedURL = buildFeedURL(key);
-           tabs.addDynamicTab(topics[key], loadTabsCallbackGenerator(feedURL));                        
+           tabs.addDynamicTab(topics[key], loadTabsCallbackGenerator(key));                        
           }
         }     
      }
@@ -206,9 +205,9 @@
 	}
 
 
-	function loadTabsCallbackGenerator(feedUrl) {
+	function loadTabsCallbackGenerator(topic) {
 		return function(tabId) {
-			loadTab(tabId, feedUrl);
+			loadTab(tabId, topic);
 		}
 	}
 
@@ -249,7 +248,7 @@
 		if (!tabExist)
 		{
 			var feedURL = buildFeedURL(topicName);
-			tabs.addDynamicTab(topics[topicName], loadTabsCallbackGenerator(feedURL));
+			tabs.addDynamicTab(topics[topicName], loadTabsCallbackGenerator(topicName));
 			tabs.moveTab(i-1,i);
 			tabs.setSelectedTab(i-1);
          
@@ -259,7 +258,8 @@
 		}
 	}
 
-   function loadTab(tabId,feedUrl) {
+   function loadTab(tabId,topic) {
+     var feedUrl = buildFeedURL(topic);
 	   var container = _gel(tabId);
 	   container.innerHTML = "<p>Loading...</p>";
       
