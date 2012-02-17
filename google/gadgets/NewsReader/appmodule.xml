@@ -122,6 +122,7 @@
   var  countryCodes = {"es_ar" : "Argentina", "au" : "Australia","fr_be" : "Belgium", "en_bw" : "Botswana", "pt-BR_br" :  "Brasil", "ca" : "Canada (English)", "fr_ca" : "Canada (French)", "es_cl" : "Chile", "es_co" : "Colombia", "es_cu" :  "Cuba", "de" : "Deutschland", "es" : "España", "es_us" : "Estados  Unidos", "en_et" : "Ethiopia", "fr" : "France", "en_gh" : "Ghana", "en_ie" : "Ireland", "en_il" : "Israel (English)", "it" :  "Italia", "en_ke" : "Kenya", "en_my" :  "Malaysia", "es_mx" : "México", "en_na" : "Namibia", "nl_nl" :  "Nederland", "nz" : "New Zealand", "en_ng" : "Nigeria", "no_no" :  "Norge", "en_pk" : "Pakistan", "es_pe" :  "Perú", "en_ph" : "Philippines", "pl_pl" : "Polska", "pt-PT_pt" :  "Portugal", "de_ch" : "Schweiz", "fr_sn" : "Sénégal", "en_sg" :  "Singapore", "en_za" : "South Africa", "fr_ch" : "Suisse", "sv_se" :  "Sverige", "en_tz" : "Tanzania", "tr_tr" : "Türkiye", "uk" : "U.K.",  "us" : "U.S.", "en_ug" : "Uganda", "es_ve" : "Venezuela", "vi_vn" : "Vit  NamVietnam", "en_zw" : "Zimbabwe", "el_gr" : "daGreece", "ru_ru" :  "Russia", "ru_ua" : "Ukraine", "uk_ua" : "Ukraine", "iw_il" : "Israel",  "ar_ae" : "UAE", "ar_sa" : "KSA", "ar_me" : "Arabic", "ar_lb" :  "Lebanon", "ar_eg" : "Egypt", "in" :  "India (English)",  "hi_in" : "India (Hindi)", "ta_in" : "India (Tamil)",  "te_in" : "India (Telugu)", "ml_in" : "India (Malayalam)", "kr" : "Korea", "cn" : "China",  "tw" : "Taiwan", "jp" : "Japan", "hk" : "Hong Kong"};  
   
 	var  errorHTML = "<p align='center'>Unable to read content from Google News server! <br/>Please try again  later.</p>";
+   var  newsNotAvailableMessage  = "<p align='center'>No news available for the selected topic!</p>"; 
    
   var LOADING_MSG = '<div class="loading"><h3>Loading...</h3></div><div class="spinner" id="div1"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div></div>'; 
    
@@ -378,6 +379,11 @@
      }
 
 			var itemList = response.getElementsByTagName("item");
+         
+      if (itemList.length == 0) {
+        showTab(container,newsNotAvailableMessage);
+        return;
+      }     
 
              for (var i = 0; i < itemList.length; i++) {
 
