@@ -165,6 +165,7 @@
   function cacheValid(url) {    
     var cacheTime = getCacheTime(url);
     var date = new Date();
+    console.log("Checking cache time for url - "+url+", cacheTime = "+cacheTime+", currentTime = "+date.getTime());
     return cacheTime != null && ((date.getTime() - cacheTime) < CACHE_INTERVAL);
   }
  
