@@ -425,6 +425,9 @@
                       $(item).remove();                   
                     }                  
                 });                          
+              }
+              else {
+                $(tds[i]).append('<div class="back-top"><img  src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div>');
               }      
            }                                      
            
