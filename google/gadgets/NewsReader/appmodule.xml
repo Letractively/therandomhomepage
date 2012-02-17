@@ -399,7 +399,7 @@
 				divSummary.innerHTML = description;
 
 				linksHTML += '<tr><td valign="top" class="tdSummary">'+divSummary.innerHTML+'</td></tr>'
-        linksHTML += '<tr><td><div class="back-top"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div></td></tr>';    
+        //linksHTML += '<tr><td><div class="back-top"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div></td></tr>';    
 				linksHTML += '</table></div>';
             
         if (i != itemList.length-1) {
@@ -416,14 +416,16 @@
            $('#placeholder').find('font br:first-child').remove();
            $('#placeholder').find('font div:first-child').remove();
            
-           var tds = $('#placeholder').find('td .j');
+           var tds = $('#placeholder').find('td');
            
            for(var i=0; i < tds.length; i++) {
-              $(tds[i]).find('font,br').each(function(idx, item) {
-                  if (idx > 6) {
-                    $(item).remove();                   
-                  }                  
-              });                                
+             if (tds[i].className == "j") {
+                $(tds[i]).find('font,br').each(function(idx, item) {
+                    if (idx > 6) {
+                      $(item).remove();                   
+                    }                  
+                });                          
+              }      
            }                                      
            
            //container.innerHTML = $('#placeholder')[0].innerHTML;              
