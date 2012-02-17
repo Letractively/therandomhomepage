@@ -259,24 +259,20 @@
 
 	function tagCloudCallback(tabId) {
 
-	}
-   
-  function selectTabIfExist(topicName) {
-		var actualTabs = tabs.getTabs();
+	}   
+
+	function createTabForTopic(topicName){
+     var actualTabs = tabs.getTabs();
 		var tabExist = false;
 		for(var i=0; i < actualTabs.length; i++) {
 			if (actualTabs[i].getName() == topics[topicName])
 			{
+        tabExist = true; 
 				tabs.setSelectedTab(i);
-        return true;    
+        break;
 			}
 		}
-    return false;  
-  }
-
-	function createTabForTopic(topicName){
-    var tabExist = selectTabIfExist(topicName);
-
+      
 		if (!tabExist)
 		{
 			var feedURL = buildFeedURL(topicName);
@@ -427,9 +423,7 @@
                     $(item).remove();                   
                   }                  
               });                                
-           }                 
-                      
-           $('#placeholder').find('td :not(.j)').css("background-color","red");           
+           }                                      
            
            //container.innerHTML = $('#placeholder')[0].innerHTML;              
            showTab(container,$('#placeholder')[0].innerHTML);
