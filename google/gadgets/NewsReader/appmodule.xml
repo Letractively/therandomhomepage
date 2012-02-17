@@ -133,8 +133,9 @@
   function getCacheTime(url) {
     if (localStorage["cacheTimes"] != null && localStorage["cacheTimes"] != "") {
       var cacheTimes = JSON.parse(localStorage["cacheTimes"]);
+      console.log("getCacheTime() cacheTimes = "+cacheTimes);
       for(var i=0; i < cacheTimes.length; i++) {
-        if (cacheTimes[i].url === url) {
+        if (cacheTimes[i].url == url) {
           return url;
         }
       }
@@ -150,7 +151,7 @@
     var date = new Date();
     var timeSet = false;
     for(var i=0; i < cacheTimes.length; i++) {
-      if (cacheTimes[i].url === url) {
+      if (cacheTimes[i].url == url) {
         cacheTimes[i].time = date.getTime();
         timeSet = true;
         break;         
