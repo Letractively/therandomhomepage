@@ -71,6 +71,11 @@
 			text-decoration: underline;
 		}
       
+    fieldset {
+      padding-left: 10px;
+      padding-right: 10px;
+    }  
+      
     legend {
       font-weight: bold;
     }  
