@@ -295,6 +295,7 @@
        console.log("Loading tab from localStorage "+feedUrl);
        //container.innerHTML = localStorage[feedUrl];             
        showTab(container,localStorage[feedUrl]);
+       assignCloseTabHandler(container);
        return;
      } 
 
@@ -430,15 +431,18 @@
            showTab(container,$('#placeholder')[0].innerHTML);
        }    
            
-           $(container).find("div.closeTab").click(function() {
-              removeSelectedTab();
-           });
-
+           assignCloseTabHandler(container);
            localStorage[feedUrl] = container.innerHTML; 
            setCacheTime(feedUrl);
            $('#placeholder').empty();             
         }
 	}
+   
+  function assignCloseTabHandler(container) {
+     $(container).find("div.closeTab").click(function() {
+        removeSelectedTab();
+     });
+  } 
 
 	function getChildNodeValueByNodeName(node,nodeNameStr){
 		var nodeList = node.childNodes;
