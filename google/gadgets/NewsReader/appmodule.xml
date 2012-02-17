@@ -293,13 +293,17 @@
    function loadTab(tabId,topic) {
      var feedUrl = buildFeedURL(topic);
 	   var container = _gel(tabId);
-	   container.innerHTML = "<p>Loading...</p>";
+	   container.innerHTML = "<p>Loading...</p>";    
       
      if (localStorage[feedUrl] != null && cacheValid(feedUrl)) {
-       console.log("Loading tab from localStorage "+feedUrl);
-       //container.innerHTML = localStorage[feedUrl];             
-       showTab(container,localStorage[feedUrl]);
-       assignCloseTabHandler(container);
+       var tabExist = selectTabIfExist(topic); 
+       console.log("tabExist = "+tabExist);
+       if (!tabExist) {          
+         console.log("Loading tab from localStorage "+feedUrl);
+         //container.innerHTML = localStorage[feedUrl];             
+         showTab(container,localStorage[feedUrl]);
+         assignCloseTabHandler(container);
+       }
        return;
      } 
 
