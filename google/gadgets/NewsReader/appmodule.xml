@@ -428,8 +428,6 @@
                   }                  
               });                                
            }                 
-
-           $('#placeholder').find('td :not(.j)').css("background-color","red");      
            
            //container.innerHTML = $('#placeholder')[0].innerHTML;              
            showTab(container,$('#placeholder')[0].innerHTML);
