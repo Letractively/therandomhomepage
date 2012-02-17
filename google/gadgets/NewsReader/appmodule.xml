@@ -215,6 +215,7 @@
 		return function(tabId) {
        var container = _gel(tabId);  
        if (_gel("settings") != null) {       
+         console.log("Setting edition to "+getPreference("NewsEdition","us"));
          $("#selEdition").val(getPreference("NewsEdition","us"));        
          showTab(container,_gel("settings").innerHTML);
          $("#selEdition").change(function() { 
