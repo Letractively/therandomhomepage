@@ -455,7 +455,7 @@
    <br/>
 
    <fieldset>
-   <legend>Topics:</legend>
+   <legend>Topics</legend>
    <center>
   <a class="topic" href="javascript:createTabForTopic('w');">
        World    
