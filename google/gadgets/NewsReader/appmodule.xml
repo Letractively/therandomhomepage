@@ -229,15 +229,24 @@
 	function settingsTabCallback() {
 		return function(tabId) {
        var container = _gel(tabId);  
-       if (_gel("settings") != null) {       
+       if (_gel("settings") != null) {          
          showTab(container,_gel("settings").innerHTML);
                   console.log("Setting edition to "+getPreference("NewsEdition","us"));
-         $("#settings").remove();                
+         $("#settings").remove();        
+         
+        $.each(countryCodes, function(key, value) {   
+             $('#selEdition')
+                  .append($('<option>', { value : key })
+                  .text(value)); 
+        });
+        
+        $("#selEdition").val(getPreference("NewsEdition","us"));          
+        
          $("#selEdition").change(function() { 
                console.log("Setting NewsEdition to "+this.value);
                setPreference("NewsEdition",this.value)                
              });
-         $("#selEdition").val(getPreference("NewsEdition","us"));          
+         
        }
        else {
          showTab(container);
@@ -442,6 +451,7 @@
    <center>
      <b>News Edition:</b>
              <select id="selEdition">
+               <!--
                <option value="au">Australia</option>
                <option value="ca">Canada</option>
                <option value="in">India</option>
@@ -450,6 +460,7 @@
                <option value="en_za">South Africa</option> 
                <option value="uk">UK</option> 
                <option selected="selected" value="us">US</option>               
+               -->
              </select>    
    </center>  
    <br/>
