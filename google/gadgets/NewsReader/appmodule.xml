@@ -25,6 +25,10 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <link href="http://therandomhomepage.com/google/gadgets/DZonePreview/loading.css" rel="stylesheet"/>
 <style type="text/css">
+    table {
+      padding: 0;
+      border: 0;
+    }
 		img {
 			border-style: none;
 			cursor: pointer;
