@@ -299,6 +299,7 @@
        console.log("Loading tab from localStorage "+feedUrl);
        showTab(container,localStorage[feedUrl]);
        assignCloseTabHandler(container);
+       assignScrollTopHandler(container);
        return;
      } 
      
@@ -437,6 +438,7 @@
        }    
            
            assignCloseTabHandler(container);
+           assignScrollTopHandler(container)
            localStorage[feedUrl] = container.innerHTML; 
            setCacheTime(feedUrl);
            $('#placeholder').empty();             
@@ -448,6 +450,17 @@
         removeSelectedTab();
      });
   } 
+  
+  function assignScrollTopHandler(container){
+      console.log("Assigning click handler");
+        $(container).find('div.back-top').click(function () {
+            console.log("Adding click handler");
+           $('body,html').animate({
+              scrollTop: 0
+           }, 800);
+           return false;
+        });
+  }
 
 	function getChildNodeValueByNodeName(node,nodeNameStr){
 		var nodeList = node.childNodes;
