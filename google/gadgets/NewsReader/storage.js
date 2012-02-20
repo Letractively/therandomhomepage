@@ -6,8 +6,8 @@
 var DEFAULT_CACHE_INTERVAL = 1000 * 60 * 15; //15 min 
 var KEY_NAME_SEPARATOR = "||";
 
-var CacheTime = function(url,time) {
-   this.url = url;
+var CacheTime = function(key,time) {
+   this.key = key;
    this.time = time;
 }
 
@@ -15,21 +15,32 @@ function Storage (name,cacheInterval) {
     this.name = name;
     this.cacheInterval = !cacheInterval ? DEFAULT_CACHE_INTERVAL : cacheInterval;
     
-    this.addValue= function(key, value) {
+    this.keyName = function (keyName) {
+      return this.name + KEY_NAME_SEPARATOR + keyName;
+    };
+    
+    this.putValue= function(key, value) {
        if (typeof localStorage != "undefined") {
-         localStorage[this.name +KEY_NAME_SEPARATOR+ key] = value;
+         localStorage[this.keyName(key)] = value;
        }       
     };
     
     this.getValue = function(key, defaultValue) {
-       if ((typeof localStorage != "undefined") && (localStorage[this.name +KEY_NAME_SEPARATOR+ key] != null)) {
-         return localStorage[this.name +KEY_NAME_SEPARATOR+ key];
+       if ((typeof localStorage != "undefined") && (localStorage[this.keyName(key)] != null)) {
+         return localStorage[this.keyName(key)];
        }     
        if (typeof defaultValue != "undefined") {
          return defaultValue;
        }
        return ""; 
     };      
+    
+    this.putCache = function(key, value) {
+      this.putValue(key,value);
+    };
+    
+    this.getCache = function(key, defaultValue) { 
+    };          
 } 
 
 
