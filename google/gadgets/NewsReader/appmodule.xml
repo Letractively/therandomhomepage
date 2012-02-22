@@ -201,6 +201,9 @@
   
 
 	function loadModule__MODULE_ID__(){   
+   
+    var cachedURL = _IG_GetCachedUrl("http://images.websnapr.com/?size=s&key=5et6411TMS1Z&hash=1302af9864b4d41bdf530cdf62cc2576&url=http%3A%2F%2Fwww.chrisumbel.com%2Farticle%2Fnode_js_natural_language_nlp");
+    alert("cachedURL = "+cachedURL);
 
 		tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("h"));
 
