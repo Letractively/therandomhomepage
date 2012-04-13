@@ -146,6 +146,8 @@ var LOADING_MSG = '<div class="loading"><h3>Loading...</h3></div><div class="spi
 
 function loadModule__MODULE_ID__() {
 
+    alert("Loading page...");
+    
     tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("h"));
 
     var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
