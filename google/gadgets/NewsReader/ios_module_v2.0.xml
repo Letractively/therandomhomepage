@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="Google News Reader"
+                 title_url="http://www.BoxySystems.com" description="A simple, sophisticated newsreader app with core focus on usability."
+                 author="Siddique Hameed" author_email="siddii+randomhomepage@gmail.com" height="350" scrolling="true"
+                 thumbnail="http://www.therandomhomepage.com/google/gadgets/DZonePreview/dzonethumbnail.png"
+                 screenshot="http://www.therandomhomepage.com/google/gadgets/DZonePreview/dzonescreenshot.png"
+                 author_affiliation="http://www.BoxySystems.com"
+                 author_location = "St. Louis, MO"
+                 author_photo = "http://www.therandomhomepage.com/images/author.jpg"
+                 author_aboutme = "I  am an aspiring entrepreneur who loves crafting software both for living  and hobbies. Still searching for the perfect click of my life..."
+                 author_link = "http://blogs.boxysystems.com"
+                 author_quote = "World Wide Web is a sea of HTML, you never know what you gonna catch!"
+            >
+	<!--
+
+		Last Updated : 2/08/2012
+		Change Notes: First revision
+	-->
+	<Require feature="tabs"/>
+    </ModulePrefs>
+	<UserPref name="selectedTab" datatype="hidden" />
+    <Content type="html">
+<![CDATA[
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://therandomhomepage.com/google/gadgets/NewsReader/storage.js"></script>
+<script type="text/javascript" src="http://therandomhomepage.com/google/gadgets/NewsReader/util.js"></script>
+<link href="http://therandomhomepage.com/google/gadgets/DZonePreview/loading.css" rel="stylesheet"/>
+<style type="text/css">
+    body {
+        padding-top: 5px;
+        align: center;
+    }
+
+    table {
+      padding: 0;
+      border: 0;
+    }
+		img {
+			border-style: none;
+			cursor: pointer;
+		}
+      
+    hr {
+      width: 95%;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }  
+  
+		td.tdSummary {
+			font-size:80%;
+		}
+
+		div.title {
+			font-weight: bold;
+			font-size:90%;
+		}
+
+		a {
+			color: #000000;
+			text-decoration: none;
+		}
+      
+    a:visited {
+      color: gray;
+    }  
+    
+    a:active {
+      color: gray;
+    }  
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+    a.topic {
+        font-weight: bold;
+        font-size: 150%;
+        padding: 15px;
+    }
+      
+    fieldset {
+      margin-left: 5%;
+      margin-right: 5%;
+    }  
+      
+    legend {
+      font-weight: bold;
+    }  
+
+		div.closeTab {
+      padding-top: 5px;
+      padding-right: 15px;
+			text-align: right;
+		}
+      
+    div.back-top {
+      padding-top: 10px;
+    }
+
+    .tablib_navcontainer a:link, .tablib_navcontainer a:visited, .tablib_navcontainer a:hover {
+        color: #000;
+        text-decoration: none;
+     }
+
+		div.feedItem {
+			font-size:90%;
+			margin-bottom: 5px;
+		}
+
+		ul {
+			font-size:90%;
+		}
+
+		li {
+			font-size:90%;
+		}
+
+		p {
+			font-size:80%;
+			font-weight: bold;
+		}
+
+		closeTab {
+			width: 100%;
+			text-align: right;
+		}
+      
+</style>
+
+ <script type="text/javascript">
+var tabs = new _IG_Tabs(__MODULE_ID__);
+
+var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World","n": "Nation","po": "Most Popular","ir": "Spotlight"};
+var wholeCountryCodes = {"es_ar" : "Argentina", "au" : "Australia", "nl_be" : "BelgiÃ«", "fr_be" : "Belgique", "en_bw" : "Botswana", "pt-BR_br" : "Brasil", "ca" : "Canada English", "fr_ca" : "Canada FranÃ§ais", "cs_cz" : "CeskÃ¡ republika", "es_cl" : "Chile", "es_co" : "Colombia", "es_cu" : "Cuba", "de" : "Deutschland", "es" : "EspaÃ±a", "es_us" : "Estados Unidos", "en_et" : "Ethiopia", "fr" : "France", "en_gh" : "Ghana", "in" : "India", "en_ie" : "Ireland", "en_il" : "Israel English", "it" : "Italia", "en_ke" : "Kenya", "hu_hu" : "MagyarorszÃ¡g", "en_my" : "Malaysia", "es_mx" : "MÃ©xico", "en_na" : "Namibia", "nl_nl" : "Nederland", "nz" : "New Zealand", "en_ng" : "Nigeria", "no_no" : "Norge", "de_at" : "Ã–sterreich", "en_pk" : "Pakistan", "es_pe" : "PerÃº", "en_ph" : "Philippines", "pl_pl" : "Polska", "pt-PT_pt" : "Portugal", "de_ch" : "Schweiz", "fr_sn" : "SÃ©nÃ©gal", "en_sg" : "Singapore", "en_za" : "South Africa", "fr_ch" : "Suisse", "sv_se" : "Sverige", "en_tz" : "Tanzania", "tr_tr" : "TÃ¼rkiye", "uk" : "U.K.", "us" : "U.S.", "en_ug" : "Uganda", "es_ve" : "Venezuela", "vi_vn" : "Vit NamVietnam", "en_zw" : "Zimbabwe", "el_gr" : "daGreece", "ru_ru" : "Russia", "ru_ua" : "Ukraine", "uk_ua" : "Ukraine", "iw_il" : "Israel", "ar_ae" : "UAE", "ar_sa" : "KSA", "ar_me" : "Arabic", "ar_lb" : "Lebanon", "ar_eg" : "Egypt", "hi_in" : "India", "ta_in" : "India", "te_in" : "India", "ml_in" : "India", "kr" : "Korea", "cn" : "China", "tw" : "Taiwan", "jp" : "Japan", "hk" : "Hong Kong"};
+  
+var countryCodes = {"ar_me" : "Arabic", "es_ar" : "Argentina", "au" : "Australia","fr_be" : "Belgium", "en_bw" : "Botswana", "pt-BR_br" :  "Brasil", "ca" : "Canada (English)", "fr_ca" : "Canada (French)", "es_cl" : "Chile", "cn" : "China",  "es_co" : "Colombia", "es_cu" :  "Cuba", "de" : "Deutschland", "ar_eg" : "Egypt", "es" : "España", "es_us" : "Estados  Unidos", "en_et" : "Ethiopia", "fr" : "France", "en_gh" : "Ghana", "el_gr" : "Greece", "hk" : "Hong Kong", "in" :  "India (English)",  "hi_in" : "India (Hindi)", "ta_in" : "India (Tamil)",  "te_in" : "India (Telugu)", "ml_in" : "India (Malayalam)", "en_ie" : "Ireland", "en_il" : "Israel (English)", "iw_il" : "Israel",  "it" :  "Italia", "jp" : "Japan", "en_ke" : "Kenya", "kr" : "Korea", "ar_sa" : "K.S.A", "ar_lb" :  "Lebanon", "en_my" :  "Malaysia", "es_mx" : "México", "en_na" : "Namibia", "nl_nl" :  "Nederland", "nz" : "New Zealand", "en_ng" : "Nigeria", "no_no" :  "Norge", "en_pk" : "Pakistan", "es_pe" :  "Perú", "en_ph" : "Philippines", "pl_pl" : "Polska", "pt-PT_pt" :  "Portugal", "ru_ru" :  "Russia", "de_ch" : "Schweiz", "fr_sn" : "Sénégal", "en_sg" :  "Singapore", "en_za" : "South Africa", "fr_ch" : "Suisse", "sv_se" :  "Sverige", "en_tz" : "Tanzania", "tw" : "Taiwan", "tr_tr" : "Türkiye", "ar_ae" : "U.A.E", "uk" : "U.K.",  "us" : "U.S.", "en_ug" : "Uganda", "es_ve" : "Venezuela", "vi_vn" : "Vietnam", "en_zw" : "Zimbabwe", "ru_ua" : "Ukraine", "uk_ua" : "Ukraine"};
+  
+var storage = new AppStorage("News Reader", AppStorage.DEFAULT_CACHE_INTERVAL);
+
+
+var errorHTML = "<p align='center'>Unable to read content from Google News server! <br/>Please try again  later.</p>";
+var newsNotAvailableMessage = "<center><h3>No news available for the selected topic!</h3></center>";
+
+var LOADING_MSG = '<div class="loading"><h3>Loading...</h3></div><div class="spinner" id="div1"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div></div>';
+
+function loadModule__MODULE_ID__() {
+
+    tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("h"));
+
+    var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
+
+    for (var i = 0; i < savedTabs.length; i++) {
+        for (var key in topics) {
+            if (key == savedTabs[i]) {
+                tabs.addDynamicTab(topics[key], loadTabsCallbackGenerator(key));
+            }
+        }
+    }
+
+    tabs.addDynamicTab("Settings", settingsTabCallback());
+}
+
+function buildFeedURL(topicName) {
+    var selectedEdition = storage.getValue("NewsEdition", "us");
+    var feedURL = "http://news.google.com/news?ned=" + selectedEdition + "&topic=" + topicName + "&output=rss";
+    //console.log("feedURL = "+feedURL);
+    return feedURL;
+}
+
+
+function loadTabsCallbackGenerator(topic) {
+    return function (tabId) {
+        loadTab(tabId, topic);
+    }
+}
+
+function sortByName(thisName, thatName) {
+    return thisName > thatName;
+}
+
+function settingsTabCallback() {
+    return function (tabId) {
+        var container = _gel(tabId);
+        if (_gel("settings") != null) {
+            showTab(container, _gel("settings").innerHTML);
+            //console.log("Setting edition to "+getPreference("NewsEdition","us"));
+            $("#settings").remove();
+
+            $.each(countryCodes, function (key, value) {
+                $('#selEdition')
+                    .append($('<option>', { value:key })
+                    .text(value));
+            });
+
+            $("#selEdition").val(storage.getValue("NewsEdition", "us"));
+
+            $("#selEdition").change(function () {
+                //console.log("Setting NewsEdition to "+this.value);
+                storage.putValue("NewsEdition", this.value)
+            });
+
+        }
+        else {
+            showTab(container);
+        }
+    }
+}
+
+
+function createTabForTopic(topicName) {
+    var actualTabs = tabs.getTabs();
+    var tabExist = false;
+    for (var i = 0; i < actualTabs.length; i++) {
+        if (actualTabs[i].getName() == topics[topicName]) {
+            tabExist = true;
+            setSelectedTab(i);
+            break;
+        }
+    }
+
+    if (!tabExist) {
+        var feedURL = buildFeedURL(topicName);
+        tabs.addDynamicTab(topics[topicName], loadTabsCallbackGenerator(topicName));
+        tabs.moveTab(i - 1, i);
+        setSelectedTab(i - 1);
+
+        var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
+        savedTabs.push(topicName);
+        storage.putValue(SAVED_TABS_PREF_NAME, savedTabs.join(PREF_NAME_DELIMITER));
+    }
+}
+
+function loadTab(tabId, topic) {
+    var feedUrl = buildFeedURL(topic);
+    var container = _gel(tabId);
+    container.innerHTML = LOADING_MSG;
+
+    var feedURLCache = storage.getCache(feedUrl);
+    if (feedURLCache != "") {
+        console.log("Loading tab from localStorage " + feedUrl);
+        showTab(container, feedURLCache);
+        assignCloseTabHandler(container);
+        assignScrollTopHandler(container);
+        return;
+    }
+
+    console.log("Loading tab from server" + feedUrl);
+    _IG_FetchXmlContent(
+        feedUrl,
+        function (feed) {
+            showFeeds(container, tabId, feed, feedUrl)
+        });
+
+}
+
+
+function showFeeds(container, tabId, response, feedUrl) {
+    if (response == null || typeof(response) != "object" ||
+        response.firstChild == null) {
+        //container.innerHTML = errorHTML;
+        showTab(container, errorHTML);
+        return;
+    }
+
+    if (response.firstChild) {
+
+        var linksHTML = '';
+
+        var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
+
+        for (var i = 0; i < savedTabs.length; i++) {
+            for (var key in topics) {
+                if (savedTabs[i] == key && topics[key] == tabs.getSelectedTab().getName()) {
+                    linksHTML += '<div class="closeTab"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/delete.png"/></div>';
+                }
+            }
+        }
+
+        var itemList = response.getElementsByTagName("item");
+
+        if (itemList.length == 0) {
+            linksHTML += newsNotAvailableMessage;
+            showTab(container, linksHTML);
+        }
+        else {
+
+            for (var i = 0; i < itemList.length; i++) {
+
+                var title = getChildNodeValueByNodeName(itemList.item(i), "title");
+                var link = getChildNodeValueByNodeName(itemList.item(i), "link");
+                var description = getChildNodeValueByNodeName(itemList.item(i), "description");
+
+                //linksHTML  += '<div><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
+                linksHTML += '<div><table>';
+
+                var divSummary = document.createElement("div");
+                divSummary.innerHTML = description;
+
+                linksHTML += '<tr><td valign="top" class="tdSummary">' + divSummary.innerHTML + '</td></tr>'
+                //linksHTML += '<tr><td><div class="back-top"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div></td></tr>';
+                linksHTML += '</table></div>';
+
+                if (i != itemList.length - 1) {
+                    linksHTML += '<hr/>';
+                }
+
+            }
+            var placeholder = document.createElement("div");
+
+            $(placeholder).html(linksHTML);
+
+            $(placeholder).find('a').attr("target", "_new");
+
+            $(placeholder).find('font br:first-child').remove();
+            $(placeholder).find('font div:first-child').remove();
+
+            var tds = $(placeholder).find('td .j');
+
+            for (var i = 0; i < tds.length; i++) {
+                $(tds[i]).find('font,br').each(function (idx, item) {
+                    if (idx > 6) {
+                        $(item).remove();
+                    }
+                });
+            }
+
+            $(placeholder).find('td:not(.j):not(.tdSummary)').append('<div class="back-top"><img  src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div>');
+
+            //container.innerHTML = $('#placeholder')[0].innerHTML;
+            showTab(container, $(placeholder)[0].innerHTML);
+        }
+
+        assignCloseTabHandler(container);
+        assignScrollTopHandler(container)
+        storage.putCache(feedUrl, container.innerHTML);
+        $(placeholder).remove();
+    }
+}
+
+_IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
+ </script>
+
+ <div id="settings" style="display:none;">
+   <br/>  
+   <center>
+     <b>News Edition:</b>
+             <select id="selEdition">
+               <!--
+               <option value="au">Australia</option>
+               <option value="ca">Canada</option>
+               <option value="in">India</option>
+               <option value="ie">Ireland</option>
+               <option value="nz">New Zealand</option> 
+               <option value="en_za">South Africa</option> 
+               <option value="uk">UK</option> 
+               <option selected="selected" value="us">US</option>               
+               -->
+             </select>    
+   </center>  
+   <br/>
+
+   <fieldset>
+   <legend>Topics</legend>
+   <center>
+  <a class="topic" href="javascript:createTabForTopic('w');">
+       World
+  </a>        
+  <a class="topic" href="javascript:createTabForTopic('n');">
+       Nation
+  </a>          
+  <a class="topic" href="javascript:createTabForTopic('b');">
+    Business
+  </a>
+  <a class="topic" href="javascript:createTabForTopic('tc');">
+    Technology
+  </a>  
+  <a class="topic" href="javascript:createTabForTopic('m');">
+     Health
+   </a>    
+  <a class="topic" href="javascript:createTabForTopic('s');">
+     Sports
+   </a>    
+  <a class="topic" href="javascript:createTabForTopic('e');">
+      Entertainment
+  </a>       
+  <a class="topic" href="javascript:createTabForTopic('snc');">
+       Science
+  </a>     
+  <a class="topic" href="javascript:createTabForTopic('ir');">
+      Spotlight
+   </a>       
+  <a class="topic" href="javascript:createTabForTopic('po');">
+       Most Popular
+  </a>
+  </center>  
+  </div>
+ ]]>
+    </Content>
+</Module>
