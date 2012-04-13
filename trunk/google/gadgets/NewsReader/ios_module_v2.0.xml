@@ -393,7 +393,8 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
   <a class="topic" href="javascript:createTabForTopic('po');">
        Most Popular
   </a>
-  </center>  
+  </center> 
+  </fieldset>  
      <br/>  
    <center>
      <b>No. of items: </b>
