@@ -277,7 +277,7 @@ function showFeeds(container, tabId, response, feedUrl) {
         return;
     }
 
-    if (result.feed.entries) {
+    if (response.feed.entries) {
 
         var linksHTML = '';
 
@@ -291,7 +291,7 @@ function showFeeds(container, tabId, response, feedUrl) {
             }
         }
 
-        var itemList = result.feed.entries;
+        var itemList = response.feed.entries;
 
         if (itemList.length == 0) {
             linksHTML += newsNotAvailableMessage;
