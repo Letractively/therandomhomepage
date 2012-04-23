@@ -23,8 +23,149 @@
     <Content type="html">
 <![CDATA[
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://therandomhomepage.com/google/gadgets/NewsReader/storage.js"></script>
+<script type="text/javascript">
+var TAB_ARROW_MAX_CLICKS = 10;
+var SAVED_TABS_PREF_NAME = "savedTabs";
+var PREF_NAME_DELIMITER = "|";
+
+function swipeLeft() {
+    var selectedTabIdx = tabs.getSelectedTab().getIndex() + 1;
+    if (selectedTabIdx == tabs.getTabs().length) {
+        selectedTabIdx = 0;
+    }
+    setSelectedTab(selectedTabIdx);
+}
+
+function setSelectedTab(tabIdx) {
+    tabs.setSelectedTab(tabIdx);
+    var tablibNavContainer = $('.tablib_navContainer');
+    if (tablibNavContainer.find('a').length == 2 && $(tablibNavContainer.find('a')[0]).is(":visible") == true || $(tablibNavContainer.find('a')[1]).is(":visible") == true) {
+        var selectedTab = $('.tablib_selected');
+        var leftArrow = tablibNavContainer.find('a')[0];
+        var rightArrow = tablibNavContainer.find('a')[1];
+        var tabArrowClickCount = 0;
+        if (selectedTab.offset().left < $(leftArrow).offset().left) {
+            while ((selectedTab.offset().left < $(leftArrow).offset().left) && (tabArrowClickCount++ < TAB_ARROW_MAX_CLICKS)) {
+                console.log("Clicking leftArrow");
+                $(leftArrow).click();
+            }
+        }
+        else if ((selectedTab.offset().left + selectedTab.width() + $(rightArrow).width()) > $(rightArrow).offset().left) {
+            while (((selectedTab.offset().left + selectedTab.width() + $(rightArrow).width()) > $(rightArrow).offset().left) && (tabArrowClickCount++ < TAB_ARROW_MAX_CLICKS)) {
+                console.log("Clicking rightArrow");
+                $(rightArrow).click();
+            }
+        }
+    }
+}
+
+function removeSelectedTabCallback(response) {
+    if (response) {
+        var tabIdx = tabs.getSelectedTab().getIndex();
+        var removedTabName = tabs.getSelectedTab().getName();
+        tabs.removeTab(tabIdx);
+        setSelectedTab(tabIdx);
+
+        console.log("savedTabs = " + storage.getValue(SAVED_TABS_PREF_NAME));
+
+        var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
+
+        var newTabs = new Array();
+        for (var i = 0; i < savedTabs.length; i++) {
+            for (var key in topics) {
+                if (savedTabs[i] == key && topics[key] != removedTabName) {
+                    newTabs.push(savedTabs[i]);
+                    break;
+                }
+            }
+        }
+
+        var newTabsStr = newTabs.length > 0 ? newTabs.join(PREF_NAME_DELIMITER) : "";
+        console.log("newTabsStr = " + newTabsStr);
+        storage.putValue(SAVED_TABS_PREF_NAME, newTabsStr);
+    }
+}
+
+function removeSelectedTab() {
+    if (tabs.getSelectedTab() != null) {
+        var tabName = tabs.getSelectedTab().getName();
+        var response = prompt("Are you sure you want to remove '" + tabName + "' tab ?");
+    }
+}
+
+function swipeRight() {
+    var selectedTabIdx = tabs.getSelectedTab().getIndex() - 1;
+    if (selectedTabIdx < 0) {
+        selectedTabIdx = tabs.getTabs().length - 1;
+    }
+    setSelectedTab(selectedTabIdx);
+}
+
+function showTab(tabContainer, newHTML) {
+    if (tabContainer && newHTML) {
+        $(tabContainer).fadeOut();
+        tabContainer.innerHTML = newHTML;
+        $(tabContainer).fadeIn();
+    }
+    else if (tabContainer && !newHTML) {
+        $(tabContainer).fadeOut();
+        $(tabContainer).fadeIn();
+    }
+}
+
+function assignCloseTabHandler(container) {
+    $(container).find("div.closeTab").click(function () {
+        removeSelectedTab();
+    });
+}
+
+function assignShareHandler(container) {
+    var tdSummaries = $(container).find(".tdSummary");
+
+    for (var i =0; i < tdSummaries.length; i++) {
+        var title = $(tdSummaries[i]).attr("linktitle");
+        var href = $(tdSummaries[i]).attr("linkhref");
+        var divShare = $(tdSummaries[i]).find(".addthis_share_btn")[0];
+        if (divShare) {
+            divShare.linktitle = title;
+            divShare.linkhref = href;
+            $(divShare).click(function() {
+                share(this.linktitle,this.linkhref);
+            });
+        }
+    }
+}
+
+function assignScrollTopHandler(container) {
+    console.log("Assigning click handler");
+    $(container).find('div.back-top').click(function () {
+        console.log("Adding click handler");
+        $('body,html').animate({
+            scrollTop:0
+        }, 800);
+        return false;
+    });
+}
+
+function getChildNodeValueByNodeName(node, nodeNameStr) {
+    var nodeList = node.childNodes;
+    for (var j = 0; j < nodeList.length; j++) {
+        var node = nodeList.item(j);
+        if (node.nodeName == nodeNameStr && node.firstChild) {
+            return node.firstChild.nodeValue;
+        }
+    }
+}
+</script>
+<script type="text/javascript" src="http://therandomhomepage.com/google/gadgets/NewsReader/NativeBridge.js"></script>
 <link href="http://therandomhomepage.com/google/gadgets/DZonePreview/loading.css" rel="stylesheet"/>
 <style type="text/css">
+    body {
+        padding-top: 5px;
+        align: center;
+    }
+
     table {
       padding: 0;
       border: 0;
@@ -33,7 +174,12 @@
 			border-style: none;
 			cursor: pointer;
 		}
-      
+
+		img.shareIcon {
+		    width: 75%;
+		    height: 75%;
+		}
+
     hr {
       width: 95%;
       margin-top: 4px;
@@ -62,20 +208,19 @@
       color: gray;
     }  
 
-    a.topic {
-      font-weight: bold;
-      padding: 5px;
-    }  
-    
 		a:hover {
 			text-decoration: underline;
 		}
+
+    a.topic {
+        font-weight: bold;
+        font-size: 150%;
+        padding: 15px;
+    }
       
     fieldset {
       margin-left: 5%;
       margin-right: 5%;
-      padding-left: 5%;
-      padding-right: 5%;
     }  
       
     legend {
@@ -90,7 +235,16 @@
       
     div.back-top {
       padding-top: 10px;
-    }  
+    }
+
+    div.share {
+        vertical-align: bottom;
+    }
+
+    .tablib_navcontainer a:link, .tablib_navcontainer a:visited, .tablib_navcontainer a:hover {
+        color: #000;
+        text-decoration: none;
+     }
 
 		div.feedItem {
 			font-size:90%;
@@ -114,370 +268,275 @@
 			width: 100%;
 			text-align: right;
 		}
+
+		        .addthis_share_btn a, .addthis_share_btn a:visited {
+            background: #222 url(http://therandomhomepage.com/google/gadgets/NewsReader/images/btn-overlay.png) repeat-x;
+            display: inline-block;
+            padding: 2px 8px;
+            font-family: arial,helvetica,lucida,verdana,sans-serif;
+            font-size: 12px;
+            line-height: 1em;
+            color: #fff;
+            text-decoration: none;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+            border-bottom: 1px solid rgba(0,0,0,0.25);
+            position: relative;
+            cursor: pointer;
+        }
+        .addthis_share_btn a:hover { background-color: #111; color: #fff; }
+        .addthis_share_btn a:active { top: 1px; }
+
+        .addthis_share_btn a span, .addthis_share_btn:visited a span {
+            background: url(http://therandomhomepage.com/google/gadgets/NewsReader/images/icon-addthis.gif) no-repeat left;
+            padding: 1px 0 1px 18px;
+        }
       
 </style>
 
  <script type="text/javascript">
-  var tabs = new _IG_Tabs(__MODULE_ID__);
-   
-  var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World","n": "Nation","po": "Most Popular","ir": "Spotlight"};  
-  var wholeCountryCodes = {"es_ar" : "Argentina", "au" : "Australia", "nl_be" : "BelgiÃ«", "fr_be" : "Belgique", "en_bw" : "Botswana", "pt-BR_br" : "Brasil", "ca" : "Canada English", "fr_ca" : "Canada FranÃ§ais", "cs_cz" : "CeskÃ¡ republika", "es_cl" : "Chile", "es_co" : "Colombia", "es_cu" : "Cuba", "de" : "Deutschland", "es" : "EspaÃ±a", "es_us" : "Estados Unidos", "en_et" : "Ethiopia", "fr" : "France", "en_gh" : "Ghana", "in" : "India", "en_ie" : "Ireland", "en_il" : "Israel English", "it" : "Italia", "en_ke" : "Kenya", "hu_hu" : "MagyarorszÃ¡g", "en_my" : "Malaysia", "es_mx" : "MÃ©xico", "en_na" : "Namibia", "nl_nl" : "Nederland", "nz" : "New Zealand", "en_ng" : "Nigeria", "no_no" : "Norge", "de_at" : "Ã–sterreich", "en_pk" : "Pakistan", "es_pe" : "PerÃº", "en_ph" : "Philippines", "pl_pl" : "Polska", "pt-PT_pt" : "Portugal", "de_ch" : "Schweiz", "fr_sn" : "SÃ©nÃ©gal", "en_sg" : "Singapore", "en_za" : "South Africa", "fr_ch" : "Suisse", "sv_se" : "Sverige", "en_tz" : "Tanzania", "tr_tr" : "TÃ¼rkiye", "uk" : "U.K.", "us" : "U.S.", "en_ug" : "Uganda", "es_ve" : "Venezuela", "vi_vn" : "Vit NamVietnam", "en_zw" : "Zimbabwe", "el_gr" : "daGreece", "ru_ru" : "Russia", "ru_ua" : "Ukraine", "uk_ua" : "Ukraine", "iw_il" : "Israel", "ar_ae" : "UAE", "ar_sa" : "KSA", "ar_me" : "Arabic", "ar_lb" : "Lebanon", "ar_eg" : "Egypt", "hi_in" : "India", "ta_in" : "India", "te_in" : "India", "ml_in" : "India", "kr" : "Korea", "cn" : "China", "tw" : "Taiwan", "jp" : "Japan", "hk" : "Hong Kong"};
+var tabs = new _IG_Tabs(__MODULE_ID__);
+
+var topics = {"b": "Business", "tc": "Technology", "m": "Health", "s": "Sports", "e": "Entertainment","snc": "Science","w": "World","n": "Nation","po": "Most Popular","ir": "Spotlight"};
+var wholeCountryCodes = {"es_ar" : "Argentina", "au" : "Australia", "nl_be" : "BelgiÃ«", "fr_be" : "Belgique", "en_bw" : "Botswana", "pt-BR_br" : "Brasil", "ca" : "Canada English", "fr_ca" : "Canada FranÃ§ais", "cs_cz" : "CeskÃ¡ republika", "es_cl" : "Chile", "es_co" : "Colombia", "es_cu" : "Cuba", "de" : "Deutschland", "es" : "EspaÃ±a", "es_us" : "Estados Unidos", "en_et" : "Ethiopia", "fr" : "France", "en_gh" : "Ghana", "in" : "India", "en_ie" : "Ireland", "en_il" : "Israel English", "it" : "Italia", "en_ke" : "Kenya", "hu_hu" : "MagyarorszÃ¡g", "en_my" : "Malaysia", "es_mx" : "MÃ©xico", "en_na" : "Namibia", "nl_nl" : "Nederland", "nz" : "New Zealand", "en_ng" : "Nigeria", "no_no" : "Norge", "de_at" : "Ã–sterreich", "en_pk" : "Pakistan", "es_pe" : "PerÃº", "en_ph" : "Philippines", "pl_pl" : "Polska", "pt-PT_pt" : "Portugal", "de_ch" : "Schweiz", "fr_sn" : "SÃ©nÃ©gal", "en_sg" : "Singapore", "en_za" : "South Africa", "fr_ch" : "Suisse", "sv_se" : "Sverige", "en_tz" : "Tanzania", "tr_tr" : "TÃ¼rkiye", "uk" : "U.K.", "us" : "U.S.", "en_ug" : "Uganda", "es_ve" : "Venezuela", "vi_vn" : "Vit NamVietnam", "en_zw" : "Zimbabwe", "el_gr" : "daGreece", "ru_ru" : "Russia", "ru_ua" : "Ukraine", "uk_ua" : "Ukraine", "iw_il" : "Israel", "ar_ae" : "UAE", "ar_sa" : "KSA", "ar_me" : "Arabic", "ar_lb" : "Lebanon", "ar_eg" : "Egypt", "hi_in" : "India", "ta_in" : "India", "te_in" : "India", "ml_in" : "India", "kr" : "Korea", "cn" : "China", "tw" : "Taiwan", "jp" : "Japan", "hk" : "Hong Kong"};
   
-  var  countryCodes = {"es_ar" : "Argentina", "au" : "Australia","fr_be" : "Belgium", "en_bw" : "Botswana", "pt-BR_br" :  "Brasil", "ca" : "Canada (English)", "fr_ca" : "Canada (French)", "es_cl" : "Chile", "es_co" : "Colombia", "es_cu" :  "Cuba", "de" : "Deutschland", "es" : "España", "es_us" : "Estados  Unidos", "en_et" : "Ethiopia", "fr" : "France", "en_gh" : "Ghana", "en_ie" : "Ireland", "en_il" : "Israel (English)", "it" :  "Italia", "en_ke" : "Kenya", "en_my" :  "Malaysia", "es_mx" : "México", "en_na" : "Namibia", "nl_nl" :  "Nederland", "nz" : "New Zealand", "en_ng" : "Nigeria", "no_no" :  "Norge", "en_pk" : "Pakistan", "es_pe" :  "Perú", "en_ph" : "Philippines", "pl_pl" : "Polska", "pt-PT_pt" :  "Portugal", "de_ch" : "Schweiz", "fr_sn" : "Sénégal", "en_sg" :  "Singapore", "en_za" : "South Africa", "fr_ch" : "Suisse", "sv_se" :  "Sverige", "en_tz" : "Tanzania", "tr_tr" : "Türkiye", "uk" : "U.K.",  "us" : "U.S.", "en_ug" : "Uganda", "es_ve" : "Venezuela", "vi_vn" : "Vit  NamVietnam", "en_zw" : "Zimbabwe", "el_gr" : "daGreece", "ru_ru" :  "Russia", "ru_ua" : "Ukraine", "uk_ua" : "Ukraine", "iw_il" : "Israel",  "ar_ae" : "UAE", "ar_sa" : "KSA", "ar_me" : "Arabic", "ar_lb" :  "Lebanon", "ar_eg" : "Egypt", "in" :  "India (English)",  "hi_in" : "India (Hindi)", "ta_in" : "India (Tamil)",  "te_in" : "India (Telugu)", "ml_in" : "India (Malayalam)", "kr" : "Korea", "cn" : "China",  "tw" : "Taiwan", "jp" : "Japan", "hk" : "Hong Kong"};  
+var countryCodes = {"ar_me" : "Arabic", "es_ar" : "Argentina", "au" : "Australia","fr_be" : "Belgium", "en_bw" : "Botswana", "pt-BR_br" :  "Brasil", "ca" : "Canada (English)", "fr_ca" : "Canada (French)", "es_cl" : "Chile", "cn" : "China",  "es_co" : "Colombia", "es_cu" :  "Cuba", "de" : "Deutschland", "ar_eg" : "Egypt", "es" : "España", "es_us" : "Estados  Unidos", "en_et" : "Ethiopia", "fr" : "France", "en_gh" : "Ghana", "el_gr" : "Greece", "hk" : "Hong Kong", "in" :  "India (English)",  "hi_in" : "India (Hindi)", "ta_in" : "India (Tamil)",  "te_in" : "India (Telugu)", "ml_in" : "India (Malayalam)", "en_ie" : "Ireland", "en_il" : "Israel (English)", "iw_il" : "Israel",  "it" :  "Italia", "jp" : "Japan", "en_ke" : "Kenya", "kr" : "Korea", "ar_sa" : "K.S.A", "ar_lb" :  "Lebanon", "en_my" :  "Malaysia", "es_mx" : "México", "en_na" : "Namibia", "nl_nl" :  "Nederland", "nz" : "New Zealand", "en_ng" : "Nigeria", "no_no" :  "Norge", "en_pk" : "Pakistan", "es_pe" :  "Perú", "en_ph" : "Philippines", "pl_pl" : "Polska", "pt-PT_pt" :  "Portugal", "ru_ru" :  "Russia", "de_ch" : "Schweiz", "fr_sn" : "Sénégal", "en_sg" :  "Singapore", "en_za" : "South Africa", "fr_ch" : "Suisse", "sv_se" :  "Sverige", "en_tz" : "Tanzania", "tw" : "Taiwan", "tr_tr" : "Türkiye", "ar_ae" : "U.A.E", "uk" : "U.K.",  "us" : "U.S.", "en_ug" : "Uganda", "es_ve" : "Venezuela", "vi_vn" : "Vietnam", "en_zw" : "Zimbabwe", "ru_ua" : "Ukraine", "uk_ua" : "Ukraine"};
   
-	var  errorHTML = "<p align='center'>Unable to read content from Google News server! <br/>Please try again  later.</p>";
-   var  newsNotAvailableMessage  = "<center><h3>No news available for the selected topic!</h3></center>"; 
-   
-  var LOADING_MSG = '<div class="loading"><h3>Loading...</h3></div><div class="spinner" id="div1"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div></div>'; 
-   
-  var CACHE_INTERVAL = 1000 * 60 * 15; //15 min 
-   
-  var CacheTime = function(url,time) {
-    this.url = url;
-    this.time = time;
-  }
-   
-  function getCacheTime(url) {
-    if (localStorage["cacheTimes"] != null && localStorage["cacheTimes"] != "") {
-      var cacheTimes = JSON.parse(localStorage["cacheTimes"]);
-      console.log("getCacheTime() cacheTimes = "+cacheTimes);
-      for(var i=0; i < cacheTimes.length; i++) {
-        console.log("cacheTimes["+i+"].url = "+cacheTimes[i].url+", "+cacheTimes[i].time);
-        if (cacheTimes[i].url == url) {
-          return cacheTimes[i].time;
+var storage = new AppStorage("News Reader", AppStorage.DEFAULT_CACHE_INTERVAL);
+
+
+var errorHTML = "<p align='center'>Unable to read content from Google News server! <br/>Please try again  later.</p>";
+var newsNotAvailableMessage = "<center><h3>No news available for the selected topic!</h3></center>";
+
+var LOADING_MSG = '<div class="loading"><h3>Loading...</h3></div><div class="spinner" id="div1"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div></div>';
+
+function loadModule__MODULE_ID__() {
+
+    tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("h"));
+
+    var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
+
+    for (var i = 0; i < savedTabs.length; i++) {
+        for (var key in topics) {
+            if (key == savedTabs[i]) {
+                tabs.addDynamicTab(topics[key], loadTabsCallbackGenerator(key));
+            }
         }
-      }
     }
-    return null; 
-  } 
- 
-  function setCacheTime(url) {
-    var cacheTimes = new Array();
-    if (localStorage["cacheTimes"] != null && localStorage["cacheTimes"] != "") {
-      cacheTimes = JSON.parse(localStorage["cacheTimes"]);
+
+    tabs.addDynamicTab("Settings", settingsTabCallback());
+}
+
+function buildFeedURL(topicName) {
+    var selectedEdition = storage.getValue("NewsEdition", "us");
+    var feedURL = "http://news.google.com/news?ned=" + selectedEdition + "&topic=" + topicName + "&output=rss";
+    //console.log("feedURL = "+feedURL);
+    return feedURL;
+}
+
+
+function loadTabsCallbackGenerator(topic) {
+    return function (tabId) {
+        loadTab(tabId, topic);
     }
-    var date = new Date();
-    var timeSet = false;
-    for(var i=0; i < cacheTimes.length; i++) {
-      if (cacheTimes[i].url == url) {
-        cacheTimes[i].time = date.getTime();
-        timeSet = true;
-        break;         
-      }
-    }    
-    if (!timeSet) {
-      cacheTimes.push(new CacheTime(url,date.getTime()));      
-    }    
-    localStorage["cacheTimes"] = JSON.stringify(cacheTimes);
-  }
-  
-  function cacheValid(url) {    
-    var cacheTime = getCacheTime(url);
-    var date = new Date();
-    console.log("Checking cache time for url - "+url+", cacheTime = "+cacheTime+", currentTime = "+date.getTime());
-    return cacheTime != null && ((date.getTime() - cacheTime) < CACHE_INTERVAL);
-  }
- 
-  function getPreference(prefName,defaultValue) {
-    console.log(" getPreference - prefName = "+prefName+" defaultValue = "+defaultValue+" localStorage = "+localStorage+" "+typeof localStorage[prefName]);
-    if ((typeof localStorage != "undefined") && (localStorage[prefName] != null)) {
-        console.log("returning - "+localStorage[prefName]);
-        return localStorage[prefName];
+}
+
+function sortByName(thisName, thatName) {
+    return thisName > thatName;
+}
+
+function settingsTabCallback() {
+    return function (tabId) {
+        var container = _gel(tabId);
+        if (_gel("settings") != null) {
+            showTab(container, _gel("settings").innerHTML);
+            //console.log("Setting edition to "+getPreference("NewsEdition","us"));
+            $("#settings").remove();
+
+            $.each(countryCodes, function (key, value) {
+                $('#selEdition')
+                    .append($('<option>', { value:key })
+                    .text(value));
+            });
+
+            $("#selEdition").val(storage.getValue("NewsEdition", "us"));
+
+            $("#selEdition").change(function () {
+                //console.log("Setting NewsEdition to "+this.value);
+                storage.putValue("NewsEdition", this.value)
+            });
+
+        }
+        else {
+            showTab(container);
+        }
     }
-    
-    if (typeof defaultValue != "undefined") {
-      console.log("returning defaultValue - "+defaultValue);
-      return defaultValue;
+}
+
+
+function createTabForTopic(topicName) {
+    var actualTabs = tabs.getTabs();
+    var tabExist = false;
+    for (var i = 0; i < actualTabs.length; i++) {
+        if (actualTabs[i].getName() == topics[topicName]) {
+            tabExist = true;
+            setSelectedTab(i);
+            break;
+        }
     }
-    return "";
-  } 
-  
-  function setPreference(prefName, prefValue) {
-    if (typeof localStorage != "undefined") {
-      localStorage[prefName] = prefValue;
+
+    if (!tabExist) {
+        var feedURL = buildFeedURL(topicName);
+        tabs.addDynamicTab(topics[topicName], loadTabsCallbackGenerator(topicName));
+        tabs.moveTab(i - 1, i);
+        setSelectedTab(i - 1);
+
+        var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
+        savedTabs.push(topicName);
+        storage.putValue(SAVED_TABS_PREF_NAME, savedTabs.join(PREF_NAME_DELIMITER));
     }
-  }
-  
-  
+}
 
-	function loadModule__MODULE_ID__(){      
+function loadTab(tabId, topic) {
+    var feedUrl = buildFeedURL(topic);
+    var container = _gel(tabId);
+    container.innerHTML = LOADING_MSG;
 
-		tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("h"));
+    var feedURLCache = storage.getCache(feedUrl);
+    if (feedURLCache != "") {
+        console.log("Loading tab from localStorage " + feedUrl);
+        showTab(container, feedURLCache);
+        assignHandlers(container);
+        return;
+    }
 
-		var savedTabs = getPreference("savedTabs").split("|");
-      
-     for (var i=0; i < savedTabs.length; i++)
-     {       
-        for(var key in topics) {
-          if (key == savedTabs[i]) {
-           tabs.addDynamicTab(topics[key], loadTabsCallbackGenerator(key));                        
-          }
-        }     
-     }
-
-		tabs.addDynamicTab("Settings", settingsTabCallback());
-	}
-
-	function buildFeedURL(topicName){
-    var selectedEdition = getPreference("NewsEdition","us");
-    console.log("selectedEdition = "+selectedEdition);
-		var feedURL = "http://news.google.com/news?ned="+selectedEdition+"&topic="+topicName+"&output=rss"; 
-    console.log("feedURL = "+feedURL);  
-		return feedURL;
-	}
-
-
-	function loadTabsCallbackGenerator(topic) {
-		return function(tabId) {
-			loadTab(tabId, topic);
-		}
-	}
-
-	function settingsTabCallback() {
-		return function(tabId) {
-       var container = _gel(tabId);  
-       if (_gel("settings") != null) {          
-         showTab(container,_gel("settings").innerHTML);
-                  console.log("Setting edition to "+getPreference("NewsEdition","us"));
-         $("#settings").remove();        
-         
-        $.each(countryCodes, function(key, value) {   
-             $('#selEdition')
-                  .append($('<option>', { value : key })
-                  .text(value)); 
+    console.log("Loading tab from server" + feedUrl);
+    _IG_FetchXmlContent(
+        feedUrl,
+        function (feed) {
+            showFeeds(container, tabId, feed, feedUrl)
         });
-        
-        $("#selEdition").val(getPreference("NewsEdition","us"));          
-        
-         $("#selEdition").change(function() { 
-               console.log("Setting NewsEdition to "+this.value);
-               setPreference("NewsEdition",this.value)                
-             });
-         
-       }
-       else {
-         showTab(container);
-       }
-		}
-	}
 
-	function tagCloudCallback(tabId) {
+}
 
-	}   
 
-	function createTabForTopic(topicName){
-     var actualTabs = tabs.getTabs();
-		var tabExist = false;
-		for(var i=0; i < actualTabs.length; i++) {
-			if (actualTabs[i].getName() == topics[topicName])
-			{
-        tabExist = true; 
-				tabs.setSelectedTab(i);
-        break;
-			}
-		}
-      
-		if (!tabExist)
-		{
-			var feedURL = buildFeedURL(topicName);
-			tabs.addDynamicTab(topics[topicName], loadTabsCallbackGenerator(topicName));
-			tabs.moveTab(i-1,i);
-			tabs.setSelectedTab(i-1);
-         
-      var savedTabs = getPreference("savedTabs").split("|");   
-      savedTabs.push(topicName); 
-      setPreference("savedTabs",savedTabs.join("|"));
-		}
-	}
-
-   function loadTab(tabId,topic) {
-     var feedUrl = buildFeedURL(topic);
-	   var container = _gel(tabId);
-     container.innerHTML = LOADING_MSG; 
-      
-     if (localStorage[feedUrl] != null && cacheValid(feedUrl)) {
-       console.log("Loading tab from localStorage "+feedUrl);
-       showTab(container,localStorage[feedUrl]);
-       assignCloseTabHandler(container);
-       assignScrollTopHandler(container);
-       return;
-     } 
-     
-     console.log("Loading tab from server"+feedUrl);
-	   _IG_FetchXmlContent(
-		feedUrl,
-		function(feed) {
-			showFeeds(container, tabId, feed,  feedUrl)
-		});
-
-	}
-   
-  function showTab(tabContainer,newHTML) {
-    if (tabContainer && newHTML) {
-      $(tabContainer).fadeOut();
-      tabContainer.innerHTML = newHTML;
-      $(tabContainer).fadeIn();
+function showFeeds(container, tabId, response, feedUrl) {
+    if (response == null || typeof(response) != "object" ||
+        response.firstChild == null) {
+        //container.innerHTML = errorHTML;
+        showTab(container, errorHTML);
+        return;
     }
-    else if (tabContainer && !newHTML){
-      $(tabContainer).fadeOut();
-      $(tabContainer).fadeIn();
-    }
-  } 
 
-	function removeSelectedTab(){
+    if (response.firstChild) {
 
-		if (tabs.getSelectedTab() != null)
-		{
-			var tabName = tabs.getSelectedTab().getName();
-			var response = confirm("Are you sure you want to remove '"+tabName+"' tab ?");
+        var linksHTML = '';
 
-			if (response)
-			{
-        var tabIdx = tabs.getSelectedTab().getIndex();
-        var removedTabName = tabs.getSelectedTab().getName();
-				tabs.removeTab(tabIdx);
-				tabs.setSelectedTab(tabIdx);
-            
-        console.log("savedTabs = "+getPreference("savedTabs"));
-        
-				var savedTabs = getPreference("savedTabs").split("|");
+        var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
 
-            var newTabs = new Array();
-            for (var i=0; i < savedTabs.length; i++)
-            {
-                for(var key in topics) {                   
-                   if (savedTabs[i] == key && topics[key] != removedTabName) {
-                      newTabs.push(savedTabs[i]);
-                      break;
-                    }
+        for (var i = 0; i < savedTabs.length; i++) {
+            for (var key in topics) {
+                if (savedTabs[i] == key && topics[key] == tabs.getSelectedTab().getName()) {
+                    linksHTML += '<div class="closeTab"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/delete.png"/></div>';
                 }
             }
-            
-            var newTabsStr = newTabs.length > 0 ? newTabs.join("|") : "";
-            console.log("newTabsStr = "+newTabsStr);
-            setPreference("savedTabs",newTabsStr);
-			}
-		}
-	}
-
-	function showFeeds(container, tabId, response, feedUrl){
-		 if (response == null || typeof(response) != "object" ||
-                      response.firstChild == null) {
-              //container.innerHTML = errorHTML;
-              showTab(container,errorHTML);
-              return;
-         }
-
-		if (response.firstChild) {
-
-			var linksHTML = '';
-
-			var savedTabs = getPreference("savedTabs").split("|");
-      
-     for (var i=0; i < savedTabs.length; i++)
-     {       
-        for(var key in topics) {
-           if (savedTabs[i] == key && topics[key] == tabs.getSelectedTab().getName()) {
-            linksHTML += '<div class="closeTab"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/delete.png"/></div>';               
-           }
-        }     
-     }
-
-			var itemList = response.getElementsByTagName("item");
-         
-      if (itemList.length == 0) {
-        linksHTML += newsNotAvailableMessage;
-        showTab(container,linksHTML);
-      }    
-      else { 
-
-         for (var i = 0; i < itemList.length; i++) {
-
-			 	var title = getChildNodeValueByNodeName(itemList.item(i),"title");
-				var link = getChildNodeValueByNodeName(itemList.item(i),"link");
-				var description = getChildNodeValueByNodeName(itemList.item(i),"description");
-
-				//linksHTML  += '<div><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
-        linksHTML  +=  '<div><table>';
-    
-				var divSummary = document.createElement("div");
-				divSummary.innerHTML = description;
-
-				linksHTML += '<tr><td valign="top" class="tdSummary">'+divSummary.innerHTML+'</td></tr>'
-        //linksHTML += '<tr><td><div class="back-top"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div></td></tr>';    
-				linksHTML += '</table></div>';
-            
-        if (i != itemList.length-1) {
-          linksHTML += '<hr/>';
-        }            
-
-             }
-           $('#placeholder').html(linksHTML);   
-    
-           $('#placeholder').find('a').attr("target","_new");
-           
-           //$('#placeholder').find("br").remove();
-           
-           $('#placeholder').find('font br:first-child').remove();
-           $('#placeholder').find('font div:first-child').remove();
-           
-           var tds = $('#placeholder').find('td .j');
-           
-           for(var i=0; i < tds.length; i++) {
-                $(tds[i]).find('font,br').each(function(idx, item) {
-                    if (idx > 6) {
-                      $(item).remove();                   
-                    }                  
-                });                          
-           }                                      
-           
-           $('#placeholder').find('td:not(.j):not(.tdSummary)').append('<div class="back-top"><img  src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div>');           
-           
-           //container.innerHTML = $('#placeholder')[0].innerHTML;              
-           showTab(container,$('#placeholder')[0].innerHTML);
-       }    
-           
-           assignCloseTabHandler(container);
-           assignScrollTopHandler(container)
-           localStorage[feedUrl] = container.innerHTML; 
-           setCacheTime(feedUrl);
-           $('#placeholder').empty();             
         }
-	}
-   
-  function assignCloseTabHandler(container) {
-     $(container).find("div.closeTab").click(function() {
-        removeSelectedTab();
-     });
-  } 
-  
-  function assignScrollTopHandler(container){
-      console.log("Assigning click handler");
-        $(container).find('div.back-top').click(function () {
-            console.log("Adding click handler");
-           $('body,html').animate({
-              scrollTop: 0
-           }, 800);
-           return false;
-        });
-  }
 
-	function getChildNodeValueByNodeName(node,nodeNameStr){
-		var nodeList = node.childNodes;
-		 for (var j = 0; j < nodeList.length ; j++) {
-			var node = nodeList.item(j);
-			if (node.nodeName == nodeNameStr && node.firstChild)
-			{
-				return node.firstChild.nodeValue;
-			}
-		 }
-	}
+        var itemList = response.getElementsByTagName("item");
 
- _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
+        if (itemList.length == 0) {
+            linksHTML += newsNotAvailableMessage;
+            showTab(container, linksHTML);
+        }
+        else {
+
+            for (var i = 0; i < itemList.length; i++) {
+
+                var title = getChildNodeValueByNodeName(itemList.item(i), "title");
+                var link = getChildNodeValueByNodeName(itemList.item(i), "link");
+                var description = getChildNodeValueByNodeName(itemList.item(i), "description");
+
+                //linksHTML  += '<div><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
+                linksHTML += '<div><table>';
+
+                var divSummary = document.createElement("div");
+                divSummary.innerHTML = description;
+
+                linksHTML += '<tr><td valign="top" class="tdSummary" linktitle="'+title+'" linkhref="'+link+'">' + divSummary.innerHTML + '</td></tr>'
+                linksHTML += '</table></div>';
+
+
+
+                if (i != itemList.length - 1) {
+                    linksHTML += '<hr/>';
+                }
+            }
+            var placeholder = document.createElement("div");
+
+            $(placeholder).html(linksHTML);
+
+            $(placeholder).find('a').attr("target", "_new");
+
+            $(placeholder).find('font br:first-child').remove();
+            $(placeholder).find('font div:first-child').remove();
+
+            var tds = $(placeholder).find('td .j');
+
+            for (var i = 0; i < tds.length; i++) {
+                $(tds[i]).find('font,br').each(function (idx, item) {
+                    if (idx > 6) {
+                        $(item).remove();
+                    }
+                });
+            }
+
+
+
+            var shareThis = '<div class="addthis_share_btn"><a href="javascript:void(0);" class="addthis_button_compact"><span>Share</span></a></div>';
+            $(placeholder).find('td:not(.j):not(.tdSummary)').append('<table width="100%"><tr><td align="left"><div class="back-top"><img  src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div></td><td align="right" valign="bottom">'+shareThis+'</td></tr></table>');
+
+            //container.innerHTML = $('#placeholder')[0].innerHTML;
+            showTab(container, $(placeholder)[0].innerHTML);
+        }
+
+        assignHandlers(container);
+        storage.putCache(feedUrl, container.innerHTML);
+        $(placeholder).remove();
+    }
+}
+
+function assignHandlers(container) {
+    assignCloseTabHandler(container);
+    assignScrollTopHandler(container)
+    assignShareHandler(container);
+}
+
+function share(title,link) {
+    //alert("Sharing title = "+title+"link = "+link);
+    callNative("share",encodeURIComponent(title)+":"+encodeURIComponent(link));
+}
+
+function prompt(msg) {
+    callNative("prompt",encodeURIComponent(msg));
+}
+
+function callNative(functionName,args) {
+    console.log("Calling native "+functionName+", args = "+args);
+    var iframe = document.createElement("IFRAME");
+    iframe.setAttribute("src", "js-frame:"+functionName+":" + args);
+    document.documentElement.appendChild(iframe);
+    iframe.parentNode.removeChild(iframe);
+    iframe = null;
+}
+
+_IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
  </script>
- 
- <div id="placeholder" style="display:none;"></div>
- 
+
  <div id="settings" style="display:none;">
    <br/>  
    <center>
@@ -501,10 +560,10 @@
    <legend>Topics</legend>
    <center>
   <a class="topic" href="javascript:createTabForTopic('w');">
-       World    
+       World
   </a>        
   <a class="topic" href="javascript:createTabForTopic('n');">
-       Nation    
+       Nation
   </a>          
   <a class="topic" href="javascript:createTabForTopic('b');">
     Business
@@ -519,17 +578,17 @@
      Sports
    </a>    
   <a class="topic" href="javascript:createTabForTopic('e');">
-      Entertainment    
+      Entertainment
   </a>       
   <a class="topic" href="javascript:createTabForTopic('snc');">
-       Science    
+       Science
   </a>     
   <a class="topic" href="javascript:createTabForTopic('ir');">
       Spotlight
    </a>       
   <a class="topic" href="javascript:createTabForTopic('po');">
        Most Popular
-    </a>          
+  </a>
   </center>  
   </div>
  ]]>
