@@ -430,7 +430,7 @@ function loadTab(tabId, topic) {
     var feed = new google.feeds.Feed(feedUrl);
     
     feed.includeHistoricalEntries();    
-    feed.setNumEntries(20);
+    feed.setNumEntries(storage.getValue("itemCount", 10));
     
     feed.load(function (response) {
             showFeeds(container, tabId, response, feedUrl)
