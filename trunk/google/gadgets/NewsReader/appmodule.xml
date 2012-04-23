@@ -96,8 +96,7 @@ function AppStorage(name, cacheInterval, debug) {
 
     this.getCacheTime = function (cacheKey) {
         var cacheTimes = this.getValue(AppStorage.CACHE_TIMES_KEY);
-        console.log(" cacheTimes = "+cacheTimes.length);
-        if (cacheTimes != null && cacheTimes != "") {
+        if (cacheTimes != "") {
             var cacheTimesArr = JSON.parse(cacheTimes);
             for (var i = 0; i < cacheTimesArr.length; i++) {
                 if (cacheTimesArr[i].key == cacheKey) {
@@ -147,7 +146,7 @@ function AppStorage(name, cacheInterval, debug) {
     this.clearCache = function () {
       if (localStorage) {
           console.log("Clearing cache...");
-          this.putValue(AppStorage.CACHE_TIMES_KEY, null);
+          this.putValue(AppStorage.CACHE_TIMES_KEY, "");
       }
     }       
 }
