@@ -416,7 +416,7 @@ function settingsTabCallback() {
                 console.log(" Checkbox checked = "+this.checked+", "+this.value);
               });   
    
-              if ((i++ % 3) == 0) {
+              if ((++i % 3) == 0) {
                 $("#divTopics").append("<br/>");
               }     
             }          
