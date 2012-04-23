@@ -146,12 +146,7 @@ function AppStorage(name, cacheInterval, debug) {
     this.clearCache = function () {
       if (localStorage) {
           console.log("Clearing cache...");
-          for(var i=0, len=localStorage.length; i<len; i++) {
-              var key = localStorage.key(i);
-              if (key.indexOf(AppStorage.CACHE_TIMES) != -1) {
-                localStorage[key] = null;
-              }
-          }        
+          this.putValue(AppStorage.CACHE_TIMES_KEY, null);
       }
     }       
 }
