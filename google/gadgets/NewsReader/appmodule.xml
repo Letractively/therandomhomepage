@@ -92,6 +92,39 @@ function removeSelectedTabCallback(response) {
     }
 }
 
+function removeTab(topicName) {
+
+    var actualTabs = tabs.getTabs();
+    var tabExist = false;
+    for (var i = 0; i < actualTabs.length; i++) {
+        if (actualTabs[i].getName() == topics[topicName]) {
+            tabs.removeTab(i);
+            tabExist = true;            
+            break;
+        }
+    }
+
+    if (tabExist) {
+      var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
+  
+      var newTabs = new Array();
+      for (var i = 0; i < savedTabs.length; i++) {
+          for (var key in topics) {
+              if (savedTabs[i] == key && topics[key] != topicName) {
+                  newTabs.push(savedTabs[i]);
+                  break;
+              }
+          }
+      }
+  
+      var newTabsStr = newTabs.length > 0 ? newTabs.join(PREF_NAME_DELIMITER) : "";
+      console.log("newTabsStr = " + newTabsStr);
+      storage.putValue(SAVED_TABS_PREF_NAME, newTabsStr);
+    }
+}
+
+
+
 function removeSelectedTab() {
     if (tabs.getSelectedTab() != null) {
         var tabName = tabs.getSelectedTab().getName();
@@ -414,6 +447,12 @@ function settingsTabCallback() {
               $("#divTopics").append("<label class='topicLabel' for='"+chkBoxId+"'>"+topics[key]+"</label>"); 
               $("#"+chkBoxId).change(function () {
                 console.log(" Checkbox checked = "+this.checked+", "+this.value);
+                if (this.checked) {
+                  createDynamicTabForTopic(this.value);
+                }
+                else {
+                  removeTab(this.value);
+                }
               });   
    
               if ((++i % 3) == 0) {
@@ -461,6 +500,27 @@ function createTabForTopic(topicName) {
         storage.putValue(SAVED_TABS_PREF_NAME, savedTabs.join(PREF_NAME_DELIMITER));
     }
 }
+
+
+function createDynamicTabForTopic(topicName) {
+    var actualTabs = tabs.getTabs();
+    var tabExist = false;
+    for (var i = 0; i < actualTabs.length; i++) {
+        if (actualTabs[i].getName() == topics[topicName]) {
+            tabExist = true;
+            break;
+        }
+    }
+
+    if (!tabExist) {
+        var feedURL = buildFeedURL(topicName);
+        tabs.addDynamicTab(topics[topicName], loadTabsCallbackGenerator(topicName));
+        var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
+        savedTabs.push(topicName);
+        storage.putValue(SAVED_TABS_PREF_NAME, savedTabs.join(PREF_NAME_DELIMITER));
+    }
+}
+
 
 function loadTab(tabId, topic) {
     var feedUrl = buildFeedURL(topic);
