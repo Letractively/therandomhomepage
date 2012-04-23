@@ -383,7 +383,7 @@ function loadModule__MODULE_ID__() {
 
     for (var i = 0; i < savedTabs.length; i++) {
         for (var key in topics) {
-            if (key == savedTabs[i]) {
+            if (key == savedTabs[i] && !isTabExist(key)) {
                 tabs.addDynamicTab(topics[key], loadTabsCallbackGenerator(key));
             }
         }
@@ -501,16 +501,19 @@ function createTabForTopic(topicName) {
     }
 }
 
-
-function createDynamicTabForTopic(topicName) {
+function isTabExist(topicName) {
     var actualTabs = tabs.getTabs();
     var tabExist = false;
     for (var i = 0; i < actualTabs.length; i++) {
         if (actualTabs[i].getName() == topics[topicName]) {
-            tabExist = true;
-            break;
+          return true;     
         }
     }
+    return false;
+}
+
+function createDynamicTabForTopic(topicName) {
+    var tabExist = isTabExist(topicName);
 
     if (!tabExist) {
         var feedURL = buildFeedURL(topicName);
