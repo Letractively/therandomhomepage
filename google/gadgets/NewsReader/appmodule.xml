@@ -508,7 +508,7 @@ function settingsTabCallback() {
             $("#selCount").val(storage.getValue("itemCount", 10));
 
             $("#selCount").change(function () {
-                storage.putValue("itemCount", this.value)
+                storage.putValue("itemCount", this.value);
                 storage.clearCache();
             });            
 
