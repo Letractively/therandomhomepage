@@ -515,6 +515,7 @@ function createDynamicTabForTopic(topicName) {
     if (!tabExist) {
         var feedURL = buildFeedURL(topicName);
         tabs.addDynamicTab(topics[topicName], loadTabsCallbackGenerator(topicName));
+        tabs.moveTab(i - 1, i);
         var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
         savedTabs.push(topicName);
         storage.putValue(SAVED_TABS_PREF_NAME, savedTabs.join(PREF_NAME_DELIMITER));
