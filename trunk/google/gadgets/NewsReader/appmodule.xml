@@ -321,7 +321,7 @@ function getChildNodeValueByNodeName(node, nodeNameStr) {
       
       label.topicLabel {
         font-weight: bold;
-        padding-right: 5pt;
+        padding-right: 10pt;
       }
       
 </style>
