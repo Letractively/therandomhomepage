@@ -513,9 +513,10 @@ function showFeeds(container, tabId, response, feedUrl) {
 
 
             var shareThis = '<div class="addthis_share_btn"><a href="javascript:void(0);" class="addthis_button_compact"><span>Share</span></a></div>';
-            tds = $(placeholder).find('td .tdSummary'); 
+            tds = $(placeholder).find('td.tdSummary'); 
+            console.log(" td.length = "+tds.length);
             for (var i = 0; i < tds.length; i++) {
-              $(tds[i]).find("table tbody tr:visible td:first-child").append('<table  width="100%"><tr><td align="left"><div  class="back-top"><img  src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div></td><td  align="right"  valign="bottom">'+shareThis+'</td></tr></table>');            
+              $(tds[i]).find("table tr td:first-child").append('<table  width="100%"><tr><td align="left"><div  class="back-top"><img  src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div></td><td  align="right"  valign="bottom">'+shareThis+'</td></tr></table>');            
             }
 
             //container.innerHTML = $('#placeholder')[0].innerHTML;
