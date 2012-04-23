@@ -301,6 +301,11 @@ function getChildNodeValueByNodeName(node, nodeNameStr) {
             background: url(http://therandomhomepage.com/google/gadgets/NewsReader/images/icon-addthis.gif) no-repeat left;
             padding: 1px 0 1px 18px;
         }
+        
+      #settingsTable {
+        width: 100%;
+        text-align: center;
+      }      
       
 </style>
 
@@ -564,31 +569,35 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
 
  <div id="settings" style="display:none;">
    <br/>  
-   <center>
-     <b>News Edition:</b>
+   <table id="settingsTable">
+     <tr>
+     <td>
+     News Edition:
+     </td>
+     <td>
              <select id="selEdition">
                <!--
-               <option value="au">Australia</option>
-               <option value="ca">Canada</option>
                <option value="in">India</option>
-               <option value="ie">Ireland</option>
-               <option value="nz">New Zealand</option> 
-               <option value="en_za">South Africa</option> 
-               <option value="uk">UK</option> 
-               <option selected="selected" value="us">US</option>               
                -->
              </select>    
-   </center>  
-   <br/> 
-   <center>
-     <b>Display count:</b>
+    </td>
+    </tr>    
+    <tr>
+    <td>
+     No. of news items:
+    </td>
+    <td>  
              <select id="selCount">
                <option value="5">5</option>
                <option selected="selected" value="10">10</option>
                <option value="15">15</option>
                <option value="20">20</option>
              </select>    
-   </center>
+    </td>
+    </tr>
+</table>    
+  
+       
 
    <fieldset>
    <legend>Topics</legend>
