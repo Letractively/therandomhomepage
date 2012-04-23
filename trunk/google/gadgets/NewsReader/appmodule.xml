@@ -677,9 +677,6 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
              </select>    
     </td>
     </tr> 
-   </table>
-   <br/>
-   <table class="settingsTable">
     <tr>
     <td class="settingsLabel">
      No. of news items:
