@@ -409,10 +409,11 @@ function settingsTabCallback() {
             for (var key in topics) {
               var checked = isSavedTopic(key) ? " checked='checked' " : "";
               $("#divTopics").append("<input type='checkbox' id='chk"+key+"' "+checked+" value='"+key+"' />");
-              $("#divTopics").append("<label class='topicLabel' for='chk"+key+"'>"+topics[key]+"</label>");              
-            }    
-      
-
+              $("#divTopics").append("<label class='topicLabel' for='chk"+key+"'>"+topics[key]+"</label>"); 
+              $("#chk"+key+").change(function () {
+                console.log(" Checkbox checked = "+this.checked+", "+this.value);
+              });              
+            }          
         }
         else {
             showTab(container);
