@@ -374,6 +374,12 @@ function settingsTabCallback() {
                 //console.log("Setting NewsEdition to "+this.value);
                 storage.putValue("NewsEdition", this.value)
             });
+            
+            $("#selCount").val(storage.getValue("itemCount", 10));
+
+            $("#selCount").change(function () {
+                storage.putValue("itemCount", this.value)
+            });            
 
         }
         else {
