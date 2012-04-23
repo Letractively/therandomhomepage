@@ -305,7 +305,18 @@ function getChildNodeValueByNodeName(node, nodeNameStr) {
       #settingsTable {
         width: 100%;
         text-align: center;
+        padding-top: 5pt;
+        padding-bottom: 5pt;
       }      
+      
+      td.settingsLabel {
+        text-align: right;
+        font-weight: bold;
+      }
+      
+      td.settingsVal {
+        text-align: left;
+      }
       
 </style>
 
@@ -571,10 +582,10 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
    <br/>  
    <table id="settingsTable">
      <tr>
-     <td>
+     <td class="settingsLabel">
      News Edition:
      </td>
-     <td>
+     <td class="settingsVal">
              <select id="selEdition">
                <!--
                <option value="in">India</option>
@@ -583,10 +594,10 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
     </td>
     </tr>    
     <tr>
-    <td>
+    <td class="settingsLabel">
      No. of news items:
     </td>
-    <td>  
+    <td class="settingsVal">  
              <select id="selCount">
                <option value="5">5</option>
                <option selected="selected" value="10">10</option>
