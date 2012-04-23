@@ -592,7 +592,6 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
                <option value="in">India</option>
                -->
              </select>    
-             <br/><br/><br/>
     </td>
     </tr>    
     <tr>
