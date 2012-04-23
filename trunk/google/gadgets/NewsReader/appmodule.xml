@@ -22,12 +22,16 @@
 	<UserPref name="selectedTab" datatype="hidden" />
     <Content type="html">
 <![CDATA[
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="http://therandomhomepage.com/google/gadgets/NewsReader/storage.js"></script>
 <script type="text/javascript">
 var TAB_ARROW_MAX_CLICKS = 10;
 var SAVED_TABS_PREF_NAME = "savedTabs";
 var PREF_NAME_DELIMITER = "|";
+
+google.load("feeds", "1");
+
 
 function swipeLeft() {
     var selectedTabIdx = tabs.getSelectedTab().getIndex() + 1;
@@ -317,6 +321,8 @@ var LOADING_MSG = '<div class="loading"><h3>Loading...</h3></div><div class="spi
 
 function loadModule__MODULE_ID__() {
 
+    alert("Loading module");
+    
     tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("h"));
 
     var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
