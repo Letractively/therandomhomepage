@@ -613,8 +613,9 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
 
    <fieldset>
    <legend>Topics</legend>
-   <center>
-  <a class="topic" href="javascript:createTabForTopic('w');">
+    <center>
+  <!--  
+  <a class="topic" href="javascript:createTabForTopic('w');">    
        World
   </a>        
   <a class="topic" href="javascript:createTabForTopic('n');">
@@ -644,6 +645,8 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
   <a class="topic" href="javascript:createTabForTopic('po');">
        Most Popular
   </a>
+  -->
+  <div id="divTopics"></div>
   </center>  
   </fieldset>
   </div>
