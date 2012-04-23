@@ -417,7 +417,7 @@ function settingsTabCallback() {
               });   
    
               if ((++i % 3) == 0) {
-                $("#divTopics").append("<br/>");
+                $("#divTopics").append("<br/><br/>");
               }     
             }          
         }
