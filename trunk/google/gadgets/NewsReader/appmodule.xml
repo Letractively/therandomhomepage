@@ -135,8 +135,10 @@ function AppStorage(name, cacheInterval, debug) {
 
     this.listItems = function () {
         if (localStorage) {      
-          for (var key in localStorage) {
-              console.log("Key = '"+key+"' Value = '"+localStorage[key]+"'");
+          for(var i=0, len=localStorage.length; i<len; i++) {
+              var key = localStorage.key(i);
+              var value = localStorage[key];
+              console.log(" localStorage - " key + " => " + value);
           }
         }
     }
