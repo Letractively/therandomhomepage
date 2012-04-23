@@ -407,7 +407,8 @@ function settingsTabCallback() {
             
          
             for (var key in topics) {
-              $("#divTopics").append("<input type='checkbox' id='chk"+key+"'/>");
+              var checked = isSavedTopic(key) ? " checked='checked' " : "";
+              $("#divTopics").append("<input type='checkbox' id='chk"+key+"' "+checked+" />");
               $("#divTopics").append("<label class='topicLabel' for='chk"+key+"'>"+topics[key]+"</label>");              
             }    
       
@@ -418,6 +419,17 @@ function settingsTabCallback() {
         }
     }
 }
+
+function isSavedTopic(topic) {
+  var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
+  for(var i=0; i < savedTabs.length; i++) {
+    if (savedTabs[i] == topic) {
+      return true;
+    }  
+  }
+  return false;
+}
+
 
 
 function createTabForTopic(topicName) {
