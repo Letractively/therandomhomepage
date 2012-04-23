@@ -397,7 +397,15 @@ function settingsTabCallback() {
             $("#selCount").change(function () {
                 storage.putValue("itemCount", this.value);
                 storage.clearCache();
-            });            
+            });  
+            
+            
+         
+            for (var key in topics) {
+              $("#divTopics").append("<input type='checkbox' id='chk"+key+"'/>");
+              $("#divTopics").append("<label for='chk"+key+"'>"+topics[key]+"</label>");              
+            }    
+      
 
         }
         else {
