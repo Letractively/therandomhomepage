@@ -138,7 +138,6 @@ function AppStorage(name, cacheInterval, debug) {
             console.log("Key = '"+key+"' Value = '"+localStorage[key]+"'");
         }
     }
-
 }
 </script>
 <script type="text/javascript">
@@ -427,7 +426,7 @@ var wholeCountryCodes = {"es_ar" : "Argentina", "au" : "Australia", "nl_be" : "B
   
 var countryCodes = {"ar_me" : "Arabic", "es_ar" : "Argentina", "au" : "Australia","fr_be" : "Belgium", "en_bw" : "Botswana", "pt-BR_br" :  "Brasil", "ca" : "Canada (English)", "fr_ca" : "Canada (French)", "es_cl" : "Chile", "cn" : "China",  "es_co" : "Colombia", "es_cu" :  "Cuba", "de" : "Deutschland", "ar_eg" : "Egypt", "es" : "España", "es_us" : "Estados  Unidos", "en_et" : "Ethiopia", "fr" : "France", "en_gh" : "Ghana", "el_gr" : "Greece", "hk" : "Hong Kong", "in" :  "India (English)",  "hi_in" : "India (Hindi)", "ta_in" : "India (Tamil)",  "te_in" : "India (Telugu)", "ml_in" : "India (Malayalam)", "en_ie" : "Ireland", "en_il" : "Israel (English)", "iw_il" : "Israel",  "it" :  "Italia", "jp" : "Japan", "en_ke" : "Kenya", "kr" : "Korea", "ar_sa" : "K.S.A", "ar_lb" :  "Lebanon", "en_my" :  "Malaysia", "es_mx" : "México", "en_na" : "Namibia", "nl_nl" :  "Nederland", "nz" : "New Zealand", "en_ng" : "Nigeria", "no_no" :  "Norge", "en_pk" : "Pakistan", "es_pe" :  "Perú", "en_ph" : "Philippines", "pl_pl" : "Polska", "pt-PT_pt" :  "Portugal", "ru_ru" :  "Russia", "de_ch" : "Schweiz", "fr_sn" : "Sénégal", "en_sg" :  "Singapore", "en_za" : "South Africa", "fr_ch" : "Suisse", "sv_se" :  "Sverige", "en_tz" : "Tanzania", "tw" : "Taiwan", "tr_tr" : "Türkiye", "ar_ae" : "U.A.E", "uk" : "U.K.",  "us" : "U.S.", "en_ug" : "Uganda", "es_ve" : "Venezuela", "vi_vn" : "Vietnam", "en_zw" : "Zimbabwe", "ru_ua" : "Ukraine", "uk_ua" : "Ukraine"};
   
-var storage = new AppStorage("News Reader", AppStorage.DEFAULT_CACHE_INTERVAL);
+var storage = new AppStorage("News Reader", AppStorage.DEFAULT_CACHE_INTERVAL,true);
 
 
 var errorHTML = "<p align='center'>Unable to read content from Google News server! <br/>Please try again  later.</p>";
@@ -436,6 +435,8 @@ var newsNotAvailableMessage = "<center><h3>No news available for the selected to
 var LOADING_MSG = '<div class="loading"><h3>Loading...</h3></div><div class="spinner" id="div1"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div></div>';
 
 function loadModule__MODULE_ID__() {
+    
+    storage.listItems();
   
     tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("h"));
 
