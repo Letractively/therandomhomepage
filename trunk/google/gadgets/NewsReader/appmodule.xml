@@ -422,24 +422,31 @@ function loadTab(tabId, topic) {
     }
 
     console.log("Loading tab from server" + feedUrl);
+    
+    var feed = new google.feeds.Feed(feedUrl);
+    feed.load(function (response) {
+            showFeeds(container, tabId, response, feedUrl)
+        });
+ 
+    /*
     _IG_FetchXmlContent(
         feedUrl,
         function (feed) {
             showFeeds(container, tabId, feed, feedUrl)
         });
+    */     
 
 }
 
 
 function showFeeds(container, tabId, response, feedUrl) {
-    if (response == null || typeof(response) != "object" ||
-        response.firstChild == null) {
+    if (response.error) {
         //container.innerHTML = errorHTML;
         showTab(container, errorHTML);
         return;
     }
 
-    if (response.firstChild) {
+    if (!response.error) {
 
         var linksHTML = '';
 
@@ -453,7 +460,7 @@ function showFeeds(container, tabId, response, feedUrl) {
             }
         }
 
-        var itemList = response.getElementsByTagName("item");
+        var itemList = response.feed.entries;
 
         if (itemList.length == 0) {
             linksHTML += newsNotAvailableMessage;
@@ -463,9 +470,9 @@ function showFeeds(container, tabId, response, feedUrl) {
 
             for (var i = 0; i < itemList.length; i++) {
 
-                var title = getChildNodeValueByNodeName(itemList.item(i), "title");
-                var link = getChildNodeValueByNodeName(itemList.item(i), "link");
-                var description = getChildNodeValueByNodeName(itemList.item(i), "description");
+                var title = itemList[i].title;
+                var link = itemList[i].link;
+                var description = itemList[i].content;
 
                 //linksHTML  += '<div><table><tr><td><div  class="title"><a class="titleLink" target="_new"  href="'+link+'">'+title+'</a></div></td></tr>';
                 linksHTML += '<div><table>';
