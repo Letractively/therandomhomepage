@@ -138,7 +138,7 @@ function AppStorage(name, cacheInterval, debug) {
           for(var i=0, len=localStorage.length; i<len; i++) {
               var key = localStorage.key(i);
               var value = localStorage[key];
-              console.log(" localStorage - " key + " => " + value);
+              console.log(" localStorage - "+ key + " => " + value);
           }
         }
     }
