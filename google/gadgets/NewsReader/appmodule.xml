@@ -335,7 +335,7 @@ function getChildNodeValueByNodeName(node, nodeNameStr) {
             padding: 1px 0 1px 18px;
         }
         
-      #settingsTable {
+      table.settingsTable {
         width: 100%;
         text-align: center;
         padding-top: 5pt;
@@ -664,7 +664,7 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
 
  <div id="settings" style="display:none;">
    <br/>  
-   <table id="settingsTable">
+   <table class="settingsTable">
      <tr>
      <td class="settingsLabel">
      News Edition:
@@ -676,7 +676,10 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
                -->
              </select>    
     </td>
-    </tr>    
+    </tr> 
+   </table>
+   <br/>
+   <table class="settingsTable">
     <tr>
     <td class="settingsLabel">
      No. of news items:
@@ -697,38 +700,6 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
    <fieldset>
    <legend>Topics</legend>
     <center>
-  <!--  
-  <a class="topic" href="javascript:createTabForTopic('w');">    
-       World
-  </a>        
-  <a class="topic" href="javascript:createTabForTopic('n');">
-       Nation
-  </a>          
-  <a class="topic" href="javascript:createTabForTopic('b');">
-    Business
-  </a>
-  <a class="topic" href="javascript:createTabForTopic('tc');">
-    Technology
-  </a>  
-  <a class="topic" href="javascript:createTabForTopic('m');">
-     Health
-   </a>    
-  <a class="topic" href="javascript:createTabForTopic('s');">
-     Sports
-   </a>    
-  <a class="topic" href="javascript:createTabForTopic('e');">
-      Entertainment
-  </a>       
-  <a class="topic" href="javascript:createTabForTopic('snc');">
-       Science
-  </a>     
-  <a class="topic" href="javascript:createTabForTopic('ir');">
-      Spotlight
-   </a>       
-  <a class="topic" href="javascript:createTabForTopic('po');">
-       Most Popular
-  </a>
-  -->
   <div id="divTopics"></div>
   </center>  
   </fieldset>
