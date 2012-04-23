@@ -609,6 +609,16 @@ _IG_RegisterOnloadHandler(loadModule__MODULE_ID__);
        Most Popular
   </a>
   </center>  
+   <br/>  
+   <center>
+     <b>No. of news items:</b>
+             <select id="selCount">
+               <option value="5">5</option>
+               <option selected="selected" value="10">10</option>
+               <option value="15">15</option>
+               <option value="20">20</option>
+             </select>    
+   </center>
   </div>
  ]]>
     </Content>
