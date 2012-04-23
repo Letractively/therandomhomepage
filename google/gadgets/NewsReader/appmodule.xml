@@ -134,8 +134,10 @@ function AppStorage(name, cacheInterval, debug) {
     };
 
     this.listItems = function () {
-        for (var key in localStorage) {
-            console.log("Key = '"+key+"' Value = '"+localStorage[key]+"'");
+        if (localStorage) {      
+          for (var key in localStorage) {
+              console.log("Key = '"+key+"' Value = '"+localStorage[key]+"'");
+          }
         }
     }
 }
