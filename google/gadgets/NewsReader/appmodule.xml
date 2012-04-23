@@ -422,6 +422,10 @@ function loadTab(tabId, topic) {
     console.log("Loading tab from server" + feedUrl);
     
     var feed = new google.feeds.Feed(feedUrl);
+    
+    feed.includeHistoricalEntries();    
+    feed.setNumEntries(20);
+    
     feed.load(function (response) {
             showFeeds(container, tabId, response, feedUrl)
         });
