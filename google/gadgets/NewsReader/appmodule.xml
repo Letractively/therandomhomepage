@@ -339,7 +339,6 @@ function loadModule__MODULE_ID__() {
 function buildFeedURL(topicName) {
     var selectedEdition = storage.getValue("NewsEdition", "us");
     var feedURL = "http://news.google.com/news?ned=" + selectedEdition + "&topic=" + topicName + "&output=rss";
-    //console.log("feedURL = "+feedURL);
     return feedURL;
 }
 
