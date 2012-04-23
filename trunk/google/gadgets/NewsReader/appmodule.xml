@@ -309,6 +309,10 @@ function getChildNodeValueByNodeName(node, nodeNameStr) {
         padding-bottom: 5pt;
       }      
       
+      #settingsTable.tr {
+        padding-top: 5pt;
+      } 
+      
       td.settingsLabel {
         text-align: right;
         font-weight: bold;
