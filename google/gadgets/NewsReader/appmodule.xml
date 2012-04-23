@@ -509,7 +509,7 @@ function showFeeds(container, tabId, response, feedUrl) {
 
 
             var shareThis = '<div class="addthis_share_btn"><a href="javascript:void(0);" class="addthis_button_compact"><span>Share</span></a></div>';
-            $(placeholder).find('td:not(.j):not(.tdSummary)').append('<table width="100%"><tr><td align="left"><div class="back-top"><img  src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div></td><td align="right" valign="bottom">'+shareThis+'</td></tr></table>');
+            $(placeholder).find('td:not(.j):not(.tdSummary)')[0].append('<table width="100%"><tr><td align="left"><div class="back-top"><img  src="http://therandomhomepage.com/google/gadgets/DZonePreview/round_up_arrow.png"/></div></td><td align="right" valign="bottom">'+shareThis+'</td></tr></table>');
 
             //container.innerHTML = $('#placeholder')[0].innerHTML;
             showTab(container, $(placeholder)[0].innerHTML);
