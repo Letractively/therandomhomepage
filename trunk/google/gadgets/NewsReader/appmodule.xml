@@ -141,7 +141,19 @@ function AppStorage(name, cacheInterval, debug) {
               console.log(" localStorage - "+ key + " => " + value);
           }
         }
-    }
+    };
+    
+    this.clearCache = function () {
+      if (localStorage) {
+          console.log("Clearing cache...");
+          for(var i=0, len=localStorage.length; i<len; i++) {
+              var key = localStorage.key(i);
+              if (key.indexOf(AppStorage.CACHE_TIMES) != -1) {
+                localStorage[key] = null;
+              }
+          }        
+      }
+    }       
 }
 </script>
 <script type="text/javascript">
@@ -439,9 +451,7 @@ var newsNotAvailableMessage = "<center><h3>No news available for the selected to
 var LOADING_MSG = '<div class="loading"><h3>Loading...</h3></div><div class="spinner" id="div1"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div></div>';
 
 function loadModule__MODULE_ID__() {
-    
-    storage.listItems();
-  
+ 
     tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("h"));
 
     var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
@@ -499,6 +509,7 @@ function settingsTabCallback() {
 
             $("#selCount").change(function () {
                 storage.putValue("itemCount", this.value)
+                storage.clearCache();
             });            
 
         }
