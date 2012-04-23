@@ -24,7 +24,123 @@
 <![CDATA[
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="http://therandomhomepage.com/google/gadgets/NewsReader/storage.js"></script>
+<script type="text/javascript">
+ /*
+ Version: 2
+ Last Update Date: 04/23/12
+ */
+
+AppStorage.DEFAULT_CACHE_INTERVAL = 1000 * 60 * 15; //15 min
+AppStorage.KEY_NAME_SEPARATOR = "||";
+AppStorage.CACHE_TIMES_KEY = "CACHE_TIMES";
+
+
+var CacheTime = function (key, time) {
+    this.key = key;
+    this.time = time;
+};
+
+function AppStorage(name, cacheInterval, debug) {
+    this.name = name;
+    this.cacheInterval = !cacheInterval ? AppStorage.DEFAULT_CACHE_INTERVAL : cacheInterval;
+    this.debug = debug;
+
+    this.logMessages = function (msg) {
+        if (this.debug) {
+            console.log(msg);
+        }
+    };
+    this.logMessages("App Storage initialized - name ='" + name + "', cacheInterval = " + cacheInterval);
+
+
+
+    this.getKeyName = function (keyName) {
+        return this.name + AppStorage.KEY_NAME_SEPARATOR + keyName;
+    };
+
+    this.putValue = function (key, value) {
+        if (typeof localStorage != "undefined") {
+            var keyName = this.getKeyName(key);
+            localStorage[keyName] = value;
+            this.logMessages("putValue keyName = " + keyName + ", value = " + value);
+        }
+    };
+
+    this.getDefaultVal = function (defaultValue) {
+        if (typeof defaultValue != "undefined") {
+            return defaultValue;
+        }
+        return "";
+    };
+
+    this.getValue = function (key, defaultValue) {
+        var keyName = this.getKeyName(key);
+        if ((typeof localStorage != "undefined") && (localStorage[keyName] != null)) {
+            this.logMessages("getValue keyName = " + keyName + ", value = " + localStorage[keyName]);
+            return localStorage[keyName];
+        }
+        return this.getDefaultVal(defaultValue);
+    };
+
+    this.putCache = function (key, value) {
+        this.putValue(key, value);
+        this.setCacheTime(key);
+    };
+
+    this.getCache = function (key, defaultValue) {
+        if (this.isCacheValid(key)) {
+            return this.getValue(key, defaultValue)
+        }
+        return this.getDefaultVal(defaultValue);
+    };
+
+    this.getCacheTime = function (cacheKey) {
+        var cacheTimes = this.getValue(AppStorage.CACHE_TIMES_KEY);
+        if (cacheTimes != "") {
+            var cacheTimesArr = JSON.parse(cacheTimes);
+            for (var i = 0; i < cacheTimesArr.length; i++) {
+                if (cacheTimesArr[i].key == cacheKey) {
+                    return cacheTimesArr[i].time;
+                }
+            }
+        }
+        return null;
+    };
+
+    this.setCacheTime = function (cacheKey) {
+        var cacheTimes = new Array();
+        if (this.getValue(AppStorage.CACHE_TIMES_KEY) != "") {
+            cacheTimes = JSON.parse(this.getValue(AppStorage.CACHE_TIMES_KEY));
+        }
+        var date = new Date();
+        var timeSet = false;
+        for (var i = 0; i < cacheTimes.length; i++) {
+            if (cacheTimes[i].key == cacheKey) {
+                cacheTimes[i].time = date.getTime();
+                timeSet = true;
+                break;
+            }
+        }
+        if (!timeSet) {
+            cacheTimes.push(new CacheTime(cacheKey, date.getTime()));
+        }
+        this.putValue(AppStorage.CACHE_TIMES_KEY, JSON.stringify(cacheTimes));
+    };
+
+    this.isCacheValid = function (cacheKey) {
+        var cacheTime = this.getCacheTime(cacheKey);
+        var date = new Date();
+        return cacheTime != null && ((date.getTime() - cacheTime) < this.cacheInterval);
+    };
+
+    this.listItems = function () {
+        for (var key in localStorage) {
+            console.log("Key = '"+key+"' Value = '"+localStorage[key]+"'");
+        }
+    }
+
+}
+</script>
 <script type="text/javascript">
 var TAB_ARROW_MAX_CLICKS = 10;
 var SAVED_TABS_PREF_NAME = "savedTabs";
