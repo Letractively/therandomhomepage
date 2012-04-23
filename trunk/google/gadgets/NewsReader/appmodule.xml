@@ -319,6 +319,11 @@ function getChildNodeValueByNodeName(node, nodeNameStr) {
         text-align: left;
       }
       
+      label.topicLabel {
+        font-weight: bold;
+        padding-right: 5pt;
+      }
+      
 </style>
 
  <script type="text/javascript">
@@ -403,7 +408,7 @@ function settingsTabCallback() {
          
             for (var key in topics) {
               $("#divTopics").append("<input type='checkbox' id='chk"+key+"'/>");
-              $("#divTopics").append("<label for='chk"+key+"'>"+topics[key]+"</label>");              
+              $("#divTopics").append("<label class='topicLabel' for='chk"+key+"'>"+topics[key]+"</label>");              
             }    
       
 
