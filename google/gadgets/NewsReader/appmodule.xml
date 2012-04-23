@@ -569,16 +569,6 @@ function showFeeds(container, tabId, response, feedUrl) {
 
         var linksHTML = '';
 
-        var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
-
-        for (var i = 0; i < savedTabs.length; i++) {
-            for (var key in topics) {
-                if (savedTabs[i] == key && topics[key] == tabs.getSelectedTab().getName()) {
-                    linksHTML += '<div class="closeTab"><img src="http://therandomhomepage.com/google/gadgets/DZonePreview/delete.png"/></div>';
-                }
-            }
-        }
-
         var itemList = response.feed.entries;
 
         if (itemList.length == 0) {
