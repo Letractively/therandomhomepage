@@ -405,6 +405,7 @@ function settingsTabCallback() {
             });  
             
             
+            var i=0;
          
             for (var key in topics) {
               var checked = isSavedTopic(key) ? " checked='checked' " : "";
@@ -413,7 +414,11 @@ function settingsTabCallback() {
               $("#divTopics").append("<label class='topicLabel' for='"+chkBoxId+"'>"+topics[key]+"</label>"); 
               $("#"+chkBoxId).change(function () {
                 console.log(" Checkbox checked = "+this.checked+", "+this.value);
-              });              
+              });   
+   
+              if ((i++ % 3) == 0) {
+                $("#divTopics").append("<br/>");
+              }     
             }          
         }
         else {
