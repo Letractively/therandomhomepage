@@ -449,6 +449,7 @@ function settingsTabCallback() {
                 console.log(" Checkbox checked = "+this.checked+", "+this.value);
                 if (this.checked) {
                   createDynamicTabForTopic(this.value);
+                  tabs.moveTab(tabs.getTabs().length-2,tabs.getTabs().length-1);
                 }
                 else {
                   removeTab(this.value);
@@ -518,7 +519,6 @@ function createDynamicTabForTopic(topicName) {
     if (!tabExist) {
         var feedURL = buildFeedURL(topicName);
         tabs.addDynamicTab(topics[topicName], loadTabsCallbackGenerator(topicName));
-        tabs.moveTab(tabs.length-1,tabs.length);
         var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
         savedTabs.push(topicName);
         storage.putValue(SAVED_TABS_PREF_NAME, savedTabs.join(PREF_NAME_DELIMITER));
