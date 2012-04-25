@@ -344,10 +344,12 @@ function getChildNodeValueByNodeName(node, nodeNameStr) {
       td.settingsLabel {
         text-align: right;
         font-weight: bold;
+        padding-top: 10pt;
       }
       
       td.settingsVal {
         text-align: left;
+        padding-top: 10pt;
       }
       
       label.topicLabel {
