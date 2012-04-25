@@ -110,9 +110,8 @@ function removeTab(topicName) {
       var newTabs = new Array();
       for (var i = 0; i < savedTabs.length; i++) {
           for (var key in topics) {
-              if (savedTabs[i] == key && topics[key] != topicName) {
+              if (savedTabs[i] != topicName) {
                   newTabs.push(savedTabs[i]);
-                  break;
               }
           }
       }
