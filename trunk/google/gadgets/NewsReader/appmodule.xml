@@ -120,6 +120,7 @@ function removeTab(topicName) {
       var newTabsStr = newTabs.length > 0 ? newTabs.join(PREF_NAME_DELIMITER) : "";
       console.log("newTabsStr = " + newTabsStr);
       storage.putValue(SAVED_TABS_PREF_NAME, newTabsStr);
+      console.log("Remove tab..."+newTabsStr);
     }
 }
 
@@ -380,6 +381,8 @@ function loadModule__MODULE_ID__() {
     tabs.addDynamicTab("Top Stories", loadTabsCallbackGenerator("h"));
 
     var savedTabs = storage.getValue(SAVED_TABS_PREF_NAME).split(PREF_NAME_DELIMITER);
+    
+    console.log("Load module savedTabs = "+savedTabs);
 
     for (var i = 0; i < savedTabs.length; i++) {
         for (var key in topics) {
