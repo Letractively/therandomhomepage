@@ -17,7 +17,6 @@
 		Last Updated : 2/08/2012
 		Change Notes: First revision
 	-->    
-    <Require feature="tabs"/>
     </ModulePrefs>	    
   <Content type="url" href="http://google.com" /> 
     </Module>
