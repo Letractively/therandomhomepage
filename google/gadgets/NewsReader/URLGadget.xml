@@ -19,5 +19,5 @@
 	-->    
     <Require feature="tabs"/>
     </ModulePrefs>	    
-  <Content type="url" href="http://therandomhomepage.googlecode.com/svn/trunk/google/gadgets/NewsReader/app.html" /> 
+  <Content type="url" href="http://google.com" /> 
     </Module>
