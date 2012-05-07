@@ -645,17 +645,30 @@ function callNative(functionName,args) {
         $(tabsContainer).jqxTabs({ width: "100%", autoHeight: true});
         $(tabsContainer).bind('tabclick', function (event) { 
                 var clickedItem = event.args.item; 
-                //console.log("clickedItem = "+clickedItem+"Title =  "+$('#jqxTabs').jqxTabs('getTitleAt', clickedItem));
-                var tabHTML = $(tabsContainer).jqxTabs('getContentAt', clickedItem); 
-                console.log("tabHTML = "+tabHTML);
+                var title = $(tabsContainer).jqxTabs('getTitleAt', clickedItem);
+                var tabID = getTabID(title);
+                console.log("tabclick tabID = "+tabID);
+                $('#'+tabID).trigger('tabLoad');
             }
         );
-
     }
 
-    function addTabAt(index,title,tabHTML) {
+    function getTabID(title) {
+        return "tab_"+title.replace(/ /g,"_");
+    }
+
+    function addDynamicTab(title,callback) {
+        var length = $(tabsContainer).jqxTabs('length'); 
+        var tabID = getTabID(title);
+        $(tabsContainer).jqxTabs('addAt', length-1, title, "<div id='"+tabID+"'></div>");         
+        $('#'+tabID).bind('tabLoad',callback);
+    }
+
+    function addTabAt(index,title,tabHTML,callback) {
+        tabHTML = !tabHTML ? LOADING_MSG : tabHTML;
         $(tabsContainer).jqxTabs('addAt', index, title, tabHTML); 
     }
+
 
  </script>
 
@@ -665,7 +678,15 @@ function callNative(functionName,args) {
             var div = document.createElement("div");
             div.innerHTML = "<h1>This is an added tab</h1>";
 
-            addTabAt(2,"New Tab",div.innerHTML);
+            addDynamicTab("First Dynamic Tab",function (e) {
+                console.log("Callback called");
+                $(this).html("First Dynamic Tab");
+            });
+
+            addDynamicTab("Second Dynamic Tab",function (e) {
+                console.log("Callback called");
+                $(this).html("Second Dynamic Tab");
+            });
             
         });
     </script>
@@ -678,14 +699,7 @@ function callNative(functionName,args) {
                 <li>Settings</li>
             </ul>
             <div> <!-- Top Stories -->
-                Node.js is an event-driven I/O server-side JavaScript environment based on V8. It
-                is intended for writing scalable network programs such as web servers. It was created
-                by Ryan Dahl in 2009, and its growth is sponsored by Joyent, which employs Dahl.
-                Similar environments written in other programming languages include Twisted for
-                Python, Perl Object Environment for Perl, libevent for C and EventMachine for Ruby.
-                Unlike most JavaScript, it is not executed in a web browser, but is instead a form
-                of server-side JavaScript. Node.js implements some CommonJS specifications. Node.js
-                includes a REPL environment for interactive testing.
+                <h1>Top Stories</h1>
             </div>
             <div> <!-- Settings tab -->
                <br/>  
